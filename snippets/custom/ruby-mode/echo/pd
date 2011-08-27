@@ -1,0 +1,3 @@
+#name : puts debug
+# --
+puts "\n>>>>>> ${1:name}: ${2:" + ${3:variable}${4:.inspect} + "}\n"$0
