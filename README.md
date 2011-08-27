@@ -1,4 +1,4 @@
-# jimeh's .emacs.d Config Folder #
+# My .emacs.d Config Folder #
 
 This is my personal Emacs configuration. Having been primarily a TextMate user
 previously, my setup might also work nicely for other TM users who are curious
@@ -63,6 +63,7 @@ config? ;)*
 
 ## Notes ##
 
+* Feel free to fork and tweak :)
 * Theme-wise I use a slightly tweaked version of [Joe Bergantine][]'s [Birds of
   Paradise][] theme, which I've made available [here][my-theme]. The original
   Emacs port was created by Paul M. Rodriguez, and I can't remember or find
