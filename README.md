@@ -50,6 +50,7 @@ Emacs:
 
     git clone git://github.com/jimeh/.emacs.d.git ~/.emacs.d
     cd ~/.emacs.d
+    git submodule init
     git submodule update
 
 Once you launch Emacs, it'll load in the config and the list of packages to
