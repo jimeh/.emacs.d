@@ -64,7 +64,10 @@
         (:name fill-column-indicator
                :type git
                :url "git://github.com/alpaker/Fill-Column-Indicator.git"
-               :features fill-column-indicator)))
+               :features fill-column-indicator)
+        (:name ruby-mode
+               :type svn
+               :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")))
 
 
 ;;
@@ -83,7 +86,6 @@
          markdown-mode
          php-mode-improved
          ruby-mode
-         ruby-electric
          ruby-compilation
          rvm
          textmate

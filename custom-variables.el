@@ -35,6 +35,7 @@
  '(ns-tool-bar-display-mode nil t)
  '(ns-tool-bar-size-mode nil t)
  '(php-mode-dot-property-warning t)
+ '(ruby-deep-indent-paren nil)
  '(safe-local-variable-values (quote ((eval rainbow-mode 1))))
  '(show-paren-mode t)
  '(standard-indent 2)
