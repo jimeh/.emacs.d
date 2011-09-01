@@ -1,4 +1,4 @@
 #name : ruby debugger
 # --
-require 'ruby-debug'
+require "ruby-debug"
 debugger$0
