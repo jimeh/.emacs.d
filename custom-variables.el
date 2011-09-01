@@ -44,6 +44,7 @@
  '(tool-bar-mode nil)
  '(undo-tree-mode-lighter "")
  '(visual-line-mode nil t)
+ '(whitespace-action nil)
  '(winner-mode t nil (winner))
  '(yas/global-mode t nil (yasnippet))
  '(yas/snippet-dirs (quote ("~/.emacs.d/snippets/custom" "~/.emacs.d/snippets/stock" "~/.emacs.d/el-get/yasnippet/snippets")) nil (yasnippet))
