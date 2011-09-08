@@ -76,6 +76,7 @@
       (append
        '(autopair
          coffee-mode
+         color-theme-tomorrow
          egg
          elscreen
          full-ack

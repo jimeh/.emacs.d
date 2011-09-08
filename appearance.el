@@ -6,7 +6,8 @@
 
 ;; Load Theme
 (if window-system
-    (require 'birds-of-paradise-plus-theme))
+    (require 'birds-of-paradise-plus-theme)
+  (color-theme-tomorrow-night-bright))
 
 ;; Disable toolbar
 (tool-bar-mode -1)
