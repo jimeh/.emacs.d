@@ -4,6 +4,10 @@
 ;; Set default font
 (set-frame-font "Monaco-11")
 
+;; Load Theme
+(if window-system
+    (require 'birds-of-paradise-plus-theme))
+
 ;; Disable toolbar
 (tool-bar-mode -1)
 

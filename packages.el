@@ -27,7 +27,6 @@
 ;; el-get Sources
 ;;
 
-
 (setq el-get-sources
       '((:name column-marker
                :type emacswiki
@@ -38,8 +37,7 @@
         ;;        :load    "birds-of-paradise-theme.el")
         (:name color-theme-birds-of-paradise-plus
                :type git
-               :url "git://github.com/jimeh/birds-of-paradise-plus-theme.el.git"
-               :load "birds-of-paradise-plus-theme.el")
+               :url "git://github.com/jimeh/birds-of-paradise-plus-theme.el.git")
         (:name feature-mode
                :type git
                :url "git://github.com/michaelklishin/cucumber.el.git")
