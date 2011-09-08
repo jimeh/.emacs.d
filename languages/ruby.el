@@ -22,15 +22,13 @@
             (setq ruby-deep-indent-paren nil)
             (setq c-tab-always-indent nil)
             (setq ruby-use-encoding-map nil)
+            (setq ruby-electric-expand-delimiters-list (quote (124)))
             (setq whitespace-action (quote (auto-cleanup)))
             (column-marker-1 80)
             (define-key ruby-mode-map
               (kbd "RET") 'reindent-then-newline-and-indent)
             (define-key ruby-mode-map
               (kbd "s-r") 'run-rails-test-or-ruby-buffer)))
-
-
-(setq ruby-electric-expand-delimiters-list (quote (124)))
 
 ;; Yasnippet workaround for ruby-electric-mode
 ;; See: http://code.google.com/p/yasnippet/issues/detail?id=71
