@@ -2,9 +2,10 @@
 ;; Setup a few global keyboard shortcuts
 ;;
 
-;; Undo/Redo (via redo+.el)
-(global-set-key (kbd "s-z") 'undo-tree-undo)
-(global-set-key (kbd "s-Z") 'undo-tree-redo)
+;; Undo/Redo (via undo-tree)
+(when (require 'undo-tree nil 'noerror)
+  (global-set-key (kbd "s-z") 'undo-tree-undo)
+  (global-set-key (kbd "s-Z") 'undo-tree-redo))
 
 ;; Move to beginning/end of line
 (global-set-key (kbd "s-<left>") 'beginning-of-line)
