@@ -38,6 +38,7 @@
  '(ruby-deep-indent-paren nil)
  '(safe-local-variable-values (quote ((eval rainbow-mode 1))))
  '(show-paren-mode t)
+ '(speedbar-show-unknown-files t)
  '(standard-indent 2)
  '(tabbar-mode nil)
  '(textmate-mode t)
