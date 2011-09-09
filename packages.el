@@ -63,6 +63,11 @@
                :type git
                :url "git://github.com/alpaker/Fill-Column-Indicator.git"
                :features fill-column-indicator)
+        (:name hacker-type
+               :type git
+               :url "https://github.com/bitemyapp/hacker-type-emacs.git"
+               :features hacker-type
+               :load "hackertype.el")
         (:name lusty-explorer
                :type emacswiki
                :features lusty-explorer)
