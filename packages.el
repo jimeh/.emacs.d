@@ -63,6 +63,9 @@
                :type git
                :url "git://github.com/alpaker/Fill-Column-Indicator.git"
                :features fill-column-indicator)
+        (:name lusty-explorer
+               :type emacswiki
+               :features lusty-explorer)
         (:name ruby-mode
                :type svn
                :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")))
