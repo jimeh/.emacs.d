@@ -7,7 +7,7 @@
 ;; Load Theme
 (if window-system
     (require 'birds-of-paradise-plus-theme)
-  (color-theme-tomorrow-night-bright))
+    (color-theme-tomorrow-night-bright))
 
 ;; Disable toolbar
 (tool-bar-mode -1)
@@ -23,6 +23,9 @@
 
 ;; Display line numbers globally
 (global-linum-mode t)
+
+(if window-system = nil
+    (setq linum-format "%3d "))
 
 ;; Display whitespace characters globally
 (global-whitespace-mode t)
