@@ -94,6 +94,8 @@
          ruby-mode
          ruby-compilation
          rvm
+         ;; smooth-scrolling
+         smooth-scroll
          textmate
          undo-tree
          yaml-mode
