@@ -70,6 +70,13 @@
         (:name lusty-explorer
                :type emacswiki
                :features lusty-explorer)
+        ;; (:name tabbar
+        ;;        :type emacswiki
+        ;;        :features tabbar)
+        ;; (:name ide-skel
+        ;;        :type emacswiki
+        ;;        :features ide-skel
+        ;;        :depends tabbar)
         (:name ruby-mode
                :type svn
                :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")))
@@ -95,7 +102,7 @@
          ruby-compilation
          rvm
          ;; smooth-scrolling
-         smooth-scroll
+         ;; smooth-scroll
          textmate
          undo-tree
          yaml-mode
