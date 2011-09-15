@@ -23,9 +23,8 @@
 
 ;; Display line numbers globally
 (global-linum-mode t)
-
-(if window-system = nil
-    (setq linum-format "%3d "))
+;; (if window-system = nil
+;;     (setq linum-format "%3d "))
 
 ;; Display whitespace characters globally
 (global-whitespace-mode t)
