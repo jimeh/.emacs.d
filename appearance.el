@@ -23,8 +23,10 @@
 
 ;; Display line numbers globally
 (global-linum-mode t)
-;; (if window-system = nil
-;;     (setq linum-format "%3d "))
+(if window-system
+    (setq linum+-smart-format "%%%dd") (setq linum+-smart-format "%%%dd "))
+(if window-system
+    (setq linum+-dynamic-format "%%%dd") (setq linum+-dynamic-format "%%%dd "))
 
 ;; Display whitespace characters globally
 (global-whitespace-mode t)
