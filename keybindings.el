@@ -35,6 +35,14 @@
 (global-set-key (kbd "C-x C-o") 'other-window)         ;; other-window
 (global-set-key (kbd "C-x C-i") 'other-window-reverse) ;; other-window -1
 
+;; ElScreen related shortcuts
+(global-set-key (kbd "s-}") 'elscreen-next)
+(global-set-key (kbd "s-{") 'elscreen-previous)
+(global-set-key (kbd "C-z ,") 'elscreen-screen-nickname)
+(global-set-key (kbd "C-z C-,") 'elscreen-screen-nickname)
+(global-set-key (kbd "C-z l") 'elscreen-toggle)
+(global-set-key (kbd "C-z C-l") 'elscreen-toggle)
+
 ;; Fullscreen (works only with `brew install emacs --cocoa`)
 (global-set-key (kbd "s-<return>") 'ns-toggle-fullscreen)
 
