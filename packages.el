@@ -67,6 +67,9 @@
                :type git
                :url "https://github.com/bitemyapp/hacker-type-emacs.git"
                :load "hackertype.el")
+        (:name linum+
+               :type http
+               :url "http://dea.googlecode.com/svn/trunk/my-lisps/linum+.el")
         (:name lusty-explorer
                :type emacswiki
                :features lusty-explorer)
