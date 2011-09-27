@@ -35,6 +35,9 @@
 (global-set-key (kbd "C-x C-o") 'other-window)         ;; other-window
 (global-set-key (kbd "C-x C-i") 'other-window-reverse) ;; other-window -1
 
+;; Kill-Ring related.
+(global-set-key (kbd "M-Y") 'yank-pop-forwards)
+
 ;; ElScreen related shortcuts
 (global-set-key (kbd "s-}") 'elscreen-next)
 (global-set-key (kbd "s-{") 'elscreen-previous)

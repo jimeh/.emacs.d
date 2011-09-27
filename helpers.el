@@ -37,6 +37,10 @@
   (newline)
   (yank))
 
+;; Yank Pop Forwards
+(defun yank-pop-forwards (arg)
+  (interactive "p")
+  (yank-pop (- arg)))
 
 ;; Window Switching
 (defun other-window-reverse ()
