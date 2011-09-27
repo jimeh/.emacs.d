@@ -99,6 +99,7 @@
          full-ack
          git-blame
          inf-ruby
+         magit
          markdown-mode
          php-mode-improved
          ruby-mode
@@ -131,3 +132,6 @@
 
 ;; Load Undo-Tree
 (require 'undo-tree)
+
+;; Load Linum+
+(require 'linum+)
