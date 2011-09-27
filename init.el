@@ -1,7 +1,6 @@
 ;; emacs configuration
 
-(push "/usr/local/bin" exec-path)
-
+(load-file "~/.emacs.d/env.el")
 (load-file "~/.emacs.d/packages.el")
 (load-file "~/.emacs.d/helpers.el")
 (load-file "~/.emacs.d/languages.el")

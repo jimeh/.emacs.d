@@ -104,7 +104,6 @@
          php-mode-improved
          ruby-mode
          ruby-compilation
-         rvm
          ;; smooth-scrolling
          ;; smooth-scroll
          textmate
@@ -123,9 +122,6 @@
 ;; Configure Yasnippet
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/snippets")
-
-;; Configure RVM
-(rvm-use-default)
 
 ;; Load ElScreen
 (require 'elscreen)
