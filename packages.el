@@ -131,3 +131,6 @@
 
 ;; Load Linum+
 (require 'linum+)
+
+;; Load full-ack
+(require 'full-ack)
