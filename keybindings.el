@@ -14,8 +14,9 @@
 ;; Scroll up/down
 (global-set-key (kbd "s-<up>") 'beginning-of-buffer)
 (global-set-key (kbd "s-<down>") 'end-of-buffer)
-(global-set-key (kbd "M-p") 'beginning-of-buffer)
-(global-set-key (kbd "M-n") 'end-of-buffer)
+
+(global-set-key (kbd "M-p") 'textmate-column-up)
+(global-set-key (kbd "M-n") 'textmate-column-down)
 
 ;; Duplicate line (via helpers.el)
 (global-set-key (kbd "C-x C-d") 'duplicate-line)
@@ -29,7 +30,6 @@
 
 ;; Cut
 (global-set-key (kbd "C-w") 'backward-kill-word)
-(global-set-key (kbd "C-c C-k") 'kill-region)
 
 ;; Window switching (via helpers.el).
 (global-set-key (kbd "C-x C-o") 'other-window)         ;; other-window
