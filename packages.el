@@ -97,6 +97,7 @@
          egg
          escreen
          full-ack
+         gist
          git-blame
          inf-ruby
          magit
