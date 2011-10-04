@@ -95,3 +95,22 @@
   (if (< (frame-parameter nil 'alpha) 100)
       (set-frame-parameter nil 'alpha (+ (frame-parameter nil 'alpha) +1))
     (message "This is a minimum value of transparency!")))
+
+
+;; Escreen Helper (from http://blog.nguyenvq.com/2011/03/07/escreen-instead-of-elscreen-for-screen-like-features-in-emacs/)
+(defun escreen-get-active-screen-numbers-with-emphasis ()
+  "what the name says"
+  (interactive)
+  (let ((escreens (escreen-get-active-screen-numbers))
+        (emphased ""))
+    (dolist (s escreens)
+      (setq emphased
+            (concat emphased (if (= escreen-current-screen-number s)
+                                 (propertize (number-to-string s)
+                                             ;;'face 'custom-variable-tag) " ")
+                                             'face 'info-title-3)
+                               ;;'face 'font-lock-warning-face)
+                               ;;'face 'secondary-selection)
+                               (number-to-string s))
+                    " ")))
+    (message "escreen: active screens: %s" emphased)))

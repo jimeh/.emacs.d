@@ -39,14 +39,6 @@
 ;; Kill-Ring related.
 (global-set-key (kbd "M-Y") 'yank-pop-forwards)
 
-;; ElScreen related shortcuts
-(global-set-key (kbd "s-}") 'elscreen-next)
-(global-set-key (kbd "s-{") 'elscreen-previous)
-(global-set-key (kbd "C-z ,") 'elscreen-screen-nickname)
-(global-set-key (kbd "C-z C-,") 'elscreen-screen-nickname)
-(global-set-key (kbd "C-z l") 'elscreen-toggle)
-(global-set-key (kbd "C-z C-l") 'elscreen-toggle)
-
 ;; Fullscreen (works only with `brew install emacs --cocoa`)
 (global-set-key (kbd "s-<return>") 'ns-toggle-fullscreen)
 
@@ -72,3 +64,49 @@
 (global-set-key (kbd "M-i") 'windmove-up)
 (global-set-key (kbd "M-j") 'windmove-left)
 (global-set-key (kbd "M-l") 'windmove-right)
+
+;; ElScreen related shortcuts
+(when (require 'elscreen nil 'noerror)
+  (global-set-key (kbd "s-}") 'elscreen-next)
+  (global-set-key (kbd "s-{") 'elscreen-previous)
+  (global-set-key (kbd "C-z ,") 'elscreen-screen-nickname)
+  (global-set-key (kbd "C-z C-,") 'elscreen-screen-nickname)
+  (global-set-key (kbd "C-z l") 'elscreen-toggle)
+  (global-set-key (kbd "C-z C-l") 'elscreen-toggle))
+
+;; Escreen customizations (with help from helpers.el).
+(when (require 'escreen nil 'noerror)
+
+  ;; Set prefix key to C-z.
+  (setq escreen-prefix-char (kbd "C-z"))
+  (global-set-key escreen-prefix-char 'escreen-prefix)
+  (define-key escreen-map escreen-prefix-char 'escreen-goto-last-screen)
+
+  ;; Toggle screens.
+  (define-key escreen-map (kbd "l") 'escreen-goto-last-screen)
+  (define-key escreen-map (kbd "C-l") 'escreen-goto-last-screen)
+
+  ;; List screens.
+  (define-key escreen-map (kbd "a") 'escreen-get-active-screen-numbers-with-emphasis)
+  (define-key escreen-map (kbd "C-a") 'escreen-get-active-screen-numbers-with-emphasis)
+  (define-key escreen-map (kbd ";") 'escreen-get-active-screen-numbers-with-emphasis)
+  (define-key escreen-map (kbd "C-;") 'escreen-get-active-screen-numbers-with-emphasis)
+
+  ;; Goto screens.
+  (define-key escreen-map (kbd "o") 'escreen-goto-next-screen)
+  (define-key escreen-map (kbd "C-o") 'escreen-goto-next-screen)
+  (define-key escreen-map (kbd "i") 'escreen-goto-prev-screen)
+  (define-key escreen-map (kbd "C-i") 'escreen-goto-prev-screen)
+  (global-set-key (kbd "s-}") 'escreen-goto-next-screen)
+  (global-set-key (kbd "s-{") 'escreen-goto-prev-screen)
+
+  ;; Ctrl versions of default commands.
+  (define-key escreen-map (kbd "C-c") 'escreen-create-screen)
+  (define-key escreen-map (kbd "C-g") 'escreen-goto-screen)
+  (define-key escreen-map (kbd "C-k") 'escreen-kill-screen)
+  (define-key escreen-map (kbd "C-n") 'escreen-goto-next-screen)
+  (define-key escreen-map (kbd "C-p") 'escreen-goto-prev-screen)
+
+  ;; Show list of screens when you switch/create/kill.
+  (add-hook 'escreen-goto-screen-hook 'escreen-get-active-screen-numbers-with-emphasis)
+)
