@@ -15,8 +15,9 @@
 (global-set-key (kbd "s-<up>") 'beginning-of-buffer)
 (global-set-key (kbd "s-<down>") 'end-of-buffer)
 
-(global-set-key (kbd "M-p") 'textmate-column-up)
-(global-set-key (kbd "M-n") 'textmate-column-down)
+(when (require 'textmate nil 'noerror)
+  (global-set-key (kbd "M-p") 'textmate-column-up)
+  (global-set-key (kbd "M-n") 'textmate-column-down))
 
 ;; Duplicate line (via helpers.el)
 (global-set-key (kbd "C-x C-d") 'duplicate-line)
