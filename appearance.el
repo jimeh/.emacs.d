@@ -26,9 +26,10 @@
 
 ;; Display line numbers globally
 (global-linum-mode t)
-(if window-system
-    (setq linum+-smart-format "%%%dd"  linum+-dynamic-format "%%%dd")
-    (setq linum+-smart-format "%%%dd " linum+-dynamic-format "%%%dd "))
+(when (require 'linum+ nil 'noerror)
+  (if window-system
+      (setq linum+-smart-format "%%%dd"  linum+-dynamic-format "%%%dd")
+      (setq linum+-smart-format "%%%dd " linum+-dynamic-format "%%%dd ")))
 
 ;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1)) ;; one line at a time
