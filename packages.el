@@ -125,7 +125,7 @@
 
 ;; Load and setup Escreen
 (when (require 'escreen nil 'noerror)
-  (escreen-install)
+  (escreen-install))
 
 ;; Load Undo-Tree
 (require 'undo-tree)
