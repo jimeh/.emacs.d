@@ -95,7 +95,7 @@
          coffee-mode
          color-theme-tomorrow
          egg
-         elscreen
+         escreen
          full-ack
          git-blame
          inf-ruby
@@ -123,8 +123,9 @@
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/snippets")
 
-;; Load ElScreen
-(require 'elscreen)
+;; Load and setup Escreen
+(when (require 'escreen nil 'noerror)
+  (escreen-install)
 
 ;; Load Undo-Tree
 (require 'undo-tree)
