@@ -12,8 +12,8 @@
 ;; Disable toolbar
 (tool-bar-mode -1)
 
-;; Hide scrollbar
-(set-scroll-bar-mode nil)
+;; Scrollbar
+(set-scroll-bar-mode 'right)
 
 ;; Show matching paranthensis
 (show-paren-mode t)
