@@ -132,7 +132,8 @@
 (require 'undo-tree)
 
 ;; Load Linum+
-(require 'linum+)
+(if window-system ()
+  (require 'linum+))
 
 ;; Load full-ack
 (require 'full-ack)
