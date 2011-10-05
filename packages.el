@@ -38,6 +38,9 @@
         (:name color-theme-birds-of-paradise-plus
                :type git
                :url "git://github.com/jimeh/birds-of-paradise-plus-theme.el.git")
+        (:name eproject
+               :type git
+               :url "https://github.com/jrockway/eproject.git")
         (:name feature-mode
                :type git
                :url "git://github.com/michaelklishin/cucumber.el.git")
