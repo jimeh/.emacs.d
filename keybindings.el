@@ -2,6 +2,10 @@
 ;; Setup a few global keyboard shortcuts
 ;;
 
+;; IBuffer
+(when (require 'ibuffer nil 'noerror)
+  (global-set-key (kbd "C-x C-b") 'ibuffer))
+
 ;; Undo/Redo (via undo-tree)
 (when (require 'undo-tree nil 'noerror)
   (global-set-key (kbd "s-z") 'undo-tree-undo)
