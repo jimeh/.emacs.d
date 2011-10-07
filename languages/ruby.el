@@ -25,7 +25,7 @@
             (setq ruby-use-encoding-map nil)
             (setq ruby-electric-expand-delimiters-list (quote (124)))
             (setq whitespace-action (quote (auto-cleanup)))
-            (column-marker-1 80)
+            (fci-mode)
             (define-key ruby-mode-map
               (kbd "RET") 'reindent-then-newline-and-indent)
             (define-key ruby-mode-map

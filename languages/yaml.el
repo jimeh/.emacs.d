@@ -4,4 +4,5 @@
 
 (add-hook 'yaml-mode-hook
           '(lambda ()
+             (fci-mode)
              (define-key yaml-mode-map (kbd "RET") 'newline-and-indent)))

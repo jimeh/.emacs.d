@@ -2,4 +2,5 @@
 
 (add-hook 'feature-mod-hook
           (lambda ()
+            (fci-mode)
             (setq whitespace-action (quote (auto-cleanup)))))
