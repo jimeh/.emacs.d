@@ -85,7 +85,9 @@
         ;;        :depends tabbar)
         (:name ruby-mode
                :type svn
-               :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")))
+               :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")
+        (:name yasnippet
+               :url "http://yasnippet.googlecode.com/svn/branches/TRY-better-inhibit-modification-hooks/")))
 
 
 ;;
