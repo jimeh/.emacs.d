@@ -2,30 +2,6 @@
 ;; Setup a few global keyboard shortcuts
 ;;
 
-;; IBuffer
-(when (require 'ibuffer nil 'noerror)
-  (global-set-key (kbd "C-x C-b") 'ibuffer))
-
-;; Undo/Redo (via undo-tree)
-(when (require 'undo-tree nil 'noerror)
-  (global-set-key (kbd "s-z") 'undo-tree-undo)
-  (global-set-key (kbd "s-Z") 'undo-tree-redo))
-
-;; Move to beginning/end of line
-(global-set-key (kbd "s-<left>") 'beginning-of-line)
-(global-set-key (kbd "s-<right>") 'end-of-line)
-
-;; Scroll up/down
-(global-set-key (kbd "s-<up>") 'beginning-of-buffer)
-(global-set-key (kbd "s-<down>") 'end-of-buffer)
-
-(when (require 'textmate nil 'noerror)
-  (global-set-key (kbd "M-p") 'textmate-column-up)
-  (global-set-key (kbd "M-n") 'textmate-column-down))
-
-;; Duplicate line (via helpers.el)
-(global-set-key (kbd "C-x C-d") 'duplicate-line)
-
 ;; Alternative to M-x
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 (global-set-key (kbd "C-c C-m") 'execute-extended-command)
@@ -36,20 +12,45 @@
 ;; Cut
 (global-set-key (kbd "C-w") 'backward-kill-word)
 
+;; Kill-Ring related.
+(global-set-key (kbd "M-Y") 'yank-pop-forwards)
+
+;; Scroll up/down
+(global-set-key (kbd "s-<up>") 'beginning-of-buffer)
+(global-set-key (kbd "s-<down>") 'end-of-buffer)
+
+;; Move to beginning/end of line
+(global-set-key (kbd "s-<left>") 'beginning-of-line)
+(global-set-key (kbd "s-<right>") 'end-of-line)
+
 ;; Window switching (via helpers.el).
 (global-set-key (kbd "C-x C-o") 'other-window)         ;; other-window
 (global-set-key (kbd "C-x C-i") 'other-window-reverse) ;; other-window -1
 
-;; Kill-Ring related.
-(global-set-key (kbd "M-Y") 'yank-pop-forwards)
+;; IBuffer
+(when (require 'ibuffer nil 'noerror)
+  (global-set-key (kbd "C-x C-b") 'ibuffer))
+
+;; Undo/Redo (via undo-tree)
+(when (require 'undo-tree nil 'noerror)
+  (global-set-key (kbd "s-z") 'undo-tree-undo)
+  (global-set-key (kbd "s-Z") 'undo-tree-redo))
+
+(when (require 'textmate nil 'noerror)
+  (global-set-key (kbd "M-p") 'textmate-column-up)
+  (global-set-key (kbd "M-n") 'textmate-column-down))
+
+(when (require 'flyspell nil 'noerror)
+  (global-set-key (kbd "s-.") 'flyspell-correct-word-before-point))
+
+;; Duplicate line (via helpers.el)
+(global-set-key (kbd "C-x C-d") 'duplicate-line)
 
 ;; Fullscreen (works only with `brew install emacs --cocoa`)
 (global-set-key (kbd "s-<return>") 'ns-toggle-fullscreen)
 
-;; Set transparency
+;; Set/increase/decrease transparency (via helpers.el)
 (global-set-key (kbd "C-?") 'transparency-set-value)
-
-;; Increase/decrease transparency
 (global-set-key (kbd "C-<") 'transparency-increase)
 (global-set-key (kbd "C->") 'transparency-decrease)
 
