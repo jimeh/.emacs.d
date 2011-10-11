@@ -87,7 +87,8 @@
                :type svn
                :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")
         (:name yasnippet
-               :url "http://yasnippet.googlecode.com/svn/branches/TRY-better-inhibit-modification-hooks/")))
+               :type git
+               :url "https://github.com/capitaomorte/yasnippet.git")))
 
 
 ;;
