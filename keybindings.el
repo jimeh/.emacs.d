@@ -98,10 +98,6 @@
   (define-key escreen-map (kbd "C-;") 'escreen-get-active-screen-numbers-with-emphasis)
 
   ;; Goto screens.
-  (define-key escreen-map (kbd "o") 'escreen-goto-next-screen)
-  (define-key escreen-map (kbd "C-o") 'escreen-goto-next-screen)
-  (define-key escreen-map (kbd "i") 'escreen-goto-prev-screen)
-  (define-key escreen-map (kbd "C-i") 'escreen-goto-prev-screen)
   (global-set-key (kbd "s-}") 'escreen-goto-next-screen)
   (global-set-key (kbd "s-{") 'escreen-goto-prev-screen)
 
