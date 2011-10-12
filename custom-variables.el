@@ -39,6 +39,7 @@
  '(ns-tool-bar-size-mode nil t)
  '(php-mode-dot-property-warning t)
  '(ruby-deep-indent-paren nil)
+ '(ruby-use-encoding-map nil)
  '(safe-local-variable-values (quote ((eval rainbow-mode 1))))
  '(show-paren-mode t)
  '(speedbar-show-unknown-files t)
