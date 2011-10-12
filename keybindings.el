@@ -70,6 +70,14 @@
 (global-set-key (kbd "M-j") 'windmove-left)
 (global-set-key (kbd "M-l") 'windmove-right)
 
+;; Org-mode
+(define-key global-map (kbd "C-c a") 'org-agenda)
+(define-key global-map (kbd "C-c l") 'org-store-link)
+
+;; Remember mode
+(define-key global-map (kbd "C-c r") 'org-remember)
+(define-key global-map (kbd "C-M-r") 'org-remember)
+
 ;; ElScreen related shortcuts
 (when (require 'elscreen nil 'noerror)
   (global-set-key (kbd "s-}") 'elscreen-next)

@@ -7,7 +7,7 @@
 (load-file "~/.emacs.d/vendor.el")
 (load-file "~/.emacs.d/appearance.el")
 (load-file "~/.emacs.d/keybindings.el")
-
+(load-file "~/.emacs.d/remember.el")
 
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
