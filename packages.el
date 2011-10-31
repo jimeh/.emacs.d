@@ -109,6 +109,7 @@
          magit
          markdown-mode
          php-mode-improved
+         python-mode
          ruby-mode
          ruby-compilation
          ;; smooth-scrolling
