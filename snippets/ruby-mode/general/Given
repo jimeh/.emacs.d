@@ -1,0 +1,4 @@
+# name: Given(...)
+# key: Given
+# --
+Given(/^${1:match}$/)$0

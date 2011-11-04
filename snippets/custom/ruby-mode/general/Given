@@ -1,3 +1,0 @@
-#name : Given(...)
-# --
-Given(/^${1:match}$/)$0

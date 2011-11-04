@@ -1,0 +1,4 @@
+# name: When(...)
+# key: When
+# --
+When(/^${1:match}$/)$0

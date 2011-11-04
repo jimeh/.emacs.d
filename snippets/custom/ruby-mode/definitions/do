@@ -1,5 +1,0 @@
-#name : do |variable| ... end
-# --
-do $1
-  $0
-end

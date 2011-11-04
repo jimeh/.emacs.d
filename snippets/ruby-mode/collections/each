@@ -1,0 +1,4 @@
+# name: each { |...| ... }
+# key: each
+# --
+each { |${e}| $0 }

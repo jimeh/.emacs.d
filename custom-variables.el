@@ -54,7 +54,7 @@
  '(whitespace-action nil)
  '(winner-mode t nil (winner))
  '(yas/global-mode t nil (yasnippet))
- '(yas/snippet-dirs (quote ("~/.emacs.d/snippets/custom" "~/.emacs.d/snippets/stock" "~/.emacs.d/el-get/yasnippet/snippets")) nil (yasnippet))
+ '(yas/snippet-dirs (quote ("~/.emacs.d/snippets" "~/.emacs.d/el-get/yasnippet/snippets")) nil (yasnippet))
  '(yas/use-menu t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

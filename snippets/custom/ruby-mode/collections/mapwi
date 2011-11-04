@@ -1,3 +1,0 @@
-#name : map_with_index { |...| ... }
-# --
-map_with_index { |${e}| $0 }
