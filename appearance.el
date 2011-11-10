@@ -9,6 +9,9 @@
     (require 'birds-of-paradise-plus-theme)
     (color-theme-tomorrow-night-bright))
 
+;; Disable menu-bar
+(menu-bar-mode 0)
+
 ;; Disable toolbar
 (tool-bar-mode -1)
 
