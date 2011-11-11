@@ -88,7 +88,17 @@
                :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")
         (:name yasnippet
                :type git
-               :url "https://github.com/capitaomorte/yasnippet.git")))
+               :url "https://github.com/capitaomorte/yasnippet.git")
+        (:name tree-mode
+               :type emacswiki)
+        (:name windata
+               :type emacswiki)
+        (:name dirtree
+               :description "Directory tree views in Emacs"
+               :type git
+               :url "https://github.com/zkim/emacs-dirtree.git"
+               :depends (tree-mode windata)
+               :features dirtree)))
 
 
 ;;
