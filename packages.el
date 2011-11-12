@@ -28,16 +28,13 @@
 ;;
 
 (setq el-get-sources
-      '((:name column-marker
-               :type emacswiki
-               :features column-marker)
+      '((:name color-theme-birds-of-paradise-plus
+               :type git
+               :url "git://github.com/jimeh/birds-of-paradise-plus-theme.el.git")
         ;; (:name color-theme-birds-of-paradise
         ;;        :type git
         ;;        :url "https://gist.github.com/1130343.git"
         ;;        :load    "birds-of-paradise-theme.el")
-        (:name color-theme-birds-of-paradise-plus
-               :type git
-               :url "git://github.com/jimeh/birds-of-paradise-plus-theme.el.git")
         (:name eproject
                :type git
                :url "https://github.com/jrockway/eproject.git")
@@ -73,16 +70,6 @@
         (:name linum+
                :type http
                :url "http://dea.googlecode.com/svn/trunk/my-lisps/linum+.el")
-        (:name lusty-explorer
-               :type emacswiki
-               :features lusty-explorer)
-        ;; (:name tabbar
-        ;;        :type emacswiki
-        ;;        :features tabbar)
-        ;; (:name ide-skel
-        ;;        :type emacswiki
-        ;;        :features ide-skel
-        ;;        :depends tabbar)
         (:name ruby-mode
                :type svn
                :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")
@@ -110,16 +97,13 @@
        '(autopair
          coffee-mode
          color-theme-tomorrow
-         egg
          escreen
          full-ack
-         gist
          git-blame
          inf-ruby
-         magit
          markdown-mode
          php-mode-improved
-         python-mode
+         ;; python-mode ;; currently broken
          ruby-mode
          ruby-compilation
          ;; smooth-scrolling
