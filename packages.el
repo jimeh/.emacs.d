@@ -35,6 +35,12 @@
         ;;        :type git
         ;;        :url "https://gist.github.com/1130343.git"
         ;;        :load    "birds-of-paradise-theme.el")
+        (:name dirtree
+               :description "Directory tree views in Emacs"
+               :type git
+               :url "https://github.com/zkim/emacs-dirtree.git"
+               :depends (tree-mode windata)
+               :features dirtree)
         (:name eproject
                :type git
                :url "https://github.com/jrockway/eproject.git")
@@ -73,19 +79,13 @@
         (:name ruby-mode
                :type svn
                :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")
+        (:name tree-mode
+               :type emacswiki)
         (:name yasnippet
                :type git
                :url "https://github.com/capitaomorte/yasnippet.git")
-        (:name tree-mode
-               :type emacswiki)
         (:name windata
-               :type emacswiki)
-        (:name dirtree
-               :description "Directory tree views in Emacs"
-               :type git
-               :url "https://github.com/zkim/emacs-dirtree.git"
-               :depends (tree-mode windata)
-               :features dirtree)))
+               :type emacswiki)))
 
 
 ;;
