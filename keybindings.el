@@ -81,14 +81,24 @@
 
 ;; ElScreen related shortcuts
 (when (require 'elscreen nil 'noerror)
+
+  ;; Goto screens.
   (global-set-key (kbd "s-}") 'elscreen-next)
   (global-set-key (kbd "s-{") 'elscreen-previous)
-  (global-set-key (kbd "C-z ,") 'elscreen-screen-nickname)
-  (global-set-key (kbd "C-z C-,") 'elscreen-screen-nickname)
-  (global-set-key (kbd "C-z l") 'elscreen-toggle)
-  (global-set-key (kbd "C-z C-l") 'elscreen-toggle))
 
-;; Escreen customizations (with help from helpers.el).
+  ;; Set screen nickname
+  (define-key elscreen-map (kbd ",")   'elscreen-screen-nickname)
+  (define-key elscreen-map (kbd "C-,") 'elscreen-screen-nickname)
+
+  ;; Toggle screens.
+  (define-key elscreen-map (kbd "l")   'elscreen-toggle)
+  (define-key elscreen-map (kbd "C-l") 'elscreen-toggle)
+
+  ;; Display list of screens.
+  (define-key elscreen-map (kbd ";")   'elscreen-display-screen-name-list)
+  (define-key elscreen-map (kbd "C-;") 'elscreen-display-screen-name-list))
+
+;; Escreen customizations (via helpers.el).
 (when (require 'escreen nil 'noerror)
 
   ;; Set prefix key to C-z.
@@ -101,10 +111,14 @@
   (define-key escreen-map (kbd "C-l") 'escreen-goto-last-screen)
 
   ;; List screens.
-  (define-key escreen-map (kbd "a") 'escreen-get-active-screen-numbers-with-emphasis)
-  (define-key escreen-map (kbd "C-a") 'escreen-get-active-screen-numbers-with-emphasis)
-  (define-key escreen-map (kbd ";") 'escreen-get-active-screen-numbers-with-emphasis)
-  (define-key escreen-map (kbd "C-;") 'escreen-get-active-screen-numbers-with-emphasis)
+  (define-key escreen-map (kbd "a")
+    'escreen-get-active-screen-numbers-with-emphasis)
+  (define-key escreen-map (kbd "C-a")
+    'escreen-get-active-screen-numbers-with-emphasis)
+  (define-key escreen-map (kbd ";")
+    'escreen-get-active-screen-numbers-with-emphasis)
+  (define-key escreen-map (kbd "C-;")
+    'escreen-get-active-screen-numbers-with-emphasis)
 
   ;; Goto screens.
   (global-set-key (kbd "s-}") 'escreen-goto-next-screen)
@@ -118,5 +132,5 @@
   (define-key escreen-map (kbd "C-p") 'escreen-goto-prev-screen)
 
   ;; Show list of screens when you switch/create/kill.
-  (add-hook 'escreen-goto-screen-hook 'escreen-get-active-screen-numbers-with-emphasis)
-)
+  (add-hook 'escreen-goto-screen-hook
+            'escreen-get-active-screen-numbers-with-emphasis))
