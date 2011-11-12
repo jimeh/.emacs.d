@@ -68,6 +68,16 @@
 
 
 ;;
+;; Window Resizing
+;;
+
+(defun enlarge-window-down  () (interactive) (enlarge-window 1))
+(defun enlarge-window-up    () (interactive) (enlarge-window -1))
+(defun enlarge-window-left  () (interactive) (enlarge-window -1 t))
+(defun enlarge-window-right () (interactive) (enlarge-window 1 t))
+
+
+;;
 ;; Window Swapping
 ;; - from https://gist.github.com/287633
 ;;
@@ -85,6 +95,11 @@
         (set-window-buffer other-window this-buffer)
         (set-window-start  this-window  other-start)
         (set-window-start  other-window this-start)))))
+
+(defun swap-with-down  () (interactive) (swap-with 'down))
+(defun swap-with-up    () (interactive) (swap-with 'up))
+(defun swap-with-left  () (interactive) (swap-with 'left))
+(defun swap-with-right () (interactive) (swap-with 'right))
 
 ;;
 ;; Transparency

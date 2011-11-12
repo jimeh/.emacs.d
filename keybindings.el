@@ -55,15 +55,15 @@
 (global-set-key (kbd "C->") 'transparency-decrease)
 
 ;; Window Tiling (via helpers.el)
-(global-set-key (kbd "C-M-K") (lambda () (interactive) (swap-with 'down)))
-(global-set-key (kbd "C-M-I") (lambda () (interactive) (swap-with 'up)))
-(global-set-key (kbd "C-M-J") (lambda () (interactive) (swap-with 'left)))
-(global-set-key (kbd "C-M-L") (lambda () (interactive) (swap-with 'right)))
+(global-set-key (kbd "C-M-K") 'swap-with-down)
+(global-set-key (kbd "C-M-I") 'swap-with-up)
+(global-set-key (kbd "C-M-J") 'swap-with-left)
+(global-set-key (kbd "C-M-L") 'swap-with-right)
 
-(global-set-key (kbd "M-K") (lambda () (interactive) (enlarge-window 1)))
-(global-set-key (kbd "M-I") (lambda () (interactive) (enlarge-window -1)))
-(global-set-key (kbd "M-J") (lambda () (interactive) (enlarge-window -1 t)))
-(global-set-key (kbd "M-L") (lambda () (interactive) (enlarge-window 1 t)))
+(global-set-key (kbd "M-K") 'enlarge-window-down)
+(global-set-key (kbd "M-I") 'enlarge-window-up)
+(global-set-key (kbd "M-J") 'enlarge-window-left)
+(global-set-key (kbd "M-L") 'enlarge-window-right)
 
 (global-set-key (kbd "M-k") 'windmove-down)
 (global-set-key (kbd "M-i") 'windmove-up)
