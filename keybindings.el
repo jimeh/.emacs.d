@@ -24,8 +24,9 @@
 (global-set-key (kbd "s-<right>") 'end-of-line)
 
 ;; Window switching (via helpers.el).
-(global-set-key (kbd "C-x C-o") 'other-window)         ;; other-window
-(global-set-key (kbd "C-x C-i") 'other-window-reverse) ;; other-window -1
+(global-set-key (kbd "C-x i")   'other-window-reverse)
+(global-set-key (kbd "C-x C-o") 'other-window)
+(global-set-key (kbd "C-x C-i") 'other-window-reverse)
 
 ;; IBuffer
 (when (require 'ibuffer nil 'noerror)
