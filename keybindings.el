@@ -51,7 +51,7 @@
 (global-set-key (kbd "s-<return>") 'ns-toggle-fullscreen)
 
 ;; Set/increase/decrease transparency (via helpers.el)
-(global-set-key (kbd "C-?") 'transparency-set-value)
+(global-set-key (kbd "C-|") 'transparency-set-value)
 (global-set-key (kbd "C-<") 'transparency-increase)
 (global-set-key (kbd "C->") 'transparency-decrease)
 
