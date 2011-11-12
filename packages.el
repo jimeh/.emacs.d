@@ -80,12 +80,14 @@
                :type svn
                :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")
         (:name tree-mode
-               :type emacswiki)
+               :type emacswiki
+               :features tree-mode)
         (:name yasnippet
                :type git
                :url "https://github.com/capitaomorte/yasnippet.git")
         (:name windata
-               :type emacswiki)))
+               :type emacswiki
+               :features windata)))
 
 
 ;;
