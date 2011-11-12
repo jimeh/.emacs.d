@@ -123,11 +123,6 @@
 ;; Initialize Packages
 ;;
 
-;; Configure Yasnippet
-(when (require 'yasnippet nil 'noerror)
-  (yas/initialize)
-  (yas/load-directory "~/.emacs.d/snippets"))
-
 ;; Load and setup Escreen
 (when (require 'escreen nil 'noerror)
   (escreen-install))
