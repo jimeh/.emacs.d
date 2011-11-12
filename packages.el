@@ -99,7 +99,7 @@
        '(autopair
          coffee-mode
          color-theme-tomorrow
-         escreen
+         elscreen
          full-ack
          git-blame
          inf-ruby
