@@ -1,4 +1,7 @@
+;;
 ;; Execute Ruby Code
+;;
+
 (defun is-rails-project ()
   (when (textmate-project-root)
     (file-exists-p (expand-file-name "config/environment.rb" (textmate-project-root)))))
@@ -13,7 +16,11 @@
         (pop-to-buffer (ruby-compilation-do filename command)))
     (ruby-compilation-this-buffer)))
 
+
+;;
 ;; Auto-indent on Paste
+;;
+
 (dolist (command '(yank yank-pop))
   (eval `(defadvice ,command (after indent-region activate)
            (and (not current-prefix-arg)
@@ -28,7 +35,10 @@
                   (indent-region (region-beginning) (region-end) nil))))))
 
 
+;;
 ;; Duplicate Line
+;;
+
 (defun duplicate-line()
   (interactive)
   (move-beginning-of-line 1)
@@ -37,19 +47,31 @@
   (newline)
   (yank))
 
+
+;;
 ;; Yank Pop Forwards
+;;
+
 (defun yank-pop-forwards (arg)
   (interactive "p")
   (yank-pop (- arg)))
 
+
+;;
 ;; Window Switching
+;;
+
 (defun other-window-reverse ()
   "Switch to the previous window"
   (interactive)
   (other-window -1))
 
 
-;; Window Swapping (from https://gist.github.com/287633)
+;;
+;; Window Swapping
+;; - from https://gist.github.com/287633
+;;
+
 (defun swap-with (dir)
   (interactive)
   (let ((other-window (windmove-find-other-window dir)))
@@ -64,7 +86,10 @@
         (set-window-start  this-window  other-start)
         (set-window-start  other-window this-start)))))
 
+;;
 ;; Transparency
+;;
+
 (defun transparency-set-initial-value ()
   "Set initial value of alpha parameter for the current frame"
   (interactive)
@@ -97,7 +122,11 @@
     (message "This is a minimum value of transparency!")))
 
 
-;; Escreen Helper (from http://blog.nguyenvq.com/2011/03/07/escreen-instead-of-elscreen-for-screen-like-features-in-emacs/)
+;;
+;; Escreen Helper
+;; - from http://blog.nguyenvq.com/2011/03/07/escreen-instead-of-elscreen-for-screen-like-features-in-emacs/
+;;
+
 (defun escreen-get-active-screen-numbers-with-emphasis ()
   "what the name says"
   (interactive)
