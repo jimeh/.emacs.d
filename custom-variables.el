@@ -31,6 +31,7 @@
  '(fci-rule-color "#593B38")
  '(fci-rule-width 1)
  '(fill-column 78)
+ '(fringe-mode (quote (4 . 4)) nil (fringe))
  '(global-auto-revert-mode t)
  '(global-undo-tree-mode t)
  '(history-length 500)

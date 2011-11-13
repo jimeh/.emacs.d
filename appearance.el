@@ -16,7 +16,7 @@
 (tool-bar-mode -1)
 
 ;; Scrollbar
-(set-scroll-bar-mode 'right)
+(set-scroll-bar-mode 'nil)
 
 ;; Show matching paranthensis
 (show-paren-mode t)
