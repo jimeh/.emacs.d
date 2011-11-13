@@ -105,7 +105,6 @@
          inf-ruby
          markdown-mode
          php-mode-improved
-         ;; python-mode ;; currently broken
          ruby-mode
          ruby-compilation
          ;; smooth-scrolling
