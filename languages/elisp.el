@@ -3,4 +3,5 @@
           (lambda ()
             (flyspell-prog-mode)
             (setq whitespace-action (quote (auto-cleanup)))
-            (fci-mode)))
+            (fci-mode)
+            (linum-mode t)))

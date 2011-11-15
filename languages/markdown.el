@@ -6,5 +6,6 @@
           (lambda ()
             (setq whitespace-action nil)
             (fci-mode)
+            (linum-mode t)
             (flyspell-mode 1)
             (define-key markdown-mode-map (kbd "C-c p") 'markdown-preview)))

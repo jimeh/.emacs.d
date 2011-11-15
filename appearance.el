@@ -27,8 +27,7 @@
 ;; Highlight current line globally
 (global-hl-line-mode t)
 
-;; Display line numbers globally
-(global-linum-mode t)
+;; Customize line numbers when Emacs runs in console
 (if window-system ()
   (setq linum+-smart-format "%%%dd " linum+-dynamic-format "%%%dd "))
 

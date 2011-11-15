@@ -4,4 +4,5 @@
 (add-hook 'coffee-mode-hook
           (lambda ()
             (fci-mode)
+            (linum-mode t)
             (setq tab-width 2)))

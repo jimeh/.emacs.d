@@ -19,6 +19,7 @@
             (flymake-ruby-load)
             (flyspell-prog-mode)
             (ruby-electric-mode t)
+            (linum-mode t)
             (setq ruby-deep-arglist t)
             (setq ruby-deep-indent-paren nil)
             (setq c-tab-always-indent nil)

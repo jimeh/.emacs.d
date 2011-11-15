@@ -7,3 +7,7 @@
 (setq exec-path (cons "/usr/local/bin" exec-path))
 (require 'erlang-start)
 (require 'erlang-flymake)
+
+(add-hook 'erland-mode-hook
+          (lambda ()
+            (linum-mode t)))

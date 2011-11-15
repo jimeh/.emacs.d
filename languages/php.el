@@ -1,4 +1,5 @@
 (add-hook 'php-mode-hook
           (lambda ()
             (setq whitespace-action (quote (auto-cleanup)))
-            (fci-mode)))
+            (fci-mode)
+            (linum-mode t)))
