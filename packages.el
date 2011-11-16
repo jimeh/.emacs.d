@@ -103,6 +103,7 @@
          autopair
          coffee-mode
          color-theme-tomorrow
+         ;; ecb
          escreen
          full-ack
          git-blame
@@ -125,6 +126,11 @@
 ;;
 ;; Initialize Packages
 ;;
+
+;; Activate ECB
+;; (when (require 'ecb nil 'noerror)
+;;   (setq stack-trace-on-error t)
+;;   (ecb-activate))
 
 ;; Load and setup Escreen
 (when (require 'escreen nil 'noerror)

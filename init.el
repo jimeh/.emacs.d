@@ -16,7 +16,7 @@
 
 (delete-selection-mode 1)
 
-(winner-mode 1)
+;; (winner-mode 1)
 
 ;; (desktop-save-mode 1)
 
