@@ -9,9 +9,6 @@
 ;; Easier version of "C-x k" to kill buffer
 (global-set-key (kbd "C-x C-k") 'kill-buffer)
 
-;; Cut
-(global-set-key (kbd "C-w") 'backward-kill-word)
-
 ;; Kill-Ring related.
 (global-set-key (kbd "M-Y") 'yank-pop-forwards)
 
