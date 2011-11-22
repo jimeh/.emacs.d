@@ -97,9 +97,7 @@
 (setq my-packages
       (append
        '(auto-complete
-         auto-complete-ruby
          auto-complete-emacs-lisp
-         auto-complete-css
          autopair
          coffee-mode
          color-theme-tomorrow
