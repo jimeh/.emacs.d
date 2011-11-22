@@ -130,6 +130,10 @@
 ;;   (setq stack-trace-on-error t)
 ;;   (ecb-activate))
 
+;; Load Auto-Complete and addons
+(when (require 'auto-complete nil 'noerror)
+  (require 'auto-complete-emacs-lisp))
+
 ;; Load and setup Escreen
 (when (require 'escreen nil 'noerror)
   (escreen-install))
