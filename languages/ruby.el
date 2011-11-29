@@ -30,7 +30,13 @@
             (define-key ruby-mode-map
               (kbd "RET") 'reindent-then-newline-and-indent)
             (define-key ruby-mode-map
-              (kbd "s-r") 'run-rails-test-or-ruby-buffer)))
+              (kbd "s-r") 'ruby-compilation-this-buffer)
+            (define-key ruby-mode-map
+              (kbd "C-x t") 'textmate-goto-file)
+            (define-key ruby-mode-map
+              (kbd "C-x C-t") 'textmate-goto-file)
+            (define-key ruby-mode-map
+              (kbd "C-c C-l") 'goto-line)))
 
 ;; Yasnippet workaround for ruby-electric-mode
 ;; See: http://code.google.com/p/yasnippet/issues/detail?id=71
