@@ -126,7 +126,6 @@
 ;;
 
 (defun initialize-packages ()
-
   ;; Activate ECB
   (when (require 'ecb nil 'noerror)
     (setq stack-trace-on-error t)
