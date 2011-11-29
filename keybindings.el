@@ -12,7 +12,7 @@
 ;; Kill-Ring related.
 (global-set-key (kbd "M-Y") 'yank-pop-forwards)
 
-;; Scroll up/down
+;; Move to beginning/end of buffer
 (global-set-key (kbd "s-<up>") 'beginning-of-buffer)
 (global-set-key (kbd "s-<down>") 'end-of-buffer)
 
@@ -31,10 +31,16 @@
 
 ;; Undo/Redo (via undo-tree)
 (when (require 'undo-tree nil 'noerror)
+  ;; Mac OS X GUI
   (global-set-key (kbd "s-z") 'undo-tree-undo)
-  (global-set-key (kbd "s-Z") 'undo-tree-redo))
+  (global-set-key (kbd "s-Z") 'undo-tree-redo)
+  ;; Console
+  (global-set-key (kbd "M--") 'undo-tree-undo)
+  (global-set-key (kbd "M-_") 'undo-tree-redo))
 
 (when (require 'textmate nil 'noerror)
+  (global-set-key (kbd "C-c C-f") 'textmate-goto-file)
+  (global-set-key (kbd "C-x C-t") 'textmate-goto-file)
   (global-set-key (kbd "M-p") 'textmate-column-up)
   (global-set-key (kbd "M-n") 'textmate-column-down))
 
@@ -44,7 +50,13 @@
 ;; Duplicate line (via helpers.el)
 (global-set-key (kbd "C-x C-d") 'duplicate-line)
 
-;; Fullscreen (works only with `brew install emacs --cocoa`)
+;; Goto line
+(global-set-key (kbd "C-c C-l") 'goto-line)
+
+;; Align Equal Signs (via helpers.el)
+;; (global-set-key (kbd "M-s-‘") 'align-equal-signs)
+
+;; Fullscreen (requires this patch: https://gist.github.com/1012927)
 (global-set-key (kbd "s-<return>") 'ns-toggle-fullscreen)
 
 ;; Set/increase/decrease transparency (via helpers.el)

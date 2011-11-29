@@ -49,6 +49,15 @@
 
 
 ;;
+;; Align Equal Signs
+;;
+
+;; (defun align-equal-signs()
+;;   (interactive)
+;;   (align-regexp "="))
+
+
+;;
 ;; Yank Pop Forwards
 ;;
 
@@ -68,7 +77,7 @@
 
 
 ;;
-;; Window Resizing
+;; Window Re-sizing
 ;;
 
 (defun enlarge-window-down  () (interactive) (enlarge-window 1))
