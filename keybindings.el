@@ -53,6 +53,10 @@
 ;; Goto line
 (global-set-key (kbd "C-c C-l") 'goto-line)
 
+;; Comment or uncomment line
+(global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
+(global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
+
 ;; Align Equal Signs (via helpers.el)
 ;; (global-set-key (kbd "M-s-‘") 'align-equal-signs)
 
