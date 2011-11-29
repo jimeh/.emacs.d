@@ -126,11 +126,11 @@
 ;;
 
 (defun initialize-packages ()
-  ;; Activate ECB
+  ;; Activate ECB if window-system
   (when (require 'ecb nil 'noerror)
-    (setq stack-trace-on-error t)
-    (setq ecb-tip-of-the-day nil)
-    (ecb-activate))
+    (setq stack-trace-on-error t) ;; hack to fix a load-error
+    (if window-system
+        (ecb-activate)))
 
   ;; Load Auto-Complete and addons
   (when (require 'auto-complete nil 'noerror)
