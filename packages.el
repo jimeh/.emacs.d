@@ -125,25 +125,29 @@
 ;; Initialize Packages
 ;;
 
-;; Activate ECB
-;; (when (require 'ecb nil 'noerror)
-;;   (setq stack-trace-on-error t)
-;;   (ecb-activate))
+(defun initialize-packages ()
 
-;; Load Auto-Complete and addons
-(when (require 'auto-complete nil 'noerror)
-  (require 'auto-complete-emacs-lisp))
+  ;; Activate ECB
+  (when (require 'ecb nil 'noerror)
+    (setq stack-trace-on-error t)
+    (setq ecb-tip-of-the-day nil)
+    (ecb-activate))
 
-;; Load and setup Escreen
-(when (require 'escreen nil 'noerror)
-  (escreen-install))
+  ;; Load Auto-Complete and addons
+  (when (require 'auto-complete nil 'noerror)
+    (require 'auto-complete-emacs-lisp))
 
-;; Load Undo-Tree
-(require 'undo-tree)
+  ;; Load and setup Escreen
+  (when (require 'escreen nil 'noerror)
+    (escreen-install))
 
-;; Load Linum+
-(if window-system ()
-  (require 'linum+))
+  ;; Load Undo-Tree
+  (require 'undo-tree)
 
-;; Load full-ack
-(require 'full-ack)
+  ;; Load Linum+
+  (if window-system ()
+    (require 'linum+))
+
+  ;; Load full-ack
+  (require 'full-ack)
+)

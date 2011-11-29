@@ -23,3 +23,6 @@
 ;; Custom variables file
 (setq custom-file "~/.emacs.d/custom-variables.el")
 (load-file custom-file)
+
+;; Initialize packages in packages.el
+(initialize-packages)
