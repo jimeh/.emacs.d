@@ -101,7 +101,7 @@
          autopair
          coffee-mode
          color-theme-tomorrow
-         ;; ecb
+         ecb
          escreen
          full-ack
          git-blame
