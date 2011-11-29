@@ -42,9 +42,12 @@
 (global-whitespace-mode t)
 
 ;; Customize Whitespace Characters
+;;  - Newline: \u00AC = ¬
+;;  - Tab:     \u25B8 = ▸
 (setq whitespace-display-mappings
-      (quote ((newline-mark ?\n    [?¬ ?\n] [?$ ?\n])
-              (tab-mark     ?\t    [?▸ ?\t] [?\u00BB ?\t] [?\\ ?\t]))))
+      (quote ((newline-mark ?\n    [?\u00AC ?\n] [?$ ?\n])
+              (tab-mark     ?\t    [?\u25B8 ?\t] [?\u00BB ?\t] [?\\ ?\t]))))
+
 (setq whitespace-style
       (quote (face tabs trailing space-before-tab newline
                    indentation space-after-tab tab-mark newline-mark
