@@ -22,7 +22,7 @@
  '(ecb-layout-name "left13")
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2))
- '(ecb-source-path (quote (("~/Projects" "Projects") ("~/.emacs.d" ".emacs.d") ("~/.dotfiles" ".dotfiles") ("~/src" "src") ("~/Projects/globaldev" "globaldev") ("~/Sites" "Sites") ("/Users/jimeh" "jimeh") ("/" "/"))))
+ '(ecb-source-path (quote (("~/Projects" "Projects") ("~/Projects/api" "api") ("~/.emacs.d" ".emacs.d") ("~/.dotfiles" ".dotfiles") ("~/src" "src") ("~/Projects/globaldev" "globaldev") ("~/Sites" "Sites") ("~" "~") ("/" "/"))))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("left13" "user-left1")))
  '(ecb-windows-width 0.18)
