@@ -60,7 +60,7 @@
 ;; Align Equal Signs (via helpers.el)
 ;; (global-set-key (kbd "M-s-‘") 'align-equal-signs)
 
-;; Fullscreen (requires this patch: https://gist.github.com/1012927)
+;; Mac OS X Fullscreen (requires this patch: https://gist.github.com/1012927)
 (global-set-key (kbd "s-<return>") 'ns-toggle-fullscreen)
 
 ;; Set/increase/decrease transparency (via helpers.el)
