@@ -75,6 +75,8 @@
  '(tabbar-mode nil)
  '(textmate-mode t)
  '(tool-bar-mode nil)
+ '(undo-limit 800000)
+ '(undo-strong-limit 1200000)
  '(undo-tree-mode-lighter "")
  '(visual-line-mode nil t)
  '(whitespace-action nil)
