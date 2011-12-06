@@ -43,7 +43,10 @@
                :features dirtree)
         (:name eproject
                :type git
-               :url "https://github.com/jrockway/eproject.git")
+               :url "https://github.com/jrockway/eproject.git"
+               :post-init (lambda ()
+                            (require 'eproject)
+                            (require 'eproject-extras)))
         (:name feature-mode
                :type git
                :url "git://github.com/michaelklishin/cucumber.el.git")

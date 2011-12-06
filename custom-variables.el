@@ -35,6 +35,7 @@
  '(elscreen-display-tab t)
  '(elscreen-tab-display-control t)
  '(elscreen-tab-display-kill-screen nil)
+ '(eproject-completing-read-function (quote eproject--ido-completing-read))
  '(escreen-number-mode t)
  '(fci-handle-truncate-lines nil)
  '(fci-rule-color "#593B38")
