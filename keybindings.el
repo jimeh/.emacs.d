@@ -38,9 +38,13 @@
   (global-set-key (kbd "M--") 'undo-tree-undo)
   (global-set-key (kbd "M-_") 'undo-tree-redo))
 
+;; eproject related keybindings
+(when (require 'eproject nil 'noerror)
+  (global-set-key (kbd "C-c C-f") 'eproject-find-file)
+  (global-set-key (kbd "C-x C-t") 'eproject-find-file))
+
+;; Textmate-mode related keybindings
 (when (require 'textmate nil 'noerror)
-  (global-set-key (kbd "C-c C-f") 'textmate-goto-file)
-  (global-set-key (kbd "C-x C-t") 'textmate-goto-file)
   (global-set-key (kbd "M-p") 'textmate-column-up)
   (global-set-key (kbd "M-n") 'textmate-column-down))
 

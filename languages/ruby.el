@@ -32,11 +32,13 @@
             (define-key ruby-mode-map
               (kbd "s-r") 'ruby-compilation-this-buffer)
             (define-key ruby-mode-map
-              (kbd "C-x t") 'textmate-goto-file)
+              (kbd "C-x t") 'eproject-find-file)
             (define-key ruby-mode-map
-              (kbd "C-x C-t") 'textmate-goto-file)
+              (kbd "C-x C-t") 'eproject-find-file)
             (define-key ruby-mode-map
-              (kbd "C-c C-l") 'goto-line)))
+              (kbd "C-c C-l") 'goto-line)
+            (define-key ruby-mode-map
+              (kbd "C-c C-b") 'eproject-ibuffer)))
 
 ;; Yasnippet workaround for ruby-electric-mode
 ;; See: http://code.google.com/p/yasnippet/issues/detail?id=71
