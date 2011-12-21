@@ -4,7 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-menu-height 15)
- '(ack-arguments (quote ("--ignore-dir=vendor/ruby" "--ignore-dir=vendor/bundle")))
+ '(ack-arguments (quote ("--ignore-dir=vendor/ruby" "--ignore-dir=vendor/bundle" "--ignore-dir=coverage" "--ignore-dir=docs" "--ignore-dir=doc")))
  '(ack-project-root-file-patterns (quote (".project\\'" ".xcodeproj\\'" ".sln\\'" "\\`Project.ede\\'" "\\`.git\\'" "\\`.bzr\\'" "\\`_darcs\\'" "\\`.hg\\'" "\\`Gemfile\\'" "\\`Rakefile\\'")))
  '(ack-prompt-for-directory (quote unless-guessed))
  '(aquamacs-additional-fontsets nil t)
