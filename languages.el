@@ -5,5 +5,6 @@
 (load-file "~/.emacs.d/languages/javascript.el")
 (load-file "~/.emacs.d/languages/markdown.el")
 (load-file "~/.emacs.d/languages/php.el")
+(load-file "~/.emacs.d/languages/python.el")
 (load-file "~/.emacs.d/languages/ruby.el")
 (load-file "~/.emacs.d/languages/yaml.el")
