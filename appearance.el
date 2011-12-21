@@ -2,7 +2,7 @@
 (setq inhibit-startup-message t)
 
 ;; Set default font
-(set-frame-font "Monaco-11")
+(set-face-attribute 'default nil :family "Monaco" :height 110)
 
 ;; Load Theme
 (if window-system
