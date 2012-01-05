@@ -2,4 +2,4 @@
           (lambda ()
             (fci-mode)
             (linum-mode t)
-            (setq tab-width 2)))
+            (define-key python-mode-map (kbd "RET") 'newline-and-indent)))
