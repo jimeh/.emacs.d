@@ -6,9 +6,6 @@
                        "\.DS_Store"))
 
   (define-project-type node-js (generic)
-    (look-for "package.json")
+    (or (look-for "package.json") (look-for "Cakefile"))
     :irrelevant-files ("^[#]" ".git/" "node_modules"))
-
-  (define-project-type coffeescript (node-js)
-    (look-for "Cakefile"))
 )
