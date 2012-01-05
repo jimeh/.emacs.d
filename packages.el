@@ -62,12 +62,12 @@
                :features flymake-ruby
                :post-init (lambda ()
                             (add-hook 'ruby-mode-hook 'flymake-ruby-load)))
-        (:name flymake-coffee
-               :type git
-               :url "git://github.com/purcell/flymake-coffee.git"
-               :features flymake-coffee
-               :post-init (lambda ()
-                            (add-hook 'coffee-mode-hook 'flymake-coffee-load)))
+        ;; (:name flymake-coffee
+        ;;        :type git
+        ;;        :url "git://github.com/purcell/flymake-coffee.git"
+        ;;        :features flymake-coffee
+        ;;        :post-init (lambda ()
+        ;;                     (add-hook 'coffee-mode-hook 'flymake-coffee-load)))
         (:name fill-column-indicator
                :type git
                :url "git://github.com/alpaker/Fill-Column-Indicator.git"
