@@ -28,9 +28,12 @@
 ;;
 
 (setq el-get-sources
-      '((:name color-theme-birds-of-paradise-plus
+      '((:name birds-of-paradise-plus-theme
                :type git
-               :url "git://github.com/jimeh/birds-of-paradise-plus-theme.el.git")
+               :url "git://github.com/jimeh/birds-of-paradise-plus-theme.el.git"
+               :post-init (lambda ()
+                            (push "~/.emacs.d/el-get/birds-of-paradise-plus-theme"
+                                  custom-theme-load-path)))
         ;; (:name color-theme-birds-of-paradise
         ;;        :type git
         ;;        :url "https://gist.github.com/1130343.git"
