@@ -38,7 +38,6 @@
  '(eproject-completing-read-function (quote eproject--ido-completing-read))
  '(escreen-number-mode t)
  '(fci-handle-truncate-lines nil)
- '(fci-rule-color "#593B38")
  '(fci-rule-width 1)
  '(fill-column 78)
  '(fringe-mode (quote (4 . 4)) nil (fringe))
