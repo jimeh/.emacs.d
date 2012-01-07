@@ -34,7 +34,7 @@
                :post-init (lambda ()
                             (push "~/.emacs.d/el-get/birds-of-paradise-plus-theme"
                                   custom-theme-load-path)))
-        ;; (:name color-theme-birds-of-paradise
+        ;; (:name birds-of-paradise-theme
         ;;        :type git
         ;;        :url "https://gist.github.com/1130343.git"
         ;;        :load    "birds-of-paradise-theme.el")
