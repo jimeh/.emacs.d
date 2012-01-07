@@ -31,6 +31,12 @@
 (if window-system ()
   (setq linum+-smart-format "%%%dd " linum+-dynamic-format "%%%dd "))
 
+;; meaningful names for buffers with the same name
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+(setq uniquify-separator "/")
+(setq uniquify-after-kill-buffer-p t)    ; rename after killing uniquified
+(setq uniquify-ignore-buffers-re "^\\*") ; don't muck with special buffers
 
 ;; Display whitespace characters globally
 (global-whitespace-mode t)
