@@ -31,12 +31,6 @@
 (if window-system ()
   (setq linum+-smart-format "%%%dd " linum+-dynamic-format "%%%dd "))
 
-;; scroll one line at a time (less "jumpy" than defaults)
-(setq mouse-wheel-scroll-amount '(2 ((shift) . 10)) ;; two lines at a time
-      mouse-wheel-progressive-speed nil ;; don't accelerate scrolling
-      mouse-wheel-follow-mouse 't ;; scroll window under mouse
-      scroll-step 1 ;; keyboard scroll one line at a time
-      scroll-margin 0)
 
 ;; Display whitespace characters globally
 (global-whitespace-mode t)
