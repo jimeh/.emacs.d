@@ -82,6 +82,14 @@
         (:name linum+
                :type http
                :url "http://dea.googlecode.com/svn/trunk/my-lisps/linum+.el")
+        (:name rsense
+               :type git
+               :url "https://github.com/m2ym/rsense.git"
+               :build ("ant" "chmod +x bin/rsense")
+               :post-init (lambda ()
+                            (setq rsense-home (expand-file-name "~/.emacs.d/el-get/rsense"))
+                            (add-to-list 'load-path (concat rsense-home "/etc"))
+                            (require 'rsense)))
         (:name ruby-mode
                :type svn
                :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")

@@ -20,6 +20,9 @@
             (flyspell-prog-mode)
             (ruby-electric-mode t)
             (linum-mode t)
+            (when (require 'rsense nil 'noerror)
+              (add-to-list 'ac-sources 'ac-source-rsense-method)
+              (add-to-list 'ac-sources 'ac-source-rsense-constant))
             (setq ruby-deep-arglist t)
             (setq ruby-deep-indent-paren nil)
             (setq c-tab-always-indent nil)
@@ -31,6 +34,8 @@
               (kbd "RET") 'reindent-then-newline-and-indent)
             (define-key ruby-mode-map
               (kbd "s-r") 'ruby-compilation-this-buffer)
+            (define-key ruby-mode-map
+              (kbd "C-c .") 'ac-complete-rsense)
             (define-key ruby-mode-map
               (kbd "C-x t") 'textmate-goto-file)
             (define-key ruby-mode-map

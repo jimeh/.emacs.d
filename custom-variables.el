@@ -3,6 +3,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ac-auto-show-menu 0.2)
+ '(ac-delay 0.05)
  '(ac-menu-height 15)
  '(ack-arguments (quote ("--ignore-dir=vendor/ruby" "--ignore-dir=vendor/bundle" "--ignore-dir=coverage" "--ignore-dir=docs" "--ignore-dir=doc")))
  '(ack-project-root-file-patterns (quote (".project\\'" ".xcodeproj\\'" ".sln\\'" "\\`Project.ede\\'" "\\`.git\\'" "\\`.bzr\\'" "\\`_darcs\\'" "\\`.hg\\'" "\\`Gemfile\\'" "\\`Rakefile\\'")))
