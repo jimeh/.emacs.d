@@ -21,7 +21,7 @@
 ;;
 
 (defun insert-hash()
-  "Inserts a hash into the buffer"
+  "Inserts a hash into the buffer. Useful for UK keyboard layout users."
   (interactive)
   (insert "#"))
 

@@ -103,7 +103,7 @@
 (define-key global-map (kbd "C-c r") 'org-remember)
 (define-key global-map (kbd "C-M-r") 'org-remember)
 
-;; Allow hash to be entered
+;; Allow hash to be entered on UK keyboards
 (global-set-key (kbd "M-3") 'insert-hash)
 
 ;; ElScreen related shortcuts
