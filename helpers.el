@@ -17,6 +17,15 @@
 
 
 ;;
+;; Insert Hash
+;;
+
+(defun insert-hash()
+  "Inserts a hash into the buffer"
+  (interactive)
+  (insert "#"))
+
+;;
 ;; Duplicate Line
 ;;
 
