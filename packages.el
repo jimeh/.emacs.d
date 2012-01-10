@@ -93,6 +93,9 @@
         (:name ruby-mode
                :type svn
                :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")
+        (:name tiling
+               :type emacswiki
+               :features tiling)
         (:name tree-mode
                :type emacswiki
                :features tree-mode)

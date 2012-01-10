@@ -106,6 +106,10 @@
 ;; Allow hash to be entered on UK keyboards
 (global-set-key (kbd "M-3") 'insert-hash)
 
+;; tiling.el related bindings
+(when (require 'tiling nil 'noerror)
+  (define-key global-map (kbd "C-\\") 'tiling-cycle))
+
 ;; ElScreen related shortcuts
 (when (require 'elscreen nil 'noerror)
 
