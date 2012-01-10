@@ -35,7 +35,7 @@
             (define-key ruby-mode-map
               (kbd "s-r") 'ruby-compilation-this-buffer)
             (define-key ruby-mode-map
-              (kbd "C-c .") 'ac-complete-rsense)
+              (kbd "C-c C-.") 'ac-complete-rsense)
             (define-key ruby-mode-map
               (kbd "C-x t") 'textmate-goto-file)
             (define-key ruby-mode-map
