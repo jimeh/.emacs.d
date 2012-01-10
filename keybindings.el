@@ -79,6 +79,11 @@
 (global-set-key (kbd "C-<") 'transparency-increase)
 (global-set-key (kbd "C->") 'transparency-decrease)
 
+;; Window Resizing
+(define-key global-map (kbd "C-{") 'shrink-window-horizontally)
+(define-key global-map (kbd "C-}") 'enlarge-window-horizontally)
+(define-key global-map (kbd "C-^") 'enlarge-window)
+
 ;; Window Tiling (via helpers.el)
 (global-set-key (kbd "C-M-K") 'swap-with-down)
 (global-set-key (kbd "C-M-I") 'swap-with-up)
