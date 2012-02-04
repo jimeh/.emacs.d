@@ -39,6 +39,7 @@
  '(elscreen-tab-display-kill-screen nil)
  '(eproject-completing-read-function (quote eproject--ido-completing-read))
  '(escreen-number-mode t)
+ '(evil-default-cursor (quote (t)))
  '(fci-handle-truncate-lines nil)
  '(fci-rule-width 1)
  '(fill-column 78)
