@@ -27,9 +27,10 @@
 ;; Highlight current line globally
 (global-hl-line-mode t)
 
-;; Customize line numbers when Emacs runs in console
-(if window-system ()
-  (setq linum+-smart-format "%%%dd " linum+-dynamic-format "%%%dd "))
+;; Customize line numbers when running in a console
+(unless window-system
+  (setq linum+-smart-format "%%%dd ")
+  (setq linum+-dynamic-format "%%%dd "))
 
 ;; meaningful names for buffers with the same name
 (require 'uniquify)
