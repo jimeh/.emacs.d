@@ -32,11 +32,9 @@
 ;; Undo/Redo (via undo-tree)
 (when (require 'undo-tree nil 'noerror)
   ;; Mac OS X GUI
-  (global-set-key (kbd "s-z") 'undo-tree-undo)
-  (global-set-key (kbd "s-Z") 'undo-tree-redo)
-  ;; Console
-  (global-set-key (kbd "M--") 'undo-tree-undo)
-  (global-set-key (kbd "M-_") 'undo-tree-redo))
+  (when (eq system-type 'darwin)
+    (global-set-key (kbd "s-z") 'undo-tree-undo)
+    (global-set-key (kbd "s-Z") 'undo-tree-redo)))
 
 ;; eproject related keybindings
 (when (require 'eproject nil 'noerror)
