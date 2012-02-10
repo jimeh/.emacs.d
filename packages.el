@@ -115,7 +115,6 @@
       (append
        '(auto-complete
          auto-complete-emacs-lisp
-         autopair
          coffee-mode
          color-theme-tomorrow
          ecb

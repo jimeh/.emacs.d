@@ -1,6 +1,11 @@
 ;; Default tab-width of 2 spaces
 (setq-default tab-width 2)
 
+;; Electric behavior
+(electric-pair-mode t)
+(electric-indent-mode t)
+(electric-layout-mode t)
+
 ;; Always indent with spaces
 (setq-default indent-tabs-mode nil)
 
