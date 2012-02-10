@@ -25,6 +25,7 @@
       scroll-step 1 ;; keyboard scroll one line at a time
       scroll-margin 0)
 
+;; Enable mouse support when running in a console
 (unless window-system
   (xterm-mouse-mode 1)
   (global-set-key [mouse-4] 'scroll-down-line)
