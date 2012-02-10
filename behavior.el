@@ -24,3 +24,8 @@
       mouse-wheel-follow-mouse 't ;; scroll window under mouse
       scroll-step 1 ;; keyboard scroll one line at a time
       scroll-margin 0)
+
+(unless window-system
+  (xterm-mouse-mode 1)
+  (global-set-key [mouse-4] 'scroll-down-line)
+  (global-set-key [mouse-5] 'scroll-up-line))
