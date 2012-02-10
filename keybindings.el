@@ -12,13 +12,25 @@
 ;; Kill-Ring related.
 (global-set-key (kbd "M-Y") 'yank-pop-forwards)
 
-;; Move to beginning/end of buffer
-(global-set-key (kbd "s-<up>") 'beginning-of-buffer)
-(global-set-key (kbd "s-<down>") 'end-of-buffer)
+;; Mac OS X specific keybindings
+(when (eq system-type 'darwin)
 
-;; Move to beginning/end of line
-(global-set-key (kbd "s-<left>") 'beginning-of-line)
-(global-set-key (kbd "s-<right>") 'end-of-line)
+  ;; Mac OS X Fullscreen (requires this patch: https://gist.github.com/1012927)
+  (global-set-key (kbd "s-<return>") 'ns-toggle-fullscreen)
+
+  ;; Undo/Redo (via undo-tree)
+  (when (require 'undo-tree nil 'noerror)
+    (global-set-key (kbd "s-z") 'undo-tree-undo)
+    (global-set-key (kbd "s-Z") 'undo-tree-redo))
+
+  ;; Move to beginning/end of buffer
+  (global-set-key (kbd "s-<up>") 'beginning-of-buffer)
+  (global-set-key (kbd "s-<down>") 'end-of-buffer)
+
+  ;; Move to beginning/end of line
+  (global-set-key (kbd "s-<left>") 'beginning-of-line)
+  (global-set-key (kbd "s-<right>") 'end-of-line))
+
 
 ;; Window switching (via helpers.el).
 (global-set-key (kbd "C-x i")   'other-window-reverse)
@@ -28,13 +40,6 @@
 ;; IBuffer
 (when (require 'ibuffer nil 'noerror)
   (global-set-key (kbd "C-x C-b") 'ibuffer))
-
-;; Undo/Redo (via undo-tree)
-(when (require 'undo-tree nil 'noerror)
-  ;; Mac OS X GUI
-  (when (eq system-type 'darwin)
-    (global-set-key (kbd "s-z") 'undo-tree-undo)
-    (global-set-key (kbd "s-Z") 'undo-tree-redo)))
 
 ;; eproject related keybindings
 (when (require 'eproject nil 'noerror)
@@ -72,9 +77,6 @@
 
 ;; Align Equal Signs (via helpers.el)
 ;; (global-set-key (kbd "M-s-‘") 'align-equal-signs)
-
-;; Mac OS X Fullscreen (requires this patch: https://gist.github.com/1012927)
-(global-set-key (kbd "s-<return>") 'ns-toggle-fullscreen)
 
 ;; Set/increase/decrease transparency (via helpers.el)
 (global-set-key (kbd "C-|") 'transparency-set-value)
