@@ -66,7 +66,7 @@
 
 ;; Align to equal signs
 (global-set-key (kbd "C-x a =") 'align-to-equals)
-(global-set-key (kbd "M-s-‘") 'align-to-equals)
+(global-set-key (kbd "M-]") 'align-to-equals)
 
 ;; Goto line
 (global-set-key (kbd "C-c C-l") 'goto-line)
