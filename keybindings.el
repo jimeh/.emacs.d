@@ -23,6 +23,10 @@
     (global-set-key (kbd "s-z") 'undo-tree-undo)
     (global-set-key (kbd "s-Z") 'undo-tree-redo))
 
+  ;; Flyspell correct previous word
+  (when (require 'flyspell nil 'noerror)
+    (global-set-key (kbd "s-.") 'flyspell-correct-word-before-point))
+
   ;; Move to beginning/end of buffer
   (global-set-key (kbd "s-<up>") 'beginning-of-buffer)
   (global-set-key (kbd "s-<down>") 'end-of-buffer)
@@ -56,10 +60,6 @@
   (global-set-key (kbd "C-c C-t") 'textmate-goto-symbol)
   (global-set-key (kbd "M-p") 'textmate-column-up)
   (global-set-key (kbd "M-n") 'textmate-column-down))
-
-;; Flyspell correct previous word
-(when (require 'flyspell nil 'noerror)
-  (global-set-key (kbd "s-.") 'flyspell-correct-word-before-point))
 
 ;; Duplicate line (via helpers.el)
 (global-set-key (kbd "C-x C-d") 'duplicate-line)
