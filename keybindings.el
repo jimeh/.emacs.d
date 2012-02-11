@@ -62,7 +62,7 @@
   (global-set-key (kbd "M-n") 'textmate-column-down))
 
 ;; Duplicate line (via helpers.el)
-(global-set-key (kbd "C-x C-d") 'duplicate-line)
+(global-set-key (kbd "C-x C-d") 'duplicate-current-line-or-region)
 
 ;; Align to equal signs
 (global-set-key (kbd "C-x a =") 'align-to-equals)
