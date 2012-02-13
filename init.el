@@ -1,18 +1,30 @@
-;; emacs configuration
+;;
+;; Emacs Configuration
+;;
 
-(load-file "~/.emacs.d/env.el")
-(load-file "~/.emacs.d/packages.el")
-(load-file "~/.emacs.d/helpers.el")
-(load-file "~/.emacs.d/languages.el")
-(load-file "~/.emacs.d/vendor.el")
-(load-file "~/.emacs.d/behavior.el")
-(load-file "~/.emacs.d/appearance.el")
-(load-file "~/.emacs.d/keybindings.el")
-(load-file "~/.emacs.d/remember.el")
-(load-file "~/.emacs.d/project-definitions.el")
+;; Set root directory of Emacs config
+(setq emacs-config-dir
+      (file-name-directory (or load-file-name (buffer-file-name))))
+
+;; Helper function for config path
+(defun config-path(path)
+  "Appends argument at the end of emacs-config-dir using expand-file-name"
+  (expand-file-name path emacs-config-dir))
+
+;; Load various config files
+(load-file (config-path "env.el"))
+(load-file (config-path "packages.el"))
+(load-file (config-path "helpers.el"))
+(load-file (config-path "languages.el"))
+(load-file (config-path "vendor.el"))
+(load-file (config-path "behavior.el"))
+(load-file (config-path "appearance.el"))
+(load-file (config-path "keybindings.el"))
+(load-file (config-path "remember.el"))
+(load-file (config-path "project-definitions.el"))
 
 ;; Custom variables file
-(setq custom-file "~/.emacs.d/custom-variables.el")
+(setq custom-file (config-path "custom-variables.el"))
 (load-file custom-file)
 
 ;; Initialize packages in packages.el

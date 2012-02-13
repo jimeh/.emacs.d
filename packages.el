@@ -11,7 +11,7 @@
 ;; Load el-get
 ;;
 
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(add-to-list 'load-path (config-path "el-get/el-get"))
 (require 'el-get)
 
 ;;; Uses 2.stable branch, doesn't work with some of my stuff
@@ -32,7 +32,7 @@
                :type git
                :url "git://github.com/jimeh/birds-of-paradise-plus-theme.el.git"
                :post-init (lambda ()
-                            (push "~/.emacs.d/el-get/birds-of-paradise-plus-theme"
+                            (push (config-path "el-get/birds-of-paradise-plus-theme")
                                   custom-theme-load-path)))
         ;; (:name birds-of-paradise-theme
         ;;        :type git
@@ -87,7 +87,7 @@
                :url "https://github.com/m2ym/rsense.git"
                :build ("ant" "chmod +x bin/rsense")
                :post-init (lambda ()
-                            (setq rsense-home (expand-file-name "~/.emacs.d/el-get/rsense"))
+                            (setq rsense-home (expand-file-name (config-path "el-get/rsense")))
                             (add-to-list 'load-path (concat rsense-home "/etc"))
                             (require 'rsense)))
         (:name ruby-mode

@@ -1,2 +1,2 @@
 ;; Load-path
-(add-to-list 'load-path "~/.emacs.d/vendor")
+(add-to-list 'load-path (config-path "vendor"))
