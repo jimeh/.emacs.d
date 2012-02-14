@@ -9,6 +9,9 @@
 ;; Easier version of "C-x k" to kill buffer
 (global-set-key (kbd "C-x C-k") 'kill-buffer)
 
+;; Evaluate buffer
+(global-set-key (kbd "C-c C-e") 'eval-buffer)
+
 ;; Goto line
 (global-set-key (kbd "C-c C-l") 'goto-line)
 
