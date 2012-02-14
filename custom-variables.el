@@ -69,7 +69,6 @@
 " "~/.org-files/notes.org" "Notes"))))
  '(org-reverse-note-order t)
  '(php-mode-dot-property-warning t)
- '(reb-re-syntax (quote string))
  '(ruby-deep-indent-paren nil)
  '(ruby-use-encoding-map nil)
  '(safe-local-variable-values (quote ((eval rainbow-mode 1))))
