@@ -119,7 +119,7 @@
          color-theme-tomorrow
          ecb
          escreen
-         ;; evil
+         evil
          full-ack
          git-blame
          inf-ruby
