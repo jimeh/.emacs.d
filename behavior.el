@@ -18,7 +18,11 @@
 ;; Globally enable delete-selection-mode
 (delete-selection-mode 1)
 
-;; scroll one line at a time (less "jumpy" than defaults)
+;; Make re-builder easier to use
+(require 're-builder)
+(setq reb-re-syntax 'string)
+
+;; smoother scrolling (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 10)) ;; two lines at a time
       mouse-wheel-progressive-speed nil ;; don't accelerate scrolling
       mouse-wheel-follow-mouse 't ;; scroll window under mouse
