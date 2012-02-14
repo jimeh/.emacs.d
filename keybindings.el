@@ -9,8 +9,27 @@
 ;; Easier version of "C-x k" to kill buffer
 (global-set-key (kbd "C-x C-k") 'kill-buffer)
 
+;; Goto line
+(global-set-key (kbd "C-c C-l") 'goto-line)
+
+;; Duplicate line (via helpers.el)
+(global-set-key (kbd "C-x C-d") 'duplicate-current-line-or-region)
+
+;; Window switching (via helpers.el).
+(global-set-key (kbd "C-x i")   'other-window-reverse)
+(global-set-key (kbd "C-x C-o") 'other-window)
+(global-set-key (kbd "C-x C-i") 'other-window-reverse)
+
 ;; Kill-Ring related.
 (global-set-key (kbd "M-Y") 'yank-pop-forwards)
+
+;; Align to equal signs
+(global-set-key (kbd "C-x a =") 'align-to-equals)
+(global-set-key (kbd "M-]") 'align-to-equals)
+
+;; Comment or uncomment line
+(global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
+(global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
 
 ;; Mac OS X specific keybindings
 (when (eq system-type 'darwin)
@@ -35,12 +54,6 @@
   (global-set-key (kbd "s-<left>") 'beginning-of-line)
   (global-set-key (kbd "s-<right>") 'end-of-line))
 
-
-;; Window switching (via helpers.el).
-(global-set-key (kbd "C-x i")   'other-window-reverse)
-(global-set-key (kbd "C-x C-o") 'other-window)
-(global-set-key (kbd "C-x C-i") 'other-window-reverse)
-
 ;; IBuffer
 (when (require 'ibuffer nil 'noerror)
   (global-set-key (kbd "C-x C-b") 'ibuffer))
@@ -60,23 +73,6 @@
   (global-set-key (kbd "C-c C-t") 'textmate-goto-symbol)
   (global-set-key (kbd "M-p") 'textmate-column-up)
   (global-set-key (kbd "M-n") 'textmate-column-down))
-
-;; Duplicate line (via helpers.el)
-(global-set-key (kbd "C-x C-d") 'duplicate-current-line-or-region)
-
-;; Align to equal signs
-(global-set-key (kbd "C-x a =") 'align-to-equals)
-(global-set-key (kbd "M-]") 'align-to-equals)
-
-;; Goto line
-(global-set-key (kbd "C-c C-l") 'goto-line)
-
-;; Comment or uncomment line
-(global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
-(global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
-
-;; Align Equal Signs (via helpers.el)
-;; (global-set-key (kbd "M-s-‘") 'align-equal-signs)
 
 ;; Set/increase/decrease transparency (via helpers.el)
 (global-set-key (kbd "C-|") 'transparency-set-value)
@@ -112,7 +108,7 @@
 (define-key global-map (kbd "C-c r") 'org-remember)
 (define-key global-map (kbd "C-M-r") 'org-remember)
 
-;; Allow hash to be entered on UK keyboards
+;; Allow hash to be entered on UK keyboards (via helpers.el)
 (global-set-key (kbd "M-3") 'insert-hash)
 
 ;; tiling.el related bindings
