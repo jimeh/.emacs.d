@@ -161,7 +161,7 @@
   (require 'undo-tree)
 
   ;; Load Linum+
-  (if window-system ()
+  (unless window-system
     (require 'linum+))
 
   ;; Load full-ack
