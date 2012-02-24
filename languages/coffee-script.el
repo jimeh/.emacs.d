@@ -3,6 +3,7 @@
 
 (add-hook 'coffee-mode-hook
           (lambda ()
-            (fci-mode)
+            (flyspell-prog-mode)
             (linum-mode t)
+            (fci-mode)
             (setq tab-width 2)))

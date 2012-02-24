@@ -10,4 +10,6 @@
 
 (add-hook 'erland-mode-hook
           (lambda ()
-            (linum-mode t)))
+            (flyspell-prog-mode)
+            (linum-mode t)
+            (fci-mode)))

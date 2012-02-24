@@ -2,6 +2,7 @@
 
 (add-hook 'feature-mode-hook
           (lambda ()
-            (fci-mode)
+            (setq whitespace-action (quote (auto-cleanup)))
+            (flyspell-mode)
             (linum-mode t)
-            (setq whitespace-action (quote (auto-cleanup)))))
+            (fci-mode)))

@@ -1,5 +1,6 @@
 (add-hook 'python-mode-hook
           (lambda ()
-            (fci-mode)
+            (flyspell-prog-mode)
             (linum-mode t)
+            (fci-mode)
             (define-key python-mode-map (kbd "RET") 'newline-and-indent)))

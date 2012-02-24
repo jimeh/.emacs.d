@@ -1,4 +1,5 @@
 (add-hook 'sh-mode-hook
           (lambda ()
-            (fci-mode)
-            (linum-mode t)))
+            (flyspell-prog-mode)
+            (linum-mode t)
+            (fci-mode)))
