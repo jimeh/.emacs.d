@@ -1,5 +1,6 @@
 (load-file (config-path "languages/coffee-script.el"))
 (load-file (config-path "languages/cucumber.el"))
+(load-file (config-path "languages/css.el"))
 (load-file (config-path "languages/elisp.el"))
 (load-file (config-path "languages/erlang.el"))
 (load-file (config-path "languages/javascript.el"))
