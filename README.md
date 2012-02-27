@@ -1,4 +1,4 @@
-# My .emacs.d Config Folder #
+# My .emacs.d Config Folder
 
 This is my personal Emacs configuration. Having been primarily a TextMate user
 previously, my setup might also work nicely for other TM users who are curious
@@ -9,41 +9,34 @@ personal config with any quirks, oddities, bugs, and man-eating errors I live
 with on a daily basis.
 
 
-## Requirements ##
+## Requirements
 
 My config uses Emacs 24's new package system, and also the awesome [el-get][]
 package manager. The latest stable version of Emacs is currently 23, so you'll
-need to get ahold of a nightly build somehow.
+need to get ahold of a nightly build.
 
 [el-get]: https://github.com/dimitri/el-get
 
 
-### Mac OS X ###
+### Mac OS X
 
-Personally I use [Homebrew][] to install Emacs from the latest source,
-specially since Homebrew includes a few OSX specific patches, like full-screen
-support.
+Personally I compile my own build of Emacs for Mac OS X using a custom build
+script I wrote: [build-emacs-for-osx][]
 
-[homebrew]: http://mxcl.github.com/homebrew/
-
-To install with Homebrew:
-
-    brew install emacs -HEAD --cocoa
+[build-emacs-for-osx]: (https://github.com/jimeh/build-emacs-for-osx)
 
 Or if you prefer to not compile it yourself, and you can live without
-full-screen, you can download the latest nightly from:
-[emacsformacosx.com][].
-
-[emacsformacosx.com]: http://emacsformacosx.com/builds
+full-screen and the sRGB patch, you can download the latest nightly from:
+[emacsformacosx.com](http://emacsformacosx.com/builds).
 
 
-### Linux, Windows ###
+### Linux, Windows
 
 I'm afraid you'll have to figure out how to get Emacs 24 yourself. Like I
 said, this is not a starter kit.
 
 
-## Installation ##
+## Installation
 
 Simply clone my config repo to `~/.emacs.d` update git submodules, and launch
 Emacs:
@@ -62,7 +55,7 @@ ruby-related errors. On subsequent launches it's fast and error free.
 config? ;)*
 
 
-## Notes ##
+## Notes
 
 * Feel free to fork and tweak :)
 * Theme-wise I use a slightly tweaked version of [Joe Bergantine][]'s [Birds of
@@ -72,7 +65,6 @@ config? ;)*
 * I've customized keyboard shortcuts a decent bit, which you can overview in
   [keybindings.el][].
 * Flyspell is set to use `aspell` instead of the default `ispell` command.
-* For those who want a project tree view, there's `M-x dirtree`.
 * Most language specific tweaks are in the respective files in the
   [languages][] folder.
 * There's a lot of stuff in here, dig through the config files manually :)
