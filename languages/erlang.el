@@ -8,7 +8,7 @@
 (require 'erlang-start)
 (require 'erlang-flymake)
 
-(add-hook 'erland-mode-hook
+(add-hook 'erlang-mode-hook
           (lambda ()
             (flyspell-prog-mode)
             (linum-mode t)
