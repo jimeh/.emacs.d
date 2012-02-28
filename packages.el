@@ -125,6 +125,7 @@
          highlight-indentation
          inf-ruby
          magit
+         magithub
          markdown-mode
          php-mode-improved
          ruby-mode
