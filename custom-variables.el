@@ -49,6 +49,8 @@
  '(history-length 500)
  '(icomplete-mode t)
  '(ispell-program-name "aspell")
+ '(magit-completing-read-function (quote magit-ido-completing-read))
+ '(magit-repo-dirs (quote ("~/Projects")))
  '(markdown-command "redcarpet")
  '(ns-tool-bar-display-mode nil t)
  '(ns-tool-bar-size-mode nil t)
