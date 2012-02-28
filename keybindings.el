@@ -65,6 +65,10 @@
 (when (require 'ibuffer nil 'noerror)
   (global-set-key (kbd "C-x C-b") 'ibuffer))
 
+;; Magit
+(when (require 'magit nil 'noerror)
+  (global-set-key (kbd "C-x g") 'magit-status))
+
 ;; eproject related keybindings
 (when (require 'eproject nil 'noerror)
   (global-set-key (kbd "C-c C-b") 'eproject-ibuffer)

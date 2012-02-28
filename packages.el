@@ -124,6 +124,7 @@
          git-blame
          highlight-indentation
          inf-ruby
+         magit
          markdown-mode
          php-mode-improved
          ruby-mode
