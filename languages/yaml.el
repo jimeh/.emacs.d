@@ -7,4 +7,7 @@
              (flyspell-prog-mode)
              (linum-mode t)
              (fci-mode)
+             (setq highlight-indentation-offset 2)
+             (highlight-indentation-mode)
+             (highlight-indentation-current-column-mode)
              (define-key yaml-mode-map (kbd "RET") 'newline-and-indent)))

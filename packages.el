@@ -122,6 +122,7 @@
          evil
          full-ack
          git-blame
+         highlight-indentation
          inf-ruby
          markdown-mode
          php-mode-improved
