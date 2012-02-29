@@ -8,5 +8,4 @@
             (fci-mode)
             (setq tab-width 2)
             (setq highlight-indentation-offset 2)
-            (highlight-indentation-mode)
-            (highlight-indentation-current-column-mode)))
+            (highlight-indentation-mode)))
