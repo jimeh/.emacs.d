@@ -5,4 +5,6 @@
             (setq whitespace-action (quote (auto-cleanup)))
             (flyspell-mode)
             (linum-mode t)
-            (fci-mode)))
+            (fci-mode)
+            (setq highlight-indentation-offset 2)
+            (highlight-indentation-mode)))
