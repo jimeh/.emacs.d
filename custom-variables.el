@@ -51,6 +51,7 @@
  '(ispell-program-name "aspell")
  '(magit-completing-read-function (quote magit-ido-completing-read))
  '(magit-repo-dirs (quote ("~/Projects")))
+ '(magit-status-buffer-switch-function (quote switch-to-buffer))
  '(markdown-command "redcarpet")
  '(ns-tool-bar-display-mode nil t)
  '(ns-tool-bar-size-mode nil t)
