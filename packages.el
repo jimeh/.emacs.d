@@ -130,8 +130,6 @@
          php-mode-improved
          ruby-mode
          ruby-compilation
-         ;; smooth-scrolling
-         ;; smooth-scroll
          textmate
          undo-tree
          yaml-mode
