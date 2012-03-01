@@ -38,6 +38,15 @@
         ;;        :type git
         ;;        :url "https://gist.github.com/1130343.git"
         ;;        :load    "birds-of-paradise-theme.el")
+        (:name color-theme-tomorrow
+               :description "Emacs highlighting using Chris Charles's Tomorrow color scheme"
+               :type git
+               :url "https://github.com/jimeh/Tomorrow-Theme.git"
+               :load-path "GNU Emacs"
+               :branch "emacs-24"
+               :post-init (lambda ()
+                            (push (config-path "el-get/color-theme-tomorrow/GNU Emacs")
+                                  custom-theme-load-path)))
         (:name dirtree
                :description "Directory tree views in Emacs"
                :type git
@@ -116,7 +125,6 @@
        '(auto-complete
          auto-complete-emacs-lisp
          coffee-mode
-         color-theme-tomorrow
          ecb
          escreen
          evil

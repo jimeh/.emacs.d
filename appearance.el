@@ -5,9 +5,8 @@
 (set-face-attribute 'default nil :family "Monaco" :height 110)
 
 ;; Load Theme
-(if window-system
-    (require 'birds-of-paradise-plus-theme)
-    (color-theme-tomorrow-night-bright))
+(if window-system (require 'birds-of-paradise-plus-theme)
+  (require 'tomorrow-night-bright-theme))
 
 ;; Disable menu-bar
 (menu-bar-mode 0)
