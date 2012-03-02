@@ -23,7 +23,7 @@ need to get ahold of a nightly build.
 Personally I compile my own build of Emacs for Mac OS X using a custom build
 script I wrote: [build-emacs-for-osx][]
 
-[build-emacs-for-osx]: (https://github.com/jimeh/build-emacs-for-osx)
+[build-emacs-for-osx]: https://github.com/jimeh/build-emacs-for-osx
 
 Or if you prefer to not compile it yourself, and you can live without
 full-screen and the sRGB patch, you can download the latest nightly from:
