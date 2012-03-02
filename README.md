@@ -27,7 +27,9 @@ script I wrote: [build-emacs-for-osx][]
 
 Or if you prefer to not compile it yourself, and you can live without
 full-screen and the sRGB patch, you can download the latest nightly from:
-[emacsformacosx.com](http://emacsformacosx.com/builds).
+[emacsformacosx.com][].
+
+[emacsformacosx.com]: http://emacsformacosx.com/builds
 
 
 ### Linux, Windows
