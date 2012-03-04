@@ -18,6 +18,16 @@
 ;; Globally enable delete-selection-mode
 (delete-selection-mode 1)
 
+;; Use textmate-mode
+(when (require 'textmate nil 'noerror)
+  (textmate-mode))
+
+;; Highlight matching parenthesis
+(show-paren-mode 1)
+
+;; Make sure all backup files only live in one place
+(setq backup-directory-alist '(("." . "~/.saves")))
+
 ;; Make re-builder easier to use
 (require 're-builder)
 (setq reb-re-syntax 'string)
