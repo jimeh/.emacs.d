@@ -166,10 +166,6 @@
   (when (require 'escreen nil 'noerror)
     (escreen-install))
 
-  ;; Load Smart Tab
-  (when (require 'smart-tab nil 'noerror)
-    (global-smart-tab-mode t))
-
   ;; Load Undo-Tree
   (require 'undo-tree)
 
