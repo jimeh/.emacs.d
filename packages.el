@@ -138,6 +138,7 @@
          php-mode-improved
          ruby-mode
          ruby-compilation
+         smart-tab
          textmate
          undo-tree
          yaml-mode
@@ -145,7 +146,6 @@
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
-
 
 ;;
 ;; Initialize Packages
@@ -165,6 +165,10 @@
   ;; Load and setup Escreen
   (when (require 'escreen nil 'noerror)
     (escreen-install))
+
+  ;; Load Smart Tab
+  (when (require 'smart-tab nil 'noerror)
+    (global-smart-tab-mode t))
 
   ;; Load Undo-Tree
   (require 'undo-tree)
