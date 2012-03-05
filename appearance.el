@@ -6,7 +6,7 @@
 
 ;; Load Theme
 (if window-system (require 'birds-of-paradise-plus-theme)
-  (require 'tomorrow-night-bright-theme))
+  (require 'tomorrow-night-paradise-theme))
 
 ;; Disable menu-bar
 (menu-bar-mode 0)

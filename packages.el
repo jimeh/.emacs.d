@@ -38,15 +38,6 @@
         ;;        :type git
         ;;        :url "https://gist.github.com/1130343.git"
         ;;        :load    "birds-of-paradise-theme.el")
-        (:name color-theme-tomorrow
-               :description "Emacs highlighting using Chris Charles's Tomorrow color scheme"
-               :type git
-               :url "https://github.com/jimeh/Tomorrow-Theme.git"
-               :load-path "GNU Emacs"
-               :branch "emacs-24"
-               :post-init (lambda ()
-                            (push (config-path "el-get/color-theme-tomorrow/GNU Emacs")
-                                  custom-theme-load-path)))
         (:name dirtree
                :description "Directory tree views in Emacs"
                :type git
@@ -108,6 +99,13 @@
         (:name tree-mode
                :type emacswiki
                :features tree-mode)
+        (:name tomorrow-night-paradise-theme
+               :description "My customized version of Chris Kempson's Tomorrow Night Bright theme."
+               :type git
+               :url "git@gist.github.com:62a2b137a51b91e69746.git"
+               :post-init (lambda ()
+                            (push (config-path "el-get/tomorrow-night-paradise-theme")
+                                  custom-theme-load-path)))
         (:name yasnippet
                :type git
                :url "https://github.com/capitaomorte/yasnippet.git")
