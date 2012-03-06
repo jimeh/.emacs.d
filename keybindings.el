@@ -30,6 +30,9 @@
 (global-set-key (kbd "C-x a =") 'align-to-equals)
 (global-set-key (kbd "M-]") 'align-to-equals)
 
+;; Toggle auto-fill-mode.
+(global-set-key (kbd "C-c q") 'auto-fill-mode)
+
 ;; Comment or uncomment line
 (global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)

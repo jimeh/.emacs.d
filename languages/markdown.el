@@ -1,4 +1,6 @@
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.mkd" . markdown-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.mkdn" . markdown-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.mdown" . markdown-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.markdown" . markdown-mode) auto-mode-alist))
 
@@ -8,4 +10,5 @@
             (fci-mode)
             (linum-mode t)
             (flyspell-mode)
+            (auto-fill-mode)
             (define-key markdown-mode-map (kbd "C-c p") 'markdown-preview)))
