@@ -23,10 +23,10 @@
 (global-set-key (kbd "C-x C-o") 'other-window)
 (global-set-key (kbd "C-x C-i") 'other-window-reverse)
 
-;; Kill-Ring related.
+;; Kill-Ring related (via helpers.el).
 (global-set-key (kbd "M-Y") 'yank-pop-forwards)
 
-;; Align to equal signs
+;; Align to equal signs (via helpers.el).
 (global-set-key (kbd "C-x a =") 'align-to-equals)
 (global-set-key (kbd "M-]") 'align-to-equals)
 
