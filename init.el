@@ -15,7 +15,7 @@
 (load-file (config-path "env.el"))
 (load-file (config-path "packages.el"))
 (load-file (config-path "helpers.el"))
-(load-file (config-path "languages.el"))
+(load-file (config-path "mode-customizations.el"))
 (load-file (config-path "vendor.el"))
 (load-file (config-path "behavior.el"))
 (load-file (config-path "appearance.el"))
