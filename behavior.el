@@ -46,13 +46,13 @@
   (global-set-key [mouse-5] 'scroll-up-line))
 
 ;; Relative line numbers -- from: http://stackoverflow.com/a/6928112/42146
-(defvar my-linum-current-line-number 0)
-(setq linum-format 'my-linum-relative-line-numbers)
-(defun my-linum-relative-line-numbers (line-number)
-  (propertize
-   (number-to-string (abs (- line-number my-linum-current-line-number)))
-   'face 'linum))
-(defadvice linum-update (around my-linum-update)
-  (let ((my-linum-current-line-number (line-number-at-pos)))
-    ad-do-it))
-(ad-activate 'linum-update)
+;; (defvar my-linum-current-line-number 0)
+;; (setq linum-format 'my-linum-relative-line-numbers)
+;; (defun my-linum-relative-line-numbers (line-number)
+;;   (propertize
+;;    (number-to-string (abs (- line-number my-linum-current-line-number)))
+;;    'face 'linum))
+;; (defadvice linum-update (around my-linum-update)
+;;   (let ((my-linum-current-line-number (line-number-at-pos)))
+;;     ad-do-it))
+;; (ad-activate 'linum-update)
