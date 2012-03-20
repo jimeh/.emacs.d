@@ -3,6 +3,7 @@
 
 ;; Set default font
 (set-face-attribute 'default nil :family "Monaco" :height 110)
+;; (set-face-attribute 'default nil :family "Menlo" :height 110)
 
 ;; Load Theme
 (if window-system (require 'birds-of-paradise-plus-theme)
