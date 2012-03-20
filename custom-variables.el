@@ -27,7 +27,7 @@
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("left13" "left15")))
  '(ecb-tree-make-parent-node-sticky nil)
- '(ecb-windows-width 0.17)
+ '(ecb-windows-width 0.16)
  '(elscreen-display-tab t)
  '(elscreen-tab-display-control t)
  '(elscreen-tab-display-kill-screen nil)
