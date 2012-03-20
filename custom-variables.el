@@ -37,7 +37,7 @@
  '(fci-handle-truncate-lines nil)
  '(fci-rule-width 1)
  '(fill-column 78)
- '(fringe-mode (quote (4 . 4)) nil (fringe))
+ '(fringe-mode 0 nil (fringe))
  '(global-auto-revert-mode t)
  '(global-undo-tree-mode t)
  '(history-length 500)

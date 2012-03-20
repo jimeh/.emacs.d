@@ -168,8 +168,8 @@
   (require 'undo-tree)
 
   ;; Load Linum+
-  (unless window-system
-    (require 'linum+))
+  (when (require 'linum+ nil 'noerror)
+    (setq linum-format 'dynamic))
 
   ;; Load full-ack
   (require 'full-ack)
