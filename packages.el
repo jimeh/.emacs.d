@@ -28,24 +28,7 @@
 ;;
 
 (setq el-get-sources
-      '((:name auto-complete
-               :website "http://cx4a.org/software/auto-complete/"
-               :description "The most intelligent auto-completion extension."
-               :type git
-               :url "http://github.com/m2ym/auto-complete.git"
-               :depends popup
-               :load-path "."
-               :post-init (lambda ()
-                            (require 'auto-complete)
-                            (add-to-list 'ac-dictionary-directories (expand-file-name "dict" pdir))
-                            (require 'auto-complete-config)
-                            (ac-config-default)))
-        (:name popup
-               :type git
-               :description "Visual Popup Interface Library for Emacs"
-               :url "https://github.com/m2ym/popup-el.git"
-               :features popup)
-        (:name birds-of-paradise-plus-theme
+      '((:name birds-of-paradise-plus-theme
                :type git
                :url "git://github.com/jimeh/birds-of-paradise-plus-theme.el.git"
                :post-init (lambda ()
