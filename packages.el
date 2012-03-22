@@ -67,6 +67,13 @@
                :post-init (lambda ()
                             (require 'eproject)
                             (require 'eproject-extras)))
+        (:name escreen
+               :description "Emacs window session manager"
+               :type git
+               :url "git://github.com/renard/escreen-el.git"
+               :post-init (lambda ()
+                            (autoload 'escreen-install "escreen" nil t)))
+
         (:name feature-mode
                :type git
                :url "git://github.com/michaelklishin/cucumber.el.git")
@@ -141,7 +148,6 @@
          auto-complete-emacs-lisp
          coffee-mode
          ecb
-         escreen
          evil
          full-ack
          git-blame
