@@ -55,7 +55,7 @@ there's a region, all lines that region covers will be duplicated."
 ;; Align Equal Signs
 ;;
 
-(defun align-to-equals (begin end)
+(defun align-region-to-equals (begin end)
   "Align region to equal signs"
   (interactive "r")
   (align-regexp begin end "\\(\\s-*\\)=" 1 1 ))

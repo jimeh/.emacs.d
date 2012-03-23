@@ -27,8 +27,8 @@
 (global-set-key (kbd "M-Y") 'yank-pop-forwards)
 
 ;; Align to equal signs (via helpers.el).
-(global-set-key (kbd "C-x a =") 'align-to-equals)
-(global-set-key (kbd "M-]") 'align-to-equals)
+(global-set-key (kbd "C-x a =") 'align-region-to-equals)
+(global-set-key (kbd "M-]") 'align-region-to-equals)
 
 ;; Toggle auto-fill-mode.
 (global-set-key (kbd "C-c q") 'auto-fill-mode)
