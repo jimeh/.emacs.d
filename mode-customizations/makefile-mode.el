@@ -3,4 +3,5 @@
             (flyspell-prog-mode)
             (linum-mode t)
             (fci-mode)
+            (setq tab-width 4)
             (highlight-indentation-mode)))
