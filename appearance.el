@@ -18,7 +18,7 @@
 ;; Scrollbar
 (set-scroll-bar-mode 'nil)
 
-;; Show matching paranthensis
+;; Show matching parentheses
 (show-paren-mode t)
 
 ;; Show column number globally
