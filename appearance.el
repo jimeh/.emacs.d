@@ -61,7 +61,7 @@
       (cons '(cursor-type . bar) (copy-alist default-frame-alist)))
 
 ;; Transparency (via helpers.el)
-(setq transparency-level 99)
+(setq transparency-level 98)
 (transparency-set-value transparency-level)
 (add-hook 'after-make-frame-functions
           (lambda (selected-frame)
