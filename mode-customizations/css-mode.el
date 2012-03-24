@@ -5,4 +5,5 @@
             (fci-mode)
             (setq css-indent-offset 2)
             (setq highlight-indentation-offset 2)
-            (highlight-indentation-mode)))
+            (highlight-indentation-mode)
+            (define-key css-mode-map (kbd "RET") 'newline-and-indent)))
