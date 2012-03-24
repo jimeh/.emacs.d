@@ -133,6 +133,7 @@
          ecb
          evil
          full-ack
+         fuzzy
          git-blame
          highlight-indentation
          inf-ruby
