@@ -32,7 +32,7 @@
             (setq ruby-electric-expand-delimiters-list (quote (124)))
             (setq whitespace-action (quote (auto-cleanup)))
             (define-key ruby-mode-map
-              (kbd "RET") 'reindent-then-newline-and-indent)
+              (kbd "RET") 'newline-and-indent)
             (define-key ruby-mode-map
               (kbd "s-r") 'ruby-compilation-this-buffer)
             (define-key ruby-mode-map
