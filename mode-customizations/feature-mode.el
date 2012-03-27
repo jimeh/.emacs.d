@@ -7,4 +7,5 @@
             (linum-mode t)
             (fci-mode)
             (setq highlight-indentation-offset 2)
-            (highlight-indentation-mode)))
+            (highlight-indentation-mode)
+            (highlight-indentation-current-column-mode)))

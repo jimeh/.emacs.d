@@ -24,6 +24,7 @@
               (add-to-list 'ac-sources 'ac-source-rsense-constant))
             (flymake-ruby-load)
             (highlight-indentation-mode)
+            (highlight-indentation-current-column-mode)
             (ruby-electric-mode t)
             (setq ruby-deep-arglist t)
             (setq ruby-deep-indent-paren nil)
