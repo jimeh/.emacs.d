@@ -87,7 +87,9 @@
   (global-set-key (kbd "C-x C-t") 'textmate-goto-file)
   (global-set-key (kbd "C-c C-t") 'textmate-goto-symbol)
   (global-set-key (kbd "M-p") 'textmate-column-up)
-  (global-set-key (kbd "M-n") 'textmate-column-down))
+  (global-set-key (kbd "M-n") 'textmate-column-down)
+  (global-set-key (kbd "C-c [") 'textmate-shift-left)
+  (global-set-key (kbd "C-c ]") 'textmate-shift-right))
 
 ;; Set/increase/decrease transparency (via helpers.el)
 (global-set-key (kbd "C-|") 'transparency-set-value)
