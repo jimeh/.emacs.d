@@ -20,7 +20,7 @@
   (autopair-global-mode))
 
 ;; When using autopair, ECB and delete-selection-mode there's a weird conflict
-;; which disables delete-selection-mode whenever you click on a directory of
+;; which disables delete-selection-mode whenever you click on a directory or
 ;; file in ECB's tree buffer. For that reason, and for it's neat rectangle
 ;; selection feature we're using cua-mode as it's delete-selection-ish feature
 ;; is not effected by the issue.
