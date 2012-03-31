@@ -2,7 +2,6 @@
 (setq-default tab-width 2)
 
 ;; Electric behavior
-(electric-pair-mode t)
 (electric-layout-mode t)
 
 ;; Always indent with spaces
@@ -15,8 +14,25 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-;; Globally enable delete-selection-mode
-(delete-selection-mode 1)
+;; Autopair mode. I'm sorry, electric-pair mode just isn't as good, mainly
+;; cause it can't wrap the region in the pair-character you type.
+(when (require 'autopair nil 'noerror)
+  (autopair-global-mode))
+
+;; When using autopair, ECB and delete-selection-mode there's a weird conflict
+;; which disables delete-selection-mode whenever you click on a directory of
+;; file in ECB's tree buffer. For that reason, and for it's neat rectangle
+;; selection feature we're using cua-mode as it's delete-selection-ish feature
+;; is not effected by the issue.
+(setq cua-rectangle-mark-key (kbd "M-RET"))
+(cua-mode t)
+
+;; Disable cua-mode's fancy keys like C-z, C-v, etc. cause we use them for
+;; other things, and we already have good keybindings for cut, copy, paste and
+;; undo.
+(setq cua-enable-cua-keys nil
+      cua-remap-control-v nil
+      cua-remap-control-z nil)
 
 ;; Use textmate-mode
 (when (require 'textmate nil 'noerror)

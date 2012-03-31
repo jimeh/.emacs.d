@@ -135,6 +135,7 @@
       (append
        '(auto-complete
          auto-complete-emacs-lisp
+         autopair
          coffee-mode
          ecb
          evil
