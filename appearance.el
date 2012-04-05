@@ -15,7 +15,7 @@
 ;; Disable toolbar
 (tool-bar-mode -1)
 
-;; Scrollbar
+;; Disable Scrollbar
 (set-scroll-bar-mode 'nil)
 
 ;; Show matching parentheses
