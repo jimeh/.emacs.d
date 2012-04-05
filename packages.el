@@ -112,6 +112,14 @@
         (:name tree-mode
                :type emacswiki
                :features tree-mode)
+        (:name tomorrow-theme
+               :description "Emacs highlighting using Chris Charles's Tomorrow color scheme"
+               :type git
+               :url "https://github.com/chriskempson/tomorrow-theme.git"
+               :load-path "GNU Emacs"
+               :post-init (lambda ()
+                            (push (config-path "el-get/tomorrow-theme/GNU Emacs")
+                                  custom-theme-load-path)))
         (:name tomorrow-night-paradise-theme
                :description "My customized version of Chris Kempson's Tomorrow Night Bright theme."
                :type git
