@@ -123,7 +123,7 @@
         (:name tomorrow-night-paradise-theme
                :description "My customized version of Chris Kempson's Tomorrow Night Bright theme."
                :type git
-               :url "git@gist.github.com:62a2b137a51b91e69746.git"
+               :url "git://github.com/jimeh/tomorrow-night-paradise-theme.el.git"
                :post-init (lambda ()
                             (push (config-path "el-get/tomorrow-night-paradise-theme")
                                   custom-theme-load-path)))
