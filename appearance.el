@@ -31,6 +31,12 @@
 (setq linum+-smart-format " %%%dd ")
 (setq linum+-dynamic-format " %%%dd ")
 
+;; Linum+ resets linum-format to "smart" when it's loaded, hence we have to
+;; use a eval-after-load hook to set it to "dynamic".
+(eval-after-load "linum+"
+  '(progn
+     (setq linum-format 'dynamic)))
+
 ;; meaningful names for buffers with the same name
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)

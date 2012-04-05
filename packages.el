@@ -181,8 +181,7 @@
   (require 'undo-tree)
 
   ;; Load Linum+
-  (when (require 'linum+ nil 'noerror)
-    (setq linum-format 'dynamic))
+  (require 'linum+)
 
   ;; Load full-ack
   (require 'full-ack)
