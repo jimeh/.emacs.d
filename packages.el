@@ -34,10 +34,6 @@
                :post-init (lambda ()
                             (push (config-path "el-get/birds-of-paradise-plus-theme")
                                   custom-theme-load-path)))
-        ;; (:name birds-of-paradise-theme
-        ;;        :type git
-        ;;        :url "https://gist.github.com/1130343.git"
-        ;;        :load    "birds-of-paradise-theme.el")
         (:name eproject
                :type git
                :url "https://github.com/jrockway/eproject.git"
