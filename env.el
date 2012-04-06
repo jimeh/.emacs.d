@@ -8,5 +8,5 @@
 (setenv "PATH" (concat "~/.rbenv/shims:" (getenv "PATH")))
 
 ;; node.js
-(setq exec-path (cons "~/.nvm/v0.4.12/bin" exec-path))
-(setenv "PATH" (concat "~/.nvm/v0.4.12/bin:" (getenv "PATH")))
+(setq exec-path (cons "~/.nvm/v0.6.12/bin" exec-path))
+(setenv "PATH" (concat "~/.nvm/v0.6.12/bin:" (getenv "PATH")))
