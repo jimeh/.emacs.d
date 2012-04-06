@@ -134,7 +134,6 @@
          autopair
          coffee-mode
          ecb
-         evil
          full-ack
          git-blame
          highlight-indentation
