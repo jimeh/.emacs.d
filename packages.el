@@ -72,12 +72,6 @@
                :type git
                :url "git://github.com/alpaker/Fill-Column-Indicator.git"
                :features fill-column-indicator)
-        (:name fuzzy
-               :website "https://github.com/m2ym/fuzzy-el"
-               :description "Fuzzy matching utilities for GNU Emacs"
-               :type git
-               :url "https://github.com/m2ym/fuzzy-el.git"
-               :features fuzzy)
         (:name hackertype
                :type git
                :url "https://github.com/bitemyapp/hacker-type-emacs.git"
