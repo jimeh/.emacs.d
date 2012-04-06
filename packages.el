@@ -38,14 +38,14 @@
         (:name eproject
                :type git
                :url "https://github.com/jrockway/eproject.git"
-               :post-init (lambda ()
+               :post-init (progn
                             (require 'eproject)
                             (require 'eproject-extras)))
         (:name escreen
                :description "Emacs window session manager"
                :type git
                :url "git://github.com/renard/escreen-el.git"
-               :post-init (lambda ()
+               :post-init (progn
                             (autoload 'escreen-install "escreen" nil t)))
 
         (:name feature-mode
@@ -61,7 +61,7 @@
                :type git
                :url "git://github.com/purcell/flymake-ruby.git"
                :features flymake-ruby
-               :post-init (lambda ()
+               :post-init (progn
                             (add-hook 'ruby-mode-hook 'flymake-ruby-load)))
         ;; (:name flymake-coffee
         ;;        :type git
@@ -81,11 +81,13 @@
                :type http
                :url "http://dea.googlecode.com/svn/trunk/my-lisps/linum+.el")
         (:name rsense
+               :description "Intelligent Ruby code-completion"
+               :website "http://cx4a.org/software/rsense/"
                :type git
                :url "https://github.com/m2ym/rsense.git"
                :build ("ant" "chmod +x bin/rsense")
-               :post-init (lambda ()
-                            (setq rsense-home (expand-file-name (config-path "el-get/rsense")))
+               :post-init (progn
+                            (setq rsense-home (expand-file-name default-directory))
                             (add-to-list 'load-path (concat rsense-home "/etc"))
                             (require 'rsense)))
         (:name ruby-mode
