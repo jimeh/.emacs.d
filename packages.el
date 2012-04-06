@@ -38,12 +38,6 @@
         ;;        :type git
         ;;        :url "https://gist.github.com/1130343.git"
         ;;        :load    "birds-of-paradise-theme.el")
-        (:name dirtree
-               :description "Directory tree views in Emacs"
-               :type git
-               :url "https://github.com/zkim/emacs-dirtree.git"
-               :depends (tree-mode windata)
-               :features dirtree)
         (:name eproject
                :type git
                :url "https://github.com/jrockway/eproject.git"
@@ -109,9 +103,6 @@
         (:name tiling
                :type emacswiki
                :features tiling)
-        (:name tree-mode
-               :type emacswiki
-               :features tree-mode)
         (:name tomorrow-theme
                :description "Emacs highlighting using Chris Charles's Tomorrow color scheme"
                :type git
@@ -129,10 +120,7 @@
                                   custom-theme-load-path)))
         (:name yasnippet
                :type git
-               :url "https://github.com/capitaomorte/yasnippet.git")
-        (:name windata
-               :type emacswiki
-               :features windata)))
+               :url "https://github.com/capitaomorte/yasnippet.git")))
 
 
 ;;
