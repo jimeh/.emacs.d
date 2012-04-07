@@ -46,6 +46,15 @@
             (define-key ruby-mode-map
               (kbd "C-c C-b") 'eproject-ibuffer)))
 
+;; Workaround for missing method in ruby-mode.el
+;; See: https://gist.github.com/1213051
+(defun ruby-insert-end ()
+  "Insert \"end\" at point and reindent current line."
+  (interactive)
+  (insert "end")
+  (ruby-indent-line t)
+  (end-of-line))
+
 ;; Yasnippet workaround for ruby-electric-mode
 ;; See: http://code.google.com/p/yasnippet/issues/detail?id=71
 (defun yas/advise-indent-function (function-symbol)
