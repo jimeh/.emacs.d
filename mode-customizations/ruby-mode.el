@@ -30,9 +30,12 @@
             (setq c-tab-always-indent nil)
             (setq ruby-use-encoding-map nil)
             (setq ruby-electric-expand-delimiters-list (quote (124)))
+            (hs-minor-mode 1)
             (setq whitespace-action (quote (auto-cleanup)))
             (define-key ruby-mode-map
               (kbd "RET") 'reindent-then-newline-and-indent)
+            (define-key ruby-mode-map
+              (kbd "C-c C-j") 'hs-toggle-hiding)
             (define-key ruby-mode-map
               (kbd "s-r") 'ruby-compilation-this-buffer)
             (define-key ruby-mode-map
@@ -45,6 +48,12 @@
               (kbd "C-c C-l") 'goto-line)
             (define-key ruby-mode-map
               (kbd "C-c C-b") 'eproject-ibuffer)))
+
+;; Set up hs-mode (HideShow) for Ruby
+(add-to-list 'hs-special-modes-alist
+             '(ruby-mode
+               "\\(def \\|class\\|module\\|do\\)" "end" "#"
+               (lambda (arg) (ruby-end-of-block)) nil))
 
 ;; Workaround for missing method in ruby-mode.el
 ;; See: https://gist.github.com/1213051
