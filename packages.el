@@ -63,13 +63,13 @@
                :features flymake-ruby
                :post-init (progn
                             (add-hook 'ruby-mode-hook 'flymake-ruby-load)))
-        (:name flymake-coffeescript
-               :type git
-               :url "https://github.com/kui/flymake-coffeescript.git"
-               :features flymake-coffeescript
-               :post-init (progn
-                            (add-hook 'coffee-mode-hook
-                                      'flymake-coffeescript-load)))
+        ;; (:name flymake-coffeescript
+        ;;        :type git
+        ;;        :url "https://github.com/kui/flymake-coffeescript.git"
+        ;;        :features flymake-coffeescript
+        ;;        :post-init (progn
+        ;;                     (add-hook 'coffee-mode-hook
+        ;;                               'flymake-coffeescript-load)))
         (:name fill-column-indicator
                :type git
                :url "git://github.com/alpaker/Fill-Column-Indicator.git"
