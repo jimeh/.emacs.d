@@ -3,6 +3,9 @@
   (flyspell-prog-mode)
   (linum-mode t)
   (fci-mode)
+  (setq sh-basic-offset 2)
+  (setq sh-indentation 2)
+  (setq highlight-indentation-offset 2)
   (highlight-indentation-mode))
 
 (add-hook 'sh-mode-hook 'customizations-for-sh-mode)
