@@ -4,11 +4,13 @@
 (setq auto-mode-alist (cons '("\\.mdown" . markdown-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.markdown" . markdown-mode) auto-mode-alist))
 
-(add-hook 'markdown-mode-hook
-          (lambda ()
-            (setq whitespace-action nil)
-            (fci-mode)
-            (linum-mode t)
-            (flyspell-mode)
-            (auto-fill-mode)
-            (define-key markdown-mode-map (kbd "C-c p") 'markdown-preview)))
+(defun customizations-for-markdown-mode ()
+  (interactive)
+  (setq whitespace-action nil)
+  (fci-mode)
+  (linum-mode t)
+  (flyspell-mode)
+  (auto-fill-mode)
+  (define-key markdown-mode-map (kbd "C-c p") 'markdown-preview))
+
+(add-hook 'markdown-mode-hook 'customizations-for-markdown-mode)

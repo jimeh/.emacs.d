@@ -8,11 +8,13 @@
 (require 'erlang-start)
 (require 'erlang-flymake)
 
-(add-hook 'erlang-mode-hook
-          (lambda ()
-            (flyspell-prog-mode)
-            (linum-mode t)
-            (fci-mode)
-            (setq highlight-indentation-offset 2)
-            (highlight-indentation-mode)
-            (highlight-indentation-current-column-mode)))
+(defun customizations-for-erlang-mode ()
+  (interactive)
+  (flyspell-prog-mode)
+  (linum-mode t)
+  (fci-mode)
+  (setq highlight-indentation-offset 2)
+  (highlight-indentation-mode)
+  (highlight-indentation-current-column-mode))
+
+(add-hook 'erlang-mode-hook 'customizations-for-erlang-mode)

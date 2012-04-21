@@ -1,13 +1,17 @@
-;; Make Magit it look a bit prettier with my theme
-(add-hook 'magit-mode-hook
-          (lambda ()
-            (linum-mode t)))
+;; Make Magit look a bit prettier with my theme
+(defun customizations-for-magit-mode ()
+  (interactive)
+  (linum-mode t))
+
+(add-hook 'magit-mode-hook 'customizations-for-magit-mode)
 
 ;; Write commit messages in style
-(add-hook 'magit-log-edit-mode-hook
-          (lambda ()
-            (flyspell-mode)
-            (linum-mode t)
-            (auto-fill-mode)
-            (setq fill-column 72)
-            (fci-mode)))
+(defun customizations-for-magit-log-edit-mode ()
+  (interactive)
+  (flyspell-mode)
+  (linum-mode t)
+  (auto-fill-mode)
+  (setq fill-column 72)
+  (fci-mode))
+
+(add-hook 'magit-log-edit-mode-hook 'customizations-for-magit-log-edit-mode)

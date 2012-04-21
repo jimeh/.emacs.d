@@ -2,12 +2,14 @@
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yml\\.example$" . yaml-mode))
 
-(add-hook 'yaml-mode-hook
-          '(lambda ()
-             (flyspell-prog-mode)
-             (linum-mode t)
-             (fci-mode)
-             (setq highlight-indentation-offset 2)
-             (highlight-indentation-mode)
-             (highlight-indentation-current-column-mode)
-             (define-key yaml-mode-map (kbd "RET") 'newline-and-indent)))
+(defun customizations-for-yaml-mode ()
+  (interactive)
+  (flyspell-prog-mode)
+  (linum-mode t)
+  (fci-mode)
+  (setq highlight-indentation-offset 2)
+  (highlight-indentation-mode)
+  (highlight-indentation-current-column-mode)
+  (define-key yaml-mode-map (kbd "RET") 'newline-and-indent))
+
+(add-hook 'yaml-mode-hook 'customizations-for-yaml-mode)
