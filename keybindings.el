@@ -15,6 +15,10 @@
 ;; Goto line
 (global-set-key (kbd "C-c C-l") 'goto-line)
 
+;; Switch to next/previous buffer
+(global-set-key (kbd "C-c C-n") 'switch-to-next-buffer)
+(global-set-key (kbd "C-c C-p") 'switch-to-prev-buffer)
+
 ;; Duplicate line (via helpers.el)
 (global-set-key (kbd "C-x C-d") 'duplicate-current-line-or-region)
 
