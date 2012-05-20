@@ -9,6 +9,7 @@
 (load-file (config-path "mode-customizations/emacs-lisp-mode.el"))
 (load-file (config-path "mode-customizations/erlang-mode.el"))
 (load-file (config-path "mode-customizations/feature-mode.el"))
+(load-file (config-path "mode-customizations/html-mode.el"))
 (load-file (config-path "mode-customizations/js-mode.el"))
 (load-file (config-path "mode-customizations/makefile-mode.el"))
 (load-file (config-path "mode-customizations/markdown-mode.el"))
