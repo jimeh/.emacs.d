@@ -136,6 +136,7 @@
          magithub
          markdown-mode
          php-mode-improved
+         rhtml-mode
          ruby-mode
          ruby-compilation
          smart-tab
