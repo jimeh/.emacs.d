@@ -94,6 +94,10 @@
         (:name ruby-mode
                :type svn
                :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")
+        (:name slim-mode
+               :description "Major mode for editing Slim files"
+               :type github
+               :pkgname "minad/emacs-slim")
         (:name tiling
                :type emacswiki
                :features tiling)
@@ -130,6 +134,7 @@
          ecb
          full-ack
          git-blame
+         haml-mode
          highlight-indentation
          inf-ruby
          magit
