@@ -28,14 +28,7 @@
 ;;
 
 (setq el-get-sources
-      '((:name birds-of-paradise-plus-theme
-               :description "A Emacs port of Joseph Bergantine's light-on-dark theme by the same name."
-               :website "https://github.com/jimeh/birds-of-paradise-plus-theme.el"
-               :type git
-               :url "https://github.com/jimeh/birds-of-paradise-plus-theme.el.git"
-               :post-init (add-to-list 'custom-theme-load-path
-                                       default-directory))
-        (:name eproject
+      '((:name eproject
                :type git
                :url "https://github.com/jrockway/eproject.git"
                :post-init (progn
@@ -101,21 +94,6 @@
         (:name tiling
                :type emacswiki
                :features tiling)
-        (:name tomorrow-theme
-               :description "Colour Schemes for Hackers"
-               :website "https://github.com/chriskempson/tomorrow-theme"
-               :type git
-               :url "https://github.com/chriskempson/tomorrow-theme.git"
-               :load-path "GNU Emacs"
-               :post-init (add-to-list 'custom-theme-load-path
-                                       default-directory))
-        (:name tomorrow-night-paradise-theme
-               :description "A light-on-dark Emacs theme which is essentially a tweaked version of Chris Kempson's Tomorrow Night Bright theme."
-               :website "https://github.com/jimeh/tomorrow-night-paradise-theme.el"
-               :type git
-               :url "git://github.com/jimeh/tomorrow-night-paradise-theme.el.git"
-               :post-init (add-to-list 'custom-theme-load-path
-                                       default-directory))
         (:name yasnippet
                :type git
                :url "https://github.com/capitaomorte/yasnippet.git")))
@@ -130,6 +108,7 @@
        '(auto-complete
          auto-complete-emacs-lisp
          autopair
+         birds-of-paradise-plus-theme
          coffee-mode
          ecb
          full-ack
@@ -146,6 +125,8 @@
          ruby-compilation
          smart-tab
          textmate
+         tomorrow-theme
+         tomorrow-night-paradise-theme
          undo-tree
          yaml-mode
          yasnippet)
