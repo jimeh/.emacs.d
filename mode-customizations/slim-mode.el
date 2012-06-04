@@ -1,0 +1,11 @@
+(defun customizations-for-slim-mode ()
+  (interactive)
+  (flyspell-prog-mode)
+  (linum-mode t)
+  (fci-mode)
+  (setq tab-width 2)
+  (setq highlight-indentation-offset 2)
+  (highlight-indentation-mode)
+  (highlight-indentation-current-column-mode))
+
+(add-hook 'slim-mode-hook 'customizations-for-slim-mode)
