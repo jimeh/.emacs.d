@@ -120,6 +120,7 @@
          magithub
          markdown-mode
          php-mode-improved
+         rainbow-mode
          rhtml-mode
          ruby-mode
          ruby-compilation
