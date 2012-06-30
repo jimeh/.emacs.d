@@ -4,8 +4,8 @@
 ;; Set default font
 (if window-system
     ;;; Large
-    ;; (set-face-attribute 'default nil :family "Menlo" :height 110)
     ;; (set-face-attribute 'default nil :family "Monaco" :height 110)
+    ;; (set-face-attribute 'default nil :family "Menlo" :height 110)
 
     ;;; Small
     (set-face-attribute 'default nil :family "Monaco" :height 100)
