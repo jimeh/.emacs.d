@@ -14,7 +14,7 @@
 )
 
 ;; Load Theme
-(if window-system (require 'birds-of-paradise-plus-theme)
+(if window-system (require 'twilight-anti-bright-theme)
   (require 'tomorrow-night-paradise-theme))
 
 ;; Disable menu-bar
@@ -76,7 +76,7 @@
       (cons '(cursor-type . bar) (copy-alist default-frame-alist)))
 
 ;; Transparency (via helpers.el)
-(setq transparency-level 98)
+(setq transparency-level 99)
 (transparency-set-value transparency-level)
 (add-hook 'after-make-frame-functions
           (lambda (selected-frame)
