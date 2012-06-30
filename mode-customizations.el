@@ -12,6 +12,7 @@
 (load-file (config-path "mode-customizations/haml-mode.el"))
 (load-file (config-path "mode-customizations/html-mode.el"))
 (load-file (config-path "mode-customizations/js-mode.el"))
+(load-file (config-path "mode-customizations/lisp-mode.el"))
 (load-file (config-path "mode-customizations/makefile-mode.el"))
 (load-file (config-path "mode-customizations/markdown-mode.el"))
 (load-file (config-path "mode-customizations/php-mode.el"))
