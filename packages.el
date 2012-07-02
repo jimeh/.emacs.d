@@ -102,8 +102,8 @@
         ;;                     (add-to-list 'load-path (concat rsense-home "/etc"))
         ;;                     (require 'rsense)))
         (:name ruby-electric
-               :type http
-               :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/ruby-electric.el")
+               :type github
+               :pkgname "qoobaa/ruby-electric")
         (:name tiling
                :type emacswiki
                :features tiling)
