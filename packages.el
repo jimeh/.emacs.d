@@ -53,6 +53,7 @@
     sass-mode
     scss-mode
     textmate
+    twilight-anti-bright-theme
     undo-tree
     yaml-mode
     yasnippet
@@ -114,14 +115,14 @@
         (:name tiling
                :type emacswiki
                :features tiling)
-        (:name twilight-anti-bright-theme
-               :description "A light-on-dark Emacs theme inspired by the dark-on-light Twilight Bright TextMate theme."
-               :website "https://github.com/jimeh/twilight-anti-bright-theme"
-               :type github
-               :pkgname "jimeh/twilight-anti-bright-theme"
-               :minimum-emacs-version 24
-               :post-init (add-to-list 'custom-theme-load-path
-                                       default-directory))
+        ;; (:name twilight-anti-bright-theme
+        ;;        :description "A light-on-dark Emacs theme inspired by the dark-on-light Twilight Bright TextMate theme."
+        ;;        :website "https://github.com/jimeh/twilight-anti-bright-theme"
+        ;;        :type github
+        ;;        :pkgname "jimeh/twilight-anti-bright-theme"
+        ;;        :minimum-emacs-version 24
+        ;;        :post-init (add-to-list 'custom-theme-load-path
+        ;;                                default-directory))
         ;; (:name twilight-bright-theme
         ;;        :description "A Emacs port of the TextMate theme by the same name by Florian Pichler with some minor tweaks and additions."
         ;;        :website "https://github.com/jimeh/twilight-bright-theme.el"
