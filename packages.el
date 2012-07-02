@@ -24,7 +24,8 @@
 
 ;; Packages to install from MELPA
 (defvar my-melpa-packages
-  '(ack-and-a-half
+  '(melpa
+    ack-and-a-half
     auto-complete
     autopair
     coffee-mode
@@ -42,7 +43,6 @@
     magit
     magithub
     markdown-mode
-    melpa
     minimap
     php+-mode
     rainbow-mode
