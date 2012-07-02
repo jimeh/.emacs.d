@@ -82,9 +82,9 @@
         (:name feature-mode
                :type git
                :url "git://github.com/michaelklishin/cucumber.el.git")
-        (:name flymake-elisp
-               :type git
-               :url "git://gist.github.com/1130849.git")
+        ;; (:name flymake-elisp
+        ;;        :type git
+        ;;        :url "git://gist.github.com/1130849.git")
         (:name fill-column-indicator
                :type git
                :url "git://github.com/alpaker/Fill-Column-Indicator.git"
@@ -96,16 +96,16 @@
         (:name linum+
                :type http
                :url "http://dea.googlecode.com/svn/trunk/my-lisps/linum+.el")
-        (:name rsense
-               :description "Intelligent Ruby code-completion"
-               :website "http://cx4a.org/software/rsense/"
-               :type git
-               :url "https://github.com/m2ym/rsense.git"
-               :build ("ant" "chmod +x bin/rsense")
-               :post-init (progn
-                            (setq rsense-home (expand-file-name default-directory))
-                            (add-to-list 'load-path (concat rsense-home "/etc"))
-                            (require 'rsense)))
+        ;; (:name rsense
+        ;;        :description "Intelligent Ruby code-completion"
+        ;;        :website "http://cx4a.org/software/rsense/"
+        ;;        :type git
+        ;;        :url "https://github.com/m2ym/rsense.git"
+        ;;        :build ("ant" "chmod +x bin/rsense")
+        ;;        :post-init (progn
+        ;;                     (setq rsense-home (expand-file-name default-directory))
+        ;;                     (add-to-list 'load-path (concat rsense-home "/etc"))
+        ;;                     (require 'rsense)))
         (:name ruby-electric
                :type http
                :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/ruby-electric.el")
