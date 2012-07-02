@@ -28,6 +28,7 @@
     ack-and-a-half
     auto-complete
     autopair
+    browse-kill-ring
     coffee-mode
     flymake-coffee
     flymake-css
