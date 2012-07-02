@@ -148,6 +148,12 @@
   (when (require 'escreen nil 'noerror)
     (escreen-install))
 
+  ;; Load feature-mode
+  (require 'feature-mode)
+
+  ;; Load fill-column-indicator
+  (require 'fill-column-indicator)
+
   ;; Load Undo-Tree
   (require 'undo-tree)
 
