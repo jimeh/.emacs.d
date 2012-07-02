@@ -114,9 +114,9 @@
                :features tiling)
         (:name twilight-anti-bright-theme
                :description "A light-on-dark Emacs theme inspired by the dark-on-light Twilight Bright TextMate theme."
-               :website "https://github.com/jimeh/twilight-anti-bright-theme.el"
+               :website "https://github.com/jimeh/twilight-anti-bright-theme"
                :type github
-               :pkgname "jimeh/twilight-anti-bright-theme.el"
+               :pkgname "jimeh/twilight-anti-bright-theme"
                :minimum-emacs-version 24
                :post-init (add-to-list 'custom-theme-load-path
                                        default-directory))
