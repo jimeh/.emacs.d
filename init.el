@@ -28,4 +28,4 @@
 (load-file custom-file)
 
 ;; Initialize packages in packages.el
-(initialize-packages)
+(initialize-my-packages)

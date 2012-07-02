@@ -1,32 +1,70 @@
 ;;
-;; Load Package
+;; Load package managers
 ;;
 
+;; Load Package
 (require 'package)
-(setq package-archives (cons '("tromey" . "http://tromey.com/elpa/") package-archives))
+
+;; Add MELPA.
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (package-initialize)
 
-
-;;
 ;; Load el-get
-;;
-
 (add-to-list 'load-path (config-path "el-get/el-get"))
 (require 'el-get)
 
-;;; Uses 2.stable branch, doesn't work with some of my stuff
-;; (unless (require 'el-get nil t)
-;;   (url-retrieve
-;;    "https://github.com/dimitri/el-get/raw/master/el-get-install.el"
-;;    (lambda (s)
-;;      (end-of-buffer)
-;;      (eval-print-last-sexp))))
-
 
 ;;
-;; el-get Sources
+;; Define packages to install
 ;;
 
+;; Packages to install from MELPA
+(defvar my-melpa-packages
+  '(ack-and-a-half
+    auto-complete
+    autopair
+    coffee-mode
+    flymake-coffee
+    flymake-css
+    flymake-cursor
+    flymake-haml
+    flymake-php
+    flymake-ruby
+    flymake-sass
+    flymake-shell
+    full-ack
+    haml-mode
+    inf-ruby
+    magit
+    magithub
+    markdown-mode
+    melpa
+    php+-mode
+    rainbow-mode
+    ruby-mode
+    ruby-compilation
+    ruby-interpolation
+    sass-mode
+    scss-mode
+    textmate
+    undo-tree
+    yaml-mode
+    yasnippet
+    writegood-mode)
+  "A list of packages to install from MELPA at launch.")
+
+;; Packages to install from el-get
+(defvar my-el-get-packages
+  '(auto-complete-emacs-lisp
+    ecb
+    highlight-indentation
+    rhtml-mode
+    tomorrow-night-paradise-theme)
+  "A list of packages to install from el-get at launch.")
+
+;; Custom packages to install with el-get
 (setq el-get-sources
       '((:name eproject
                :type git
@@ -36,33 +74,16 @@
                             (require 'eproject-extras)))
         (:name escreen
                :description "Emacs window session manager"
-               :type git
-               :url "git://github.com/renard/escreen-el.git"
+               :type github
+               :pkgname "renard/escreen-el"
                :post-init (progn
                             (autoload 'escreen-install "escreen" nil t)))
-
         (:name feature-mode
                :type git
                :url "git://github.com/michaelklishin/cucumber.el.git")
-        (:name flymake-cursor
-               :type emacswiki
-               :features flymake-cursor)
         (:name flymake-elisp
                :type git
                :url "git://gist.github.com/1130849.git")
-        (:name flymake-ruby
-               :type git
-               :url "git://github.com/purcell/flymake-ruby.git"
-               :features flymake-ruby
-               :post-init (progn
-                            (add-hook 'ruby-mode-hook 'flymake-ruby-load)))
-        ;; (:name flymake-coffeescript
-        ;;        :type git
-        ;;        :url "https://github.com/kui/flymake-coffeescript.git"
-        ;;        :features flymake-coffeescript
-        ;;        :post-init (progn
-        ;;                     (add-hook 'coffee-mode-hook
-        ;;                               'flymake-coffeescript-load)))
         (:name fill-column-indicator
                :type git
                :url "git://github.com/alpaker/Fill-Column-Indicator.git"
@@ -84,13 +105,9 @@
                             (setq rsense-home (expand-file-name default-directory))
                             (add-to-list 'load-path (concat rsense-home "/etc"))
                             (require 'rsense)))
-        (:name ruby-mode
-               :type svn
-               :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/")
-        (:name slim-mode
-               :description "Major mode for editing Slim files"
-               :type github
-               :pkgname "minad/emacs-slim")
+        (:name ruby-electric
+               :type http
+               :url "http://svn.ruby-lang.org/repos/ruby/trunk/misc/ruby-electric.el")
         (:name tiling
                :type emacswiki
                :features tiling)
@@ -109,53 +126,14 @@
                :pkgname "jimeh/twilight-bright-theme.el"
                :minimum-emacs-version 24
                :post-init (add-to-list 'custom-theme-load-path
-                                       default-directory))
-        (:name yasnippet
-               :type git
-               :url "https://github.com/capitaomorte/yasnippet.git")))
+                                       default-directory))))
 
 
 ;;
-;; My Packages
+;; Initialize Packages function (called by init.el)
 ;;
 
-(setq my-packages
-      (append
-       '(auto-complete
-         auto-complete-emacs-lisp
-         autopair
-         birds-of-paradise-plus-theme
-         coffee-mode
-         ecb
-         full-ack
-         git-blame
-         haml-mode
-         highlight-indentation
-         inf-ruby
-         magit
-         magithub
-         markdown-mode
-         php-mode-improved
-         rainbow-mode
-         rhtml-mode
-         ruby-mode
-         ruby-compilation
-         smart-tab
-         textmate
-         tomorrow-theme
-         tomorrow-night-paradise-theme
-         undo-tree
-         yaml-mode
-         yasnippet)
-       (mapcar 'el-get-source-name el-get-sources)))
-
-(el-get 'sync my-packages)
-
-;;
-;; Initialize Packages
-;;
-
-(defun initialize-packages ()
+(defun initialize-my-packages ()
   ;; Activate ECB if window-system
   (when (require 'ecb nil 'noerror)
     (setq stack-trace-on-error t) ;; hack to fix a load-error
@@ -178,4 +156,41 @@
 
   ;; Load full-ack
   (require 'full-ack)
-)
+  )
+
+
+;;
+;; Package helpers (borrowed from Emacs Prelude)
+;;
+
+(defun my-melpa-packages-installed-p ()
+  (loop for p in my-melpa-packages
+        when (not (package-installed-p p)) do (return nil)
+        finally (return t)))
+
+(defun install-my-melpa-packages ()
+  (unless (my-melpa-packages-installed-p)
+    ;; check for new packages (package versions)
+    (message "%s" "Refreshing package database...")
+    (package-refresh-contents)
+    (message "%s" " done.")
+    ;; install the missing packages
+    (dolist (p my-melpa-packages)
+      (unless (package-installed-p p)
+        (package-install p)))))
+
+
+;;
+;; Install packages
+;;
+
+;; Required because of a package.el bug
+(setq url-http-attempt-keepalives nil)
+
+;; Install Melpa packages
+(install-my-melpa-packages)
+
+;; Install el-get packages
+(setq el-get-packages
+      (append my-el-get-packages (mapcar 'el-get-source-name el-get-sources)))
+(el-get 'sync el-get-packages)
