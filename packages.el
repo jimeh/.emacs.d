@@ -43,6 +43,7 @@
     magithub
     markdown-mode
     melpa
+    minimap
     php+-mode
     rainbow-mode
     ruby-mode
