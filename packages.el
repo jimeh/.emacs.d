@@ -120,14 +120,15 @@
                :minimum-emacs-version 24
                :post-init (add-to-list 'custom-theme-load-path
                                        default-directory))
-        (:name twilight-bright-theme
-               :description "A Emacs port of the TextMate theme by the same name by Florian Pichler with some minor tweaks and additions."
-               :website "https://github.com/jimeh/twilight-bright-theme.el"
-               :type github
-               :pkgname "jimeh/twilight-bright-theme.el"
-               :minimum-emacs-version 24
-               :post-init (add-to-list 'custom-theme-load-path
-                                       default-directory))))
+        ;; (:name twilight-bright-theme
+        ;;        :description "A Emacs port of the TextMate theme by the same name by Florian Pichler with some minor tweaks and additions."
+        ;;        :website "https://github.com/jimeh/twilight-bright-theme.el"
+        ;;        :type github
+        ;;        :pkgname "jimeh/twilight-bright-theme.el"
+        ;;        :minimum-emacs-version 24
+        ;;        :post-init (add-to-list 'custom-theme-load-path
+        ;;                                default-directory))
+        ))
 
 
 ;;
