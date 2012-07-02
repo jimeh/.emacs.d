@@ -59,8 +59,7 @@
 
 ;; Packages to install from el-get
 (defvar my-el-get-packages
-  '(auto-complete-emacs-lisp
-    ecb
+  '(ecb
     highlight-indentation
     rhtml-mode
     tomorrow-night-paradise-theme)
@@ -144,7 +143,7 @@
 
   ;; Load Auto-Complete and addons
   (when (require 'auto-complete nil 'noerror)
-    (require 'auto-complete-emacs-lisp))
+    )
 
   ;; Load and setup Escreen
   (when (require 'escreen nil 'noerror)
