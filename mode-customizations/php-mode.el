@@ -1,3 +1,5 @@
+(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
+
 (defun customizations-for-php-mode ()
   (interactive)
   (setq whitespace-action (quote (auto-cleanup)))
