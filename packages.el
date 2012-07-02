@@ -118,12 +118,10 @@
   ;; Activate ECB if window-system
   (when (require 'ecb nil 'noerror)
     (setq stack-trace-on-error t) ;; hack to fix a load-error
-    (if window-system
-        (ecb-activate)))
+    (if window-system (ecb-activate)))
 
-  ;; Load Auto-Complete and addons
-  (when (require 'auto-complete nil 'noerror)
-    )
+  ;; Load Auto-Complete
+  (require 'auto-complete)
 
   ;; Load and setup Escreen
   (when (require 'escreen nil 'noerror)
