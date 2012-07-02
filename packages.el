@@ -30,6 +30,8 @@
     autopair
     browse-kill-ring
     coffee-mode
+    feature-mode
+    fill-column-indicator
     flymake-coffee
     flymake-css
     flymake-cursor
@@ -40,6 +42,7 @@
     flymake-shell
     full-ack
     haml-mode
+    highlight-indentation
     inf-ruby
     magit
     magithub
@@ -63,7 +66,6 @@
 ;; Packages to install from el-get
 (defvar my-el-get-packages
   '(ecb
-    highlight-indentation
     rhtml-mode
     tomorrow-night-paradise-theme)
   "A list of packages to install from el-get at launch.")
@@ -82,16 +84,9 @@
                :pkgname "renard/escreen-el"
                :post-init (progn
                             (autoload 'escreen-install "escreen" nil t)))
-        (:name feature-mode
-               :type git
-               :url "git://github.com/michaelklishin/cucumber.el.git")
         ;; (:name flymake-elisp
         ;;        :type git
         ;;        :url "git://gist.github.com/1130849.git")
-        (:name fill-column-indicator
-               :type git
-               :url "git://github.com/alpaker/Fill-Column-Indicator.git"
-               :features fill-column-indicator)
         (:name hackertype
                :type git
                :url "https://github.com/bitemyapp/hacker-type-emacs.git"
