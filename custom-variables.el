@@ -49,6 +49,8 @@
  '(magit-repo-dirs (quote ("~/Projects" "~/.dotfiles" "~/.emacs.d")))
  '(magit-status-buffer-switch-function (quote switch-to-buffer))
  '(markdown-command "redcarpet")
+ '(minimap-width-fraction 0.1)
+ '(minimap-window-location (quote right))
  '(ns-tool-bar-display-mode nil t)
  '(ns-tool-bar-size-mode nil t)
  '(nxhtml-skip-welcome t)
