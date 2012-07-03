@@ -13,6 +13,7 @@
   (flyspell-prog-mode)
   (linum-mode t)
   (fci-mode)
+  (auto-complete-mode)
   (setq highlight-indentation-offset 2)
   (highlight-indentation-mode)
   (highlight-indentation-current-column-mode))

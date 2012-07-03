@@ -2,6 +2,7 @@
   (interactive)
   (flyspell-prog-mode)
   (linum-mode t)
-  (fci-mode))
+  (fci-mode)
+  (auto-complete-mode))
 
 (add-hook 'conf-mode-hook 'customizations-for-conf-mode)

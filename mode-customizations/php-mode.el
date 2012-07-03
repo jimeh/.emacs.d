@@ -6,6 +6,7 @@
   (flyspell-prog-mode)
   (linum-mode t)
   (fci-mode)
+  (auto-complete-mode)
   (highlight-indentation-mode))
 
 (add-hook 'php-mode-hook 'customizations-for-php-mode)
