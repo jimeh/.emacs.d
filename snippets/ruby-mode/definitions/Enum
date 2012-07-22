@@ -4,5 +4,5 @@
 include Enumerable
 
 def each(&block)
-	$0
+  $0
 end
