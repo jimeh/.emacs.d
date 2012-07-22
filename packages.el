@@ -140,8 +140,7 @@
   (require 'linum+)
 
   ;; Load full-ack
-  (require 'full-ack)
-  )
+  (require 'full-ack))
 
 
 ;;
