@@ -1,3 +1,5 @@
+(add-to-list 'auto-mode-alist '("\\.hamlc\\'" . haml-mode))
+
 (defun customizations-for-haml-mode ()
   (interactive)
   (flyspell-prog-mode)
