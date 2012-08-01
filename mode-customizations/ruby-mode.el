@@ -24,6 +24,7 @@
   (fci-mode)
   (flyspell-prog-mode)
   (highlight-indentation-mode)
+  (highlight-indentation-current-column-mode)
   (hs-minor-mode 1)
   (auto-complete-mode)
   (flymake-ruby-load)
