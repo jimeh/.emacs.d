@@ -1,6 +1,6 @@
-(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.php\\'" . php+-mode))
 
-(defun customizations-for-php-mode ()
+(defun customizations-for-php+-mode ()
   (interactive)
   (setq whitespace-action (quote (auto-cleanup)))
   (flyspell-prog-mode)
@@ -9,4 +9,4 @@
   (auto-complete-mode)
   (highlight-indentation-mode))
 
-(add-hook 'php-mode-hook 'customizations-for-php-mode)
+(add-hook 'php+-mode-hook 'customizations-for-php+-mode)

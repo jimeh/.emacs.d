@@ -133,6 +133,9 @@
   ;; Load fill-column-indicator
   (require 'fill-column-indicator)
 
+  ;; Load php+-mode
+  (require 'php+-mode)
+
   ;; Load Undo-Tree
   (require 'undo-tree)
 
