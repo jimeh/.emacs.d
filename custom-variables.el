@@ -6,7 +6,7 @@
  '(ac-auto-show-menu 0.2)
  '(ac-delay 0.05)
  '(ac-menu-height 15)
- '(ack-arguments (quote ("--ignore-dir=vendor/ruby" "--ignore-dir=vendor/bundle" "--ignore-dir=coverage" "--ignore-dir=docs" "--ignore-dir=doc")))
+ '(ack-arguments (quote ("--ignore-dir=vendor/ruby" "--ignore-dir=vendor/bundle" "--ignore-dir=coverage" "--ignore-dir=docs" "--ignore-dir=doc" "--type-add=js=.coffee" "--type-add=ruby=.jbuilder,.rabl" "--type-add=html=.haml,.chaml,.jade" "--type-add=css=.sass,.scss,.styl")))
  '(ack-project-root-file-patterns (quote (".project\\'" ".xcodeproj\\'" ".sln\\'" "\\`Project.ede\\'" "\\`.git\\'" "\\`.bzr\\'" "\\`_darcs\\'" "\\`.hg\\'" "\\`Gemfile\\'" "\\`Rakefile\\'")))
  '(ack-prompt-for-directory (quote unless-guessed))
  '(aquamacs-additional-fontsets nil t)
