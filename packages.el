@@ -138,7 +138,15 @@
   (require 'linum+)
 
   ;; Load full-ack
-  (require 'full-ack))
+  (require 'full-ack)
+
+  ;; Load yasnippet and set snippet dirs in reverse to default order allowing
+  ;; my own user-defined snippets to override default snippets.
+  (when (require 'yasnippet nil 'noerror)
+    (setq yas/snippet-dirs (list (when yas/load-file-name
+                                   (concat (file-name-directory yas/load-file-name)
+                                           "snippets"))
+                                 "~/.emacs.d/snippets"))))
 
 
 ;;
