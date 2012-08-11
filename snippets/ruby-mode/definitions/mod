@@ -1,11 +1,11 @@
 # name: module ... end
-# contributor: hitesh <hitesh.jasani@gmail.com>
+# contributor: hitesh <hitesh.jasani@gmail.com>, jimeh <contact@jimeh.me>
 # key: mod
 # --
 module ${1:`(let ((fn (capitalize (file-name-nondirectory
                                  (file-name-sans-extension
-				 (or (buffer-file-name)
-				     (buffer-name (current-buffer))))))))
+         (or (buffer-file-name)
+             (buffer-name (current-buffer))))))))
            (cond
              ((string-match "_" fn) (replace-match "" nil nil fn))
               (t fn)))`}
