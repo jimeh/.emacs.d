@@ -52,6 +52,7 @@
     rainbow-mode
     ruby-mode
     ruby-compilation
+    ruby-electric
     ruby-interpolation
     sass-mode
     scss-mode
@@ -101,9 +102,6 @@
         ;;                     (setq rsense-home (expand-file-name default-directory))
         ;;                     (add-to-list 'load-path (concat rsense-home "/etc"))
         ;;                     (require 'rsense)))
-        (:name ruby-electric
-               :type github
-               :pkgname "qoobaa/ruby-electric")
         (:name tiling
                :type emacswiki
                :features tiling)
@@ -135,6 +133,9 @@
 
   ;; Load php+-mode
   (require 'php+-mode)
+
+  ;; Load ruby-electric (autoload fails)
+  (require 'ruby-electric)
 
   ;; Load Undo-Tree
   (require 'undo-tree)
