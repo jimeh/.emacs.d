@@ -30,6 +30,7 @@
     auto-complete
     autopair
     browse-kill-ring
+    buffer-move
     coffee-mode
     feature-mode
     fill-column-indicator

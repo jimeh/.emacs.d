@@ -115,17 +115,14 @@
 (define-key global-map (kbd "C-}") 'enlarge-window-horizontally)
 (define-key global-map (kbd "C-^") 'enlarge-window)
 
+;; Move buffers between windows
+(when (require 'buffer-move nil 'noerror)
+  (global-set-key (kbd "M-K") 'buf-move-down)
+  (global-set-key (kbd "M-I") 'buf-move-up)
+  (global-set-key (kbd "M-J") 'buf-move-left)
+  (global-set-key (kbd "M-L") 'buf-move-right))
+
 ;; Window Tiling (via helpers.el)
-(global-set-key (kbd "C-M-K") 'swap-with-down)
-(global-set-key (kbd "C-M-I") 'swap-with-up)
-(global-set-key (kbd "C-M-J") 'swap-with-left)
-(global-set-key (kbd "C-M-L") 'swap-with-right)
-
-(global-set-key (kbd "M-K") 'enlarge-window-down)
-(global-set-key (kbd "M-I") 'enlarge-window-up)
-(global-set-key (kbd "M-J") 'enlarge-window-left)
-(global-set-key (kbd "M-L") 'enlarge-window-right)
-
 (global-set-key (kbd "M-k") 'windmove-down)
 (global-set-key (kbd "M-i") 'windmove-up)
 (global-set-key (kbd "M-j") 'windmove-left)
