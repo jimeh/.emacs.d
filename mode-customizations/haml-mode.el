@@ -3,6 +3,7 @@
 (defun customizations-for-haml-mode ()
   (interactive)
   (flyspell-prog-mode)
+  (flymake-haml-load)
   (linum-mode t)
   (fci-mode)
   (auto-complete-mode)
