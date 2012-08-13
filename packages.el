@@ -59,6 +59,7 @@
     ruby-mode
     sass-mode
     scss-mode
+    stylus-mode
     textmate
     twilight-anti-bright-theme
     twilight-bright-theme
