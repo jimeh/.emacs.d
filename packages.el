@@ -25,6 +25,7 @@
 ;; Packages to install from MELPA
 (defvar my-melpa-packages
   '(melpa
+    ace-jump-mode
     ack-and-a-half
     auto-complete
     autopair

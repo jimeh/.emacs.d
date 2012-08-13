@@ -77,6 +77,16 @@
 (when (require 'magit nil 'noerror)
   (global-set-key (kbd "C-x g") 'magit-status))
 
+;; Ace-Jump mode
+(when (require 'ace-jump-mode nil 'noerror)
+  (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+  (define-key global-map (kbd "C-c C-j") 'ace-jump-mode)
+  ;; pop-mark
+  (eval-after-load "ace-jump-mode" '(ace-jump-mode-enable-mark-sync))
+  (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
+  (define-key global-map (kbd "C-x C-j") 'ace-jump-mode-pop-mark)
+)
+
 ;; eproject related keybindings
 (when (require 'eproject nil 'noerror)
   (global-set-key (kbd "C-c C-b") 'eproject-ibuffer)
