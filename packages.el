@@ -53,6 +53,7 @@
     php+-mode
     rainbow-mode
     ruby-mode
+    restclient
     ruby-compilation
     ruby-electric
     ruby-interpolation
@@ -60,6 +61,7 @@
     scss-mode
     textmate
     twilight-anti-bright-theme
+    twilight-bright-theme
     undo-tree
     yaml-mode
     yasnippet
