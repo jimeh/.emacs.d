@@ -19,6 +19,7 @@
 (load-file (config-path "mode-customizations/python-mode.el"))
 (load-file (config-path "mode-customizations/rhtml-mode.el"))
 (load-file (config-path "mode-customizations/ruby-mode.el"))
+(load-file (config-path "mode-customizations/sass-mode.el"))
 (load-file (config-path "mode-customizations/sh-mode.el"))
 (load-file (config-path "mode-customizations/slim-mode.el"))
 (load-file (config-path "mode-customizations/yaml-mode.el"))
