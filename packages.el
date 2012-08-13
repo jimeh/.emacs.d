@@ -52,20 +52,20 @@
     minimap
     php+-mode
     rainbow-mode
-    ruby-mode
     restclient
     ruby-compilation
     ruby-electric
     ruby-interpolation
+    ruby-mode
     sass-mode
     scss-mode
     textmate
     twilight-anti-bright-theme
     twilight-bright-theme
     undo-tree
+    writegood-mode
     yaml-mode
-    yasnippet
-    writegood-mode)
+    yasnippet)
   "A list of packages to install from MELPA at launch.")
 
 ;; Packages to install from el-get
