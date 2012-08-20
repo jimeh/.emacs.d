@@ -34,6 +34,9 @@
 (global-set-key (kbd "C-x a =") 'align-region-to-equals)
 (global-set-key (kbd "M-]") 'align-region-to-equals)
 
+;; align-regexp
+(global-set-key (kbd "C-c \\") 'align-regexp)
+
 ;; Toggle auto-fill-mode.
 (global-set-key (kbd "C-c q") 'auto-fill-mode)
 
