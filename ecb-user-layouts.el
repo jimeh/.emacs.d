@@ -39,3 +39,37 @@
   (dotimes (i 2) (other-window 1) (if (equal (selected-window) ecb-compile-window) (other-window 1)))
   (dotimes (i 2) (other-window 1) (if (equal (selected-window) ecb-compile-window) (other-window 1)))
   )
+
+(ecb-layout-define "user-left2" left
+  "This function creates the following layout:
+
+   -------------------------------------------------------
+   |              |                                      |
+   |              |                                      |
+   |              |                                      |
+   |              |                                      |
+   |              |                                      |
+   |  Directories |                                      |
+   |              |                                      |
+   |              |                 Edit                 |
+   |              |                                      |
+   |              |                                      |
+   |              |                                      |
+   |--------------|                                      |
+   |              |                                      |
+   |   Methods    |                                      |
+   |              |                                      |
+   -------------------------------------------------------
+   |                                                     |
+   |                    Compilation                      |
+   |                                                     |
+   -------------------------------------------------------
+
+If you have not set a compilation-window in `ecb-compile-window-height' then
+the layout contains no persistent compilation window and the other windows get a
+little more place. This layout works best if it is contained in
+`ecb-show-sources-in-directories-buffer'!"
+  (ecb-set-directories-buffer)
+  (ecb-split-ver 0.75)
+  (ecb-set-methods-buffer)
+  (select-window (next-window)))
