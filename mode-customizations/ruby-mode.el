@@ -14,22 +14,36 @@
 (defun customizations-for-ruby-mode ()
   (interactive)
   (require 'inf-ruby)
-  (require 'ruby-electric)
+
+  (when (require 'ruby-electric nil 'noerror)
+    (ruby-electric-mode t)
+    (setq ruby-electric-expand-delimiters-list (quote (124))))
+
+  (when (require 'ruby-compilation nil 'noerror)
+    (define-key ruby-mode-map (kbd "s-r") 'ruby-compilation-this-buffer)
+    (define-key ruby-mode-map (kbd "C-c C-r") 'ruby-compilation-this-buffer))
+
+  (when (require 'auto-complete nil 'noerror)
+    (auto-complete-mode))
+
   (when (require 'rsense nil 'noerror)
     (add-to-list 'ac-sources 'ac-source-rsense-method)
-    (add-to-list 'ac-sources 'ac-source-rsense-constant))
-  (require 'ruby-compilation)
-  (require 'textmate)
+    (add-to-list 'ac-sources 'ac-source-rsense-constant)
+    (define-key ruby-mode-map (kbd "C-c C-.") 'ac-complete-rsense))
+
+  (when (require 'eproject nil 'noerror)
+    (define-key ruby-mode-map (kbd "C-c C-b") 'eproject-ibuffer))
+
+  (when (require 'textmate nil 'noerror)
+    (define-key ruby-mode-map (kbd "C-x C-t") 'textmate-goto-file))
+
   (linum-mode t)
   (fci-mode)
   (flyspell-prog-mode)
   (highlight-indentation-mode)
   (highlight-indentation-current-column-mode)
   (hs-minor-mode 1)
-  (auto-complete-mode)
   (flymake-ruby-load)
-  (ruby-electric-mode t)
-  (setq ruby-electric-expand-delimiters-list (quote (124)))
   (setq ruby-deep-arglist t)
   (setq ruby-deep-indent-paren nil)
   (setq c-tab-always-indent nil)
@@ -38,12 +52,7 @@
   (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
   (define-key ruby-mode-map (kbd "C-c C-h") 'hs-toggle-hiding)
   (define-key ruby-mode-map (kbd "C-c C-l") 'goto-line)
-  (define-key ruby-mode-map (kbd "C-c C-b") 'eproject-ibuffer)
-  (define-key ruby-mode-map (kbd "C-c C-.") 'ac-complete-rsense)
-  (define-key ruby-mode-map (kbd "s-r") 'ruby-compilation-this-buffer)
-  (define-key ruby-mode-map (kbd "C-c C-r") 'ruby-compilation-this-buffer)
-  (define-key ruby-mode-map (kbd "C-x t") 'textmate-goto-file)
-  (define-key ruby-mode-map (kbd "C-x C-t") 'textmate-goto-file))
+)
 
 (add-hook 'ruby-mode-hook 'customizations-for-ruby-mode)
 
