@@ -60,3 +60,10 @@
   (xterm-mouse-mode 1)
   (global-set-key [mouse-4] 'scroll-down-line)
   (global-set-key [mouse-5] 'scroll-up-line))
+
+;; Auto-complete when indenting.
+(defadvice indent-for-tab-command (around ac-before-indent activate)
+  "Call `auto-complete' if text was recently entered"
+  (if (ac-trigger-command-p last-command)
+      (auto-complete)
+    ad-do-it))

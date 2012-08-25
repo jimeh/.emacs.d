@@ -71,6 +71,13 @@
   (ruby-indent-line t)
   (end-of-line))
 
+;; Auto-complete when indenting
+(defadvice ruby-indent-command (around ac-before-ruby-indent activate)
+  "Call `auto-complete' if text was recently entered"
+  (if (ac-trigger-command-p last-command)
+      (auto-complete)
+    ad-do-it))
+
 ;; Yasnippet workaround for ruby-electric-mode
 ;; See: http://code.google.com/p/yasnippet/issues/detail?id=71
 (defun yas/advise-indent-function (function-symbol)
