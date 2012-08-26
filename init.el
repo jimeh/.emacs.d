@@ -20,6 +20,7 @@
 (load-file (config-path "behavior.el"))
 (load-file (config-path "appearance.el"))
 (load-file (config-path "keybindings.el"))
+(load-file (config-path "aliases.el"))
 (load-file (config-path "remember.el"))
 (load-file (config-path "project-definitions.el"))
 
