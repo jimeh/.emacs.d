@@ -1,3 +1,5 @@
+(add-to-list 'auto-mode-alist '("\\.tmuxtheme\\'" . sh-mode))
+
 (defun customizations-for-sh-mode ()
   (interactive)
   (flyspell-prog-mode)
