@@ -26,3 +26,6 @@
 
 ;; Dired
 (defalias 'wd 'wdired-change-to-wdired-mode)
+
+;; Modes
+(defalias 'sh 'shell-script-mode)
