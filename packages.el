@@ -61,6 +61,7 @@
     sass-mode
     scss-mode
     smex
+    smooth-scrolling
     stylus-mode
     textmate
     twilight-anti-bright-theme
