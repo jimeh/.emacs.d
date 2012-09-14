@@ -51,6 +51,7 @@
     markdown-mode
     minimap
     php+-mode
+    popwin
     rainbow-mode
     restclient
     ruby-compilation
@@ -59,6 +60,7 @@
     ruby-mode
     sass-mode
     scss-mode
+    smex
     stylus-mode
     textmate
     twilight-anti-bright-theme
