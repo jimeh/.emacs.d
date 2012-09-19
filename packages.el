@@ -46,6 +46,7 @@
     haml-mode
     highlight-indentation
     inf-ruby
+    jade-mode
     magit
     magithub
     markdown-mode
