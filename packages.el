@@ -51,7 +51,6 @@
     markdown-mode
     minimap
     php+-mode
-    popwin
     rainbow-mode
     restclient
     ruby-compilation
