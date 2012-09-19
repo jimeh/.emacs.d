@@ -47,6 +47,7 @@
     highlight-indentation
     inf-ruby
     jade-mode
+    less-css-mode
     magit
     magithub
     markdown-mode
