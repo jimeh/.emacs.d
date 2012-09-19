@@ -46,6 +46,7 @@
     haml-mode
     highlight-indentation
     inf-ruby
+    less-css-mode
     magit
     magithub
     markdown-mode
