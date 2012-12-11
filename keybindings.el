@@ -39,6 +39,10 @@
 ;; Kill-Ring related (via helpers.el).
 (global-set-key (kbd "M-Y") 'yank-pop-forwards)
 
+;; Browse the kill-ring.
+(when (require 'browse-kill-ring nil 'noerror)
+  (global-set-key (kbd "C-x C-y") 'browse-kill-ring))
+
 ;; Align to equal signs (via helpers.el).
 (global-set-key (kbd "C-x a =") 'align-region-to-equals)
 (global-set-key (kbd "M-]") 'align-region-to-equals)

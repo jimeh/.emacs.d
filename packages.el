@@ -43,6 +43,7 @@
     flymake-sass
     flymake-shell
     full-ack
+    gitconfig-mode
     haml-mode
     highlight-indentation
     inf-ruby
@@ -69,6 +70,7 @@
     twilight-bright-theme
     undo-tree
     writegood-mode
+    writeroom-mode
     yaml-mode
     yasnippet)
   "A list of packages to install from MELPA at launch.")
@@ -129,6 +131,9 @@
 
   ;; Load Auto-Complete
   (require 'auto-complete)
+
+  ;; Load browse-kill-ring
+  (require 'browse-kill-ring)
 
   ;; Load and setup Escreen
   (when (require 'escreen nil 'noerror)
