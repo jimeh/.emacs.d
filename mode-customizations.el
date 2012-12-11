@@ -6,6 +6,7 @@
 (load-file (config-path "mode-customizations/coffee-mode.el"))
 (load-file (config-path "mode-customizations/conf-mode.el"))
 (load-file (config-path "mode-customizations/css-mode.el"))
+(load-file (config-path "mode-customizations/dired-mode.el"))
 (load-file (config-path "mode-customizations/emacs-lisp-mode.el"))
 (load-file (config-path "mode-customizations/erlang-mode.el"))
 (load-file (config-path "mode-customizations/feature-mode.el"))
