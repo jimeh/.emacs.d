@@ -85,6 +85,10 @@
  '(visual-line-mode nil t)
  '(whitespace-action nil)
  '(winner-mode t nil (winner))
+ '(writeroom-disable-mode-line nil)
+ '(writeroom-width 78)
+ '(yas-global-mode t nil (yasnippet))
+ '(yas-use-menu t)
  '(yas/global-mode t nil (yasnippet))
  '(yas/use-menu t))
 (custom-set-faces
