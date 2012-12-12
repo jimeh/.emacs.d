@@ -88,9 +88,7 @@
  '(writeroom-disable-mode-line nil)
  '(writeroom-width 78)
  '(yas-global-mode t nil (yasnippet))
- '(yas-use-menu t)
- '(yas/global-mode t nil (yasnippet))
- '(yas/use-menu t))
+ '(yas-use-menu t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
