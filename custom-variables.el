@@ -24,7 +24,7 @@
  '(ecb-layout-name "left13")
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2))
- '(ecb-source-path (quote (("~/Projects" "Projects") ("~/.emacs.d" ".emacs.d") ("~/.dotfiles" ".dotfiles") ("~/Projects/fitzdares" "fitzdares") ("~/src" "src") ("~/Sites" "Sites") ("~" "~") ("/" "/") ("/Users/jimeh/Projects/fitzdares/sseater/vendor/gems/ssfeed" "ssfeed-gem"))))
+ '(ecb-source-path (quote (("~/Projects" "Projects") ("~/.emacs.d" ".emacs.d") ("~/.dotfiles" ".dotfiles") ("~/Projects/fitzdares" "fitzdares") ("~/src" "src") ("~/Sites" "Sites") ("~" "~") ("/" "/"))))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("left13" "left15")))
  '(ecb-tree-indent 3)
