@@ -24,10 +24,6 @@
 ;; Goto line
 (global-set-key (kbd "C-c C-l") 'goto-line)
 
-;; Scroll up/down
-(global-set-key (kbd "C-v") 'scroll-up-half)
-(global-set-key (kbd "M-v") 'scroll-down-half)
-
 ;; Switch to next/previous buffer
 (global-set-key (kbd "C-c C-n") 'switch-to-next-buffer)
 (global-set-key (kbd "C-c C-p") 'switch-to-prev-buffer)
