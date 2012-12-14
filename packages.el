@@ -32,6 +32,7 @@
     browse-kill-ring
     buffer-move
     coffee-mode
+    dired+
     feature-mode
     fill-column-indicator
     flymake-coffee
