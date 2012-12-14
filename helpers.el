@@ -71,6 +71,23 @@ there's a region, all lines that region covers will be duplicated."
 
 
 ;;
+;; Scroll Half Screen
+;; - from: http://www.emacswiki.org/emacs/HalfScrolling
+;;
+
+(defun window-half-height ()
+  (max 1 (/ (1- (window-height (selected-window))) 2)))
+
+(defun scroll-up-half ()
+  (interactive)
+  (scroll-up (window-half-height)))
+
+(defun scroll-down-half ()
+  (interactive)
+  (scroll-down (window-half-height)))
+
+
+;;
 ;; Window Switching
 ;;
 
