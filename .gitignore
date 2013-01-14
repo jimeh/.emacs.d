@@ -1,5 +1,6 @@
 .DS_Store
 ac-comphist.dat
+srecode-map.el
 auto-save-list/*
 el-get/*
 elpa/*
