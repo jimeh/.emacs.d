@@ -74,6 +74,7 @@
  '(ruby-deep-indent-paren nil)
  '(ruby-use-encoding-map nil)
  '(safe-local-variable-values (quote ((eval rainbow-mode 1))))
+ '(scss-compile-at-save nil)
  '(smooth-scroll-margin 6)
  '(speedbar-show-unknown-files t)
  '(standard-indent 2)
