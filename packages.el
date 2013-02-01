@@ -73,7 +73,8 @@
     writegood-mode
     writeroom-mode
     yaml-mode
-    yasnippet)
+    yasnippet
+    zencoding-mode)
   "A list of packages to install from MELPA at launch.")
 
 ;; Packages to install from el-get
@@ -157,7 +158,11 @@
 
   ;; Load yasnippet
   (when (require 'yasnippet nil 'noerror)
-    (yas/global-mode t)))
+    (yas/global-mode t))
+
+  ;; Load zencoding-mode in any markup modes
+  (when (require 'zencoding-mode nil 'noerror)
+    (add-hook 'sgml-mode-hook 'zencoding-mode)))
 
 
 ;;
