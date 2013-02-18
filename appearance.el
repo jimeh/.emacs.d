@@ -2,7 +2,7 @@
 (setq inhibit-startup-message t)
 
 ;; Set default font
-(if window-system
+(if gui-window-system
     ;;; Large
     ;; (set-face-attribute 'default nil :family "Monaco" :height 110)
     ;; (set-face-attribute 'default nil :family "Menlo" :height 110)
@@ -14,7 +14,7 @@
 )
 
 ;; Load Theme
-(if window-system (require 'twilight-anti-bright-theme)
+(if gui-window-system (require 'twilight-anti-bright-theme)
   (require 'tomorrow-night-paradise-theme))
 
 ;; Disable menu-bar

@@ -6,6 +6,10 @@
 (setq emacs-config-dir
       (file-name-directory (or load-file-name (buffer-file-name))))
 
+;; Determine if GUI or console settings should apply
+(setq gui-window-system
+      (if (or (getenv "EMACS_GUI_SERVER") window-system) t 'nil))
+
 ;; Helper function for config path
 (defun config-path(path)
   "Appends argument at the end of emacs-config-dir using expand-file-name"
