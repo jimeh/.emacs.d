@@ -60,6 +60,11 @@ there's a region, all lines that region covers will be duplicated."
   (interactive "r")
   (align-regexp begin end "\\(\\s-*\\)=" 1 1 ))
 
+(defun align-region-to-opening-brace (begin end)
+  "Align region to equal signs"
+  (interactive "r")
+  (align-regexp begin end "\\(\\s-*\\){" 1 1 ))
+
 
 ;;
 ;; Yank Pop Forwards
