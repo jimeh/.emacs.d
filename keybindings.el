@@ -91,6 +91,10 @@
 (when (require 'ibuffer nil 'noerror)
   (global-set-key (kbd "C-x C-b") 'ibuffer))
 
+;; ECB
+(when (require 'ecb nil 'noerror)
+  (global-set-key (kbd "C-c C-.") 'ecb-activate))
+
 ;; Magit
 (when (require 'magit nil 'noerror)
   (global-set-key (kbd "C-x g") 'magit-status))
