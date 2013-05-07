@@ -27,9 +27,9 @@
 
 ;;
 ;; Duplicate Line
+;; - from: http://tuxicity.se/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
 ;;
 
-;; From: http://tuxicity.se/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html
 (defun duplicate-current-line-or-region (arg)
   "Duplicates the current line or region ARG times.
 If there's no region, the current line will be duplicated. However, if
@@ -176,3 +176,24 @@ there's a region, all lines that region covers will be duplicated."
                                (number-to-string s))
                     " ")))
     (message "escreen: active screens: %s" emphased)))
+
+
+;;
+;; File and Buffer Renaming
+;; - from: http://emacsredux.com/blog/2013/05/04/rename-file-and-buffer/
+;;
+
+(defun rename-file-and-buffer ()
+  "Rename the current buffer and file it is visiting."
+  (interactive)
+  (let ((filename (buffer-file-name)))
+    (if (not (and filename (file-exists-p filename)))
+        (message "Buffer is not visiting a file!")
+      (let ((new-name (read-file-name "New name: " filename)))
+        (cond
+         ((vc-backend filename) (vc-rename-file filename new-name))
+         (t
+          (rename-file filename new-name t)
+          (rename-buffer new-name)
+          (set-visited-file-name new-name)
+          (set-buffer-modified-p nil)))))))
