@@ -11,6 +11,7 @@
   (flyspell-mode)
   (linum-mode t)
   (auto-fill-mode)
+  (subword-mode)
   (setq fill-column 72)
   (fci-mode))
 

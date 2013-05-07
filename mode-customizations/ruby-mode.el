@@ -44,6 +44,7 @@
   (highlight-indentation-current-column-mode)
   (hs-minor-mode 1)
   (flymake-ruby-load)
+  (subword-mode)
   (setq ruby-deep-arglist t)
   (setq ruby-deep-indent-paren nil)
   (setq c-tab-always-indent nil)

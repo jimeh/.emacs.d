@@ -4,6 +4,7 @@
   (linum-mode t)
   (fci-mode)
   (auto-complete-mode)
+  (subword-mode)
   (setq tab-width 4)
   (highlight-indentation-mode))
 

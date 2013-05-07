@@ -7,6 +7,7 @@
   (linum-mode t)
   (fci-mode)
   (auto-complete-mode)
+  (subword-mode)
   (setq php-basic-offset 2)
   (setq tab-width 2)
   (setq highlight-indentation-offset 2)

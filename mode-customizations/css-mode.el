@@ -4,6 +4,7 @@
   (linum-mode t)
   (fci-mode)
   (auto-complete-mode)
+  (subword-mode)
   (setq css-indent-offset 2)
   (setq highlight-indentation-offset 2)
   (highlight-indentation-mode)

@@ -11,6 +11,7 @@
   (linum-mode t)
   (flyspell-mode)
   (auto-fill-mode)
+  (subword-mode)
   (define-key markdown-mode-map (kbd "C-c p") 'markdown-preview))
 
 (add-hook 'markdown-mode-hook 'customizations-for-markdown-mode)
