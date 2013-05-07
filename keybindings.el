@@ -155,8 +155,11 @@
 (define-key global-map (kbd "C-c l") 'org-store-link)
 
 ;; Remember mode
-(define-key global-map (kbd "C-c r") 'org-remember)
-(define-key global-map (kbd "C-M-r") 'org-remember)
+;; (define-key global-map (kbd "C-c r") 'org-remember)
+;; (define-key global-map (kbd "C-M-r") 'org-remember)
+
+;; Rename current file and buffer (via helpers.el)
+(global-set-key (kbd "C-c r")  'rename-file-and-buffer)
 
 ;; Allow hash to be entered on UK keyboards (via helpers.el)
 (global-set-key (kbd "M-3") 'insert-hash)
