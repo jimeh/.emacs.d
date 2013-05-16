@@ -33,6 +33,7 @@
     buffer-move
     coffee-mode
     dired+
+    ecb
     feature-mode
     fill-column-indicator
     flymake-coffee
@@ -57,6 +58,7 @@
     php+-mode
     rainbow-mode
     restclient
+    rhtml-mode
     ruby-compilation
     ruby-electric
     ruby-interpolation
@@ -79,9 +81,7 @@
 
 ;; Packages to install from el-get
 (defvar my-el-get-packages
-  '(ecb
-    rhtml-mode
-    tomorrow-night-paradise-theme)
+  '(tomorrow-night-paradise-theme)
   "A list of packages to install from el-get at launch.")
 
 ;; Custom packages to install with el-get
