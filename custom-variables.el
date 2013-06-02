@@ -7,7 +7,7 @@
  '(ac-delay 0.05)
  '(ac-menu-height 15)
  '(ack-arguments (quote ("--ignore-dir=vendor/ruby" "--ignore-dir=vendor/bundle" "--ignore-dir=coverage" "--ignore-dir=docs" "--ignore-dir=doc" "--type-add=js=.js,.js.erb" "--type-add=ruby=.jbuilder,.rabl" "--type-add=html=.haml,.hamlc,.jade" "--type-add=css=.sass,.scss,.styl" "--type-set=coffee=.coffee" "--type-set=cucumber=.feature")))
- '(ack-project-root-file-patterns (quote (".project\\'" ".xcodeproj\\'" ".sln\\'" "\\`Project.ede\\'" "\\`.git\\'" "\\`.bzr\\'" "\\`_darcs\\'" "\\`.hg\\'" "\\`Gemfile\\'" "\\`Rakefile\\'")))
+ '(ack-project-root-file-patterns (quote (".project\\'" ".xcodeproj\\'" ".sln\\'" "\\`Project.ede\\'" "\\`.git\\'" "\\`.bzr\\'" "\\`_darcs\\'" "\\`.hg\\'" "\\`Gemfile\\'" "\\`Rakefile\\'" "\\`Makefile\\'")))
  '(ack-prompt-for-directory (quote unless-guessed))
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-customization-version-id 211 t)
