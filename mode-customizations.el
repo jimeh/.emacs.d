@@ -3,6 +3,7 @@
 ;;
 
 ;; Programming languages
+(load-file (config-path "mode-customizations/ack-mode.el"))
 (load-file (config-path "mode-customizations/coffee-mode.el"))
 (load-file (config-path "mode-customizations/conf-mode.el"))
 (load-file (config-path "mode-customizations/css-mode.el"))
