@@ -1,3 +1,6 @@
+(add-to-list 'auto-mode-alist '("\\.bash\\'" . sh-mode))
+(add-to-list 'auto-mode-alist '("\\.zsh\\'" . sh-mode))
+(add-to-list 'auto-mode-alist '("\\.tcsh\\'" . sh-mode))
 (add-to-list 'auto-mode-alist '("\\.tmuxtheme\\'" . sh-mode))
 
 (defun customizations-for-sh-mode ()
@@ -6,6 +9,7 @@
   (linum-mode t)
   (fci-mode)
   (auto-complete-mode)
+  (whitespace-mode)
   (subword-mode)
   (setq sh-basic-offset 2)
   (setq sh-indentation 2)
