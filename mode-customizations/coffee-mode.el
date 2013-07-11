@@ -8,6 +8,7 @@
   (linum-mode t)
   (fci-mode)
   (auto-complete-mode)
+  (whitespace-mode)
   (subword-mode)
   (setq tab-width 2)
   (setq highlight-indentation-offset 2)
