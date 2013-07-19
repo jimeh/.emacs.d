@@ -1,0 +1,16 @@
+(add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
+
+(defun customizations-for-puppet-mode ()
+  (interactive)
+  (flyspell-prog-mode)
+  (linum-mode t)
+  (fci-mode)
+  (auto-complete-mode)
+  (whitespace-mode)
+  (subword-mode)
+  (setq tab-width 2)
+  (setq highlight-indentation-offset 2)
+  (highlight-indentation-mode)
+  (highlight-indentation-current-column-mode))
+
+(add-hook 'puppet-mode-hook 'customizations-for-puppet-mode)

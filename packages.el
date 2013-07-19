@@ -56,6 +56,7 @@
     markdown-mode
     minimap
     php+-mode
+    puppet-mode
     rainbow-mode
     restclient
     rhtml-mode
