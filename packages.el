@@ -32,6 +32,7 @@
     browse-kill-ring
     buffer-move
     coffee-mode
+    dash-at-point
     dired+
     ecb
     feature-mode

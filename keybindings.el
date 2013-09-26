@@ -63,6 +63,9 @@
   (global-set-key (kbd "M--") 'undo-tree-undo)
   (global-set-key (kbd "M-_") 'undo-tree-redo))
 
+(when (require 'dash-at-point nil 'noerror)
+  (global-set-key (kbd "C-c d") 'dash-at-point))
+
 ;; Mac OS X specific keybindings
 (when (eq system-type 'darwin)
 
