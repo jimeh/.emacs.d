@@ -42,6 +42,7 @@
  '(global-auto-revert-mode t)
  '(global-undo-tree-mode t)
  '(history-length 500)
+ '(ibuffer-formats (quote ((mark modified read-only " " (name 48 48 :left :elide) " " (size 9 -1 :right) " " (mode 16 16 :left :elide) " " filename-and-process) (mark " " (name 16 -1) " " filename))))
  '(icomplete-mode t)
  '(ispell-program-name "aspell")
  '(magit-completing-read-function (quote magit-ido-completing-read))
