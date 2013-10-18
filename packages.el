@@ -61,6 +61,7 @@
     rainbow-mode
     restclient
     rhtml-mode
+    rubocop
     ruby-compilation
     ruby-electric
     ruby-interpolation
