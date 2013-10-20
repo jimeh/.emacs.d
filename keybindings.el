@@ -69,8 +69,8 @@
 ;; Mac OS X specific keybindings
 (when (eq system-type 'darwin)
 
-  ;; Mac OS X Fullscreen (requires this patch: https://gist.github.com/1012927)
-  (global-set-key (kbd "s-<return>") 'ns-toggle-fullscreen)
+  ;; Mac OS X Fullscreen (requires Emacs 24.4 or later)
+  (global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
 
   ;; Undo/Redo (via undo-tree)
   (when (require 'undo-tree nil 'noerror)

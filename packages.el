@@ -53,7 +53,6 @@
     jade-mode
     less-css-mode
     magit
-    magithub
     markdown-mode
     minimap
     php-mode
