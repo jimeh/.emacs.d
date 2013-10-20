@@ -17,7 +17,7 @@
 (load-file (config-path "mode-customizations/lisp-mode.el"))
 (load-file (config-path "mode-customizations/makefile-mode.el"))
 (load-file (config-path "mode-customizations/markdown-mode.el"))
-(load-file (config-path "mode-customizations/php+-mode.el"))
+(load-file (config-path "mode-customizations/php-mode.el"))
 (load-file (config-path "mode-customizations/puppet-mode.el"))
 (load-file (config-path "mode-customizations/python-mode.el"))
 (load-file (config-path "mode-customizations/rhtml-mode.el"))

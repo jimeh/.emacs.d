@@ -56,7 +56,7 @@
     magithub
     markdown-mode
     minimap
-    php+-mode
+    php-mode
     puppet-mode
     rainbow-mode
     restclient
@@ -143,9 +143,6 @@
   ;; Load and setup Escreen
   (when (require 'escreen nil 'noerror)
     (escreen-install))
-
-  ;; Load php+-mode
-  (require 'php+-mode)
 
   ;; Load ruby-electric (autoload fails)
   (require 'ruby-electric)
