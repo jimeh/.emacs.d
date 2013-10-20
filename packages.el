@@ -25,7 +25,7 @@
 
 ;; Packages to install from MELPA
 (defvar my-melpa-packages
-  '(melpa
+  '(
     ace-jump-mode
     ack-and-a-half
     auto-complete
@@ -79,12 +79,15 @@
     writeroom-mode
     yaml-mode
     yasnippet
-    zencoding-mode)
+    zencoding-mode
+    )
   "A list of packages to install from MELPA at launch.")
 
 ;; Packages to install from el-get
 (defvar my-el-get-packages
-  '(tomorrow-night-paradise-theme)
+  '(
+    tomorrow-night-paradise-theme
+    )
   "A list of packages to install from el-get at launch.")
 
 ;; Custom packages to install with el-get
