@@ -3,6 +3,7 @@
 ;;
 
 ;; Load Package
+(require 'cl)
 (require 'package)
 
 ;; Add MELPA.
@@ -169,20 +170,30 @@
 ;;
 
 (defun my-melpa-packages-installed-p ()
-  (loop for p in my-melpa-packages
-        when (not (package-installed-p p)) do (return nil)
-        finally (return t)))
+  "Check if all packages in `my-melpa-packages' are installed."
+  (every #'package-installed-p my-melpa-packages))
+
+(defun require-my-melpa-package (package)
+  "Install PACKAGE unless already installed."
+  (unless (memq package my-melpa-packages)
+    (add-to-list 'my-melpa-packages package))
+  (unless (package-installed-p package)
+    (package-install package)))
+
+(defun require-my-melpa-packages (packages)
+  "Ensure PACKAGES are installed.
+Missing packages are installed automatically."
+  (mapc #'require-my-melpa-package packages))
 
 (defun install-my-melpa-packages ()
+  "Install all packages listed in `my-melpa-packages'."
   (unless (my-melpa-packages-installed-p)
     ;; check for new packages (package versions)
-    (message "%s" "Refreshing package database...")
+    (message "%s" "Refreshing its package database...")
     (package-refresh-contents)
     (message "%s" " done.")
     ;; install the missing packages
-    (dolist (p my-melpa-packages)
-      (unless (package-installed-p p)
-        (package-install p)))))
+    (require-my-melpa-packages my-melpa-packages)))
 
 
 ;;
