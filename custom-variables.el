@@ -6,8 +6,12 @@
  '(ac-auto-show-menu 0.2)
  '(ac-delay 0.05)
  '(ac-menu-height 15)
- '(ack-arguments (quote ("--ignore-dir=vendor/ruby" "--ignore-dir=vendor/bundle" "--ignore-dir=coverage" "--ignore-dir=docs" "--ignore-dir=doc" "--type-add=js=.js,.js.erb" "--type-add=ruby=.jbuilder,.rabl" "--type-add=html=.haml,.hamlc,.jade" "--type-add=css=.sass,.scss,.styl" "--type-set=coffee=.coffee" "--type-set=cucumber=.feature")))
- '(ack-project-root-file-patterns (quote (".project\\'" ".xcodeproj\\'" ".sln\\'" "\\`Project.ede\\'" "\\`.git\\'" "\\`.bzr\\'" "\\`_darcs\\'" "\\`.hg\\'" "\\`Gemfile\\'" "\\`Rakefile\\'" "\\`Makefile\\'")))
+ '(ack-arguments
+   (quote
+    ("--ignore-dir=vendor/ruby" "--ignore-dir=vendor/bundle" "--ignore-dir=coverage" "--ignore-dir=docs" "--ignore-dir=doc" "--type-add=js=.js,.js.erb" "--type-add=ruby=.jbuilder,.rabl" "--type-add=html=.haml,.hamlc,.jade" "--type-add=css=.sass,.scss,.styl" "--type-set=coffee=.coffee" "--type-set=cucumber=.feature")))
+ '(ack-project-root-file-patterns
+   (quote
+    (".project\\'" ".xcodeproj\\'" ".sln\\'" "\\`Project.ede\\'" "\\`.git\\'" "\\`.bzr\\'" "\\`_darcs\\'" "\\`.hg\\'" "\\`Gemfile\\'" "\\`Rakefile\\'" "\\`Makefile\\'")))
  '(ack-prompt-for-directory (quote unless-guessed))
  '(aquamacs-additional-fontsets nil t)
  '(aquamacs-customization-version-id 211 t)
@@ -24,7 +28,16 @@
  '(ecb-layout-name "left13")
  '(ecb-options-version "2.40")
  '(ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2))
- '(ecb-source-path (quote (("~/Projects" "Projects") ("~/.emacs.d" ".emacs.d") ("~/.dotfiles" ".dotfiles") ("~/Projects/fitzdares" "fitzdares") ("~/src" "src") ("~/Sites" "Sites") ("~" "~") ("/" "/"))))
+ '(ecb-source-path
+   (quote
+    (("~/Projects" "Projects")
+     ("~/.emacs.d" ".emacs.d")
+     ("~/.dotfiles" ".dotfiles")
+     ("~/Projects/fitzdares" "fitzdares")
+     ("~/src" "src")
+     ("~/Sites" "Sites")
+     ("~" "~")
+     ("/" "/"))))
  '(ecb-tip-of-the-day nil)
  '(ecb-toggle-layout-sequence (quote ("left13" "left15")))
  '(ecb-tree-indent 3)
@@ -42,7 +55,18 @@
  '(global-auto-revert-mode t)
  '(global-undo-tree-mode t)
  '(history-length 500)
- '(ibuffer-formats (quote ((mark modified read-only " " (name 48 48 :left :elide) " " (size 9 -1 :right) " " (mode 16 16 :left :elide) " " filename-and-process) (mark " " (name 16 -1) " " filename))))
+ '(ibuffer-formats
+   (quote
+    ((mark modified read-only " "
+           (name 48 48 :left :elide)
+           " "
+           (size 9 -1 :right)
+           " "
+           (mode 16 16 :left :elide)
+           " " filename-and-process)
+     (mark " "
+           (name 16 -1)
+           " " filename))))
  '(icomplete-mode t)
  '(ispell-program-name "aspell")
  '(magit-completing-read-function (quote magit-ido-completing-read))
@@ -55,7 +79,8 @@
  '(ns-tool-bar-display-mode nil t)
  '(ns-tool-bar-size-mode nil t)
  '(nxhtml-skip-welcome t)
- '(org-agenda-files (list "~/.org-files/todos.org" "~/.org-files/notes.org" "~/.org-files/events.org"))
+ '(org-agenda-files
+   (list "~/.org-files/todos.org" "~/.org-files/notes.org" "~/.org-files/events.org"))
  '(org-agenda-ndays 7)
  '(org-agenda-show-all-dates t)
  '(org-agenda-skip-deadline-if-done t)
@@ -67,8 +92,11 @@
  '(org-fast-tag-selection-single-key (quote expert))
  '(org-log-done t)
  '(org-remember-store-without-prompt t)
- '(org-remember-templates (quote (("Todo" 116 "** TODO %?
-" "~/.org-files/todos.org" "Tasks") ("Note" 110 "** %?
+ '(org-remember-templates
+   (quote
+    (("Todo" 116 "** TODO %?
+" "~/.org-files/todos.org" "Tasks")
+     ("Note" 110 "** %?
 " "~/.org-files/notes.org" "Notes"))))
  '(org-reverse-note-order t)
  '(php-mode-dot-property-warning t)
