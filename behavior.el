@@ -38,6 +38,11 @@
       cua-remap-control-v nil
       cua-remap-control-z nil)
 
+;; Disable ECB's pre-scanning for empty directories, as it for some reason
+;; kept trying scan files as if they were directories, causing constant error
+;; messages in the mini-buffer.
+(setq ecb-prescan-directories-for-emptyness nil)
+
 ;; Use textmate-mode
 (when (require 'textmate nil 'noerror)
   (textmate-mode))
