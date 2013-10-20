@@ -42,7 +42,7 @@
  '(ecb-toggle-layout-sequence (quote ("left13" "left15")))
  '(ecb-tree-indent 3)
  '(ecb-tree-make-parent-node-sticky nil)
- '(ecb-windows-width 0.22)
+ '(ecb-windows-width 0.24)
  '(elscreen-display-tab t)
  '(elscreen-tab-display-control t)
  '(elscreen-tab-display-kill-screen nil)
