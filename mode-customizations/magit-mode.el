@@ -4,15 +4,3 @@
   (linum-mode t))
 
 (add-hook 'magit-mode-hook 'customizations-for-magit-mode)
-
-;; Write commit messages in style
-(defun customizations-for-magit-log-edit-mode ()
-  (interactive)
-  (flyspell-mode)
-  (linum-mode t)
-  (auto-fill-mode)
-  (subword-mode)
-  (setq fill-column 72)
-  (fci-mode))
-
-(add-hook 'magit-log-edit-mode-hook 'customizations-for-magit-log-edit-mode)

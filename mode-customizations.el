@@ -11,6 +11,7 @@
 (load-file (config-path "mode-customizations/emacs-lisp-mode.el"))
 (load-file (config-path "mode-customizations/erlang-mode.el"))
 (load-file (config-path "mode-customizations/feature-mode.el"))
+(load-file (config-path "mode-customizations/git-commit-mode.el"))
 (load-file (config-path "mode-customizations/haml-mode.el"))
 (load-file (config-path "mode-customizations/html-mode.el"))
 (load-file (config-path "mode-customizations/js-mode.el"))
