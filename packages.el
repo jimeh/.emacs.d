@@ -65,7 +65,6 @@
     ruby-compilation
     ruby-electric
     ruby-interpolation
-    ruby-mode
     sass-mode
     scss-mode
     smex
@@ -111,6 +110,9 @@
         (:name linum+
                :type http
                :url "http://dea.googlecode.com/svn/trunk/my-lisps/linum+.el")
+        (:name ruby-mode
+               :type http
+               :url "https://raw.github.com/ruby/ruby/trunk/misc/ruby-mode.el")
         ;; (:name rsense
         ;;        :description "Intelligent Ruby code-completion"
         ;;        :website "http://cx4a.org/software/rsense/"
