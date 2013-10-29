@@ -45,6 +45,10 @@
 ;; use a eval-after-load hook to set it to "dynamic".
 (eval-after-load "linum+" '(progn (setq linum-format 'dynamic)))
 
+;; Display up to 20 results in when using grizzl completion.
+(when (require 'grizzl nil 'noerror)
+  (setq *grizzl-read-max-results* 20))
+
 ;; meaningful names for buffers with the same name
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)

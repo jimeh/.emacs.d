@@ -101,6 +101,12 @@
 " "~/.org-files/notes.org" "Notes"))))
  '(org-reverse-note-order t)
  '(php-mode-dot-property-warning t)
+ '(projectile-completion-system (quote grizzl))
+ '(projectile-enable-caching nil)
+ '(projectile-globally-ignored-directories
+   (quote
+    (".idea" ".eunit" ".git" ".hg" ".fslckout" ".bzr" ".svn" "_darcs" "vendor/bundle" "vendor/ruby" "coverage" "docs" "doc" "log" "logs" "tmp")))
+ '(projectile-globally-ignored-files (quote ("TAGS" "*.log")))
  '(ruby-use-encoding-map nil)
  '(safe-local-variable-values (quote ((eval rainbow-mode 1))))
  '(scss-compile-at-save nil)

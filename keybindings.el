@@ -111,18 +111,20 @@
   (define-key global-map (kbd "C-x C-j") 'ace-jump-mode-pop-mark)
 )
 
+;; projectile related keybindings
+(when (require 'projectile nil 'noerror)
+  (global-set-key (kbd "C-x C-t") 'projectile-find-file)
+  (global-set-key (kbd "C-x t") 'projectile-find-test-file)
+  (global-set-key (kbd "C-x C-v") 'projectile-switch-to-buffer))
+
 ;; eproject related keybindings
 (when (require 'eproject nil 'noerror)
   (global-set-key (kbd "C-c C-b") 'eproject-ibuffer)
   (global-set-key (kbd "C-x p b") 'eproject-ibuffer)
-  (global-set-key (kbd "C-x p t") 'eproject-todo)
-  (global-set-key (kbd "C-x p f") 'eproject-find-file)
-  (global-set-key (kbd "C-x p k") 'eproject-kill-project-buffers)
-  (global-set-key (kbd "C-x p o") 'eproject-open-all-project-files))
+  (global-set-key (kbd "C-x p t") 'eproject-todo))
 
 ;; Textmate-mode related keybindings
 (when (require 'textmate nil 'noerror)
-  (global-set-key (kbd "C-x C-t") 'textmate-goto-file)
   (global-set-key (kbd "C-c C-t") 'textmate-goto-symbol)
   (global-set-key (kbd "M-p") 'textmate-column-up)
   (global-set-key (kbd "M-n") 'textmate-column-down)

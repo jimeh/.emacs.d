@@ -33,11 +33,11 @@
     (add-to-list 'ac-sources 'ac-source-rsense-constant)
     (define-key ruby-mode-map (kbd "C-c C-.") 'ac-complete-rsense))
 
+  (when (require 'projectile nil 'noerror)
+    (define-key ruby-mode-map (kbd "C-x t") 'projectile-find-test-file))
+
   (when (require 'eproject nil 'noerror)
     (define-key ruby-mode-map (kbd "C-c C-b") 'eproject-ibuffer))
-
-  (when (require 'textmate nil 'noerror)
-    (define-key ruby-mode-map (kbd "C-x C-t") 'textmate-goto-file))
 
   (linum-mode t)
   (fci-mode)

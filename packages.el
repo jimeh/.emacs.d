@@ -48,6 +48,7 @@
     flymake-shell
     full-ack
     gitconfig-mode
+    grizzl
     haml-mode
     highlight-indentation
     inf-ruby
@@ -57,6 +58,7 @@
     markdown-mode
     minimap
     php-mode
+    projectile
     puppet-mode
     rainbow-mode
     restclient

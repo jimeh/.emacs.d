@@ -19,9 +19,18 @@
 (when (require 'autopair nil 'noerror)
   (autopair-global-mode))
 
+;; Enable Projectile global mode.
+(when (require 'projectile nil 'noerror)
+  (projectile-global-mode))
+
 ;; Popwin
 (when (require 'popwin nil 'noerror)
   (setq display-buffer-function 'popwin:display-buffer))
+
+;; Recentf
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-items 50)
 
 ;; When using autopair, ECB and delete-selection-mode there's a weird conflict
 ;; which disables delete-selection-mode whenever you click on a directory or
