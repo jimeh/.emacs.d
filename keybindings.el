@@ -112,6 +112,14 @@
   (define-key global-map (kbd "C-x C-j") 'ace-jump-mode-pop-mark)
 )
 
+;; multiple-cursors
+(when (require 'multiple-cursors nil 'noerror)
+  (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+  (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+  (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+  (global-set-key (kbd "M-<return>") 'set-rectangular-region-anchor))
+
 ;; projectile related keybindings
 (when (require 'projectile nil 'noerror)
   (global-set-key (kbd "C-x C-t") 'projectile-find-file)
@@ -133,9 +141,9 @@
   (global-set-key (kbd "C-c ]") 'textmate-shift-right))
 
 ;; Set/increase/decrease transparency (via helpers.el)
-(global-set-key (kbd "C-|") 'transparency-set-value)
-(global-set-key (kbd "C-<") 'transparency-increase)
-(global-set-key (kbd "C->") 'transparency-decrease)
+(global-set-key (kbd "C-M-|") 'transparency-set-value)
+(global-set-key (kbd "C-M-<") 'transparency-increase)
+(global-set-key (kbd "C-M->") 'transparency-decrease)
 
 ;; Window Resizing
 (define-key global-map (kbd "C-{") 'shrink-window-horizontally)

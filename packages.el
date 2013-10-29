@@ -57,6 +57,7 @@
     magit
     markdown-mode
     minimap
+    multiple-cursors
     php-mode
     projectile
     puppet-mode
