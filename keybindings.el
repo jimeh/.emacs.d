@@ -109,8 +109,7 @@
   ;; pop-mark
   (eval-after-load "ace-jump-mode" '(ace-jump-mode-enable-mark-sync))
   (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
-  (define-key global-map (kbd "C-x C-j") 'ace-jump-mode-pop-mark)
-)
+  (define-key global-map (kbd "C-x C-j") 'ace-jump-mode-pop-mark))
 
 ;; multiple-cursors
 (when (require 'multiple-cursors nil 'noerror)
@@ -124,7 +123,8 @@
 (when (require 'projectile nil 'noerror)
   (global-set-key (kbd "C-x C-t") 'projectile-find-file)
   (global-set-key (kbd "C-x t") 'projectile-find-test-file)
-  (global-set-key (kbd "C-x C-v") 'projectile-switch-to-buffer))
+  (global-set-key (kbd "C-x C-v") 'projectile-switch-to-buffer)
+  (global-set-key (kbd "C-c C-s") 'projectile-switch-project))
 
 ;; eproject related keybindings
 (when (require 'eproject nil 'noerror)

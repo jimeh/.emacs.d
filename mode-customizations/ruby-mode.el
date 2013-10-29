@@ -15,7 +15,6 @@
 
 (defun customizations-for-ruby-mode ()
   (interactive)
-  (require 'inf-ruby)
 
   (when (require 'ruby-electric nil 'noerror)
     (ruby-electric-mode t)
@@ -34,7 +33,9 @@
     (define-key ruby-mode-map (kbd "C-c C-.") 'ac-complete-rsense))
 
   (when (require 'projectile nil 'noerror)
-    (define-key ruby-mode-map (kbd "C-x t") 'projectile-find-test-file))
+    (define-key ruby-mode-map (kbd "C-x t") 'projectile-find-test-file)
+    (define-key inf-ruby-minor-mode-map (kbd "C-c C-s")
+      'projectile-switch-project))
 
   (when (require 'eproject nil 'noerror)
     (define-key ruby-mode-map (kbd "C-c C-b") 'eproject-ibuffer))
