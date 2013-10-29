@@ -36,6 +36,7 @@
     dash-at-point
     dired+
     ecb
+    expand-region
     feature-mode
     fill-column-indicator
     flymake-coffee

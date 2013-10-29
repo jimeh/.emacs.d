@@ -31,6 +31,11 @@
 ;; Duplicate line (via helpers.el)
 (global-set-key (kbd "C-x C-d") 'duplicate-current-line-or-region)
 
+;; Expand region
+(when (require 'expand-region nil 'noerror)
+  (global-set-key (kbd "M-.") 'er/expand-region)
+  (global-set-key (kbd "M-,") 'er/contract-region))
+
 ;; Window switching (via helpers.el).
 (global-set-key (kbd "C-x i")   'other-window-reverse)
 (global-set-key (kbd "C-x C-o") 'other-window)
