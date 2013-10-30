@@ -49,6 +49,22 @@
 (when (require 'grizzl nil 'noerror)
   (setq *grizzl-read-max-results* 20))
 
+;; Display ido results vertically, rather than horizontally.
+(when (require 'ido nil 'noerror)
+  (setq ido-decorations
+        (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]"
+                " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
+
+  (defun ido-disable-line-truncation ()
+    (set (make-local-variable 'truncate-lines) nil))
+
+  (defun ido-define-keys () ;; C-n/p is more intuitive in vertical layout
+    (define-key ido-completion-map (kbd "C-n") 'ido-next-match)
+    (define-key ido-completion-map (kbd "C-p") 'ido-prev-match))
+
+  (add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-truncation)
+  (add-hook 'ido-setup-hook 'ido-define-keys))
+
 ;; meaningful names for buffers with the same name
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
