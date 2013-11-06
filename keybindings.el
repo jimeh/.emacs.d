@@ -193,6 +193,7 @@
 
 ;; ElScreen related shortcuts
 (when (require 'elscreen nil 'noerror)
+  (define-key elscreen-map (kbd "C-z") elscreen-map)
 
   ;; Goto screens.
   (global-set-key (kbd "s-}") 'elscreen-next)
@@ -209,6 +210,35 @@
   ;; Display list of screens.
   (define-key elscreen-map (kbd ";")   'elscreen-display-screen-name-list)
   (define-key elscreen-map (kbd "C-;") 'elscreen-display-screen-name-list))
+
+(when (require 'perspective nil 'noerror)
+  (define-key persp-mode-map (kbd "C-z") perspective-map)
+
+  (define-key persp-mode-map (kbd "C-z s") 'persp-switch)
+  (define-key persp-mode-map (kbd "C-z C-s") 'persp-switch)
+  (define-key persp-mode-map (kbd "C-z b") 'persp-switch)
+  (define-key persp-mode-map (kbd "C-z C-b") 'persp-switch)
+
+  (define-key persp-mode-map (kbd "C-z c") 'persp-remove-buffer)
+  (define-key persp-mode-map (kbd "C-z C-c") 'persp-remove-buffer)
+
+  (define-key persp-mode-map (kbd "C-z k") 'persp-kill)
+  (define-key persp-mode-map (kbd "C-z C-k") 'persp-kill)
+
+  (define-key persp-mode-map (kbd "C-z r") 'persp-rename)
+  (define-key persp-mode-map (kbd "C-z C-r") 'persp-rename)
+
+  (define-key persp-mode-map (kbd "C-z a") 'persp-add-buffer)
+  (define-key persp-mode-map (kbd "C-z C-a") 'persp-add-buffer)
+
+  (define-key persp-mode-map (kbd "C-z i") 'persp-import)
+  (define-key persp-mode-map (kbd "C-z C-i") 'persp-import)
+
+  (define-key persp-mode-map (kbd "C-z n") 'persp-next)
+  (define-key persp-mode-map (kbd "C-z C-n") 'persp-next)
+  (define-key persp-mode-map (kbd "C-z p") 'persp-prev)
+  (define-key persp-mode-map (kbd "C-z C-p") 'persp-prev)
+)
 
 ;; Escreen customizations (via helpers.el).
 (when (require 'escreen nil 'noerror)

@@ -100,6 +100,8 @@
      ("Note" 110 "** %?
 " "~/.org-files/notes.org" "Notes"))))
  '(org-reverse-note-order t)
+ '(persp-modestring-dividers (quote (" [" "]" "|")))
+ '(persp-show-modestring t)
  '(php-mode-dot-property-warning t)
  '(projectile-completion-system (quote grizzl))
  '(projectile-enable-caching nil)
@@ -135,4 +137,5 @@
  '(mumamo-background-chunk-submode1 ((t nil)) t)
  '(mumamo-background-chunk-submode2 ((t nil)) t)
  '(mumamo-background-chunk-submode3 ((t nil)) t)
- '(mumamo-background-chunk-submode4 ((t nil)) t))
+ '(mumamo-background-chunk-submode4 ((t nil)) t)
+ '(persp-selected-face ((t (:foreground "royal blue" :weight bold)))))
