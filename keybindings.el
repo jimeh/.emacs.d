@@ -12,8 +12,7 @@
   (global-set-key (kbd "C-x C-m") 'smex)
   (global-set-key (kbd "C-c C-m") 'smex)
   (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-  (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-)
+  (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command))
 
 ;; Easier version of "C-x k" to kill buffer
 (global-set-key (kbd "C-x C-k") 'kill-buffer)
