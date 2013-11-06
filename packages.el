@@ -59,6 +59,7 @@
     markdown-mode
     minimap
     multiple-cursors
+    phi-search
     php-mode
     projectile
     puppet-mode

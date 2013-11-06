@@ -31,6 +31,11 @@
 ;; Duplicate line (via helpers.el)
 (global-set-key (kbd "C-x C-d") 'duplicate-current-line-or-region)
 
+;; phi-search (enables C-s and C-r searching with multiple-cursors-mode).
+(when (require 'phi-search nil 'noerror)
+  (global-set-key (kbd "C-s") 'phi-search)
+  (global-set-key (kbd "C-r") 'phi-search-backward))
+
 ;; Expand region
 (when (require 'expand-region nil 'noerror)
   (global-set-key (kbd "M-.") 'er/expand-region)
