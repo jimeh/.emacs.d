@@ -2,6 +2,7 @@
 ac-comphist.dat
 projectile-bookmarks.eld
 srecode-map.el
+.mc-lists.el
 auto-save-list/*
 el-get/*
 elpa/*
