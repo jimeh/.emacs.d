@@ -29,3 +29,6 @@
 
 ;; Modes
 (defalias 'sh 'shell-script-mode)
+
+;; Magit
+(defalias 'bl 'magit-blame-mode)
