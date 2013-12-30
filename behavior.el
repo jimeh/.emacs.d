@@ -30,7 +30,7 @@
 ;; Recentf
 (require 'recentf)
 (recentf-mode 1)
-(setq recentf-max-menu-items 50)
+(setq recentf-max-menu-items 100)
 
 ;; When using autopair, ECB and delete-selection-mode there's a weird conflict
 ;; which disables delete-selection-mode whenever you click on a directory or
