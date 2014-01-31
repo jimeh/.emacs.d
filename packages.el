@@ -53,6 +53,7 @@
     grizzl
     haml-mode
     highlight-indentation
+    ido-vertical-mode
     inf-ruby
     jade-mode
     less-css-mode
