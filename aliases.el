@@ -8,6 +8,7 @@
 (defalias 'al 'align-regexp)
 (defalias 'sl 'sort-lines)
 (defalias 'rr 'reverse-region)
+(defalias 'wc 'whitespace-cleanup)
 
 (defalias 'lml 'list-matching-lines)
 (defalias 'dml 'delete-matching-lines)
