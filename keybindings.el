@@ -210,6 +210,10 @@
   (define-key elscreen-map (kbd ";")   'elscreen-display-screen-name-list)
   (define-key elscreen-map (kbd "C-;") 'elscreen-display-screen-name-list))
 
+(when (require 'workgroups2 nil 'noerror)
+  (setq wg-prefix-key (kbd "C-z"))
+)
+
 (when (require 'perspective nil 'noerror)
   (define-key persp-mode-map (kbd "C-z") perspective-map)
 

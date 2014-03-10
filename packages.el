@@ -81,6 +81,7 @@
     twilight-anti-bright-theme
     twilight-bright-theme
     undo-tree
+    ;; workgroups2
     writegood-mode
     writeroom-mode
     yaml-mode
@@ -155,6 +156,10 @@
   ;; Load and setup Escreen
   (when (require 'escreen nil 'noerror)
     (escreen-install))
+
+  ;; Load and setup Workgroups2
+  (when (require 'workgroups2 nil 'noerror)
+    (workgroups-mode 1))
 
   ;; Load ruby-electric (autoload fails)
   (require 'ruby-electric)
