@@ -103,7 +103,6 @@
  '(persp-modestring-dividers (quote (" [" "]" "|")))
  '(persp-show-modestring t)
  '(php-mode-dot-property-warning t)
- '(projectile-completion-system (quote grizzl))
  '(projectile-enable-caching nil)
  '(projectile-globally-ignored-directories
    (quote

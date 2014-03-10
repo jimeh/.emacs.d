@@ -49,6 +49,11 @@
 (when (require 'grizzl nil 'noerror)
   (setq *grizzl-read-max-results* 20))
 
+;; Due to Grizzl crashing Emacs 24.4 nightlies in terminal, only use it in
+;; full GUI mode.
+(if gui-window-system
+    (setq projectile-completion-system 'grizzl))
+
 ;; Display ido results vertically, rather than horizontally.
 (when (require 'ido-vertical-mode nil 'noerror)
   (ido-vertical-mode 1))
