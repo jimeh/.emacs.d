@@ -6,6 +6,7 @@
 (defun customizations-for-sh-mode ()
   (interactive)
   (flyspell-prog-mode)
+  (flymake-shell-load)
   (linum-mode t)
   (fci-mode)
   (auto-complete-mode)
