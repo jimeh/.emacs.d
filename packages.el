@@ -134,7 +134,19 @@
         (:name tiling
                :type emacswiki
                :features tiling)
-        ))
+        (:name tree-mode
+               :type http
+               :url "http://www.emacswiki.org/emacs/download/tree-mode.el")
+        (:name windata
+               :type http
+               :url "http://www.emacswiki.org/emacs/download/windata.el")
+        (:name dirtree
+               :type github
+               :pkgname "zk/emacs-dirtree"
+               :load "dirtree.el")
+      )
+    )
+
 
 
 ;;
