@@ -122,11 +122,13 @@
 
 ;; multiple-cursors
 (when (require 'multiple-cursors nil 'noerror)
-  (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+  (global-set-key (kbd "C-x C-@") 'mc/edit-lines) ;; Terminal
+  (global-set-key (kbd "C-x C-SPC") 'mc/edit-lines) ;; GUI
   (global-set-key (kbd "C->") 'mc/mark-next-like-this)
   (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-  (global-set-key (kbd "M-<return>") 'set-rectangular-region-anchor))
+  (global-set-key (kbd "M-<return>") 'set-rectangular-region-anchor)
+)
 
 ;; projectile related keybindings
 (when (require 'projectile nil 'noerror)
