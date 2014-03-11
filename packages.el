@@ -37,7 +37,7 @@
     dash-at-point
     dired+
     ecb
-    ;;expand-region ;; broken with Emacs snapshots (30-10-2013)
+    expand-region
     feature-mode
     fill-column-indicator
     flymake-coffee
