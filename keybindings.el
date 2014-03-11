@@ -39,7 +39,8 @@
   (global-set-key (kbd "C-c h") 'helm-mini))
 
 (when (require 'helm-projectile nil 'noerror)
-  (global-set-key (kbd "C-x ;") 'helm-projectile))
+  (global-set-key (kbd "C-x ;") 'helm-projectile)
+  (global-set-key (kbd "C-x C-;") 'helm-projectile))
 
 ;; Expand region
 (when (require 'expand-region nil 'noerror)
