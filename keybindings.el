@@ -36,6 +36,10 @@
   (global-set-key (kbd "C-r") 'phi-search-backward))
 
 (when (require 'helm nil 'noerror)
+  (define-key helm-map (kbd "<up>") 'previous-history-element)
+  (define-key helm-map (kbd "<down>") 'next-history-element)
+  (define-key helm-map (kbd "M-p") 'helm-previous-source)
+  (define-key helm-map (kbd "M-n") 'helm-next-source)
   (global-set-key (kbd "C-c h") 'helm-mini))
 
 (when (require 'helm-projectile nil 'noerror)
