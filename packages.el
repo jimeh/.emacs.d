@@ -50,6 +50,7 @@
     flymake-shell
     full-ack
     gitconfig-mode
+    github-browse-file
     grizzl
     haml-mode
     helm
