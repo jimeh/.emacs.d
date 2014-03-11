@@ -35,6 +35,12 @@
   (global-set-key (kbd "C-s") 'phi-search)
   (global-set-key (kbd "C-r") 'phi-search-backward))
 
+(when (require 'helm nil 'noerror)
+  (global-set-key (kbd "C-c h") 'helm-mini))
+
+(when (require 'helm-projectile nil 'noerror)
+  (global-set-key (kbd "C-x ;") 'helm-projectile))
+
 ;; Expand region
 (when (require 'expand-region nil 'noerror)
   (global-set-key (kbd "M-.") 'er/expand-region)

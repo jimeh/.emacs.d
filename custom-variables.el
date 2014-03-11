@@ -54,6 +54,7 @@
  '(fringe-mode 0 nil (fringe))
  '(global-auto-revert-mode t)
  '(global-undo-tree-mode t)
+ '(helm-ag-source-type (quote file-line))
  '(history-length 500)
  '(ibuffer-formats
    (quote

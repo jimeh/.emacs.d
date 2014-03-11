@@ -52,6 +52,10 @@
     gitconfig-mode
     grizzl
     haml-mode
+    helm
+    helm-ack
+    helm-ag
+    helm-projectile
     highlight-indentation
     ido-vertical-mode
     inf-ruby
