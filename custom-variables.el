@@ -69,6 +69,7 @@
            (name 16 -1)
            " " filename))))
  '(icomplete-mode t)
+ '(imenu-auto-rescan t)
  '(isearch-resume-in-command-history t)
  '(ispell-program-name "aspell")
  '(magit-completing-read-function (quote magit-ido-completing-read))
