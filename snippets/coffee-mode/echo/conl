@@ -1,4 +1,4 @@
 # name: console.log ...
 # key: conl
 # --
-console.log $0
+console.log ${1:"${2:name}"}$0

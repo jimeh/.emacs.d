@@ -1,0 +1,5 @@
+# name: ruby ppd
+# key: ppd
+# --
+puts "\n>>>>>> ${1:name}:"
+pp $0

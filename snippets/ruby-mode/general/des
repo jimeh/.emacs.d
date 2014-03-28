@@ -1,4 +1,4 @@
 # name: describe '...'
 # key: des
 # --
-describe '$1'$0
+describe "$1"$0

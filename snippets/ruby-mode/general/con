@@ -1,4 +1,4 @@
 # name: context '...'
 # key: con
 # --
-context '$1'$0
+context "$1"$0
