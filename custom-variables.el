@@ -115,6 +115,7 @@
  '(scss-compile-at-save nil)
  '(search-exit-option nil)
  '(smooth-scroll-margin 6)
+ '(sort-fold-case t)
  '(speedbar-show-unknown-files t)
  '(standard-indent 2)
  '(tabbar-mode nil)
