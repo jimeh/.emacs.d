@@ -65,6 +65,7 @@
     magit
     markdown-mode
     minimap
+    move-text
     multiple-cursors
     phi-search
     php-mode

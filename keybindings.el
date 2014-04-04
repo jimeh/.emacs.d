@@ -162,6 +162,12 @@
   (global-set-key (kbd "C-c [") 'textmate-shift-left)
   (global-set-key (kbd "C-c ]") 'textmate-shift-right))
 
+;; move-text
+(when (require 'move-text nil 'noerror)
+  ;; Must be set after textmate is required.
+  (define-key global-map (kbd "M-p") 'move-text-up)
+  (define-key global-map (kbd "M-n") 'move-text-down))
+
 ;; Set/increase/decrease transparency (via helpers.el)
 (global-set-key (kbd "C-M-|") 'transparency-set-value)
 (global-set-key (kbd "C-M-<") 'transparency-increase)
