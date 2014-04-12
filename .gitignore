@@ -9,6 +9,8 @@ elpa/*
 sessions/*
 tramp
 url/*
+hgs-cache
+projectile.cache
 
 # Bittorrent Sync related
 .AppleDouble
