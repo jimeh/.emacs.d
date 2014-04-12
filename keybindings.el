@@ -139,7 +139,9 @@
   (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
   (global-set-key (kbd "M-<return>") 'set-rectangular-region-anchor)
-)
+  ;; Make alt-<click> add additional cursors
+  (global-unset-key (kbd "M-<down-mouse-1>")) ;; must unset key first
+  (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click))
 
 ;; projectile related keybindings
 (when (require 'projectile nil 'noerror)
