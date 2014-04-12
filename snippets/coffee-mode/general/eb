@@ -1,0 +1,4 @@
+# name: expect(...).toEqual(...)
+# key: eb
+# --
+expect($1).toBe($0)

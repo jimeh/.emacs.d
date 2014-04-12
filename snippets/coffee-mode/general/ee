@@ -1,0 +1,4 @@
+# name: expect(...).toEqual(...)
+# key: ee
+# --
+expect($1).toEqual($0)
