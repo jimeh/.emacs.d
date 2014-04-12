@@ -56,6 +56,8 @@
     helm
     helm-ack
     helm-ag
+    helm-github-stars
+    helm-open-github
     helm-projectile
     highlight-indentation
     ido-vertical-mode
