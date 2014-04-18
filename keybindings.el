@@ -6,6 +6,9 @@
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 (global-set-key (kbd "C-c C-m") 'execute-extended-command)
 
+;; Enable dabbrev-expand via custom keybinding.
+(global-set-key (kbd "C-c M-/") 'dabbrev-expand)
+
 ;; If Smex is available, use it instead of extended-command
 (when (require 'smex nil 'noerror)
   (global-set-key (kbd "M-x") 'smex)
@@ -81,6 +84,18 @@
   (global-set-key (kbd "M-.") 'er/expand-region)
   (global-set-key (kbd "M-,") 'er/contract-region))
 
+;; multiple-cursors
+(when (require 'multiple-cursors nil 'noerror)
+  (global-set-key (kbd "C-x C-@") 'mc/edit-lines) ;; Terminal
+  (global-set-key (kbd "C-x C-SPC") 'mc/edit-lines) ;; GUI
+  (global-set-key (kbd "M-/") 'mc/mark-next-like-this)
+  (global-set-key (kbd "M-m") 'mc/mark-previous-like-this)
+  (global-set-key (kbd "C-c M-m") 'mc/mark-all-like-this)
+  (global-set-key (kbd "M-RET") 'set-rectangular-region-anchor)
+  ;; Make alt-<click> add additional cursors
+  (global-unset-key (kbd "M-<down-mouse-1>")) ;; must unset key first
+  (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click))
+
 ;; Browse the kill-ring.
 (when (require 'browse-kill-ring nil 'noerror)
   (global-set-key (kbd "C-x C-y") 'browse-kill-ring))
@@ -136,18 +151,6 @@
   (eval-after-load "ace-jump-mode" '(ace-jump-mode-enable-mark-sync))
   (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
   (define-key global-map (kbd "C-x C-j") 'ace-jump-mode-pop-mark))
-
-;; multiple-cursors
-(when (require 'multiple-cursors nil 'noerror)
-  (global-set-key (kbd "C-x C-@") 'mc/edit-lines) ;; Terminal
-  (global-set-key (kbd "C-x C-SPC") 'mc/edit-lines) ;; GUI
-  (global-set-key (kbd "C->") 'mc/mark-next-like-this)
-  (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-  (global-set-key (kbd "M-<return>") 'set-rectangular-region-anchor)
-  ;; Make alt-<click> add additional cursors
-  (global-unset-key (kbd "M-<down-mouse-1>")) ;; must unset key first
-  (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click))
 
 ;; projectile related keybindings
 (when (require 'projectile nil 'noerror)
