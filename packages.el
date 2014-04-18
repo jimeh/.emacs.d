@@ -30,7 +30,6 @@
     ace-jump-mode
     ack-and-a-half
     auto-complete
-    autopair
     browse-kill-ring
     buffer-move
     coffee-mode
@@ -78,10 +77,10 @@
     rhtml-mode
     rubocop
     ruby-compilation
-    ruby-electric
     ruby-interpolation
     sass-mode
     scss-mode
+    smartparens
     smex
     smooth-scrolling
     stylus-mode
@@ -181,8 +180,10 @@
   (when (require 'workgroups2 nil 'noerror)
     (workgroups-mode 1))
 
-  ;; Load ruby-electric (autoload fails)
-  (require 'ruby-electric)
+  ;; smartparens
+  (when (require 'smartparens nil 'noerror)
+    (require 'smartparens-config)
+    (smartparens-global-mode))
 
   ;; Load Undo-Tree
   (require 'undo-tree)

@@ -14,11 +14,6 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-;; Autopair mode. I'm sorry, electric-pair mode just isn't as good, mainly
-;; cause it can't wrap the region in the pair-character you type.
-(when (require 'autopair nil 'noerror)
-  (autopair-global-mode))
-
 ;; Enable Projectile global mode.
 (when (require 'projectile nil 'noerror)
   (projectile-global-mode))
@@ -32,13 +27,8 @@
 (recentf-mode 1)
 (setq recentf-max-menu-items 100)
 
-;; When using autopair, ECB and delete-selection-mode there's a weird conflict
-;; which disables delete-selection-mode whenever you click on a directory or
-;; file in ECB's tree buffer. For that reason, and for it's neat rectangle
-;; selection feature we're using cua-mode as it's delete-selection-ish feature
-;; is not effected by the issue.
-(setq cua-rectangle-mark-key (kbd "M-RET"))
-(cua-mode t)
+;; Enable delete-selection-mode
+(delete-selection-mode t)
 
 ;; Disable cua-mode's fancy keys like C-z, C-v, etc. cause we use them for
 ;; other things, and we already have good keybindings for cut, copy, paste and

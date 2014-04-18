@@ -17,10 +17,6 @@
 (defun customizations-for-ruby-mode ()
   (interactive)
 
-  (when (require 'ruby-electric nil 'noerror)
-    (ruby-electric-mode t)
-    (setq ruby-electric-expand-delimiters-list (quote (124))))
-
   (when (require 'ruby-compilation nil 'noerror)
     (define-key ruby-mode-map (kbd "s-r") 'ruby-compilation-this-buffer)
     (define-key ruby-mode-map (kbd "C-c C-r") 'ruby-compilation-this-buffer))

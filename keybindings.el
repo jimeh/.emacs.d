@@ -176,6 +176,14 @@
   (define-key global-map (kbd "M-p") 'move-text-up)
   (define-key global-map (kbd "M-n") 'move-text-down))
 
+;; smartparens
+(when (require 'smartparens nil 'noerror)
+  ;; Must be set after textmate is required.
+  (define-key sp-keymap (kbd "M-F") 'sp-forward-symbol)
+  (define-key sp-keymap (kbd "M-B") 'sp-backward-symbol)
+  (define-key sp-keymap (kbd "C-M-f") 'sp-forward-sexp)
+  (define-key sp-keymap (kbd "C-M-b") 'sp-backward-sexp))
+
 ;; Set/increase/decrease transparency (via helpers.el)
 (global-set-key (kbd "C-M-|") 'transparency-set-value)
 (global-set-key (kbd "C-M-<") 'transparency-increase)
