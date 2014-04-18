@@ -30,6 +30,30 @@
 ;; Duplicate line (via helpers.el)
 (global-set-key (kbd "C-x C-d") 'duplicate-current-line-or-region)
 
+;; Window switching (via helpers.el).
+(global-set-key (kbd "C-x i")   'other-window-reverse)
+(global-set-key (kbd "C-x C-o") 'other-window)
+(global-set-key (kbd "C-x C-i") 'other-window-reverse)
+
+;; Kill-Ring related (via helpers.el).
+(global-set-key (kbd "M-Y") 'yank-pop-forwards)
+
+;; Align to equal signs (via helpers.el).
+(global-set-key (kbd "C-x a =") 'align-region-to-equals)
+(global-set-key (kbd "M-]") 'align-region-to-equals)
+(global-set-key (kbd "C-x a {") 'align-region-to-opening-brace)
+
+;; align-regexp
+(global-set-key (kbd "C-c C-a") 'align-regexp)
+;; (global-set-key (kbd "C-c \\") 'align-regexp) ;; keep till I get used to C-c C-a
+
+;; Toggle auto-fill-mode.
+(global-set-key (kbd "C-c q") 'auto-fill-mode)
+
+;; Comment or uncomment line
+(global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
+(global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
+
 ;; phi-search (enables C-s and C-r searching with multiple-cursors-mode).
 (when (require 'phi-search nil 'noerror)
   (global-set-key (kbd "C-s") 'phi-search)
@@ -57,33 +81,9 @@
   (global-set-key (kbd "M-.") 'er/expand-region)
   (global-set-key (kbd "M-,") 'er/contract-region))
 
-;; Window switching (via helpers.el).
-(global-set-key (kbd "C-x i")   'other-window-reverse)
-(global-set-key (kbd "C-x C-o") 'other-window)
-(global-set-key (kbd "C-x C-i") 'other-window-reverse)
-
-;; Kill-Ring related (via helpers.el).
-(global-set-key (kbd "M-Y") 'yank-pop-forwards)
-
 ;; Browse the kill-ring.
 (when (require 'browse-kill-ring nil 'noerror)
   (global-set-key (kbd "C-x C-y") 'browse-kill-ring))
-
-;; Align to equal signs (via helpers.el).
-(global-set-key (kbd "C-x a =") 'align-region-to-equals)
-(global-set-key (kbd "M-]") 'align-region-to-equals)
-(global-set-key (kbd "C-x a {") 'align-region-to-opening-brace)
-
-;; align-regexp
-(global-set-key (kbd "C-c C-a") 'align-regexp)
-(global-set-key (kbd "C-c \\") 'align-regexp) ;; keep till I get used to C-c C-a
-
-;; Toggle auto-fill-mode.
-(global-set-key (kbd "C-c q") 'auto-fill-mode)
-
-;; Comment or uncomment line
-(global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
-(global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
 
 ;; Undo/Redo
 (when (require 'undo-tree nil 'noerror)
