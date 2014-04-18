@@ -15,7 +15,7 @@
 (package-initialize)
 
 ;; Load el-get
-(add-to-list 'load-path (config-path "el-get/el-get"))
+(add-to-list 'load-path (get-config-path "el-get/el-get"))
 (require 'el-get)
 
 

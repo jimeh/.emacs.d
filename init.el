@@ -11,25 +11,25 @@
       (if (or (getenv "EMACS_GUI_SERVER") window-system) t 'nil))
 
 ;; Helper function for config path
-(defun config-path(path)
+(defun get-config-path(path)
   "Appends argument at the end of emacs-config-dir using expand-file-name"
   (expand-file-name path emacs-config-dir))
 
 ;; Load various config files
-(load-file (config-path "env.el"))
-(load-file (config-path "packages.el"))
-(load-file (config-path "helpers.el"))
-(load-file (config-path "mode-customizations.el"))
-(load-file (config-path "vendor.el"))
-(load-file (config-path "behavior.el"))
-(load-file (config-path "appearance.el"))
-(load-file (config-path "keybindings.el"))
-(load-file (config-path "aliases.el"))
-(load-file (config-path "remember.el"))
-(load-file (config-path "project-definitions.el"))
+(load-file (get-config-path "env.el"))
+(load-file (get-config-path "packages.el"))
+(load-file (get-config-path "helpers.el"))
+(load-file (get-config-path "mode-customizations.el"))
+(load-file (get-config-path "vendor.el"))
+(load-file (get-config-path "behavior.el"))
+(load-file (get-config-path "appearance.el"))
+(load-file (get-config-path "keybindings.el"))
+(load-file (get-config-path "aliases.el"))
+(load-file (get-config-path "remember.el"))
+(load-file (get-config-path "project-definitions.el"))
 
 ;; Custom variables file
-(setq custom-file (config-path "custom-variables.el"))
+(setq custom-file (get-config-path "custom-variables.el"))
 (load-file custom-file)
 
 ;; Initialize packages in packages.el
