@@ -117,6 +117,7 @@
  '(search-exit-option nil)
  '(smooth-scroll-margin 6)
  '(sort-fold-case t)
+ '(sp-autoescape-string-quote nil)
  '(speedbar-show-unknown-files t)
  '(standard-indent 2)
  '(tabbar-mode nil)
