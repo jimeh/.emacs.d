@@ -54,6 +54,7 @@
  '(global-auto-revert-mode t)
  '(global-undo-tree-mode t)
  '(helm-ag-source-type (quote file-line))
+ '(helm-open-github-commit-limit 10000)
  '(history-length 500)
  '(ibuffer-formats
    (quote
@@ -116,7 +117,7 @@
  '(scss-compile-at-save nil)
  '(search-exit-option nil)
  '(smooth-scroll-margin 6)
- '(sort-fold-case t)
+ '(sort-fold-case t t)
  '(sp-autoescape-string-quote nil)
  '(speedbar-show-unknown-files t)
  '(standard-indent 2)
