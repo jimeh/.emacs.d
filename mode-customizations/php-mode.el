@@ -9,7 +9,7 @@
   (auto-complete-mode)
   (subword-mode)
   (setq php-basic-offset 2)
-  (setq tab-width 2)
+  (setq tab-width 4)
   (setq highlight-indentation-offset 2)
   (highlight-indentation-mode)
   (highlight-indentation-current-column-mode))
