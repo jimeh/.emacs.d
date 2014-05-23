@@ -1,0 +1,4 @@
+# name: expect(...).to be ...
+# key: eb
+# --
+expect($1).to be $0
