@@ -31,6 +31,7 @@
 
   (when (require 'projectile nil 'noerror)
     (define-key ruby-mode-map (kbd "C-x t") 'projectile-find-test-file)
+    (define-key inf-ruby-minor-mode-map (kbd "C-c C-b") 'projectile-ibuffer)
     (define-key inf-ruby-minor-mode-map (kbd "C-c C-s")
       'projectile-switch-project))
 

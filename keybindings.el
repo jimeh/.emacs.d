@@ -154,6 +154,7 @@
 
 ;; projectile related keybindings
 (when (require 'projectile nil 'noerror)
+  (global-set-key (kbd "C-c C-b") 'projectile-ibuffer)
   (global-set-key (kbd "C-x C-t") 'projectile-find-file)
   (global-set-key (kbd "C-x t") 'projectile-find-test-file)
   (global-set-key (kbd "C-x C-v") 'projectile-switch-to-buffer)
