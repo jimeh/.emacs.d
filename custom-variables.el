@@ -111,6 +111,7 @@
    (quote
     (".idea" ".eunit" ".git" ".hg" ".fslckout" ".bzr" ".svn" "_darcs" "vendor/bundle" "vendor/ruby" "coverage" "docs" "doc" "log" "logs" "tmp")))
  '(projectile-globally-ignored-files (quote ("TAGS" "*.log")))
+ '(projectile-sort-order (quote recently-active))
  '(ruby-use-encoding-map nil)
  '(safe-local-variable-values (quote ((eval rainbow-mode 1))))
  '(scss-compile-at-save nil)
