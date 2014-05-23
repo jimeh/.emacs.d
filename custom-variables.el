@@ -113,7 +113,6 @@
  '(projectile-globally-ignored-files (quote ("TAGS" "*.log")))
  '(ruby-use-encoding-map nil)
  '(safe-local-variable-values (quote ((eval rainbow-mode 1))))
- '(scroll-margin 4)
  '(scss-compile-at-save nil)
  '(search-exit-option nil)
  '(smooth-scroll-margin 6)

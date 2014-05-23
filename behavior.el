@@ -60,10 +60,9 @@
 (setq redisplay-dont-pause t
       mouse-wheel-scroll-amount '(1 ((shift) . 10)) ;; one line at a time
       mouse-wheel-follow-mouse 't ;; scroll window under mouse
-      scroll-margin 3
+      scroll-margin 4
       scroll-step 1
-      scroll-conservatively 10000
-      scroll-preserve-screen-position 1)
+      scroll-conservatively 10000)
 
 ;; Enable mouse support when running in a console
 (unless window-system
