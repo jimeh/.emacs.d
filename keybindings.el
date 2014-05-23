@@ -159,12 +159,6 @@
   (global-set-key (kbd "C-x C-v") 'projectile-switch-to-buffer)
   (global-set-key (kbd "C-c C-s") 'projectile-switch-project))
 
-;; eproject related keybindings
-(when (require 'eproject nil 'noerror)
-  (global-set-key (kbd "C-c C-b") 'eproject-ibuffer)
-  (global-set-key (kbd "C-x p b") 'eproject-ibuffer)
-  (global-set-key (kbd "C-x p t") 'eproject-todo))
-
 ;; Textmate-mode related keybindings
 (when (require 'textmate nil 'noerror)
   (global-set-key (kbd "C-t") 'textmate-goto-symbol)

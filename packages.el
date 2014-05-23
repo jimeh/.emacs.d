@@ -106,12 +106,13 @@
 
 ;; Custom packages to install with el-get
 (setq el-get-sources
-      '((:name eproject
-               :type git
-               :url "https://github.com/jrockway/eproject.git"
-               :post-init (progn
-                            (require 'eproject)
-                            (require 'eproject-extras)))
+      '(
+        ;; (:name eproject
+        ;;        :type git
+        ;;        :url "https://github.com/jrockway/eproject.git"
+        ;;        :post-init (progn
+        ;;                     (require 'eproject)
+        ;;                     (require 'eproject-extras)))
         (:name escreen
                :description "Emacs window session manager"
                :type github

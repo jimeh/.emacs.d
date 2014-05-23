@@ -34,9 +34,6 @@
     (define-key inf-ruby-minor-mode-map (kbd "C-c C-s")
       'projectile-switch-project))
 
-  (when (require 'eproject nil 'noerror)
-    (define-key ruby-mode-map (kbd "C-c C-b") 'eproject-ibuffer))
-
   (linum-mode t)
   (fci-mode)
   (flyspell-prog-mode)
