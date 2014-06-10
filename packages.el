@@ -72,6 +72,7 @@
     php-mode
     projectile
     puppet-mode
+    pt
     rainbow-mode
     restclient
     rhtml-mode
