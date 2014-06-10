@@ -26,6 +26,7 @@
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 100)
+(setq recentf-exclude '("\\.git.*" "\\.hg.*" "\\.svn.*"))
 
 ;; Enable delete-selection-mode
 (delete-selection-mode t)
