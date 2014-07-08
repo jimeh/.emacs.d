@@ -50,6 +50,10 @@
     full-ack
     gitconfig-mode
     github-browse-file
+    go-autocomplete
+    go-mode
+    go-projectile
+    go-snippets
     grizzl
     haml-mode
     helm
@@ -171,7 +175,13 @@
     (if window-system (ecb-activate)))
 
   ;; Load Auto-Complete
-  (require 'auto-complete)
+  (when (require 'auto-complete nil 'noerror)
+    (require 'auto-complete-config)
+    (ac-config-default)
+    (ac-flyspell-workaround)
+
+    ;; load go-autocomplete
+    (require 'go-autocomplete nil 'noerror))
 
   ;; Load browse-kill-ring
   (require 'browse-kill-ring)
@@ -197,6 +207,9 @@
 
   ;; Load full-ack
   (require 'full-ack)
+
+  ;; load go-projectile
+  (require 'go-projectile nil 'noerror)
 
   ;; Load yasnippet
   (when (require 'yasnippet nil 'noerror)
