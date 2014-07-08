@@ -68,12 +68,14 @@
     minimap
     move-text
     multiple-cursors
+    nvm
     phi-search
     php-mode
     projectile
     puppet-mode
     pt
     rainbow-mode
+    rbenv
     restclient
     rhtml-mode
     rubocop

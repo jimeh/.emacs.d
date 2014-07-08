@@ -28,6 +28,10 @@
 (load-file (get-config-path "remember.el"))
 (load-file (get-config-path "project-definitions.el"))
 
+;; Load runtime specific setup files
+(load-file (get-config-path "runtimes/ruby.el"))
+(load-file (get-config-path "runtimes/nodejs.el"))
+
 ;; Custom variables file
 (setq custom-file (get-config-path "custom-variables.el"))
 (load-file custom-file)
