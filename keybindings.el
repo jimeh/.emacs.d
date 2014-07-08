@@ -57,6 +57,11 @@
 (global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
 
+(when (require 'auto-complete nil 'noerror)
+  (define-key ac-completing-map (kbd "C-s") 'ac-isearch)
+  (define-key ac-completing-map (kbd "C-n") 'ac-next)
+  (define-key ac-completing-map (kbd "C-p") 'ac-previous))
+
 ;; phi-search (enables C-s and C-r searching with multiple-cursors-mode).
 (when (require 'phi-search nil 'noerror)
   (global-set-key (kbd "C-s") 'phi-search)
