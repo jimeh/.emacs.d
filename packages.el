@@ -39,14 +39,10 @@
     expand-region
     feature-mode
     fill-column-indicator
-    flymake-coffee
+    flycheck
     flymake-css
     flymake-cursor
-    flymake-haml
     flymake-php
-    flymake-ruby
-    flymake-sass
-    flymake-shell
     full-ack
     gitconfig-mode
     github-browse-file

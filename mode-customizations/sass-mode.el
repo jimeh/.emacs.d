@@ -1,7 +1,7 @@
 (defun customizations-for-sass-mode ()
   (interactive)
   (flyspell-prog-mode)
-  (flymake-sass-load)
+  (flycheck-mode)
   (linum-mode t)
   (fci-mode)
   (auto-complete-mode)

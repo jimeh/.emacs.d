@@ -2,6 +2,7 @@
   (interactive)
   (setq js-indent-level 2)
   (flyspell-prog-mode)
+  (flycheck-mode)
   (linum-mode t)
   (fci-mode)
   (auto-complete-mode)

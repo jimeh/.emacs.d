@@ -1,6 +1,7 @@
 (defun customizations-for-makefile-mode ()
   (interactive)
   (flyspell-prog-mode)
+  (flycheck-mode)
   (linum-mode t)
   (fci-mode)
   (auto-complete-mode)

@@ -41,7 +41,7 @@
   (highlight-indentation-mode)
   (highlight-indentation-current-column-mode)
   (hs-minor-mode 1)
-  (flymake-ruby-load)
+  (flycheck-mode)
   (subword-mode)
   (setq ruby-deep-arglist nil)
   (setq ruby-deep-indent-paren nil)

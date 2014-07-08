@@ -4,7 +4,7 @@
 (defun customizations-for-coffee-mode ()
   (interactive)
   (flyspell-prog-mode)
-  (flymake-coffee-load)
+  (flycheck-mode)
   (linum-mode t)
   (fci-mode)
   (auto-complete-mode)
