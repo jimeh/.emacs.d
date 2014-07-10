@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# contributer: Yusuke Tsutsumi <tsutsumi.yusuke@gmail.com>
+# name: bench
+# key: bench
+# description: add a benchmark method
+# --
+func Benchmark${1:Feature}(b *testing.B) {
+	$0
+}

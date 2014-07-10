@@ -1,4 +1,3 @@
-# name: interface
 # key: interface
 # --
 type ${1:InterfaceName} interface {

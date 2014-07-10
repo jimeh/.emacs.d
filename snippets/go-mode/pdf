@@ -1,0 +1,3 @@
+# key: pdf
+# --
+fmt.Printf($0)

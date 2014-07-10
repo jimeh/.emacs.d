@@ -1,4 +1,3 @@
-# name: pd
 # key: pd
 # --
-fmt.Printf($0)
+fmt.Println($0)

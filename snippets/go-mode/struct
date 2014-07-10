@@ -1,4 +1,3 @@
-# name: struct
 # key: struct
 # --
 type ${1:StructName} struct {
