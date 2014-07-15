@@ -58,6 +58,8 @@
 (global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
 
 (when (require 'auto-complete nil 'noerror)
+  (define-key ac-completing-map (kbd "RET") 'ac-complete)
+  (define-key ac-completing-map (kbd "C-m") 'ac-complete)
   (define-key ac-completing-map (kbd "C-s") 'ac-isearch)
   (define-key ac-completing-map (kbd "C-n") 'ac-next)
   (define-key ac-completing-map (kbd "C-p") 'ac-previous))
