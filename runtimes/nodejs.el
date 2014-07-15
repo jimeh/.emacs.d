@@ -1,4 +1,7 @@
-;; node.js
+;;
+;; Node.js setup
+;;
+
 (setq exec-path (cons "~/.nvm/v0.10.24/bin" exec-path))
 ;; (setenv "PATH" (concat "~/.nvm/v0.10.24/bin:" (getenv "PATH")))
 
