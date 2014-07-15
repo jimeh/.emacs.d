@@ -68,11 +68,12 @@
 
 ;; Customize Whitespace Characters
 ;;  - Newline: \u00AC = ¬
-;;  - Tab:     \u25B6 = ▶
-;;             \u25B8 = ▸
+;;  - Tab:     \u2192 = →
+;;             \u00BB = »
+;;             \u25B6 = ▶
 (setq whitespace-display-mappings
       (quote ((newline-mark ?\n [?\u00AC ?\n] [?$ ?\n])
-              (tab-mark     ?\t [?\u25B6 ?\t] [?\u00BB ?\t] [?\\ ?\t]))))
+              (tab-mark     ?\t [?\u2192 ?\t] [?\u00BB ?\t] [?\\ ?\t]))))
 
 (setq whitespace-style
       (quote (face tabs trailing space-before-tab newline
