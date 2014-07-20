@@ -33,6 +33,7 @@
      ("~/.emacs.d" ".emacs.d")
      ("~/.dotfiles" ".dotfiles")
      ("~/Projects/fitzdares" "fitzdares")
+     ("~/.go" ".go")
      ("~/src" "src")
      ("~/Sites" "Sites")
      ("~" "~")
