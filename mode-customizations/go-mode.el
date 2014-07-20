@@ -7,10 +7,7 @@
   (auto-complete-mode)
   (whitespace-mode)
   (subword-mode)
-  (setq tab-width 4)
-  (setq highlight-indentation-offset 4)
-  (highlight-indentation-mode)
-  (highlight-indentation-current-column-mode))
+  (setq tab-width 4))
 
 (add-hook 'go-mode-hook 'customizations-for-go-mode)
 (add-hook 'before-save-hook #'gofmt-before-save)
