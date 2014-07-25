@@ -52,7 +52,6 @@
  '(fci-rule-width 1)
  '(fill-column 78)
  '(flycheck-completion-system (quote ido))
- '(flycheck-rubocop-lint-only t)
  '(global-auto-revert-mode t)
  '(global-undo-tree-mode t)
  '(helm-ag-source-type (quote file-line))
