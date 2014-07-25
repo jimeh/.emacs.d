@@ -31,7 +31,6 @@
 ;; Load runtime specific setup files
 (load-file (get-config-path "runtimes/ruby.el"))
 (load-file (get-config-path "runtimes/nodejs.el"))
-(load-file (get-config-path "runtimes/golang.el"))
 
 ;; Custom variables file
 (setq custom-file (get-config-path "custom-variables.el"))

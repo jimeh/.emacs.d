@@ -36,6 +36,7 @@
     dash-at-point
     dired+
     ecb
+    exec-path-from-shell
     expand-region
     feature-mode
     fill-column-indicator
@@ -169,6 +170,10 @@
   (when (require 'ecb nil 'noerror)
     (setq stack-trace-on-error t) ;; hack to fix a load-error
     (if window-system (ecb-activate)))
+
+  (when (require 'exec-path-from-shell)
+    (when (memq window-system '(mac ns))
+      (exec-path-from-shell-initialize)))
 
   ;; Load Auto-Complete
   (when (require 'auto-complete nil 'noerror)
