@@ -7,7 +7,9 @@
   (auto-complete-mode)
   (whitespace-mode)
   (subword-mode)
-  (setq tab-width 4))
+  (setq tab-width 4)
+  (define-key go-mode-map (kbd "RET") 'electric-newline-and-maybe-indent)
+)
 
 (add-hook 'go-mode-hook 'customizations-for-go-mode)
 (add-hook 'before-save-hook #'gofmt-before-save)
