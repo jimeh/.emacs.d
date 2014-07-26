@@ -47,6 +47,11 @@
 ;; use a eval-after-load hook to set it to "dynamic".
 (eval-after-load "linum+" '(progn (setq linum-format 'dynamic)))
 
+;; Enable git-gutter-fringe mode.
+;; (if gui-window-system
+;;     (when (require 'git-gutter-fringe nil 'noerror)
+;;       (global-git-gutter-mode)))
+
 ;; Display up to 20 results in when using grizzl completion.
 (when (require 'grizzl nil 'noerror)
   (setq *grizzl-read-max-results* 20))

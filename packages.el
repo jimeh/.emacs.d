@@ -44,7 +44,10 @@
     flymake-css
     flymake-cursor
     flymake-php
+    ;; fringe-helper
     full-ack
+    ;; git-gutter
+    ;; git-gutter-fringe
     gitconfig-mode
     github-browse-file
     go-autocomplete
