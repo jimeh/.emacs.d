@@ -99,6 +99,7 @@
     writegood-mode
     writeroom-mode
     yaml-mode
+    yascroll
     yasnippet
     zencoding-mode
     )

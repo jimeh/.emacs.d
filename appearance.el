@@ -52,6 +52,11 @@
 ;;     (when (require 'git-gutter-fringe nil 'noerror)
 ;;       (global-git-gutter-mode)))
 
+;; Enable Yascroll
+(if gui-window-system
+    (when (require 'yascroll nil 'noerror)
+      (global-yascroll-bar-mode 1)))
+
 ;; Display up to 20 results in when using grizzl completion.
 (when (require 'grizzl nil 'noerror)
   (setq *grizzl-read-max-results* 20))
