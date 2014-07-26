@@ -8,7 +8,7 @@
   (whitespace-mode)
   (subword-mode)
   (setq tab-width 4)
-  (define-key go-mode-map (kbd "RET") 'electric-newline-and-maybe-indent)
+  (define-key go-mode-map (kbd "RET") 'newline-and-indent)
 )
 
 (add-hook 'go-mode-hook 'customizations-for-go-mode)
