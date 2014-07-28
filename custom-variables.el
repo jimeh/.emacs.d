@@ -48,6 +48,7 @@
  '(elscreen-tab-display-kill-screen nil)
  '(eproject-completing-read-function (quote eproject--ido-completing-read))
  '(evil-default-cursor (quote (t)))
+ '(exec-path-from-shell-variables (quote ("PATH" "MANPATH" "GOPATH")))
  '(fci-handle-truncate-lines nil)
  '(fci-rule-width 1)
  '(fill-column 78)
