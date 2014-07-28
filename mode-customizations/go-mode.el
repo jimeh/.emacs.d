@@ -12,4 +12,6 @@
 )
 
 (add-hook 'go-mode-hook 'customizations-for-go-mode)
+
+(setq gofmt-command "goimports")
 (add-hook 'before-save-hook #'gofmt-before-save)
