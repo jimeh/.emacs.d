@@ -48,6 +48,7 @@
     full-ack
     ;; git-gutter
     ;; git-gutter-fringe
+    git-timemachine
     gitconfig-mode
     github-browse-file
     go-autocomplete
