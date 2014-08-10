@@ -31,13 +31,6 @@
 ;; Enable delete-selection-mode
 (delete-selection-mode t)
 
-;; Disable cua-mode's fancy keys like C-z, C-v, etc. cause we use them for
-;; other things, and we already have good keybindings for cut, copy, paste and
-;; undo.
-(setq cua-enable-cua-keys nil
-      cua-remap-control-v nil
-      cua-remap-control-z nil)
-
 ;; Disable ECB's pre-scanning for empty directories, as it for some reason
 ;; kept trying scan files as if they were directories, causing constant error
 ;; messages in the mini-buffer.
