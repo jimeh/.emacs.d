@@ -4,6 +4,7 @@
   (flyspell-prog-mode)
   (linum-mode t)
   (fci-mode)
+  (hs-minor-mode 1)
   (auto-complete-mode))
 
 (add-hook 'emacs-lisp-mode-hook 'customizations-for-emacs-lisp-mode)

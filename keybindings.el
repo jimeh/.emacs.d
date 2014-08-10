@@ -57,6 +57,10 @@
 (global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
 
+;; Custom HideShow toggles (via helpers.el)
+(global-set-key (kbd "C-=") 'toggle-selective-display)
+(global-set-key (kbd "C-\\") 'toggle-hiding)
+
 (when (require 'auto-complete nil 'noerror)
   (define-key ac-completing-map (kbd "RET") 'ac-complete)
   (define-key ac-completing-map (kbd "C-m") 'ac-complete)

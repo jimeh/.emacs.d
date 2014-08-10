@@ -49,7 +49,7 @@
   (setq ruby-use-encoding-map nil)
   (setq whitespace-action (quote (auto-cleanup)))
   (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
-  (define-key ruby-mode-map (kbd "C-c C-h") 'hs-toggle-hiding)
+  (define-key ruby-mode-map (kbd "C-c C-h") 'toggle-hiding)
   (define-key ruby-mode-map (kbd "C-c C-l") 'goto-line)
 )
 
@@ -57,9 +57,11 @@
 
 ;; Set up hs-mode (HideShow) for Ruby
 (add-to-list 'hs-special-modes-alist
-             '(ruby-mode
-               "\\(def \\|class\\|module\\|do\\)" "end" "#"
-               (lambda (arg) (ruby-end-of-block)) nil))
+             `(ruby-mode
+               ,(rx (or "def" "class" "module" "{" "[")) ; Block start
+               ,(rx (or "}" "]" "end"))                  ; Block end
+               ,(rx (or "#" "=begin"))                   ; Comment start
+               ruby-forward-sexp nil))
 
 ;; Workaround for missing method in ruby-mode.el
 ;; See: https://gist.github.com/1213051

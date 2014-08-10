@@ -197,3 +197,24 @@ there's a region, all lines that region covers will be duplicated."
           (rename-buffer new-name)
           (set-visited-file-name new-name)
           (set-buffer-modified-p nil)))))))
+
+
+;;
+;; HideShow mode helpers
+;; - from: http://www.emacswiki.org/emacs/HideShow
+;;
+(defun toggle-selective-display (column)
+  (interactive "P")
+  (set-selective-display
+   (or column
+       (unless selective-display
+         (1+ (current-column))))))
+
+(defun toggle-hiding (column)
+  (interactive "P")
+  (if hs-minor-mode
+      (if (condition-case nil
+              (hs-toggle-hiding)
+            (error t))
+          (hs-show-all))
+    (toggle-selective-display column)))

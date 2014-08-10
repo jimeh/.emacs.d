@@ -9,6 +9,7 @@
   (flycheck-mode)
   (linum-mode t)
   (fci-mode)
+  (hs-minor-mode 1)
   (auto-complete-mode)
   (whitespace-mode)
   (subword-mode)

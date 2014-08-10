@@ -3,6 +3,7 @@
   (flyspell-prog-mode)
   (linum-mode t)
   (fci-mode)
+  (hs-minor-mode 1)
   (auto-complete-mode)
   (subword-mode)
   (setq css-indent-offset 2)
