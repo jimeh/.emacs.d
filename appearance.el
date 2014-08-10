@@ -48,9 +48,9 @@
 (eval-after-load "linum+" '(progn (setq linum-format 'dynamic)))
 
 ;; Enable git-gutter-fringe mode.
-;; (if gui-window-system
-;;     (when (require 'git-gutter-fringe nil 'noerror)
-;;       (global-git-gutter-mode)))
+(if gui-window-system
+    (when (require 'git-gutter-fringe nil 'noerror)
+      (global-git-gutter-mode)))
 
 ;; Enable Yascroll
 (if gui-window-system
@@ -123,3 +123,39 @@
 ;;   (let ((my-linum-current-line-number (line-number-at-pos)))
 ;;     ad-do-it))
 ;; (ad-activate 'linum-update)
+
+
+;; Customize git-gutter-fringe glyphs.
+(when (require 'fringe-helper nil 'noerror)
+  ;; (setq-default left-fringe-width  20)
+  ;; (setq-default right-fringe-width 20)
+  (fringe-helper-define 'git-gutter-fr:added nil
+    "........"
+    "........"
+    "........"
+    "...XX..."
+    "...XX..."
+    "........"
+    "........"
+    "........")
+
+  (fringe-helper-define 'git-gutter-fr:deleted nil
+    "........"
+    "........"
+    "........"
+    "...XX..."
+    "...XX..."
+    "........"
+    "........"
+    "........")
+
+  (fringe-helper-define 'git-gutter-fr:modified nil
+    "........"
+    "........"
+    "........"
+    "...XX..."
+    "...XX..."
+    "........"
+    "........"
+    "........")
+  )

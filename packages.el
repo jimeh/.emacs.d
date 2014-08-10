@@ -44,10 +44,10 @@
     flymake-css
     flymake-cursor
     flymake-php
-    ;; fringe-helper
+    fringe-helper
     full-ack
-    ;; git-gutter
-    ;; git-gutter-fringe
+    git-gutter
+    git-gutter-fringe
     git-timemachine
     gitconfig-mode
     github-browse-file
