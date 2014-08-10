@@ -148,9 +148,9 @@
         ;;                     (setq rsense-home (expand-file-name default-directory))
         ;;                     (add-to-list 'load-path (concat rsense-home "/etc"))
         ;;                     (require 'rsense)))
-        (:name tiling
-               :type emacswiki
-               :features tiling)
+        ;; (:name tiling
+        ;;        :type emacswiki
+        ;;        :features tiling)
         (:name tree-mode
                :type http
                :url "http://www.emacswiki.org/emacs/download/tree-mode.el")
