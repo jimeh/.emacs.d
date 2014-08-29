@@ -51,6 +51,7 @@
  '(exec-path-from-shell-variables (quote ("PATH" "MANPATH" "GOPATH")))
  '(fci-handle-truncate-lines nil)
  '(fci-rule-width 1)
+ '(feature-indent-initial-offset 0)
  '(fill-column 78)
  '(flycheck-completion-system (quote ido))
  '(flycheck-indication-mode (quote right-fringe))
