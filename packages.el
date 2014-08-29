@@ -53,7 +53,7 @@
     github-browse-file
     go-autocomplete
     go-mode
-    ;; go-projectile ;; Disabled as it causes massive lag in big projects
+    go-projectile
     go-snippets
     grizzl
     haml-mode
