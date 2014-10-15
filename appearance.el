@@ -101,6 +101,18 @@
           (lambda (selected-frame)
             (set-frame-parameter selected-frame 'alpha transparency-level)))
 
+(when (require 'diminish nil 'noerror)
+  (diminish 'visual-line-mode)
+  (eval-after-load "undo-tree" '(diminish 'undo-tree-mode))
+  (eval-after-load "auto-complete" '(diminish 'auto-complete-mode))
+  (eval-after-load "yasnippet" '(diminish 'yas-minor-mode))
+  (eval-after-load "smartparens" '(diminish 'smartparens-mode))
+  (eval-after-load "hs-minor-mode" '(diminish 'hs-minor-mode))
+  (eval-after-load "git-gutter-mode" '(diminish 'git-gutter-mode))
+  (eval-after-load "whitespace-mode" '(diminish 'whitespace-mode))
+  (eval-after-load "textmate-mode" '(diminish 'textmate-mode)))
+
+
 ;; Relative line numbers -- from: http://stackoverflow.com/a/6928112/42146
 ;; (defvar my-linum-format-string "%3d ")
 ;; ;; (add-hook 'linum-before-numbering-hook 'my-linum-get-format-string)

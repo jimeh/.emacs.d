@@ -34,6 +34,7 @@
     buffer-move
     coffee-mode
     dash-at-point
+    diminish
     dired+
     ecb
     exec-path-from-shell
