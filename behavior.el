@@ -36,6 +36,11 @@
 ;; messages in the mini-buffer.
 (setq ecb-prescan-directories-for-emptyness nil)
 
+;; Save places within files.
+(require 'saveplace)
+(setq save-place-file "~/.emacs.d/saved-places")
+(setq-default save-place t)
+
 ;; Use textmate-mode
 (when (require 'textmate nil 'noerror)
   (textmate-mode))
