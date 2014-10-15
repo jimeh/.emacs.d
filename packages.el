@@ -54,7 +54,7 @@
     github-browse-file
     go-autocomplete
     go-mode
-    go-projectile
+    ;; go-projectile
     go-snippets
     grizzl
     haml-mode
