@@ -218,3 +218,21 @@ there's a region, all lines that region covers will be duplicated."
             (error t))
           (hs-show-all))
     (toggle-selective-display column)))
+
+
+;;
+;; Remove duplicates lines
+;; - from: http://www.emacswiki.org/emacs/DuplicateLines#toc4
+;;
+(defun uniquify-region-lines (beg end)
+  "Remove duplicate adjacent lines in region."
+  (interactive "*r")
+  (save-excursion
+    (goto-char beg)
+    (while (re-search-forward "^\\(.*\n\\)\\1+" end t)
+      (replace-match "\\1"))))
+
+(defun uniquify-buffer-lines ()
+  "Remove duplicate adjacent lines in the current buffer."
+  (interactive)
+  (uniquify-region-lines (point-min) (point-max)))
