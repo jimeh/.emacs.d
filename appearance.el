@@ -24,7 +24,7 @@
 (tool-bar-mode -1)
 
 ;; Disable Scrollbar
-(set-scroll-bar-mode 'nil)
+(if gui-window-system (set-scroll-bar-mode 'nil))
 
 ;; Show matching parentheses
 (show-paren-mode t)
@@ -133,7 +133,7 @@
 
 
 ;; Customize git-gutter-fringe glyphs.
-(when (require 'fringe-helper nil 'noerror)
+(when (and gui-window-system (require 'fringe-helper nil 'noerror))
   ;; (setq-default left-fringe-width  20)
   ;; (setq-default right-fringe-width 20)
   (fringe-helper-define 'git-gutter-fr:added nil
