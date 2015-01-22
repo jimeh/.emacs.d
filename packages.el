@@ -74,12 +74,14 @@
     minimap
     move-text
     multiple-cursors
+    neotree
     nvm
     phi-search
     php-mode
+    project-explorer
     projectile
-    puppet-mode
     pt
+    puppet-mode
     rainbow-mode
     rbenv
     restclient
@@ -92,6 +94,7 @@
     smartparens
     smex
     smooth-scrolling
+    string-inflection
     stylus-mode
     textmate
     twilight-anti-bright-theme

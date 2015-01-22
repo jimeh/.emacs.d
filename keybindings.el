@@ -147,8 +147,16 @@
   (global-set-key (kbd "C-x C-b") 'ibuffer))
 
 ;; ECB
-(when (require 'ecb nil 'noerror)
-  (global-set-key (kbd "C-c C-.") 'ecb-activate))
+;; (when (require 'ecb nil 'noerror)
+;;   (global-set-key (kbd "C-c C-.") 'ecb-activate))
+
+;; string-inflection
+(when (require 'string-inflection nil 'noerror)
+  (global-set-key (kbd "C-c C-.") 'string-inflection-cycle))
+
+;; Project Explorer
+(when (require 'project-explorer nil 'noerror)
+  (global-set-key (kbd "C-x p") 'project-explorer-open))
 
 ;; Magit
 (when (require 'magit nil 'noerror)
