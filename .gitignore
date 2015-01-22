@@ -11,6 +11,12 @@ tramp
 url/*
 hgs-cache
 projectile.cache
+games/*
+ido.last
+project-explorer-cache/*
+recentf
+saved-places
+smex-items
 
 # Bittorrent Sync related
 .AppleDouble
