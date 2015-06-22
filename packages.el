@@ -28,7 +28,7 @@
   '(
     ace-jump-buffer
     ace-jump-mode
-    ack-and-a-half
+    ;; ack-and-a-half
     auto-complete
     browse-kill-ring
     buffer-move
