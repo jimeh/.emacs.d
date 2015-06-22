@@ -199,6 +199,9 @@
   (when (require 'escreen nil 'noerror)
     (escreen-install))
 
+  ;; magit setup
+  (setq magit-last-seen-setup-instructions "1.4.0")
+
   ;; Load and setup Workgroups2
   (when (require 'workgroups2 nil 'noerror)
     (workgroups-mode 1))
