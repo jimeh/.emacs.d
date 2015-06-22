@@ -1,0 +1,4 @@
+# name: console.log ...
+# key: pd
+# --
+console.log ${1:"${2:name}"}$0
