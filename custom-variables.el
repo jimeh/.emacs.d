@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ac-auto-show-menu 0.2)
+ '(ac-auto-start 3)
  '(ac-delay 0.05)
  '(ac-menu-height 15)
  '(ack-arguments
@@ -73,7 +74,9 @@
            (name 16 -1)
            " " filename))))
  '(icomplete-mode t)
+ '(ido-vertical-define-keys (quote C-n-C-p-up-down-left-right))
  '(imenu-auto-rescan t)
+ '(imenu-max-item-length 160)
  '(isearch-resume-in-command-history t)
  '(ispell-program-name "aspell")
  '(magit-completing-read-function (quote magit-ido-completing-read))
@@ -109,6 +112,10 @@
      ("Note" 110 "** %?
 " "~/.org-files/notes.org" "Notes"))))
  '(org-reverse-note-order t)
+ '(package-selected-packages
+   (quote
+    (find-file-in-project zencoding-mode yaml-mode writeroom-mode writegood-mode undo-tree twilight-bright-theme twilight-anti-bright-theme textmate stylus-mode string-inflection smooth-scrolling smex smartparens scss-mode sass-mode ruby-interpolation ruby-compilation rubocop rhtml-mode restclient rbenv rainbow-mode puppet-mode pt project-explorer php-mode phi-search nvm neotree multiple-cursors move-text minimap markdown-mode magit less-css-mode jade-mode ido-vertical-mode highlight-indentation helm-projectile helm-open-github helm-github-stars helm-ag helm-ack grizzl go-snippets go-mode go-autocomplete github-browse-file gitconfig-mode git-timemachine git-gutter-fringe full-ack flymake-php flymake-cursor flymake-css flycheck fill-column-indicator feature-mode expand-region exec-path-from-shell ecb dired+ diminish dash-at-point coffee-mode buffer-move browse-kill-ring ace-jump-buffer)))
+ '(pe/follow-current t)
  '(pe/width 54)
  '(persp-modestring-dividers (quote (" [" "]" "|")))
  '(persp-show-modestring t)
