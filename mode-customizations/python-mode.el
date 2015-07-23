@@ -6,6 +6,7 @@
   (hs-minor-mode 1)
   (auto-complete-mode)
   (subword-mode)
+  (setq tab-width 4)
   (highlight-indentation-mode)
   (highlight-indentation-current-column-mode)
   (define-key python-mode-map (kbd "RET") 'newline-and-indent))
