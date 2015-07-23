@@ -26,10 +26,10 @@
 ;; Packages to install from MELPA
 (defvar my-melpa-packages
   '(
-    ace-jump-buffer
-    ace-jump-mode
+    ace-window
     ;; ack-and-a-half
     auto-complete
+    avy
     browse-kill-ring
     buffer-move
     coffee-mode

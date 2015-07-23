@@ -162,14 +162,14 @@
 (when (require 'magit nil 'noerror)
   (global-set-key (kbd "C-x g") 'magit-status))
 
-;; Ace-Jump mode
-(when (require 'ace-jump-mode nil 'noerror)
-  (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-  (define-key global-map (kbd "C-c C-j") 'ace-jump-mode)
-  ;; pop-mark
-  (eval-after-load "ace-jump-mode" '(ace-jump-mode-enable-mark-sync))
-  (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
-  (define-key global-map (kbd "C-x C-j") 'ace-jump-mode-pop-mark))
+;; Avy mode
+(when (require 'avy nil 'noerror)
+  (define-key global-map (kbd "C-c C-j") 'avy-goto-word-or-subword-1)
+  (define-key global-map (kbd "C-c SPC") 'avy-goto-char))
+
+;; Ace-window
+(when (require 'ace-window nil 'noerror)
+  (define-key global-map (kbd "M-o") 'ace-window))
 
 ;; projectile related keybindings
 (when (require 'projectile nil 'noerror)
