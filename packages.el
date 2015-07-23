@@ -64,6 +64,7 @@
     helm-github-stars
     helm-open-github
     helm-projectile
+    ;; helm-swooop ;; causes error: "Package `helm-swooop-' is unavailable"
     highlight-indentation
     ido-vertical-mode
     inf-ruby

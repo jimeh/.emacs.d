@@ -73,6 +73,7 @@
   (global-set-key (kbd "C-s") 'phi-search)
   (global-set-key (kbd "C-r") 'phi-search-backward))
 
+;; Helm
 (when (require 'helm nil 'noerror)
   (define-key helm-map (kbd "<up>") 'previous-history-element)
   (define-key helm-map (kbd "<down>") 'next-history-element)
@@ -80,10 +81,19 @@
   (define-key helm-map (kbd "M-n") 'helm-next-source)
   (global-set-key (kbd "C-c h") 'helm-mini))
 
-(when (require 'helm-projectile nil 'noerror)
-  (global-set-key (kbd "C-x ;") 'helm-projectile)
-  (global-set-key (kbd "C-x C-;") 'helm-projectile))
+;; Helm Swoop
+(when (require 'helm-swoop nil 'noerror)
+  (global-set-key (kbd "M-r") 'helm-swoop)
+  (global-set-key (kbd "M-R") 'helm-swoop-back-to-last-point)
+  (global-set-key (kbd "C-c M-r") 'helm-multi-swoop)
+  (global-set-key (kbd "C-x M-r") 'helm-multi-swoop-all))
 
+;; Helm Projectile
+(when (require 'helm-projectile nil 'noerror)
+  (global-set-key (kbd "C-c ;") 'helm-projectile)
+  (global-set-key (kbd "C-c C-;") 'helm-projectile))
+
+;; Helm Open Github
 (when (require 'helm-open-github nil 'noerror)
   (global-set-key (kbd "C-c o f") 'helm-open-github-from-file)
   (global-set-key (kbd "C-c o c") 'helm-open-github-from-commit)
