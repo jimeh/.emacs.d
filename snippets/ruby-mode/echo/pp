@@ -1,4 +1,4 @@
-# name: ruby pp
+# name: pp ...
 # key: pp
 # --
 require 'pp'
