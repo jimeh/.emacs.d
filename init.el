@@ -10,38 +10,76 @@
 ;;
 ;; (package-initialize)
 
-(setq emacs-config-dir
-      (file-name-directory (or load-file-name (buffer-file-name))))
+(defvar current-user
+      (getenv
+       (if (equal system-type 'windows-nt) "USERNAME" "USER")))
 
-;; Determine if GUI or console settings should apply
-(setq gui-window-system
-      (if (or (getenv "EMACS_GUI_SERVER") window-system) t 'nil))
+(message "Siren is powering up... Be patient, Master %s!" current-user)
 
-;; Helper function for config path
-(defun get-config-path(path)
-  "Appends argument at the end of emacs-config-dir using expand-file-name"
-  (expand-file-name path emacs-config-dir))
+(when (version< emacs-version "24.1")
+  (error "Siren requires at least GNU Emacs 24.1, but you're running %s"
+         emacs-version))
 
-;; Load various config files
-(load-file (get-config-path "env.el"))
-(load-file (get-config-path "packages.el"))
-(load-file (get-config-path "helpers.el"))
-(load-file (get-config-path "mode-customizations.el"))
-(load-file (get-config-path "vendor.el"))
-(load-file (get-config-path "behavior.el"))
-(load-file (get-config-path "appearance.el"))
-(load-file (get-config-path "keybindings.el"))
-(load-file (get-config-path "aliases.el"))
-(load-file (get-config-path "remember.el"))
-(load-file (get-config-path "project-definitions.el"))
+;; Always load newest byte code
+(setq load-prefer-newer t)
 
-;; Custom variables file
-(setq custom-file (get-config-path "custom-variables.el"))
+;; Setup paths
+(defvar siren-dir (file-name-directory load-file-name)
+  "The root dir of the Emacs config.")
+(defvar siren-core-dir (expand-file-name "core" siren-dir)
+  "The home of core stuff.")
+(defvar siren-modules-dir (expand-file-name "modules" siren-dir)
+  "This directory houses all of the modules.")
+(defvar siren-themes-dir (expand-file-name "themes" siren-dir)
+  "This directory houses all of the modules.")
+(defvar siren-savefile-dir (expand-file-name "savefile" siren-dir)
+  "This folder stores all the automatically generated save/history-files.")
+(defvar siren-vendor-dir (expand-file-name "vendor" siren-dir)
+  "This directory houses packages that are not yet available in ELPA (or MELPA).")
+
+(defvar siren-modules-file (expand-file-name "siren-modules.el" siren-dir)
+  "This files contains a list of modules to be loaded.")
+(defvar siren-theme-file (expand-file-name "siren-theme.el" siren-dir)
+  "This files contains a list of modules to be loaded.")
+
+(unless (file-exists-p siren-savefile-dir)
+  (make-directory siren-savefile-dir))
+
+(defun siren-add-subfolders-to-load-path (parent-dir)
+ "Add all level PARENT-DIR subdirs to the `load-path'."
+ (dolist (f (directory-files parent-dir))
+   (let ((name (expand-file-name f parent-dir)))
+     (when (and (file-directory-p name)
+                (not (string-prefix-p "." f)))
+       (add-to-list 'load-path name)
+       (siren-add-subfolders-to-load-path name)))))
+
+(add-to-list 'load-path siren-core-dir)
+(add-to-list 'load-path siren-modules-dir)
+(add-to-list 'load-path siren-themes-dir)
+(add-to-list 'load-path siren-vendor-dir)
+(siren-add-subfolders-to-load-path siren-vendor-dir)
+
+;; core stuff
+(require 'siren-env)
+(require 'siren-custom)
+(require 'siren-core)
+(require 'siren-packages)
+(require 'siren-ui)
+(require 'siren-editor)
+
+;; osx specific
+(when (eq system-type 'darwin)
+  (require 'siren-osx))
+
+;; config changes made through the customize UI will be store here
+(setq custom-file (expand-file-name "custom.el" siren-dir))
 (load-file custom-file)
 
-;; Load runtime specific setup files
-(load-file (get-config-path "runtimes/ruby.el"))
-(load-file (get-config-path "runtimes/nodejs.el"))
+;; the modules
+(if (file-exists-p siren-modules-file)
+    (load siren-modules-file))
 
-;; Initialize packages in packages.el
-(initialize-my-packages)
+;; the theme
+(if (file-exists-p siren-theme-file)
+  (load siren-theme-file))
