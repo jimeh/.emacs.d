@@ -17,7 +17,8 @@
 (message "Siren is powering up... Be patient, Master %s!" current-user)
 
 (when (version< emacs-version "24.1")
-  (error "Siren requires at least GNU Emacs 24.1, but you're running %s" emacs-version))
+  (error "Siren requires at least GNU Emacs 24.1, but you're running %s"
+         emacs-version))
 
 ;; Always load newest byte code
 (setq load-prefer-newer t)
