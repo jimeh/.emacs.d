@@ -55,6 +55,7 @@
  '(feature-indent-initial-offset 0)
  '(fill-column 78)
  '(flycheck-completion-system (quote ido))
+ '(flycheck-idle-change-delay 1.0)
  '(flycheck-indication-mode (quote right-fringe))
  '(global-auto-revert-mode t)
  '(global-undo-tree-mode t)

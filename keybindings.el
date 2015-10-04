@@ -48,7 +48,6 @@
 
 ;; align-regexp
 (global-set-key (kbd "C-c C-a") 'align-regexp)
-;; (global-set-key (kbd "C-c \\") 'align-regexp) ;; keep till I get used to C-c C-a
 
 ;; Toggle auto-fill-mode.
 (global-set-key (kbd "C-c q") 'auto-fill-mode)
