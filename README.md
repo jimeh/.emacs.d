@@ -33,7 +33,7 @@ The way Prelude structures it's files and code however is very great, and
 something I took to heart when I started working on a rewrite of my config, and
 hence Emacs Siren was born.
 
-## Why call my config Emacs-Siren?
+## Why call my config Emacs Siren?
 
 I had been playing a lot of The Witcher 3: Wild Hunt, and decided to pick a name
 based on a enemy type from the game. "Siren" was short and kinda cool sounding.
