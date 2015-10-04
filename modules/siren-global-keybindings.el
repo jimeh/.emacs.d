@@ -58,9 +58,6 @@
 ;; Rename current file and buffer (via siren-helpers.el)
 (global-set-key (kbd "C-c r")  'rename-file-and-buffer)
 
-;; Use siren-move-beginning-of-line
-(global-set-key (kbd "C-a") 'siren-move-beginning-of-line)
-
 ;; Mac OS X specific keybindings
 (when (eq system-type 'darwin)
 
