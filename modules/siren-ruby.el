@@ -4,7 +4,7 @@
 
 (require 'siren-programming)
 
-(siren-require-packages '(ruby-tools inf-ruby yari company-inf-ruby))
+(siren-require-packages '(ruby-tools inf-ruby yari))
 
 ;; Force-load custom vendored ruby-mode fetched from:
 ;;  - https://raw.github.com/ruby/ruby/trunk/misc/ruby-mode.el
@@ -43,14 +43,10 @@
                ,(rx (or "#" "=begin"))                ;; Comment start
                ruby-forward-sexp nil))
 
-(eval-after-load 'company
-  '(add-to-list 'company-backends 'company-inf-ruby))
-
 (eval-after-load 'ruby-mode
   '(progn
      (defun siren-ruby-mode-defaults ()
        (siren-prog-mode-defaults)
-       (inf-ruby-minor-mode +1)
        (ruby-tools-mode +1)
        (setq tab-width 2)
        (hs-minor-mode 1)
@@ -62,10 +58,11 @@
        (setq ruby-deep-indent-paren nil)
        (setq c-tab-always-indent nil)
        (setq ruby-use-encoding-map nil)
-       (define-key ruby-mode-map (kbd "C-j") 'newline-and-indent)
-       (define-key ruby-mode-map (kbd "RET") 'newline-and-indent)
-       (define-key ruby-mode-map (kbd "C-c C-h") 'toggle-hiding)
-       (define-key ruby-mode-map (kbd "C-c C-l") 'goto-line))
+       (let ((map ruby-mode-map))
+         (define-key map (kbd "C-j") 'newline-and-indent)
+         (define-key map (kbd "RET") 'newline-and-indent)
+         (define-key map (kbd "C-c C-h") 'toggle-hiding)
+         (define-key map (kbd "C-c C-l") 'goto-line)))
 
      (setq siren-ruby-mode-hook 'siren-ruby-mode-defaults)
 

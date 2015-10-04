@@ -6,9 +6,11 @@
 
 (require 'company)
 
-(setq company-idle-delay 0.5
-      company-tooltip-limit 10
-      company-minimum-prefix-length 2)
+(setq company-idle-delay 0.3
+      company-tooltip-limit 20
+      company-minimum-prefix-length 2
+      company-echo-delay 0
+      company-begin-commands '(self-insert-command))
 
 ;; invert the navigation direction if the the completion popup-isearch-match
 ;; is displayed on top (happens near the bottom of windows)

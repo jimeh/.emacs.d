@@ -5,7 +5,7 @@
 ;; Modules
 (require 'siren-aliases)
 (require 'siren-avy)
-(require 'siren-auto-complete)
+;; (require 'siren-auto-complete)
 (require 'siren-company)
 (require 'siren-dired)
 (require 'siren-exec-path-from-shell)

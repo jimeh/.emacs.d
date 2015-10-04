@@ -14,10 +14,10 @@
 (eval-after-load 'go-mode
   '(progn
      (siren-require-packages
-      '(go-mode go-autocomplete go-eldoc go-projectile gotest))
+      '(go-mode company-go go-eldoc go-projectile gotest))
 
      (require 'go-projectile)
-     (require 'go-autocomplete)
+     (require 'company-go)
 
      (defun siren-go-mode-defaults ()
        (siren-prog-mode-defaults)
@@ -39,14 +39,15 @@
        ;; gofmt on save
        (add-hook 'before-save-hook 'gofmt-before-save nil t)
 
+       ;; enable company-mode
+       (set (make-local-variable 'company-backends) '(company-go))
+       (company-mode +1)
+
        ;; enable hide/show
        (hs-minor-mode 1)
 
        ;; stop whitespace being highlighted
        (whitespace-toggle-options '(tabs))
-
-       ;; enable auto-complete
-       (auto-complete-mode +1)
 
        ;; make tabs 4 spaces wide
        (setq tab-width 4)
