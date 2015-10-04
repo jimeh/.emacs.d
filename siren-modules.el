@@ -50,7 +50,7 @@
 (require 'siren-go)
 (require 'siren-makefile)
 (require 'siren-markdown)
-(require 'siren-ruby)
+(require 'siren-enh-ruby)
 (require 'siren-sass)
 (require 'siren-scss)
 (require 'siren-sh)

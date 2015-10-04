@@ -1,0 +1,4 @@
+# name: expect(...).to eq(...)
+# key: ee
+# --
+expect($1).to eq($0)
