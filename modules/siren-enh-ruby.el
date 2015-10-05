@@ -40,12 +40,16 @@
                ,(rx (or "#" "=begin"))                ;; Comment start
                ruby-forward-sexp nil))
 
-;; I don't like having operators colored.
-(custom-set-faces '(enh-ruby-op-face ((t nil))))
-
 (eval-after-load 'enh-ruby-mode
   '(progn
      (defun siren-ruby-mode-defaults ()
+       ;; I don't like some of the syntax highlighting styling enh-ruby does
+       (custom-set-faces
+        '(enh-ruby-op-face ((t nil)))
+        '(enh-ruby-regexp-delimiter-face ((t (:inherit font-lock-string-face))))
+        '(enh-ruby-regexp-face ((t (:inherit font-lock-string-face))))
+        '(enh-ruby-string-delimiter-face ((t (:inherit font-lock-string-face)))))
+
        (siren-prog-mode-defaults)
        (ruby-tools-mode +1)
        (setq tab-width 2)
