@@ -11,8 +11,8 @@
 (require 'siren-exec-path-from-shell)
 (require 'siren-frame-transparency)
 (require 'siren-full-ack)
-(require 'siren-global-keybindings)
 (require 'siren-github)
+(require 'siren-global-keybindings)
 (require 'siren-goto-symbol)
 (require 'siren-haml)
 (require 'siren-helm)
@@ -57,3 +57,6 @@
 (require 'siren-scss)
 (require 'siren-sh)
 (require 'siren-thrift)
+
+
+(provide 'siren-modules)
