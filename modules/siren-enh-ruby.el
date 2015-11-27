@@ -3,6 +3,7 @@
 ;;
 
 (require 'siren-programming)
+(require 'siren-company)
 
 (siren-require-packages '(enh-ruby-mode ruby-tools inf-ruby yari))
 
@@ -40,9 +41,12 @@
                ,(rx (or "#" "=begin"))                ;; Comment start
                ruby-forward-sexp nil))
 
+;; Make company-mode play nice
+(push 'enh-ruby-mode company-dabbrev-code-modes)
+
 (eval-after-load 'enh-ruby-mode
   '(progn
-     (defun siren-ruby-mode-defaults ()
+     (defun siren-enh-ruby-mode-defaults ()
        ;; I don't like some of the syntax highlighting styling enh-ruby does
        (custom-set-faces
         '(enh-ruby-op-face ((t nil)))
@@ -61,17 +65,18 @@
        (highlight-indentation-current-column-mode)
        (setq enh-ruby-check-syntax nil)
        (setq enh-ruby-deep-indent-paren nil)
-       (setq enh-ruby-bounce-deep-indent t)
-       (setq ruby-deep-arglist nil)
+       (setq enh-ruby-bounce-deep-indent nil)
        (setq c-tab-always-indent nil)
-       (setq ruby-use-encoding-map nil)
-       (define-key enh-ruby-mode-map (kbd "C-c C-h") 'toggle-hiding)
-       (define-key enh-ruby-mode-map (kbd "C-c C-l") 'goto-line))
+       (let ((map enh-ruby-mode-map))
+         (define-key map (kbd "C-c /") 'comment-or-uncomment-region-or-line)
+         (define-key map (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
+         (define-key map (kbd "C-c C-h") 'toggle-hiding)
+         (define-key map (kbd "C-c C-l") 'goto-line)))
 
-     (setq siren-ruby-mode-hook 'siren-ruby-mode-defaults)
+     (setq siren-enh-ruby-mode-hook 'siren-enh-ruby-mode-defaults)
 
      (add-hook 'enh-ruby-mode-hook (lambda ()
-                                     (run-hooks 'siren-ruby-mode-hook)))))
+                                     (run-hooks 'siren-enh-ruby-mode-hook)))))
 
 
 (provide 'siren-enh-ruby)
