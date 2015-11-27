@@ -2,8 +2,7 @@
 ;; escreen
 ;;
 
-(siren-require-packages '(escreen))
-
+;; Loads from vendor.
 (require 'escreen)
 
 ;;

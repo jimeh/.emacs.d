@@ -1,10 +1,25 @@
 .SILENT:
 
 .PHONY: vendor update_vendor \
+	remove_vendor/escreen.el update_vendor/escreen.el
 	remove_vendor/linum+.el update_vendor/linum+.el
 
-vendor: vendor/linum+.el
-update_vendor:update_vendor/linum+.el
+vendor: vendor/escreen.el vendor/linum+.el
+update_vendor: update_vendor/escreen.el update_vendor/linum+.el
+
+
+vendor/escreen.el:
+	echo "fetching vendor/escreen.el..." && \
+	curl -s -L -o vendor/escreen.el \
+	https://github.com/renard/escreen-el/raw/master/escreen.el
+
+remove_vendor/escreen.el:
+	( \
+		test -f "vendor/escreen.el" && rm "vendor/escreen.el" && \
+		echo "removed vendor/escreen.el" \
+	) || exit 0
+
+update_vendor/escreen.el: remove_vendor/escreen.el vendor/escreen.el
 
 
 vendor/linum+.el:
