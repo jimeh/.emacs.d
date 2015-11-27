@@ -4,6 +4,8 @@
 
 (require 'siren-programming)
 
+(add-to-list 'siren-yank-indent-modes 'makefile-mode)
+
 (defun siren-makefile-mode-defaults ()
   (siren-prog-mode-defaults)
   (subword-mode)
