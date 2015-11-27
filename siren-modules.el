@@ -18,6 +18,7 @@
 (require 'siren-helm)
 (require 'siren-ido)
 (require 'siren-linum)
+(require 'siren-linum-relative)
 (require 'siren-magit)
 (require 'siren-move-beginning-of-line)
 (require 'siren-multiple-cursors)
