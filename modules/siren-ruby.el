@@ -3,6 +3,7 @@
 ;;
 
 (require 'siren-programming)
+(require 'siren-company)
 
 (siren-require-packages '(ruby-tools inf-ruby yari))
 
@@ -38,6 +39,9 @@
                ,(rx (or "end"))                       ;; Block end
                ,(rx (or "#" "=begin"))                ;; Comment start
                ruby-forward-sexp nil))
+
+;; Make company-mode play nice
+(push 'ruby-mode company-dabbrev-code-modes)
 
 (eval-after-load 'ruby-mode
   '(progn
