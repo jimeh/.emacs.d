@@ -6,10 +6,6 @@
 
 (siren-require-packages '(ruby-tools inf-ruby yari))
 
-;; Force-load custom vendored ruby-mode fetched from:
-;;  - https://raw.github.com/ruby/ruby/trunk/misc/ruby-mode.el
-(load (expand-file-name "ruby-mode.el" siren-vendor-dir))
-
 ;; Rake files are ruby, too, as are gemspecs, rackup files, and gemfiles.
 (add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile\\'" . ruby-mode))
@@ -54,6 +50,7 @@
        (subword-mode +1)
        (highlight-indentation-mode)
        (highlight-indentation-current-column-mode)
+       (setq ruby-use-smie nil)
        (setq ruby-deep-arglist nil)
        (setq ruby-deep-indent-paren nil)
        (setq c-tab-always-indent nil)
