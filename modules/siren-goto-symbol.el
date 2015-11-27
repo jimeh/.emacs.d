@@ -7,7 +7,13 @@
 (require 'imenu)
 (set-default 'imenu-auto-rescan t)
 (set-default 'imenu-max-item-length 160)
-(set-default 'imenu-max-items 100)
+(set-default 'imenu-max-items 400)
+
+(defun siren-flush-cache-and-goto-symbol ()
+  "Flush imenu cache."
+  (interactive)
+  (setq imenu--index-alist nil)
+  (siren-goto-symbol))
 
 (defun siren-goto-symbol (&optional symbol-list)
   "Refresh imenu and jump to a place in the buffer using Ido."
@@ -51,6 +57,7 @@
 
 
 (global-set-key (kbd "C-t") 'siren-goto-symbol)
+(global-set-key (kbd "C-c C-t") 'siren-flush-cache-and-goto-symbol)
 
 
 (provide 'siren-goto-symbol)
