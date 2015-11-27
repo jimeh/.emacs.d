@@ -16,10 +16,6 @@
 ;; Duplicate line (via siren-helpers.el)
 (global-set-key (kbd "C-x C-d") 'duplicate-current-line-or-region)
 
-;; Switch to next/previous buffer
-(global-set-key (kbd "C-c C-n") 'switch-to-next-buffer)
-(global-set-key (kbd "C-c C-p") 'switch-to-prev-buffer)
-
 ;; Window switching (via siren-helpers.el).
 (global-set-key (kbd "C-x i")   'other-window-reverse)
 (global-set-key (kbd "C-x C-o") 'other-window)

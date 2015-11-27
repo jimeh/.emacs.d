@@ -6,6 +6,7 @@
 (require 'siren-flycheck)
 (require 'siren-smartparens)
 (require 'siren-highlight-indentation)
+(require 'siren-highlight-symbol)
 
 (defun siren-prog-mode-defaults ()
   "Default coding hook, useful with any programming language."
@@ -14,6 +15,7 @@
   (flyspell-prog-mode)
   (fci-mode)
   (smartparens-mode +1)
+  (highlight-symbol-mode)
   (setq whitespace-action (quote (auto-cleanup)))
   (visual-line-mode +1)
   (whitespace-mode +1))
