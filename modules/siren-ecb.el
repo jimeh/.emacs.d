@@ -18,6 +18,7 @@
     (("~/Projects" "Projects")
      ("~/.emacs.d" ".emacs.d")
      ("~/.dotfiles" ".dotfiles")
+     ("~/Projects/which" "which")
      ("~/Projects/fitzdares" "fitzdares")
      ("~/.go" ".go")
      ("~/src" "src")
