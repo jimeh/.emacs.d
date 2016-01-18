@@ -5,7 +5,7 @@
 (siren-require-packages '(perspective))
 
 (require 'perspective)
-
+(setq persp-mode-prefix-key "")
 (define-key persp-mode-map (kbd "C-z") perspective-map)
 
 (define-key persp-mode-map (kbd "C-z s") 'persp-switch)
@@ -32,6 +32,8 @@
 (define-key persp-mode-map (kbd "C-z C-n") 'persp-next)
 (define-key persp-mode-map (kbd "C-z p") 'persp-prev)
 (define-key persp-mode-map (kbd "C-z C-p") 'persp-prev)
+
+(persp-mode)
 
 
 (provide 'siren-perspective)
