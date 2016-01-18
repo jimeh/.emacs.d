@@ -38,9 +38,9 @@
 
 ;; Workspace management
 (require 'siren-escreen)
-;; (require 'siren-eslcreen)
+;; (require 'siren-elscreen)
 ;; (require 'siren-perspective)
-;; (require 'siren-worksgroups2)
+;; (require 'siren-workgroups2)
 
 
 ;; Languages
