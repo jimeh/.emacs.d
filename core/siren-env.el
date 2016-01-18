@@ -15,8 +15,8 @@
 (setenv "PATH" (concat "~/.rbenv/shims:" (getenv "PATH")))
 
 ;; node.js
-(setq exec-path (cons "~/.nvm/versions/node/v0.12.4/bin" exec-path))
-(setenv "PATH" (concat "~/.nvm/versions/node/v0.12.4/bin:" (getenv "PATH")))
+(setq exec-path (cons "~/.nvm/versions/node/v5.4.0/bin" exec-path))
+(setenv "PATH" (concat "~/.nvm/versions/node/v5.4.0/bin:" (getenv "PATH")))
 
 
 (provide 'siren-env)
