@@ -29,6 +29,8 @@
               "savefile")))
 (setq projectile-globally-ignored-files (quote ("TAGS" "*.log")))
 (setq projectile-sort-order 'recently-active)
+(setq projectile-mode-line
+      (quote (:eval (format " [%s]" (projectile-project-name)))))
 
 (setq projectile-cache-file (expand-file-name
                              "projectile.cache" siren-savefile-dir))
