@@ -1,5 +1,5 @@
 # name: ruby debugger
 # key: bug
 # --
-require 'ruby-debug'
-debugger$0
+require 'byebug'
+byebug$0
