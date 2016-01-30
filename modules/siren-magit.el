@@ -11,6 +11,7 @@
 (setq magit-status-buffer-switch-function 'switch-to-buffer)
 (setq magit-bury-buffer-function 'magit-mode-quit-window)
 (setq magit-restore-window-configuration nil)
+(setq magit-revert-buffers (quote silent))
 (setq magit-default-tracking-name-function
       'magit-default-tracking-name-branch-only)
 (setq magit-repository-directories
