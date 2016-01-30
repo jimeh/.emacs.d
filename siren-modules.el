@@ -49,6 +49,8 @@
 (require 'siren-cucumber)
 (require 'siren-emacs-lisp)
 (require 'siren-go)
+(require 'siren-js)
+(require 'siren-json)
 (require 'siren-lua)
 (require 'siren-makefile)
 (require 'siren-markdown)
