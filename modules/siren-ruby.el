@@ -54,9 +54,11 @@
        (subword-mode +1)
        (highlight-indentation-mode)
        (highlight-indentation-current-column-mode)
-       (setq ruby-use-smie nil)
-       (setq ruby-deep-arglist nil)
-       (setq ruby-deep-indent-paren nil)
+
+       (setq ruby-use-smie t)
+       (setq ruby-align-chained-calls t)
+       (setq ruby-insert-encoding-magic-comment t)
+
        (setq c-tab-always-indent nil)
        (setq ruby-use-encoding-map nil)
        (let ((map ruby-mode-map))
