@@ -29,11 +29,13 @@
               "savefile")))
 (setq projectile-globally-ignored-files (quote ("TAGS" "*.log")))
 (setq projectile-sort-order 'recently-active)
-(setq projectile-mode-line
-      (quote (:eval (format " [%s]" (projectile-project-name)))))
-
+(setq projectile-mode-line (quote ""))
 (setq projectile-cache-file (expand-file-name
                              "projectile.cache" siren-savefile-dir))
+
+;; Treat separate directories with Gemfiles within a single git repo as separate
+;; projects.
+(push "Gemfile" projectile-project-root-files-bottom-up)
 
 ;; Bug lets projectile write to the file, but not read from it
 ;; (setq projectile-known-projects-file (expand-file-name
