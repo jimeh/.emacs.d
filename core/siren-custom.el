@@ -25,6 +25,10 @@ Only modes that don't derive from `prog-mode' should be listed here."
   :type 'list
   :group 'siren)
 
+(defcustom siren-transparency-level 99
+  "The default frame transparency level for Emacs frames."
+  :type 'number
+  :group 'siren)
 
 (provide 'siren-custom)
 ;;; siren-custom.el ends here
