@@ -1,6 +1,10 @@
-;;
-;; full-ack
-;;
+;;; siren-full-ack.el --- jimeh's Emacs Siren: full-ack configuration.
+
+;;; Commentary:
+
+;; Basic configuration for full-ack.
+
+;;; Code:
 
 (siren-require-packages '(full-ack))
 
@@ -36,3 +40,4 @@
 
 
 (provide 'siren-full-ack)
+;;; siren-full-ack.el ends here

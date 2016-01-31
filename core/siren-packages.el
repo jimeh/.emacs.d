@@ -1,6 +1,10 @@
-;;
-;; packages
-;;
+;;; siren-packages.el --- jimeh's Emacs Siren: Core package setup
+
+;;; Commentary:
+
+;; Install and configure various packages that the core of Siren depends on.
+
+;;; Code:
 
 (require 'cl)
 (require 'package)
@@ -66,5 +70,5 @@ Missing packages are installed automatically."
 ;; Install Melpa packages
 (siren-install-packages)
 
-
 (provide 'siren-packages)
+;;; siren-packages.el ends here

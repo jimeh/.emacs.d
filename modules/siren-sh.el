@@ -1,6 +1,10 @@
-;;
-;; shell
-;;
+;;; siren-sh.el --- jimeh's Emacs Siren: sh-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for sh-mode.
+
+;;; Code:
 
 (require 'siren-programming)
 
@@ -22,5 +26,5 @@
 (add-hook 'sh-mode-hook (lambda ()
                           (run-hooks 'siren-sh-mode-hook)))
 
-
 (provide 'siren-sh)
+;;; siren-sh.el ends here

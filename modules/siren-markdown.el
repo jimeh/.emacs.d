@@ -1,6 +1,10 @@
-;;
-;; sass
-;;
+;;; siren-markdown.el --- jimeh's Emacs Siren: markdown-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for markdown-mode.
+
+;;; Code:
 
 (siren-require-packages '(markdown-mode))
 
@@ -28,5 +32,5 @@
 
 (add-hook 'markdown-mode-hook (lambda () (run-hooks 'siren-markdown-mode-hook)))
 
-
 (provide 'siren-markdown)
+;;; siren-markdown.el ends here

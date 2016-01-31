@@ -1,6 +1,10 @@
-;;
-;; smartparens
-;;
+;;; siren-smartparens.el --- jimeh's Emacs Siren: smartparens configuration.
+
+;;; Commentary:
+
+;; Basic configuration for smartparens.
+
+;;; Code:
 
 (siren-require-packages '(smartparens))
 
@@ -22,5 +26,5 @@
 ;; Aliases
 (defalias 'rw 'sp-rewrap-sexp)
 
-
 (provide 'siren-smartparens)
+;;; siren-smartparens.el ends here

@@ -1,6 +1,11 @@
-;;
-;; env
-;;
+;;; siren-env.el --- jimeh's Emacs Siren: Environment variable setup.
+
+;;; Commentary:
+
+;; Setup for various environment variables to ensure external programs are
+;; available.
+
+;;; Code:
 
 ;; Nix package manager
 (push "~/.nix-profile/bin" exec-path)
@@ -20,3 +25,4 @@
 
 
 (provide 'siren-env)
+;;; siren-env.el ends here

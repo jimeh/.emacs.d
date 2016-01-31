@@ -1,6 +1,10 @@
-;;
-;; ui
-;;
+;;; siren-ui.el --- jimeh's Emacs Siren: Emacs UI settings.
+
+;;; Commentary:
+
+;; Basic configuration of Emacs UI for Siren.
+
+;;; Code:
 
 ;; the toolbar is just a waste of valuable screen estate
 ;; in a tty tool-bar-mode does not properly auto-load, and is
@@ -48,5 +52,5 @@
 (setq sml/theme nil)
 (add-hook 'after-init-hook #'sml/setup)
 
-
 (provide 'siren-ui)
+;;; siren-ui.el ends here

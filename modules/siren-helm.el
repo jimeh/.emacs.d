@@ -1,6 +1,10 @@
-;;
-;; helm
-;;
+;;; siren-helm.el --- jimeh's Emacs Siren: helm configuration.
+
+;;; Commentary:
+
+;; Basic configuration for helm.
+
+;;; Code:
 
 (siren-require-packages '(helm helm-swoop helm-projectile helm-open-github))
 
@@ -35,5 +39,5 @@
 (global-set-key (kbd "C-c o i") 'helm-open-github-from-issues)
 (global-set-key (kbd "C-c o p") 'helm-open-github-from-pull-requests)
 
-
 (provide 'siren-helm)
+;;; siren-helm.el ends here

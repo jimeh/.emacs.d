@@ -1,6 +1,10 @@
-;;
-;; window-management
-;;
+;;; siren-window-management.el --- jimeh's Emacs Siren: window-management.
+
+;;; Commentary:
+
+;; Basic window management stuff.
+
+;;; Code:
 
 (defun ignore-error-wrapper (fn)
   "Funtion return new function that ignore errors.
@@ -10,7 +14,6 @@
       (interactive)
       (ignore-errors
         (funcall fn)))))
-        
 
 (siren-require-packages '(buffer-move))
 
@@ -29,5 +32,5 @@
 (global-set-key (kbd "M-J") 'buf-move-left)
 (global-set-key (kbd "M-L") 'buf-move-right)
 
-
 (provide 'siren-window-management)
+;;; siren-window-management.el ends here

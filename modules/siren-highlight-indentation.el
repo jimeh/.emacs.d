@@ -1,6 +1,10 @@
-;;
-;; highlight-indentation
-;;
+;;; siren-highlight-indentation.el --- jimeh's Emacs Siren: highlight-indentation-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for highlight-indentation-mode.
+
+;;; Code:
 
 (siren-require-packages '(highlight-indentation))
 
@@ -10,3 +14,4 @@
 
 
 (provide 'siren-highlight-indentation)
+;;; siren-highlight-indentation.el ends here

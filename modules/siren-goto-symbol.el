@@ -1,6 +1,10 @@
-;;
-;; goto-symbol
-;;
+;;; siren-goto-symbol.el --- jimeh's Emacs Siren: goto-symbol.
+
+;;; Commentary:
+
+;; Basic goto-symbol functionality.
+
+;;; Code:
 
 ;; Shamelessly ripped from Emacs Prelude.
 
@@ -59,5 +63,5 @@
 (global-set-key (kbd "C-t") 'siren-goto-symbol)
 (global-set-key (kbd "C-c C-t") 'siren-flush-cache-and-goto-symbol)
 
-
 (provide 'siren-goto-symbol)
+;;; siren-goto-symbol ends here.

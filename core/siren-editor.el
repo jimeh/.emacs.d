@@ -1,6 +1,10 @@
-;;
-;; editor
-;;
+;;; siren-core.el --- jimeh's Emacs Siren: Editor settings.
+
+;;; Commentary:
+
+;; Default editor settings for Siren.
+
+;;; Code:
 
 ;; Set default font
 (if window-system
@@ -202,6 +206,5 @@ indent yanked text (with prefix arg don't indent)."
 ;; (diminish 'hs-minor-mode)
 ;; (diminish 'subword-mode)
 
-
-
 (provide 'siren-editor)
+;;; siren-editor.el ends here

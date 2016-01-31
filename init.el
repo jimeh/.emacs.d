@@ -1,8 +1,10 @@
-;;
-;; Emacs Configuration
-;;
+;;; init.el --- jimeh's Emacs Siren: init file.
 
-;; Set root directory of Emacs config
+;;; Commentary:
+
+;; The file that starts it all.
+
+;;; Code:
 
 ;; I need to keep this here commented out like this to prevent package.el from
 ;; automatically adding it again. I call `(package-initalize)' manually from
@@ -83,3 +85,5 @@
 ;; the theme
 (if (file-exists-p siren-theme-file)
   (load siren-theme-file))
+
+;;; init.el ends here

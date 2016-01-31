@@ -1,6 +1,10 @@
-;;
-;; emacs-lisp
-;;
+;;; siren-emacs-lisp.el --- jimeh's Emacs Siren: emacs-lisp-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for emacs-lisp-mode.
+
+;;; Code:
 
 (siren-require-packages '(rainbow-mode))
 
@@ -43,5 +47,5 @@
 (eval-after-load "rainbow-mode"
   '(diminish 'rainbow-mode))
 
-
 (provide 'siren-emacs-lisp)
+;;; siren-emacs-lisp.el ends here

@@ -1,6 +1,10 @@
-;;
-;; css
-;;
+;;; siren-css.el --- jimeh's Emacs Siren: css-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for css-mode.
+
+;;; Code:
 
 (require 'siren-programming)
 
@@ -23,5 +27,5 @@
      (add-hook 'css-mode-hook (lambda ()
                                 (run-hooks 'siren-css-mode-hook)))))
 
-
 (provide 'siren-css)
+;;; siren-css.el ends here

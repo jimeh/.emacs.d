@@ -1,6 +1,10 @@
-;;
-;; haml
-;;
+;;; siren-haml.el --- jimeh's Emacs Siren: haml-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for haml-mode.
+
+;;; Code:
 
 (siren-require-packages '(haml-mode))
 
@@ -19,5 +23,5 @@
 
 (add-hook 'haml-mode-hook (lambda () (run-hooks 'siren-haml-mode-hook)))
 
-
 (provide 'siren-haml)
+;;; siren-haml.el ends here

@@ -1,6 +1,10 @@
-;;
-;; perspective
-;;
+;;; siren-perspective.el --- jimeh's Emacs Siren: perspective configuration.
+
+;;; Commentary:
+
+;; Basic configuration for perspective.
+
+;;; Code:
 
 (siren-require-packages '(perspective))
 
@@ -35,5 +39,5 @@
 
 (persp-mode)
 
-
 (provide 'siren-perspective)
+;;; siren-perspective.el ends here

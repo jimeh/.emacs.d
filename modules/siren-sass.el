@@ -1,6 +1,10 @@
-;;
-;; sass
-;;
+;;; siren-sass.el --- jimeh's Emacs Siren: sass-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for sass-mode.
+
+;;; Code:
 
 (require 'siren-css)
 (siren-require-packages '(sass-mode))
@@ -15,5 +19,5 @@
 
 (add-hook 'sass-mode-hook (lambda () (run-hooks 'siren-sass-mode-hook)))
 
-
 (provide 'siren-sass)
+;;; siren-sass.el ends here

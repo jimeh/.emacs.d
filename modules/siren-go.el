@@ -1,6 +1,10 @@
-;;
-;; go
-;;
+;;; siren-go.el --- jimeh's Emacs Siren: go-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for go-mode.
+
+;;; Code:
 
 (require 'siren-programming)
 
@@ -63,5 +67,5 @@
      (add-hook 'go-mode-hook (lambda ()
                                (run-hooks 'siren-go-mode-hook)))))
 
-
 (provide 'siren-go)
+;;; siren-go.el ends here

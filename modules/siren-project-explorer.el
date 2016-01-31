@@ -1,6 +1,10 @@
-;;
-;; project-explorer
-;;
+;;; siren-project-explorer.el --- jimeh's Emacs Siren: project-explorer configuration.
+
+;;; Commentary:
+
+;; Basic configuration for project-explorer.
+
+;;; Code:
 
 (siren-require-packages '(project-explorer))
 
@@ -26,5 +30,5 @@
             (pe/show-buffer buffer)))
         ))
 
-
 (provide 'siren-project-explorer)
+;;; siren-project-explorer.el ends here

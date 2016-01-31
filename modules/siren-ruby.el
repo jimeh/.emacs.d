@@ -1,6 +1,10 @@
-;;
-;; ruby
-;;
+;;; siren-ruby.el --- jimeh's Emacs Siren: ruby-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for ruby-mode.
+
+;;; Code:
 
 (require 'siren-programming)
 (require 'siren-company)
@@ -79,5 +83,5 @@
 ;;       (auto-complete)
 ;;     ad-do-it))
 
-
 (provide 'siren-ruby)
+;;; siren-ruby.el ends here

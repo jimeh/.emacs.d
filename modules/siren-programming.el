@@ -1,6 +1,10 @@
-;;
-;; programming
-;;
+;;; siren-programming.el --- jimeh's Emacs Siren: defaults for programming modes
+
+;;; Commentary:
+
+;; Basic configuration shared across all programming languages.
+
+;;; Code:
 
 (require 'siren-fci)
 (require 'siren-flycheck)
@@ -32,3 +36,4 @@
 
 
 (provide 'siren-programming)
+;;; siren-programming.el ends here

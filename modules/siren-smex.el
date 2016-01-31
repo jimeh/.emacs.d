@@ -1,6 +1,10 @@
-;;
-;; smex
-;;
+;;; siren-smex.el --- jimeh's Emacs Siren: smex.
+
+;;; Commentary:
+
+;; Replace M-x with the more powerful smex.
+
+;;; Code:
 
 (siren-require-packages '(smex))
 
@@ -16,5 +20,5 @@
 (global-set-key (kbd "C-c C-m") 'smex)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-
 (provide 'siren-smex)
+;;; siren-smex.el ends here

@@ -1,6 +1,10 @@
-;;
-;; projectile
-;;
+;;; siren-projectile.el --- jimeh's Emacs Siren: projectile configuration.
+
+;;; Commentary:
+
+;; Basic configuration for projectile.
+
+;;; Code:
 
 (siren-require-packages '(projectile))
 
@@ -41,7 +45,6 @@
 ;; (setq projectile-known-projects-file (expand-file-name
 ;;                                      "projectile-bookmarks.eld" siren-savefile-dir))
 
-
 (projectile-global-mode t)
 
 ;; Keybindings
@@ -51,5 +54,5 @@
 (global-set-key (kbd "C-x C-v") 'projectile-switch-to-buffer)
 (global-set-key (kbd "C-c C-s") 'projectile-switch-project)
 
-
 (provide 'siren-projectile)
+;;; siren-projectile.el ends here

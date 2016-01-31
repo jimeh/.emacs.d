@@ -1,6 +1,10 @@
-;;
-;; lisp
-;;
+;;; siren-lisp.el --- jimeh's Emacs Siren: lisp-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for lisp-mode.
+
+;;; Code:
 
 (require 'siren-programming)
 (siren-require-packages '(rainbow-delimiters))
@@ -30,5 +34,5 @@
 
 (setq siren-interactive-lisp-coding-hook 'siren-interactive-lisp-coding-defaults)
 
-
 (provide 'siren-lisp)
+;;; siren-lisp.el ends here

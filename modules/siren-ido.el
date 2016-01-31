@@ -1,6 +1,10 @@
-;;
-;; ido relateed
-;;
+;;; siren-ido.el --- jimeh's Emacs Siren: ido configuration.
+
+;;; Commentary:
+
+;; Basic configuration for ido.
+
+;;; Code:
 
 (siren-require-packages '(ido-ubiquitous ido-vertical-mode smex))
 
@@ -32,5 +36,5 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
-
 (provide 'siren-ido)
+;;; siren-ido.el ends here

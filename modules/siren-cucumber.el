@@ -1,6 +1,10 @@
-;;
-;; feature
-;;
+;;; siren-cucumber.el --- jimeh's Emacs Siren: feature-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for feature-mode.
+
+;;; Code:
 
 (require 'siren-programming)
 
@@ -18,5 +22,5 @@
 (add-hook 'feature-mode-hook (lambda ()
                                (run-hooks 'siren-feature-mode-hook)))
 
-
 (provide 'siren-cucumber)
+;;; siren-cucumber.el ends here

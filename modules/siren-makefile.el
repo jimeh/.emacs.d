@@ -1,6 +1,10 @@
-;;
-;; makefile
-;;
+;;; siren-makefile.el --- jimeh's Emacs Siren: makefile-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for makefile-mode.
+
+;;; Code:
 
 (require 'siren-programming)
 
@@ -19,5 +23,5 @@
 (add-hook 'makefile-mode-hook (lambda ()
                                 (run-hooks 'siren-makefile-mode-hook)))
 
-
 (provide 'siren-makefile)
+;;; siren-makefile.el ends here

@@ -1,6 +1,10 @@
-;;
-;; coffeescript
-;;
+;;; siren-thrift.el --- jimeh's Emacs Siren: thrift-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for thrift-mode.
+
+;;; Code:
 
 (require 'siren-programming)
 
@@ -19,5 +23,5 @@
 (add-hook 'thrift-mode-hook (lambda ()
                               (run-hooks 'siren-thrift-mode-hook)))
 
-
 (provide 'siren-thrift)
+;;; siren-thrift.el ends here

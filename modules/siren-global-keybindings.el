@@ -1,6 +1,10 @@
-;;
-;; global keybindings (customized)
-;;
+;;; siren-global-keybindings.el --- jimeh's Emacs Siren: Global keybindings.
+
+;;; Commentary:
+
+;; Basic global keybindings.
+
+;;; Code:
 
 (require 'siren-helpers)
 
@@ -77,6 +81,5 @@
   (global-set-key (kbd "s-<left>") 'beginning-of-line)
   (global-set-key (kbd "s-<right>") 'end-of-line))
 
-
-
 (provide 'siren-global-keybindings)
+;;; siren-global-keybindings.el ends here

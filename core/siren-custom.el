@@ -1,6 +1,12 @@
+;;; siren-custom.el --- jimeh's Emacs Siren: Siren's customizable variables.
+
+;;; Commentary:
+
+;; Refinements of the core editing experience in Emacs.
 ;;
-;; siren custom
-;;
+;; Shamelessly ripped from Emacs Prelude.
+
+;;; Code:
 
 (defcustom siren-yank-indent-threshold 1000
   "Threshold (# chars) over which indentation does not automatically occur."
@@ -21,3 +27,4 @@ Only modes that don't derive from `prog-mode' should be listed here."
 
 
 (provide 'siren-custom)
+;;; siren-custom.el ends here

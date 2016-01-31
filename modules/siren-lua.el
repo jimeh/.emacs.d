@@ -1,6 +1,10 @@
-;;
-;; lua
-;;
+;;; siren-lua.el --- jimeh's Emacs Siren: lua-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for lua-mode.
+
+;;; Code:
 
 (require 'siren-programming)
 
@@ -20,5 +24,5 @@
 (add-hook 'lua-mode-hook (lambda ()
                           (run-hooks 'siren-lua-mode-hook)))
 
-
 (provide 'siren-lua)
+;;; siren-lua.el ends here

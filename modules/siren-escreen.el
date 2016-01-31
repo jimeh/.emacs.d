@@ -1,6 +1,10 @@
-;;
-;; escreen
-;;
+;;; siren-escreen.el --- jimeh's Emacs Siren: escreen configuration.
+
+;;; Commentary:
+
+;; Basic configuration for escreen.
+
+;;; Code:
 
 ;; Loads from vendor.
 (require 'escreen)
@@ -64,5 +68,5 @@
 (add-hook 'escreen-goto-screen-hook
           'escreen-get-active-screen-numbers-with-emphasis)
 
-
 (provide 'siren-escreen)
+;;; siren-escreen.el ends here

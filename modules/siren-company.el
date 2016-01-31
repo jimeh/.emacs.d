@@ -1,6 +1,10 @@
-;;
-;; company
-;;
+;;; siren-company.el --- jimeh's Emacs Siren: company configuration.
+
+;;; Commentary:
+
+;; Basic configuration for company. Auto completion on steroids.
+
+;;; Code:
 
 (siren-require-packages '(company))
 
@@ -39,5 +43,5 @@
   (let ((completion-at-point-functions completion-at-point-functions-saved))
     (company-complete-common)))
 
-
 (provide 'siren-company)
+;;; siren-company.el ends here

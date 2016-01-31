@@ -1,7 +1,11 @@
-;;
-;; core stuff - again shamelessly ripped from Emacs Prelude
-;;
+;;; siren-core.el --- jimeh's Emacs Siren: Core Siren functions.
 
+;;; Commentary:
+
+;; Core Siren functions used a bit all over the place. Some of them shamelessly
+;; ripped from Emacs Prelude.
+
+;;; Code:
 
 (defun siren-smart-open-line-above ()
   "Insert an empty line above the current line.
@@ -20,3 +24,4 @@ Position the cursor at it's beginning, according to the current mode."
 
 
 (provide 'siren-core)
+;;; siren-core.el ends here

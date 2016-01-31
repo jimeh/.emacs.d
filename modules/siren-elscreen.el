@@ -1,6 +1,10 @@
-;;
-;; elscreen
-;;
+;;; siren-elscreen.el --- jimeh's Emacs Siren: elscreen configuration.
+
+;;; Commentary:
+
+;; Basic configuration for elscreen.
+
+;;; Code:
 
 (siren-require-packages '(elscreen elscreen-buffer-group))
 
@@ -28,9 +32,8 @@
 (define-key elscreen-map (kbd ";")   'elscreen-display-screen-name-list)
 (define-key elscreen-map (kbd "C-;") 'elscreen-display-screen-name-list)
 
-
 ;; Start ElScreen.
 (elscreen-start)
 
-
 (provide 'siren-elscreen)
+;;; siren-elscreen.el ends here

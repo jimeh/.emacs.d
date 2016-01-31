@@ -1,6 +1,10 @@
-;;
-;; siren modules setup
-;;
+;;; siren-modules.el --- jimeh's Emacs Siren: Module loading.
+
+;;; Commentary:
+
+;; Load the modules!
+
+;;; Code:
 
 ;; Modules
 (require 'siren-aliases)
@@ -42,7 +46,6 @@
 ;; (require 'siren-perspective)
 ;; (require 'siren-workgroups2)
 
-
 ;; Languages
 (require 'siren-coffee)
 (require 'siren-css)
@@ -60,5 +63,5 @@
 (require 'siren-sh)
 (require 'siren-thrift)
 
-
 (provide 'siren-modules)
+;;; siren-modules.el ends here

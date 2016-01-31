@@ -1,6 +1,10 @@
-;;
-;; auto-complete
-;;
+;;; siren-auto-complete.el --- jimeh's Emacs Siren: auto-complete configuration.
+
+;;; Commentary:
+
+;; Basic configuration for auto-complete.
+
+;;; Code:
 
 (siren-require-packages '(auto-complete))
 
@@ -23,10 +27,10 @@
 
 ;; Auto-complete when indenting.
 (defadvice indent-for-tab-command (around ac-before-indent activate)
-  "Call `auto-complete' if text was recently entered"
+  "Call `auto-complete' if text was recently entered."
   (if (ac-trigger-command-p last-command)
       (auto-complete)
     ad-do-it))
 
-
 (provide 'siren-auto-complete)
+;;; siren-auto-complete.el ends here

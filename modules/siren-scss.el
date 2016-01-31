@@ -1,6 +1,10 @@
-;;
-;; scss
-;;
+;;; siren-scss.el --- jimeh's Emacs Siren: scss-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for scss-mode.
+
+;;; Code:
 
 (require 'siren-css)
 (siren-require-packages '(scss-mode))
@@ -15,5 +19,5 @@
 
 (add-hook 'scss-mode-hook (lambda () (run-hooks 'siren-scss-mode-hook)))
 
-
 (provide 'siren-scss)
+;;; siren-scss.el ends here

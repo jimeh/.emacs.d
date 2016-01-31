@@ -1,6 +1,10 @@
-;;
-;; highlight-symbol
-;;
+;;; siren-highlight-symbol.el --- jimeh's Emacs Siren: highlight-symbol configuration.
+
+;;; Commentary:
+
+;; Basic configuration for highlight-symbol.
+
+;;; Code:
 
 (siren-require-packages '(highlight-symbol))
 
@@ -14,3 +18,4 @@
 
 
 (provide 'siren-highlight-symbol)
+;;; siren-highlight-symbol.el ends here

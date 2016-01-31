@@ -1,6 +1,10 @@
-;;
-;; magit
-;;
+;;; siren-magit.el --- jimeh's Emacs Siren: magit configuration.
+
+;;; Commentary:
+
+;; Basic configuration for magit.
+
+;;; Code:
 
 (siren-require-packages '(magit))
 
@@ -43,5 +47,5 @@
 (add-hook 'git-commit-mode-hook (lambda ()
                                   (run-hooks 'siren-git-commit-mode-hook)))
 
-
 (provide 'siren-magit)
+;;; siren-magit.el ends here

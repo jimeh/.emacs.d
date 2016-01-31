@@ -1,6 +1,10 @@
-;;
-;; dired
-;;
+;;; siren-dired.el --- jimeh's Emacs Siren: dired configuration.
+
+;;; Commentary:
+
+;; Basic configuration for dired.
+
+;;; Code:
 
 (siren-require-packages '(dired+))
 (require 'dired+)
@@ -15,5 +19,5 @@
 (add-hook 'dired-mode-hook (lambda ()
                              (run-hooks 'siren-dired-mode-hook)))
 
-
 (provide 'siren-dired)
+;;; siren-dired.el ends here

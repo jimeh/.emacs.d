@@ -1,6 +1,10 @@
-;;
-;; Setup a few global command aliases
-;;
+;;; siren-aliases.el --- jimeh's Emacs Siren: Common aliases
+
+;;; Commentary:
+
+;; Common aliases I use all the time.
+
+;;; Code:
 
 ;; Text Manipulation
 (defalias 'rs 'replace-string)
@@ -31,5 +35,5 @@
 ;; Modes
 (defalias 'sh 'shell-script-mode)
 
-
 (provide 'siren-aliases)
+;;; siren-aliases.el ends here

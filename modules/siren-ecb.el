@@ -1,6 +1,10 @@
-;;
-;; ecb
-;;
+;;; siren-ecb.el --- jimeh's Emacs Siren: ECB configuration.
+
+;;; Commentary:
+
+;; Basic configuration for ECB.
+
+;;; Code:
 
 (siren-require-packages '(ecb))
 
@@ -28,5 +32,5 @@
 
 (if window-system (ecb-activate))
 
-
 (provide 'siren-ecb)
+;;; siren-ecb.el ends here

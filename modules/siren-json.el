@@ -1,4 +1,4 @@
-;;; siren-json.el --- jimeh's Emacs setup: json-mode configuration.
+;;; siren-json.el --- jimeh's Emacs Siren: json-mode configuration.
 
 ;;; Commentary:
 
@@ -9,7 +9,6 @@
 (require 'siren-programming)
 
 (siren-require-packages '(json-mode))
-;; (require 'json-mode)
 
 (defun siren-json-mode-defaults ()
   "Default tweaks for `json-mode'."

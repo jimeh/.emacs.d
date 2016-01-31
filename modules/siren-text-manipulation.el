@@ -1,14 +1,16 @@
-;;
-;; text-manipulation
-;;
+;;; siren-text-manipulation.el --- jimeh's Emacs Siren: text-manipulation.
+
+;;; Commentary:
+
+;; Various text manipulation functions and keybindings. Some of them shamelessly
+;; ripped from textmate.el: https://github.com/defunkt/textmate.el
+
+;;; Code:
 
 (siren-require-packages '(move-text expand-region))
 
 (require 'move-text)
 (require 'expand-region)
-
-;; Various things shamelessly ripped from textmate.el:
-;;  - https://github.com/defunkt/textmate.el
 
 (defmacro allow-line-as-region-for-function (orig-function)
 `(defun ,(intern (concat (symbol-name orig-function) "-or-line"))
@@ -43,7 +45,6 @@ A place is considered `tab-width' character columns."
   (interactive)
   (siren-shift-right (* -1 (or arg 1))))
 
-
 ;; Keybindings
 (define-key global-map (kbd "M-p") 'move-text-up)
 (define-key global-map (kbd "M-n") 'move-text-down)
@@ -57,5 +58,5 @@ A place is considered `tab-width' character columns."
 (global-set-key (kbd "M-.") 'er/expand-region)
 (global-set-key (kbd "M-,") 'er/contract-region)
 
-
 (provide 'siren-text-manipulation)
+;;; siren-text-manipulation.el ends here

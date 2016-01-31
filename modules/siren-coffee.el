@@ -1,6 +1,10 @@
-;;
-;; coffeescript
-;;
+;;; siren-coffee.el --- jimeh's Emacs Siren: coffee-mode configuration.
+
+;;; Commentary:
+
+;; Basic configuration for coffee-mode.
+
+;;; Code:
 
 (require 'siren-programming)
 
@@ -32,5 +36,5 @@
      (add-hook 'coffee-mode-hook (lambda ()
                                    (run-hooks 'siren-coffee-mode-hook)))))
 
-
 (provide 'siren-coffee)
+;;; siren-coffee.el ends here
