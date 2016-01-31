@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-helpers)
-
 ;; Enable dabbrev-expand via custom keybinding.
 (global-set-key (kbd "C-x M-/") 'dabbrev-expand)
 
@@ -17,21 +15,21 @@
 ;; Evaluate buffer
 (global-set-key (kbd "C-c C-e") 'eval-buffer)
 
-;; Duplicate line (via siren-helpers.el)
-(global-set-key (kbd "C-x C-d") 'duplicate-current-line-or-region)
+;; Duplicate line
+(global-set-key (kbd "C-x C-d") 'siren-duplicate-current-line-or-region)
 
-;; Window switching (via siren-helpers.el).
-(global-set-key (kbd "C-x i")   'other-window-reverse)
+;; Window switching
+(global-set-key (kbd "C-x i")   'siren-other-window-reverse)
 (global-set-key (kbd "C-x C-o") 'other-window)
-(global-set-key (kbd "C-x C-i") 'other-window-reverse)
+(global-set-key (kbd "C-x C-i") 'siren-other-window-reverse)
 
-;; Kill-Ring related (via siren-helpers.el).
-(global-set-key (kbd "M-Y") 'yank-pop-forwards)
+;; Kill-Ring related
+(global-set-key (kbd "M-Y") 'siren-yank-pop-forwards)
 
-;; Align to equal signs (via siren-helpers.el).
-(global-set-key (kbd "C-x a =") 'align-region-to-equals)
-(global-set-key (kbd "M-]") 'align-region-to-equals)
-(global-set-key (kbd "C-x a {") 'align-region-to-opening-brace)
+;; Align to equal signs
+(global-set-key (kbd "C-x a =") 'siren-align-region-to-equals)
+(global-set-key (kbd "M-]") 'siren-align-region-to-equals)
+(global-set-key (kbd "C-x a {") 'siren-align-region-to-opening-brace)
 
 ;; align-regexp
 (global-set-key (kbd "C-c C-a") 'align-regexp)
@@ -39,9 +37,9 @@
 ;; Toggle auto-fill-mode.
 (global-set-key (kbd "C-c q") 'auto-fill-mode)
 
-;; Custom HideShow toggles (via siren-helpers.el)
-(global-set-key (kbd "C-=") 'toggle-selective-display)
-(global-set-key (kbd "C-\\") 'toggle-hiding)
+;; Custom HideShow toggles
+(global-set-key (kbd "C-=") 'siren-toggle-selective-display)
+(global-set-key (kbd "C-\\") 'siren-toggle-hiding)
 
 ;; undo/redo via undo-tree
 (global-set-key (kbd "M--") 'undo-tree-undo)
@@ -55,8 +53,8 @@
 (require 'string-inflection)
 (global-set-key (kbd "C-c C-.") 'string-inflection-cycle)
 
-;; Rename current file and buffer (via siren-helpers.el)
-(global-set-key (kbd "C-c r")  'rename-file-and-buffer)
+;; Rename current file and buffer
+(global-set-key (kbd "C-c r")  'siren-rename-file-and-buffer)
 
 ;; Mac OS X specific keybindings
 (when (eq system-type 'darwin)

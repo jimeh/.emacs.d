@@ -68,7 +68,7 @@
        (let ((map ruby-mode-map))
          (define-key map (kbd "C-j") 'newline-and-indent)
          (define-key map (kbd "RET") 'newline-and-indent)
-         (define-key map (kbd "C-c C-h") 'toggle-hiding)
+         (define-key map (kbd "C-c C-h") 'siren-toggle-hiding)
          (define-key map (kbd "C-c C-l") 'goto-line)))
 
      (setq siren-ruby-mode-hook 'siren-ruby-mode-defaults)

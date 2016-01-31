@@ -28,7 +28,7 @@
 
   (let ((map json-mode-map))
     (define-key map (kbd "C-j") 'newline-and-indent)
-    (define-key map (kbd "C-c C-h") 'toggle-hiding)))
+    (define-key map (kbd "C-c C-h") 'siren-toggle-hiding)))
 
 (setq siren-json-mode-hook 'siren-json-mode-defaults)
 

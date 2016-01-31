@@ -33,7 +33,7 @@
 
        (let ((map js2-mode-map))
          (define-key map (kbd "C-j") 'newline-and-indent)
-         (define-key map (kbd "C-c C-h") 'toggle-hiding)))
+         (define-key map (kbd "C-c C-h") 'siren-toggle-hiding)))
 
      (setq siren-js2-mode-hook 'siren-js2-mode-defaults)
 
