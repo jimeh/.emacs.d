@@ -51,6 +51,12 @@
   '(progn
      (defun siren-ruby-mode-defaults ()
        (siren-prog-mode-defaults)
+
+       (setq ruby-use-smie t)
+       (setq ruby-align-chained-calls t)
+       (setq ruby-insert-encoding-magic-comment t)
+       (setq c-tab-always-indent nil)
+
        (ruby-tools-mode +1)
        (setq tab-width 2)
        (hs-minor-mode 1)
@@ -59,12 +65,6 @@
        (highlight-indentation-mode)
        (highlight-indentation-current-column-mode)
 
-       (setq ruby-use-smie t)
-       (setq ruby-align-chained-calls t)
-       (setq ruby-insert-encoding-magic-comment t)
-
-       (setq c-tab-always-indent nil)
-       (setq ruby-use-encoding-map nil)
        (let ((map ruby-mode-map))
          (define-key map (kbd "C-j") 'newline-and-indent)
          (define-key map (kbd "RET") 'newline-and-indent)
