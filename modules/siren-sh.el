@@ -15,7 +15,7 @@
   (setq tab-width 2)
   (setq sh-basic-offset 2)
   (setq sh-indentation 2)
-  (setq highlight-indentation-offset 2)
+  (highlight-indentation-set-offset 2)
   (highlight-indentation-mode)
   (highlight-indentation-current-column-mode)
   (setq whitespace-action (quote (auto-cleanup)))

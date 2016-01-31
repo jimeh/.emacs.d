@@ -8,13 +8,12 @@
 
 ;; I need to keep this here commented out like this to prevent package.el from
 ;; automatically adding it again. I call `(package-initalize)' manually from
-;; the `packages.el' file that's loaded in further down.
+;; the `core/siren-packages.el' file that's loaded in further down.
 ;;
 ;; (package-initialize)
 
 (defvar current-user
-      (getenv
-       (if (equal system-type 'windows-nt) "USERNAME" "USER")))
+      (getenv (if (equal system-type 'windows-nt) "USERNAME" "USER")))
 
 (message "Siren is powering up... Be patient, Master %s!" current-user)
 
