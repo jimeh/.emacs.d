@@ -60,6 +60,7 @@
 (require 'siren-scss)
 (require 'siren-sh)
 (require 'siren-thrift)
+(require 'siren-yaml)
 
 (provide 'siren-modules)
 ;;; siren-modules.el ends here
