@@ -8,6 +8,10 @@
 
 ;;; Code:
 
+(defgroup siren nil
+  "Basic settings for Siren."
+  :group 'tools)
+
 (defcustom siren-yank-indent-threshold 1000
   "Threshold (# chars) over which indentation does not automatically occur."
   :type 'number
