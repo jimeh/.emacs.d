@@ -30,6 +30,16 @@
      ("~" "~")
      ("/" "/"))))
 
+;; Add "^Icon$" as a exclude to the default sources. Dropbox uses "Icon" files
+;; with some weird unprintable character at the end of the filename to customize
+;; the folder icon. ECB however errors out when trying to render this file,
+;; hence we're no longer displaying it at all.
+(setq ecb-source-file-regexps
+ (quote
+  ((".*"
+    ("\\(^\\(\\.\\|#\\)\\|\\(~$\\|\\.\\(elc\\|obj\\|o\\|class\\|lib\\|dll\\|a\\|so\\|cache\\)$\\)\\)" "^Icon$")
+    ("^\\.\\(emacs\\|gnus\\)$")))))
+
 (if window-system (ecb-activate))
 
 (provide 'siren-ecb)
