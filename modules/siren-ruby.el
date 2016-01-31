@@ -8,6 +8,7 @@
 
 (require 'siren-programming)
 (require 'siren-company)
+(require 'siren-rubocop)
 
 (siren-require-packages '(ruby-tools inf-ruby yari))
 
@@ -62,6 +63,7 @@
        (hs-minor-mode 1)
        (company-mode +1)
        (subword-mode +1)
+       (rubocop-mode 1)
        (highlight-indentation-mode)
        (highlight-indentation-current-column-mode)
 
