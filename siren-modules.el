@@ -52,6 +52,7 @@
 (require 'siren-go)
 (require 'siren-js)
 (require 'siren-json)
+(require 'siren-jsx)
 (require 'siren-lua)
 (require 'siren-makefile)
 (require 'siren-markdown)
@@ -60,6 +61,7 @@
 (require 'siren-scss)
 (require 'siren-sh)
 (require 'siren-thrift)
+(require 'siren-web-mode)
 (require 'siren-yaml)
 
 (provide 'siren-modules)
