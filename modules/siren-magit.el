@@ -21,6 +21,19 @@
 (setq magit-repository-directories
       (quote ("~/Projects" "~/src" "~/.emacs.d" "~/.dotfiles")))
 
+(setq magit-display-buffer-function
+      (lambda (buffer)
+        (display-buffer
+         buffer (if (and (derived-mode-p 'magit-mode)
+                         (memq (with-current-buffer buffer major-mode)
+                               '(magit-process-mode
+                                 magit-revision-mode
+                                 magit-diff-mode
+                                 magit-stash-mode
+                                 magit-status-mode)))
+                    nil
+                  '(display-buffer-same-window)))))
+
 (global-set-key (kbd "C-x g") 'magit-status)
 (defalias 'bl 'magit-blame)
 
