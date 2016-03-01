@@ -13,6 +13,7 @@
 
 (setq neo-show-hidden-files t)
 (setq neo-smart-open nil)
+(setq neo-dont-be-alone t)
 (setq neo-theme (quote nerd))
 (setq neo-window-width 54)
 

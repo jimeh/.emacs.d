@@ -14,7 +14,7 @@
   (siren-prog-mode-defaults)
   (subword-mode)
   (setq tab-width 4)
-  (setq highlight-indentation-offset 4)
+  (highlight-indentation-set-offset 4)
   (highlight-indentation-mode)
   (highlight-indentation-current-column-mode))
 

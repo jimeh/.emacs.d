@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-programming)
+(siren-require-packages '(go-mode company-go go-eldoc go-projectile gotest))
 
 (setenv "GOPATH" (expand-file-name "~/.go"))
 
@@ -17,9 +18,6 @@
 
 (eval-after-load 'go-mode
   '(progn
-     (siren-require-packages
-      '(go-mode company-go go-eldoc go-projectile gotest))
-
      (require 'go-projectile)
      (require 'company-go)
 

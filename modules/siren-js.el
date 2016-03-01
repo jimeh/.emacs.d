@@ -1,8 +1,8 @@
-;;; siren-js.el --- jimeh's Emacs Siren: js-mode configuration.
+;;; siren-js.el --- jimeh's Emacs Siren: js2-mode configuration.
 
 ;;; Commentary:
 
-;; Basic configuration for js-mode.
+;; Basic configuration for js2-mode.
 
 ;;; Code:
 

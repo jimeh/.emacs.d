@@ -13,7 +13,7 @@
 (defun siren-feature-mode-defaults ()
   (siren-prog-mode-defaults)
   (setq tab-width 2)
-  (setq highlight-indentation-offset 2)
+  (highlight-indentation-set-offset 2)
   (highlight-indentation-mode)
   (highlight-indentation-current-column-mode))
 

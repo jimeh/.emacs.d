@@ -34,9 +34,9 @@
 
 ;; Project management
 (require 'siren-projectile)
+;; (require 'siren-neotree)
 (require 'siren-project-explorer)
 (require 'siren-ecb) ;; evil and slows down all of emacs
-;; (require 'siren-neotree)
 
 ;; Workspace management
 (require 'siren-escreen)
