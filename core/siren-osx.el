@@ -6,7 +6,11 @@
 
 ;;; Code:
 
-;; It's all in the Meta
+;; modifier keys
+;; (setq mac-command-modifier 'super)
+;; (setq mac-option-modifier 'meta)
+;; (setq ns-alternate-modifier 'meta)
+;; (setq ns-command-modifier 'super)
 (setq ns-function-modifier 'hyper)
 
 ;; Don't use OSX Native fullscreen mode

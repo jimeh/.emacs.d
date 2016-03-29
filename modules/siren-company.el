@@ -29,6 +29,9 @@
 (define-key company-mode-map [remap indent-for-tab-command]
   'company-indent-for-tab-command)
 
+(define-key company-active-map (kbd "C-n") #'company-select-next)
+(define-key company-active-map (kbd "C-p") #'company-select-previous)
+
 (setq tab-always-indent 'complete)
 
 (defvar completion-at-point-functions-saved nil)

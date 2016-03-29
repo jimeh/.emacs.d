@@ -14,6 +14,7 @@
 (require 'helm-open-github)
 
 (setq helm-ag-source-type "file-line"
+      helm-autoresize-mode 1
       helm-open-github-commit-limit 10000)
 
 ;; Helm
