@@ -15,9 +15,6 @@
 ;; Evaluate buffer
 (global-set-key (kbd "C-c C-e") 'eval-buffer)
 
-;; Duplicate line
-(global-set-key (kbd "C-x C-d") 'siren-duplicate-current-line-or-region)
-
 ;; Window switching
 (global-set-key (kbd "C-x i")   'siren-other-window-reverse)
 (global-set-key (kbd "C-x C-o") 'other-window)

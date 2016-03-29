@@ -7,7 +7,7 @@
 
 ;;; Code:
 
-(siren-require-packages '(move-text expand-region))
+(siren-require-packages '(move-dup expand-region))
 
 (require 'move-text)
 (require 'expand-region)
@@ -46,8 +46,10 @@ A place is considered `tab-width' character columns."
   (siren-shift-right (* -1 (or arg 1))))
 
 ;; Keybindings
-(define-key global-map (kbd "M-p") 'move-text-up)
-(define-key global-map (kbd "M-n") 'move-text-down)
+(global-set-key (kbd "M-p") 'md/move-lines-up)
+(global-set-key (kbd "M-n") 'md/move-lines-down)
+(global-set-key (kbd "C-x C-d") 'md/duplicate-up)
+;; (global-set-key (kbd "C-x C-d") 'md/duplicate-down)
 
 (global-set-key (kbd "C-c [") 'siren-shift-left)
 (global-set-key (kbd "C-c ]") 'siren-shift-right)
