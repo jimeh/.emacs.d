@@ -10,7 +10,7 @@
 (require 'siren-company)
 (require 'siren-rubocop)
 
-(siren-require-packages '(ruby-tools inf-ruby yari))
+(siren-require-packages '(ruby-tools inf-ruby yari ruby-refactor))
 
 ;; Rake files are ruby, too, as are gemspecs, rackup files, and gemfiles.
 (add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
@@ -48,42 +48,36 @@
 ;; Make company-mode play nice
 (push 'ruby-mode company-dabbrev-code-modes)
 
-(eval-after-load 'ruby-mode
-  '(progn
-     (defun siren-ruby-mode-defaults ()
-       (siren-prog-mode-defaults)
+(require 'ruby-mode)
+(require 'ruby-refactor)
 
-       (setq ruby-use-smie t)
-       (setq ruby-align-chained-calls t)
-       (setq ruby-insert-encoding-magic-comment t)
-       (setq c-tab-always-indent nil)
+(defun siren-ruby-mode-defaults ()
+  (siren-prog-mode-defaults)
 
-       (ruby-tools-mode +1)
-       (setq tab-width 2)
-       (hs-minor-mode 1)
-       (company-mode +1)
-       (subword-mode +1)
-       (rubocop-mode 1)
-       (highlight-indentation-mode)
-       (highlight-indentation-current-column-mode)
+  (setq ruby-use-smie t)
+  (setq ruby-align-chained-calls t)
+  (setq ruby-insert-encoding-magic-comment t)
+  (setq c-tab-always-indent nil)
+  (setq ruby-refactor-add-parens t)
 
-       (let ((map ruby-mode-map))
-         (define-key map (kbd "C-j") 'newline-and-indent)
-         (define-key map (kbd "RET") 'newline-and-indent)
-         (define-key map (kbd "C-c C-h") 'siren-toggle-hiding)
-         (define-key map (kbd "C-c C-l") 'goto-line)))
+  (ruby-tools-mode +1)
+  (setq tab-width 2)
+  (hs-minor-mode 1)
+  (company-mode +1)
+  (subword-mode +1)
+  (rubocop-mode 1)
+  (highlight-indentation-current-column-mode)
 
-     (setq siren-ruby-mode-hook 'siren-ruby-mode-defaults)
+  (let ((map ruby-mode-map))
+    (define-key map (kbd "C-j") 'newline-and-indent)
+    (define-key map (kbd "RET") 'newline-and-indent)
+    (define-key map (kbd "C-c C-h") 'siren-toggle-hiding)
+    (define-key map (kbd "C-c C-l") 'goto-line)))
 
-     (add-hook 'ruby-mode-hook (lambda ()
-                                 (run-hooks 'siren-ruby-mode-hook)))))
+(setq siren-ruby-mode-hook 'siren-ruby-mode-defaults)
 
-;; ;; Auto-complete when indenting
-;; (defadvice ruby-indent-command (around ac-before-ruby-indent activate)
-;;   "Call `auto-complete' if text was recently entered"
-;;   (if (ac-trigger-command-p last-command)
-;;       (auto-complete)
-;;     ad-do-it))
+(add-hook 'ruby-mode-hook (lambda ()
+                            (run-hooks 'siren-ruby-mode-hook)))
 
 (provide 'siren-ruby)
 ;;; siren-ruby.el ends here
