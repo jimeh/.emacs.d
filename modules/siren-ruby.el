@@ -60,6 +60,7 @@
   (setq c-tab-always-indent nil)
   (setq ruby-refactor-add-parens t)
 
+  (rubocop-mode 1)
   (ruby-tools-mode +1)
   (setq tab-width 2)
   (hs-minor-mode 1)
