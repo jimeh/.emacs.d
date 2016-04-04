@@ -16,7 +16,6 @@
   (setq sh-basic-offset 2)
   (setq sh-indentation 2)
   (highlight-indentation-set-offset 2)
-  (highlight-indentation-mode)
   (highlight-indentation-current-column-mode)
   (setq whitespace-action (quote (auto-cleanup)))
   (define-key sh-mode-map (kbd "RET") 'newline-and-indent))

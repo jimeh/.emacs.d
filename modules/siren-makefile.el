@@ -15,7 +15,6 @@
   (subword-mode)
   (setq tab-width 4)
   (highlight-indentation-set-offset 4)
-  (highlight-indentation-mode)
   (highlight-indentation-current-column-mode))
 
 (setq siren-makefile-mode-hook 'siren-makefile-mode-defaults)

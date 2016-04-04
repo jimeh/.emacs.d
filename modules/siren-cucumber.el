@@ -14,7 +14,6 @@
   (siren-prog-mode-defaults)
   (setq tab-width 2)
   (highlight-indentation-set-offset 2)
-  (highlight-indentation-mode)
   (highlight-indentation-current-column-mode))
 
 (setq siren-feature-mode-hook 'siren-feature-mode-defaults)

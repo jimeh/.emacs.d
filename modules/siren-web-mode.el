@@ -29,7 +29,6 @@
        (subword-mode +1)
        (hs-minor-mode 1)
        (highlight-indentation-set-offset 2)
-       (highlight-indentation-mode)
        (highlight-indentation-current-column-mode)
 
        (let ((map web-mode-map))

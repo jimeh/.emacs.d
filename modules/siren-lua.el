@@ -13,7 +13,6 @@
 (defun siren-lua-mode-defaults ()
   (siren-prog-mode-defaults)
 
-  (highlight-indentation-mode)
   (highlight-indentation-current-column-mode)
   (setq whitespace-action (quote (auto-cleanup)))
   ;; (define-key lua-mode-map (kbd "RET") 'newline-and-indent)

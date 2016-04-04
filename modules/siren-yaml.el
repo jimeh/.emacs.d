@@ -16,7 +16,6 @@
   (subword-mode +1)
   (setq tab-width 2)
   (highlight-indentation-set-offset 2)
-  (highlight-indentation-mode)
   (highlight-indentation-current-column-mode)
   (setq whitespace-action (quote (auto-cleanup)))
   (define-key yaml-mode-map (kbd "RET") 'newline-and-indent))
