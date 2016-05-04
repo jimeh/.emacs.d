@@ -30,6 +30,7 @@
        (hs-minor-mode 1)
        (highlight-indentation-set-offset 2)
        (highlight-indentation-current-column-mode)
+       (hideshowvis-enable)
 
        (let ((map web-mode-map))
          (define-key map (kbd "C-j") 'newline-and-indent)

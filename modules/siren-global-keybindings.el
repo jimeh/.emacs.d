@@ -34,10 +34,6 @@
 ;; Toggle auto-fill-mode.
 (global-set-key (kbd "C-c q") 'auto-fill-mode)
 
-;; Custom HideShow toggles
-(global-set-key (kbd "C-=") 'siren-toggle-selective-display)
-(global-set-key (kbd "C-\\") 'siren-toggle-hiding)
-
 ;; undo/redo via undo-tree
 (global-set-key (kbd "M--") 'undo-tree-undo)
 (global-set-key (kbd "M-_") 'undo-tree-redo)

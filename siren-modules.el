@@ -12,6 +12,7 @@
 (require 'siren-company)
 (require 'siren-dired)
 (require 'siren-exec-path-from-shell)
+(require 'siren-folding)
 (require 'siren-full-ack)
 (require 'siren-github)
 (require 'siren-global-keybindings)

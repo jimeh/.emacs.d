@@ -29,6 +29,7 @@
        (subword-mode +1)
        (hs-minor-mode 1)
        (highlight-indentation-current-column-mode)
+       (hideshowvis-enable)
 
        (let ((map js2-mode-map))
          (define-key map (kbd "C-j") 'newline-and-indent)

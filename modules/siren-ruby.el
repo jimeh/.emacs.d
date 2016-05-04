@@ -68,6 +68,7 @@
   (subword-mode +1)
   (rubocop-mode 1)
   (highlight-indentation-current-column-mode)
+  (hideshowvis-enable)
 
   (let ((map ruby-mode-map))
     (define-key map (kbd "C-j") 'newline-and-indent)

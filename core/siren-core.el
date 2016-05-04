@@ -42,26 +42,6 @@ Position the cursor at it's beginning, according to the current mode."
   (interactive)
   (other-window -1))
 
-(defun siren-toggle-hiding (column)
-  "Toggle hiding/showing blocks via hs-mode.
-
-Borrowed from: http://www.emacswiki.org/emacs/HideShow"
-  (interactive "P")
-  (if hs-minor-mode
-      (if (condition-case nil
-              (hs-toggle-hiding)
-            (error t))
-          (hs-show-all))
-    (siren-toggle-selective-display column)))
-
-(defun siren-toggle-selective-display (column)
-  "Helper function for `siren-toggle-hiding'."
-  (interactive "P")
-  (set-selective-display
-   (or column
-       (unless selective-display
-         (1+ (current-column))))))
-
 (defun siren-rename-file-and-buffer ()
   "Rename the current buffer and file it is visiting.
 
