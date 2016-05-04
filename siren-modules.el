@@ -29,6 +29,7 @@
 (require 'siren-scroll-half-screen)
 (require 'siren-smartparens)
 (require 'siren-smex)
+(require 'siren-swiper)
 (require 'siren-text-manipulation)
 (require 'siren-window-management)
 (require 'siren-yasnippet)
