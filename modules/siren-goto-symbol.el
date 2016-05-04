@@ -8,6 +8,8 @@
 
 ;; Shamelessly ripped from Emacs Prelude.
 
+(siren-require-packages '(imenu-anywhere))
+
 (require 'imenu)
 (set-default 'imenu-auto-rescan t)
 (set-default 'imenu-max-item-length 160)
@@ -63,6 +65,7 @@
 
 (global-set-key (kbd "C-t") 'siren-goto-symbol)
 (global-set-key (kbd "C-c C-t") 'siren-flush-cache-and-goto-symbol)
+(global-set-key (kbd "C-c t") #'imenu-anywhere)
 
 (provide 'siren-goto-symbol)
 ;;; siren-goto-symbol ends here.
