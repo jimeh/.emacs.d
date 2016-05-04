@@ -26,5 +26,8 @@
 ;; Aliases
 (defalias 'rw 'sp-rewrap-sexp)
 
+(custom-set-faces
+ '(sp-pair-overlay-face ((t (:inherit nil)))))
+
 (provide 'siren-smartparens)
 ;;; siren-smartparens.el ends here

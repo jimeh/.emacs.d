@@ -48,5 +48,8 @@
 (define-key persp-mode-map (kbd "C-z p") 'persp-prev)
 (define-key persp-mode-map (kbd "C-z C-p") 'persp-prev)
 
+(custom-set-faces
+ '(persp-selected-face ((t (:foreground "#d97a35" :weight bold)))))
+
 (provide 'siren-perspective)
 ;;; siren-perspective.el ends here
