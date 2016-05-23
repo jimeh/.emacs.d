@@ -50,6 +50,7 @@
 (require 'siren-coffee)
 (require 'siren-css)
 (require 'siren-cucumber)
+(require 'siren-dockerfile)
 (require 'siren-emacs-lisp)
 (require 'siren-go)
 (require 'siren-js)
