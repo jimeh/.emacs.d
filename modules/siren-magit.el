@@ -13,26 +13,16 @@
 
 (setq magit-completing-read-function 'magit-ido-completing-read)
 (setq magit-status-buffer-switch-function 'switch-to-buffer)
-(setq magit-bury-buffer-function 'magit-mode-quit-window)
+(setq magit-bury-buffer-function 'bury-buffer)
 (setq magit-restore-window-configuration nil)
-(setq magit-revert-buffers (quote silent))
+(setq magit-revert-buffers 'silent)
 (setq magit-default-tracking-name-function
       'magit-default-tracking-name-branch-only)
 (setq magit-repository-directories
       (quote ("~/Projects" "~/src" "~/.emacs.d" "~/.dotfiles")))
 
 (setq magit-display-buffer-function
-      (lambda (buffer)
-        (display-buffer
-         buffer (if (and (derived-mode-p 'magit-mode)
-                         (memq (with-current-buffer buffer major-mode)
-                               '(magit-process-mode
-                                 magit-revision-mode
-                                 magit-diff-mode
-                                 magit-stash-mode
-                                 magit-status-mode)))
-                    nil
-                  '(display-buffer-same-window)))))
+      'magit-display-buffer-same-window-except-diff-v1)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 (defalias 'bl 'magit-blame)
