@@ -6,9 +6,11 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (siren-require-packages '(conf-mode))
 
-(require 'siren-programming)
+(add-to-list 'auto-mode-alist '("Procfile\\'" . conf-mode))
 
 (defun siren-conf-mode-defaults ()
   (siren-prog-mode-defaults)
