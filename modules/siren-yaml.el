@@ -6,9 +6,12 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (siren-require-package 'yaml-mode)
 
-(require 'siren-programming)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
 
 (defun siren-yaml-mode-defaults ()
   (siren-prog-mode-defaults)
