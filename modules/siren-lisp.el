@@ -29,6 +29,7 @@
 ;; interactive modes don't need whitespace checks
 (defun siren-interactive-lisp-coding-defaults ()
   ;; (smartparens-strict-mode +1)
+  (highlight-indent-guides-mode)
   (rainbow-delimiters-mode +1)
   (whitespace-mode -1))
 

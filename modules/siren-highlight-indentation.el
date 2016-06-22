@@ -6,9 +6,11 @@
 
 ;;; Code:
 
-(siren-require-packages '(highlight-indentation))
+(siren-require-packages '(highlight-indentation highlight-indent-guides))
 
 (require 'highlight-indentation)
+(require 'highlight-indent-guides)
+
 (diminish 'highlight-indentation-mode)
 (diminish 'highlight-indentation-current-column-mode)
 
