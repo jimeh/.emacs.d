@@ -24,7 +24,7 @@
      ("~/.dotfiles" ".dotfiles")
      ("~/Projects/which" "which")
      ("~/Projects/fitzdares" "fitzdares")
-     ("~/.go" ".go")
+     ("~/Projects/Go" "Go")
      ("~/src" "src")
      ("~/Sites" "Sites")
      ("~" "~")

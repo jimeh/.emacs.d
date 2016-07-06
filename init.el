@@ -62,10 +62,10 @@
 (siren-add-subfolders-to-load-path siren-vendor-dir)
 
 ;; core stuff
-(require 'siren-env)
 (require 'siren-custom)
 (require 'siren-core)
 (require 'siren-packages)
+(require 'siren-env)
 (require 'siren-ui)
 (require 'siren-editor)
 

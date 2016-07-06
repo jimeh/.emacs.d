@@ -24,6 +24,7 @@
     diminish
     easy-kill
     epl
+    exec-path-from-shell
     gist
     git-timemachine
     gitconfig-mode
