@@ -7,17 +7,21 @@
 ;;; Code:
 
 (require 'siren-programming)
-(siren-require-packages '(go-mode company-go go-eldoc go-projectile gotest))
+(siren-require-packages
+ '(go-mode company-go go-eldoc go-projectile gotest flycheck-gometalinter))
 
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-copy-env "GOPATH"))
 
-;; (setenv "GOPATH" (expand-file-name "~/.go"))
-;; (setq exec-path (cons "~/.go/bin" exec-path))
-;; (setenv "PATH" (concat "~/.go/bin" ":" (getenv "PATH")))
-
 ;; Ignore go test -c output files
 (add-to-list 'completion-ignored-extensions ".test")
+
+(require 'flycheck-gometalinter)
+(setq flycheck-gometalinter-fast t)
+(setq flycheck-gometalinter-tests t)
+(setq flycheck-gometalinter-vendor t)
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-gometalinter-setup))
 
 (define-key 'help-command (kbd "G") 'godoc)
 
