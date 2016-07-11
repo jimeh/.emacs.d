@@ -8,7 +8,14 @@
 
 (require 'siren-programming)
 (siren-require-packages
- '(go-mode company-go go-eldoc go-projectile gotest flycheck-gometalinter))
+ '(go-mode
+   company-go
+   go-eldoc
+   go-projectile
+   gotest
+   go-guru
+   go-rename
+   flycheck-gometalinter))
 
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-copy-env "GOPATH"))
@@ -28,6 +35,8 @@
 (eval-after-load 'go-mode
   '(progn
      (require 'go-projectile)
+     (require 'go-guru)
+     (require 'go-rename)
      (require 'company-go)
 
      (defun siren-go-mode-defaults ()
@@ -40,6 +49,8 @@
          (define-key map (kbd "C-c m") 'go-test-current-file)
          (define-key map (kbd "C-c .") 'go-test-current-test)
          (define-key map (kbd "C-c b") 'go-run)
+         (define-key map (kbd "C-c d") 'godef-jump)
+         (define-key map (kbd "C-c C-j") 'avy-goto-word-or-subword-1)
          (define-key map (kbd "C-h f") 'godoc-at-point))
 
        ;; Prefer goimports to gofmt if installed
@@ -59,6 +70,10 @@
 
        ;; enable hide/show
        (hs-minor-mode 1)
+
+       ;; go-guru
+       (go-guru-hl-identifier-mode 1)
+       (setq go-guru-hl-identifier-idle-time 0.1)
 
        ;; stop whitespace being highlighted
        (whitespace-toggle-options '(tabs))
