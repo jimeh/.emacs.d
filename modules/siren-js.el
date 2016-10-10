@@ -21,7 +21,7 @@
     (setq js-indent-level indent-width)
     (setq indent-level indent-width)
     (setq tab-width indent-width))
-  (setq jsfmt-command "standard-format")
+  (setq jsfmt-command "semistandard-format")
 
   (siren-prog-mode-defaults)
   (company-mode +1)
