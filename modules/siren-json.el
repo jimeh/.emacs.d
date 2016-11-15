@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-programming)
+(require 'omnifmt)
 
 (siren-require-packages '(json-mode))
 
@@ -20,6 +21,7 @@
     (setq tab-width indent-width)
     (highlight-indentation-set-offset indent-width))
 
+  (omnifmt-mode)
   (company-mode +1)
   (subword-mode +1)
   (hs-minor-mode 1)

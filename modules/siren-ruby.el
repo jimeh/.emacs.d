@@ -9,6 +9,7 @@
 (require 'siren-programming)
 (require 'siren-company)
 (require 'siren-rubocop)
+(require 'omnifmt)
 
 (siren-require-packages '(ruby-tools inf-ruby yari ruby-refactor))
 
@@ -60,7 +61,7 @@
   (setq c-tab-always-indent nil)
   (setq ruby-refactor-add-parens t)
 
-  (rubocop-mode 1)
+  (omnifmt-mode)
   (ruby-tools-mode +1)
   (setq tab-width 2)
   (hs-minor-mode 1)
