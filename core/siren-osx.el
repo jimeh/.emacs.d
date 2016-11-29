@@ -6,6 +6,10 @@
 
 ;;; Code:
 
+;; Set default font
+(if window-system
+    (set-face-attribute 'default nil :family "Monaco" :height 100))
+
 ;; modifier keys
 ;; (setq mac-command-modifier 'super)
 ;; (setq mac-option-modifier 'meta)

@@ -6,10 +6,6 @@
 
 ;;; Code:
 
-;; Set default font
-(if window-system
-    (set-face-attribute 'default nil :family "Monaco" :height 100))
-
 ;; don't use tabs to indent
 (setq-default indent-tabs-mode nil)
 

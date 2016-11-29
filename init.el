@@ -73,6 +73,9 @@
 (when (eq system-type 'darwin)
   (require 'siren-osx))
 
+(when (eq system-type 'gnu/linux)
+  (require 'siren-linux))
+
 ;; config changes made through the customize UI will be store here
 (setq custom-file (expand-file-name "custom.el" siren-dir))
 (load-file custom-file)
