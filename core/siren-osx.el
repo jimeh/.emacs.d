@@ -10,6 +10,9 @@
 (if window-system
     (set-face-attribute 'default nil :family "Monaco" :height 100))
 
+;; Mac OS X Fullscreen (requires Emacs 24.4 or later)
+(global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
+
 ;; modifier keys
 ;; (setq mac-command-modifier 'super)
 ;; (setq mac-option-modifier 'meta)

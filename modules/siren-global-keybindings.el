@@ -49,20 +49,16 @@
 ;; Rename current file and buffer
 (global-set-key (kbd "C-c r")  'siren-rename-file-and-buffer)
 
+;; Flyspell correct previous word
+(when (require 'flyspell nil 'noerror)
+  (global-set-key (kbd "s-.") 'flyspell-correct-word-before-point))
+
 ;; Mac OS X specific keybindings
 (when (eq system-type 'darwin)
-
-  ;; Mac OS X Fullscreen (requires Emacs 24.4 or later)
-  (global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
-
   ;; Undo/Redo (via undo-tree)
   (when (require 'undo-tree nil 'noerror)
     (global-set-key (kbd "s-z") 'undo-tree-undo)
     (global-set-key (kbd "s-Z") 'undo-tree-redo))
-
-  ;; Flyspell correct previous word
-  (when (require 'flyspell nil 'noerror)
-    (global-set-key (kbd "s-.") 'flyspell-correct-word-before-point))
 
   ;; Move to beginning/end of buffer
   (global-set-key (kbd "s-<up>") 'beginning-of-buffer)
