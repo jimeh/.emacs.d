@@ -52,7 +52,6 @@
 (global-set-key (kbd "C-x C-t") 'projectile-find-file)
 (global-set-key (kbd "C-x t") 'projectile-find-test-file)
 (global-set-key (kbd "C-x C-v") 'projectile-switch-to-buffer)
-(global-set-key (kbd "C-c C-s") 'projectile-switch-project)
 
 (provide 'siren-projectile)
 ;;; siren-projectile.el ends here

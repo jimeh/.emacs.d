@@ -6,12 +6,14 @@
 
 ;;; Code:
 
-(siren-require-packages '(helm helm-swoop helm-projectile helm-open-github))
+(siren-require-packages
+ '(helm helm-swoop helm-ag helm-projectile helm-open-github))
 
 (require 'helm)
 (require 'helm-swoop)
 (require 'helm-projectile)
 (require 'helm-open-github)
+(require 'helm-ag)
 
 (setq helm-ag-source-type "file-line"
       helm-autoresize-mode 1
@@ -29,6 +31,9 @@
 (global-set-key (kbd "M-R") 'helm-swoop-back-to-last-point)
 (global-set-key (kbd "C-c M-r") 'helm-multi-swoop)
 (global-set-key (kbd "C-x M-r") 'helm-multi-swoop-all)
+
+;; Helm ag
+(global-set-key (kbd "C-c C-s") 'helm-do-ag)
 
 ;; Helm Projectile
 (global-set-key (kbd "C-c ;") 'helm-projectile)
