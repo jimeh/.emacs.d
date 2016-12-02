@@ -10,7 +10,8 @@
 
 (require 'full-ack)
 (setq ack-arguments
-      (quote ("--ignore-dir=vendor/ruby"
+      (quote ("--sort-files"
+              "--ignore-dir=vendor/ruby"
               "--ignore-dir=vendor/bundle"
               "--ignore-dir=coverage"
               "--ignore-dir=savefile"
