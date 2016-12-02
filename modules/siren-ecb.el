@@ -20,6 +20,7 @@
 (setq ecb-source-path
    (quote
     (("~/Projects" "Projects")
+     ("/media/projects" "devbox/projects")
      ("~/.emacs.d" ".emacs.d")
      ("~/.dotfiles" ".dotfiles")
      ("~/Projects/which" "which")
