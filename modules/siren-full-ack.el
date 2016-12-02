@@ -39,6 +39,8 @@
               "\\`Makefile\\'")))
 (setq ack-prompt-for-directory 'unless-guessed)
 
+;; Set global keybinding
+(global-set-key (kbd "C-c C-a") 'ack)
 
 (provide 'siren-full-ack)
 ;;; siren-full-ack.el ends here

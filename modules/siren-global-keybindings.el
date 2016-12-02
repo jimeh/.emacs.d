@@ -25,11 +25,10 @@
 
 ;; Align to equal signs
 (global-set-key (kbd "C-x a =") 'siren-align-region-to-equals)
-(global-set-key (kbd "M-]") 'siren-align-region-to-equals)
 (global-set-key (kbd "C-x a {") 'siren-align-region-to-opening-brace)
 
 ;; align-regexp
-(global-set-key (kbd "C-c C-a") 'align-regexp)
+(global-set-key (kbd "C-c a") 'align-regexp)
 
 ;; Toggle auto-fill-mode.
 (global-set-key (kbd "C-c q") 'auto-fill-mode)

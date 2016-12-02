@@ -41,6 +41,8 @@
 
 (global-set-key (kbd "C-c [") 'smart-shift-left)
 (global-set-key (kbd "C-c ]") 'smart-shift-right)
+(global-set-key (kbd "M-[") 'smart-shift-left)
+(global-set-key (kbd "M-]") 'smart-shift-right)
 
 (global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
