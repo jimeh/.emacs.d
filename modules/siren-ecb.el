@@ -23,6 +23,7 @@
      ("/media/projects" "devbox/projects")
      ("~/.emacs.d" ".emacs.d")
      ("~/.dotfiles" ".dotfiles")
+     ("~/Notes" "Notes")
      ("~/Projects/which" "which")
      ("~/Projects/fitzdares" "fitzdares")
      ("~/Projects/Go" "Go")
