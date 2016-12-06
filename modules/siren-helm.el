@@ -7,15 +7,17 @@
 ;;; Code:
 
 (siren-require-packages
- '(helm helm-swoop helm-ag helm-projectile helm-open-github))
+ '(helm helm-swoop helm-ag helm-projectile helm-open-github helm-ls-git))
 
 (require 'helm)
 (require 'helm-swoop)
 (require 'helm-projectile)
 (require 'helm-open-github)
 (require 'helm-ag)
+(require 'helm-ls-git)
 
-(setq helm-ag-source-type "file-line"
+(setq helm-ag-ignore-patterns '("*.sql")
+      helm-ag-source-type "file-line"
       helm-autoresize-mode 1
       helm-open-github-commit-limit 10000)
 
