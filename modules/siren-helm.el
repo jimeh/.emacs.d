@@ -29,7 +29,7 @@
 (global-set-key (kbd "C-c h") 'helm-mini)
 
 ;; Helm Swoop
-(global-set-key (kbd "M-r") 'helm-swoop)
+(global-set-key (kbd "M-r") 'helm-swoop-without-pre-input)
 (global-set-key (kbd "M-R") 'helm-swoop-back-to-last-point)
 (global-set-key (kbd "C-c M-r") 'helm-multi-swoop)
 (global-set-key (kbd "C-x M-r") 'helm-multi-swoop-all)
