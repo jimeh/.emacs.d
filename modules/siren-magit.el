@@ -9,6 +9,7 @@
 (siren-require-packages '(magit))
 
 (require 'siren-fci)
+(require 'siren-ediff)
 (require 'magit)
 
 (setq magit-completing-read-function 'magit-ido-completing-read)
@@ -23,9 +24,6 @@
 
 (setq magit-display-buffer-function
       'magit-display-buffer-same-window-except-diff-v1)
-
-(global-set-key (kbd "C-x g") 'magit-status)
-(defalias 'bl 'magit-blame)
 
 ;; Configure magit-mode
 (defun siren-magit-mode-defaults ()
@@ -49,6 +47,13 @@
 
 (add-hook 'git-commit-mode-hook (lambda ()
                                   (run-hooks 'siren-git-commit-mode-hook)))
+
+;; Keybindings
+(global-set-key (kbd "C-x g") 'magit-status)
+
+;; Aliases
+(defalias 'bl 'magit-blame)
+
 
 (provide 'siren-magit)
 ;;; siren-magit.el ends here
