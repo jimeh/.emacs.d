@@ -11,6 +11,7 @@
 (require 'siren-avy)
 (require 'siren-company)
 (require 'siren-dired)
+(require 'siren-direx)
 (require 'siren-folding)
 (require 'siren-full-ack)
 (require 'siren-github)
@@ -36,8 +37,8 @@
 ;; Project management
 (require 'siren-projectile)
 ;; (require 'siren-neotree)
-(require 'siren-project-explorer)
-(require 'siren-ecb) ;; evil and slows down all of emacs
+;; (require 'siren-project-explorer)
+(require 'siren-ecb)
 
 ;; Workspace management
 (require 'siren-escreen)
