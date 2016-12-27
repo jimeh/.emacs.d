@@ -8,7 +8,7 @@
 
 ;; Set default font
 (if window-system
-    (set-face-attribute 'default nil :family "Monaco" :height 100))
+    (set-face-attribute 'default nil :family "Monaco" :height 120))
 
 ;; Mac OS X Fullscreen (requires Emacs 24.4 or later)
 (global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
