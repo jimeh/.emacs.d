@@ -67,7 +67,6 @@
   (hs-minor-mode 1)
   (company-mode +1)
   (subword-mode +1)
-  (rubocop-mode 1)
   (highlight-indentation-current-column-mode)
   (hideshowvis-enable)
 
