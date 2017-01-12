@@ -13,6 +13,7 @@
 (require 'siren-dired)
 (require 'siren-direx)
 (require 'siren-edit-server)
+;; (require 'siren-editorconfig)
 (require 'siren-folding)
 (require 'siren-full-ack)
 (require 'siren-github)
