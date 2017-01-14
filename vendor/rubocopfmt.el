@@ -37,6 +37,11 @@
     (unwind-protect
         (save-restriction
           (widen)
+          ;; Trailing whitespace on empty lines can cause incorrect correction
+          ;; behavior by Rubocop, so we clean up whitespace before handing
+          ;; things off to rubocopfmt.
+          (whitespace-cleanup)
+
           (with-current-buffer patchbuf (erase-buffer))
           (message "Calling rubocopfmt: %s %s"
                    rubocopfmt-command rubocopfmt-args)
