@@ -35,6 +35,7 @@
 (require 'siren-text-manipulation)
 (require 'siren-window-management)
 (require 'siren-yasnippet)
+(require 'siren-zone)
 
 ;; Project management
 (require 'siren-projectile)
