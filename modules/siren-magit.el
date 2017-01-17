@@ -36,12 +36,11 @@
 
 ;; Configure git-commit-mode
 (defun siren-git-commit-mode-defaults ()
-  (subword-mode +1)
+  (subword-mode)
   (setq tab-width 2)
   (flyspell-mode)
   (linum-mode t)
-  (auto-fill-mode)
-  (subword-mode))
+  (auto-fill-mode))
 
 (setq siren-git-commit-mode-hook 'siren-git-commit-mode-defaults)
 
