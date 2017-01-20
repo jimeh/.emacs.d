@@ -31,17 +31,13 @@
   (let ((patchbuf (get-buffer-create "*Rubocopfmt patch*"))
         (coding-system-for-read 'utf-8)
         (coding-system-for-write 'utf-8)
-        (rubocopfmt-args (list
-                          "-D" "rcs" "-F" (file-truename buffer-file-name))))
+        (rubocopfmt-args
+         (list "--diff-format" "rcs"
+               "--src-dir" (file-name-directory (file-truename buffer-file-name)))))
 
     (unwind-protect
         (save-restriction
           (widen)
-          ;; Trailing whitespace on empty lines can cause incorrect correction
-          ;; behavior by Rubocop, so we clean up whitespace before handing
-          ;; things off to rubocopfmt.
-          (whitespace-cleanup)
-
           (with-current-buffer patchbuf (erase-buffer))
           (message "Calling rubocopfmt: %s %s"
                    rubocopfmt-command rubocopfmt-args)
