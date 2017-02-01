@@ -27,6 +27,7 @@
 (require 'siren-magit)
 (require 'siren-move-beginning-of-line)
 (require 'siren-multiple-cursors)
+(require 'siren-package-lint)
 (require 'siren-phi-search)
 (require 'siren-scroll-half-screen)
 (require 'siren-smartparens)
