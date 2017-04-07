@@ -21,6 +21,7 @@
 (defun siren-markdown-mode-defaults ()
   (setq whitespace-action nil)
   (setq fill-column 80)
+  (setq markdown-asymmetric-header t)
   (fci-mode)
   (linum-mode t)
   (flyspell-mode)

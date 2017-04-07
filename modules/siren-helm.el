@@ -7,7 +7,8 @@
 ;;; Code:
 
 (siren-require-packages
- '(helm helm-swoop helm-ag helm-projectile helm-open-github helm-ls-git))
+ '(helm helm-swoop helm-ag helm-projectile helm-open-github helm-ls-git
+        helm-gtags))
 
 (require 'helm)
 (require 'helm-swoop)
@@ -15,6 +16,7 @@
 (require 'helm-open-github)
 (require 'helm-ag)
 (require 'helm-ls-git)
+;; (require 'helm-ctags)
 
 (setq helm-ag-ignore-patterns '("*.sql")
       helm-ag-source-type "file-line"
