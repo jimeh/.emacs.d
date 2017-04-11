@@ -1,4 +1,4 @@
-;;; siren-org.el --- jimeh's Emacs Siren: org-mode configuration.
+;;; siren-org-mode.el --- jimeh's Emacs Siren: org-mode configuration.
 
 ;;; Commentary:
 
@@ -24,5 +24,5 @@
 (add-hook 'org-mode-hook (lambda ()
                            (run-hooks 'siren-org-mode-hook)))
 
-(provide 'siren-org)
-;;; siren-org.el ends here
+(provide 'siren-org-mode)
+;;; siren-org-mode.el ends here
