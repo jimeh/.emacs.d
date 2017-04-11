@@ -10,6 +10,7 @@
 (require 'siren-smartparens)
 
 (defun siren-org-mode-defaults ()
+  (setq org-export-backends (quote (ascii html icalendar latex md confluence)))
   (setq fill-column 80)
   (linum-mode t)
   (flyspell-mode)
@@ -17,7 +18,15 @@
   (smartparens-mode +1)
   (setq whitespace-action (quote (auto-cleanup)))
   (visual-line-mode +1)
-  (whitespace-mode +1))
+  (whitespace-mode +1)
+
+  (let ((map org-mode-map))
+    (define-key map (kbd "M-[") 'org-promote-subtree)
+    (define-key map (kbd "M-]") 'org-demote-subtree)
+    (define-key map (kbd "M-p") 'org-metaup)
+    (define-key map (kbd "M-n") 'org-metadown)
+    (define-key map (kbd "C-M-n") 'org-forward-paragraph)
+    (define-key map (kbd "C-M-p") 'org-backward-paragraph)))
 
 (setq siren-org-mode-hook 'siren-org-mode-defaults)
 
