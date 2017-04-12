@@ -14,6 +14,7 @@
 (require 'siren-direx)
 (require 'siren-edit-server)
 (require 'siren-editorconfig)
+(require 'siren-evil)
 (require 'siren-folding)
 (require 'siren-full-ack)
 (require 'siren-github)
