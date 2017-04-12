@@ -1,4 +1,4 @@
-;;; siren-twilight-anti-bright-theme.el --- jimeh's Emacs Siren: twilight-anti-bright-theme.
+;;; siren-theme-twilight-anti-bright.el --- jimeh's Emacs Siren: twilight-anti-bright-theme.
 
 ;;; Commentary:
 
@@ -11,4 +11,4 @@
 (require 'twilight-anti-bright-theme)
 
 (provide 'siren-theme-twilight-anti-bright)
-;;; siren-twilight-anti-bright-theme.el ends here
+;;; siren-theme-twilight-anti-bright.el ends here

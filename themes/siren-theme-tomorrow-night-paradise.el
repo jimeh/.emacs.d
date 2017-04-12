@@ -1,4 +1,4 @@
-;;; siren-tomorrow-night-paradise-theme.el --- jimeh's Emacs Siren: tomorrow-night-paradise-theme.
+;;; siren-theme-tomorrow-night-paradise.el --- jimeh's Emacs Siren: tomorrow-night-paradise-theme.
 
 ;;; Commentary:
 
@@ -9,4 +9,4 @@
 (require 'tomorrow-night-paradise-theme)
 
 (provide 'siren-theme-tomorrow-night-paradise)
-;;; siren-tomorrow-night-paradise-theme.el ends here
+;;; siren-theme-tomorrow-night-paradise.el ends here
