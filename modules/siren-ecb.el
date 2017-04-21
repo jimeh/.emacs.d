@@ -39,7 +39,7 @@
 (setq ecb-source-file-regexps
  (quote
   ((".*"
-    ("\\(^\\(\\.\\|#\\)\\|\\(~$\\|\\.\\(elc\\|obj\\|o\\|class\\|lib\\|dll\\|a\\|so\\|cache\\)$\\)\\)" "^Icon$")
+    ("\\(^\\(#\\)\\|\\(~$\\|\\.\\(elc\\|obj\\|o\\|class\\|lib\\|dll\\|a\\|so\\|cache\\)$\\)\\)" "^Icon$")
     ("^\\.\\(emacs\\|gnus\\)$")))))
 
 (if window-system (ecb-activate))
