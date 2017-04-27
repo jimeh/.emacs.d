@@ -33,6 +33,20 @@
 (unless (fboundp 'comment-or-uncomment-region-or-line)
   (allow-line-as-region-for-function comment-or-uncomment-region))
 
+;; from: https://www.emacswiki.org/emacs/RandomizeBuffer
+(defun randomize-region (beg end)
+  "Randomize lines in region from BEG to END."
+  (interactive "*r")
+  (let ((lines (split-string
+                (delete-and-extract-region beg end) "\n")))
+    (when (string-equal "" (car (last lines 1)))
+      (setq lines (butlast lines 1)))
+    (apply 'insert
+           (mapcar 'cdr
+                   (sort (mapcar
+                          (lambda (x) (cons (random) (concat x "\n"))) lines)
+                         (lambda (a b) (< (car a) (car b))))))))
+
 ;; Keybindings
 (global-set-key (kbd "M-p") 'md/move-lines-up)
 (global-set-key (kbd "M-n") 'md/move-lines-down)
