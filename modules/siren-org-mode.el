@@ -25,8 +25,8 @@
     (define-key map (kbd "M-]") 'org-demote-subtree)
     (define-key map (kbd "M-p") 'org-metaup)
     (define-key map (kbd "M-n") 'org-metadown)
-    (define-key map (kbd "C-M-n") 'org-forward-paragraph)
-    (define-key map (kbd "C-M-p") 'org-backward-paragraph)))
+    (define-key map (kbd "C-M-n") 'outline-next-visible-heading)
+    (define-key map (kbd "C-M-p") 'outline-previous-visible-heading)))
 
 (setq siren-org-mode-hook 'siren-org-mode-defaults)
 
