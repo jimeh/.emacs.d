@@ -36,6 +36,7 @@
 (require 'siren-smex)
 ;; (require 'siren-swiper)
 (require 'siren-text-manipulation)
+(require 'siren-toggle-quotes)
 (require 'siren-window-management)
 (require 'siren-yasnippet)
 ;; (require 'siren-zone)

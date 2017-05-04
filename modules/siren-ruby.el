@@ -9,6 +9,7 @@
 (require 'siren-programming)
 (require 'siren-company)
 (require 'siren-rubocop)
+(require 'siren-toggle-quotes)
 (require 'rubocopfmt)
 
 (siren-require-packages '(ruby-tools inf-ruby yari ruby-refactor))
@@ -74,7 +75,10 @@
     (define-key map (kbd "C-j") 'newline-and-indent)
     (define-key map (kbd "RET") 'newline-and-indent)
     (define-key map (kbd "C-c C-h") 'siren-toggle-hiding)
-    (define-key map (kbd "C-c C-l") 'goto-line)))
+    (define-key map (kbd "C-c C-l") 'goto-line))
+
+  (let ((map ruby-tools-mode-map))
+    (define-key map (kbd "C-'") 'toggle-quotes)))
 
 (setq siren-ruby-mode-hook 'siren-ruby-mode-defaults)
 
