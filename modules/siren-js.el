@@ -8,8 +8,8 @@
 
 (require 'siren-programming)
 
-(siren-require-packages '(jsfmt))
-(require 'jsfmt)
+(siren-require-packages '(standardfmt))
+(require 'standardfmt)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'"    . js-mode))
 (add-to-list 'auto-mode-alist '("\\.pac\\'"   . js-mode))
@@ -21,8 +21,9 @@
     (setq js-indent-level indent-width)
     (setq indent-level indent-width)
     (setq tab-width indent-width))
-  (setq jsfmt-command "semistandard-format")
+  (setq standardfmt-command "semistandard")
 
+  (standardfmt-mode)
   (siren-prog-mode-defaults)
   (company-mode +1)
   (subword-mode +1)
