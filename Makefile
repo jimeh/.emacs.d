@@ -1,5 +1,9 @@
 .SILENT:
 
+.PHONY: backup-elpa
+backup-elpa:
+	tar -cjf elpa_$(shell date "+%Y-%m-%d").tar.bz2 elpa
+
 .PHONY: vendor
 vendor: \
 	vendor/escreen.el \
