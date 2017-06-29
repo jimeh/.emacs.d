@@ -8,7 +8,7 @@
 
 (require 'siren-programming)
 
-(siren-require-packages '(standardfmt))
+;; from vendor directory
 (require 'standardfmt)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'"    . js-mode))
