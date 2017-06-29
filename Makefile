@@ -4,13 +4,15 @@
 vendor: \
 	vendor/escreen.el \
 	vendor/linum+.el \
-	vendor/omnifmt.el
+	vendor/omnifmt.el \
+	vendor/standardfmt.el
 
 .PHONY: update_vendor
 update_vendor: \
 	update_vendor/escreen.el \
 	update_vendor/linum+.el \
-	update_vendor/omnifmt.el
+	update_vendor/omnifmt.el \
+	update_vendor/standardfmt.el
 
 
 vendor/escreen.el:
@@ -59,3 +61,19 @@ remove_vendor/omnifmt.el:
 
 .PHONY: update_vendor/omnifmt.el
 update_vendor/omnifmt.el: remove_vendor/omnifmt.el vendor/omnifmt.el
+
+
+vendor/standardfmt.el:
+	echo "fetching vendor/standardfmt.el..." && \
+	curl -s -L -o vendor/standardfmt.el \
+	https://raw.githubusercontent.com/jimeh/standardfmt.el/master/standardfmt.el
+
+.PHONY: remove_vendor/standardfmt.el
+remove_vendor/standardfmt.el:
+	( \
+		test -f "vendor/standardfmt.el" && rm "vendor/standardfmt.el" && \
+		echo "removed vendor/standardfmt.el" \
+	) || exit 0
+
+.PHONY: update_vendor/standardfmt.el
+update_vendor/standardfmt.el: remove_vendor/standardfmt.el vendor/standardfmt.el
