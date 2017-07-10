@@ -6,10 +6,10 @@
 
 ;;; Code:
 
-(siren-require-packages '(ido-ubiquitous ido-vertical-mode smex))
+(siren-require-packages '(ido-completing-read+ ido-vertical-mode smex))
 
 (require 'ido)
-(require 'ido-ubiquitous)
+(require 'ido-completing-read+)
 (require 'ido-vertical-mode)
 
 (setq ido-enable-prefix nil
@@ -22,9 +22,9 @@
       ido-auto-merge-work-directories-length -1
       ido-vertical-define-keys "C-n-C-p-up-down-left-right")
 
-(ido-mode +1)
-(ido-ubiquitous-mode +1)
-(ido-vertical-mode +1)
+(ido-mode 1)
+(ido-ubiquitous-mode 1)
+(ido-vertical-mode 1)
 
 ;; disable ido faces to see flx highlights
 (setq ido-use-faces nil)
