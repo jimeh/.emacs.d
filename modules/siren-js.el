@@ -6,10 +6,10 @@
 
 ;;; Code:
 
-(require 'siren-programming)
+(siren-require-packages '(eslintd-fix))
 
-;; from vendor directory
-(require 'standardfmt)
+(require 'siren-programming)
+(require 'eslintd-fix)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'"    . js-mode))
 (add-to-list 'auto-mode-alist '("\\.pac\\'"   . js-mode))
@@ -21,10 +21,11 @@
     (setq js-indent-level indent-width)
     (setq indent-level indent-width)
     (setq tab-width indent-width))
-  (setq standardfmt-command "semistandard")
+  (setq flycheck-checker 'javascript-eslint)
+  (setq flycheck-javascript-eslint-executable "eslint_d")
 
-  (standardfmt-mode)
   (siren-prog-mode-defaults)
+  (eslintd-fix-mode)
   (company-mode +1)
   (subword-mode +1)
   (hs-minor-mode 1)
