@@ -26,6 +26,17 @@
 ;; Aliases
 (defalias 'rw 'sp-rewrap-sexp)
 
+;; Keybindings
+(let ((map smartparens-mode-map))
+  (define-key map (kbd "C-M-f") 'sp-forward-sexp)
+  (define-key map (kbd "C-M-b") 'sp-backward-sexp)
+  (define-key map (kbd "C-M-a") 'sp-beginning-of-sexp)
+  (define-key map (kbd "C-M-e") 'sp-end-of-sexp)
+  (define-key map (kbd "C-k") 'sp-kill-hybrid-sexp)
+  (define-key map (kbd "M-|") 'sp-split-sexp)
+  (define-key map (kbd "M-t") 'sp-backward-up-sexp)
+  (define-key map (kbd "C-<backspace>") 'sp-backward-kill-sexp))
+
 (custom-set-faces
  '(sp-pair-overlay-face ((t (:inherit nil)))))
 
