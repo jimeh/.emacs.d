@@ -24,8 +24,11 @@
 ;; Highlight current line globally
 (global-hl-line-mode t)
 
-;; delete the selection with a keypress
+;; Delete the selection with a keypress
 (delete-selection-mode t)
+
+;; Save place in files
+(save-place-mode 1)
 
 ;; Electric behavior
 ;; (electric-layout-mode t)
