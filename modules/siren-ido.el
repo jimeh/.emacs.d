@@ -15,6 +15,7 @@
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-create-new-buffer 'always
+      ido-case-fold t
       ido-use-filename-at-point nil
       ido-max-prospects 10
       ido-save-directory-list-file (expand-file-name "ido.hist" siren-savefile-dir)
