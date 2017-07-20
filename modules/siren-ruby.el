@@ -6,13 +6,12 @@
 
 ;;; Code:
 
+(siren-require-packages '(ruby-tools inf-ruby yari ruby-refactor rspec-mode))
+
 (require 'siren-programming)
 (require 'siren-company)
 (require 'siren-rubocop)
 (require 'siren-toggle-quotes)
-(require 'rubocopfmt)
-
-(siren-require-packages '(ruby-tools inf-ruby yari ruby-refactor))
 
 ;; Rake files are ruby, too, as are gemspecs, rackup files, and gemfiles.
 (add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
@@ -50,8 +49,13 @@
 ;; Make company-mode play nice
 (push 'ruby-mode company-dabbrev-code-modes)
 
+(require 'rspec-mode)
+(require 'rubocopfmt)
 (require 'ruby-mode)
 (require 'ruby-refactor)
+
+(eval-after-load 'rspec-mode
+  '(rspec-install-snippets))
 
 (defun siren-ruby-mode-defaults ()
   (siren-prog-mode-defaults)
@@ -61,6 +65,7 @@
   (setq ruby-insert-encoding-magic-comment t)
   (setq c-tab-always-indent nil)
   (setq ruby-refactor-add-parens t)
+  (setq rspec-primary-source-dirs '("app"))
 
   (rubocopfmt-mode)
   (ruby-tools-mode +1)
