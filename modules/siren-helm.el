@@ -21,6 +21,10 @@
 (setq helm-ag-ignore-patterns '("*.sql")
       helm-ag-source-type "file-line"
       helm-autoresize-mode 1
+      helm-gtags-auto-update t
+      helm-gtags-direct-helm-completing t
+      helm-gtags-fuzzy-match t
+      helm-gtags-ignore-case t
       helm-open-github-commit-limit 10000)
 
 ;; Helm
