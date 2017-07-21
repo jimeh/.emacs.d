@@ -40,7 +40,6 @@
 
 (add-hook 'js-mode-hook (lambda ()
                           (run-hooks 'siren-js-mode-hook)))
-(add-hook 'before-save-hook 'jsfmt-before-save)
 
 (provide 'siren-js)
 ;;; siren-js.el ends here
