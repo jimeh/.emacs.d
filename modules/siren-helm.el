@@ -16,7 +16,7 @@
 (require 'helm-open-github)
 (require 'helm-ag)
 (require 'helm-ls-git)
-;; (require 'helm-ctags)
+(require 'helm-gtags)
 
 (setq helm-ag-ignore-patterns '("*.sql")
       helm-ag-source-type "file-line"
@@ -42,6 +42,7 @@
 
 ;; Helm ag
 (global-set-key (kbd "C-c C-s") 'helm-do-ag)
+(global-set-key (kbd "C-c C-'") 'helm-do-ag-project-root)
 
 ;; Helm Projectile
 (global-set-key (kbd "C-c ;") 'helm-projectile)

@@ -12,6 +12,7 @@
 (require 'siren-company)
 (require 'siren-dired)
 (require 'siren-direx)
+(require 'siren-dumb-jump)
 (require 'siren-edit-server)
 (require 'siren-editorconfig)
 (require 'siren-evil)
@@ -34,18 +35,19 @@
 (require 'siren-scroll-half-screen)
 (require 'siren-smartparens)
 (require 'siren-smex)
-;; (require 'siren-swiper)
 (require 'siren-text-manipulation)
 (require 'siren-toggle-quotes)
 (require 'siren-window-management)
 (require 'siren-yasnippet)
+;; (require 'siren-swiper)
+;; (require 'siren-volatile-highlights)
 ;; (require 'siren-zone)
 
 ;; Project management
 (require 'siren-projectile)
+(require 'siren-ecb)
 ;; (require 'siren-neotree)
 ;; (require 'siren-project-explorer)
-(require 'siren-ecb)
 
 ;; Workspace management
 (require 'siren-escreen)

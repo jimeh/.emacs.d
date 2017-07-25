@@ -44,5 +44,7 @@
 
 (if window-system (ecb-activate))
 
+(global-set-key (kbd "C-x C-p") 'ecb-toggle-ecb-windows)
+
 (provide 'siren-ecb)
 ;;; siren-ecb.el ends here
