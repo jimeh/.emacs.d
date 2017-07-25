@@ -6,17 +6,19 @@
 
 ;;; Code:
 
-(siren-require-packages
- '(helm helm-swoop helm-ag helm-projectile helm-open-github helm-ls-git
-        helm-gtags))
+(siren-require-packages '(helm helm-ag helm-descbinds helm-describe-modes
+                               helm-gtags helm-ls-git helm-open-github
+                               helm-projectile helm-swoop))
 
 (require 'helm)
-(require 'helm-swoop)
-(require 'helm-projectile)
-(require 'helm-open-github)
 (require 'helm-ag)
-(require 'helm-ls-git)
+(require 'helm-describe-modes)
 (require 'helm-gtags)
+(require 'helm-ls-git)
+(require 'helm-open-github)
+(require 'helm-projectile)
+(require 'helm-swoop)
+(require 'helm-descbinds)
 
 (setq helm-ag-ignore-patterns '("*.sql")
       helm-ag-source-type "file-line"
