@@ -11,6 +11,7 @@
 (require 'siren-programming)
 (require 'siren-company)
 (require 'siren-rubocop)
+(require 'siren-smartparens)
 (require 'siren-toggle-quotes)
 
 ;; Rake files are ruby, too, as are gemspecs, rackup files, and gemfiles.
@@ -53,6 +54,7 @@
 (require 'rubocopfmt)
 (require 'ruby-mode)
 (require 'ruby-refactor)
+(require 'smartparens-ruby)
 
 (eval-after-load 'rspec-mode
   '(rspec-install-snippets))
@@ -80,7 +82,9 @@
     (define-key map (kbd "C-j") 'newline-and-indent)
     (define-key map (kbd "RET") 'newline-and-indent)
     (define-key map (kbd "C-c C-h") 'siren-toggle-hiding)
-    (define-key map (kbd "C-c C-l") 'goto-line))
+    (define-key map (kbd "C-c C-l") 'goto-line)
+    (define-key map (kbd "C-M-f") 'sp-ruby-forward-sexp)
+    (define-key map (kbd "C-M-b") 'sp-ruby-backward-sexp))
 
   (let ((map ruby-tools-mode-map))
     (define-key map (kbd "C-'") 'toggle-quotes)))
