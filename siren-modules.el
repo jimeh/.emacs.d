@@ -39,6 +39,7 @@
 (require 'siren-toggle-quotes)
 (require 'siren-window-management)
 (require 'siren-yasnippet)
+(require 'siren-zoom-window)
 ;; (require 'siren-swiper)
 ;; (require 'siren-volatile-highlights)
 ;; (require 'siren-zone)
