@@ -33,5 +33,8 @@
 
 (add-hook 'markdown-mode-hook (lambda () (run-hooks 'siren-markdown-mode-hook)))
 
+custom-set-faces
+ '(markdown-code-face ((t nil))))
+
 (provide 'siren-markdown)
 ;;; siren-markdown.el ends here
