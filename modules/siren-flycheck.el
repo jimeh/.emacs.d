@@ -6,14 +6,13 @@
 
 ;;; Code:
 
-(siren-require-packages '(flycheck))
-
-(require 'flycheck)
-(setq flycheck-completion-system 'ido)
-(setq flycheck-idle-change-delay 1.0)
-(setq flycheck-indication-mode 'right-fringe)
-(setq flycheck-ruby-rubocop-executable "rubocop-bundle-safe")
-(setq flycheck-javascript-standard-executable "semistandard")
+(use-package flycheck
+  :config
+  (setq flycheck-completion-system 'ido
+        flycheck-idle-change-delay 1.0
+        flycheck-indication-mode 'right-fringe
+        flycheck-ruby-rubocop-executable "rubocop-bundle-safe"
+        flycheck-javascript-standard-executable "semistandard"))
 
 (provide 'siren-flycheck)
 ;;; siren-flycheck.el ends here

@@ -34,6 +34,5 @@
     (global-flycheck-mode +1)
   (add-hook 'prog-mode-hook 'flycheck-mode))
 
-
 (provide 'siren-programming)
 ;;; siren-programming.el ends here

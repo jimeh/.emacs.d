@@ -2,16 +2,14 @@
 
 ;;; Commentary:
 
-;; Various text manipulation functions and keybindings. Some of them shamelessly
-;; ripped from textmate.el: https://github.com/defunkt/textmate.el
+;; Basic configuration of toggle-quotes.
 
 ;;; Code:
 
-(siren-require-packages '(toggle-quotes))
+(require 'siren-use-package)
 
-(require 'toggle-quotes)
-
-(global-set-key (kbd "C-'") 'toggle-quotes)
+(use-package toggle-quotes
+  :bind (("C-'" . toggle-quotes)))
 
 (provide 'siren-toggle-quotes)
 ;;; siren-toggle-quotes.el ends here

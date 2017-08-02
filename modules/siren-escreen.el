@@ -9,11 +9,8 @@
 ;; Loads from vendor.
 (require 'escreen)
 
-;;
 ;; Escreen Helper
 ;; - from http://blog.nguyenvq.com/2011/03/07/escreen-instead-of-elscreen-for-screen-like-features-in-emacs/
-;;
-
 (defun escreen-get-active-screen-numbers-with-emphasis ()
   "what the name says"
   (interactive)

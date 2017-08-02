@@ -6,45 +6,40 @@
 
 ;;; Code:
 
-(siren-require-packages '(ecb))
+(use-package ecb
+  :config
+  (setq ecb-layout-name "left13"
+        ecb-primary-secondary-mouse-buttons 'mouse-1--mouse-2
+        ecb-tree-make-parent-node-sticky nil
+        ecb-prescan-directories-for-emptyness nil
+        ecb-tip-of-the-day nil
+        ecb-tree-indent 3
+        ecb-windows-width 0.24
+        ecb-source-path '(("~/Projects" "Projects")
+                          ("/media/projects" "devbox/projects")
+                          ("~/.emacs.d" ".emacs.d")
+                          ("~/.dotfiles" ".dotfiles")
+                          ("~/Notes" "Notes")
+                          ("~/Projects/which" "which")
+                          ("~/Projects/fitzdares" "fitzdares")
+                          ("~/Projects/Go" "Go")
+                          ("~/src" "src")
+                          ("~/Sites" "Sites")
+                          ("~" "~")
+                          ("/" "/")))
 
-(require 'ecb)
+  ;; Add "^Icon$" as a exclude to the default sources. Dropbox uses "Icon" files
+  ;; with some weird unprintable character at the end of the filename to customize
+  ;; the folder icon. ECB however errors out when trying to render this file,
+  ;; hence we're no longer displaying it at all.
+  (setq ecb-source-file-regexps
+        (quote
+         ((".*"
+           ("\\(^\\(#\\)\\|\\(~$\\|\\.\\(elc\\|obj\\|o\\|class\\|lib\\|dll\\|a\\|so\\|cache\\)$\\)\\)" "^Icon$")
+           ("^\\.\\(emacs\\|gnus\\)$")))))
 
-(setq ecb-layout-name "left13")
-(setq ecb-primary-secondary-mouse-buttons (quote mouse-1--mouse-2))
-(setq ecb-tree-make-parent-node-sticky nil)
-(setq ecb-prescan-directories-for-emptyness nil)
-(setq ecb-tip-of-the-day nil)
-(setq ecb-tree-indent 3)
-(setq ecb-windows-width 0.24)
-(setq ecb-source-path
-   (quote
-    (("~/Projects" "Projects")
-     ("/media/projects" "devbox/projects")
-     ("~/.emacs.d" ".emacs.d")
-     ("~/.dotfiles" ".dotfiles")
-     ("~/Notes" "Notes")
-     ("~/Projects/which" "which")
-     ("~/Projects/fitzdares" "fitzdares")
-     ("~/Projects/Go" "Go")
-     ("~/src" "src")
-     ("~/Sites" "Sites")
-     ("~" "~")
-     ("/" "/"))))
-
-;; Add "^Icon$" as a exclude to the default sources. Dropbox uses "Icon" files
-;; with some weird unprintable character at the end of the filename to customize
-;; the folder icon. ECB however errors out when trying to render this file,
-;; hence we're no longer displaying it at all.
-(setq ecb-source-file-regexps
- (quote
-  ((".*"
-    ("\\(^\\(#\\)\\|\\(~$\\|\\.\\(elc\\|obj\\|o\\|class\\|lib\\|dll\\|a\\|so\\|cache\\)$\\)\\)" "^Icon$")
-    ("^\\.\\(emacs\\|gnus\\)$")))))
-
-(if window-system (ecb-activate))
-
-(global-set-key (kbd "C-x C-p") 'ecb-toggle-ecb-windows)
+  (if window-system (ecb-activate))
+  (global-set-key (kbd "C-x C-p") 'ecb-toggle-ecb-windows))
 
 (provide 'siren-ecb)
 ;;; siren-ecb.el ends here

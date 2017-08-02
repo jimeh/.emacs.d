@@ -6,20 +6,19 @@
 
 ;;; Code:
 
-(require 'siren-programming)
-(siren-require-packages '(dockerfile-mode))
+(use-package dockerfile-mode
+  :mode "Dockerfile\\'"
 
-(require 'dockerfile-mode)
-(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
+  :config
+  (require 'siren-programming)
 
-(defun siren-dockerfile-mode-defaults ()
-  (siren-prog-mode-defaults)
-  (subword-mode +1))
+  (defun siren-dockerfile-mode-defaults ()
+    (siren-prog-mode-defaults)
+    (subword-mode +1))
 
-(setq siren-dockerfile-mode-hook 'siren-dockerfile-mode-defaults)
-
-(add-hook 'dockerfile-mode-hook (lambda ()
-                                  (run-hooks 'siren-dockerfile-mode-hook)))
+  (setq siren-dockerfile-mode-hook 'siren-dockerfile-mode-defaults)
+  (add-hook 'dockerfile-mode-hook (lambda ()
+                                    (run-hooks 'siren-dockerfile-mode-hook))))
 
 (provide 'siren-dockerfile)
 ;;; siren-dockerfile.el ends here

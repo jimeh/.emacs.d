@@ -6,20 +6,18 @@
 
 ;;; Code:
 
-(siren-require-packages '(edit-server))
+(use-package edit-server
+  :if window-system
+  :init
+  (setq edit-server-default-major-mode 'markdown-mode)
+  (setq edit-server-new-frame-alist
+        '((name . "Edit with Emacs FRAME")
+          (width . 90)
+          (height . 45)
+          (minibuffer . t)
+          (menu-bar-lines . t)))
 
-(require 'edit-server)
-
-(setq edit-server-default-major-mode 'markdown-mode)
-(setq edit-server-new-frame-alist
-  '((name . "Edit with Emacs FRAME")
-    (width . 90)
-    (height . 45)
-    (minibuffer . t)
-    (menu-bar-lines . t)))
-
-(if window-system
-    (edit-server-start))
+  (add-hook 'after-init-hook 'edit-server-start t))
 
 (provide 'siren-edit-server)
 ;;; siren-edit-server.el ends here

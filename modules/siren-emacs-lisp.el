@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(siren-require-packages '(rainbow-mode))
-
 (require 'siren-lisp)
 
 (defun siren-recompile-elc-on-save ()
@@ -18,8 +16,7 @@
                      (string-prefix-p siren-dir (file-truename buffer-file-name))
                      (file-exists-p (byte-compile-dest-file buffer-file-name)))
                 (emacs-lisp-byte-compile)))
-            nil
-            t))
+            nil t))
 
 (defun siren-conditional-emacs-lisp-checker ()
   "Don't check doc style in Emacs Lisp test files."
@@ -30,16 +27,15 @@
 (defun siren-emacs-lisp-mode-defaults ()
   "Sensible defaults for `emacs-lisp-mode'."
   (highlight-indent-guides-mode)
-  ; (run-hooks 'siren-lisp-coding-hook)
-  ; (eldoc-mode +1)
-  ; (siren-recompile-elc-on-save)
-  ; (rainbow-mode +1)
-  ; (setq mode-name "EL")
-  ; (siren-conditional-emacs-lisp-checker)
+  ;; (run-hooks 'siren-lisp-coding-hook)
+  ;; (eldoc-mode +1)
+  ;; (siren-recompile-elc-on-save)
+  ;; (rainbow-mode +1)
+  ;; (setq mode-name "EL")
+  ;; (siren-conditional-emacs-lisp-checker)
   )
 
 (setq siren-emacs-lisp-mode-hook 'siren-emacs-lisp-mode-defaults)
-
 (add-hook 'emacs-lisp-mode-hook (lambda ()
                                   (run-hooks 'siren-emacs-lisp-mode-hook)))
 

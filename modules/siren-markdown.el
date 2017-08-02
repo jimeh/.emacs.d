@@ -6,32 +6,32 @@
 
 ;;; Code:
 
-(siren-require-packages '(markdown-mode))
+(use-package markdown-mode
+  :mode
+  "\\.md"
+  "\\.mkd"
+  "\\.mkdn"
+  "\\.mdown"
+  "\\.markdown"
 
-(require 'markdown-mode)
+  :config
+  (setq markdown-command "redcarpet")
 
-(setq markdown-command "redcarpet")
+  (defun siren-markdown-mode-defaults ()
+    (setq whitespace-action nil
+          fill-column 80
+          markdown-asymmetric-header t)
 
-(setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.mkd" . markdown-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.mkdn" . markdown-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.mdown" . markdown-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.markdown" . markdown-mode) auto-mode-alist))
+    (fci-mode)
+    (linum-mode t)
+    (flyspell-mode)
+    (auto-fill-mode)
+    (subword-mode)
+    (define-key markdown-mode-map (kbd "C-c p") 'markdown-preview))
 
-(defun siren-markdown-mode-defaults ()
-  (setq whitespace-action nil)
-  (setq fill-column 80)
-  (setq markdown-asymmetric-header t)
-  (fci-mode)
-  (linum-mode t)
-  (flyspell-mode)
-  (auto-fill-mode)
-  (subword-mode)
-  (define-key markdown-mode-map (kbd "C-c p") 'markdown-preview))
-
-(setq siren-markdown-mode-hook 'siren-markdown-mode-defaults)
-
-(add-hook 'markdown-mode-hook (lambda () (run-hooks 'siren-markdown-mode-hook)))
+  (setq siren-markdown-mode-hook 'siren-markdown-mode-defaults)
+  (add-hook 'markdown-mode-hook (lambda ()
+                                  (run-hooks 'siren-markdown-mode-hook))))
 
 (custom-set-faces
  '(markdown-code-face ((t nil))))

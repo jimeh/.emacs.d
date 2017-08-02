@@ -6,10 +6,9 @@
 
 ;;; Code:
 
-(siren-require-packages '(editorconfig))
-
-(require 'editorconfig)
-(editorconfig-mode 1)
+(use-package editorconfig
+  :config
+  (editorconfig-mode 1))
 
 (provide 'siren-editorconfig)
 ;;; siren-editorconfig.el ends here

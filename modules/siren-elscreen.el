@@ -6,34 +6,31 @@
 
 ;;; Code:
 
-(siren-require-packages '(elscreen elscreen-buffer-group))
+(use-package elscreen
+  :config
+  (use-package elscreen-buffer-group)
 
-(require 'elscreen)
-;; (require 'elscreen-buffer-group) ;; Breaks elscreen.
+  ;; Prefix key.
+  (define-key elscreen-map (kbd "C-z") elscreen-map)
 
-;; (setq elscreen-display-tab nil)
+  ;; Goto screens.
+  (global-set-key (kbd "s-}") 'elscreen-next)
+  (global-set-key (kbd "s-{") 'elscreen-previous)
 
-;; Prefix key.
-(define-key elscreen-map (kbd "C-z") elscreen-map)
+  ;; Set screen nickname
+  (define-key elscreen-map (kbd ",")   'elscreen-screen-nickname)
+  (define-key elscreen-map (kbd "C-,") 'elscreen-screen-nickname)
 
-;; Goto screens.
-(global-set-key (kbd "s-}") 'elscreen-next)
-(global-set-key (kbd "s-{") 'elscreen-previous)
+  ;; Toggle screens.
+  (define-key elscreen-map (kbd "l")   'elscreen-toggle)
+  (define-key elscreen-map (kbd "C-l") 'elscreen-toggle)
 
-;; Set screen nickname
-(define-key elscreen-map (kbd ",")   'elscreen-screen-nickname)
-(define-key elscreen-map (kbd "C-,") 'elscreen-screen-nickname)
+  ;; Display list of screens.
+  (define-key elscreen-map (kbd ";")   'elscreen-display-screen-name-list)
+  (define-key elscreen-map (kbd "C-;") 'elscreen-display-screen-name-list)
 
-;; Toggle screens.
-(define-key elscreen-map (kbd "l")   'elscreen-toggle)
-(define-key elscreen-map (kbd "C-l") 'elscreen-toggle)
-
-;; Display list of screens.
-(define-key elscreen-map (kbd ";")   'elscreen-display-screen-name-list)
-(define-key elscreen-map (kbd "C-;") 'elscreen-display-screen-name-list)
-
-;; Start ElScreen.
-(elscreen-start)
+  ;; Start ElScreen.
+  (elscreen-start))
 
 (provide 'siren-elscreen)
 ;;; siren-elscreen.el ends here

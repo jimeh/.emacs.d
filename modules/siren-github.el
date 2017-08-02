@@ -6,9 +6,8 @@
 
 ;;; Code:
 
-(siren-require-packages '(github-browse-file))
-
-(require 'github-browse-file)
+(use-package github-browse-file
+  :defer t)
 
 (provide 'siren-github)
 ;;; siren-github.el ends here

@@ -18,6 +18,7 @@ recentf
 saved-places
 smex-items
 savefile/*
+var/*
 *.elc
 
 # Bittorrent Sync related

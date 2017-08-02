@@ -36,6 +36,8 @@
   (define-key map (kbd "C-M-[") 'sp-forward-barf-sexp)
   (define-key map (kbd "C-M-.") 'sp-forward-slurp-sexp)
   (define-key map (kbd "C-M-,") 'sp-forward-barf-sexp)
+  (define-key map (kbd "s->") 'sp-forward-slurp-sexp)
+  (define-key map (kbd "s-<") 'sp-forward-barf-sexp)
   (define-key map (kbd "M-|") 'sp-split-sexp)
   (define-key map (kbd "M-t") 'sp-backward-up-sexp)
   (define-key map (kbd "C-<backspace>") 'sp-backward-kill-sexp)

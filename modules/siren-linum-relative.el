@@ -6,8 +6,7 @@
 
 ;;; Code:
 
-(siren-require-packages '(linum-relative))
-(require 'linum-relative)
+(use-package linum-relative)
 
 (provide 'siren-linum-relative)
 ;;; siren-linum-relative.el ends here
