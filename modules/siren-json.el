@@ -22,6 +22,9 @@
       (setq tab-width width)
       (highlight-indentation-set-offset width))
 
+    (setq flycheck-checker 'json-jsonlint)
+
+    (eslintd-fix-mode -1)
     (omnifmt-mode)
     (company-mode +1)
     (subword-mode +1)
