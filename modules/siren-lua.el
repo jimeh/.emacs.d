@@ -14,6 +14,7 @@
     (siren-prog-mode-defaults)
 
     (highlight-indentation-current-column-mode)
+    (subword-mode +1)
     (setq whitespace-action (quote (auto-cleanup))))
 
   (setq siren-lua-mode-hook 'siren-lua-mode-defaults)
