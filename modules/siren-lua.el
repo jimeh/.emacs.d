@@ -15,7 +15,8 @@
 
     (highlight-indentation-current-column-mode)
     (subword-mode +1)
-    (setq whitespace-action (quote (auto-cleanup))))
+    (setq lua-indent-level 2
+          whitespace-action (quote (auto-cleanup))))
 
   (setq siren-lua-mode-hook 'siren-lua-mode-defaults)
   (add-hook 'lua-mode-hook (lambda ()
