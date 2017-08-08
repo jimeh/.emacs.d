@@ -10,11 +10,10 @@
   :mode "\\.coffee\\'"
   :interpreter "coffee"
 
-  :init
-  (setq coffee-tab-width 2)
-
   :config
   (require 'siren-programming)
+
+  (setq coffee-tab-width 2)
 
   (defun siren-coffee-mode-defaults ()
     (siren-prog-mode-defaults)

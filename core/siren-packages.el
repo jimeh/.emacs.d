@@ -17,14 +17,9 @@
 (package-initialize)
 
 (defvar siren-packages
-  '(browse-kill-ring
-    dash
-    diff-hl
+  '(dash
     diminish
     exec-path-from-shell
-    git-timemachine
-    gitconfig-mode
-    gitignore-mode
     smart-mode-line
     use-package)
   "A list of default packages to ensure are installed at launch.")
