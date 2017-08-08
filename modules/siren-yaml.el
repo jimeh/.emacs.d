@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-use-package)
-
 (use-package yaml-mode
   :mode "\\.yml\\'" "\\.yaml\\'"
   :config
@@ -15,11 +13,12 @@
 
   (defun siren-yaml-mode-defaults ()
     (siren-prog-mode-defaults)
-    (subword-mode +1)
-    (setq tab-width 2)
+    (setq tab-width 2
+          whitespace-action '(auto-cleanup))
+
     (highlight-indentation-set-offset 2)
     (highlight-indentation-current-column-mode)
-    (setq whitespace-action (quote (auto-cleanup)))
+    (subword-mode +1)
     (define-key yaml-mode-map (kbd "RET") 'newline-and-indent))
 
   (setq siren-yaml-mode-hook 'siren-yaml-mode-defaults)

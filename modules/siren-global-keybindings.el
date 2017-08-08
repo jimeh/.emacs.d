@@ -39,10 +39,6 @@
 ;; Rename current file and buffer
 (global-set-key (kbd "C-c r")  'siren-rename-file-and-buffer)
 
-;; Flyspell correct previous word
-(when (require 'flyspell nil 'noerror)
-  (global-set-key (kbd "s-.") 'flyspell-correct-word-before-point))
-
 ;; Mac OS X specific keybindings
 (when (eq system-type 'darwin)
   ;; Move to beginning/end of buffer

@@ -6,13 +6,34 @@
 
 ;;; Code:
 
-(siren-require-packages '(ruby-tools inf-ruby yari ruby-refactor rspec-mode))
+(use-package inf-ruby
+  :defer t)
+
+(use-package rspec-mode
+  :defer t
+  :init
+  (eval-after-load 'rspec-mode '(rspec-install-snippets)))
+
+(use-package ruby-refactor
+  :defer t)
+
+(use-package ruby-tools
+  :defer t)
+
+(use-package yari
+  :defer t
+  :init
+  (define-key 'help-command (kbd "R") 'yari))
 
 (require 'siren-programming)
 (require 'siren-company)
 (require 'siren-rubocop)
 (require 'siren-smartparens)
 (require 'siren-toggle-quotes)
+
+(require 'smartparens-ruby)
+(require 'rubocopfmt)
+(require 'ruby-mode)
 
 ;; Rake files are ruby, too, as are gemspecs, rackup files, and gemfiles.
 (add-to-list 'auto-mode-alist '("\\.rake\\'" . ruby-mode))
@@ -37,41 +58,30 @@
 ;; We never want to edit Rubinius bytecode
 (add-to-list 'completion-ignored-extensions ".rbc")
 
-(define-key 'help-command (kbd "R") 'yari)
-
 ;; Set up hs-mode (HideShow) for Ruby
 (add-to-list 'hs-special-modes-alist
              `(ruby-mode
-               ,(rx (or "def" "class" "module" "do")) ;; Block start
-               ,(rx (or "end"))                       ;; Block end
-               ,(rx (or "#" "=begin"))                ;; Comment start
+               ,(rx (or "def" "class" "module" "do" "if" "case")) ;; Block start
+               ,(rx (or "end"))                                   ;; Block end
+               ,(rx (or "#" "=begin"))                            ;; Comment start
                ruby-forward-sexp nil))
 
 ;; Make company-mode play nice
 (push 'ruby-mode company-dabbrev-code-modes)
 
-(require 'rspec-mode)
-(require 'rubocopfmt)
-(require 'ruby-mode)
-(require 'ruby-refactor)
-(require 'smartparens-ruby)
-
-(eval-after-load 'rspec-mode
-  '(rspec-install-snippets))
-
 (defun siren-ruby-mode-defaults ()
   (siren-prog-mode-defaults)
 
-  (setq ruby-use-smie t)
-  (setq ruby-align-chained-calls t)
-  (setq ruby-insert-encoding-magic-comment t)
-  (setq c-tab-always-indent nil)
-  (setq ruby-refactor-add-parens t)
-  (setq rspec-primary-source-dirs '("app"))
+  (setq c-tab-always-indent nil
+        rspec-primary-source-dirs '("app")
+        ruby-align-chained-calls t
+        ruby-insert-encoding-magic-comment t
+        ruby-refactor-add-parens t
+        ruby-use-smie t
+        tab-width 2)
 
   (rubocopfmt-mode)
   (ruby-tools-mode +1)
-  (setq tab-width 2)
   (hs-minor-mode 1)
   (company-mode +1)
   (subword-mode +1)
@@ -90,7 +100,6 @@
     (define-key map (kbd "C-'") 'toggle-quotes)))
 
 (setq siren-ruby-mode-hook 'siren-ruby-mode-defaults)
-
 (add-hook 'ruby-mode-hook (lambda ()
                             (run-hooks 'siren-ruby-mode-hook)))
 

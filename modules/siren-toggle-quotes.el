@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-use-package)
-
 (use-package toggle-quotes
   :bind (("C-'" . toggle-quotes)))
 

@@ -9,13 +9,16 @@
 (use-package magit
   :bind
   ("C-x g". magit-status)
+  ("C-x C-g". magit-status)
+
+  :init
+  (defalias 'bl 'magit-blame)
 
   :config
   (require 'siren-fci)
+  (require 'siren-flyspell)
   (require 'siren-ediff)
   (require 'magit)
-
-  (defalias 'bl 'magit-blame)
 
   (setq magit-completing-read-function 'magit-ido-completing-read
         magit-status-buffer-switch-function 'switch-to-buffer

@@ -18,8 +18,7 @@
     (siren-prog-mode-defaults)
     (rainbow-mode +1)
     (setq tab-width 2)
-    (highlight-indentation-current-column-mode)
-    (run-hooks 'siren-prog-mode-hook))
+    (highlight-indentation-current-column-mode))
 
   (setq siren-css-mode-hook 'siren-css-mode-defaults)
   (add-hook 'css-mode-hook (lambda ()

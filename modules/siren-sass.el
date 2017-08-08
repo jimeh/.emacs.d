@@ -6,18 +6,20 @@
 
 ;;; Code:
 
-(require 'siren-css)
-(siren-require-packages '(sass-mode))
+(use-package sass-mode
+  :mode "\\.sass\\'"
 
-;; turn off annoying auto-compile on save
-(setq sass-compile-at-save nil)
+  :config
+  (require 'siren-css)
 
-(defun siren-sass-mode-defaults ()
-  (siren-css-mode-defaults))
+  ;; turn off annoying auto-compile on save
+  (setq sass-compile-at-save nil)
 
-(setq siren-sass-mode-hook 'siren-sass-mode-defaults)
+  (defun siren-sass-mode-defaults ()
+    (siren-css-mode-defaults))
 
-(add-hook 'sass-mode-hook (lambda () (run-hooks 'siren-sass-mode-hook)))
+  (setq siren-sass-mode-hook 'siren-sass-mode-defaults)
+  (add-hook 'sass-mode-hook (lambda () (run-hooks 'siren-sass-mode-hook))))
 
 (provide 'siren-sass)
 ;;; siren-sass.el ends here

@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-fci)
+(require 'siren-flyspell)
 (require 'siren-smartparens)
 
 (defun siren-org-mode-defaults ()

@@ -8,6 +8,7 @@
 
 (require 'siren-fci)
 (require 'siren-flycheck)
+(require 'siren-flyspell)
 (require 'siren-smartparens)
 (require 'siren-highlight-indentation)
 (require 'siren-highlight-symbol)
@@ -25,7 +26,6 @@
   (whitespace-mode +1))
 
 (setq siren-prog-mode-hook 'siren-prog-mode-defaults)
-
 (add-hook 'prog-mode-hook (lambda ()
                             (run-hooks 'siren-prog-mode-hook)))
 

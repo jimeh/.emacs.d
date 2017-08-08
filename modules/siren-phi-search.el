@@ -6,9 +6,17 @@
 
 ;;; Code:
 
-(siren-require-packages '(phi-search))
+(use-package phi-search
+  :bind
+  ("C-s" . phi-search)
+  ("C-r" . phi-search-backward)
 
-(require 'phi-search)
+  :config
+  (custom-set-faces
+   '(phi-search-match-face
+     ((t (:background "paleturquoise4"))))
+   '(phi-search-selection-face
+     ((t (:background "palevioletred2" :foreground "brown4"))))))
 
 (provide 'siren-phi-search)
 ;;; siren-phi-search.el ends here

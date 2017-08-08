@@ -15,6 +15,7 @@
   "\\.markdown"
 
   :config
+  (require 'siren-flyspell)
   (setq markdown-command "redcarpet")
 
   (defun siren-markdown-mode-defaults ()

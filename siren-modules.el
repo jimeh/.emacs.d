@@ -81,6 +81,7 @@
 (require 'siren-makefile)
 (require 'siren-markdown)
 (require 'siren-plantuml)
+(require 'siren-php)
 (require 'siren-ruby)
 (require 'siren-sass)
 (require 'siren-scss)

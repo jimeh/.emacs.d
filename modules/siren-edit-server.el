@@ -9,8 +9,8 @@
 (use-package edit-server
   :if window-system
   :init
-  (setq edit-server-default-major-mode 'markdown-mode)
-  (setq edit-server-new-frame-alist
+  (setq edit-server-default-major-mode 'markdown-mode
+        edit-server-new-frame-alist
         '((name . "Edit with Emacs FRAME")
           (width . 90)
           (height . 45)

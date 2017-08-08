@@ -6,18 +6,20 @@
 
 ;;; Code:
 
-(require 'siren-css)
-(siren-require-packages '(scss-mode))
+(use-package scss-mode
+  :mode "\\.scss\\'"
 
-;; turn off annoying auto-compile on save
-(setq scss-compile-at-save nil)
+  :config
+  (require 'siren-css)
 
-(defun siren-scss-mode-defaults ()
-  (siren-css-mode-defaults))
+  ;; turn off annoying auto-compile on save
+  (setq scss-compile-at-save nil)
 
-(setq siren-scss-mode-hook 'siren-scss-mode-defaults)
+  (defun siren-scss-mode-defaults ()
+    (siren-css-mode-defaults))
 
-(add-hook 'scss-mode-hook (lambda () (run-hooks 'siren-scss-mode-hook)))
+  (setq siren-scss-mode-hook 'siren-scss-mode-defaults)
+  (add-hook 'scss-mode-hook (lambda () (run-hooks 'siren-scss-mode-hook))))
 
 (provide 'siren-scss)
 ;;; siren-scss.el ends here

@@ -6,12 +6,10 @@
 
 ;;; Code:
 
-(siren-require-packages '(yasnippet))
-
-(require 'yasnippet)
-(diminish 'yas-minor-mode)
-
-(yas/global-mode t)
+(use-package yasnippet
+  :diminish yas-minor-mode
+  :init
+  (yas-global-mode t))
 
 (provide 'siren-yasnippet)
 ;;; siren-yasnippet.el ends here

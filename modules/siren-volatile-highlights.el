@@ -6,11 +6,10 @@
 
 ;;; Code:
 
-(siren-require-packages '(volatile-highlights))
-
-(require 'volatile-highlights)
-(volatile-highlights-mode t)
-(diminish 'volatile-highlights-mode)
+(use-package volatile-highlights-mode
+  :diminish volatile-highlights-mode
+  :init
+  (volatile-highlights-mode t))
 
 (provide 'siren-volatile-highlights)
 ;;; siren-volatile-highlights.el ends here
