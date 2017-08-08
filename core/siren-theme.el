@@ -6,6 +6,9 @@
 
 ;;; Code:
 
+(setq siren-themes-dir (expand-file-name "themes" siren-dir))
+(add-to-list 'load-path siren-themes-dir)
+
 (if window-system
   (require 'siren-theme-twilight-anti-bright)
   (require 'siren-theme-tomorrow-night-paradise))

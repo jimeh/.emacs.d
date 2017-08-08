@@ -6,6 +6,9 @@
 
 ;;; Code:
 
+(setq siren-modules-dir (expand-file-name "modules" siren-dir))
+(add-to-list 'load-path siren-modules-dir)
+
 ;; Modules
 (require 'siren-aliases)
 (require 'siren-avy)
