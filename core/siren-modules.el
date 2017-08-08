@@ -38,7 +38,6 @@
 (require 'siren-multiple-cursors)
 (require 'siren-org-mode)
 (require 'siren-package-lint)
-(require 'siren-phi-search)
 (require 'siren-rainbow)
 (require 'siren-scroll-half-screen)
 (require 'siren-smartparens)
