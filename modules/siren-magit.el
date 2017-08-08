@@ -33,7 +33,7 @@
   (defun siren-git-commit-mode-defaults ()
     (subword-mode)
     (setq tab-width 2)
-    (flyspell-mode)
+    ;; (flyspell-mode) ;; in GUI causes git-commit-mode to lock up emacs
     (linum-mode t)
     (auto-fill-mode))
 
