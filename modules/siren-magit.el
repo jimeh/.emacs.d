@@ -20,6 +20,11 @@
   (require 'siren-ediff)
   (require 'magit)
 
+  (use-package magit-gh-pulls
+    :config
+    (setq gh-use-local-git-config t)
+    (add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls))
+
   (setq magit-completing-read-function 'magit-ido-completing-read
         magit-status-buffer-switch-function 'switch-to-buffer
         magit-bury-buffer-function 'bury-buffer
