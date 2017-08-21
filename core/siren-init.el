@@ -6,6 +6,12 @@
 
 ;;; Code:
 
+;; Display the total loading time in the minibuffer
+
+(defun display-startup-echo-area-message ()
+  "Display startup echo area message."
+  (message "Siren initialized in %s" (emacs-init-time)))
+
 (message "Siren is powering up... Be patient, Master %s!"
          (getenv (if (equal system-type 'windows-nt) "USERNAME" "USER")))
 
