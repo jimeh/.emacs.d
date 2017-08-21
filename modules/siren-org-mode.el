@@ -13,7 +13,7 @@
 (defun siren-org-mode-defaults ()
   (setq org-export-backends '(ascii html icalendar latex md confluence)
         fill-column 80
-        whitespace-action 'auto-cleanup)
+        whitespace-action '(auto-cleanup))
 
   (linum-mode t)
   (flyspell-mode)
