@@ -25,16 +25,17 @@
 
     (siren-prog-mode-defaults)
     (company-mode +1)
-    (subword-mode +1)
-    (hs-minor-mode 1)
-    (highlight-indentation-set-offset 2)
-    (highlight-indentation-current-column-mode)
+    (fci-mode -1)
     (hideshowvis-enable)
+    (hs-minor-mode +1)
+    (highlight-indentation-current-column-mode)
+    (highlight-indentation-set-offset 2)
+    (subword-mode +1)
     (let ((map web-mode-map))
       (define-key map (kbd "C-j") 'newline-and-indent)
       (define-key map (kbd "C-c C-h") 'siren-toggle-hiding)))
 
-  (add-hook 'web-mode-hook (lambda () (run-hooks 'siren-web-mode-mode-hook))))
+  (add-hook 'web-mode-hook 'siren-web-mode-mode-hook))
 
 (provide 'siren-web-mode)
 ;;; siren-web-mode.el ends here
