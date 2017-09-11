@@ -27,7 +27,6 @@
 
 (require 'siren-programming)
 (require 'siren-company)
-(require 'siren-rubocop)
 (require 'siren-smartparens)
 (require 'siren-toggle-quotes)
 
