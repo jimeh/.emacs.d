@@ -49,11 +49,6 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
-;; autosave the undo-tree history
-(setq undo-tree-history-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq undo-tree-auto-save-history t)
-
 ;; smart tab behavior - indent or complete
 (setq tab-always-indent 'complete)
 
@@ -136,21 +131,9 @@
                    indentation space-after-tab tab-mark newline-mark
                    empty)))
 
-;; flyspell setup
-(require 'flyspell)
-(diminish 'flyspell-mode)
-(setq ispell-program-name "aspell" ; use aspell instead of ispell
-      ispell-extra-args '("--sug-mode=ultra"))
-
-
 ;; enabled change region case commands
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
-
-;; smarter kill-ring navigation
-(require 'browse-kill-ring)
-(browse-kill-ring-default-keybindings)
-(global-set-key (kbd "s-y") 'browse-kill-ring)
 
 ;; automatically indenting yanked text if in programming-modes
 (defun yank-advised-indent-function (beg end)
@@ -188,18 +171,6 @@ indent yanked text (with prefix arg don't indent)."
 ;; saner regex syntax
 (require 're-builder)
 (setq reb-re-syntax 'string)
-
-;; sensible undo
-(global-undo-tree-mode)
-(diminish 'undo-tree-mode)
-
-;; diff-hl
-(global-diff-hl-mode +1)
-(add-hook 'dired-mode-hook 'diff-hl-dired-mode)
-
-;; easy-kill
-(global-set-key [remap kill-ring-save] 'easy-kill)
-(global-set-key [remap mark-sexp] 'easy-mark)
 
 ;; diminish various modes
 ;; (diminish 'hs-minor-mode)

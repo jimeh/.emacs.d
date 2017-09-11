@@ -6,19 +6,18 @@
 
 ;;; Code:
 
-(siren-require-packages '(direx))
-(require 'direx)
+(use-package direx
+  :bind
+  ("C-x j" . direx-project:jump-to-project-root)
 
-(defun siren-direx-mode-defaults ()
-  (setq direx:closed-icon " + ")
-  (setq direx:open-icon " - "))
+  :config
+  (setq direx:closed-icon " + "
+        direx:open-icon " - ")
 
-(setq siren-direx-mode-hook 'siren-direx-mode-defaults)
+  (defun siren-direx-mode-defaults ())
 
-(add-hook 'direx-mode-hook (lambda ()
-                             (run-hooks 'siren-direx-mode-hook)))
-
-(global-set-key (kbd "C-x j") 'direx-project:jump-to-project-root)
+  (setq siren-direx-mode-hook 'siren-direx-mode-defaults)
+  (add-hook 'direx-mode-hook (lambda () (run-hooks 'siren-direx-mode-hook))))
 
 (provide 'siren-direx)
 ;;; siren-direx.el ends here

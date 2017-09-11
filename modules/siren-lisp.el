@@ -6,9 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-programming)
-(siren-require-packages '(rainbow-delimiters))
-
 ;; Lisp configuration
 (define-key read-expression-map (kbd "TAB") 'completion-at-point)
 
@@ -19,21 +16,12 @@
 (define-key lisp-mode-shared-map (kbd "M-\"") (siren-wrap-with "\""))
 
 ;; a great lisp coding hook
-(defun siren-lisp-coding-defaults ()
-  ;; (smartparens-strict-mode +1)
-  (rainbow-delimiters-mode +1)
-  )
-
-(setq siren-lisp-coding-hook 'siren-lisp-coding-defaults)
+(defun siren-lisp-coding-hook ())
 
 ;; interactive modes don't need whitespace checks
-(defun siren-interactive-lisp-coding-defaults ()
-  ;; (smartparens-strict-mode +1)
+(defun siren-interactive-lisp-coding-hook ()
   (highlight-indent-guides-mode)
-  (rainbow-delimiters-mode +1)
   (whitespace-mode -1))
-
-(setq siren-interactive-lisp-coding-hook 'siren-interactive-lisp-coding-defaults)
 
 (provide 'siren-lisp)
 ;;; siren-lisp.el ends here

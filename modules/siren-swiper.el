@@ -6,19 +6,18 @@
 
 ;;; Code:
 
-(siren-require-packages '(swiper))
+(use-package swiper
+  :bind
+  ("C-s" . swiper)
+  ("C-c C-r" . ivy-resume)
 
-(require 'swiper)
+  :config
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers t)
 
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
-
-(global-set-key (kbd "C-s") 'swiper)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
-
-(custom-set-faces
- '(ivy-current-match ((t (:background "#7e9fc9" :foreground "black"))))
- '(swiper-line-face ((t (:background "#313c4d")))))
+  (custom-set-faces
+   '(ivy-current-match ((t (:background "#7e9fc9" :foreground "black"))))
+   '(swiper-line-face ((t (:background "#313c4d"))))))
 
 (provide 'siren-swiper)
 ;;; siren-swiper.el ends here

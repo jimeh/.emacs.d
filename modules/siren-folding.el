@@ -6,9 +6,7 @@
 
 ;;; Code:
 
-(siren-require-packages '(hideshowvis))
-
-(require 'hideshowvis)
+(use-package hideshowvis)
 
 (defun siren-toggle-hiding (column)
   "Toggle hiding/showing blocks via hs-mode.

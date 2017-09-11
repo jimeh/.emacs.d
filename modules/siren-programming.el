@@ -8,6 +8,7 @@
 
 (require 'siren-fci)
 (require 'siren-flycheck)
+(require 'siren-flyspell)
 (require 'siren-smartparens)
 (require 'siren-highlight-indentation)
 (require 'siren-highlight-symbol)
@@ -25,7 +26,6 @@
   (whitespace-mode +1))
 
 (setq siren-prog-mode-hook 'siren-prog-mode-defaults)
-
 (add-hook 'prog-mode-hook (lambda ()
                             (run-hooks 'siren-prog-mode-hook)))
 
@@ -33,7 +33,6 @@
 (if (fboundp 'global-flycheck-mode)
     (global-flycheck-mode +1)
   (add-hook 'prog-mode-hook 'flycheck-mode))
-
 
 (provide 'siren-programming)
 ;;; siren-programming.el ends here

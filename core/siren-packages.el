@@ -17,25 +17,11 @@
 (package-initialize)
 
 (defvar siren-packages
-  '(browse-kill-ring
-    dash
-    discover-my-major
-    diff-hl
+  '(dash
     diminish
-    easy-kill
-    epl
     exec-path-from-shell
-    gist
-    git-timemachine
-    gitconfig-mode
-    gitignore-mode
-    ; god-mode
-    grizzl
-    ; operate-on-number
     smart-mode-line
-    ; smartrep
-    undo-tree
-    )
+    use-package)
   "A list of default packages to ensure are installed at launch.")
 
 ;;
@@ -70,6 +56,10 @@ Missing packages are installed automatically."
 
 ;; Install Melpa packages
 (siren-install-packages)
+
+;; Ensure use-package is loaded and configured
+(require 'use-package)
+(setq use-package-always-ensure t)
 
 (provide 'siren-packages)
 ;;; siren-packages.el ends here

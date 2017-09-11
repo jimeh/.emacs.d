@@ -6,14 +6,13 @@
 
 ;;; Code:
 
-(siren-require-packages '(highlight-indentation highlight-indent-guides))
+(use-package highlight-indentation
+  :defer t
+  :diminish (highlight-indentation-mode
+             highlight-indentation-current-column-mode))
 
-(require 'highlight-indentation)
-(require 'highlight-indent-guides)
-
-(diminish 'highlight-indentation-mode)
-(diminish 'highlight-indentation-current-column-mode)
-
+(use-package highlight-indent-guides
+  :defer t)
 
 (provide 'siren-highlight-indentation)
 ;;; siren-highlight-indentation.el ends here

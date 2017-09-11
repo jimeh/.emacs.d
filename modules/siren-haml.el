@@ -6,21 +6,18 @@
 
 ;;; Code:
 
-(siren-require-packages '(haml-mode))
+(use-package haml-mode
+  :mode "\\.haml\\'" "\\.hamlc\\'"
 
-(require 'siren-programming)
+  :config
+  (defun siren-haml-mode-defaults ()
+    (siren-prog-mode-defaults)
+    (setq tab-width 2)
+    (highlight-indentation-set-offset 2)
+    (highlight-indentation-current-column-mode))
 
-(add-to-list 'auto-mode-alist '("\\.hamlc\\'" . haml-mode))
-
-(defun siren-haml-mode-defaults ()
-  (siren-prog-mode-defaults)
-  (setq tab-width 2)
-  (highlight-indentation-set-offset 2)
-  (highlight-indentation-current-column-mode))
-
-(setq siren-haml-mode-hook 'siren-haml-mode-defaults)
-
-(add-hook 'haml-mode-hook (lambda () (run-hooks 'siren-haml-mode-hook)))
+  (setq siren-haml-mode-hook 'siren-haml-mode-defaults)
+  (add-hook 'haml-mode-hook (lambda () (run-hooks 'siren-haml-mode-hook))))
 
 (provide 'siren-haml)
 ;;; siren-haml.el ends here

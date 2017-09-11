@@ -6,12 +6,12 @@
 
 ;;; Code:
 
-(siren-require-packages '(zoom-window))
+(use-package zoom-window
+  :bind
+  ("C-x C-<return>" . zoom-window-zoom)
 
-(require 'zoom-window)
-(global-set-key (kbd "C-x C-<return>") 'zoom-window-zoom)
-
-(setq zoom-window-mode-line-color "#2a1f1f")
+  :config
+  (setq zoom-window-mode-line-color "#2a1f1f"))
 
 (provide 'siren-zoom-window)
 ;;; siren-zoom-window.el ends here

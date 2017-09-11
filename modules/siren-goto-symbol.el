@@ -8,12 +8,13 @@
 
 ;; Shamelessly ripped from Emacs Prelude.
 
-(siren-require-packages '(imenu-anywhere))
-
 (require 'imenu)
-(set-default 'imenu-auto-rescan t)
-(set-default 'imenu-max-item-length 160)
-(set-default 'imenu-max-items 400)
+
+(use-package imenu-anywhere
+  :config
+  (set-default 'imenu-auto-rescan t)
+  (set-default 'imenu-max-item-length 160)
+  (set-default 'imenu-max-items 400))
 
 (defun siren-flush-cache-and-goto-symbol ()
   "Flush imenu cache."
@@ -61,7 +62,6 @@
           (add-to-list 'symbol-names (substring-no-properties name))
           (add-to-list 'name-and-pos (cons (substring-no-properties name)
                                            position))))))))
-
 
 (global-set-key (kbd "C-t") 'siren-goto-symbol)
 (global-set-key (kbd "C-c C-t") 'siren-flush-cache-and-goto-symbol)

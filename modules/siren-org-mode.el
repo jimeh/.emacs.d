@@ -7,19 +7,20 @@
 ;;; Code:
 
 (require 'siren-fci)
+(require 'siren-flyspell)
 (require 'siren-smartparens)
 
 (defun siren-org-mode-defaults ()
-  (setq org-export-backends (quote (ascii html icalendar latex md confluence)))
-  (setq fill-column 80)
+  (setq org-export-backends '(ascii html icalendar latex md confluence)
+        fill-column 80
+        whitespace-action '(auto-cleanup))
+
   (linum-mode t)
   (flyspell-mode)
   (fci-mode)
   (smartparens-mode +1)
-  (setq whitespace-action (quote (auto-cleanup)))
   (visual-line-mode +1)
   (whitespace-mode +1)
-
   (let ((map org-mode-map))
     (define-key map (kbd "M-[") 'org-promote-subtree)
     (define-key map (kbd "M-]") 'org-demote-subtree)
@@ -29,7 +30,6 @@
     (define-key map (kbd "C-M-p") 'outline-previous-visible-heading)))
 
 (setq siren-org-mode-hook 'siren-org-mode-defaults)
-
 (add-hook 'org-mode-hook (lambda ()
                            (run-hooks 'siren-org-mode-hook)))
 

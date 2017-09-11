@@ -6,10 +6,10 @@
 
 ;;; Code:
 
-(siren-require-packages '(eslintd-fix))
+(use-package eslintd-fix
+  :defer t)
 
 (require 'siren-programming)
-(require 'eslintd-fix)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'"    . js-mode))
 (add-to-list 'auto-mode-alist '("\\.pac\\'"   . js-mode))
@@ -17,12 +17,13 @@
 
 (defun siren-js-mode-defaults ()
   "Default tweaks for `js-mode'."
-  (let ((indent-width 2))
-    (setq js-indent-level indent-width)
-    (setq indent-level indent-width)
-    (setq tab-width indent-width))
-  (setq flycheck-checker 'javascript-eslint)
-  (setq flycheck-javascript-eslint-executable "eslint_d")
+  (let ((width 2))
+    (setq js-indent-level width
+          indent-level width
+          tab-width width))
+
+  (setq flycheck-checker 'javascript-eslint
+        flycheck-javascript-eslint-executable "eslint_d")
 
   (siren-prog-mode-defaults)
   (eslintd-fix-mode)

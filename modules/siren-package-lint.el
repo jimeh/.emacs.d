@@ -7,12 +7,11 @@
 
 ;;; Code:
 
-(siren-require-packages '(package-lint flycheck-package))
-
-(require 'siren-flycheck)
-(require 'flycheck-package)
-
-(flycheck-package-setup)
+(use-package package-lint
+  :defer t
+  :config
+  (use-package flycheck-package
+    :config (flycheck-package-setup)))
 
 (provide 'siren-package-lint)
 ;;; siren-package-lint.el ends here

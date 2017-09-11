@@ -7,13 +7,23 @@
 
 ;;; Code:
 
-(siren-require-packages '(move-dup expand-region smart-shift))
+(use-package move-dup
+  :bind
+  ("M-p" . md/move-lines-up)
+  ("M-n" . md/move-lines-down)
+  ("C-x C-d" . md/duplicate-down))
 
-(require 'move-dup)
-(require 'expand-region)
+(use-package expand-region
+  :bind
+  ("M-." . er/expand-region)
+  ("M-," . er/contract-region))
 
-(require 'smart-shift)
-(global-smart-shift-mode 1)
+(use-package smart-shift
+  :bind
+  ("C-c [" . smart-shift-left)
+  ("C-c ]" . smart-shift-right)
+  ("M-[" . smart-shift-left)
+  ("M-]" . smart-shift-right))
 
 (defmacro allow-line-as-region-for-function (orig-function)
 `(defun ,(intern (concat (symbol-name orig-function) "-or-line"))
@@ -47,22 +57,8 @@
                           (lambda (x) (cons (random) (concat x "\n"))) lines)
                          (lambda (a b) (< (car a) (car b))))))))
 
-;; Keybindings
-(global-set-key (kbd "M-p") 'md/move-lines-up)
-(global-set-key (kbd "M-n") 'md/move-lines-down)
-;; (global-set-key (kbd "C-x C-d") 'md/duplicate-up)
-(global-set-key (kbd "C-x C-d") 'md/duplicate-down)
-
-(global-set-key (kbd "C-c [") 'smart-shift-left)
-(global-set-key (kbd "C-c ]") 'smart-shift-right)
-(global-set-key (kbd "M-[") 'smart-shift-left)
-(global-set-key (kbd "M-]") 'smart-shift-right)
-
 (global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
-
-(global-set-key (kbd "M-.") 'er/expand-region)
-(global-set-key (kbd "M-,") 'er/contract-region)
 
 (provide 'siren-text-manipulation)
 ;;; siren-text-manipulation.el ends here

@@ -6,50 +6,49 @@
 
 ;;; Code:
 
-(siren-require-packages '(perspective))
+(use-package perspective
+  :bind
+  ("C-z" . perspective-map)
 
-(require 'perspective)
-(setq persp-mode-prefix-key "")
-(setq persp-initial-frame-name "0:main")
+  ("C-z z" . persp-switch)
+  ("C-z C-z" . persp-switch)
+  ("C-z c" . persp-switch)
+  ("C-z C-c" . persp-switch)
+  ("C-z s" . persp-switch)
+  ("C-z C-s" . persp-switch)
+  ("C-z b" . persp-switch)
+  ("C-z C-b" . persp-switch)
 
-(persp-mode)
+  ("C-z l" . persp-switch-last)
+  ("C-z C-l" . persp-switch-last)
 
-(define-key persp-mode-map (kbd "C-z") perspective-map)
+  ("C-z c" . persp-remove-buffer)
+  ("C-z C-c" . persp-remove-buffer)
 
-(define-key persp-mode-map (kbd "C-z z") 'persp-switch)
-(define-key persp-mode-map (kbd "C-z C-z") 'persp-switch)
-(define-key persp-mode-map (kbd "C-z c") 'persp-switch)
-(define-key persp-mode-map (kbd "C-z C-c") 'persp-switch)
-(define-key persp-mode-map (kbd "C-z s") 'persp-switch)
-(define-key persp-mode-map (kbd "C-z C-s") 'persp-switch)
-(define-key persp-mode-map (kbd "C-z b") 'persp-switch)
-(define-key persp-mode-map (kbd "C-z C-b") 'persp-switch)
+  ("C-z k" . persp-kill)
+  ("C-z C-k" . persp-kill)
 
-(define-key persp-mode-map (kbd "C-z l") 'persp-switch-last)
-(define-key persp-mode-map (kbd "C-z C-l") 'persp-switch-last)
+  ("C-z r" . persp-rename)
+  ("C-z C-r" . persp-rename)
 
-(define-key persp-mode-map (kbd "C-z c") 'persp-remove-buffer)
-(define-key persp-mode-map (kbd "C-z C-c") 'persp-remove-buffer)
+  ("C-z a" . persp-add-buffer)
+  ("C-z C-a" . persp-add-buffer)
 
-(define-key persp-mode-map (kbd "C-z k") 'persp-kill)
-(define-key persp-mode-map (kbd "C-z C-k") 'persp-kill)
+  ("C-z i" . persp-import)
+  ("C-z C-i" . persp-import)
 
-(define-key persp-mode-map (kbd "C-z r") 'persp-rename)
-(define-key persp-mode-map (kbd "C-z C-r") 'persp-rename)
+  ("C-z n" . persp-next)
+  ("C-z C-n" . persp-next)
+  ("C-z p" . persp-prev)
+  ("C-z C-p" . persp-prev)
 
-(define-key persp-mode-map (kbd "C-z a") 'persp-add-buffer)
-(define-key persp-mode-map (kbd "C-z C-a") 'persp-add-buffer)
+  :config
+  (setq persp-mode-prefix-key ""
+        persp-initial-frame-name "0:main")
 
-(define-key persp-mode-map (kbd "C-z i") 'persp-import)
-(define-key persp-mode-map (kbd "C-z C-i") 'persp-import)
-
-(define-key persp-mode-map (kbd "C-z n") 'persp-next)
-(define-key persp-mode-map (kbd "C-z C-n") 'persp-next)
-(define-key persp-mode-map (kbd "C-z p") 'persp-prev)
-(define-key persp-mode-map (kbd "C-z C-p") 'persp-prev)
-
-(custom-set-faces
- '(persp-selected-face ((t (:foreground "#d97a35" :weight bold)))))
+  (persp-mode)
+  (custom-set-faces
+   '(persp-selected-face ((t (:foreground "#d97a35" :weight bold))))))
 
 (provide 'siren-perspective)
 ;;; siren-perspective.el ends here
