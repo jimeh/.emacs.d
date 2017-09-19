@@ -18,7 +18,7 @@
 (require 'siren-dired)
 (require 'siren-direx)
 (require 'siren-dumb-jump)
-(require 'siren-edit-server)
+;; (require 'siren-edit-server)
 (require 'siren-editorconfig)
 (require 'siren-evil)
 (require 'siren-folding)
