@@ -10,6 +10,7 @@
   :bind
   ("C-c p p" . projectile-switch-project)
   ("C-c C-b" . projectile-ibuffer)
+  ("C-c C-k" . projectile-kill-buffers)
   ("C-x C-t" . projectile-find-file)
   ("C-x t" . projectile-find-test-file)
   ("C-x C-v" . projectile-switch-to-buffer)
