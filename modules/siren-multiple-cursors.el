@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-phi-search)
+
 (use-package multiple-cursors
   :bind
   ("C-x C-@" . mc/edit-lines) ;; Terminal
@@ -16,8 +18,6 @@
   ("M-RET" . set-rectangular-region-anchor)
 
   :config
-  (require 'siren-phi-search)
-
   (setq mc/edit-lines-empty-lines 'ignore)
 
   ;; Make alt-<click> add additional cursors

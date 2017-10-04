@@ -8,7 +8,7 @@
 
 (use-package phi-search
   :config
-  (setq phi-search-limit 3000)
+  (setq phi-search-limit 3000))
 
 (provide 'siren-phi-search)
 ;;; siren-phi-search.el ends here
