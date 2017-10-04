@@ -2,16 +2,17 @@
 
 ;;; Commentary:
 
-;; Basic configuration for avy. Avy allows us to effectively navigate to visible
-;; things.
+;; Basic configuration for package-lint.
 
 ;;; Code:
 
 (use-package package-lint
+  :defer t)
+
+(use-package flycheck-package
   :defer t
   :config
-  (use-package flycheck-package
-    :config (flycheck-package-setup)))
+  (flycheck-package-setup))
 
 (provide 'siren-package-lint)
 ;;; siren-package-lint.el ends here

@@ -20,11 +20,6 @@
   (require 'siren-ediff)
   (require 'magit)
 
-  (use-package magit-gh-pulls
-    :config
-    (setq gh-use-local-git-config t)
-    (add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls))
-
   (setq magit-completing-read-function 'magit-ido-completing-read
         magit-status-buffer-switch-function 'switch-to-buffer
         magit-bury-buffer-function 'bury-buffer
@@ -49,6 +44,11 @@
   (setq siren-git-commit-mode-hook 'siren-git-commit-mode-defaults)
   (add-hook 'git-commit-mode-hook (lambda ()
                                     (run-hooks 'siren-git-commit-mode-hook))))
+
+(use-package magit-gh-pulls
+  :config
+  (setq gh-use-local-git-config t)
+  (add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls))
 
 (provide 'siren-magit)
 ;;; siren-magit.el ends here

@@ -14,9 +14,12 @@
   ("M-o" . ace-window)
 
   :config
-  (use-package ace-window)
   (setq avy-background t
         avy-style 'at-full))
+
+(use-package ace-window
+  :bind
+  ("M-o" . ace-window))
 
 (provide 'siren-avy)
 ;;; siren-avy.el ends here

@@ -6,10 +6,11 @@
 
 ;;; Code:
 
+(require 'siren-rainbow)
+
 (use-package css-mode
   :mode "\\.css\\'"
   :config
-  (use-package rainbow-mode)
   (require 'siren-programming)
 
   (setq css-indent-offset 2)

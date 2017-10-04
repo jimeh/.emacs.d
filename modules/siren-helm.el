@@ -17,7 +17,7 @@
   ("C-c C-'" . helm-do-ag-project-root)
 
   :config
-  (setq helm-ag-ignore-patterns '("*.sql")
+  (setq helm-ag-ignore-patterns '("*.sql" "archive-contents")
         helm-ag-source-type "file-line"))
 
 (use-package helm-descbinds

@@ -27,10 +27,10 @@
          ("C-;" . elscreen-display-screen-name-list))
 
   :config
-  (use-package elscreen-buffer-group)
-
   ;; Start ElScreen.
   (elscreen-start))
+
+(use-package elscreen-buffer-group :defer t)
 
 (provide 'siren-elscreen)
 ;;; siren-elscreen.el ends here

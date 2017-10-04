@@ -22,25 +22,6 @@
 
   :config
   (message "loading go-mode")
-  (use-package company-go)
-  (use-package go-eldoc)
-  (use-package go-guru)
-  (use-package go-rename)
-  (use-package gotest)
-
-  (use-package go-projectile
-    :init
-    ;; prevent go-projectile from screwing up GOPATH
-    (setq go-projectile-switch-gopath 'never))
-
-  (use-package flycheck-gometalinter
-    :init
-    (setq flycheck-gometalinter-fast t
-          flycheck-gometalinter-tests t
-          flycheck-gometalinter-vendor t)
-    :config
-    (eval-after-load 'flycheck
-      '(add-hook 'flycheck-mode-hook #'flycheck-gometalinter-setup)))
 
   (when (memq window-system '(mac ns))
     (exec-path-from-shell-copy-env "GOPATH"))
@@ -91,6 +72,27 @@
   (setq siren-go-mode-hook 'siren-go-mode-defaults)
   (add-hook 'go-mode-hook (lambda ()
                             (run-hooks 'siren-go-mode-hook))))
+
+(use-package company-go :defer t)
+(use-package go-eldoc :defer t)
+(use-package go-guru :defer t)
+(use-package go-rename :defer t)
+(use-package gotest :defer t)
+
+(use-package go-projectile
+  :defer t
+  :init
+  ;; prevent go-projectile from screwing up GOPATH
+  (setq go-projectile-switch-gopath 'never))
+
+(use-package flycheck-gometalinter
+  :init
+  (setq flycheck-gometalinter-fast t
+        flycheck-gometalinter-tests t
+        flycheck-gometalinter-vendor t)
+  :config
+  (eval-after-load 'flycheck
+    '(add-hook 'flycheck-mode-hook #'flycheck-gometalinter-setup)))
 
 (provide 'siren-go)
 ;;; siren-go.el ends here
