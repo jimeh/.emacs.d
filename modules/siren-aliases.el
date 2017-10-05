@@ -2,13 +2,12 @@
 
 ;;; Commentary:
 
-;; Common aliases I use all the time.
+;; Common aliases for built-in commands.
 
 ;;; Code:
 
 ;; Text Manipulation
 (defalias 'rs 'replace-string)
-(defalias 'qr 'query-replace-regexp)
 (defalias 'al 'align-regexp)
 (defalias 'sl 'sort-lines)
 (defalias 'rr 'reverse-region)

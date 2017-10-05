@@ -11,6 +11,7 @@
 
 ;; Modules
 (require 'siren-aliases)
+(require 'siren-anzu)
 (require 'siren-avy)
 (require 'siren-browse-kill-ring)
 (require 'siren-company)
