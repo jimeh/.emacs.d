@@ -20,9 +20,9 @@
         anzu-replace-to-string-separator " => ")
 
   (global-set-key [remap query-replace] 'anzu-query-replace)
-  (global-set-key (kbd "C-x C-r") 'anzu-query-replace)
+  (global-set-key (kbd "C-c C-r") 'anzu-query-replace)
   (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp)
-  (global-set-key (kbd "C-c C-r") 'anzu-query-replace-regexp))
+  (global-set-key (kbd "C-x C-r") 'anzu-query-replace-regexp))
 
 (provide 'siren-anzu)
 ;;; siren-anzu.el ends here
