@@ -45,5 +45,5 @@ or the current buffer directory."
         neo-vc-integration '(face char)
         neo-window-width 54))
 
-=(provide 'siren-neotree)
+(provide 'siren-neotree)
 ;;; siren-neotree.el ends here
