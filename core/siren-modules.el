@@ -27,6 +27,7 @@
 (require 'siren-git-timemachine)
 (require 'siren-github)
 (require 'siren-global-keybindings)
+(require 'siren-goto-chg)
 (require 'siren-goto-symbol)
 (require 'siren-haml)
 (require 'siren-helm)
