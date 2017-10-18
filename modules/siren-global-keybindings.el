@@ -20,6 +20,10 @@
 (global-set-key (kbd "C-x C-o") 'other-window)
 (global-set-key (kbd "C-x C-i") 'siren-other-window-reverse)
 
+;; Window management
+(global-set-key (kbd "C-x C-SPC") 'balance-windows)
+(global-set-key (kbd "C-x SPC") 'balance-windows)
+
 ;; Kill-Ring related
 (global-set-key (kbd "M-Y") 'siren-yank-pop-forwards)
 

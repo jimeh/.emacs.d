@@ -11,7 +11,6 @@
 (use-package multiple-cursors
   :bind
   ("C-x C-@" . mc/edit-lines) ;; Terminal
-  ("C-x C-SPC" . mc/edit-lines) ;; GUI
   ("M-/" . mc/mark-next-like-this)
   ("M-m" . mc/mark-previous-like-this)
   ("C-c M-/" . mc/mark-all-like-this)
