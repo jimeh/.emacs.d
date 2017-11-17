@@ -15,6 +15,8 @@
         fill-column 80
         whitespace-action '(auto-cleanup))
 
+  (require 'org-mouse)
+
   (linum-mode t)
   (flyspell-mode)
   (fci-mode)
