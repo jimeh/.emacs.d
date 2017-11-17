@@ -57,9 +57,9 @@
 ;; (require 'siren-zone)
 
 ;; Project management
+(require 'siren-neotree)
 (require 'siren-projectile)
-(require 'siren-ecb)
-;; (require 'siren-neotree)
+;; (require 'siren-ecb)
 ;; (require 'siren-project-explorer)
 
 ;; Workspace management
