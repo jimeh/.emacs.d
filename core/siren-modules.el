@@ -61,6 +61,7 @@
 (require 'siren-projectile)
 ;; (require 'siren-ecb)
 ;; (require 'siren-project-explorer)
+;; (require 'siren-treemacs)
 
 ;; Workspace management
 (require 'siren-escreen)
