@@ -33,11 +33,8 @@ or the current buffer directory."
   (require 'siren-projectile)
   (setq neo-autorefresh t
         neo-force-change-root t
-        neo-force-change-root t
-        neo-mode-line-type 'default
         neo-mode-line-type 'default
         neo-show-hidden-files t
-        neo-show-updir-line nil
         neo-show-updir-line nil
         neo-smart-open nil
         neo-theme 'ascii
