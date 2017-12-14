@@ -31,13 +31,17 @@ or the current buffer directory."
 
   :config
   (require 'siren-projectile)
+
+  (if window-system
+      (setq neo-theme 'nerd)
+    (setq neo-theme 'ascii))
+
   (setq neo-autorefresh t
         neo-force-change-root t
         neo-mode-line-type 'default
         neo-show-hidden-files t
         neo-show-updir-line nil
         neo-smart-open nil
-        neo-theme 'ascii
         neo-toggle-window-keep-p t
         neo-vc-integration '(face char)
         neo-window-width 54))
