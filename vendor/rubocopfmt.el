@@ -54,7 +54,7 @@
         (rubocopfmt-args
          (list "--diff-format" "rcs"
                "--interactive"
-               "--src-dir" (file-name-directory (file-truename buffer-file-name)))))
+               "--src-file" (file-truename buffer-file-name))))
 
     (unwind-protect
         (save-restriction
