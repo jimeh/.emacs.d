@@ -11,4 +11,4 @@
 (require 'atom-one-dark-theme)
 
 (provide 'siren-theme-atom-one-dark)
-;;; siren-theme-twilight-anti-bright.el ends here
+;;; siren-theme-atom-one-dark.el ends here
