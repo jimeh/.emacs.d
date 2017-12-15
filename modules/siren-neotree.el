@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(use-package all-the-icons)
+
 (use-package neotree
   :bind
   ("C-x C-p" . neotree-toggle)
@@ -33,7 +35,7 @@ or the current buffer directory."
   (require 'siren-projectile)
 
   (if window-system
-      (setq neo-theme 'nerd)
+      (setq neo-theme 'icons)
     (setq neo-theme 'ascii))
 
   (setq neo-autorefresh t
