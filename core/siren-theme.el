@@ -10,7 +10,7 @@
 (add-to-list 'load-path siren-themes-dir)
 
 (if window-system
-  (require 'siren-theme-twilight-anti-bright)
+    (require 'siren-theme-doom-vibrant)
   (require 'siren-theme-tomorrow-night-paradise))
 
 (provide 'siren-theme)
