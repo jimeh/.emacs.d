@@ -8,7 +8,8 @@
 
 (use-package eyebrowse
   :config
-  (setq eyebrowse-keymap-prefix ""
+  (setq eyebrowse-default-workspace-slot 0
+        eyebrowse-keymap-prefix ""
         eyebrowse-mode-line-style 'always
         eyebrowse-new-workspace t
         eyebrowse-wrap-around t)
