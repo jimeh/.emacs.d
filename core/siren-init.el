@@ -30,12 +30,14 @@
 (unless (file-exists-p siren-savefile-dir)
   (make-directory siren-savefile-dir))
 
-;; Ensure vendor directory load-paths are configured
-(require 'siren-vendor)
-
 ;; Core stuff
 (require 'siren-custom)
 (require 'siren-core)
+
+;; Ensure vendor directory load-paths are configured
+(require 'siren-vendor)
+
+;; Continue core stuff
 (require 'siren-packages)
 (require 'siren-env)
 (require 'siren-ui)
@@ -49,7 +51,7 @@
 (when (eq system-type 'gnu/linux)
   (require 'siren-linux))
 
-;; config changes made through the customize UI will be store here
+;; Config changes made through the customize UI will be store here
 (setq custom-file (expand-file-name "custom.el" siren-dir))
 (load-file custom-file)
 
