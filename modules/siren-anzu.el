@@ -8,8 +8,6 @@
 
 (use-package anzu
   :config
-  (global-anzu-mode +1)
-
   (set-face-attribute 'anzu-mode-line nil
                       :foreground "yellow" :weight 'bold)
 
@@ -22,7 +20,9 @@
   (global-set-key [remap query-replace] 'anzu-query-replace)
   (global-set-key (kbd "C-c C-r") 'anzu-query-replace)
   (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp)
-  (global-set-key (kbd "C-x C-r") 'anzu-query-replace-regexp))
+  (global-set-key (kbd "C-x C-r") 'anzu-query-replace-regexp)
+
+  (global-anzu-mode +1))
 
 (provide 'siren-anzu)
 ;;; siren-anzu.el ends here

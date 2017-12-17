@@ -15,7 +15,10 @@
   ("C-x t" . projectile-find-test-file)
   ("C-x C-v" . projectile-switch-to-buffer)
 
-  :config
+  :init
+  (setq projectile-cache-file (expand-file-name
+                               "projectile.cache" siren-savefile-dir))
+
   (setq projectile-completion-system 'ido
         projectile-enable-caching nil
         projectile-globally-ignored-directories '(".idea"
@@ -37,12 +40,11 @@
                                                   "Godeps"
                                                   "elpa"
                                                   "savefile")
-        projectile-globally-ignored-files (quote ("TAGS" "*.log"))
+        projectile-globally-ignored-files '("TAGS" "*.log")
         projectile-sort-order 'recently-active
-        projectile-mode-line (quote "")
-        projectile-cache-file (expand-file-name
-                               "projectile.cache" siren-savefile-dir))
+        projectile-mode-line (quote ""))
 
+  :config
   ;; Treat separate directories with Gemfiles within a single git repo as separate
   ;; projects.
   (push "Gemfile" projectile-project-root-files-bottom-up)

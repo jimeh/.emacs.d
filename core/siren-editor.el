@@ -28,6 +28,7 @@
 (delete-selection-mode t)
 
 ;; Save place in files
+(setq save-place-file (expand-file-name "saveplace" siren-savefile-dir))
 (save-place-mode 1)
 
 ;; Electric behavior
@@ -75,12 +76,6 @@
   ;; (global-set-key [mouse-5] 'scroll-up-line)
   )
 
-;; saveplace remembers your location in a file when saving files
-(require 'saveplace)
-(setq save-place-file (expand-file-name "saveplace" siren-savefile-dir))
-;; activate it for all buffers
-(setq-default save-place t)
-
 ;; savehist keeps track of some history
 (require 'savehist)
 (setq savehist-additional-variables
@@ -94,7 +89,6 @@
 
 ;; Recentf
 (require 'recentf)
-(recentf-mode 1)
 (setq recentf-save-file (expand-file-name "recentf" siren-savefile-dir)
       recentf-max-saved-items 500
       recentf-max-menu-items 100

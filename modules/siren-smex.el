@@ -14,8 +14,10 @@
   ("C-c C-m" . smex)
   ("C-c C-c M-x" . execute-extended-command)
 
-  :config
+  :init
   (setq smex-save-file (expand-file-name ".smex-items" siren-savefile-dir))
+
+  :config
   (smex-initialize))
 
 (provide 'siren-smex)

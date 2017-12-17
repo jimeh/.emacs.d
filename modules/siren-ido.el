@@ -6,10 +6,7 @@
 
 ;;; Code:
 
-(siren-require-packages '(ido-completing-read+ ido-vertical-mode smex))
-
 (require 'ido)
-(ido-mode 1)
 
 (setq ido-auto-merge-work-directories-length -1
       ido-case-fold t
@@ -18,9 +15,12 @@
       ido-enable-flex-matching t
       ido-enable-prefix nil
       ido-max-prospects 10
-      ido-save-directory-list-file (expand-file-name "ido.hist" siren-savefile-dir)
+      ido-save-directory-list-file (expand-file-name "ido.hist"
+                                                     siren-savefile-dir)
       ido-use-faces nil
       ido-use-filename-at-point nil)
+
+(ido-mode 1)
 
 (use-package ido-completing-read+
   :config

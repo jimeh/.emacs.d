@@ -10,12 +10,13 @@
   :bind
   ("C-x C-p" . project-explorer-toggle)
 
-  :config
+  :init
   (setq pe/follow-current t
         pe/width 54
         pe/cache-directory (expand-file-name
                             "project-explorer-cache" siren-savefile-dir))
 
+  :config
   ;; Make Project Explorer open selected file in last used buffer
   (setq pe/display-content-buffer-function
         (lambda (buffer)
