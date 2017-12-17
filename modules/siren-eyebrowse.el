@@ -7,6 +7,11 @@
 ;;; Code:
 
 (use-package eyebrowse
+  :init
+  ;; Fix side-window issue: https://github.com/wasamasa/eyebrowse/issues/52
+  (add-to-list 'window-persistent-parameters '(window-side . writable))
+  (add-to-list 'window-persistent-parameters '(window-slot . writable))
+
   :config
   (setq eyebrowse-default-workspace-slot 0
         eyebrowse-keymap-prefix ""
