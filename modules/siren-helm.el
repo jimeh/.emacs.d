@@ -14,7 +14,7 @@
 (use-package helm-ag
   :bind
   ("C-c C-s" . helm-do-ag)
-  ("C-c C-'" . helm-do-ag-project-root)
+  ("C-x C-'" . helm-do-ag-project-root)
 
   :config
   (setq helm-ag-ignore-patterns '("*.sql" "archive-contents")
@@ -46,8 +46,10 @@
 
 (use-package helm-projectile
   :bind
-  ("C-c ;" . helm-projectile)
-  ("C-c C-;" . helm-projectile))
+  ("C-x ;" . helm-projectile)
+  ("C-x C-;" . helm-projectile)
+  ("C-c ;" . helm-projectile-switch-project)
+  ("C-c C-;" . helm-projectile-switch-project))
 
 (use-package helm-swoop
   :bind
