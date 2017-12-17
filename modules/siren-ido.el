@@ -31,14 +31,5 @@
   (setq ido-vertical-define-keys "C-n-C-p-up-down-left-right")
   (ido-vertical-mode 1))
 
-(use-package smex
-  :bind
-  ("M-x" . smex)
-  ("M-X" . smex-major-mode-commands)
-
-  :config
-  (setq smex-save-file (expand-file-name ".smex-items" siren-savefile-dir))
-  (smex-initialize))
-
 (provide 'siren-ido)
 ;;; siren-ido.el ends here
