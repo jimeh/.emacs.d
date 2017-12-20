@@ -69,9 +69,9 @@
 ;; (require 'siren-treemacs)
 
 ;; Workspace management
-(require 'siren-eyebrowse)
+(require 'siren-escreen)
 ;; (require 'siren-elscreen)
-;; (require 'siren-escreen)
+;; (require 'siren-eyebrowse)
 ;; (require 'siren-perspective)
 ;; (require 'siren-workgroups2)
 
