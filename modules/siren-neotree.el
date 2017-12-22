@@ -11,11 +11,22 @@
 (use-package neotree
   :bind
   ("C-x C-p" . neotree-toggle)
-  ("C-x p" . neotree-project-dir-toggle)
+  ("C-x p" . neotree-project-dir)
 
   :init
-  (defun neotree-project-dir-toggle ()
+  (defun neotree-project-dir ()
     "Open NeoTree using the project root, using find-file-in-project,
+or the current buffer directory."
+    (interactive)
+    (let ((project-dir (ignore-errors (projectile-project-root)))
+          (file-name (buffer-file-name))
+          (neo-smart-open nil))
+      (neotree-show)
+      (if project-dir (neotree-dir project-dir))
+      (if file-name (neotree-find file-name))))
+
+  (defun neotree-project-dir-toggle ()
+    "Toggle opening NeoTree using the project root, using find-file-in-project,
 or the current buffer directory."
     (interactive)
     (let ((project-dir (ignore-errors (projectile-project-root)))
