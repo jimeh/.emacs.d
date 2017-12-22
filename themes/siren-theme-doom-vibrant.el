@@ -29,7 +29,8 @@
   (doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
 
   ;; Corrects (and improves) org-mode's native fontification.
-  (doom-themes-org-config))
+  ;; (doom-themes-org-config)
+  )
 
 (provide 'siren-theme-doom-vibrant)
 ;;; siren-theme-doom-vibrant.el ends here
