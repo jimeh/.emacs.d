@@ -29,18 +29,10 @@ or the current buffer directory."
     "Toggle opening NeoTree using the project root, using find-file-in-project,
 or the current buffer directory."
     (interactive)
-    (let ((project-dir (ignore-errors (projectile-project-root)))
-          (file-name (buffer-file-name))
-          (neo-smart-open nil))
-      (if (and (fboundp 'neo-global--window-exists-p)
-               (neo-global--window-exists-p))
-          (neotree-hide)
-        (progn
-          (neotree-show)
-          (if project-dir
-              (neotree-dir project-dir))
-          (if file-name
-              (neotree-find file-name))))))
+    (if (and (fboundp 'neo-global--window-exists-p)
+             (neo-global--window-exists-p))
+        (neotree-hide)
+      (neotree-project-dir)))
 
   :config
   (require 'siren-projectile)
