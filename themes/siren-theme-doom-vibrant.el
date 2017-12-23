@@ -15,6 +15,7 @@
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t  ; if nil, italics is universally disabled
         doom-vibrant-brighter-comments nil
+        doom-vibrant-brighter-modeline nil
         doom-vibrant-comment-bg t
         doom-vibrant-padded-modeline nil)
 
