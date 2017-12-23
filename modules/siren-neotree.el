@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(use-package all-the-icons)
-
 (use-package neotree
   :bind
   ("C-x C-p" . neotree-toggle)
@@ -35,6 +33,7 @@ or the current buffer directory."
       (neotree-project-dir)))
 
   :config
+  (require 'siren-all-the-icons)
   (require 'siren-projectile)
 
   (if window-system
