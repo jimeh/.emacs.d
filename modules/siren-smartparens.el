@@ -31,6 +31,9 @@
 
   ;; Keybindings
   (let ((map smartparens-mode-map))
+    (define-key map (kbd "C-M-t") 'sp-transpose-sexp)
+    (define-key map (kbd "C-M-r") (lambda ()
+                                    (interactive) (sp-transpose-sexp -1)))
     (define-key map (kbd "C-M-f") 'sp-forward-sexp)
     (define-key map (kbd "C-M-b") 'sp-backward-sexp)
     (define-key map (kbd "C-M-a") 'sp-beginning-of-sexp)
@@ -42,7 +45,7 @@
     (define-key map (kbd "s->") 'sp-forward-slurp-sexp)
     (define-key map (kbd "s-<") 'sp-forward-barf-sexp)
     (define-key map (kbd "M-|") 'sp-split-sexp)
-    (define-key map (kbd "M-t") 'sp-backward-up-sexp)
+    ;; (define-key map (kbd "M-t") 'sp-backward-up-sexp)
     (define-key map (kbd "C-<backspace>") 'sp-backward-kill-sexp)
     (define-key map (kbd "C-<delete>") 'sp-kill-sexp)))
 
