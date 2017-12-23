@@ -31,7 +31,13 @@
 
   ;; Corrects (and improves) org-mode's native fontification.
   ;; (doom-themes-org-config)
-  )
+
+  ;; Override some of doom-vibrant's colors.
+  (setq fci-rule-color (doom-color 'base3))
+  (set-face-attribute 'font-lock-variable-name-face nil
+                      :foreground (doom-lighten (doom-color 'blue) 0.25))
+  (set-face-attribute 'vertical-border nil
+                      :foreground (doom-darken (doom-color 'vertical-bar) 0.1)))
 
 (provide 'siren-theme-doom-vibrant)
 ;;; siren-theme-doom-vibrant.el ends here
