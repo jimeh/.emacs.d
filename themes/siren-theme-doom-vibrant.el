@@ -9,6 +9,7 @@
 (use-package doom-themes
   :ensure t
   :config
+  (require 'siren-all-the-icons)
 
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
