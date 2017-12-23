@@ -9,7 +9,7 @@
 (require 'flyspell)
 (diminish 'flyspell-mode)
 (setq ispell-program-name "aspell" ; use aspell instead of ispell
-      ispell-extra-args '("--sug-mode=ultra"))
+      ispell-extra-args '("--lang=en" "--sug-mode=ultra"))
 
 (global-set-key (kbd "s-.") 'flyspell-correct-word-before-point)
 
