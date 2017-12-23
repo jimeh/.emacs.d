@@ -17,7 +17,9 @@
   (interactive)
   (siren-transparency-fix)
   (if (> (frame-parameter nil 'alpha) 0)
-      (set-frame-parameter nil 'alpha (+ (frame-parameter nil 'alpha) -1))
+      (let ((new-level (+ (frame-parameter nil 'alpha) -1)))
+        (set-frame-parameter nil 'alpha new-level)
+        (message "Frame transparency set to %s" new-level))
     (message "This is a minimum value of transparency!")))
 
 (defun siren-transparency-decrease ()
@@ -25,7 +27,9 @@
   (interactive)
   (siren-transparency-fix)
   (if (< (frame-parameter nil 'alpha) 100)
-      (set-frame-parameter nil 'alpha (+ (frame-parameter nil 'alpha) +1))
+      (let ((new-level (+ (frame-parameter nil 'alpha) +1)))
+        (set-frame-parameter nil 'alpha (+ (frame-parameter nil 'alpha) +1))
+        (message "Frame transparency set to %s" new-level))
     (message "This is a minimum value of transparency!")))
 
 (defun siren-transparency (numb)
