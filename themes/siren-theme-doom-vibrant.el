@@ -34,6 +34,8 @@
 
   ;; Override some of doom-vibrant's colors.
   (setq fci-rule-color (doom-color 'base3))
+  (set-face-attribute 'hideshowvis-hidable-face nil
+                      :foreground (doom-color 'base7))
   (set-face-attribute 'font-lock-variable-name-face nil
                       :foreground (doom-lighten (doom-color 'blue) 0.25))
   (set-face-attribute 'vertical-border nil
