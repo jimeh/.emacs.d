@@ -6,12 +6,12 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package plantuml-mode
   :mode "\\.uml\\'"
 
   :config
-  (require 'siren-programming)
-
   (defun siren-plantuml-mode-defaults ()
     (siren-prog-mode-defaults)
     (setq tab-width 2)

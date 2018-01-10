@@ -6,13 +6,13 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package feature-mode
   :mode "\\.feature\\'"
   :interpreter "cucumber"
 
   :config
-  (require 'siren-programming)
-
   (defun siren-feature-mode-defaults ()
     (siren-prog-mode-defaults)
     (setq tab-width 2)

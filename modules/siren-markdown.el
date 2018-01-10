@@ -6,6 +6,9 @@
 
 ;;; Code:
 
+(require 'siren-flyspell)
+(require 'siren-smartparens)
+
 (use-package markdown-mode
   :mode
   "\\.md"
@@ -15,7 +18,6 @@
   "\\.markdown"
 
   :config
-  (require 'siren-flyspell)
   (setq markdown-command "redcarpet")
 
   (defun siren-markdown-mode-defaults ()
@@ -27,6 +29,7 @@
     (linum-mode t)
     (flyspell-mode)
     (auto-fill-mode)
+    (smartparens-mode +1)
     (subword-mode)
     (define-key markdown-mode-map (kbd "C-c p") 'markdown-preview))
 

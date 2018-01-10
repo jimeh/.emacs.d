@@ -6,11 +6,11 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package yaml-mode
   :mode "\\.yml\\'" "\\.yaml\\'"
   :config
-  (require 'siren-programming)
-
   (defun siren-yaml-mode-defaults ()
     (siren-prog-mode-defaults)
     (setq tab-width 2

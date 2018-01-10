@@ -6,10 +6,11 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package json-mode
   :mode "\\.json\\'"
   :config
-  (require 'siren-programming)
   (require 'omnifmt)
 
   (defun siren-json-mode-defaults ()

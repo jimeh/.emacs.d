@@ -6,12 +6,12 @@
 
 ;;; Code:
 
+(require 'siren-fci)
+
 (use-package company
   :config
 
   ;; work-around for issues with fci-mode
-  (require 'siren-fci)
-
   (defvar-local company-fci-mode-on-p nil)
 
   (defun company-turn-off-fci (&rest ignore)

@@ -6,6 +6,9 @@
 
 ;;; Code:
 
+(require 'siren-all-the-icons)
+(require 'siren-projectile)
+
 (use-package neotree
   :bind
   ("C-x C-p" . neotree-toggle)
@@ -33,9 +36,6 @@ or the current buffer directory."
       (neotree-project-dir)))
 
   :config
-  (require 'siren-all-the-icons)
-  (require 'siren-projectile)
-
   (if window-system
       (setq neo-theme 'icons)
     (setq neo-theme 'ascii))

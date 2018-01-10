@@ -6,12 +6,12 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package gitconfig-mode
   :mode "\\.gitconfig" "gitconfig\\'" "\\.git\\\/config"
 
   :config
-  (require 'siren-programming)
-
   (defun siren-gitconfig-mode-defaults ()
     (siren-prog-mode-defaults)
     (setq tab-width 2)

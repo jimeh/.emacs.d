@@ -6,11 +6,11 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package conf-mode
   :mode "Procfile\\'"
   :config
-  (require 'siren-programming)
-
   (defun siren-conf-mode-defaults ()
     (siren-prog-mode-defaults)
     (setq tab-width 2)

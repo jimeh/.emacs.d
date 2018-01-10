@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package go-mode
   :mode "\\.go\\'"
   :interpreter "go"
@@ -31,7 +33,6 @@
 
   (define-key 'help-command (kbd "G") 'godoc)
 
-  (require 'siren-programming)
   (defun siren-go-mode-defaults ()
     (siren-prog-mode-defaults)
 

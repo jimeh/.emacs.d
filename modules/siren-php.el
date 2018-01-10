@@ -6,10 +6,11 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+(require 'siren-rainbow)
+
 (use-package php-mode
   :config
-  (require 'siren-rainbow)
-
   (defun siren-php-mode-defaults ()
     (siren-prog-mode-defaults)
     (rainbow-mode +1)

@@ -6,14 +6,14 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package web-mode
   :mode
   "\\.html\\'"
   "\\.html.erb\\'"
 
   :config
-  (require 'siren-programming)
-
   (setq web-mode-code-indent-offset 2
         web-mode-css-indent-offset 2
         web-mode-markup-indent-offset 2

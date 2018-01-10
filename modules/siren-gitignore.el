@@ -6,12 +6,12 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package gitignore-mode
   :mode "\\.gitignore" "gitignore\\'"
 
   :config
-  (require 'siren-programming)
-
   (defun siren-gitignore-mode-defaults ()
     (siren-prog-mode-defaults)
     (setq tab-width 2)

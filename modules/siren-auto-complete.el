@@ -6,9 +6,10 @@
 
 ;;; Code:
 
+(require 'siren-flyspell)
+
 (use-package auto-complete
   :config
-  (require 'siren-flyspell)
   (ac-flyspell-workaround)
 
   (setq ac-auto-show-menu 0.2

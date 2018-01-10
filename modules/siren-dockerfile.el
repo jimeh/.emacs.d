@@ -6,12 +6,12 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package dockerfile-mode
   :mode "Dockerfile\\'"
 
   :config
-  (require 'siren-programming)
-
   (defun siren-dockerfile-mode-defaults ()
     (siren-prog-mode-defaults)
     (subword-mode +1))

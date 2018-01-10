@@ -6,10 +6,10 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package lua-mode
   :config
-  (require 'siren-programming)
-
   (defun siren-lua-mode-defaults ()
     (siren-prog-mode-defaults)
 

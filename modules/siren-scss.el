@@ -6,12 +6,12 @@
 
 ;;; Code:
 
+(require 'siren-css)
+
 (use-package scss-mode
   :mode "\\.scss\\'"
 
   :config
-  (require 'siren-css)
-
   ;; turn off annoying auto-compile on save
   (setq scss-compile-at-save nil)
 

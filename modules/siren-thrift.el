@@ -6,12 +6,12 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package thrift
   :mode "\\.thrift\\'"
 
   :config
-  (require 'siren-programming)
-
   (defun siren-thrift-mode-defaults ()
     (siren-prog-mode-defaults)
 

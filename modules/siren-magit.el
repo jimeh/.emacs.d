@@ -6,6 +6,10 @@
 
 ;;; Code:
 
+(require 'siren-fci)
+(require 'siren-flyspell)
+(require 'siren-ediff)
+
 (use-package magit
   :bind
   ("C-x g". magit-status)
@@ -15,9 +19,6 @@
   (defalias 'bl 'magit-blame)
 
   :config
-  (require 'siren-fci)
-  (require 'siren-flyspell)
-  (require 'siren-ediff)
   (require 'magit)
 
   (setq magit-completing-read-function 'magit-ido-completing-read

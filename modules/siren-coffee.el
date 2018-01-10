@@ -6,13 +6,13 @@
 
 ;;; Code:
 
+(require 'siren-programming)
+
 (use-package coffee-mode
   :mode "\\.coffee\\'"
   :interpreter "coffee"
 
   :config
-  (require 'siren-programming)
-
   (setq coffee-tab-width 2)
 
   (defun siren-coffee-mode-defaults ()
