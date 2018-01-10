@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(use-package yasnippet-snippets)
+
 (use-package yasnippet
   :diminish yas-minor-mode
   :init
