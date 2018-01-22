@@ -47,7 +47,7 @@ or the current buffer directory."
         neo-show-updir-line nil
         neo-smart-open nil
         neo-toggle-window-keep-p t
-        neo-vc-integration '(face char)
+        ;; neo-vc-integration '(face char)
         neo-window-width 54))
 
 (provide 'siren-neotree)
