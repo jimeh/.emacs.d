@@ -1,5 +1,10 @@
 .SILENT:
 
+
+#
+# Main targets
+#
+
 .PHONY: backup-elpa
 backup-elpa:
 	tar -cjf elpa_$(shell date "+%Y-%m-%d").tar.bz2 elpa
@@ -14,37 +19,30 @@ update_vendor: \
 	update_vendor/escreen.el \
 	update_vendor/linum+.el
 
+#
+# Internals
+#
 
-vendor/escreen.el:
-	echo "fetching vendor/escreen.el..." && \
-	curl -s -L -o vendor/escreen.el \
-	https://github.com/renard/escreen-el/raw/master/escreen.el
+define vendored
+$(1):
+	echo "fetching $(1)..." && \
+		curl -s -L -o "$(1)" "$(2)"
 
-.PHONY: remove_vendor/escreen.el
-remove_vendor/escreen.el:
+.PHONY: remove_$(1)
+remove_$(1):
 	( \
-		test -f "vendor/escreen.el" && rm "vendor/escreen.el" && \
-		echo "removed vendor/escreen.el" \
+		test -f "$(1)" && rm "$(1)" && \
+		echo "removed $(1)" \
 	) || exit 0
 
-.PHONY: update_vendor/escreen.el
-update_vendor/escreen.el: remove_vendor/escreen.el vendor/escreen.el
+.PHONY: update_$(1)
+update_$(1): remove_$(1) $(1)
+endef
 
 
-vendor/linum+.el:
-	echo "fetching vendor/linum+.el..." && \
-	curl -s -L -o vendor/linum+.el \
-	http://www.emacswiki.org/emacs/download/linum%2b.el
+#
+# Specify vendor targets
+#
 
-.PHONY: remove_vendor/linum+.el
-remove_vendor/linum+.el:
-	( \
-		test -f "vendor/linum+.el" && rm "vendor/linum+.el" && \
-		echo "removed vendor/linum+.el" \
-	) || exit 0
-
-.PHONY: update_vendor/linum+.el
-update_vendor/linum+.el: remove_vendor/linum+.el vendor/linum+.el
-
-
-
+$(eval $(call vendored,vendor/escreen.el,"https://github.com/renard/escreen-el/raw/master/escreen.el"))
+$(eval $(call vendored,vendor/linum+.el,"http://www.emacswiki.org/emacs/download/linum%2b.el"))
