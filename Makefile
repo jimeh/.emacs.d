@@ -7,14 +7,12 @@ backup-elpa:
 .PHONY: vendor
 vendor: \
 	vendor/escreen.el \
-	vendor/linum+.el \
-	vendor/omnifmt.el
+	vendor/linum+.el
 
 .PHONY: update_vendor
 update_vendor: \
 	update_vendor/escreen.el \
-	update_vendor/linum+.el \
-	update_vendor/omnifmt.el
+	update_vendor/linum+.el
 
 
 vendor/escreen.el:
@@ -49,17 +47,4 @@ remove_vendor/linum+.el:
 update_vendor/linum+.el: remove_vendor/linum+.el vendor/linum+.el
 
 
-vendor/omnifmt.el:
-	echo "fetching vendor/omnifmt.el..." && \
-	curl -s -L -o vendor/omnifmt.el \
-	https://raw.githubusercontent.com/omnitools/omnifmt-emacs/master/omnifmt.el
 
-.PHONY: remove_vendor/omnifmt.el
-remove_vendor/omnifmt.el:
-	( \
-		test -f "vendor/omnifmt.el" && rm "vendor/omnifmt.el" && \
-		echo "removed vendor/omnifmt.el" \
-	) || exit 0
-
-.PHONY: update_vendor/omnifmt.el
-update_vendor/omnifmt.el: remove_vendor/omnifmt.el vendor/omnifmt.el
