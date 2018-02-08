@@ -72,7 +72,15 @@ See `sort-regexp-fields'."
 (global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
 
+;; from: https://www.emacswiki.org/emacs/SortWords
+(defun sort-symbols (reverse beg end)
+  "Sort symbols in region alphabetically, in REVERSE if negative.
+See `sort-words'."
+  (interactive "*P\nr")
+  (sort-regexp-fields reverse "\\(\\sw\\|\\s_\\)+" "\\&" beg end))
+
 (defalias 'sw 'sort-words)
+(defalias 'ss 'sort-symbols)
 
 (provide 'siren-text-manipulation)
 ;;; siren-text-manipulation.el ends here
