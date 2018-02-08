@@ -24,6 +24,7 @@
 (require 'siren-flyspell)
 (require 'siren-folding)
 (require 'siren-full-ack)
+(require 'siren-git-link)
 (require 'siren-git-timemachine)
 (require 'siren-github)
 (require 'siren-global-keybindings)
