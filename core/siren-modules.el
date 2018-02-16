@@ -101,6 +101,7 @@
 (require 'siren-thrift)
 (require 'siren-web-mode)
 (require 'siren-yaml)
+;; (require 'siren-slim)
 
 (provide 'siren-modules)
 ;;; siren-modules.el ends here
