@@ -18,6 +18,8 @@
         helm-file-name-case-fold-search 'smart
         helm-split-window-default-side 'below)
 
+  (setq siren-helm--did-hide-neotree nil)
+
   ;; From: https://www.reddit.com/r/emacs/comments/3asbyn/new_and_very_useful_helm_feature_enter_search/
   (defun siren-helm--hide-minibuffer-maybe ()
     (when (with-helm-buffer helm-echo-input-in-header-line)
@@ -54,6 +56,23 @@
                               (add-to-list 'popwin:special-display-config 'help-mode nil #'eq))))
 
   (add-hook 'helm-cleanup-hook #'siren-helm--popwin-help-mode-on)
+
+  (defun siren-helm--hide-neotree (&rest plist)
+    (when (and (fboundp 'neotree-hide)
+               (fboundp 'neo-global--window-exists-p)
+               (neo-global--window-exists-p))
+      (setq siren-helm--did-hide-neotree t)
+      (neotree-hide)))
+
+  (advice-add 'helm :before 'siren-helm--hide-neotree)
+
+  (defun siren-helm--show-neotree-maybe ()
+    (when (and (fboundp 'neotree-show)
+               siren-helm--did-hide-neotree)
+      (setq siren-helm--did-hide-neotree nil)
+      (run-with-timer 0.01 nil #'neotree-show)))
+
+  (add-hook 'helm-cleanup-hook #'siren-helm--show-neotree-maybe))
 
 (use-package helm-descbinds
   :defer t)
