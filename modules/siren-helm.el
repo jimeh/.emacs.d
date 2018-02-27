@@ -37,6 +37,24 @@
 
   (add-hook 'helm-before-initialize-hook #'siren-helm--toggle-header-line)
 
+  ;; From: https://github.com/emacs-helm/helm/wiki/Popwin
+  (defun siren-helm--popwin-help-mode-off ()
+    "Turn `popwin-mode' off for *Help* buffers."
+    (when (boundp 'popwin:special-display-config)
+      (customize-set-variable 'popwin:special-display-config
+                              (delq 'help-mode popwin:special-display-config))))
+
+  (add-hook 'helm-minibuffer-set-up-hook #'siren-helm--popwin-help-mode-off)
+
+  ;; From: https://github.com/emacs-helm/helm/wiki/Popwin
+  (defun siren-helm--popwin-help-mode-on ()
+    "Turn `popwin-mode' on for *Help* buffers."
+    (when (boundp 'popwin:special-display-config)
+      (customize-set-variable 'popwin:special-display-config
+                              (add-to-list 'popwin:special-display-config 'help-mode nil #'eq))))
+
+  (add-hook 'helm-cleanup-hook #'siren-helm--popwin-help-mode-on)
+
 (use-package helm-descbinds
   :defer t)
 
