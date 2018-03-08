@@ -29,15 +29,11 @@ update_vendor: \
 
 define vendored
 $(1):
-	echo "fetching $(1)..." && \
-		curl -s -L -o "$(1)" "$(2)"
+	echo "fetching $(1)..." && curl -s -L -o "$(1)" "$(2)"
 
 .PHONY: remove_$(1)
 remove_$(1):
-	( \
-		test -f "$(1)" && rm "$(1)" && \
-		echo "removed $(1)" \
-	) || exit 0
+	(test -f "$(1)" && rm "$(1)" && echo "removed $(1)") || exit 0
 
 .PHONY: update_$(1)
 update_$(1): remove_$(1) $(1)
