@@ -36,29 +36,14 @@
         ;; is displayed on top (happens near the bottom of windows)
         company-tooltip-flip-when-above t)
 
-  (defvar completion-at-point-functions-saved nil)
+  (global-company-mode 1)
 
-  (defun company-indent-for-tab-command (&optional arg)
-    (interactive "P")
-    (let ((completion-at-point-functions-saved completion-at-point-functions)
-          (completion-at-point-functions '(company-complete-common-wrapper)))
-      (indent-for-tab-command arg)))
-
-  (defun company-complete-common-wrapper ()
-    (let ((completion-at-point-functions completion-at-point-functions-saved))
-      (company-complete-common)))
-
-  ;; Trigger completion popup by pressing tab
-  ;;  - from: https://github.com/company-mode/company-mode/issues/94#issuecomment-40884387
-  (define-key company-mode-map [remap indent-for-tab-command]
-    'company-indent-for-tab-command)
-
+  ;; Customize keybindings for navigating up/down the completion popup list.
   (define-key company-active-map (kbd "C-n") #'company-select-next)
   (define-key company-active-map (kbd "C-p") #'company-select-previous)
 
-  (setq tab-always-indent 'complete)
-
-  (global-company-mode 1))
+  ;; Enable indent and complete at point functionality by pressing tab.
+  (global-set-key (kbd "TAB") #'company-indent-or-complete-common))
 
 (provide 'siren-company)
 ;;; siren-company.el ends here
