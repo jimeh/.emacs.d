@@ -52,6 +52,7 @@
 (require 'siren-text-manipulation)
 (require 'siren-toggle-quotes)
 (require 'siren-undo-tree)
+(require 'siren-which-key)
 (require 'siren-window-management)
 (require 'siren-yasnippet)
 (require 'siren-zoom-window)
