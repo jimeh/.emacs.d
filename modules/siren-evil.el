@@ -6,23 +6,22 @@
 
 ;;; Code:
 
+;; Various evil config options borrowed from:
+;; http://www.lukeswart.net/2015/04/lightning-intro-to-emacs-using-evil-mode-and-org-mode/
 (use-package evil
-  :config
-  ;; Various evil config options borrowed from:
-  ;; http://www.lukeswart.net/2015/04/lightning-intro-to-emacs-using-evil-mode-and-org-mode/
-
-  ;; Treat wrapped line scrolling as single lines
-  (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
-  (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
-
-  ;; esc quits pretty much anything (like pending prompts in the minibuffer)
-  (define-key evil-normal-state-map [escape] 'keyboard-quit)
-  (define-key evil-visual-state-map [escape] 'keyboard-quit)
-  (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
-  (define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
-  (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
-  (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
-  (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit))
+  :demand
+  :bind (:map evil-normal-state-map
+              ;; Treat wrapped line scrolling as single lines.
+              ("j" . evil-next-visual-line)
+              ("k" . evil-previous-visual-line)
+              ;; esc quits pretty much anything (like pending prompts in the minibuffer)
+              :map evil-normal-state-map ("<escape>" . keyboard-quit)
+              :map evil-visual-state-map ("<escape>" . keyboard-quit)
+              :map minibuffer-local-map ("<escape>" . minibuffer-keyboard-quit)
+              :map minibuffer-local-ns-map ("<escape>" . minibuffer-keyboard-quit)
+              :map minibuffer-local-completion-map ("<escape>" . minibuffer-keyboard-quit)
+              :map minibuffer-local-must-match-map ("<escape>" . minibuffer-keyboard-quit)
+              :map minibuffer-local-isearch-map ("<escape>" . minibuffer-keyboard-quit)))
 
 (provide 'siren-evil)
 ;;; siren-evil.el ends here

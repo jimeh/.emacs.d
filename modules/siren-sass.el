@@ -10,16 +10,15 @@
 
 (use-package sass-mode
   :mode "\\.sass\\'"
+  :hook (sass-mode . siren-sass-mode-setup)
+
+  :init
+  (defun siren-sass-mode-setup ()
+    (siren-css-mode-css))
 
   :config
   ;; turn off annoying auto-compile on save
-  (setq sass-compile-at-save nil)
-
-  (defun siren-sass-mode-defaults ()
-    (siren-css-mode-defaults))
-
-  (setq siren-sass-mode-hook 'siren-sass-mode-defaults)
-  (add-hook 'sass-mode-hook (lambda () (run-hooks 'siren-sass-mode-hook))))
+  (setq sass-compile-at-save nil))
 
 (provide 'siren-sass)
 ;;; siren-sass.el ends here

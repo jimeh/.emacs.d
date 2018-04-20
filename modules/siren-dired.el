@@ -6,16 +6,18 @@
 
 ;;; Code:
 
-;; Loads from vendor.
-(require 'dired+)
+(require 'siren-linum)
 
-(defun siren-dired-mode-defaults ()
-  (linum-mode t)
-  (define-key dired-mode-map (kbd "c") 'dired-create-directory)
-  (toggle-diredp-find-file-reuse-dir 1))
+(use-package dired+
+  :ensure nil ;; loaded from vendor
+  :demand
+  :hook (dired-mode . siren-dired-mode-setup)
 
-(setq siren-dired-mode-hook 'siren-dired-mode-defaults)
-(add-hook 'dired-mode-hook (lambda () (run-hooks 'siren-dired-mode-hook)))
+  :init
+  (defun siren-dired-mode-setup ()
+    (linum-mode t)
+    (define-key dired-mode-map (kbd "c") 'dired-create-directory)
+    (toggle-diredp-find-file-reuse-dir 1)))
 
 (provide 'siren-dired)
 ;;; siren-dired.el ends here

@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package browse-kill-ring
-  :init
+  :config
   (browse-kill-ring-default-keybindings))
 
 (provide 'siren-browse-kill-ring)

@@ -13,29 +13,32 @@
   "\\.html\\'"
   "\\.html.erb\\'"
 
-  :config
-  (setq web-mode-code-indent-offset 2
-        web-mode-css-indent-offset 2
-        web-mode-markup-indent-offset 2
-        web-mode-sql-indent-offset 2)
+  :bind (:map web-mode-map
+              ("C-j" . newline-and-indent)
+              ("C-c C-h" . siren-toggle-hiding))
 
-  (defun siren-web-mode-mode-hook ()
+  :hook
+  (web-mode-hook . siren-web-mode-setup)
+
+  :init
+  (defun siren-web-mode-mode-setup ()
     "Default tweaks for `web-mode'."
     (setq tab-width 2)
 
-    (siren-prog-mode-defaults)
+    (siren-prog-mode-setup)
     (company-mode +1)
     (fci-mode -1)
     (hideshowvis-enable)
     (hs-minor-mode +1)
     (highlight-indentation-current-column-mode)
     (highlight-indentation-set-offset 2)
-    (subword-mode +1)
-    (let ((map web-mode-map))
-      (define-key map (kbd "C-j") 'newline-and-indent)
-      (define-key map (kbd "C-c C-h") 'siren-toggle-hiding)))
+    (subword-mode +1))
 
-  (add-hook 'web-mode-hook 'siren-web-mode-mode-hook))
+  :config
+  (setq web-mode-code-indent-offset 2
+        web-mode-css-indent-offset 2
+        web-mode-markup-indent-offset 2
+        web-mode-sql-indent-offset 2))
 
 (provide 'siren-web-mode)
 ;;; siren-web-mode.el ends here

@@ -10,19 +10,20 @@
 (require 'siren-rainbow)
 
 (use-package php-mode
-  :config
-  (defun siren-php-mode-defaults ()
-    (siren-prog-mode-defaults)
+  :interpreter "php"
+  :mode "\\.php\\'" "\\.inc\\'" "\\.module\\'"
+  :hook
+  (php-mode . siren-php-mode-setup)
+
+  :init
+  (defun siren-php-mode-setup ()
+    (siren-prog-mode-setup)
     (rainbow-mode +1)
     (company-mode +1)
     (subword-mode +1)
     (highlight-indentation-current-column-mode)
     (hs-minor-mode 1)
-    (hideshowvis-enable))
-
-  (setq siren-php-mode-hook 'siren-php-mode-defaults)
-  (add-hook 'php-mode-hook (lambda ()
-                             (run-hooks 'siren-php-mode-hook))))
+    (hideshowvis-enable)))
 
 (provide 'siren-php)
 ;;; siren-php.el ends here

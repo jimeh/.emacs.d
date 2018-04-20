@@ -9,11 +9,7 @@
 (require 'siren-fci)
 
 (use-package company
-  :config
-
-  ;; work-around for issues with fci-mode
-  (defvar-local company-fci-mode-on-p nil)
-
+  :init
   (defun company-turn-off-fci (&rest ignore)
     (when (boundp 'fci-mode)
       (setq company-fci-mode-on-p fci-mode)
@@ -21,6 +17,10 @@
 
   (defun company-maybe-turn-on-fci (&rest ignore)
     (when company-fci-mode-on-p (fci-mode 1)))
+
+  :config
+  ;; work-around for issues with fci-mode
+  (defvar-local company-fci-mode-on-p nil)
 
   (add-hook 'company-completion-started-hook 'company-turn-off-fci)
   (add-hook 'company-completion-finished-hook 'company-maybe-turn-on-fci)

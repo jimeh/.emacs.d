@@ -8,10 +8,11 @@
 
 (use-package slim-mode
   :mode "\\.slim\\'"
+  :hook (slim-mode-hook . siren-slim-mode-hook)
 
-  :config
-  (defun siren-slim-mode-defaults ()
-    (siren-prog-mode-defaults)
+  :init
+  (defun siren-slim-mode-setup ()
+    (siren-prog-mode-setup)
     (highlight-indentation-current-column-mode))
 
   (setq siren-slim-mode-hook 'siren-slim-mode-defaults)

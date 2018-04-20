@@ -7,7 +7,8 @@
 ;;; Code:
 
 (use-package rainbow-mode
-  :defer t)
+  :defer t
+  :diminish raindbox-mode)
 
 (provide 'siren-rainbow)
 ;;; siren-rainbow.el ends here

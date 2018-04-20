@@ -6,14 +6,18 @@
 
 ;;; Code:
 
-;; Customize line numbers - In gui mode the fringe is the spacer between line
-;; numbers and code, while in console mode we add an extra space for it.
-(if window-system (setq linum+-dynamic-format " %%%dd")
-  (setq linum+-dynamic-format " %%%dd "))
+(use-package linum+
+  :ensure nil ;; loaded from vendor
+  :demand
 
-(eval-after-load "linum+" '(progn (setq linum-format 'dynamic)))
+  :init
+  ;; Customize line numbers - In GUI mode the fringe is the spacer between line
+  ;; numbers and code, while in console mode we add an extra space for it.
+  (if window-system (setq linum+-dynamic-format " %%%dd")
+    (setq linum+-dynamic-format " %%%dd "))
 
-(require 'linum+)
+  :config
+  (setq linum-format 'dynamic))
 
 (provide 'siren-linum)
 ;;; siren-linum.el ends here

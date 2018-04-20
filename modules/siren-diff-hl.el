@@ -7,9 +7,13 @@
 ;;; Code:
 
 (use-package diff-hl
-  :init
-  (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
-  (global-diff-hl-mode +1))
+  :demand
+  :hook ((dired-mode . diff-hl-dired-mode)
+         (magit-post-refresh-hook . diff-hl-magit-post-refresh))
+
+  :config
+  (global-diff-hl-mode +1)
+  (diff-hl-flydiff-mode +1))
 
 (provide 'siren-diff-hl)
 ;;; siren-diff-hl.el ends here

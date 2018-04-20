@@ -8,16 +8,14 @@
 
 (use-package haml-mode
   :mode "\\.haml\\'" "\\.hamlc\\'"
+  :hook (haml-mode . siren-haml-mode-setup)
 
-  :config
-  (defun siren-haml-mode-defaults ()
-    (siren-prog-mode-defaults)
+  :init
+  (defun siren-haml-mode-setup ()
+    (siren-prog-mode-setup)
     (setq tab-width 2)
     (highlight-indentation-set-offset 2)
-    (highlight-indentation-current-column-mode))
-
-  (setq siren-haml-mode-hook 'siren-haml-mode-defaults)
-  (add-hook 'haml-mode-hook (lambda () (run-hooks 'siren-haml-mode-hook))))
+    (highlight-indentation-current-column-mode)))
 
 (provide 'siren-haml)
 ;;; siren-haml.el ends here

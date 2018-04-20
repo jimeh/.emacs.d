@@ -7,17 +7,14 @@
 ;;; Code:
 
 (use-package direx
-  :bind
-  ("C-x j" . direx-project:jump-to-project-root)
+  :bind ("C-x j" . direx-project:jump-to-project-root)
+  :hook (direx-mode . siren-direx-mode-setup)
 
   :config
   (setq direx:closed-icon " + "
-        direx:open-icon " - ")
+        direx:open-icon " - "))
 
-  (defun siren-direx-mode-defaults ())
-
-  (setq siren-direx-mode-hook 'siren-direx-mode-defaults)
-  (add-hook 'direx-mode-hook (lambda () (run-hooks 'siren-direx-mode-hook))))
+(defun siren-direx-mode-setup ())
 
 (provide 'siren-direx)
 ;;; siren-direx.el ends here

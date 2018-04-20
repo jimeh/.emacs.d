@@ -8,8 +8,8 @@
 
 (require 'siren-programming)
 
-(defun siren-sh-mode-defaults ()
-  (siren-prog-mode-defaults)
+(defun siren-sh-mode-setup ()
+  (siren-prog-mode-setup)
 
   (setq tab-width 2
         sh-basic-offset 2
@@ -21,9 +21,7 @@
   (highlight-indentation-current-column-mode)
   (define-key sh-mode-map (kbd "RET") 'newline-and-indent))
 
-(setq siren-sh-mode-hook 'siren-sh-mode-defaults)
-(add-hook 'sh-mode-hook (lambda ()
-                          (run-hooks 'siren-sh-mode-hook)))
+(add-hook 'sh-mode-hook #'siren-sh-mode-setup)
 
 (provide 'siren-sh)
 ;;; siren-sh.el ends here

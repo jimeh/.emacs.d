@@ -9,18 +9,18 @@
 (require 'siren-programming)
 
 (use-package lua-mode
-  :config
-  (defun siren-lua-mode-defaults ()
-    (siren-prog-mode-defaults)
+  :hook
+  (lua-mode . siren-lua-mode-setup)
+
+  :init
+  (defun siren-lua-mode-setup ()
+    (siren-prog-mode-setup)
+
+    (setq lua-indent-level 2
+          whitespace-action '(auto-cleanup))
 
     (highlight-indentation-current-column-mode)
-    (subword-mode +1)
-    (setq lua-indent-level 2
-          whitespace-action (quote (auto-cleanup))))
-
-  (setq siren-lua-mode-hook 'siren-lua-mode-defaults)
-  (add-hook 'lua-mode-hook (lambda ()
-                             (run-hooks 'siren-lua-mode-hook))))
+    (subword-mode +1)))
 
 (provide 'siren-lua)
 ;;; siren-lua.el ends here

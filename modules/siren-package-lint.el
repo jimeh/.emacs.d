@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-flycheck)
+
 (use-package package-lint
   :defer t)
 

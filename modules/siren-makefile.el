@@ -8,19 +8,16 @@
 
 (require 'siren-programming)
 
-(add-to-list 'siren-yank-indent-modes 'makefile-mode)
+(add-to-list 'siren-indent-sensitive-modes 'makefile-mode)
 
-(defun siren-makefile-mode-defaults ()
-  (siren-prog-mode-defaults)
+(defun siren-makefile-mode-setup ()
+  (siren-prog-mode-setup)
   (subword-mode)
   (setq tab-width 4)
   (highlight-indentation-set-offset 4)
   (highlight-indentation-current-column-mode))
 
-(setq siren-makefile-mode-hook 'siren-makefile-mode-defaults)
-
-(add-hook 'makefile-mode-hook (lambda ()
-                                (run-hooks 'siren-makefile-mode-hook)))
+(add-hook 'makefile-mode-hook #'siren-makefile-mode-setup)
 
 (provide 'siren-makefile)
 ;;; siren-makefile.el ends here

@@ -8,6 +8,8 @@
 
 (use-package edit-server
   :if window-system
+  :hook (after-init . edit-server-start)
+
   :init
   (setq edit-server-default-major-mode 'markdown-mode
         edit-server-new-frame-alist
@@ -15,9 +17,7 @@
           (width . 90)
           (height . 45)
           (minibuffer . t)
-          (menu-bar-lines . t)))
-
-  (add-hook 'after-init-hook 'edit-server-start t))
+          (menu-bar-lines . t))))
 
 (provide 'siren-edit-server)
 ;;; siren-edit-server.el ends here

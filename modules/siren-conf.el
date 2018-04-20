@@ -9,16 +9,15 @@
 (require 'siren-programming)
 
 (use-package conf-mode
-  :mode "Procfile\\'"
-  :config
-  (defun siren-conf-mode-defaults ()
-    (siren-prog-mode-defaults)
+  :mode "Procfile\\'" "\\.conf\\'" "\\.cfg\\'"
+  :hook (conf-mode . siren-conf-mode-setup)
+
+  :init
+  (defun siren-conf-mode-setup ()
+    (siren-prog-mode-setup)
     (setq tab-width 2)
     (highlight-indentation-set-offset 2)
-    (highlight-indentation-current-column-mode))
-
-  (setq siren-conf-mode-hook 'siren-conf-mode-defaults)
-  (add-hook 'conf-mode-hook (lambda () (run-hooks 'siren-conf-mode-hook))))
+    (highlight-indentation-current-column-mode)))
 
 (provide 'siren-conf)
 ;;; siren-conf.el ends here

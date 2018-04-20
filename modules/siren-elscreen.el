@@ -7,6 +7,7 @@
 ;;; Code:
 
 (use-package elscreen
+  :demand
   :bind (("s-}" . elscreen-next)
          ("s-{" . elscreen-previous)
 
@@ -27,7 +28,6 @@
          ("C-;" . elscreen-display-screen-name-list))
 
   :config
-  ;; Start ElScreen.
   (elscreen-start))
 
 (use-package elscreen-buffer-group :defer t)

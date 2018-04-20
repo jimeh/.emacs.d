@@ -6,8 +6,9 @@
 
 ;;; Code:
 
-;; Loads from vendor.
-(require 'hideshowvis)
+(use-package hideshowvis
+  :ensure nil ;; loaded from vendor
+)
 
 (defun siren-toggle-hiding (column)
   "Toggle hiding/showing blocks via hs-mode.

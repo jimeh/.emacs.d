@@ -8,8 +8,9 @@
 
 (use-package highlight-symbol
   :bind
-  (("C-c C-p" . highlight-symbol-prev)
-   ("C-c C-n" . highlight-symbol-next))
+  ("C-c C-p" . highlight-symbol-prev)
+  ("C-c C-n" . highlight-symbol-next)
+
   :config
   (setq highlight-symbol-highlight-single-occurrence 'nil
         highlight-symbol-idle-delay 0.5))

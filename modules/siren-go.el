@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-programming)
+(require 'siren-flycheck)
 
 (use-package go-mode
   :mode "\\.go\\'"
@@ -20,21 +21,16 @@
               ("C-c b" . go-run)
               ("C-c d" . godef-jump)
               ("C-c C-j" . avy-goto-word-or-subword-1)
-              ("C-h f" . godoc-at-point))
+              ("C-h f" . godoc-at-point)
+              :map help-command
+              ("G" . godoc))
 
-  :config
-  (message "loading go-mode")
+  :hook
+  (go-mode . siren-go-mode-setup)
 
-  (when (memq window-system '(mac ns))
-    (exec-path-from-shell-copy-env "GOPATH"))
-
-  ;; Ignore go test -c output files
-  (add-to-list 'completion-ignored-extensions ".test")
-
-  (define-key 'help-command (kbd "G") 'godoc)
-
-  (defun siren-go-mode-defaults ()
-    (siren-prog-mode-defaults)
+  :init
+  (defun siren-go-mode-setup ()
+    (siren-prog-mode-setup)
 
     ;; Prefer goimports to gofmt if installed
     (let ((goimports (executable-find "goimports")))
@@ -70,9 +66,14 @@
     ;; CamelCase aware editing operations
     (subword-mode +1))
 
-  (setq siren-go-mode-hook 'siren-go-mode-defaults)
-  (add-hook 'go-mode-hook (lambda ()
-                            (run-hooks 'siren-go-mode-hook))))
+  :config
+  (message "loading go-mode")
+
+  (when (memq window-system '(mac ns))
+    (exec-path-from-shell-copy-env "GOPATH"))
+
+  ;; Ignore go test -c output files
+  (add-to-list 'completion-ignored-extensions ".test"))
 
 (use-package company-go :defer t)
 (use-package go-eldoc :defer t)
@@ -87,13 +88,13 @@
   (setq go-projectile-switch-gopath 'never))
 
 (use-package flycheck-gometalinter
+  :requires flycheck
+  :hook (flycheck-mode . flycheck-gometalinter-setup)
+
   :init
   (setq flycheck-gometalinter-fast t
         flycheck-gometalinter-tests t
-        flycheck-gometalinter-vendor t)
-  :config
-  (eval-after-load 'flycheck
-    '(add-hook 'flycheck-mode-hook #'flycheck-gometalinter-setup)))
+        flycheck-gometalinter-vendor t))
 
 (provide 'siren-go)
 ;;; siren-go.el ends here

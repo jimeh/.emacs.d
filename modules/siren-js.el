@@ -6,16 +6,16 @@
 
 ;;; Code:
 
-(use-package eslintd-fix
-  :defer t)
-
+(require 'siren-eslintd-fix)
+(require 'siren-flycheck)
+(require 'siren-folding)
 (require 'siren-programming)
 
 (add-to-list 'auto-mode-alist '("\\.js\\'"    . js-mode))
 (add-to-list 'auto-mode-alist '("\\.pac\\'"   . js-mode))
 (add-to-list 'interpreter-mode-alist '("node" . js-mode))
 
-(defun siren-js-mode-defaults ()
+(defun siren-js-mode-setup ()
   "Default tweaks for `js-mode'."
   (let ((width 2))
     (setq js-indent-level width
@@ -25,7 +25,7 @@
   (setq flycheck-checker 'javascript-eslint
         flycheck-javascript-eslint-executable "eslint_d")
 
-  (siren-prog-mode-defaults)
+  (siren-prog-mode-setup)
   (eslintd-fix-mode)
   (company-mode +1)
   (subword-mode +1)
@@ -37,10 +37,7 @@
     (define-key map (kbd "C-j") 'newline-and-indent)
     (define-key map (kbd "C-c C-h") 'siren-toggle-hiding)))
 
-(setq siren-js-mode-hook 'siren-js-mode-defaults)
-
-(add-hook 'js-mode-hook (lambda ()
-                          (run-hooks 'siren-js-mode-hook)))
+(add-hook 'js-mode-hook #'siren-js-mode-setup)
 
 (provide 'siren-js)
 ;;; siren-js.el ends here

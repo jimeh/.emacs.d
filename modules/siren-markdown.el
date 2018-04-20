@@ -17,10 +17,14 @@
   "\\.mdown"
   "\\.markdown"
 
-  :config
-  (setq markdown-command "redcarpet")
+  :bind (:map markdown-mode-map
+              ("C-c p" . markdown-preview))
 
-  (defun siren-markdown-mode-defaults ()
+  :hook
+  (markdown-mode . siren-markdown-mode-setup)
+
+  :init
+  (defun siren-markdown-mode-setup ()
     (setq whitespace-action nil
           fill-column 80
           markdown-asymmetric-header t)
@@ -30,15 +34,11 @@
     (flyspell-mode)
     (auto-fill-mode)
     (smartparens-mode +1)
-    (subword-mode)
-    (define-key markdown-mode-map (kbd "C-c p") 'markdown-preview))
+    (subword-mode))
 
-  (setq siren-markdown-mode-hook 'siren-markdown-mode-defaults)
-  (add-hook 'markdown-mode-hook (lambda ()
-                                  (run-hooks 'siren-markdown-mode-hook))))
-
-(custom-set-faces
- '(markdown-code-face ((t nil))))
+  :config
+  (setq markdown-command "redcarpet")
+  (custom-set-faces '(markdown-code-face ((t nil)))))
 
 (provide 'siren-markdown)
 ;;; siren-markdown.el ends here

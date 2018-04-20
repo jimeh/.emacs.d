@@ -9,6 +9,12 @@
 (require 'siren-flyspell)
 
 (use-package auto-complete
+  :bind (:map ac-completing-map
+              ("RET" . ac-complete)
+              ("C-m" . ac-complete)
+              ("C-s" . ac-isearch)
+              ("C-n" . ac-next)
+              ("C-p" . ac-previous))
   :config
   (ac-flyspell-workaround)
 
@@ -16,13 +22,6 @@
         ac-auto-start 3
         ac-delay 0.05
         ac-menu-height 15)
-
-  (let ((map ac-completing-map))
-    (define-key map (kbd "RET") 'ac-complete)
-    (define-key map (kbd "C-m") 'ac-complete)
-    (define-key map (kbd "C-s") 'ac-isearch)
-    (define-key map (kbd "C-n") 'ac-next)
-    (define-key map (kbd "C-p") 'ac-previous))
 
   ;; Auto-complete when indenting.
   (defadvice indent-for-tab-command (around ac-before-indent activate)

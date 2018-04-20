@@ -10,18 +10,15 @@
 
 (use-package thrift
   :mode "\\.thrift\\'"
+  :hook (thrift-mode-hook . siren-thrift-mode-setup)
 
-  :config
-  (defun siren-thrift-mode-defaults ()
-    (siren-prog-mode-defaults)
+  :init
+  (defun siren-thrift-mode-setup ()
+    (siren-prog-mode-setup)
 
     (setq tab-width 2)
     (highlight-indentation-current-column-mode)
-    (subword-mode +1))
-
-  (setq siren-thrift-mode-hook 'siren-thrift-mode-defaults)
-  (add-hook 'thrift-mode-hook (lambda ()
-                                (run-hooks 'siren-thrift-mode-hook))))
+    (subword-mode +1)))
 
 (provide 'siren-thrift)
 ;;; siren-thrift.el ends here

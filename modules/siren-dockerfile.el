@@ -9,16 +9,13 @@
 (require 'siren-programming)
 
 (use-package dockerfile-mode
-  :mode "Dockerfile\\'"
+  :mode "Dockerfile.*\\'"
+  :hook (dockerfile-mode . siren-dockerfile-mode-setup)
 
-  :config
-  (defun siren-dockerfile-mode-defaults ()
-    (siren-prog-mode-defaults)
-    (subword-mode +1))
-
-  (setq siren-dockerfile-mode-hook 'siren-dockerfile-mode-defaults)
-  (add-hook 'dockerfile-mode-hook (lambda ()
-                                    (run-hooks 'siren-dockerfile-mode-hook))))
+  :init
+  (defun siren-dockerfile-mode-setup ()
+    (siren-prog-mode-setup)
+    (subword-mode +1)))
 
 (provide 'siren-dockerfile)
 ;;; siren-dockerfile.el ends here

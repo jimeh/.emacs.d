@@ -24,7 +24,7 @@
     (when (and file-name (string-match-p ".*-tests?\\.el\\'" file-name))
       (setq-local flycheck-checkers '(emacs-lisp)))))
 
-(defun siren-emacs-lisp-mode-defaults ()
+(defun siren-emacs-lisp-mode-setup ()
   "Sensible defaults for `emacs-lisp-mode'."
   (highlight-indent-guides-mode)
   ;; (run-hooks 'siren-lisp-coding-hook)
@@ -35,14 +35,8 @@
   ;; (siren-conditional-emacs-lisp-checker)
   )
 
-(setq siren-emacs-lisp-mode-hook 'siren-emacs-lisp-mode-defaults)
-(add-hook 'emacs-lisp-mode-hook (lambda ()
-                                  (run-hooks 'siren-emacs-lisp-mode-hook)))
-
+(add-hook 'emacs-lisp-mode-hook #'siren-emacs-lisp-mode-setup)
 (add-to-list 'auto-mode-alist '("Cask\\'" . emacs-lisp-mode))
-
-(eval-after-load "rainbow-mode"
-  '(diminish 'rainbow-mode))
 
 (provide 'siren-emacs-lisp)
 ;;; siren-emacs-lisp.el ends here

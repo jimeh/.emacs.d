@@ -6,64 +6,49 @@
 
 ;;; Code:
 
-;; Loads from vendor.
-(require 'escreen)
+(use-package escreen
+  :ensure nil ;; loaded from vendor
+  :demand
 
-;; Escreen Helper
-;; - from http://blog.nguyenvq.com/2011/03/07/escreen-instead-of-elscreen-for-screen-like-features-in-emacs/
-(defun escreen-get-active-screen-numbers-with-emphasis ()
-  "what the name says"
-  (interactive)
-  (let ((escreens (escreen-get-active-screen-numbers))
-        (emphased ""))
-    (dolist (s escreens)
-      (setq emphased
-            (concat emphased (if (= escreen-current-screen-number s)
-                                 (propertize (number-to-string s)
-                                             ;;'face 'custom-variable-tag) " ")
-                                             ;;'face 'info-title-3)
-                                             'face 'font-lock-warning-face)
-                               ;;'face 'secondary-selection)
-                               (number-to-string s))
-                    " ")))
-    (message "escreen: active screens: %s" emphased)))
+  :bind (("s-}" . escreen-goto-next-screen)
+         ("s-{" . escreen-goto-prev-screen)
+         :map escreen-map
+         ("C-z" . escreen-goto-last-screen)
+         ("l" . escreen-goto-last-screen)
+         ("C-l" . escreen-goto-last-screen)
+         (";" . siren-escreen-get-active-screen)
+         ("C-;" . siren-escreen-get-active-screen)
+         ("C-c" . escreen-create-screen)
+         ("C-g" . escreen-goto-screen)
+         ("C-k" . escreen-kill-screen)
+         ("C-n" . escreen-goto-next-screen)
+         ("C-p" . escreen-goto-prev-screen))
 
-;; Initialize escreen
-(escreen-install)
+  :hook
+  (escreen-goto-screen . siren-escreen-get-active-screen)
 
-;; Set prefix key to C-z.
-(setq escreen-prefix-char (kbd "C-z"))
-(global-set-key escreen-prefix-char 'escreen-prefix)
-(define-key escreen-map escreen-prefix-char 'escreen-goto-last-screen)
+  :init
+  (defun siren-escreen-get-active-screen ()
+    "what the name says"
+    (interactive)
+    (let ((escreens (escreen-get-active-screen-numbers))
+          (emphased ""))
+      (dolist (s escreens)
+        (setq emphased
+              (concat emphased (if (= escreen-current-screen-number s)
+                                   (propertize (number-to-string s)
+                                               ;;'face 'custom-variable-tag) " ")
+                                               ;;'face 'info-title-3)
+                                               'face 'font-lock-warning-face)
+                                 ;;'face 'secondary-selection)
+                                 (number-to-string s))
+                      " ")))
+      (message "escreen: active screens: %s" emphased)))
 
-;; Toggle screens.
-(define-key escreen-map (kbd "l") 'escreen-goto-last-screen)
-(define-key escreen-map (kbd "C-l") 'escreen-goto-last-screen)
-
-;; List screens.
-(define-key escreen-map (kbd "a")
-  'escreen-get-active-screen-numbers-with-emphasis)
-(define-key escreen-map (kbd "C-a")
-  'escreen-get-active-screen-numbers-with-emphasis)
-(define-key escreen-map (kbd ";")
-  'escreen-get-active-screen-numbers-with-emphasis)
-(define-key escreen-map (kbd "C-;")
-  'escreen-get-active-screen-numbers-with-emphasis)
-
-;; Goto screens.
-(global-set-key (kbd "s-}") 'escreen-goto-next-screen)
-(global-set-key (kbd "s-{") 'escreen-goto-prev-screen)
-
-;; Ctrl versions of default commands.
-(define-key escreen-map (kbd "C-c") 'escreen-create-screen)
-(define-key escreen-map (kbd "C-g") 'escreen-goto-screen)
-(define-key escreen-map (kbd "C-k") 'escreen-kill-screen)
-(define-key escreen-map (kbd "C-n") 'escreen-goto-next-screen)
-(define-key escreen-map (kbd "C-p") 'escreen-goto-prev-screen)
-
-;; Show list of screens when you switch/create/kill.
-(add-hook 'escreen-goto-screen-hook
-          'escreen-get-active-screen-numbers-with-emphasis)
+  :config
+  (escreen-install)
+  (setq escreen-prefix-char (kbd "C-z"))
+  (global-set-key escreen-prefix-char 'escreen-prefix))
 
 (provide 'siren-escreen)
 ;;; siren-escreen.el ends here

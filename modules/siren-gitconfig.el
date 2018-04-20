@@ -10,17 +10,14 @@
 
 (use-package gitconfig-mode
   :mode "\\.gitconfig" "gitconfig\\'" "\\.git\\\/config"
+  :hook (gitconfig-mode . siren-gitconfig-mode-setup)
 
-  :config
-  (defun siren-gitconfig-mode-defaults ()
-    (siren-prog-mode-defaults)
+  :init
+  (defun siren-gitconfig-mode-setup ()
+    (siren-prog-mode-setup)
     (setq tab-width 2)
     (highlight-indentation-current-column-mode)
-    (run-hooks 'siren-prog-mode-hook))
-
-  (setq siren-gitconfig-mode-hook 'siren-gitconfig-mode-defaults)
-  (add-hook 'gitconfig-mode-hook (lambda ()
-                             (run-hooks 'siren-gitconfig-mode-hook))))
+    (run-hooks 'siren-prog-mode-hook)))
 
 (provide 'siren-gitconfig)
 ;;; siren-gitconfig.el ends here

@@ -8,6 +8,15 @@
 
 (use-package rubocop
   :defer t
+  :bind (:map rubocop-mode-map
+              ("C-c C-f" . siren-rubocop-autocorrect))
+
+  :hook
+  (rubocop-mode . siren-rubocop-mode-setup)
+  (after-save . siren-rubocop-autocorrect-hook)
+
+  :init
+  (defun siren-rubocop-mode-setup ())
 
   :config
   (defgroup siren-rubocop nil
@@ -56,17 +65,7 @@ auto-correction is triggered."
   (defun siren-rubocop-autocorrect-hook ()
     "Siren's Rubocop auto-correct hook."
     (if siren-rubocop-autocorrect-on-save
-        (siren-rubocop-autocorrect-p nil)))
-
-  (defun siren-rubocop-mode-defaults ()
-    (add-hook 'after-save-hook 'siren-rubocop-autocorrect-hook nil t)
-
-    (let ((map rubocop-mode-map))
-      (define-key map (kbd "C-c C-f") 'siren-rubocop-autocorrect)))
-
-  (setq siren-rubocop-mode-hook 'siren-rubocop-mode-defaults)
-  (add-hook 'rubocop-mode-hook (lambda ()
-                                 (run-hooks 'siren-rubocop-mode-hook))))
+        (siren-rubocop-autocorrect-p nil))))
 
 (provide 'siren-rubocop)
 ;;; siren-rubocop.el ends here

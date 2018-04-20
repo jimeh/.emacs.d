@@ -11,8 +11,8 @@
 
 (use-package neotree
   :bind
-  ("C-x C-p" . neotree-toggle)
-  ("C-x p" . neotree-project-dir)
+  ("C-x p" . neotree-toggle)
+  ("C-x C-p" . neotree-project-dir)
 
   :init
   (defun neotree-project-dir ()

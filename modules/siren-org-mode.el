@@ -10,7 +10,7 @@
 (require 'siren-flyspell)
 (require 'siren-smartparens)
 
-(defun siren-org-mode-defaults ()
+(defun siren-org-mode-setup ()
   (setq org-export-backends '(ascii html icalendar latex md confluence)
         fill-column 80
         whitespace-action '(auto-cleanup))
@@ -31,9 +31,7 @@
     (define-key map (kbd "C-M-n") 'outline-next-visible-heading)
     (define-key map (kbd "C-M-p") 'outline-previous-visible-heading)))
 
-(setq siren-org-mode-hook 'siren-org-mode-defaults)
-(add-hook 'org-mode-hook (lambda ()
-                           (run-hooks 'siren-org-mode-hook)))
+(add-hook 'org-mode-hook #'siren-org-mode-setup)
 
 (provide 'siren-org-mode)
 ;;; siren-org-mode.el ends here
