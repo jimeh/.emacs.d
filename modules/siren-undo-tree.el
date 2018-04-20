@@ -7,6 +7,7 @@
 ;;; Code:
 
 (use-package undo-tree
+  :demand
   :bind
   ("C-x u" . undo-tree-visualize)
   ("M--" . undo-tree-undo)
@@ -17,10 +18,8 @@
   :diminish
   undo-tree-mode
 
-  :init
-  (global-undo-tree-mode)
-
   :config
+  (global-undo-tree-mode)
   ;; autosave the undo-tree history
   (setq undo-tree-history-directory-alist `((".*" . ,temporary-file-directory))
         undo-tree-auto-save-history t))
