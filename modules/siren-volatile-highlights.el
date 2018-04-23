@@ -7,8 +7,9 @@
 ;;; Code:
 
 (use-package volatile-highlights-mode
+  :demand
   :diminish volatile-highlights-mode
-  :init
+  :config
   (volatile-highlights-mode t))
 
 (provide 'siren-volatile-highlights)

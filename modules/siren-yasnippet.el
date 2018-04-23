@@ -9,8 +9,9 @@
 (use-package yasnippet-snippets)
 
 (use-package yasnippet
+  :demand
   :diminish yas-minor-mode
-  :init
+  :config
   (yas-global-mode t))
 
 (provide 'siren-yasnippet)
