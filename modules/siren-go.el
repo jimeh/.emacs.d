@@ -21,9 +21,7 @@
               ("C-c b" . go-run)
               ("C-c d" . godef-jump)
               ("C-c C-j" . avy-goto-word-or-subword-1)
-              ("C-h f" . godoc-at-point)
-              :map help-command
-              ("G" . godoc))
+              ("C-h f" . godoc-at-point))
 
   :hook
   (go-mode . siren-go-mode-setup)
@@ -71,6 +69,8 @@
 
   (when (memq window-system '(mac ns))
     (exec-path-from-shell-copy-env "GOPATH"))
+
+  (define-key 'help-command (kbd "G") 'godoc)
 
   ;; Ignore go test -c output files
   (add-to-list 'completion-ignored-extensions ".test"))
