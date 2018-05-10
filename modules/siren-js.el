@@ -6,8 +6,7 @@
 
 ;;; Code:
 
-(require 'siren-eslintd-fix)
-(require 'siren-flycheck)
+(require 'siren-prettier-js)
 (require 'siren-folding)
 (require 'siren-programming)
 
@@ -22,11 +21,8 @@
           indent-level width
           tab-width width))
 
-  (setq flycheck-checker 'javascript-eslint
-        flycheck-javascript-eslint-executable "eslint_d")
-
   (siren-prog-mode-setup)
-  (eslintd-fix-mode)
+  (prettier-js-mode)
   (company-mode +1)
   (subword-mode +1)
   (hs-minor-mode 1)
