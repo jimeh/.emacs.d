@@ -1,4 +1,4 @@
-;;; siren-go.el --- jimeh's Emacs Siren: go-mode configuration.
+;;; siren-golang.el --- jimeh's Emacs Siren: go-mode configuration.
 
 ;;; Commentary:
 
@@ -100,5 +100,5 @@
   (with-eval-after-load 'go-mode
     (add-hook 'flycheck-mode-hook #'flycheck-gometalinter-setup)))
 
-(provide 'siren-go)
-;;; siren-go.el ends here
+(provide 'siren-golang)
+;;; siren-golang.el ends here

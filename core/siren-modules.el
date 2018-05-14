@@ -85,7 +85,7 @@
 (require 'siren-emacs-lisp)
 (require 'siren-gitconfig)
 (require 'siren-gitignore)
-(require 'siren-go)
+(require 'siren-golang)
 (require 'siren-haml)
 (require 'siren-js)
 (require 'siren-json)
