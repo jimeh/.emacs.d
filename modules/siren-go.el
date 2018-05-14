@@ -47,6 +47,7 @@
 
     ;; enable hide/show
     (hs-minor-mode 1)
+    (hideshowvis-enable)
 
     ;; go-guru
     (go-guru-hl-identifier-mode 1)
