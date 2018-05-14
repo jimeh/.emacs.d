@@ -96,6 +96,7 @@
 (require 'siren-php)
 (require 'siren-plantuml)
 (require 'siren-ruby)
+(require 'siren-rust)
 (require 'siren-sass)
 (require 'siren-scss)
 (require 'siren-sh)
