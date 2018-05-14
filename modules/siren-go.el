@@ -6,8 +6,9 @@
 
 ;;; Code:
 
-(require 'siren-programming)
 (require 'siren-flycheck)
+(require 'siren-folding)
+(require 'siren-programming)
 
 (use-package go-mode
   :mode "\\.go\\'"
@@ -89,13 +90,15 @@
   (setq go-projectile-switch-gopath 'never))
 
 (use-package flycheck-gometalinter
-  :requires flycheck
-  :hook (flycheck-mode . flycheck-gometalinter-setup)
-
+  :requires go-mode flycheck
+  :commands flycheck-gometalinter-setup
   :init
   (setq flycheck-gometalinter-fast t
         flycheck-gometalinter-tests t
-        flycheck-gometalinter-vendor t))
+        flycheck-gometalinter-vendor t)
+
+  (with-eval-after-load 'go-mode
+    (add-hook 'flycheck-mode-hook #'flycheck-gometalinter-setup)))
 
 (provide 'siren-go)
 ;;; siren-go.el ends here
