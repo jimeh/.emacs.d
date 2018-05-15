@@ -35,11 +35,8 @@
   :hook (rust-mode . cargo-minor-mode))
 
 (use-package flycheck-rust
-  :requires rust-mode flycheck
-  :commands flycheck-rust-setup
-  :init
-  (with-eval-after-load 'rust-mode
-    (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)))
+  :after rust-mode
+  :hook (flycheck-mode . flycheck-rust-setup))
 
 (use-package racer
   :requires rust-mode company
