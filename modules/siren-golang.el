@@ -100,5 +100,8 @@
   (with-eval-after-load 'go-mode
     (add-hook 'flycheck-mode-hook #'flycheck-gometalinter-setup)))
 
+(use-package go-playground
+  :commands go-playground)
+
 (provide 'siren-golang)
 ;;; siren-golang.el ends here
