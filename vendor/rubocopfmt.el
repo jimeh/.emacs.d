@@ -1,75 +1,86 @@
-;;; rubocopfmt.el --- Format ruby code with rubocopfmt.
+;;; rubocopfmt.el --- Format ruby code with rubocop
 
-;; Copyright (C) 2017 Jim Myhrberg
-
-;; Author: Jim Myhrberg
-;; Keywords: ruby rubocop rubocopfmt
-;; URL: https://github.com/jimeh/rubocopfmt-emacs
 ;; Version: 0.1.0
+;; Keywords: convenience wp edit ruby rubocop
+;; URL: https://github.com/jimeh/rubocopfmt.el
+;; Author: Jim Myhrberg
 
 ;; This file is not part of GNU Emacs.
 
 ;;; License:
 ;;
-;; Permission is hereby granted, free of charge, to any person obtaining a
-;; copy of this software and associated documentation files (the "Software"),
-;; to deal in the Software without restriction, including without limitation
-;; the rights to use, copy, modify, merge, publish, distribute, sublicense,
-;; and/or sell copies of the Software, and to permit persons to whom the
-;; Software is furnished to do so, subject to the following conditions:
+;; Copyright (c) 2014 The go-mode Authors. All rights reserved.
+;; Portions Copyright (c) 2018 Jim Myhrberg.
 ;;
-;; The above copyright notice and this permission notice shall be included in
-;; all copies or substantial portions of the Software.
+;; Redistribution and use in source and binary forms, with or without
+;; modification, are permitted provided that the following conditions are
+;; met:
 ;;
-;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-;; IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-;; FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-;; AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-;; LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-;; FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-;; DEALINGS IN THE SOFTWARE.
+;;    * Redistributions of source code must retain the above copyright
+;; notice, this list of conditions and the following disclaimer.
+;;    * Redistributions in binary form must reproduce the above
+;; copyright notice, this list of conditions and the following disclaimer
+;; in the documentation and/or other materials provided with the
+;; distribution.
+;;    * Neither the name of the copyright holder nor the names of its
+;; contributors may be used to endorse or promote products derived from
+;; this software without specific prior written permission.
+;;
+;; THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+;; "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+;; LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+;; A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+;; OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+;; SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+;; LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+;; DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+;; THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+;; (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+;; OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ;;; Commentary:
 ;;
-;; The core parts of rubocopfmt.el are borrowed from the gofmt related parts of
-;; go-mode.el 1.4.0. So most credit goes to The Go Authors.
+;; This library formats Ruby code by using rubocop and it's --auto-correct
+;; option.
 
 ;;; Code:
 
 (defgroup rubocopfmt nil
-  "Minor mode for formatting Ruby buffers with rubocopfmt."
+  "Minor mode for formatting Ruby buffers with rubocop."
+  :group 'languages
   :link '(url-link "https://github.com/jimeh/rubocopfmt.el"))
 
-(defcustom rubocopfmt-command "rubocopfmt"
-  "The 'rubocopfmt' command."
+(defcustom rubocopfmt-rubocop-command "rubocop"
+  "Name of rubocop executable."
   :type 'string
   :group 'rubocopfmt)
 
-(defun rubocopfmt ()
-  "Format the current buffer with rubocopfmt."
-  (interactive)
-  (let ((patchbuf (get-buffer-create "*Rubocopfmt patch*"))
-        (coding-system-for-read 'utf-8)
-        (coding-system-for-write 'utf-8)
-        (rubocopfmt-args
-         (list "--diff-format" "rcs"
-               "--interactive"
-               "--src-file" (file-truename buffer-file-name))))
+(defcustom rubocopfmt-disabled-cops
+  '("Lint/Debugger"              ; Don't remove debugger calls.
+    "Lint/UnusedBlockArgument"   ; Don't rename unused block arguments.
+    "Lint/UnusedMethodArgument"  ; Don't rename unused method arguments.
+    "Style/EmptyMethod"          ; Don't remove blank line in empty methods.
+    )
+  "A list of RuboCop cops to disable during auto-correction.
+These cops are disabled because they cause confusion during
+interactive use within a text-editor."
+  :type '(repeat string)
+  :group 'rubocopfmt)
 
-    (unwind-protect
-        (save-restriction
-          (widen)
-          (with-current-buffer patchbuf (erase-buffer))
-          (message "Calling rubocopfmt: %s %s"
-                   rubocopfmt-command rubocopfmt-args)
-          (apply #'call-process-region (point-min) (point-max)
-                 rubocopfmt-command nil patchbuf nil rubocopfmt-args)
-          (if (= (buffer-size patchbuf) 0)
-              (message "Buffer is already rubocopfmted")
-              (progn
-                (rubocopfmt--apply-rcs-patch patchbuf)
-                (message "Applied rubocopfmt")))))
-    (kill-buffer patchbuf)))
+(defcustom rubocopfmt-show-errors 'buffer
+  "Where to display rubocopfmt error output.
+It can either be displayed in its own buffer, in the echo area,
+or not at all.
+
+Please note that Emacs outputs to the echo area when writing
+files and will overwrite rubocopfmt's echo output if used from
+inside a `before-save-hook'."
+  :type '(choice
+          (const :tag "Own buffer" buffer)
+          (const :tag "Echo area" echo)
+          (const :tag "None" nil))
+  :group 'rubocopfmt)
+
 
 (defun rubocopfmt--apply-rcs-patch (patch-buffer)
   "Apply an RCS-formatted diff from PATCH-BUFFER to the current buffer."
@@ -90,7 +101,7 @@
         (goto-char (point-min))
         (while (not (eobp))
           (unless (looking-at "^\\([ad]\\)\\([0-9]+\\) \\([0-9]+\\)")
-            (error "invalid rcs patch or internal error in rubocopfmt--apply-rcs-patch"))
+            (error "Invalid rcs patch or internal error in rubocopfmt--apply-rcs-patch"))
           (forward-line)
           (let ((action (match-string 1))
                 (from (string-to-number (match-string 2)))
@@ -111,7 +122,7 @@
                 (cl-incf line-offset len)
                 (rubocopfmt--delete-whole-line len)))
              (t
-              (error "invalid rcs patch or internal error in rubocopfmt--apply-rcs-patch")))))))))
+              (error "Invalid rcs patch or internal error in rubocopfmt--apply-rcs-patch")))))))))
 
 (defun rubocopfmt--delete-whole-line (&optional arg)
   "Delete the current line without putting it in the `kill-ring'.
@@ -140,8 +151,118 @@ function."
                         (progn (forward-visible-line arg) (point))))))
 
 (defun rubocopfmt--goto-line (line)
+  "Move cursor to LINE."
   (goto-char (point-min))
   (forward-line (1- line)))
+
+(defun rubocopfmt--bundled-path-p (directory)
+  "Check if there is a Gemfile in DIRECTORY, or any parent of DIRECTORY."
+  (rubocopfmt--file-search-upward directory "Gemfile"))
+
+(defun rubocopfmt--file-search-upward (directory file)
+  "Search DIRECTORY for FILE and return its full path if found, or NIL if not.
+
+If FILE is not found in DIRECTORY, the parent of DIRECTORY will be searched."
+  (let ((parent-dir (file-truename (concat (file-name-directory directory) "../")))
+        (current-path (if (not (string= (substring directory (- (length directory) 1)) "/"))
+                          (concat directory "/" file)
+                        (concat directory file))))
+
+    (if (file-exists-p current-path)
+        current-path
+      (when (and (not (string= (file-truename directory) parent-dir))
+                 (< (length parent-dir) (length (file-truename directory))))
+        (rubocopfmt--file-search-upward parent-dir file)))))
+
+(defun rubocopfmt--parse-result (resultbuf tmpfile)
+  "Parse Rubocop result in RESULTBUF and write corrections to TMPFILE."
+  (let ((split 0))
+    (with-current-buffer resultbuf
+      (goto-char (point-min))
+      ;; Only find the separator when RuboCop has printed complaints.
+      (setq split (search-forward "\n====================\n" nil t))
+
+      ;; If no RuboCop complaints were printed, we need to find the separator at
+      ;; the beginning of the buffer. This separation helps prevent false
+      ;; positive separator matches.
+      (unless split
+        (setq split (search-forward "====================\n" nil t)))
+
+      (if split
+          (when (> split 22)
+            (goto-char (point-min))
+            (when (search-forward "[Corrected]" split t)
+              (write-region split (point-max) tmpfile)
+              t))
+        (rubocopfmt--process-errors resultbuf)
+        nil))))
+
+(defun rubocopfmt--process-errors (resultbuf)
+  "Display contents of RESULTBUF as errors."
+  (if (eq rubocopfmt-show-errors 'echo)
+      (with-current-buffer resultbuf
+        (message (buffer-string))))
+
+  (if (eq rubocopfmt-show-errors 'buffer)
+      (let ((errbuf (get-buffer-create "*Rubocopfmt Errors*")))
+        (with-current-buffer errbuf
+          (erase-buffer)
+          (goto-char (point-min))
+          (insert-buffer-substring resultbuf))
+          (display-buffer errbuf))))
+
+
+;;;###autoload
+(defun rubocopfmt ()
+  "Format the current buffer with rubocop."
+  (interactive)
+  (let* ((coding-system-for-read 'utf-8)
+         (coding-system-for-write 'utf-8)
+         (tmpfile (make-temp-file "rubocopfmt" nil ".rb"))
+         (resultbuf (get-buffer-create "*Rubocopfmt Result*"))
+         (patchbuf (get-buffer-create "*Rubocopfmt Patch*"))
+         (buffer-file (file-truename buffer-file-name))
+         (src-dir (file-name-directory buffer-file))
+         (src-file (file-name-nondirectory buffer-file))
+         (fmt-command rubocopfmt-rubocop-command)
+         (fmt-args (list "--stdin" src-file
+                         "--auto-correct"
+                         "--format" "emacs")))
+
+    (if (rubocopfmt--bundled-path-p src-dir)
+        (setq fmt-command "bundle"
+              fmt-args (append (list "exec" rubocopfmt-rubocop-command)
+                               fmt-args)))
+
+    (if rubocopfmt-disabled-cops
+        (setq fmt-args (append fmt-args (list "--except"
+                                              (combine-and-quote-strings
+                                               rubocopfmt-disabled-cops ",")))))
+
+    (unwind-protect
+        (save-restriction
+          (widen)
+          (write-region nil nil tmpfile)
+          (with-current-buffer resultbuf (erase-buffer))
+          (with-current-buffer patchbuf (erase-buffer))
+
+          (let ((current-directory src-dir))
+            (message "Calling rubocop from directory \"%s\": %s %s"
+                     src-dir fmt-command (mapconcat 'identity fmt-args " "))
+            (apply #'call-process-region (point-min) (point-max)
+                   fmt-command nil resultbuf nil fmt-args)
+            (if (rubocopfmt--parse-result resultbuf tmpfile)
+                (call-process-region (point-min) (point-max) "diff"
+                                     nil patchbuf nil "-n" "-" tmpfile)))
+
+          (if (= (buffer-size patchbuf) 0)
+              (message "Buffer is already rubocopfmted")
+            (rubocopfmt--apply-rcs-patch patchbuf)
+            (message "Applied rubocopfmt")))
+
+      (delete-file tmpfile)
+      (kill-buffer resultbuf)
+      (kill-buffer patchbuf))))
 
 ;;;###autoload
 (define-minor-mode rubocopfmt-mode

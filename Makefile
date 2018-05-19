@@ -14,14 +14,16 @@ vendor: \
 	vendor/dired+.el \
 	vendor/escreen.el \
 	vendor/hideshowvis.el \
-	vendor/linum+.el
+	vendor/linum+.el \
+	vendor/rubocopfmt.el
 
 .PHONY: update_vendor
 update_vendor: \
 	update_vendor/dired+.el \
 	update_vendor/escreen.el \
 	update_vendor/hideshowvis.el \
-	update_vendor/linum+.el
+	update_vendor/linum+.el \
+	update_vendor/rubocopfmt.el
 
 #
 # Internals
@@ -48,3 +50,4 @@ $(eval $(call vendored,vendor/dired+.el,"https://www.emacswiki.org/emacs/downloa
 $(eval $(call vendored,vendor/escreen.el,"https://github.com/renard/escreen-el/raw/master/escreen.el"))
 $(eval $(call vendored,vendor/hideshowvis.el,"https://www.emacswiki.org/emacs/download/hideshowvis.el"))
 $(eval $(call vendored,vendor/linum+.el,"http://www.emacswiki.org/emacs/download/linum%2b.el"))
+$(eval $(call vendored,vendor/rubocopfmt.el,"https://github.com/jimeh/rubocopfmt.el/raw/master/rubocopfmt.el"))
