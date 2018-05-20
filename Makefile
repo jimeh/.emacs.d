@@ -15,7 +15,8 @@ vendor: \
 	vendor/escreen.el \
 	vendor/hideshowvis.el \
 	vendor/linum+.el \
-	vendor/rubocopfmt.el
+	vendor/rubocopfmt.el \
+	vendor/tomorrow-night-paradise-theme.el
 
 .PHONY: update_vendor
 update_vendor: \
@@ -23,7 +24,8 @@ update_vendor: \
 	update_vendor/escreen.el \
 	update_vendor/hideshowvis.el \
 	update_vendor/linum+.el \
-	update_vendor/rubocopfmt.el
+	update_vendor/rubocopfmt.el \
+	update_vendor/tomorrow-night-paradise-theme.el
 
 #
 # Internals
@@ -51,3 +53,4 @@ $(eval $(call vendored,vendor/escreen.el,"https://github.com/renard/escreen-el/r
 $(eval $(call vendored,vendor/hideshowvis.el,"https://www.emacswiki.org/emacs/download/hideshowvis.el"))
 $(eval $(call vendored,vendor/linum+.el,"http://www.emacswiki.org/emacs/download/linum%2b.el"))
 $(eval $(call vendored,vendor/rubocopfmt.el,"https://github.com/jimeh/rubocopfmt.el/raw/master/rubocopfmt.el"))
+$(eval $(call vendored,vendor/tomorrow-night-paradise-theme.el,"https://github.com/jimeh/tomorrow-night-paradise-theme.el/raw/master/tomorrow-night-paradise-theme.el"))
