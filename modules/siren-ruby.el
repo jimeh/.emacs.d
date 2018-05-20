@@ -93,7 +93,13 @@
               ("C-c C-j" . robe-jump)
               ("C-c b". pop-tag-mark))
   :hook (ruby-mode . robe-mode)
+
+  :init
+  (eval-after-load 'company
+    '(push 'company-robe company-backends))
+
   :config
+  ;; Unbind keys used by siren-text-manipulation module
   (unbind-key "M-." robe-mode-map)
   (unbind-key "M-," robe-mode-map))
 
@@ -103,7 +109,8 @@
   :init
   (defun siren-rspec-mode-setup ()
     (setq compilation-scroll-output t
-          rspec-primary-source-dirs '("app")))
+          rspec-primary-source-dirs '("app")
+          rspec-use-spring-when-possible nil))
 
   :config
   (rspec-install-snippets))
