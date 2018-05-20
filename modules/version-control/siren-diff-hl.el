@@ -9,7 +9,7 @@
 (use-package diff-hl
   :demand
   :hook ((dired-mode . diff-hl-dired-mode)
-         (magit-post-refresh-hook . diff-hl-magit-post-refresh))
+         (magit-post-refresh . diff-hl-magit-post-refresh))
 
   :config
   (global-diff-hl-mode +1)

@@ -9,10 +9,11 @@
 (use-package make-mode
   :ensure nil ;; loaded from emacs built-ins
   :hook
-  (makefile-mode-hook . siren-makefile-mode-setup)
+  (makefile-mode . siren-makefile-mode-setup)
 
   :init
   (add-to-list 'siren-indent-sensitive-modes 'makefile-mode)
+
   (defun siren-makefile-mode-setup ()
     (subword-mode +1)
     (setq tab-width 4)

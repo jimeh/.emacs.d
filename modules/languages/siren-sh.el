@@ -11,7 +11,7 @@
 (use-package sh-script
   :ensure nil ;; loaded from emacs built-ins
   :hook
-  (sh-mode-hook . siren-sh-mode-setup)
+  (sh-mode . siren-sh-mode-setup)
 
   :init
   (defun siren-sh-mode-setup ()

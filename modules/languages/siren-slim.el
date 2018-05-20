@@ -10,7 +10,7 @@
 
 (use-package slim-mode
   :mode "\\.slim\\'"
-  :hook (slim-mode-hook . siren-slim-mode-hook)
+  :hook (slim-mode . siren-slim-mode-hook)
 
   :init
   (defun siren-slim-mode-setup ()

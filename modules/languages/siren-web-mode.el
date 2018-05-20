@@ -21,7 +21,7 @@
               ("C-c C-h" . siren-toggle-hiding))
 
   :hook
-  (web-mode-hook . siren-web-mode-setup)
+  (web-mode . siren-web-mode-setup)
 
   :init
   (defun siren-web-mode-mode-setup ()

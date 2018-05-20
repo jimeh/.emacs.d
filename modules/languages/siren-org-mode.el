@@ -13,7 +13,7 @@
 
 (use-package org-mode
   :ensure nil ;; loaded from emacs built-ins
-  :hook (org-mode-hook . siren-org-mode-setup)
+  :hook (org-mode . siren-org-mode-setup)
 
   :init
   (defun siren-org-mode-setup ()

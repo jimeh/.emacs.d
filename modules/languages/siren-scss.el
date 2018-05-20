@@ -10,7 +10,7 @@
 
 (use-package scss-mode
   :mode "\\.scss\\'"
-  :hook (scss-mode-hook . siren-scss-mode-setup)
+  :hook (scss-mode . siren-scss-mode-setup)
 
   :init
   (defun siren-scss-mode-setup ()

@@ -17,7 +17,7 @@
 
 (use-package thrift
   :mode "\\.thrift\\'"
-  :hook (thrift-mode-hook . siren-thrift-mode-setup)
+  :hook (thrift-mode . siren-thrift-mode-setup)
 
   :init
   (defun siren-thrift-mode-setup ()
