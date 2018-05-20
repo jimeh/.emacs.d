@@ -87,6 +87,16 @@
   :config
   (unbind-key "C-c C-r" inf-ruby-minor-mode-map))
 
+(use-package robe
+  :defer t
+  :bind (:map robe-mode-map
+              ("C-c d" . robe-jump)
+              ("C-c b". pop-tag-mark))
+  :hook (ruby-mode . robe-mode)
+  :config
+  (unbind-key "M-." robe-mode-map)
+  (unbind-key "M-," robe-mode-map))
+
 (use-package rspec-mode
   :defer t
   :hook (rspec-mode . siren-rspec-mode-setup)
