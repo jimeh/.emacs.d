@@ -97,7 +97,7 @@
     '(push 'company-robe company-backends))
 
   :config
-  ;; Unbind keys used by siren-expand-region module
+  ;; Unbind keys used by siren-expand-region module.
   (unbind-key "M-." robe-mode-map)
   (unbind-key "M-," robe-mode-map))
 
@@ -139,7 +139,12 @@
   :diminish ruby-tools-mode
   :bind (:map ruby-tools-mode-map
               ("C-'" . toggle-quotes))
-  :hook (ruby-mode . ruby-tools-mode))
+  :hook
+  (ruby-mode . ruby-tools-mode)
+
+  :config
+  ;; Unbind key used by siren-resize-window module.
+  (unbind-key "C-;" ruby-tools-mode-map))
 
 (use-package seeing-is-believing
   :defer t

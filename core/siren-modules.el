@@ -83,6 +83,7 @@
 
 ;; Window management
 (require 'siren-buffer-move)
+(require 'siren-resize-window)
 (require 'siren-windmove)
 (require 'siren-zoom-window)
 
