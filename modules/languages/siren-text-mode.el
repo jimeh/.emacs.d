@@ -11,7 +11,9 @@
   :hook (text-mode . siren-text-mode-setup)
   :init
   (defun siren-text-mode-setup ()
-    (setq fill-column 80)))
+    (setq fill-column 80)
+
+    (visual-line-mode t)))
 
 (provide 'siren-text-mode)
 ;;; siren-text-mode.el ends here

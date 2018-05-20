@@ -17,8 +17,8 @@
     (setq fill-column 80
           whitespace-action '(auto-cleanup))
 
-    (visual-line-mode +1)
-    (whitespace-mode +1)))
+    (visual-line-mode t)
+    (whitespace-mode t)))
 
 (provide 'siren-prog-mode)
 ;;; siren-prog-mode.el ends here

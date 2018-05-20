@@ -9,8 +9,9 @@
 (use-package fill-column-indicator
   :hook (prog-mode . fci-mode)
   :config
-  (setq fci-rule-width 1
-        fci-handle-trucate-lines nil))
+  (setq fci-handle-line-move-visual nil
+        fci-handle-truncate-lines nil
+        fci-rule-width 1))
 
 (provide 'siren-fci)
 ;;; siren-fci.el ends here
