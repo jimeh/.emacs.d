@@ -8,7 +8,7 @@
 
 (use-package dumb-jump
   :bind
-  ("C-c d" . dumb-jump-go)
+  ("C-c C-j" . dumb-jump-go)
   ("C-c b" . dumb-jump-back)
   ("M-g o" . dumb-jump-go-other-window)
   ("M-g j" . dumb-jump-go)

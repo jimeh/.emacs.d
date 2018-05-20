@@ -16,7 +16,6 @@
   :commands go-mode
   :bind (:map go-mode-map
               ("RET" . newline-and-indent)
-              ("C-c C-j" . avy-goto-word-or-subword-1)
               ("C-h f" . godoc-at-point))
 
   :hook
@@ -71,7 +70,7 @@
 (use-package go-guru
   :after go-mode
   :bind (:map go-mode-map
-              ("C-c d" . go-guru-definition)
+              ("C-c C-j" . go-guru-definition)
               ("C-c b" . pop-tag-mark))
   :hook (go-mode . siren-go-guru-setup)
 

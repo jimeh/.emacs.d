@@ -9,7 +9,7 @@
 
 (use-package avy
   :bind
-  ("C-c C-j" . avy-goto-word-or-subword-1)
+  ("C-c j" . avy-goto-word-or-subword-1)
   ("C-c SPC" . avy-goto-char)
   ("M-o" . ace-window)
 

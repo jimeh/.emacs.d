@@ -90,7 +90,7 @@
 (use-package robe
   :defer t
   :bind (:map robe-mode-map
-              ("C-c d" . robe-jump)
+              ("C-c C-j" . robe-jump)
               ("C-c b". pop-tag-mark))
   :hook (ruby-mode . robe-mode)
   :config
