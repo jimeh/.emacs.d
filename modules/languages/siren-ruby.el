@@ -113,6 +113,17 @@
   :config
   (rspec-install-snippets))
 
+(use-package rubocop
+  :defer t
+  :after ruby-mode
+  :bind (:map ruby-mode-map
+              ("C-c . f" . rubocop-check-current-file)
+              ("C-c . p" . rubocop-check-project)
+              ("C-c . d" . rubocop-check-directory)
+              ("C-c . F" . rubocop-autocorrect-current-file)
+              ("C-c . P" . rubocop-autocorrect-project)
+              ("C-c . D" . rubocop-autocorrect-directory)))
+
 (use-package rubocopfmt
   :ensure nil ;; loaded from vendor
   :commands (rubocopfmt rubocopfmt-mode)
