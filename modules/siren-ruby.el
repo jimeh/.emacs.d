@@ -14,31 +14,6 @@
 
 (require 'smartparens-ruby)
 
-(use-package rubocopfmt
-  :ensure nil ;; loaded from vendor
-  )
-
-(use-package inf-ruby
-  :defer t)
-
-(use-package rspec-mode
-  :defer t
-  :config
-  (rspec-install-snippets))
-
-(use-package ruby-refactor
-  :defer t)
-
-(use-package ruby-tools
-  :defer t
-  :bind (:map ruby-tools-mode-map
-              ("C-'" . toggle-quotes)))
-
-(use-package yari
-  :defer t
-  :init
-  (define-key 'help-command (kbd "R") 'yari))
-
 (use-package ruby-mode
   :ensure nil ;; loaded from emacs built-ins
   :interpreter "ruby"
@@ -68,6 +43,7 @@
               ("RET" . newline-and-indent)
               ("C-c C-h" . siren-toggle-hiding)
               ("C-c C-l" . goto-line)
+              ("C-c C-r" . anzu-query-replace)
               ("C-M-f" . sp-ruby-forward-sexp)
               ("C-M-b" . sp-ruby-backward-sexp))
 
@@ -86,13 +62,11 @@
           ruby-use-smie t
           tab-width 2)
 
-    (rubocopfmt-mode)
-    (ruby-tools-mode +1)
-    (hs-minor-mode 1)
     (company-mode +1)
-    (subword-mode +1)
+    (hs-minor-mode 1)
+    (hideshowvis-enable)
     (highlight-indentation-current-column-mode)
-    (hideshowvis-enable))
+    (subword-mode +1))
 
   :config
   ;; We never want to edit Rubinius bytecode
@@ -108,6 +82,55 @@
 
   ;; Make company-mode play nice
   (push 'ruby-mode company-dabbrev-code-modes))
+
+(use-package inf-ruby
+  :defer t
+  :hook
+  (ruby-mode . inf-ruby-mode)
+  (compilation-filter . inf-ruby-auto-enter))
+
+(use-package rspec-mode
+  :defer t
+  :hook (rspec-mode . siren-rspec-mode-setup)
+  :init
+  (defun siren-rspec-mode-setup ()
+    (setq compilation-scroll-output t))
+
+  :config
+  (rspec-install-snippets))
+
+(use-package rubocopfmt
+  :commands (rubocopfmt rubocopfmt-mode)
+  :hook (ruby-mode . rubocopfmt-mode))
+
+(use-package ruby-compilation
+  :defer t)
+
+(use-package ruby-refactor
+  :defer t
+  :hook
+  (ruby-mode . ruby-refactor-mode)
+  (ruby-refactor . siren-ruby-refactor-setup)
+
+  :init
+  (setq ruby-refactor-keymap-prefix (kbd "C-c C-="))
+  (defun siren-ruby-refactor-setup ()))
+
+(use-package ruby-tools
+  :defer t
+  :diminish ruby-tools-mode
+  :bind (:map ruby-tools-mode-map
+              ("C-'" . toggle-quotes))
+  :hook (ruby-mode . ruby-tools-mode))
+
+(use-package seeing-is-believing
+  :defer t
+  :commands seeing-is-believing)
+
+(use-package yari
+  :defer t
+  :init
+  (define-key 'help-command (kbd "R") 'yari))
 
 (provide 'siren-ruby)
 ;;; siren-ruby.el ends here
