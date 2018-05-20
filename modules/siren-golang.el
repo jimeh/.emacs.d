@@ -78,7 +78,11 @@
   :init
   (defun siren-go-guru-setup ()
     (setq go-guru-hl-identifier-idle-time 0.1)
-    (go-guru-hl-identifier-mode 1)))
+    (go-guru-hl-identifier-mode 1))
+
+  :config
+  (custom-set-faces
+   '(go-guru-hl-identifier-face ((t (:background "gray30"))))))
 
 (use-package go-rename
   :after go-mode
