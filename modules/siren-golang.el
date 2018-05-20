@@ -65,10 +65,10 @@
 (use-package go-eldoc
   :defer t
   :diminish eldoc-mode
+  :commands go-eldoc-setup
   :hook (go-mode . go-eldoc-setup))
 
 (use-package go-guru
-  :defer t
   :after go-mode
   :bind (:map go-mode-map
               ("C-c d" . go-guru-definition)
@@ -81,13 +81,11 @@
     (go-guru-hl-identifier-mode 1)))
 
 (use-package go-rename
-  :defer t
   :after go-mode
   :bind (:map go-mode-map
               ("C-c ." . go-rename)))
 
 (use-package gotest
-  :defer t
   :after go-mode
   :bind (:map go-mode-map
               ("C-c , a" . go-test-current-project)
@@ -99,7 +97,6 @@
               ("C-c , r" . go-run)))
 
 (use-package go-projectile
-  :defer t
   :after go-mode
   :hook (go-mode . siren-go-projectile-setup)
 
