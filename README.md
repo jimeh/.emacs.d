@@ -9,7 +9,7 @@ daily basis.
 
 ## Requirements
 
-- Emacs 24.5 or later. Earlier versions might work, but I haven't tested them.
+- Emacs 25.3 or later. Earlier versions might work, but I haven't tested them.
 
 ## Installation
 
@@ -17,8 +17,6 @@ daily basis.
 
         git clone git://github.com/jimeh/.emacs.d.git ~/.emacs.d
         cd ~/.emacs.d
-        git submodule init
-        git submodule update
 
 2. Launch Emacs and wait a few minutes while it installs all packages.
 3. Enjoy ^_^
