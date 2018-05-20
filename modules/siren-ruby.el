@@ -41,9 +41,7 @@
   :bind (:map ruby-mode-map
               ("C-j" . newline-and-indent)
               ("RET" . newline-and-indent)
-              ("C-c C-h" . siren-toggle-hiding)
               ("C-c C-l" . goto-line)
-              ("C-c C-r" . anzu-query-replace)
               ("C-M-f" . sp-ruby-forward-sexp)
               ("C-M-b" . sp-ruby-backward-sexp))
 
@@ -55,10 +53,8 @@
     (siren-prog-mode-setup)
 
     (setq c-tab-always-indent nil
-          rspec-primary-source-dirs '("app")
           ruby-align-chained-calls t
           ruby-insert-encoding-magic-comment t
-          ruby-refactor-add-parens t
           ruby-use-smie t
           tab-width 2)
 
@@ -86,21 +82,26 @@
 (use-package inf-ruby
   :defer t
   :hook
-  (ruby-mode . inf-ruby-mode)
-  (compilation-filter . inf-ruby-auto-enter))
+  (ruby-mode . inf-ruby-minor-mode)
+  (compilation-filter . inf-ruby-auto-enter)
+  :config
+  (unbind-key "C-c C-r" inf-ruby-minor-mode-map))
 
 (use-package rspec-mode
   :defer t
   :hook (rspec-mode . siren-rspec-mode-setup)
   :init
   (defun siren-rspec-mode-setup ()
-    (setq compilation-scroll-output t))
+    (setq compilation-scroll-output t
+          rspec-primary-source-dirs '("app")))
 
   :config
   (rspec-install-snippets))
 
 (use-package rubocopfmt
   :commands (rubocopfmt rubocopfmt-mode)
+  :bind (:map ruby-mode-map
+              ("C-c C-f" . rubocopfmt))
   :hook (ruby-mode . rubocopfmt-mode))
 
 (use-package ruby-compilation
@@ -114,7 +115,8 @@
 
   :init
   (setq ruby-refactor-keymap-prefix (kbd "C-c C-="))
-  (defun siren-ruby-refactor-setup ()))
+  (defun siren-ruby-refactor-setup ()
+    (setq ruby-refactor-add-parens t)))
 
 (use-package ruby-tools
   :defer t
