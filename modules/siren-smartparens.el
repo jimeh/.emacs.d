@@ -11,7 +11,7 @@
   :diminish smartparens-mode
   :bind (:map smartparens-mode-map
               ("C-M-t" . sp-transpose-sexp)
-              ("C-M-r" . siren-sp-transpose-sexp-reverse)
+              ("C-M-r" . sp-transpose-sexp-reverse)
               ("C-M-f" . sp-forward-sexp)
               ("C-M-b" . sp-backward-sexp)
               ("C-M-a" . sp-beginning-of-sexp)
@@ -27,13 +27,13 @@
               ("C-<backspace>" . sp-backward-kill-sexp)
               ("C-<delete>" . sp-kill-sexp))
 
-  :init
-  (defun siren-sp-transpose-sexp-reverse ()
-    (sp-transpose-sexp -1))
-
   :config
   ;; smart pairing for all
   (require 'smartparens-config)
+
+  (defun sp-transpose-sexp-reverse ()
+    (interactive)
+    (sp-transpose-sexp -1))
 
   (defalias 'rw 'sp-rewrap-sexp)
   (show-smartparens-global-mode +1)
