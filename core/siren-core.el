@@ -68,5 +68,13 @@ Borrowed from: http://emacsredux.com/blog/2013/05/04/rename-file-and-buffer/"
           (set-visited-file-name new-name)
           (set-buffer-modified-p nil)))))))
 
+(defun siren-ignore-error-wrapper (fn)
+  "Funtion return new function that ignore errors.
+   The function wraps a function with `ignore-errors' macro."
+  (lexical-let ((fn fn))
+    (lambda ()
+      (interactive)
+      (ignore-errors (funcall fn)))))
+
 (provide 'siren-core)
 ;;; siren-core.el ends here
