@@ -16,11 +16,6 @@
   :commands go-mode
   :bind (:map go-mode-map
               ("RET" . newline-and-indent)
-              ("C-c a" . go-test-current-project)
-              ("C-c m" . go-test-current-file)
-              ("C-c ." . go-test-current-test)
-              ("C-c b" . go-run)
-              ("C-c d" . godef-jump)
               ("C-c C-j" . avy-goto-word-or-subword-1)
               ("C-h f" . godoc-at-point))
 
@@ -39,31 +34,10 @@
     ;; gofmt on save
     (add-hook 'before-save-hook 'gofmt-before-save nil t)
 
-    ;; prevent go-projectile from screwing up GOPATH
-    (setq go-projectile-switch-gopath 'never)
-
-    ;; enable company-mode
-    (set (make-local-variable 'company-backends) '(company-go))
-    (company-mode +1)
-
-    ;; enable hide/show
     (hs-minor-mode 1)
     (hideshowvis-enable)
-
-    ;; go-guru
-    (go-guru-hl-identifier-mode 1)
-    (setq go-guru-hl-identifier-idle-time 0.1)
-
-    ;; stop whitespace being highlighted
     (whitespace-toggle-options '(tabs))
-
-    ;; make tabs 4 spaces wide
     (setq tab-width 4)
-
-    ;; El-doc for Go
-    ;; (go-eldoc-setup)
-
-    ;; CamelCase aware editing operations
     (subword-mode +1))
 
   :config
@@ -77,28 +51,71 @@
   ;; Ignore go test -c output files
   (add-to-list 'completion-ignored-extensions ".test"))
 
-(use-package company-go :defer t)
-(use-package go-eldoc :defer t)
-(use-package go-guru :defer t)
-(use-package go-rename :defer t)
-(use-package gotest :defer t)
+(use-package company-go
+  :defer t
+  :after go-mode
+  :hook (go-mode . siren-company-go-setup)
+
+  :init
+  (defun siren-company-go-setup ()
+    (set (make-local-variable 'company-backends) '(company-go))
+    (company-mode +1)))
+
+(use-package go-eldoc
+  :defer t
+  :diminish eldoc-mode
+  :hook (go-mode . go-eldoc-setup))
+
+(use-package go-guru
+  :defer t
+  :after go-mode
+  :bind (:map go-mode-map
+              ("C-c d" . go-guru-definition))
+  :hook (go-mode . siren-go-guru-setup)
+
+  :init
+  (defun siren-go-guru-setup ()
+    (setq go-guru-hl-identifier-idle-time 0.1)
+    (go-guru-hl-identifier-mode 1)))
+
+(use-package go-rename
+  :defer t
+  :after go-mode
+  :bind (:map go-mode-map
+              ("C-c ." . go-rename)))
+
+(use-package gotest
+  :defer t
+  :after go-mode
+  :bind (:map go-mode-map
+              ("C-c , a" . go-test-current-project)
+              ("C-c , v" . go-test-current-file)
+              ("C-c , s" . go-test-current-test)
+              ("C-c , c" . go-test-current-coverage)
+              ("C-c , b" . go-test-current-benchmark)
+              ("C-c , B" . go-test-current-project-benchmarks)
+              ("C-c , r" . go-run)))
 
 (use-package go-projectile
   :defer t
+  :after go-mode
+  :hook (go-mode . siren-go-projectile-setup)
+
   :init
-  ;; prevent go-projectile from screwing up GOPATH
-  (setq go-projectile-switch-gopath 'never))
+  (defun siren-go-projectile-setup ()
+    ;; prevent go-projectile from screwing up GOPATH
+    (setq go-projectile-switch-gopath 'never)))
 
 (use-package flycheck-gometalinter
-  :requires go-mode flycheck
+  :defer t
+  :after go-mode
   :commands flycheck-gometalinter-setup
+  :hook (flycheck-mode . flycheck-gometalinter-setup)
+
   :init
   (setq flycheck-gometalinter-fast t
         flycheck-gometalinter-tests t
-        flycheck-gometalinter-vendor t)
-
-  (with-eval-after-load 'go-mode
-    (add-hook 'flycheck-mode-hook #'flycheck-gometalinter-setup)))
+        flycheck-gometalinter-vendor t))
 
 (use-package go-playground
   :commands go-playground)
