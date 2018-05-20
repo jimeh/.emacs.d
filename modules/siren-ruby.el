@@ -116,6 +116,7 @@
   (rspec-install-snippets))
 
 (use-package rubocopfmt
+  :ensure nil ;; loaded from vendor
   :commands (rubocopfmt rubocopfmt-mode)
   :bind (:map ruby-mode-map
               ("C-c C-f" . rubocopfmt))
