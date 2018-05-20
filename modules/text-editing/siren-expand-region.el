@@ -1,0 +1,15 @@
+;;; siren-expand-region.el --- jimeh's Emacs Siren: expand-region
+
+;;; Commentary:
+
+;; Configuration for expand-region
+
+;;; Code:
+
+(use-package expand-region
+  :bind
+  ("M-." . er/expand-region)
+  ("M-," . er/contract-region))
+
+(provide 'siren-expand-region)
+;;; siren-expand-region.el ends here
