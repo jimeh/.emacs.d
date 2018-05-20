@@ -70,7 +70,8 @@
   :defer t
   :after go-mode
   :bind (:map go-mode-map
-              ("C-c d" . go-guru-definition))
+              ("C-c d" . go-guru-definition)
+              ("C-c b" . pop-tag-mark))
   :hook (go-mode . siren-go-guru-setup)
 
   :init
