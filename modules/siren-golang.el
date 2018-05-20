@@ -34,6 +34,7 @@
     ;; gofmt on save
     (add-hook 'before-save-hook 'gofmt-before-save nil t)
 
+    (highlight-symbol-mode -1)
     (hs-minor-mode 1)
     (hideshowvis-enable)
     (whitespace-toggle-options '(tabs))
