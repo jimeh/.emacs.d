@@ -23,8 +23,10 @@
   (defun siren-magit-mode-setup ())
 
   (defun siren-git-commit-mode-setup ()
+    (setq tab-width 2
+          fill-column 72)
+
     (subword-mode)
-    (setq tab-width 2)
     (fci-mode t)
     ;; (flyspell-mode) ;; in GUI causes git-commit-mode to lock up emacs
     (linum-mode t)
