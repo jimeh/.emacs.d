@@ -32,6 +32,9 @@
 ;; Linting
 (require 'siren-flycheck)
 
+;; Misc.
+(require 'siren-restart-emacs)
+
 ;; Navigation
 (require 'siren-anzu)
 (require 'siren-avy)
