@@ -34,6 +34,7 @@
 
 ;; Misc.
 (require 'siren-restart-emacs)
+(require 'siren-zone)
 
 ;; Navigation
 (require 'siren-anzu)
