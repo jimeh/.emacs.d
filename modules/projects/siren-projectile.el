@@ -28,6 +28,7 @@
                                                   ".hg"
                                                   ".idea"
                                                   ".svn"
+                                                  ".vagrant"
                                                   "Godeps"
                                                   "_darcs"
                                                   "coverage"
