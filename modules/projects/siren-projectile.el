@@ -21,25 +21,25 @@
 
   (setq projectile-completion-system 'ido
         projectile-enable-caching nil
-        projectile-globally-ignored-directories '(".idea"
+        projectile-globally-ignored-directories '(".bzr"
                                                   ".eunit"
+                                                  ".fslckout"
                                                   ".git"
                                                   ".hg"
-                                                  ".fslckout"
-                                                  ".bzr"
+                                                  ".idea"
                                                   ".svn"
+                                                  "Godeps"
                                                   "_darcs"
-                                                  "vendor/bundle"
-                                                  "vendor/ruby"
                                                   "coverage"
-                                                  "docs"
                                                   "doc"
+                                                  "docs"
+                                                  "elpa"
                                                   "log"
                                                   "logs"
+                                                  "savefile"
                                                   "tmp"
-                                                  "Godeps"
-                                                  "elpa"
-                                                  "savefile")
+                                                  "vendor/bundle"
+                                                  "vendor/ruby")
         projectile-globally-ignored-files '("TAGS" "*.log")
         projectile-sort-order 'recently-active
         projectile-mode-line (quote ""))
