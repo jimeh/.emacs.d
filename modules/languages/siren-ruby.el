@@ -139,12 +139,10 @@
   :defer t
   :hook
   (ruby-mode . ruby-refactor-mode)
-  (ruby-refactor . siren-ruby-refactor-setup)
 
-  :init
-  (setq ruby-refactor-keymap-prefix (kbd "C-c C-="))
-  (defun siren-ruby-refactor-setup ()
-    (setq ruby-refactor-add-parens t)))
+  :config
+  (setq ruby-refactor-keymap-prefix (kbd "C-c C-=")
+        ruby-refactor-add-parens t))
 
 (use-package ruby-tools
   :defer t
