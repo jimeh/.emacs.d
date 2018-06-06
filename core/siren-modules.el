@@ -18,6 +18,9 @@
 ;; Completion
 (require 'siren-company)
 
+;; Documentation
+(require 'siren-dash-at-point)
+
 ;; Editor
 (require 'siren-browse-kill-ring)
 (require 'siren-evil)
