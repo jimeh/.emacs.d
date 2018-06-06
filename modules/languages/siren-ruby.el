@@ -108,6 +108,7 @@
   (defun siren-rspec-mode-setup ()
     (setq compilation-scroll-output t
           rspec-primary-source-dirs '("app")
+          rspec-use-opts-file-when-available nil
           rspec-use-spring-when-possible nil))
 
   :config
