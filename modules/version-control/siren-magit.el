@@ -37,7 +37,7 @@
 
   (setq magit-completing-read-function 'magit-ido-completing-read
         magit-status-buffer-switch-function 'switch-to-buffer
-        magit-bury-buffer-function 'bury-buffer
+        magit-bury-buffer-function 'magit-mode-quit-window
         magit-restore-window-configuration nil
         magit-revert-buffers 'silent
         magit-default-tracking-name-function 'magit-default-tracking-name-branch-only
