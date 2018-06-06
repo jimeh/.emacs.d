@@ -60,6 +60,9 @@
     (set (make-local-variable 'company-backends) '(company-go))
     (company-mode +1)))
 
+(use-package go-dlv
+  :commands dlv dlv-current-func)
+
 (use-package go-eldoc
   :defer t
   :diminish eldoc-mode
