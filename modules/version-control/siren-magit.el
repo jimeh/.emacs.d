@@ -28,7 +28,7 @@
 
     (subword-mode)
     (fci-mode t)
-    ;; (flyspell-mode) ;; in GUI causes git-commit-mode to lock up emacs
+    (flyspell-mode)
     (linum-mode t)
     (auto-fill-mode))
 
