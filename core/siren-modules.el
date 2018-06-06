@@ -18,6 +18,9 @@
 ;; Completion
 (require 'siren-company)
 
+;; Debugging
+(require 'siren-realgud)
+
 ;; Documentation
 (require 'siren-dash-at-point)
 
