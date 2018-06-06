@@ -29,7 +29,6 @@
                                                   ".idea"
                                                   ".svn"
                                                   ".vagrant"
-                                                  "Godeps"
                                                   "_darcs"
                                                   "coverage"
                                                   "doc"
@@ -38,9 +37,7 @@
                                                   "log"
                                                   "logs"
                                                   "savefile"
-                                                  "tmp"
-                                                  "vendor/bundle"
-                                                  "vendor/ruby")
+                                                  "tmp")
         projectile-globally-ignored-files '("TAGS" "*.log")
         projectile-sort-order 'recently-active
         projectile-mode-line (quote ""))

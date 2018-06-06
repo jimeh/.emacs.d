@@ -11,6 +11,10 @@
 (require 'siren-folding)
 (require 'siren-projectile)
 
+(add-to-list 'projectile-globally-ignored-directories "Godeps")
+(add-to-list 'projectile-globally-ignored-directories "vendor/github.com")
+(add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in")
+
 (use-package go-mode
   :mode "\\.go\\'"
   :interpreter "go"

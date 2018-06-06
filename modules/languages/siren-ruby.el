@@ -9,11 +9,13 @@
 (require 'siren-company)
 (require 'siren-folding)
 (require 'siren-highlight-indentation)
+(require 'siren-projectile)
 (require 'siren-realgud)
 (require 'siren-smartparens)
 (require 'siren-toggle-quotes)
 
-(require 'smartparens-ruby)
+(add-to-list 'projectile-globally-ignored-directories "vendor/bundle")
+(add-to-list 'projectile-globally-ignored-directories "vendor/ruby")
 
 (use-package ruby-mode
   :ensure nil ;; loaded from emacs built-ins
