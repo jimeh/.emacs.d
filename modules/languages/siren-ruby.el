@@ -9,6 +9,7 @@
 (require 'siren-company)
 (require 'siren-folding)
 (require 'siren-highlight-indentation)
+(require 'siren-realgud)
 (require 'siren-smartparens)
 (require 'siren-toggle-quotes)
 
@@ -84,6 +85,10 @@
   (compilation-filter . inf-ruby-auto-enter)
   :config
   (unbind-key "C-c C-r" inf-ruby-minor-mode-map))
+
+(use-package realgud-byebug
+  :commands realgud:byebug
+  :after realgud)
 
 (use-package robe
   :defer t
