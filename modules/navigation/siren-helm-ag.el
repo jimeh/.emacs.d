@@ -14,7 +14,8 @@
   ("C-x C-'" . helm-do-ag-project-root)
 
   :config
-  (setq helm-ag-ignore-patterns '("*.sql" "archive-contents")))
+  (setq helm-ag-ignore-patterns '("*.sql" "*.min.css" "*.min.js"
+                                  "archive-contents")))
 
 (provide 'siren-helm-ag)
 ;;; siren-helm-ag.el ends here
