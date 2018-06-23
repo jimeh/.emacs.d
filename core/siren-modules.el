@@ -35,6 +35,9 @@
 (require 'siren-undo-tree)
 (require 'siren-which-key)
 
+;; Help
+(require 'siren-helpful)
+
 ;; Linting
 (require 'siren-flycheck)
 
