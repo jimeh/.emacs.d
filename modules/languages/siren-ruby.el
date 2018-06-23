@@ -133,7 +133,6 @@
               ("C-c . D" . rubocop-autocorrect-directory)))
 
 (use-package rubocopfmt
-  :ensure nil ;; loaded from vendor
   :commands (rubocopfmt rubocopfmt-mode)
   :bind (:map ruby-mode-map
               ("C-c C-f" . rubocopfmt))
