@@ -136,7 +136,11 @@
   :commands (rubocopfmt rubocopfmt-mode)
   :bind (:map ruby-mode-map
               ("C-c C-f" . rubocopfmt))
-  :hook (ruby-mode . rubocopfmt-mode))
+  :hook
+  (ruby-mode . rubocopfmt-mode)
+
+  :config
+  (setq rubocopfmt-show-errors 'echo))
 
 (use-package ruby-compilation
   :defer t)
