@@ -11,7 +11,6 @@
   :bind
   ("C-c j" . avy-goto-word-or-subword-1)
   ("C-c SPC" . avy-goto-char)
-  ("M-o" . ace-window)
 
   :config
   (setq avy-background t
