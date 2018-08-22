@@ -14,6 +14,8 @@
   ("C-x C-t" . projectile-find-file)
   ("C-x t" . projectile-find-test-file)
   ("C-x C-v" . projectile-switch-to-buffer)
+  (:map projectile-mode-map
+        ("C-c p" . projectile-command-map))
 
   :init
   (setq projectile-cache-file (expand-file-name
