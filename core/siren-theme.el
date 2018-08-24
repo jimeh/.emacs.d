@@ -11,7 +11,7 @@
 
 (if window-system
     (require 'siren-theme-doom-vibrant)
-  (require 'siren-theme-doom-one))
+  (require 'siren-theme-tomorrow-night-paradise))
 
 (provide 'siren-theme)
 ;;; siren-theme.el ends here
