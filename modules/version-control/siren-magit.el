@@ -41,7 +41,10 @@
         magit-restore-window-configuration nil
         magit-revert-buffers 'silent
         magit-default-tracking-name-function 'magit-default-tracking-name-branch-only
-        magit-repository-directories '("~/Projects" "~/src" "~/.emacs.d" "~/.dotfiles")
+        magit-repository-directories '(("~/Projects" . 2)
+                                       ("~/src" . 1)
+                                       ("~/.emacs.d" . 0)
+                                       ("~/.dotfiles" . 2))
         magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1))
 
 (use-package magit-gh-pulls
