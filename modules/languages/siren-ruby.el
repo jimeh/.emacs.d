@@ -145,6 +145,10 @@
 (use-package ruby-compilation
   :defer t)
 
+(use-package ruby-guard
+  :ensure nil ;; loaded from vendor
+  :commands ruby-guard)
+
 (use-package ruby-refactor
   :defer t
   :hook
