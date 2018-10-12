@@ -116,7 +116,7 @@
     (setq compilation-scroll-output t
           rspec-primary-source-dirs '("app")
           rspec-use-opts-file-when-available nil
-          rspec-use-spring-when-possible nil))
+          rspec-use-spring-when-possible t))
 
   :config
   (rspec-install-snippets))
