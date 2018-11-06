@@ -132,6 +132,7 @@
 (require 'siren-slim)
 (require 'siren-text-mode)
 (require 'siren-thrift)
+(require 'siren-typescript)
 (require 'siren-web-mode)
 (require 'siren-yaml)
 
