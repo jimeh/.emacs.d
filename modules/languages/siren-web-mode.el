@@ -24,7 +24,7 @@
   (web-mode . siren-web-mode-setup)
 
   :init
-  (defun siren-web-mode-mode-setup ()
+  (defun siren-web-mode-setup ()
     "Default tweaks for `web-mode'."
     (setq tab-width 2)
 
