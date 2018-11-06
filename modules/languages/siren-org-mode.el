@@ -37,7 +37,7 @@
 
 (use-package org-mouse
   :ensure nil ;; loaded from emacs built-ins
-  :after org-mode)
+  )
 
 (provide 'siren-org-mode)
 ;;; siren-org-mode.el ends here
