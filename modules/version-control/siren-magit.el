@@ -47,10 +47,5 @@
                                        ("~/.dotfiles" . 2))
         magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1))
 
-(use-package magit-gh-pulls
-  :hook (magit-mode . turn-on-magit-gh-pulls)
-  :config
-  (setq gh-use-local-git-config t))
-
 (provide 'siren-magit)
 ;;; siren-magit.el ends here

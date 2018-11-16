@@ -93,6 +93,7 @@
 (require 'siren-git-timemachine)
 (require 'siren-github)
 (require 'siren-magit)
+(require 'siren-magithub)
 
 ;; Window management
 (require 'siren-buffer-move)

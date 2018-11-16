@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-magit)
+
 (use-package diff-hl
   :demand
   :hook ((dired-mode . diff-hl-dired-mode)
