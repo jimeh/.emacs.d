@@ -23,6 +23,7 @@
   :mode
   "Appraisals\\'"
   "Berksfile\\'"
+  "Brewfile\\'"
   "Capfile\\'"
   "Gemfile\\'"
   "Guardfile\\'"
