@@ -1,25 +1,26 @@
+*.elc
 .DS_Store
-ac-comphist.dat
-projectile-bookmarks.eld
-srecode-map.el
 .mc-lists.el
+ac-comphist.dat
 auto-save-list/*
 el-get/*
 elpa/*
-sessions/*
-tramp
-url/*
-hgs-cache
-projectile.cache
 games/*
+hgs-cache
 ido.last
+magithub/*
 project-explorer-cache/*
+projectile-bookmarks.eld
+projectile.cache
 recentf
 saved-places
-smex-items
 savefile/*
+sessions/*
+smex-items
+srecode-map.el
+tramp
+url/*
 var/*
-*.elc
 
 # Bittorrent Sync related
 .AppleDouble
