@@ -19,7 +19,9 @@
                                   "*.min-latest.css"
                                   "*.min.js"
                                   "*.min-latest.js"
-                                  "archive-contents")))
+                                  "archive-contents"
+                                  "node_modules"
+                                  "vendor/assets")))
 
 (provide 'siren-helm-ag)
 ;;; siren-helm-ag.el ends here
