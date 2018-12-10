@@ -9,6 +9,7 @@
 (require 'siren-company)
 (require 'siren-flycheck)
 (require 'siren-folding)
+(require 'siren-lsp)
 (require 'siren-projectile)
 
 (add-to-list 'projectile-globally-ignored-directories "Godeps")
@@ -36,11 +37,14 @@
     ;; gofmt on save
     (add-hook 'before-save-hook 'gofmt-before-save nil t)
 
+    (setq tab-width 4)
+    (whitespace-toggle-options '(tabs))
+
+    (company-mode +1)
+    (lsp)
     (highlight-symbol-mode -1)
     (hs-minor-mode 1)
     (hideshowvis-enable)
-    (whitespace-toggle-options '(tabs))
-    (setq tab-width 4)
     (subword-mode +1))
 
   :config
@@ -53,16 +57,6 @@
 
   ;; Ignore go test -c output files
   (add-to-list 'completion-ignored-extensions ".test"))
-
-(use-package company-go
-  :defer t
-  :after go-mode
-  :hook (go-mode . siren-company-go-setup)
-
-  :init
-  (defun siren-company-go-setup ()
-    (set (make-local-variable 'company-backends) '(company-go))
-    (company-mode +1)))
 
 (use-package go-dlv
   :commands dlv dlv-current-func)

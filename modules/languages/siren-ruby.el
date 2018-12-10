@@ -9,6 +9,7 @@
 (require 'siren-company)
 (require 'siren-folding)
 (require 'siren-highlight-indentation)
+(require 'siren-lsp)
 (require 'siren-projectile)
 (require 'siren-realgud)
 (require 'siren-smartparens)
@@ -61,6 +62,7 @@
           tab-width 2)
 
     (company-mode +1)
+    (lsp)
     (hs-minor-mode 1)
     (hideshowvis-enable)
     (highlight-indentation-current-column-mode)
