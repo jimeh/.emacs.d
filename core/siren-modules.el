@@ -17,6 +17,7 @@
 
 ;; Completion
 (require 'siren-company)
+(require 'siren-lsp)
 
 ;; Debugging
 (require 'siren-realgud)
