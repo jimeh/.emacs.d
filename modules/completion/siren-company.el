@@ -6,25 +6,28 @@
 
 ;;; Code:
 
-(require 'siren-fci)
+;; (require 'siren-fci)
 
 (use-package company
-  :init
-  (defun company-turn-off-fci (&rest ignore)
-    (when (boundp 'fci-mode)
-      (setq company-fci-mode-on-p fci-mode)
-      (when fci-mode (fci-mode -1))))
+  :hook
+  (company-completion-started . siren-company--turn-off-fci)
+  (company-completion-finished . siren-company--maybe-turn-on-fci)
+  (company-completion-cancelled . siren-company--maybe-turn-on-fci)
 
-  (defun company-maybe-turn-on-fci (&rest ignore)
-    (when company-fci-mode-on-p (fci-mode 1)))
+  :init
+  (defun siren-company--turn-off-fci (&rest ignore)
+    (when (boundp 'fci-mode)
+      (when fci-mode
+        (turn-off-fci-mode)
+        (setq siren-company--fci-mode-on-p t))))
+
+  (defun siren-company--maybe-turn-on-fci (&rest ignore)
+    (when siren-company--fci-mode-on-p
+      (turn-on-fci-mode)
+      (setq siren-company--fci-mode-on-p nil)))
 
   :config
-  ;; work-around for issues with fci-mode
-  (defvar-local company-fci-mode-on-p nil)
-
-  (add-hook 'company-completion-started-hook 'company-turn-off-fci)
-  (add-hook 'company-completion-finished-hook 'company-maybe-turn-on-fci)
-  (add-hook 'company-completion-cancelled-hook 'company-maybe-turn-on-fci)
+  (defvar-local siren-company--fci-mode-on-p nil)
 
   (setq company-begin-commands '(self-insert-command)
         company-dabbrev-downcase nil
