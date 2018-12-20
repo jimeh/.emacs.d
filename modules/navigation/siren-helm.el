@@ -70,6 +70,11 @@
 
   (advice-add 'helm :before 'siren-helm--hide-neotree))
 
+(use-package helm-config
+  :ensure helm
+  :init
+  (setq helm-command-prefix-key "C-c h"))
+
 (use-package helm-descbinds
   :defer t)
 
