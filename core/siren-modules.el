@@ -58,6 +58,7 @@
 (require 'siren-goto-symbol)
 (require 'siren-helm)
 (require 'siren-helm-ag)
+(require 'siren-helm-files)
 (require 'siren-helm-gtags)
 (require 'siren-helm-open-github)
 (require 'siren-helm-swoop)
