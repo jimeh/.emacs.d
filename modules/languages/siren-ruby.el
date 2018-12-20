@@ -87,7 +87,13 @@
   :defer t
   :hook
   (ruby-mode . inf-ruby-minor-mode)
+  (inf-ruby-mode . siren-inf-ruby-mode-setup)
   (compilation-filter . inf-ruby-auto-enter)
+
+  :init
+  (defun siren-inf-ruby-mode-setup ()
+    (company-mode -1))
+
   :config
   (unbind-key "C-c C-r" inf-ruby-minor-mode-map))
 
