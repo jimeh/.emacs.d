@@ -9,7 +9,7 @@
 (use-package helm
   :defer t
   :hook ((helm-minibuffer-set-up . siren-helm--hide-minibuffer-maybe)
-         (helm-before-initialize . siren-helm--toggle-header-line)
+         (helm-after-initialize . siren-helm--toggle-source-header-line)
          (helm-minibuffer-set-up . siren-helm--popwin-help-mode-off)
          (helm-cleanup . siren-helm--popwin-help-mode-on)
          (helm-cleanup . siren-helm--show-neotree-maybe))
@@ -25,8 +25,8 @@
         (setq-local cursor-type nil))))
 
   ;; From: https://github.com/emacs-helm/helm/issues/918#issuecomment-81555133
-  (defun siren-helm--toggle-header-line ()
-    (if (= (length helm-sources) 1)
+  (defun siren-helm--toggle-source-header-line ()
+    (if (= (length (ignore-errors (with-helm-buffer helm-sources))) 1)
         (set-face-attribute 'helm-source-header nil :height 0.1)
       (set-face-attribute 'helm-source-header nil :height 1.0)))
 
