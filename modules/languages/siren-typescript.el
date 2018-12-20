@@ -26,6 +26,7 @@
             tab-width width))
 
     (company-mode +1)
+    (lsp)
     (subword-mode +1)
     (hs-minor-mode 1)
     (highlight-indentation-current-column-mode)

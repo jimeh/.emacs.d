@@ -19,6 +19,8 @@
   (defun siren-css-mode-setup ()
     (setq tab-width 2)
 
+    (company-mode +1)
+    (lsp)
     (highlight-indentation-current-column-mode +1)
     (rainbow-mode +1)))
 
