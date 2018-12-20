@@ -15,7 +15,7 @@
 
   :hook
   (siren-magit-mode . siren-magit-mode-setup)
-  (git-commit-mode . siren-git-commit-mode-setup)
+  (git-commit-setup . siren-git-commit-mode-setup)
 
   :init
   (defalias 'bl 'magit-blame)
