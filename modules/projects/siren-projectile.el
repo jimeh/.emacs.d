@@ -32,24 +32,27 @@
                                                   ".svn"
                                                   ".vagrant"
                                                   "_darcs"
+                                                  "archive-contents"
                                                   "coverage"
                                                   "doc"
                                                   "docs"
                                                   "elpa"
+                                                  "node_modules"
                                                   "log"
                                                   "logs"
                                                   "savefile"
-                                                  "tmp")
+                                                  "tmp"
+                                                  "vendor/assets")
         projectile-globally-ignored-files '("TAGS" "*.log")
-        projectile-sort-order 'recently-active
-        projectile-mode-line (quote ""))
+        projectile-indexing-method 'hybrid
+        projectile-sort-order 'recently-active)
 
   :config
   ;; Treat separate directories with Gemfiles within a single git repo as separate
   ;; projects.
   (push "Gemfile" projectile-project-root-files-bottom-up)
 
-  (projectile-global-mode t))
+  (projectile-mode t))
 
 (provide 'siren-projectile)
 ;;; siren-projectile.el ends here
