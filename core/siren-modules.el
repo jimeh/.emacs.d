@@ -28,6 +28,7 @@
 ;; Editor
 (require 'siren-browse-kill-ring)
 (require 'siren-evil)
+(require 'siren-helm-command)
 (require 'siren-ido)
 (require 'siren-linum)
 (require 'siren-linum-relative)

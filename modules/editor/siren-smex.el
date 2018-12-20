@@ -10,8 +10,6 @@
   :bind
   ("M-x" . smex)
   ("M-X" . smex-major-mode-commands)
-  ("C-x C-m" . smex)
-  ("C-c C-m" . smex)
   ("C-c C-c M-x" . execute-extended-command)
 
   :config
