@@ -90,8 +90,8 @@
 ;; Recentf
 (require 'recentf)
 (setq recentf-save-file (expand-file-name "recentf" siren-savefile-dir)
-      recentf-max-saved-items 500
-      recentf-max-menu-items 100
+      recentf-max-saved-items 5000
+      recentf-max-menu-items 1000
       ;; disable recentf-cleanup on Emacs start, because it can cause
       ;; problems with remote files
       recentf-auto-cleanup 'never
