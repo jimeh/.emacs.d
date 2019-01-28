@@ -48,7 +48,9 @@
               ("RET" . newline-and-indent)
               ("C-c C-l" . goto-line)
               ("C-M-f" . sp-ruby-forward-sexp)
-              ("C-M-b" . sp-ruby-backward-sexp))
+              ("C-M-b" . sp-ruby-backward-sexp)
+              ("C-c C-j" . lsp-ui-peek-find-definitions)
+              ("C-c C-." . lsp-rename))
 
   :hook
   (ruby-mode . siren-ruby-mode-setup)
