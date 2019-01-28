@@ -15,6 +15,7 @@
 
   :config
   (setq helm-ag-ignore-patterns '("*.sql"
+                                  "*.test"
                                   "*.min.css"
                                   "*.min-latest.css"
                                   "*.min.js"
