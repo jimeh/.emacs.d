@@ -1,5 +1,6 @@
 *.elc
 .DS_Store
+.lsp-session*
 .mc-lists.el
 ac-comphist.dat
 auto-save-list/*
