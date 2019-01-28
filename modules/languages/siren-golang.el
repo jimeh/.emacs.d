@@ -22,10 +22,14 @@
   :commands go-mode
   :bind (:map go-mode-map
               ("RET" . newline-and-indent)
-              ("C-h f" . godoc-at-point))
+              ("C-h f" . godoc-at-point)
+              ("C-c C-j" . godef-jump)
+              ("C-c C-j" . lsp-ui-peek-find-definitions)
+              ("C-c C-." . lsp-rename))
 
   :hook
   (go-mode . siren-go-mode-setup)
+  (before-save . gofmt-before-save)
 
   :init
   (defun siren-go-mode-setup ()
@@ -33,9 +37,6 @@
     (let ((goimports (executable-find "goimports")))
       (when goimports
         (setq gofmt-command goimports)))
-
-    ;; gofmt on save
-    (add-hook 'before-save-hook 'gofmt-before-save nil t)
 
     (setq tab-width 4)
     (whitespace-toggle-options '(tabs))
@@ -58,35 +59,45 @@
   ;; Ignore go test -c output files
   (add-to-list 'completion-ignored-extensions ".test"))
 
+;; (use-package company-go
+;;   :defer t
+;;   :after go-mode
+;;   :hook (go-mode . siren-company-go-setup)
+
+;;   :init
+;;   (defun siren-company-go-setup ()
+;;     (set (make-local-variable 'company-backends) '(company-go))
+;;     (company-mode +1)))
+
 (use-package go-dlv
   :commands dlv dlv-current-func)
 
-(use-package go-eldoc
-  :defer t
-  :diminish eldoc-mode
-  :commands go-eldoc-setup
-  :hook (go-mode . go-eldoc-setup))
+;; (use-package go-eldoc
+;;   :defer t
+;;   :diminish eldoc-mode
+;;   :commands go-eldoc-setup
+;;   :hook (go-mode . go-eldoc-setup))
 
-(use-package go-guru
-  :after go-mode
-  :bind (:map go-mode-map
-              ("C-c C-j" . go-guru-definition)
-              ("C-c b" . pop-tag-mark))
-  :hook (go-mode . siren-go-guru-setup)
+;; (use-package go-guru
+;;   :after go-mode
+;;   :bind (:map go-mode-map
+;;               ("C-c C-j" . go-guru-definition)
+;;               ("C-c b" . pop-tag-mark))
+;;   :hook (go-mode . siren-go-guru-setup)
 
-  :init
-  (defun siren-go-guru-setup ()
-    (setq go-guru-hl-identifier-idle-time 0.1)
-    (go-guru-hl-identifier-mode 1))
+;;   :init
+;;   (defun siren-go-guru-setup ()
+;;     (setq go-guru-hl-identifier-idle-time 0.1)
+;;     (go-guru-hl-identifier-mode 1))
 
-  :config
-  (custom-set-faces
-   '(go-guru-hl-identifier-face ((t (:background "gray30"))))))
+;;   :config
+;;   (custom-set-faces
+;;    '(go-guru-hl-identifier-face ((t (:background "gray30"))))))
 
-(use-package go-rename
-  :after go-mode
-  :bind (:map go-mode-map
-              ("C-c ." . go-rename)))
+;; (use-package go-rename
+;;   :after go-mode
+;;   :bind (:map go-mode-map
+;;               ("C-c ." . go-rename)))
 
 (use-package gotest
   :after go-mode
@@ -108,16 +119,9 @@
     ;; prevent go-projectile from screwing up GOPATH
     (setq go-projectile-switch-gopath 'never)))
 
-(use-package flycheck-gometalinter
-  :defer t
-  :after go-mode
-  :commands flycheck-gometalinter-setup
-  :hook (flycheck-mode . flycheck-gometalinter-setup)
-
-  :init
-  (setq flycheck-gometalinter-fast t
-        flycheck-gometalinter-tests t
-        flycheck-gometalinter-vendor t))
+(use-package flycheck-golangci-lint
+  :hook
+  (go-mode . flycheck-golangci-lint-setup))
 
 (use-package go-playground
   :commands go-playground)
