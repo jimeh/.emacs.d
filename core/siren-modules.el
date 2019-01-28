@@ -85,6 +85,7 @@
 (require 'siren-smartparens)
 (require 'siren-sort-symbols)
 (require 'siren-sort-words)
+(require 'siren-string-edit)
 (require 'siren-string-inflection)
 (require 'siren-toggle-comments)
 (require 'siren-toggle-quotes)
