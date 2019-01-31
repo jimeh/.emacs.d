@@ -120,6 +120,7 @@
 (require 'siren-gitconfig)
 (require 'siren-gitignore)
 (require 'siren-golang)
+(require 'siren-groovy)
 (require 'siren-haml)
 (require 'siren-js)
 (require 'siren-json)
