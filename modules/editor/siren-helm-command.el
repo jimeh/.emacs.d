@@ -12,8 +12,7 @@
   :ensure helm
   :defer t
   :bind
-  ("C-x C-m" . helm-M-x)
-  ("C-c C-m" . helm-M-x)
+  ("M-x" . helm-M-x)
 
   :config
   (setq helm-M-x-always-save-history t
