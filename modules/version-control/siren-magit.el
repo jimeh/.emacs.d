@@ -35,17 +35,19 @@
   :config
   (require 'magit)
 
-  (setq magit-completing-read-function 'magit-ido-completing-read
-        magit-status-buffer-switch-function 'switch-to-buffer
-        magit-bury-buffer-function 'magit-mode-quit-window
+  (setq magit-bury-buffer-function 'magit-mode-quit-window
+        magit-completing-read-function 'magit-ido-completing-read
+        magit-commit-arguments '("-S")
+        magit-default-tracking-name-function 'magit-default-tracking-name-branch-only
+        magit-diff-refine-hunk t
+        magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1
         magit-restore-window-configuration nil
         magit-revert-buffers 'silent
-        magit-default-tracking-name-function 'magit-default-tracking-name-branch-only
         magit-repository-directories '(("~/Projects" . 2)
                                        ("~/src" . 1)
                                        ("~/.emacs.d" . 0)
                                        ("~/.dotfiles" . 2))
-        magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1))
+        magit-status-buffer-switch-function 'switch-to-buffer))
 
 (provide 'siren-magit)
 ;;; siren-magit.el ends here
