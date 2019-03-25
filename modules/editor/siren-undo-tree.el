@@ -21,7 +21,8 @@
   :config
   (global-undo-tree-mode)
   ;; autosave the undo-tree history
-  (setq undo-tree-history-directory-alist `((".*" . ,temporary-file-directory))
+  (setq undo-tree-history-directory-alist
+        `((".*" . ,(expand-file-name "undo-tree-history" siren-cache-dir)))
         undo-tree-auto-save-history t))
 
 (provide 'siren-undo-tree)

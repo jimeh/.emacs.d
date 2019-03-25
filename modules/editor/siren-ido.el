@@ -15,8 +15,7 @@
       ido-enable-flex-matching t
       ido-enable-prefix nil
       ido-max-prospects 10
-      ido-save-directory-list-file (expand-file-name "ido.hist"
-                                                     siren-savefile-dir)
+      ido-save-directory-list-file (expand-file-name "ido.hist" siren-cache-dir)
       ido-use-faces nil
       ido-use-filename-at-point nil)
 

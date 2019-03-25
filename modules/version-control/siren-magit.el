@@ -49,5 +49,12 @@
                                        ("~/.dotfiles" . 2))
         magit-status-buffer-switch-function 'switch-to-buffer))
 
+(use-package transient
+  :defer t
+  :config
+  (setq transient-history-file (expand-file-name "transient/history.el" siren-cache-dir)
+        transient-levels-file (expand-file-name "transient/levels.el" siren-cache-dir)
+        transient-values-file (expand-file-name "transient/values.el" siren-cache-dir)))
+
 (provide 'siren-magit)
 ;;; siren-magit.el ends here

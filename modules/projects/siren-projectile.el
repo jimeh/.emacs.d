@@ -18,8 +18,7 @@
         ("C-c p" . projectile-command-map))
 
   :init
-  (setq projectile-cache-file (expand-file-name
-                               "projectile.cache" siren-savefile-dir))
+  (setq projectile-cache-file (expand-file-name "projectile" siren-cache-dir))
 
   (setq projectile-completion-system 'ido
         projectile-enable-caching nil
@@ -33,6 +32,7 @@
                                                   ".vagrant"
                                                   "_darcs"
                                                   "archive-contents"
+                                                  "cache"
                                                   "coverage"
                                                   "doc"
                                                   "docs"
@@ -40,7 +40,6 @@
                                                   "node_modules"
                                                   "log"
                                                   "logs"
-                                                  "savefile"
                                                   "tmp"
                                                   "vendor/assets")
         projectile-globally-ignored-files '("TAGS" "*.log")

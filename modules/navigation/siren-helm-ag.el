@@ -21,6 +21,8 @@
                                   "*.min.js"
                                   "*.min-latest.js"
                                   "archive-contents"
+                                  "cache"
+                                  "elpa"
                                   "node_modules"
                                   "vendor/assets")))
 

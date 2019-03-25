@@ -14,7 +14,7 @@
   (setq pe/follow-current t
         pe/width 54
         pe/cache-directory (expand-file-name
-                            "project-explorer-cache" siren-savefile-dir))
+                            "project-explorer" siren-cache-dir))
 
   :config
   ;; Make Project Explorer open selected file in last used buffer

@@ -28,7 +28,7 @@
 (delete-selection-mode t)
 
 ;; Save place in files
-(setq save-place-file (expand-file-name "saveplace" siren-savefile-dir))
+(setq save-place-file (expand-file-name "saveplace" siren-cache-dir))
 (save-place-mode 1)
 
 ;; Electric behavior
@@ -44,11 +44,20 @@
             (cons '(cursor-type . bar) (copy-alist default-frame-alist))))
       (blink-cursor-mode -1))
 
-;; store all backup and autosave files in the tmp dir
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
+;; Backup files
+(setq backup-by-copying t
+      delete-old-versions t
+      kept-new-versions 10
+      kept-old-versions 0
+      vc-make-backup-files t
+      version-control t
+      backup-directory-alist
+      `((".*" . ,(expand-file-name "backup" siren-cache-dir))))
+
+;; Auto-save files
+(setq auto-save-interval 20
+      auto-save-file-name-transforms
+      `((".*" ,(expand-file-name "autosave" siren-cache-dir) t)))
 
 ;; smart tab behavior - indent or complete
 (setq tab-always-indent 'complete)
@@ -84,12 +93,12 @@
       ;; save every minute
       savehist-autosave-interval 60
       ;; keep the home clean
-      savehist-file (expand-file-name "savehist" siren-savefile-dir))
+      savehist-file (expand-file-name "savehist" siren-cache-dir))
 (savehist-mode +1)
 
 ;; Recentf
 (require 'recentf)
-(setq recentf-save-file (expand-file-name "recentf" siren-savefile-dir)
+(setq recentf-save-file (expand-file-name "recentf" siren-cache-dir)
       recentf-max-saved-items 5000
       recentf-max-menu-items 1000
       ;; disable recentf-cleanup on Emacs start, because it can cause
@@ -102,7 +111,7 @@
   (let ((file-dir (file-truename (file-name-directory file))))
     (-any-p (lambda (dir)
               (string-prefix-p dir file-dir))
-            (mapcar 'file-truename (list siren-savefile-dir package-user-dir)))))
+            (mapcar 'file-truename (list siren-cache-dir package-user-dir)))))
 
 (add-to-list 'recentf-exclude 'siren-recentf-exclude-p)
 

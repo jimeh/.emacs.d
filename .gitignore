@@ -4,6 +4,7 @@
 .mc-lists.el
 ac-comphist.dat
 auto-save-list/*
+cache/*
 el-get/*
 elpa/*
 forge-database.sqlite

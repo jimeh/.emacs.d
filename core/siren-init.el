@@ -25,10 +25,10 @@
 (setq siren-dir (expand-file-name ".." siren-core-dir))
 (add-to-list 'load-path siren-core-dir)
 
-;; Configure savefile-dir
-(setq siren-savefile-dir (expand-file-name "savefile" siren-dir))
-(unless (file-exists-p siren-savefile-dir)
-  (make-directory siren-savefile-dir))
+;; Configure siren-cache-dir
+(setq siren-cache-dir (expand-file-name "cache" siren-dir))
+(unless (file-exists-p siren-cache-dir)
+  (make-directory siren-cache-dir))
 
 ;; Core stuff
 (require 'siren-custom)
