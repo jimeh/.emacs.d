@@ -11,12 +11,16 @@
 (use-package dired+
   :ensure nil ;; loaded from vendor
   :demand
-  :hook (dired-mode . siren-dired-mode-setup)
+  :bind (:map dired-mode-map
+              ("c" . dired-create-directory)
+              ("C-l" . diredp-up-directory-reuse-dir-buffer))
+
+  :hook
+  (dired-mode . siren-dired-mode-setup)
 
   :init
   (defun siren-dired-mode-setup ()
     (linum-mode t)
-    (define-key dired-mode-map (kbd "c") 'dired-create-directory)
     (toggle-diredp-find-file-reuse-dir 1))
 
   :config
