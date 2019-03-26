@@ -108,7 +108,10 @@
               ("C-c , c" . go-test-current-coverage)
               ("C-c , b" . go-test-current-benchmark)
               ("C-c , B" . go-test-current-project-benchmarks)
-              ("C-c , r" . go-run)))
+              ("C-c , r" . go-run))
+
+  :config
+  (setq go-test-verbose t))
 
 (use-package go-projectile
   :after go-mode
