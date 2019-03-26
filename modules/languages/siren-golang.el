@@ -59,45 +59,8 @@
   ;; Ignore go test -c output files
   (add-to-list 'completion-ignored-extensions ".test"))
 
-;; (use-package company-go
-;;   :defer t
-;;   :after go-mode
-;;   :hook (go-mode . siren-company-go-setup)
-
-;;   :init
-;;   (defun siren-company-go-setup ()
-;;     (set (make-local-variable 'company-backends) '(company-go))
-;;     (company-mode +1)))
-
 (use-package go-dlv
   :commands dlv dlv-current-func)
-
-;; (use-package go-eldoc
-;;   :defer t
-;;   :diminish eldoc-mode
-;;   :commands go-eldoc-setup
-;;   :hook (go-mode . go-eldoc-setup))
-
-;; (use-package go-guru
-;;   :after go-mode
-;;   :bind (:map go-mode-map
-;;               ("C-c C-j" . go-guru-definition)
-;;               ("C-c b" . pop-tag-mark))
-;;   :hook (go-mode . siren-go-guru-setup)
-
-;;   :init
-;;   (defun siren-go-guru-setup ()
-;;     (setq go-guru-hl-identifier-idle-time 0.1)
-;;     (go-guru-hl-identifier-mode 1))
-
-;;   :config
-;;   (custom-set-faces
-;;    '(go-guru-hl-identifier-face ((t (:background "gray30"))))))
-
-;; (use-package go-rename
-;;   :after go-mode
-;;   :bind (:map go-mode-map
-;;               ("C-c ." . go-rename)))
 
 (use-package gotest
   :after go-mode
