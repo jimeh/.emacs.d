@@ -13,7 +13,8 @@
   :init
   (defun siren-groovy-mode-setup ()
     (setq groovy-highlight-assignments t
-          groovy-indent-offset 2)
+          groovy-indent-offset 4
+          tab-width 4)
 
     (highlight-indentation-current-column-mode)
     (subword-mode +1)))
