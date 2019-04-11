@@ -23,8 +23,8 @@ A place is considered `tab-width' character columns."
 
 (global-set-key (kbd "C-c [") 'siren-shift-left)
 (global-set-key (kbd "C-c ]") 'siren-shift-right)
-(global-set-key (kbd "M-[") 'siren-shift-left)
-(global-set-key (kbd "M-]") 'siren-shift-right)
+(global-set-key (kbd "M-{") 'siren-shift-left)
+(global-set-key (kbd "M-}") 'siren-shift-right)
 
 (provide 'siren-shift-text)
 ;;; siren-shift-text.el ends here
