@@ -17,7 +17,6 @@
 
 ;; Completion
 (require 'siren-company)
-(require 'siren-lsp)
 
 ;; Debugging
 (require 'siren-realgud)
@@ -72,6 +71,11 @@
 (require 'siren-helm-projectile)
 (require 'siren-neotree)
 (require 'siren-projectile)
+
+;; Language Servers
+(require 'siren-lsp)
+(require 'siren-lsp-ui)
+(require 'siren-company-lsp)
 
 ;; Spelling
 (require 'siren-flyspell)
