@@ -13,6 +13,15 @@
 
 (use-package org-mode
   :ensure nil ;; loaded from emacs built-ins
+  :bind (:map org-mode-map
+              ("C-j" . newline-and-indent)
+              ("RET" . newline-and-indent)
+              ("M-{" . org-promote-subtree)
+              ("M-}" . org-demote-subtree)
+              ("M-P" . org-metaup)
+              ("M-N" . org-metadown)
+              ("C-M-n" . outline-next-visible-heading)
+              ("C-M-p" . outline-previous-visible-heading))
   :hook (org-mode . siren-org-mode-setup)
 
   :init
@@ -26,18 +35,7 @@
     (fci-mode)
     (smartparens-mode +1)
     (visual-line-mode +1)
-    (whitespace-mode +1)
-    (let ((map org-mode-map))
-      (define-key map (kbd "M-[") 'org-promote-subtree)
-      (define-key map (kbd "M-]") 'org-demote-subtree)
-      (define-key map (kbd "M-p") 'org-metaup)
-      (define-key map (kbd "M-n") 'org-metadown)
-      (define-key map (kbd "C-M-n") 'outline-next-visible-heading)
-      (define-key map (kbd "C-M-p") 'outline-previous-visible-heading))))
-
-(use-package org-mouse
-  :ensure nil ;; loaded from emacs built-ins
-  )
+    (whitespace-mode +1)))
 
 (provide 'siren-org-mode)
 ;;; siren-org-mode.el ends here

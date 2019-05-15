@@ -115,6 +115,12 @@
 ;; Workspace management
 (require 'siren-escreen)
 
+;; Org-mode
+(require 'siren-htmlize)
+(require 'siren-org-mode)
+(require 'siren-org-mouse)
+(require 'siren-ox-jira)
+
 ;; Languages
 (require 'siren-coffee)
 (require 'siren-conf)
@@ -133,7 +139,6 @@
 (require 'siren-lua)
 (require 'siren-makefile)
 (require 'siren-markdown)
-(require 'siren-org-mode)
 (require 'siren-php)
 (require 'siren-plantuml)
 (require 'siren-prog-mode)
