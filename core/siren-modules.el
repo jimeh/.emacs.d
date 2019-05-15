@@ -119,6 +119,7 @@
 (require 'siren-htmlize)
 (require 'siren-org-mode)
 (require 'siren-org-mouse)
+(require 'siren-ox-gfm)
 (require 'siren-ox-jira)
 
 ;; Languages
