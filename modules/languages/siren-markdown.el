@@ -10,6 +10,7 @@
 (require 'siren-flyspell)
 (require 'siren-linum)
 (require 'siren-move-dup)
+(require 'siren-prettier-js)
 (require 'siren-smartparens)
 
 (use-package markdown-mode
@@ -36,6 +37,7 @@
           whitespace-action nil)
 
     (auto-fill-mode)
+    (prettier-js-mode)
     (fci-mode)
     (flyspell-mode)
     (linum-mode t)
