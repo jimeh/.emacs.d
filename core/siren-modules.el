@@ -122,6 +122,9 @@
 (require 'siren-ox-gfm)
 (require 'siren-ox-jira)
 
+;; Writing
+(require 'siren-writeroom)
+
 ;; Languages
 (require 'siren-coffee)
 (require 'siren-conf)
