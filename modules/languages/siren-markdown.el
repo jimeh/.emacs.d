@@ -9,6 +9,7 @@
 (require 'siren-fci)
 (require 'siren-flyspell)
 (require 'siren-linum)
+(require 'siren-move-dup)
 (require 'siren-smartparens)
 
 (use-package markdown-mode
@@ -20,7 +21,11 @@
   "\\.markdown"
 
   :bind (:map markdown-mode-map
-              ("C-c p" . markdown-preview))
+              ("C-c p" . markdown-preview)
+              ("M-p" . md-move-lines-up)
+              ("M-n" . md-move-lines-down)
+              ("M-P" . markdown-previous-link)
+              ("M-N" . markdown-next-link))
 
   :hook
   (markdown-mode . siren-markdown-mode-setup)
