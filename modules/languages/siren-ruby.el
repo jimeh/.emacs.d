@@ -80,10 +80,7 @@
                  ,(rx (or "def" "class" "module" "do" "if" "case")) ;; Block start
                  ,(rx (or "end"))                                   ;; Block end
                  ,(rx (or "#" "=begin"))                            ;; Comment start
-                 ruby-forward-sexp nil))
-
-  ;; Make company-mode play nice
-  (push 'ruby-mode company-dabbrev-code-modes))
+                 ruby-forward-sexp nil)))
 
 (use-package inf-ruby
   :defer t
