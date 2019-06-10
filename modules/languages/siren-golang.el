@@ -12,10 +12,6 @@
 (require 'siren-lsp)
 (require 'siren-projectile)
 
-(add-to-list 'projectile-globally-ignored-directories "Godeps")
-(add-to-list 'projectile-globally-ignored-directories "vendor/github.com")
-(add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in")
-
 (use-package go-mode
   :mode "\\.go\\'"
   :interpreter "go"
@@ -32,6 +28,10 @@
   (before-save . gofmt-before-save)
 
   :init
+  (add-to-list 'projectile-globally-ignored-directories "Godeps")
+  (add-to-list 'projectile-globally-ignored-directories "vendor/github.com")
+  (add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in")
+
   (defun siren-go-mode-setup ()
     ;; Prefer goimports to gofmt if installed
     (let ((goimports (executable-find "goimports")))
