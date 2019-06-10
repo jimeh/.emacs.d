@@ -12,13 +12,14 @@
   (add-to-list 'window-persistent-parameters '(window-side . writable))
   (add-to-list 'window-persistent-parameters '(window-slot . writable))
 
-  :config
-  (setq eyebrowse-default-workspace-slot 0
-        eyebrowse-keymap-prefix ""
-        eyebrowse-mode-line-style 'always
-        eyebrowse-new-workspace t
-        eyebrowse-wrap-around t)
+  :custom
+  (eyebrowse-default-workspace-slot 0)
+  (eyebrowse-keymap-prefix "")
+  (eyebrowse-mode-line-style 'always)
+  (eyebrowse-new-workspace t)
+  (eyebrowse-wrap-around t)
 
+  :config
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "c") 'eyebrowse-create-window-config)
     (define-key map (kbd "C-c") 'eyebrowse-create-window-config)

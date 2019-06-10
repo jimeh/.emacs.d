@@ -15,8 +15,8 @@
   ("C-c o i" . helm-open-github-from-issues)
   ("C-c o p" . helm-open-github-from-pull-requests)
 
-  :config
-  (setq helm-open-github-commit-limit 10000))
+  :custom
+  (helm-open-github-commit-limit 10000))
 
 (provide 'siren-helm-open-github)
 ;;; siren-helm-open-github.el ends here

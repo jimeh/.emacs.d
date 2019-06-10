@@ -73,8 +73,8 @@
               ("C-c , B" . go-test-current-project-benchmarks)
               ("C-c , r" . go-run))
 
-  :config
-  (setq go-test-verbose t))
+  :custom
+  (go-test-verbose t))
 
 (use-package go-projectile
   :after go-mode

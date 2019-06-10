@@ -10,9 +10,12 @@
 
 (use-package magithub
   :after magit
+
+  :custom
+  (magithub-clone-default-directory "~/Projects")
+
   :config
-  (magithub-feature-autoinject t)
-  (setq magithub-clone-default-directory "~/Projects"))
+  (magithub-feature-autoinject t))
 
 (provide 'siren-magithub)
 ;;; siren-magithub.el ends here

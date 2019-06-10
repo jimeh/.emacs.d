@@ -46,8 +46,8 @@
   ("C-x C-p" . treemacs-projectile)
   ("C-x C-p" . treemacs-projectile-toggle)
 
-  :config
-  (setq treemacs-header-function #'treemacs-projectile-create-header))
+  :custom
+  (treemacs-header-function #'treemacs-projectile-create-header))
 
 (provide 'siren-treemacs)
 ;;; siren-treemacs.el ends here

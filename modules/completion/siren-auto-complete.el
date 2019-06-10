@@ -15,13 +15,15 @@
               ("C-s" . ac-isearch)
               ("C-n" . ac-next)
               ("C-p" . ac-previous))
+
+  :custom
+  (ac-auto-show-menu 0.2)
+  (ac-auto-start 3)
+  (ac-delay 0.05)
+  (ac-menu-height 15)
+
   :config
   (ac-flyspell-workaround)
-
-  (setq ac-auto-show-menu 0.2
-        ac-auto-start 3
-        ac-delay 0.05
-        ac-menu-height 15)
 
   ;; Auto-complete when indenting.
   (defadvice indent-for-tab-command (around ac-before-indent activate)

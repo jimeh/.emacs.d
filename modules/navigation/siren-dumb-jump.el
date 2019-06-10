@@ -17,8 +17,8 @@
   ("M-g x" . dumb-jump-go-prefer-external)
   ("M-g z" . dumb-jump-go-prefer-external-other-window)
 
-  :config
-  (setq dumb-jump-selector 'ivy))
+  :custom
+  (dumb-jump-selector 'ivy))
 
 (provide 'siren-dumb-jump)
 ;;; siren-dumb-jump.el ends here

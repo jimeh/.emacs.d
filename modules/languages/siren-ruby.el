@@ -147,8 +147,8 @@
   :hook
   (ruby-mode . rubocopfmt-mode)
 
-  :config
-  (setq rubocopfmt-show-errors 'echo))
+  :custom
+  (rubocopfmt-show-errors 'echo))
 
 (use-package ruby-compilation
   :defer t)
@@ -162,9 +162,9 @@
   :hook
   (ruby-mode . ruby-refactor-mode)
 
-  :config
-  (setq ruby-refactor-keymap-prefix (kbd "C-c C-=")
-        ruby-refactor-add-parens t))
+  :custom
+  (ruby-refactor-keymap-prefix (kbd "C-c C-="))
+  (ruby-refactor-add-parens t))
 
 (use-package ruby-tools
   :defer t

@@ -17,34 +17,33 @@
   (:map projectile-mode-map
         ("C-c p" . projectile-command-map))
 
-  :init
-  (setq projectile-cache-file (expand-file-name "projectile" siren-cache-dir))
-
-  (setq projectile-completion-system 'ido
-        projectile-enable-caching nil
-        projectile-globally-ignored-directories '(".bzr"
-                                                  ".eunit"
-                                                  ".fslckout"
-                                                  ".git"
-                                                  ".hg"
-                                                  ".idea"
-                                                  ".svn"
-                                                  ".vagrant"
-                                                  "_darcs"
-                                                  "archive-contents"
-                                                  "cache"
-                                                  "coverage"
-                                                  "doc"
-                                                  "docs"
-                                                  "elpa"
-                                                  "node_modules"
-                                                  "log"
-                                                  "logs"
-                                                  "tmp"
-                                                  "vendor/assets")
-        projectile-globally-ignored-files '("TAGS" "*.log")
-        projectile-indexing-method 'hybrid
-        projectile-sort-order 'recently-active)
+  :custom
+  (projectile-cache-file (expand-file-name "projectile" siren-cache-dir))
+  (projectile-completion-system 'ido)
+  (projectile-enable-caching nil)
+  (projectile-globally-ignored-directories '(".bzr"
+                                             ".eunit"
+                                             ".fslckout"
+                                             ".git"
+                                             ".hg"
+                                             ".idea"
+                                             ".svn"
+                                             ".vagrant"
+                                             "_darcs"
+                                             "archive-contents"
+                                             "cache"
+                                             "coverage"
+                                             "doc"
+                                             "docs"
+                                             "elpa"
+                                             "node_modules"
+                                             "log"
+                                             "logs"
+                                             "tmp"
+                                             "vendor/assets"))
+  (projectile-globally-ignored-files '("TAGS" "*.log"))
+  (projectile-indexing-method 'hybrid)
+  (projectile-sort-order 'recently-active)
 
   :config
   ;; Treat separate directories with Gemfiles within a single git repo as separate

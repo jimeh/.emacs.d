@@ -10,10 +10,12 @@
 
 (use-package css-mode
   :mode "\\.css\\'"
-  :hook (css-mode . siren-css-mode-setup)
 
-  :config
-  (setq css-indent-offset 2)
+  :hook
+  (css-mode . siren-css-mode-setup)
+
+  :custom
+  (css-indent-offset 2)
 
   :init
   (defun siren-css-mode-setup ()

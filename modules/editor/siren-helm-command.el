@@ -11,12 +11,13 @@
 (use-package helm-command
   :ensure helm
   :defer t
+
   :bind
   ("M-x" . helm-M-x)
 
-  :config
-  (setq helm-M-x-always-save-history t
-        helm-M-x-fuzzy-match t))
+  :custom
+  (helm-M-x-always-save-history t)
+  (helm-M-x-fuzzy-match t))
 
 (provide 'siren-helm-command)
 ;;; siren-helm-command.el ends here

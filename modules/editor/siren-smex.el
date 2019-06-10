@@ -13,8 +13,10 @@
   ("M-X" . smex-major-mode-commands)
   ("C-c C-c M-x" . execute-extended-command)
 
+  :custom
+  (smex-save-file (expand-file-name "smex-items" siren-cache-dir))
+
   :config
-  (setq smex-save-file (expand-file-name "smex-items" siren-cache-dir))
   (smex-initialize))
 
 (provide 'siren-smex)

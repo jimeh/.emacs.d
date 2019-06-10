@@ -10,17 +10,18 @@
 
 (use-package doom-themes
   :ensure t
-  :config
 
+  :custom
   ;; Global settings (defaults)
-  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-        doom-themes-enable-italic t  ; if nil, italics is universally disabled
-        doom-nord-light-brighter-comments nil
-        doom-nord-light-brighter-modeline nil
-        doom-nord-light-comment-bg t
-        doom-nord-light-padded-modeline nil
-        nlinum-highlight-current-line t)
+  (doom-themes-enable-bold t)    ; if nil, bold is universally disabled
+  (doom-themes-enable-italic t)  ; if nil, italics is universally disabled
+  (doom-nord-light-brighter-comments nil)
+  (doom-nord-light-brighter-modeline nil)
+  (doom-nord-light-comment-bg t)
+  (doom-nord-light-padded-modeline nil)
+  (nlinum-highlight-current-line t)
 
+  :config
   ;; Load the theme (doom-nord-light, doom-molokai, etc); keep in mind that each
   ;; theme may have their own settings.
   (load-theme 'doom-nord-light t)

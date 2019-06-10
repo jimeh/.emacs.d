@@ -14,6 +14,17 @@
          (helm-cleanup . siren-helm--popwin-help-mode-on)
          (helm-cleanup . siren-helm--show-neotree-maybe))
 
+  :custom
+  (helm-autoresize-max-height 30)
+  (helm-autoresize-min-height 30)
+  (helm-autoresize-mode t)
+  (helm-buffer-max-length 64)
+  (helm-case-fold-search 'smart)
+  (helm-echo-input-in-header-line t)
+  (helm-file-name-case-fold-search 'smart)
+  (helm-split-window-default-side 'below)
+  (siren-helm--did-hide-neotree nil)
+
   :init
   ;; From: https://www.reddit.com/r/emacs/comments/3asbyn/new_and_very_useful_helm_feature_enter_search/
   (defun siren-helm--hide-minibuffer-maybe ()
@@ -58,22 +69,13 @@
       (run-with-timer 0.01 nil #'neotree-show)))
 
   :config
-  (setq helm-autoresize-max-height 30
-        helm-autoresize-min-height 30
-        helm-autoresize-mode t
-        helm-buffer-max-length 64
-        helm-case-fold-search 'smart
-        helm-echo-input-in-header-line t
-        helm-file-name-case-fold-search 'smart
-        helm-split-window-default-side 'below
-        siren-helm--did-hide-neotree nil)
-
   (advice-add 'helm :before 'siren-helm--hide-neotree))
 
 (use-package helm-config
   :ensure helm
-  :init
-  (setq helm-command-prefix-key "C-c h"))
+
+  :custom
+  (helm-command-prefix-key "C-c h"))
 
 (use-package helm-descbinds
   :defer t)

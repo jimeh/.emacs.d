@@ -18,12 +18,14 @@
   :diminish
   undo-tree-mode
 
-  :config
-  (global-undo-tree-mode)
+  :custom
   ;; autosave the undo-tree history
-  (setq undo-tree-history-directory-alist
-        `((".*" . ,(expand-file-name "undo-tree-history" siren-cache-dir)))
-        undo-tree-auto-save-history t))
+  (undo-tree-history-directory-alist
+   `((".*" . ,(expand-file-name "undo-tree-history" siren-cache-dir))))
+  (undo-tree-auto-save-history t)
+
+  :config
+  (global-undo-tree-mode))
 
 (provide 'siren-undo-tree)
 ;;; siren-undo-tree.el ends here

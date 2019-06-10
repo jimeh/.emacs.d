@@ -14,17 +14,18 @@
   ("C-c M-/" . mc/mark-all-like-this)
   ("M-RET" . set-rectangular-region-anchor)
 
-  :config
-  (setq mc/edit-lines-empty-lines 'ignore)
+  :custom
+  (mc/edit-lines-empty-lines 'ignore)
 
+  :config
   ;; Make alt-<click> add additional cursors
   (global-unset-key (kbd "M-<down-mouse-1>")) ;; must unset key first
   (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click))
 
 ;; Allows searching forward/back (C-s/C-r) searching with multiple cursors.
 (use-package phi-search
-  :config
-  (setq phi-search-limit 3000))
+  :custom
+  (phi-search-limit 3000))
 
 (provide 'siren-multiple-cursors)
 ;;; siren-multiple-cursors.el ends here

@@ -7,8 +7,8 @@
 ;;; Code:
 
 (use-package workgroups2
-  :config
-  (setq wg-prefix-key (kbd "C-z")))
+  :custom
+  (wg-prefix-key (kbd "C-z")))
 
 (provide 'siren-workgroups2)
 ;;; siren-workgroups2.el ends here

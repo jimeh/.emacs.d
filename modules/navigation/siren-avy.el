@@ -12,9 +12,9 @@
   ("C-c j" . avy-goto-word-or-subword-1)
   ("C-c SPC" . avy-goto-char)
 
-  :config
-  (setq avy-background t
-        avy-style 'at-full))
+  :custom
+  (avy-background t)
+  (avy-style 'at-full))
 
 (use-package ace-window
   :bind

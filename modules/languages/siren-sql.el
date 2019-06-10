@@ -24,8 +24,8 @@
   :hook
   (sql-mode . sqlformat-mode)
 
-  :config
-  (setq sqlformat-command 'pgformatter))
+  :custom
+  (sqlformat-command 'pgformatter))
 
 (provide 'siren-sql)
 ;;; siren-sql.el ends here

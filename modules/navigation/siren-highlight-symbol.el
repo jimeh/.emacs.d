@@ -15,9 +15,9 @@
   :hook
   (prog-mode . highlight-symbol-mode)
 
-  :config
-  (setq highlight-symbol-highlight-single-occurrence 'nil
-        highlight-symbol-idle-delay 0.5))
+  :custom
+  (highlight-symbol-highlight-single-occurrence 'nil)
+  (highlight-symbol-idle-delay 0.5))
 
 (provide 'siren-highlight-symbol)
 ;;; siren-highlight-symbol.el ends here

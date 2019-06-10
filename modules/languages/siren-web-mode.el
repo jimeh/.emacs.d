@@ -23,6 +23,12 @@
   :hook
   (web-mode . siren-web-mode-setup)
 
+  :custom
+  (web-mode-code-indent-offset 2)
+  (web-mode-css-indent-offset 2)
+  (web-mode-markup-indent-offset 2)
+  (web-mode-sql-indent-offset 2)
+
   :init
   (defun siren-web-mode-setup ()
     "Default tweaks for `web-mode'."
@@ -34,13 +40,7 @@
     (hs-minor-mode +1)
     (highlight-indentation-current-column-mode)
     (highlight-indentation-set-offset 2)
-    (subword-mode +1))
-
-  :config
-  (setq web-mode-code-indent-offset 2
-        web-mode-css-indent-offset 2
-        web-mode-markup-indent-offset 2
-        web-mode-sql-indent-offset 2))
+    (subword-mode +1)))
 
 (provide 'siren-web-mode)
 ;;; siren-web-mode.el ends here

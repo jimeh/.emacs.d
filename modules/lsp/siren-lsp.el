@@ -8,9 +8,9 @@
 
 (use-package lsp-mode
   :commands lsp
-  :config
-  (require 'lsp-clients)
-  (setq lsp-eldoc-render-all nil))
+
+  :custom
+  (lsp-eldoc-render-all nil))
 
 (provide 'siren-lsp)
 ;;; siren-lsp.el ends here

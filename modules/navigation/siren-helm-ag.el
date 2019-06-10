@@ -13,18 +13,18 @@
   ("C-c C-s" . helm-do-ag)
   ("C-x C-'" . helm-do-ag-project-root)
 
-  :config
-  (setq helm-ag-ignore-patterns '("*.sql"
-                                  "*.test"
-                                  "*.min.css"
-                                  "*.min-latest.css"
-                                  "*.min.js"
-                                  "*.min-latest.js"
-                                  "archive-contents"
-                                  "cache"
-                                  "elpa"
-                                  "node_modules"
-                                  "vendor/assets")))
+  :custom
+  (helm-ag-ignore-patterns '("*.sql"
+                             "*.test"
+                             "*.min.css"
+                             "*.min-latest.css"
+                             "*.min.js"
+                             "*.min-latest.js"
+                             "archive-contents"
+                             "cache"
+                             "elpa"
+                             "node_modules"
+                             "vendor/assets")))
 
 (provide 'siren-helm-ag)
 ;;; siren-helm-ag.el ends here

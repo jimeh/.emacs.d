@@ -11,13 +11,15 @@
   ("C-s" . swiper)
   ("C-c C-r" . ivy-resume)
 
-  :config
-  (ivy-mode 1)
-  (setq ivy-use-virtual-buffers t)
+  :custom-faces
+  (ivy-current-match ((t (:background "#7e9fc9" :foreground "black"))))
+  (swiper-line-face ((t (:background "#313c4d"))))
 
-  (custom-set-faces
-   '(ivy-current-match ((t (:background "#7e9fc9" :foreground "black"))))
-   '(swiper-line-face ((t (:background "#313c4d"))))))
+  :custom
+  (ivy-use-virtual-buffers t)
+
+  :config
+  (ivy-mode 1))
 
 (provide 'siren-swiper)
 ;;; siren-swiper.el ends here

@@ -9,7 +9,12 @@
 (use-package coffee-mode
   :mode "\\.coffee\\'"
   :interpreter "coffee"
-  :hook (coffee-mode . siren-coffee-mode-setup)
+
+  :hook
+  (coffee-mode . siren-coffee-mode-setup)
+
+  :custom
+  (coffee-tab-width 2)
 
   :init
   (defun siren-coffee-mode-setup ()
@@ -24,10 +29,7 @@
 
     (setq tab-width 2)
     (highlight-indentation-current-column-mode)
-    (subword-mode +1))
-
-  :config
-  (setq coffee-tab-width 2))
+    (subword-mode +1)))
 
 (provide 'siren-coffee)
 ;;; siren-coffee.el ends here

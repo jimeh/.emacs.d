@@ -17,10 +17,10 @@
         ("C-M->" . writeroom-increase-width)
         ("C-M-=" . writeroom-adjust-width))
 
-  :config
-  (setq writeroom-global-effects nil
-        writeroom-restore-window-config t
-        writeroom-width 82))
+  :custom
+  (writeroom-global-effects nil)
+  (writeroom-restore-window-config t)
+  (writeroom-width 82))
 
 (provide 'siren-writeroom)
 ;;; siren-writeroom.el ends here

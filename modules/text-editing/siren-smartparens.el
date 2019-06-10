@@ -30,6 +30,14 @@
   :hook
   (prog-mode . smartparens-mode)
 
+  :custom-face
+  (sp-pair-overlay-face ((t (:inherit nil))))
+
+  :custom
+  (sp-base-key-bindings 'paredit)
+  (sp-autoskip-closing-pair 'always)
+  (sp-hybrid-kill-entire-symbol nil)
+
   :config
   ;; smart pairing for all
   (require 'smartparens-config)
@@ -40,13 +48,6 @@
 
   (defalias 'rw 'sp-rewrap-sexp)
   (show-smartparens-global-mode +1)
-
-  (setq sp-base-key-bindings 'paredit
-        sp-autoskip-closing-pair 'always
-        sp-hybrid-kill-entire-symbol nil)
-
-  (custom-set-faces
-   '(sp-pair-overlay-face ((t (:inherit nil)))))
 
   (sp-pair "{" nil :post-handlers
            '(((lambda (&rest _ignored)

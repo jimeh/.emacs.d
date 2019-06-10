@@ -44,9 +44,11 @@
     (smartparens-mode +1)
     (subword-mode))
 
-  :config
-  (setq markdown-command "redcarpet")
-  (custom-set-faces '(markdown-code-face ((t nil)))))
+  :custom-face
+  (markdown-code-face ((t nil)))
+
+  :custom
+  (markdown-command "redcarpet"))
 
 (provide 'siren-markdown)
 ;;; siren-markdown.el ends here

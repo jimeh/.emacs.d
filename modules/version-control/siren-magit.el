@@ -17,6 +17,23 @@
   (siren-magit-mode . siren-magit-mode-setup)
   (git-commit-setup . siren-git-commit-mode-setup)
 
+  :custom
+  (magit-bury-buffer-function 'magit-mode-quit-window)
+  (magit-commit-arguments '("-S"))
+  (magit-completing-read-function 'magit-ido-completing-read)
+  (magit-default-tracking-name-function
+   'magit-default-tracking-name-branch-only)
+  (magit-diff-refine-hunk t)
+  (magit-display-buffer-function
+   'magit-display-buffer-same-window-except-diff-v1)
+  (magit-repository-directories '(("~/Projects" . 2)
+                                  ("~/src" . 1)
+                                  ("~/.emacs.d" . 0)
+                                  ("~/.dotfiles" . 2)))
+  (magit-restore-window-configuration nil)
+  (magit-revert-buffers 'silent)
+  (magit-status-buffer-switch-function 'switch-to-buffer)
+
   :init
   (defalias 'bl 'magit-blame)
 
@@ -33,28 +50,17 @@
     (auto-fill-mode))
 
   :config
-  (require 'magit)
-
-  (setq magit-bury-buffer-function 'magit-mode-quit-window
-        magit-completing-read-function 'magit-ido-completing-read
-        magit-commit-arguments '("-S")
-        magit-default-tracking-name-function 'magit-default-tracking-name-branch-only
-        magit-diff-refine-hunk t
-        magit-display-buffer-function 'magit-display-buffer-same-window-except-diff-v1
-        magit-restore-window-configuration nil
-        magit-revert-buffers 'silent
-        magit-repository-directories '(("~/Projects" . 2)
-                                       ("~/src" . 1)
-                                       ("~/.emacs.d" . 0)
-                                       ("~/.dotfiles" . 2))
-        magit-status-buffer-switch-function 'switch-to-buffer))
+  (require 'magit))
 
 (use-package transient
   :defer t
-  :config
-  (setq transient-history-file (expand-file-name "transient/history.el" siren-cache-dir)
-        transient-levels-file (expand-file-name "transient/levels.el" siren-cache-dir)
-        transient-values-file (expand-file-name "transient/values.el" siren-cache-dir)))
+  :custom
+  (transient-history-file
+   (expand-file-name "transient/history.el" siren-cache-dir))
+  (transient-levels-file
+   (expand-file-name "transient/levels.el" siren-cache-dir))
+  (transient-values-file
+   (expand-file-name "transient/values.el" siren-cache-dir)))
 
 (provide 'siren-magit)
 ;;; siren-magit.el ends here

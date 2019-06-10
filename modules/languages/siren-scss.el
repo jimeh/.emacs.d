@@ -10,15 +10,17 @@
 
 (use-package scss-mode
   :mode "\\.scss\\'"
-  :hook (scss-mode . siren-scss-mode-setup)
+
+  :hook
+  (scss-mode . siren-scss-mode-setup)
+
+  :custom
+  ;; Turn off annoying auto-compile on save.
+  (scss-compile-at-save nil)
 
   :init
   (defun siren-scss-mode-setup ()
-    (siren-css-mode-setup))
-
-  :config
-  ;; turn off annoying auto-compile on save
-  (setq scss-compile-at-save nil))
+    (siren-css-mode-setup)))
 
 (provide 'siren-scss)
 ;;; siren-scss.el ends here

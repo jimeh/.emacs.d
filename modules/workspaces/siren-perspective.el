@@ -33,16 +33,17 @@
               ("C-z C-n" . persp-next)
               ("C-z p" . persp-prev)
               ("C-z C-p" . persp-prev))
+
+  :custom-face
+  ;; (persp-selected-face ((t (:foreground "#d97a35" :weight bold))))
+
+  :custom
+  (persp-mode-prefix-key "")
+  (persp-initial-frame-name "0:main")
+
   :config
-  (setq persp-mode-prefix-key ""
-        persp-initial-frame-name "0:main")
-
   (define-key persp-mode-map (kbd "C-z") perspective-map)
-  (persp-mode)
-
-  ;; (custom-set-faces
-  ;;  '(persp-selected-face ((t (:foreground "#d97a35" :weight bold)))))
-  )
+  (persp-mode))
 
 (provide 'siren-perspective)
 ;;; siren-perspective.el ends here

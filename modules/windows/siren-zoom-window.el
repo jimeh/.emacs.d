@@ -10,8 +10,8 @@
   :bind
   ("C-x C-<return>" . zoom-window-zoom)
 
-  :config
-  (setq zoom-window-mode-line-color "#2a1f1f"))
+  :custom
+  (zoom-window-mode-line-color "#2a1f1f"))
 
 (provide 'siren-zoom-window)
 ;;; siren-zoom-window.el ends here

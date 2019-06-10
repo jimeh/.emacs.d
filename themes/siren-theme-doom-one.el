@@ -10,16 +10,17 @@
 
 (use-package doom-themes
   :ensure t
-  :config
 
+  :custom
   ;; Global settings (defaults)
-  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-        doom-themes-enable-italic t  ; if nil, italics is universally disabled
-        doom-one-brighter-comments nil
-        doom-one-brighter-modeline nil
-        doom-one-comment-bg t
-        doom-one-padded-modeline nil)
+  (doom-themes-enable-bold t)    ; if nil, bold is universally disabled
+  (doom-themes-enable-italic t)  ; if nil, italics is universally disabled
+  (doom-one-brighter-comments nil)
+  (doom-one-brighter-modeline nil)
+  (doom-one-comment-bg t)
+  (doom-one-padded-modeline nil)
 
+  :config
   ;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each
   ;; theme may have their own settings.
   (load-theme 'doom-one t)
