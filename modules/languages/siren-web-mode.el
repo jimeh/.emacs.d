@@ -15,6 +15,7 @@
   :mode
   "\\.html\\'"
   "\\.html.erb\\'"
+  "\\.tpl\\'"
 
   :bind (:map web-mode-map
               ("C-j" . newline-and-indent)
@@ -28,6 +29,7 @@
   (web-mode-css-indent-offset 2)
   (web-mode-markup-indent-offset 2)
   (web-mode-sql-indent-offset 2)
+  (web-mode-engines-alist '(("go" . "\\.tpl\\'")))
 
   :init
   (defun siren-web-mode-setup ()
@@ -41,6 +43,10 @@
     (highlight-indentation-current-column-mode)
     (highlight-indentation-set-offset 2)
     (subword-mode +1)))
+
+(use-package web-beautify
+  :bind (:map web-mode-map
+              ("C-c C-f" . web-beautify-html)))
 
 (provide 'siren-web-mode)
 ;;; siren-web-mode.el ends here
