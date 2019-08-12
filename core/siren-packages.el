@@ -17,9 +17,9 @@
         ("melpa-stable" . "https://stable.melpa.org/packages/")
         ("melpa"        . "https://melpa.org/packages/"))
       package-archive-priorities
-      '(("gnu"          . 10)
-        ("melpa-stable" . 5)
-        ("melpa"        . 0)))
+      '(("melpa"        . 10)
+        ("gnu"          . 5)
+        ("melpa-stable" . 0)))
 
 ;; set package-user-dir to be relative to config path
 (setq package-user-dir (expand-file-name "elpa" siren-dir))
