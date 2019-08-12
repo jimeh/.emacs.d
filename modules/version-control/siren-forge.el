@@ -9,6 +9,7 @@
 (require 'siren-magit)
 
 (use-package forge
+  :pin melpa-stable
   :after magit)
 
 (provide 'siren-forge)
