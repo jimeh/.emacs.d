@@ -48,9 +48,7 @@
               ("RET" . newline-and-indent)
               ("C-c C-l" . goto-line)
               ("C-M-f" . sp-ruby-forward-sexp)
-              ("C-M-b" . sp-ruby-backward-sexp)
-              ("C-c C-j" . lsp-ui-peek-find-definitions)
-              ("C-c C-." . lsp-rename))
+              ("C-M-b" . sp-ruby-backward-sexp))
 
   :hook
   (ruby-mode . siren-ruby-mode-setup)
@@ -110,7 +108,7 @@
   :bind (:map robe-mode-map
               ("C-c C-j" . robe-jump)
               ("C-c b". pop-tag-mark))
-  :hook (ruby-mode . robe-mode)
+  ;; :hook (ruby-mode . robe-mode)
 
   :init
   (eval-after-load 'company

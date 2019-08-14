@@ -9,6 +9,9 @@
 (use-package lsp-mode
   :commands lsp
 
+  :bind (:map lsp-mode-map
+              ("C-c C-." . lsp-rename))
+
   :custom
   (lsp-eldoc-render-all nil))
 

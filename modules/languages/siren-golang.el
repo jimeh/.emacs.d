@@ -18,10 +18,7 @@
   :commands go-mode
   :bind (:map go-mode-map
               ("RET" . newline-and-indent)
-              ("C-h f" . godoc-at-point)
-              ("C-c C-j" . godef-jump)
-              ("C-c C-j" . lsp-ui-peek-find-definitions)
-              ("C-c C-." . lsp-rename))
+              ("C-h f" . godoc-at-point))
 
   :hook
   (go-mode . siren-go-mode-setup)

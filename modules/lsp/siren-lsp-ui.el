@@ -11,6 +11,11 @@
 (use-package lsp-ui
   :commands lsp-ui-mode
 
+  :bind (:map lsp-ui-mode-map
+              ("C-c C-d" . lsp-ui-doc-show)
+              ("M-?" . lsp-ui-peek-find-references)
+              ("C-c C-j" . lsp-ui-peek-find-definitions))
+
   :hook
   (lsp-mode . lsp-ui-mode)
 
