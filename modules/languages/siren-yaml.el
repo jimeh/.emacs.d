@@ -35,5 +35,9 @@
     (smartparens-mode +1)
     (subword-mode +1)))
 
+(use-package yaml-imenu
+  :config
+  (yaml-imenu-enable))
+
 (provide 'siren-yaml)
 ;;; siren-yaml.el ends here
