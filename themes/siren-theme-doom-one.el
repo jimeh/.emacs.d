@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-all-the-icons)
+(require 'siren-doom-modeline)
 
 (use-package doom-themes
   :ensure t
