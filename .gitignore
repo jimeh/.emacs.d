@@ -12,6 +12,7 @@ games/*
 hgs-cache
 ido.last
 magithub/*
+persp-confs/*
 project-explorer-cache/*
 projectile-bookmarks.eld
 projectile.cache

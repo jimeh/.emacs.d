@@ -115,7 +115,8 @@
 (require 'siren-zoom-window)
 
 ;; Workspace management
-(require 'siren-escreen)
+;; (require 'siren-escreen)
+(require 'siren-persp-mode)
 
 ;; Org-mode
 (require 'siren-htmlize)
