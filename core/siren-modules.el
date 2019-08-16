@@ -87,6 +87,7 @@
 ;; Text editing
 (require 'siren-expand-region)
 (require 'siren-goto-chg)
+(require 'siren-ialign)
 (require 'siren-move-dup)
 (require 'siren-multiple-cursors)
 (require 'siren-randomize-region)
