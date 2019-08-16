@@ -11,7 +11,7 @@
   ("C-s" . swiper)
   ("C-c C-r" . ivy-resume)
 
-  :custom-faces
+  :custom-face
   (ivy-current-match ((t (:background "#7e9fc9" :foreground "black"))))
   (swiper-line-face ((t (:background "#313c4d"))))
 
