@@ -26,6 +26,7 @@
   (projectile-enable-caching nil)
   (projectile-globally-ignored-directories '(".bzr"
                                              ".eunit"
+                                             ".extension"
                                              ".fslckout"
                                              ".git"
                                              ".hg"
