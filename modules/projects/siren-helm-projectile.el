@@ -10,8 +10,8 @@
 
 (use-package helm-projectile
   :bind
-  ("C-x C-;" . helm-projectile)
-  ("C-x ;" . helm-projectile-find-file)
+  ("C-x ;" . helm-projectile)
+  ("C-x C-;" . helm-projectile-find-file)
   ("C-c ;" . helm-projectile-switch-project)
   ("C-c C-;" . helm-projectile-switch-project))
 

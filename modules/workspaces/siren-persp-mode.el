@@ -41,8 +41,8 @@
         ("C-z W" . persp-save-to-file-by-names)
         ("C-z l" . persp-load-state-from-file)
         ("C-z L" . persp-load-from-file-by-names)
-        (";" . siren-persp-mode-show-current-perspective-name)
-        ("C-;" . siren-persp-mode-show-current-perspective-name))
+        ("C-z ;" . siren-persp-mode-show-current-perspective-name)
+        ("C-z C-;" . siren-persp-mode-show-current-perspective-name))
 
   :custom
   (persp-auto-save-num-of-backups 10)
@@ -58,6 +58,7 @@
 
   (defun siren-persp-mode-show-current-perspective-name (&rest _)
     "Show current perspectives, highlighting the active one."
+    (interactive)
     (let ((perspectives (persp-names-current-frame-fast-ordered))
           (active-persp-name (safe-persp-name (get-current-persp)))
           (output ""))
