@@ -46,6 +46,7 @@
 ;; Misc.
 (require 'siren-paradox)
 (require 'siren-restart-emacs)
+(require 'siren-shell-pop)
 (require 'siren-zone)
 
 ;; Navigation
