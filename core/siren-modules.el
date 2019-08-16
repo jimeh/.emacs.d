@@ -106,6 +106,7 @@
 (require 'siren-git-timemachine)
 (require 'siren-github)
 (require 'siren-magit)
+(require 'siren-magit-todos)
 ;; (require 'siren-magithub)
 
 ;; Window management
