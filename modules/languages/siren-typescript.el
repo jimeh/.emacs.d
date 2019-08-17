@@ -38,7 +38,6 @@
 
 (use-package tide
   :hook
-  ;; (before-save . tide-format-before-save)
   (typescript-mode . siren-tide-mode-setup)
   (web-mode . siren-tide-web-mode-setup)
 
@@ -63,7 +62,11 @@
     (flycheck-mode +1)
     (eldoc-mode +1)
     (tide-hl-identifier-mode +1)
-    (company-mode +1)))
+    (company-mode +1))
+
+  :config
+  ;; (add-hook 'before-save-hook #'tide-format-before-save)
+  )
 
 (provide 'siren-typescript)
 ;;; siren-typescript.el ends here

@@ -22,7 +22,6 @@
 
   :hook
   (go-mode . siren-go-mode-setup)
-  (before-save . gofmt-before-save)
 
   :init
   (add-to-list 'projectile-globally-ignored-directories "Godeps")
@@ -47,6 +46,8 @@
 
   :config
   (message "loading go-mode")
+
+  (add-hook 'before-save-hook #'gofmt-before-save)
 
   (when (memq window-system '(mac ns))
     (exec-path-from-shell-copy-env "GOPATH"))
