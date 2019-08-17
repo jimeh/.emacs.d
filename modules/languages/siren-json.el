@@ -11,7 +11,7 @@
 
 (use-package json-mode
   :mode "\\.json\\'"
-  :requires (flycheck highlight-indentation omnifmt hideshowvis)
+  :requires (flycheck highlight-indentation hideshowvis)
 
   :bind (:map json-mode-map
               ("C-j" . newline-and-indent)
