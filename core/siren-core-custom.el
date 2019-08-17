@@ -18,16 +18,17 @@
   :group 'siren)
 
 (defcustom siren-indent-sensitive-modes
-  '(conf-mode coffee-mode haml-mode python-mode slim-mode yaml-mode
-              makefile-mode)
-  "Modes for which auto-indenting is suppressed."
-  :type 'list
+  '(coffee-mode conf-mode haml-mode makefile-automake-mode makefile-bsdmake-mode
+                makefile-gmake-mode makefile-imake-mode makefile-makepp-mode
+                makefile-mode python-mode slim-mode yaml-mode)
+  "Major modes for which auto-indenting is suppressed."
+  :type '(repeat symbol)
   :group 'siren)
 
 (defcustom siren-yank-indent-modes '(LaTeX-mode TeX-mode)
-  "Modes in which to indent regions that are yanked (or yank-popped).
+  "Major modes in which to indent regions that are yanked (or yank-popped).
 Only modes that don't derive from `prog-mode' should be listed here."
-  :type 'list
+  :type '(repeat symbol)
   :group 'siren)
 
 (defcustom siren-transparency-level 99
