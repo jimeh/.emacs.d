@@ -1,4 +1,4 @@
-;;; siren-custom.el --- jimeh's Emacs Siren: Siren's customizable variables.
+;;; siren-core-custom.el --- jimeh's Emacs Siren: Siren's customizable variables.
 
 ;;; Commentary:
 
@@ -18,7 +18,8 @@
   :group 'siren)
 
 (defcustom siren-indent-sensitive-modes
-  '(conf-mode coffee-mode haml-mode python-mode slim-mode yaml-mode)
+  '(conf-mode coffee-mode haml-mode python-mode slim-mode yaml-mode
+              makefile-mode)
   "Modes for which auto-indenting is suppressed."
   :type 'list
   :group 'siren)
@@ -34,5 +35,5 @@ Only modes that don't derive from `prog-mode' should be listed here."
   :type 'number
   :group 'siren)
 
-(provide 'siren-custom)
-;;; siren-custom.el ends here
+(provide 'siren-core-custom)
+;;; siren-core-custom.el ends here

@@ -1,4 +1,4 @@
-;;; siren-core.el --- jimeh's Emacs Siren: Editor settings.
+;;; siren-core-editor.el --- jimeh's Emacs Siren: Editor settings.
 
 ;;; Commentary:
 
@@ -189,5 +189,5 @@ indent yanked text (with prefix arg don't indent)."
 ;; (diminish 'hs-minor-mode)
 ;; (diminish 'subword-mode)
 
-(provide 'siren-editor)
-;;; siren-editor.el ends here
+(provide 'siren-core-editor)
+;;; siren-core-editor.el ends here

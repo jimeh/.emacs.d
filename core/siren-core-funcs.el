@@ -1,4 +1,4 @@
-;;; siren-core.el --- jimeh's Emacs Siren: Core Siren functions.
+;;; siren-core-funcs.el --- jimeh's Emacs Siren: Core Siren functions.
 
 ;;; Commentary:
 
@@ -76,5 +76,5 @@ Borrowed from: http://emacsredux.com/blog/2013/05/04/rename-file-and-buffer/"
       (interactive)
       (ignore-errors (funcall fn)))))
 
-(provide 'siren-core)
-;;; siren-core.el ends here
+(provide 'siren-core-funcs)
+;;; siren-core-funcs.el ends here

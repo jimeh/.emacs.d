@@ -1,4 +1,4 @@
-;;; siren-init.el --- jimeh's Emacs Siren: Initialize all the things
+;;; siren-core-init.el --- jimeh's Emacs Siren: Initialize all the things
 
 ;;; Commentary:
 
@@ -16,8 +16,8 @@
          (getenv (if (equal system-type 'windows-nt) "USERNAME" "USER")))
 
 ;; Check Emacs version.
-(when (version< emacs-version "24.1")
-  (error "Siren requires at least GNU Emacs 24.1, but you're running %s"
+(when (version< emacs-version "26.1")
+  (error "Siren requires at least GNU Emacs 26.1, but you're running %s"
          emacs-version))
 
 ;; Setup basic paths.
@@ -31,35 +31,35 @@
   (make-directory siren-cache-dir))
 
 ;; Core stuff
-(require 'siren-custom)
-(require 'siren-core)
+(require 'siren-core-custom)
+(require 'siren-core-funcs)
 
 ;; Ensure vendor directory load-paths are configured
-(require 'siren-vendor)
+(require 'siren-core-vendor)
 
 ;; Continue core stuff
-(require 'siren-packages)
-(require 'siren-env)
-(require 'siren-ui)
-(require 'siren-editor)
+(require 'siren-core-packages)
+(require 'siren-core-env)
+(require 'siren-core-ui)
+(require 'siren-core-editor)
 
 ;; OSX specific
 (when (eq system-type 'darwin)
-  (require 'siren-osx))
+  (require 'siren-core-osx))
 
 ;; Linux specific
 (when (eq system-type 'gnu/linux)
-  (require 'siren-linux))
+  (require 'siren-core-linux))
 
 ;; Config changes made through the customize UI will be store here
 (setq custom-file (expand-file-name "custom.el" siren-dir))
 (load-file custom-file)
 
 ;; The modules
-(require 'siren-modules)
+(require 'siren-core-modules)
 
 ;; The theme
-(require 'siren-theme)
+(require 'siren-core-theme)
 
-(provide 'siren-init)
-;;; siren-init.el ends here
+(provide 'siren-core-init)
+;;; siren-core-init.el ends here

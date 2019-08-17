@@ -1,4 +1,4 @@
-;;; siren-linux.el --- jimeh's Emacs Siren: Linux specific settings.
+;;; siren-core-linux.el --- jimeh's Emacs Siren: Linux specific settings.
 
 ;;; Commentary:
 
@@ -22,5 +22,5 @@
      nil 'fullscreen
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
-(provide 'siren-linux)
-;;; siren-linux.el ends here
+(provide 'siren-core-linux)
+;;; siren-core-linux.el ends here

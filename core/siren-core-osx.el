@@ -1,4 +1,4 @@
-;;; siren-osx.el --- jimeh's Emacs Siren: OS X specific settings.
+;;; siren-core-osx.el --- jimeh's Emacs Siren: OS X specific settings.
 
 ;;; Commentary:
 
@@ -23,5 +23,5 @@
 ;; Don't use OSX Native fullscreen mode
 (setq ns-use-native-fullscreen nil)
 
-(provide 'siren-osx)
-;;; siren-osx.el ends here
+(provide 'siren-core-osx)
+;;; siren-core-osx.el ends here

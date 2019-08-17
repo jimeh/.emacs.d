@@ -1,4 +1,4 @@
-;;; siren-env.el --- jimeh's Emacs Siren: Environment variable setup.
+;;; siren-core-env.el --- jimeh's Emacs Siren: Environment variable setup.
 
 ;;; Commentary:
 
@@ -11,5 +11,5 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-(provide 'siren-env)
-;;; siren-env.el ends here
+(provide 'siren-core-env)
+;;; siren-core-env.el ends here

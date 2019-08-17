@@ -1,4 +1,4 @@
-;;; siren-modules.el --- jimeh's Emacs Siren: Module loading.
+;;; siren-core-modules.el --- jimeh's Emacs Siren: Module loading.
 
 ;;; Commentary:
 
@@ -167,5 +167,5 @@
 (require 'siren-web-mode)
 (require 'siren-yaml)
 
-(provide 'siren-modules)
-;;; siren-modules.el ends here
+(provide 'siren-core-modules)
+;;; siren-core-modules.el ends here

@@ -1,4 +1,4 @@
-;;; siren-transparency.el --- jimeh's Emacs Siren: Emacs Frame transparency.
+;;; siren-core-transparency.el --- jimeh's Emacs Siren: Emacs Frame transparency.
 
 ;;; Commentary:
 
@@ -51,5 +51,5 @@
 (global-set-key (kbd "C-M-<") 'siren-transparency-increase)
 (global-set-key (kbd "C-M->") 'siren-transparency-decrease)
 
-(provide 'siren-transparency)
-;;; siren-transparency.el ends here
+(provide 'siren-core-transparency)
+;;; siren-core-transparency.el ends here

@@ -1,4 +1,4 @@
-;;; siren-vendor.el --- jimeh's Emacs Siren: Setup vendor load-paths
+;;; siren-core-vendor.el --- jimeh's Emacs Siren: Setup vendor load-paths
 
 ;;; Commentary:
 
@@ -11,5 +11,5 @@
 (add-to-list 'load-path siren-vendor-dir)
 (siren-add-subfolders-to-load-path siren-vendor-dir)
 
-(provide 'siren-vendor)
-;;; siren-vendor.el ends here
+(provide 'siren-core-vendor)
+;;; siren-core-vendor.el ends here

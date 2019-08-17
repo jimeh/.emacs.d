@@ -1,4 +1,4 @@
-;;; siren-theme.el --- jimeh's Emacs Siren: Theme loading.
+;;; siren-core-theme.el --- jimeh's Emacs Siren: Theme loading.
 
 ;;; Commentary:
 
@@ -13,5 +13,5 @@
     (require 'siren-theme-doom-vibrant)
   (require 'siren-theme-tomorrow-night-paradise))
 
-(provide 'siren-theme)
-;;; siren-theme.el ends here
+(provide 'siren-core-theme)
+;;; siren-core-theme.el ends here

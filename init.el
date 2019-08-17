@@ -14,7 +14,7 @@
 
 ;; Always load newest byte code
 (setq load-prefer-newer t)
-(load (expand-file-name "core/siren-init.el"
+(load (expand-file-name "core/siren-core-init.el"
                         (file-name-directory load-file-name)))
 
 ;;; init.el ends here

@@ -1,4 +1,4 @@
-;;; siren-ui.el --- jimeh's Emacs Siren: Emacs UI settings.
+;;; siren-core-ui.el --- jimeh's Emacs Siren: Emacs UI settings.
 
 ;;; Commentary:
 
@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(require 'siren-transparency)
+(require 'siren-core-transparency)
 
 ;; the toolbar is just a waste of valuable screen estate
 ;; in a tty tool-bar-mode does not properly auto-load, and is
@@ -45,8 +45,8 @@
 ;; buffer name (if the buffer isn't visiting a file)
 (setq frame-title-format
       '("Emacs - " (:eval (if (buffer-file-name)
-                                            (abbreviate-file-name (buffer-file-name))
-                                          "%b"))))
+                              (abbreviate-file-name (buffer-file-name))
+                            "%b"))))
 
 (require 'smart-mode-line)
 (setq sml/no-confirm-load-theme t)
@@ -54,5 +54,5 @@
 (setq sml/theme nil)
 (add-hook 'after-init-hook #'sml/setup)
 
-(provide 'siren-ui)
-;;; siren-ui.el ends here
+(provide 'siren-core-ui)
+;;; siren-core-ui.el ends here

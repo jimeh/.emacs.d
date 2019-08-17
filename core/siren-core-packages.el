@@ -1,4 +1,4 @@
-;;; siren-packages.el --- jimeh's Emacs Siren: Core package setup
+;;; siren-core-packages.el --- jimeh's Emacs Siren: Core package setup
 
 ;;; Commentary:
 
@@ -70,5 +70,5 @@ Missing packages are installed automatically."
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-(provide 'siren-packages)
-;;; siren-packages.el ends here
+(provide 'siren-core-packages)
+;;; siren-core-packages.el ends here
