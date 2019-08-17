@@ -9,17 +9,16 @@ daily basis.
 
 ## Requirements
 
-- Emacs 25.3 or later. Earlier versions might work, but I haven't tested them.
+- Emacs 26.1 or later.
 
 ## Installation
 
-1. Clone the repo to `~/.emacs.d`, and update git submodules:
+1.  Clone the repo to `~/.emacs.d`:
 
         git clone git://github.com/jimeh/.emacs.d.git ~/.emacs.d
-        cd ~/.emacs.d
 
-2. Launch Emacs and wait a few minutes while it installs all packages.
-3. Enjoy ^_^
+2.  Launch Emacs and wait a few minutes while it installs all packages.
+3.  Enjoy ^\_^
 
 ## Why not use Emacs Prelude?
 
