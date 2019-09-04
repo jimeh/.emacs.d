@@ -40,9 +40,10 @@
                                              "doc"
                                              "docs"
                                              "elpa"
-                                             "node_modules"
                                              "log"
                                              "logs"
+                                             "node_modules"
+                                             "sorbet"
                                              "tmp"
                                              "vendor/assets"))
   (projectile-globally-ignored-files '("TAGS" "*.log"))
