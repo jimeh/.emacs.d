@@ -19,7 +19,7 @@
 (require 'siren-company)
 
 ;; Debugging
-(require 'siren-realgud)
+;; (require 'siren-realgud)
 
 ;; Documentation
 (require 'siren-dash-at-point)
