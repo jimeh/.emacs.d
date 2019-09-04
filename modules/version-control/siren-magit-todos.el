@@ -9,7 +9,6 @@
 (require 'siren-magit)
 
 (use-package magit-todos
-  :pin melpa-stable
   :after magit
 
   :config

@@ -10,7 +10,6 @@
 (require 'siren-flyspell)
 
 (use-package magit
-  :pin melpa-stable
   :bind
   ("C-x g". magit-status)
 
