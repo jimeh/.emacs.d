@@ -125,7 +125,6 @@
       uniquify-ignore-buffers-re "^\\*") ; don't muck with special buffers
 
 ;; Display whitespace characters globally
-(global-whitespace-mode t)
 (diminish 'whitespace-mode)
 (diminish 'global-whitespace-mode)
 (setq whitespace-line-column 80)
