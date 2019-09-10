@@ -46,7 +46,6 @@
 ;; Misc.
 (require 'siren-paradox)
 (require 'siren-restart-emacs)
-(require 'siren-shell-pop)
 (require 'siren-zone)
 
 ;; Navigation
@@ -80,6 +79,9 @@
 (require 'siren-lsp-ui)
 (require 'siren-company-lsp)
 (require 'siren-helm-lsp)
+
+;; Shell
+(require 'siren-shell-pop)
 
 ;; Spelling
 (require 'siren-flyspell)
