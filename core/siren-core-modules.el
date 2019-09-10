@@ -18,19 +18,14 @@
 ;; Completion
 (require 'siren-company)
 
-;; Debugging
-;; (require 'siren-realgud)
-
 ;; Documentation
 (require 'siren-dash-at-point)
 
 ;; Editor
 (require 'siren-browse-kill-ring)
-(require 'siren-evil)
 (require 'siren-helm-command)
 (require 'siren-ido)
 (require 'siren-linum)
-(require 'siren-linum-relative)
 (require 'siren-minions)
 (require 'siren-rainbow)
 (require 'siren-smex)
@@ -44,7 +39,6 @@
 (require 'siren-flycheck)
 
 ;; Misc.
-(require 'siren-paradox)
 (require 'siren-restart-emacs)
 (require 'siren-zone)
 
@@ -55,12 +49,10 @@
 (require 'siren-direx)
 (require 'siren-dumb-jump)
 (require 'siren-folding)
-(require 'siren-full-ack)
 (require 'siren-git-link)
 (require 'siren-helm)
 (require 'siren-helm-ag)
 (require 'siren-helm-files)
-(require 'siren-helm-gtags)
 (require 'siren-helm-imenu)
 (require 'siren-helm-open-github)
 (require 'siren-helm-swoop)
@@ -89,7 +81,6 @@
 ;; Text editing
 (require 'siren-expand-region)
 (require 'siren-goto-chg)
-(require 'siren-ialign)
 (require 'siren-move-dup)
 (require 'siren-multiple-cursors)
 (require 'siren-randomize-region)
@@ -120,7 +111,6 @@
 (require 'siren-zoom-window)
 
 ;; Workspace management
-;; (require 'siren-escreen)
 (require 'siren-persp-mode)
 
 ;; Org-mode
