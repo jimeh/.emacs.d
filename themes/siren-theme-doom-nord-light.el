@@ -46,4 +46,4 @@
                       :foreground (doom-darken (doom-color 'vertical-bar) 0.1)))
 
 (provide 'siren-theme-doom-nord-light)
-;;; siren-theme-doom-nord.el ends here
+;;; siren-theme-doom-nord-light.el ends here
