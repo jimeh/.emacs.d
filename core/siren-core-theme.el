@@ -7,7 +7,7 @@
 ;;; Code:
 
 (setq siren-themes-dir (expand-file-name "themes" siren-dir))
-(add-to-list 'load-path siren-themes-dir)
+(siren-recursive-add-to-load-path siren-themes-dir)
 
 (if window-system
     (require 'siren-theme-doom-vibrant)

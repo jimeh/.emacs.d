@@ -2,19 +2,19 @@
 
 ;;; Commentary:
 
-;; Core Siren functions used a bit all over the place. Some of them shamelessly
+;; Core Siren functions used a bit all over the place.  Some of them shamelessly
 ;; ripped from Emacs Prelude.
 
 ;;; Code:
 
-(defun siren-add-subfolders-to-load-path (parent-dir)
-  "Add all level PARENT-DIR subdirs to the `load-path'."
-  (dolist (f (directory-files parent-dir))
-    (let ((name (expand-file-name f parent-dir)))
+(defun siren-recursive-add-to-load-path (dir)
+  "Add DIR and all its sub-directories to `load-path'."
+  (add-to-list 'load-path dir)
+  (dolist (f (directory-files dir))
+    (let ((name (expand-file-name f dir)))
       (when (and (file-directory-p name)
                  (not (string-prefix-p "." f)))
-        (add-to-list 'load-path name)
-        (siren-add-subfolders-to-load-path name)))))
+        (siren-recursive-add-to-load-path name)))))
 
 (defun siren-smart-open-line-above ()
   "Insert an empty line above the current line.

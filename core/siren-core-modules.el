@@ -7,8 +7,7 @@
 ;;; Code:
 
 (setq siren-modules-dir (expand-file-name "modules" siren-dir))
-(add-to-list 'load-path siren-modules-dir)
-(siren-add-subfolders-to-load-path siren-modules-dir)
+(siren-recursive-add-to-load-path siren-modules-dir)
 
 ;; Core
 (require 'siren-aliases)
