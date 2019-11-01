@@ -120,12 +120,16 @@
 (use-package rspec-mode
   :defer t
   :hook (rspec-mode . siren-rspec-mode-setup)
+
+  :custom
+  (compilation-scroll-output t)
+  (rspec-primary-source-dirs '("app"))
+  (rspec-spec-command "env COVERAGE=0 rspec")
+  (rspec-use-opts-file-when-available nil)
+  (rspec-use-spring-when-possible t)
+
   :init
-  (defun siren-rspec-mode-setup ()
-    (setq compilation-scroll-output t
-          rspec-primary-source-dirs '("app")
-          rspec-use-opts-file-when-available nil
-          rspec-use-spring-when-possible t))
+  (defun siren-rspec-mode-setup ())
 
   :config
   (rspec-install-snippets))
