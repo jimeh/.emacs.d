@@ -9,7 +9,6 @@
 (require 'siren-company)
 (require 'siren-folding)
 (require 'siren-highlight-indentation)
-(require 'siren-lsp)
 (require 'siren-projectile)
 (require 'siren-realgud)
 (require 'siren-smartparens)
@@ -62,7 +61,6 @@
           tab-width 2)
 
     (company-mode +1)
-    (lsp)
     (hs-minor-mode 1)
     (hideshowvis-enable)
     (highlight-indentation-current-column-mode)
@@ -108,7 +106,7 @@
   :bind (:map robe-mode-map
               ("C-c C-j" . robe-jump)
               ("C-c b". pop-tag-mark))
-  ;; :hook (ruby-mode . robe-mode)
+  :hook (ruby-mode . robe-mode)
 
   :init
   (eval-after-load 'company
