@@ -10,6 +10,10 @@
 
 (use-package sh-script
   :ensure nil ;; loaded from emacs built-ins
+  :mode
+  "\\.tmux"
+  "\\.tmuxsh"
+  "\\.tmuxtheme"
   :hook
   (sh-mode . siren-sh-mode-setup)
 
