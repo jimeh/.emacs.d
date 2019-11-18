@@ -25,6 +25,9 @@
   (ido-mode 1))
 
 (use-package ido-completing-read+
+  :custom
+  (ido-cr+-auto-update-blacklist t)
+
   :config
   (ido-ubiquitous-mode 1))
 
