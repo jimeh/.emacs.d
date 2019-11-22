@@ -24,15 +24,19 @@
               ("C-M-p" . outline-previous-visible-heading))
   :hook (org-mode . siren-org-mode-setup)
 
+  :custom
+  (org-export-backends '(ascii html icalendar latex md confluence))
+  (org-export-with-section-numbers nil)
+
   :init
   (defun siren-org-mode-setup ()
-    (setq org-export-backends '(ascii html icalendar latex md confluence)
-          fill-column 80
+    (setq fill-column 80
           whitespace-action '(auto-cleanup))
 
     (linum-mode t)
     (flyspell-mode)
     (fci-mode)
+    (highlight-indentation-current-column-mode)
     (smartparens-mode +1)
     (visual-line-mode +1)
     (whitespace-mode +1)))
