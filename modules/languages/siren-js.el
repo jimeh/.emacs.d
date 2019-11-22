@@ -14,7 +14,6 @@
   :mode
   "\\.js\\'"
   "\\.pac\\'"
-  "node"
 
   :hook
   (js-mode . siren-js-mode-setup)
