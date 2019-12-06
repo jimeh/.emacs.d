@@ -1,0 +1,6 @@
+# key: link-brackets
+# --
+# Square Bracket Open [
+#+MACRO: BO @@latex:\char91@@@@html:&#91;@@
+# Square Bracket Close ]
+#+MACRO: BC @@latex:\char93@@@@html:&#93;@@

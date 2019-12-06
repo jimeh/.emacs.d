@@ -48,6 +48,7 @@
                                              "vendor/assets"))
   (projectile-globally-ignored-files '("TAGS" "*.log"))
   (projectile-indexing-method 'hybrid)
+  (projectile-project-search-path '("~/Projects"))
   (projectile-sort-order 'recently-active)
 
   :config

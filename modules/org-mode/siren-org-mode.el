@@ -27,11 +27,15 @@
   :custom
   (org-export-backends '(ascii html icalendar latex md confluence))
   (org-export-with-section-numbers nil)
+  (org-export-with-sub-superscripts '{})
 
   :init
   (defun siren-org-mode-setup ()
     (setq fill-column 80
           whitespace-action '(auto-cleanup))
+
+    (setcar (nthcdr 4 org-emphasis-regexp-components) 20)
+    (org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
 
     (linum-mode t)
     (flyspell-mode)

@@ -1,0 +1,5 @@
+# key: gfm
+# --
+# Local variables:
+# after-save-hook: (lambda () (org-gfm-export-to-markdown) t)
+# end:$0
