@@ -1,6 +1,6 @@
 # name: struct method
 # key: meth
 # --
-func (${1:s *Struct}) ${2:Name}($3) {
+func (${1:s *${2:Struct}) ${3:name}($4) $5 {
 	$0
 }

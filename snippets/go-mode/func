@@ -1,5 +1,5 @@
 # key: func
 # --
-func ${1:name}($2) {
-	$0
+func ${1:name}($2) $3 {
+  $0
 }
