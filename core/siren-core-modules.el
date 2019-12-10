@@ -83,7 +83,7 @@
 (require 'siren-move-dup)
 (require 'siren-multiple-cursors)
 (require 'siren-randomize-region)
-(require 'siren-shift-text)
+(require 'siren-smart-shift)
 (require 'siren-smartparens)
 (require 'siren-sort-symbols)
 (require 'siren-sort-words)
