@@ -29,7 +29,6 @@
 (require 'siren-rainbow)
 (require 'siren-smex)
 (require 'siren-undo-tree)
-(require 'siren-which-key)
 
 ;; Help
 (require 'siren-helpful)
