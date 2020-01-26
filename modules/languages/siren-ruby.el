@@ -10,7 +10,6 @@
 (require 'siren-folding)
 (require 'siren-projectile)
 (require 'siren-realgud)
-(require 'siren-smartparens)
 (require 'siren-toggle-quotes)
 
 (add-to-list 'projectile-globally-ignored-directories "vendor/bundle")

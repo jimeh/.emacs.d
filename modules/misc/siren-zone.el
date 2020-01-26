@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-linum)
-
 (use-package zone
   :ensure nil ;; loaded from emacs built-ins
   :init

@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-;; (require 'siren-fci)
-
 (use-package company
   :hook
   (company-completion-started . siren-company--turn-off-fci)

@@ -6,12 +6,7 @@
 
 ;;; Code:
 
-(require 'siren-display-indentation)
-(require 'siren-fci)
-(require 'siren-flyspell)
-(require 'siren-linum)
 (require 'siren-prog-mode)
-(require 'siren-smartparens)
 
 (use-package yaml-mode
   :mode "\\.yml\\'" "\\.yaml\\'"
@@ -23,15 +18,8 @@
 
   :init
   (defun siren-yaml-mode-setup ()
-    (siren-prog-mode-setup)
-    (setq tab-width 2
-          whitespace-action '(auto-cleanup))
-
-    (siren-display-indentation)
-    (fci-mode)
-    (flyspell-mode)
-    (linum-mode t)
-    (smartparens-mode +1)
+    (run-hooks 'prog-mode-hook)
+    (setq tab-width 2)
     (subword-mode +1)))
 
 (use-package yaml-imenu
