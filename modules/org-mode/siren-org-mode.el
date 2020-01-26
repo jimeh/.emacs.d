@@ -6,6 +6,7 @@
 
 ;;; Code:
 
+(require 'siren-display-indentation)
 (require 'siren-fci)
 (require 'siren-flyspell)
 (require 'siren-linum)
@@ -35,12 +36,13 @@
           whitespace-action '(auto-cleanup))
 
     (setcar (nthcdr 4 org-emphasis-regexp-components) 20)
-    (org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
+    (org-set-emph-re 'org-emphasis-regexp-components
+                     org-emphasis-regexp-components)
 
     (linum-mode t)
     (flyspell-mode)
     (fci-mode)
-    (highlight-indentation-current-column-mode)
+    (siren-display-indentation)
     (smartparens-mode +1)
     (visual-line-mode +1)
     (whitespace-mode +1)))

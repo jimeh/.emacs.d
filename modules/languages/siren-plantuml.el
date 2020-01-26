@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-highlight-indentation)
-
 (use-package plantuml-mode
   :mode "\\.uml\\'"
   :hook
@@ -16,10 +14,7 @@
   :init
   (defun siren-plantuml-mode-setup ()
     (setq tab-width 2
-          plantuml-jar-path "/usr/local/opt/plantuml/libexec/plantuml.jar")
-
-    (highlight-indentation-set-offset 2)
-    (highlight-indentation-current-column-mode)))
+          plantuml-jar-path "/usr/local/opt/plantuml/libexec/plantuml.jar")))
 
 (provide 'siren-plantuml)
 ;;; siren-plantuml.el ends here

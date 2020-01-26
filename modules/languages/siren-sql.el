@@ -17,8 +17,7 @@
   (defun siren-sql-mode-setup ()
     (setq tab-width 2)
 
-    (company-mode +1)
-    (highlight-indentation-current-column-mode +1)))
+    (company-mode +1)))
 
 (use-package sqlformat
   :hook

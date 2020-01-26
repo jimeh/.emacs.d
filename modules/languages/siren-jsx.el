@@ -19,7 +19,6 @@
     (company-mode +1)
     (subword-mode +1)
     (hs-minor-mode +1)
-    (highlight-indentation-current-column-mode +1)
     (hideshowvis-enable)))
 
 (provide 'siren-jsx)

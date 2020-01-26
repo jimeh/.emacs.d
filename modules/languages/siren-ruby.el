@@ -8,7 +8,6 @@
 
 (require 'siren-company)
 (require 'siren-folding)
-(require 'siren-highlight-indentation)
 (require 'siren-projectile)
 (require 'siren-realgud)
 (require 'siren-smartparens)
@@ -63,7 +62,6 @@
     (company-mode +1)
     (hs-minor-mode 1)
     (hideshowvis-enable)
-    (highlight-indentation-current-column-mode)
     (subword-mode +1))
 
   :config

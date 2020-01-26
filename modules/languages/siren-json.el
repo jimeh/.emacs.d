@@ -25,10 +25,9 @@
     "Default tweaks for `json-mode'."
 
     (let ((width 2))
-      (setq js-indent-level width)
-      (setq json-reformat:indent-width width)
-      (setq tab-width width)
-      (highlight-indentation-set-offset width))
+      (setq js-indent-level width
+            json-reformat:indent-width width
+            tab-width width))
 
     (setq flycheck-checker 'json-jsonlint)))
 

@@ -22,6 +22,7 @@
 
 ;; Editor
 (require 'siren-browse-kill-ring)
+(require 'siren-display-indentation)
 (require 'siren-helm-command)
 (require 'siren-ido)
 (require 'siren-linum)

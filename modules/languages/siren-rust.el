@@ -7,7 +7,6 @@
 ;;; Code:
 
 (require 'siren-folding)
-(require 'siren-highlight-indentation)
 (require 'siren-lsp)
 
 (use-package rust-mode
@@ -28,7 +27,6 @@
     (lsp-mode)
     (hs-minor-mode 1)
     (hideshowvis-enable)
-    (highlight-indentation-current-column-mode)
     (subword-mode +1)))
 
 (use-package cargo

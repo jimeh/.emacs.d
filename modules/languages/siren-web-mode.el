@@ -9,7 +9,6 @@
 (require 'siren-company)
 (require 'siren-fci)
 (require 'siren-folding)
-(require 'siren-highlight-indentation)
 
 (use-package web-mode
   :mode
@@ -40,8 +39,6 @@
     (fci-mode -1)
     (hideshowvis-enable)
     (hs-minor-mode +1)
-    (highlight-indentation-current-column-mode)
-    (highlight-indentation-set-offset 2)
     (subword-mode +1)))
 
 (use-package web-beautify

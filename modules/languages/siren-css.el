@@ -23,7 +23,6 @@
 
     (company-mode +1)
     (lsp)
-    (highlight-indentation-current-column-mode +1)
     (rainbow-mode +1)))
 
 (provide 'siren-css)

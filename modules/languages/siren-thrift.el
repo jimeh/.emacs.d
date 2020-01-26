@@ -11,7 +11,6 @@
 (require 'siren-linum)
 (require 'siren-prog-mode)
 (require 'siren-flycheck)
-(require 'siren-highlight-indentation)
 (require 'siren-highlight-symbol)
 (require 'siren-smartparens)
 
@@ -27,8 +26,6 @@
     (fci-mode)
     (flycheck-mode)
     (flyspell-prog-mode)
-    (highlight-indentation-current-column-mode)
-    (highlight-indentation-set-offset 2)
     (highlight-symbol-mode)
     (linum-mode)
     (smartparens-mode)

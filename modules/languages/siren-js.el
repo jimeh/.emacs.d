@@ -31,7 +31,6 @@
     (lsp)
     (subword-mode +1)
     (hs-minor-mode 1)
-    (highlight-indentation-current-column-mode)
     (hideshowvis-enable)
 
     (let ((map js-mode-map))

@@ -35,11 +35,10 @@
         (setq gofmt-command goimports)))
 
     (setq tab-width 4)
-    (whitespace-toggle-options '(tabs))
 
+    (highlight-symbol-mode -1)
     (company-mode +1)
     (lsp)
-    (highlight-symbol-mode -1)
     (hs-minor-mode 1)
     (hideshowvis-enable)
     (subword-mode +1))

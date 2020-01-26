@@ -12,9 +12,7 @@
 
   :init
   (defun siren-haml-mode-setup ()
-    (setq tab-width 2)
-    (highlight-indentation-set-offset 2)
-    (highlight-indentation-current-column-mode +1)))
+    (setq tab-width 2)))
 
 (provide 'siren-haml)
 ;;; siren-haml.el ends here

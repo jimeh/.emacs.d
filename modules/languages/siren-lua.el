@@ -15,7 +15,6 @@
     (setq lua-indent-level 2
           whitespace-action '(auto-cleanup))
 
-    (highlight-indentation-current-column-mode)
     (subword-mode +1)))
 
 (provide 'siren-lua)

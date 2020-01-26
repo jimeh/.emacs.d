@@ -9,7 +9,6 @@
 (require 'siren-company)
 (require 'siren-folding)
 (require 'siren-flycheck)
-(require 'siren-highlight-indentation)
 (require 'siren-prettier-js)
 (require 'siren-web-mode)
 
@@ -29,7 +28,6 @@
     (lsp)
     (subword-mode +1)
     (hs-minor-mode 1)
-    (highlight-indentation-current-column-mode)
     (hideshowvis-enable)
 
     (let ((map typescript-mode-map))

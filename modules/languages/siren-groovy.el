@@ -16,7 +16,6 @@
           groovy-indent-offset 4
           tab-width 4)
 
-    (highlight-indentation-current-column-mode)
     (subword-mode +1)))
 
 (provide 'siren-groovy)

@@ -16,9 +16,7 @@
 
   (defun siren-makefile-mode-setup ()
     (subword-mode +1)
-    (setq tab-width 4)
-    (highlight-indentation-set-offset 4)
-    (highlight-indentation-current-column-mode)))
+    (setq tab-width 4)))
 
 (provide 'siren-makefile)
 ;;; siren-makefile.el ends here

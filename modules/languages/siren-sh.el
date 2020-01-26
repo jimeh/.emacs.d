@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-highlight-indentation)
-
 (use-package sh-script
   :ensure nil ;; loaded from emacs built-ins
   :mode
@@ -25,8 +23,6 @@
           whitespace-action '(auto-cleanup))
 
     (subword-mode +1)
-    (highlight-indentation-set-offset 2)
-    (highlight-indentation-current-column-mode)
     (define-key sh-mode-map (kbd "RET") 'newline-and-indent)))
 
 (provide 'siren-sh)

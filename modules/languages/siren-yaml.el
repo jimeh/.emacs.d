@@ -6,9 +6,9 @@
 
 ;;; Code:
 
+(require 'siren-display-indentation)
 (require 'siren-fci)
 (require 'siren-flyspell)
-(require 'siren-highlight-indentation)
 (require 'siren-linum)
 (require 'siren-prog-mode)
 (require 'siren-smartparens)
@@ -27,10 +27,9 @@
     (setq tab-width 2
           whitespace-action '(auto-cleanup))
 
+    (siren-display-indentation)
     (fci-mode)
     (flyspell-mode)
-    (highlight-indentation-current-column-mode)
-    (highlight-indentation-set-offset 2)
     (linum-mode t)
     (smartparens-mode +1)
     (subword-mode +1)))

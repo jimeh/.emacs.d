@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-highlight-indent-guides)
-
 ;; Lisp configuration
 (define-key read-expression-map (kbd "TAB") 'completion-at-point)
 
@@ -22,7 +20,6 @@
 
 ;; interactive modes don't need whitespace checks
 (defun siren-interactive-lisp-coding-hook ()
-  (highlight-indent-guides-mode)
   (whitespace-mode -1))
 
 (provide 'siren-lisp)

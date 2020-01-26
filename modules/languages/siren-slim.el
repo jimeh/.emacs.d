@@ -6,15 +6,12 @@
 
 ;;; Code:
 
-(require 'siren-highlight-indentation)
-
 (use-package slim-mode
   :mode "\\.slim\\'"
   :hook (slim-mode . siren-slim-mode-hook)
 
   :init
-  (defun siren-slim-mode-setup ()
-    (highlight-indentation-current-column-mode)))
+  (defun siren-slim-mode-setup ()))
 
 (provide 'siren-slim)
 ;;; siren-slim.el ends here

@@ -26,7 +26,6 @@
 
 (defun siren-emacs-lisp-mode-setup ()
   "Sensible defaults for `emacs-lisp-mode'."
-  (highlight-indent-guides-mode)
   ;; (run-hooks 'siren-lisp-coding-hook)
   ;; (eldoc-mode +1)
   ;; (siren-recompile-elc-on-save)
