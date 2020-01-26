@@ -7,7 +7,7 @@
 ;;; Code:
 
 (require 'siren-company)
-(require 'siren-fci)
+(require 'siren-display-fill-column)
 (require 'siren-folding)
 
 (use-package web-mode
@@ -35,8 +35,8 @@
     "Default tweaks for `web-mode'."
     (setq tab-width 2)
 
+    (siren-display-fill-column -1)
     (company-mode +1)
-    (fci-mode -1)
     (siren-folding)
     (subword-mode +1)))
 

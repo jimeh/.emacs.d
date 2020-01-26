@@ -6,8 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-display-fill-column)
 (require 'siren-display-line-numbers)
-(require 'siren-fci)
 (require 'siren-flyspell)
 
 (use-package magit
@@ -44,9 +44,9 @@
     (setq tab-width 2
           fill-column 72)
 
+    (siren-display-fill-column)
     (siren-display-line-numbers)
     (subword-mode)
-    (fci-mode t)
     (flyspell-mode)
     (auto-fill-mode))
 

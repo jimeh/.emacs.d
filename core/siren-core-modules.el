@@ -22,9 +22,9 @@
 
 ;; Editor
 (require 'siren-browse-kill-ring)
+(require 'siren-display-fill-column)
 (require 'siren-display-indentation)
 (require 'siren-display-line-numbers)
-(require 'siren-fci)
 (require 'siren-folding)
 (require 'siren-helm-command)
 (require 'siren-highlight-symbol)

@@ -6,8 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-display-fill-column)
 (require 'siren-display-line-numbers)
-(require 'siren-fci)
 (require 'siren-flyspell)
 (require 'siren-move-dup)
 (require 'siren-prettier-js)
@@ -36,10 +36,10 @@
     (setq markdown-asymmetric-header t
           whitespace-action nil)
 
+    (siren-display-fill-column)
     (siren-display-line-numbers)
     (auto-fill-mode)
     (prettier-js-mode)
-    (fci-mode)
     (flyspell-mode)
     (smartparens-mode +1)
     (subword-mode))

@@ -6,9 +6,9 @@
 
 ;;; Code:
 
+(require 'siren-display-fill-column)
 (require 'siren-display-indentation)
 (require 'siren-display-line-numbers)
-(require 'siren-fci)
 (require 'siren-flyspell)
 (require 'siren-smartparens)
 
@@ -39,10 +39,10 @@
     (org-set-emph-re 'org-emphasis-regexp-components
                      org-emphasis-regexp-components)
 
+    (siren-display-fill-column)
     (siren-display-indentation)
     (siren-display-line-numbers)
     (flyspell-mode)
-    (fci-mode)
     (smartparens-mode +1)
     (visual-line-mode +1)
     (whitespace-mode +1)))
