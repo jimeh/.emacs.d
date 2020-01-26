@@ -23,11 +23,11 @@
 ;; Editor
 (require 'siren-browse-kill-ring)
 (require 'siren-display-indentation)
+(require 'siren-display-line-numbers)
 (require 'siren-fci)
 (require 'siren-helm-command)
 (require 'siren-highlight-symbol)
 (require 'siren-ido)
-(require 'siren-linum)
 (require 'siren-minions)
 (require 'siren-rainbow)
 (require 'siren-smex)

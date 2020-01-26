@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-linum)
-
 (use-package dired+
   :ensure nil ;; loaded from vendor
   :demand
@@ -20,7 +18,6 @@
 
   :init
   (defun siren-dired-mode-setup ()
-    (linum-mode t)
     (toggle-diredp-find-file-reuse-dir 1))
 
   :config

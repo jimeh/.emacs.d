@@ -6,6 +6,7 @@
 
 ;;; Code:
 
+(require 'siren-display-line-numbers)
 (require 'siren-fci)
 (require 'siren-flyspell)
 
@@ -43,10 +44,10 @@
     (setq tab-width 2
           fill-column 72)
 
+    (siren-display-line-numbers)
     (subword-mode)
     (fci-mode t)
     (flyspell-mode)
-    (linum-mode t)
     (auto-fill-mode))
 
   :config

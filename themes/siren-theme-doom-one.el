@@ -44,8 +44,5 @@
   (set-face-attribute 'vertical-border nil
                       :foreground (doom-darken (doom-color 'vertical-bar) 0.1)))
 
-(use-package hlinum
-  :hook (linum-mode . hlinum-activate))
-
 (provide 'siren-theme-doom-one)
 ;;; siren-theme-doom-one.el ends here
