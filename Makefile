@@ -34,7 +34,6 @@ endef
 $(eval $(call vendored,vendor/dired+.el,https://www.emacswiki.org/emacs/download/dired%2b.el))
 $(eval $(call vendored,vendor/escreen.el,https://github.com/renard/escreen-el/raw/master/escreen.el))
 $(eval $(call vendored,vendor/hideshowvis.el,https://www.emacswiki.org/emacs/download/hideshowvis.el))
-$(eval $(call vendored,vendor/linum+.el,http://www.emacswiki.org/emacs/download/linum%2b.el))
 $(eval $(call vendored,vendor/ruby-guard.el,https://github.com/zhangkaiyulw/ruby-guard/raw/master/ruby-guard.el))
 $(eval $(call vendored,vendor/tomorrow-night-paradise-theme.el,https://github.com/jimeh/tomorrow-night-paradise-theme.el/raw/master/tomorrow-night-paradise-theme.el))
 
