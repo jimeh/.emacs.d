@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package gitconfig-mode
-  :mode "\\.gitconfig" "gitconfig\\'" "\\.git\\\/config"
+  :mode "\\.gitconfig\\'" "gitconfig\\'" "\\.git/config\\'"
   :hook (gitconfig-mode . siren-gitconfig-mode-setup)
 
   :init
