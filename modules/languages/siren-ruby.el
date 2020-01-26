@@ -59,8 +59,7 @@
           tab-width 2)
 
     (company-mode +1)
-    (hs-minor-mode 1)
-    (hideshowvis-enable)
+    (siren-folding)
     (subword-mode +1))
 
   :config

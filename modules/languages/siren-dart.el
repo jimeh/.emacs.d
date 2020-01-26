@@ -6,6 +6,7 @@
 
 ;;; Code:
 
+(require 'siren-folding)
 (require 'siren-projectile)
 
 (use-package dart-mode
@@ -22,10 +23,9 @@
   :init
   (defun siren-dart-mode-setup ()
     (company-mode +1)
-    (lsp)
     (highlight-symbol-mode -1)
-    (hs-minor-mode 1)
-    (hideshowvis-enable)
+    (lsp)
+    (siren-folding)
     (subword-mode +1))
 
   (with-eval-after-load "projectile"

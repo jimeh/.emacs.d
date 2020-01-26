@@ -20,8 +20,7 @@
     (rainbow-mode +1)
     (company-mode +1)
     (subword-mode +1)
-    (hs-minor-mode 1)
-    (hideshowvis-enable)))
+    (siren-folding)))
 
 (provide 'siren-php)
 ;;; siren-php.el ends here

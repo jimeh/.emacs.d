@@ -7,8 +7,8 @@
 ;;; Code:
 
 (require 'siren-company)
-(require 'siren-folding)
 (require 'siren-flycheck)
+(require 'siren-folding)
 (require 'siren-prettier-js)
 (require 'siren-web-mode)
 
@@ -16,8 +16,11 @@
   :hook
   (typescript-mode . siren-typescript-mode-setup)
 
-  :init
+  :bind (:map typescript-mode-map
+              ("C-j" . newline-and-indent)
+              ("C-c C-h" . siren-folding-toggle))
 
+  :init
   (defun siren-typescript-mode-setup ()
     (let ((width 2))
       (setq typescript-indent-level width
@@ -27,12 +30,7 @@
     (company-mode +1)
     (lsp)
     (subword-mode +1)
-    (hs-minor-mode 1)
-    (hideshowvis-enable)
-
-    (let ((map typescript-mode-map))
-      (define-key map (kbd "C-j") 'newline-and-indent)
-      (define-key map (kbd "C-c C-h") 'siren-toggle-hiding))))
+    (siren-folding)))
 
 (use-package tide
   :hook

@@ -18,7 +18,7 @@
 
   :bind (:map web-mode-map
               ("C-j" . newline-and-indent)
-              ("C-c C-h" . siren-toggle-hiding))
+              ("C-c C-h" . siren-folding-toggle))
 
   :hook
   (web-mode . siren-web-mode-setup)
@@ -37,8 +37,7 @@
 
     (company-mode +1)
     (fci-mode -1)
-    (hideshowvis-enable)
-    (hs-minor-mode +1)
+    (siren-folding)
     (subword-mode +1)))
 
 (use-package web-beautify

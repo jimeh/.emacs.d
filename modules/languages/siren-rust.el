@@ -25,8 +25,7 @@
 
     (company-mode +1)
     (lsp-mode)
-    (hs-minor-mode 1)
-    (hideshowvis-enable)
+    (siren-folding)
     (subword-mode +1)))
 
 (use-package cargo

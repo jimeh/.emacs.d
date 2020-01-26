@@ -15,7 +15,7 @@
 
   :bind (:map json-mode-map
               ("C-j" . newline-and-indent)
-              ("C-c C-h" . siren-toggle-hiding))
+              ("C-c C-h" . siren-folding-toggle))
 
   :hook
   (json-mode . siren-json-mode-setup)

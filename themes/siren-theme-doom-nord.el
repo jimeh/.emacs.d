@@ -8,6 +8,7 @@
 
 (require 'siren-all-the-icons)
 (require 'siren-doom-modeline)
+(require 'siren-folding)
 
 (use-package doom-themes
   :ensure t

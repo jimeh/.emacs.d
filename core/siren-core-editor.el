@@ -184,9 +184,5 @@ indent yanked text (with prefix arg don't indent)."
 (require 're-builder)
 (setq reb-re-syntax 'string)
 
-;; diminish various modes
-;; (diminish 'hs-minor-mode)
-;; (diminish 'subword-mode)
-
 (provide 'siren-core-editor)
 ;;; siren-core-editor.el ends here
