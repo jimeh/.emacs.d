@@ -9,6 +9,7 @@
 (require 'siren-company)
 (require 'siren-flycheck)
 (require 'siren-folding)
+(require 'siren-highlight-symbol)
 (require 'siren-lsp)
 (require 'siren-projectile)
 

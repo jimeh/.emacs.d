@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-company)
+(require 'siren-lsp)
 (require 'siren-rainbow)
 
 (use-package css-mode

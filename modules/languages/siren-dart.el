@@ -6,11 +6,14 @@
 
 ;;; Code:
 
+(require 'siren-company)
 (require 'siren-folding)
+(require 'siren-highlight-symbol)
+(require 'siren-lsp)
 (require 'siren-projectile)
 
 (use-package dart-mode
-  :mode "\\.dart"
+  :mode "\\.dart\\'"
   :interpreter "dart"
 
   :hook

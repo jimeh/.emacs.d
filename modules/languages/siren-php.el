@@ -6,6 +6,7 @@
 
 ;;; Code:
 
+(require 'siren-company)
 (require 'siren-folding)
 (require 'siren-rainbow)
 

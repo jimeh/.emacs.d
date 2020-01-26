@@ -6,6 +6,7 @@
 
 ;;; Code:
 
+(require 'siren-company)
 (require 'siren-folding)
 (require 'siren-lsp)
 
@@ -24,7 +25,7 @@
     (setq rust-format-on-save t)
 
     (company-mode +1)
-    (lsp-mode)
+    (lsp)
     (siren-folding)
     (subword-mode +1)))
 

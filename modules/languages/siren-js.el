@@ -6,7 +6,9 @@
 
 ;;; Code:
 
+(require 'siren-company)
 (require 'siren-folding)
+(require 'siren-lsp)
 (require 'siren-prettier-js)
 
 (use-package js-mode

@@ -6,12 +6,12 @@
 
 ;;; Code:
 
-(require 'siren-eslintd-fix)
+(require 'siren-flycheck)
 (require 'siren-folding)
+(require 'siren-js)
 
 (use-package json-mode
   :mode "\\.json\\'"
-  :requires (flycheck highlight-indentation hideshowvis)
 
   :bind (:map json-mode-map
               ("C-j" . newline-and-indent)

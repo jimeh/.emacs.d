@@ -9,6 +9,7 @@
 (require 'siren-company)
 (require 'siren-flycheck)
 (require 'siren-folding)
+(require 'siren-lsp)
 (require 'siren-prettier-js)
 (require 'siren-web-mode)
 
