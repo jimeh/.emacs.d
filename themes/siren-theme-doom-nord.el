@@ -44,7 +44,10 @@
   (set-face-attribute 'font-lock-variable-name-face nil
                       :foreground (doom-lighten (doom-color 'blue) 0.25))
   (set-face-attribute 'vertical-border nil
-                      :foreground (doom-darken (doom-color 'vertical-bar) 0.1)))
+                      :foreground (doom-darken (doom-color 'vertical-bar) 0.1))
+  (when (not (version< emacs-version "27.0"))
+    (set-face-attribute 'fill-column-indicator nil
+                        :foreground (doom-lighten (doom-color 'base3) 0.10))))
 
 (provide 'siren-theme-doom-nord)
 ;;; siren-theme-doom-nord.el ends here
