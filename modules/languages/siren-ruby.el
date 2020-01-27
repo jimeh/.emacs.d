@@ -8,6 +8,7 @@
 
 (require 'siren-company)
 (require 'siren-folding)
+(require 'siren-lsp)
 (require 'siren-projectile)
 (require 'siren-realgud)
 (require 'siren-toggle-quotes)
@@ -60,6 +61,7 @@
 
     (company-mode +1)
     (siren-folding)
+    (lsp)
     (subword-mode +1))
 
   :config
