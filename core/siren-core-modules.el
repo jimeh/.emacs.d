@@ -65,8 +65,9 @@
 ;; Project management
 (require 'siren-editorconfig)
 (require 'siren-helm-projectile)
-(require 'siren-neotree)
 (require 'siren-projectile)
+(require 'siren-treemacs)
+;; (require 'siren-neotree)
 
 ;; Language Servers
 (require 'siren-lsp)
@@ -126,6 +127,7 @@
 (require 'siren-writeroom)
 
 ;; Languages
+(require 'siren-prog-mode)
 (require 'siren-coffee)
 (require 'siren-conf)
 (require 'siren-css)
@@ -147,7 +149,6 @@
 (require 'siren-markdown)
 (require 'siren-php)
 (require 'siren-plantuml)
-(require 'siren-prog-mode)
 (require 'siren-ruby)
 (require 'siren-rust)
 (require 'siren-sass)

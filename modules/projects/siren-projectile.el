@@ -7,6 +7,7 @@
 ;;; Code:
 
 (use-package projectile
+  :demand
   :bind
   ("C-c p p" . projectile-switch-project)
   ("C-c p k" . projectile-kill-buffers)
@@ -52,8 +53,8 @@
   (projectile-sort-order 'recently-active)
 
   :config
-  ;; Treat separate directories with Gemfiles within a single git repo as separate
-  ;; projects.
+  ;; Treat separate directories with Gemfiles within a single git repo as
+  ;; separate projects.
   (push "Gemfile" projectile-project-root-files-bottom-up)
 
   (projectile-mode t))

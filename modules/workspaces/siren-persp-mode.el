@@ -7,6 +7,7 @@
 ;;; Code:
 
 (use-package persp-mode
+  :demand
   :hook
   (after-init . persp-mode)
 

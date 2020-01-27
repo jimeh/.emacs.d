@@ -8,11 +8,13 @@
 
 (use-package helm
   :defer t
-  :hook ((helm-minibuffer-set-up . siren-helm--hide-minibuffer-maybe)
-         (helm-after-initialize . siren-helm--toggle-source-header-line)
-         (helm-minibuffer-set-up . siren-helm--popwin-help-mode-off)
-         (helm-cleanup . siren-helm--popwin-help-mode-on)
-         (helm-cleanup . siren-helm--show-neotree-maybe))
+  :hook
+  (helm-minibuffer-set-up . siren-helm--hide-minibuffer-maybe)
+  (helm-after-initialize . siren-helm--toggle-source-header-line)
+  (helm-minibuffer-set-up . siren-helm--popwin-help-mode-off)
+  (helm-cleanup . siren-helm--popwin-help-mode-on)
+  (helm-cleanup . siren-helm--show-neotree-maybe)
+  (helm-cleanup . siren-helm--show-treemacs-maybe)
 
   :custom
   (helm-autoresize-max-height 30)
@@ -24,6 +26,7 @@
   (helm-file-name-case-fold-search 'smart)
   (helm-split-window-default-side 'below)
   (siren-helm--did-hide-neotree nil)
+  (siren-helm--did-hide-treemacs nil)
 
   :init
   ;; From: https://www.reddit.com/r/emacs/comments/3asbyn/new_and_very_useful_helm_feature_enter_search/
@@ -68,8 +71,27 @@
       (setq siren-helm--did-hide-neotree nil)
       (run-with-timer 0.01 nil #'neotree-show)))
 
+  (defun siren-helm--hide-treemacs (&rest plist)
+    (when (fboundp 'treemacs-get-local-window)
+      (let ((win (treemacs-get-local-window)))
+        (when win
+          (setq siren-helm--did-hide-treemacs t)
+          (delete-window win)))))
+
+  (defun siren-helm--show-treemacs-maybe ()
+    (when siren-helm--did-hide-treemacs
+      (setq siren-helm--did-hide-treemacs nil)
+      (run-with-timer 0.01 nil #'siren-helm--show-treemacs)))
+
+  (defun siren-helm--show-treemacs ()
+    (when (fboundp 'treemacs-select-window)
+      (let ((win (selected-window)))
+        (treemacs-select-window)
+        (select-window win))))
+
   :config
-  (advice-add 'helm :before 'siren-helm--hide-neotree))
+  (advice-add 'helm :before 'siren-helm--hide-neotree)
+  (advice-add 'helm :before 'siren-helm--hide-treemacs))
 
 (use-package helm-config
   :ensure helm
