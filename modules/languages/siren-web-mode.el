@@ -35,7 +35,9 @@
     "Default tweaks for `web-mode'."
     (setq tab-width 2)
 
-    (siren-display-fill-column -1)
+    (when (version< emacs-version "27.0")
+      (siren-display-fill-column -1))
+
     (company-mode +1)
     (siren-folding)
     (subword-mode +1)))
