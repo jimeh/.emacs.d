@@ -8,6 +8,7 @@
 
 (require 'siren-company)
 (require 'siren-lsp)
+(require 'siren-prettier-js)
 (require 'siren-rainbow)
 
 (use-package css-mode
@@ -24,6 +25,7 @@
     (setq tab-width 2)
 
     (company-mode +1)
+    (prettier-js-mode)
     (lsp)
     (rainbow-mode +1)))
 

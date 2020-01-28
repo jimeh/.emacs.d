@@ -8,6 +8,7 @@
 
 (require 'siren-company)
 (require 'siren-folding)
+(require 'siren-prettier-js)
 (require 'siren-rainbow)
 
 (use-package php-mode
@@ -18,6 +19,7 @@
 
   :init
   (defun siren-php-mode-setup ()
+    (prettier-js-mode)
     (rainbow-mode +1)
     (company-mode +1)
     (subword-mode +1)

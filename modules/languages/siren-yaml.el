@@ -6,8 +6,8 @@
 
 ;;; Code:
 
-(require 'siren-prog-mode)
 (require 'siren-prettier-js)
+(require 'siren-prog-mode)
 
 (use-package yaml-mode
   :mode "\\.yml\\'" "\\.yaml\\'"
@@ -20,8 +20,8 @@
   :init
   (defun siren-yaml-mode-setup ()
     (run-hooks 'prog-mode-hook)
-    (prettier-js-mode)
     (setq tab-width 2)
+    (prettier-js-mode)
     (subword-mode +1)))
 
 (use-package yaml-imenu
