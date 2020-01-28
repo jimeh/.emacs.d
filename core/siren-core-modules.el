@@ -160,6 +160,7 @@
 (require 'siren-thrift)
 (require 'siren-typescript)
 (require 'siren-web-mode)
+(require 'siren-xml)
 (require 'siren-yaml)
 
 (provide 'siren-core-modules)
