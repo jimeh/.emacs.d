@@ -158,6 +158,7 @@
 (require 'siren-sql)
 (require 'siren-text-mode)
 (require 'siren-thrift)
+(require 'siren-toml)
 (require 'siren-typescript)
 (require 'siren-web-mode)
 (require 'siren-xml)
