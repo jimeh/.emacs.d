@@ -9,10 +9,10 @@
 (require 'siren-prettier-js)
 (require 'siren-prog-mode)
 
-(use-package toml-mode
-  :ensure nil ;; loaded from emacs built-ins
+(use-package conf-toml-mode
+  :straight (:type built-in)
   :mode "\\.toml\\'"
-  :hook (toml-mode . siren-toml-mode-setup)
+  :hook (conf-toml-mode . siren-toml-mode-setup)
 
   :init
   (defun siren-toml-mode-setup ()

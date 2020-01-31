@@ -9,7 +9,7 @@
 (require 'siren-rainbow)
 
 (use-package sql-mode
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :mode "\\.sql\\'"
   :hook (sql-mode . siren-sql-mode-setup)
 

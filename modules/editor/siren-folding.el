@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package hideshow
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :demand
 
   :bind
@@ -43,8 +43,8 @@ Borrowed from: http://www.emacswiki.org/emacs/HideShow"
            (1+ (current-column)))))))
 
 (use-package hideshowvis
-  :ensure nil ;; loaded from vendor
-  :demand)
+  :demand
+  :after hideshow)
 
 (provide 'siren-folding)
 ;;; siren-folding.el ends here

@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package flyspell
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :demand
   :diminish flyspell-mode
   :bind

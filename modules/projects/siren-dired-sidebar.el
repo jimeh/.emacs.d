@@ -24,7 +24,7 @@
   (setq dired-sidebar-use-term-integration t))
 
 (use-package all-the-icons-dired
-  :requires dired-sidebar
+  :after dired-sidebar
   :commands (all-the-icons-dired-mode))
 
 (provide 'siren-dired-sidebar)

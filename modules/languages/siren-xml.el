@@ -10,7 +10,7 @@
 (require 'siren-prog-mode)
 
 (use-package nxml-mode
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :hook (nxml-mode . siren-xml-setup)
 
   :custom

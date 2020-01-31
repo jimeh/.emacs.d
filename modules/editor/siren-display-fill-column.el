@@ -9,7 +9,7 @@
 ;; Emacs 27.x and later: Use native display-fill-column-indicator
 (when (not (version< emacs-version "27.0"))
   (use-package display-fill-column-indicator
-    :ensure nil ;; loaded from emacs built-ins
+    :straight (:type built-in)
 
     :hook
     (prog-mode . display-fill-column-indicator-mode)

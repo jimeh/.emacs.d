@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package prog-mode
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :hook
   (prog-mode . siren-prog-mode-setup)
 

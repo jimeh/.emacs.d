@@ -7,8 +7,6 @@
 ;;; Code:
 
 (use-package dired+
-  :ensure nil ;; loaded from vendor
-  :demand
   :bind (:map dired-mode-map
               ("c" . dired-create-directory)
               ("C-l" . diredp-up-directory-reuse-dir-buffer))

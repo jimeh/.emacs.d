@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package zone
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :init
   (defun zone-choose (pgm)
     "Choose a PGM to run for `zone'."

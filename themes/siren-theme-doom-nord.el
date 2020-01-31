@@ -11,8 +11,6 @@
 (require 'siren-folding)
 
 (use-package doom-themes
-  :ensure t
-
   :custom
   ;; Global settings (defaults)
   (doom-themes-enable-bold t)    ; if nil, bold is universally disabled

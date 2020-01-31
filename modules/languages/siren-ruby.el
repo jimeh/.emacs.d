@@ -17,7 +17,7 @@
 (add-to-list 'projectile-globally-ignored-directories "vendor/ruby")
 
 (use-package ruby-mode
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :interpreter "ruby"
   :mode
   "Appraisals\\'"
@@ -155,10 +155,6 @@
 
 (use-package ruby-compilation
   :defer t)
-
-(use-package ruby-guard
-  :ensure nil ;; loaded from vendor
-  :commands ruby-guard)
 
 (use-package ruby-refactor
   :defer t

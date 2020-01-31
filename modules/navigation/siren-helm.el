@@ -6,8 +6,15 @@
 
 ;;; Code:
 
+(require 'imenu)
+
+(use-package imenu-anywhere
+  :config
+  (set-default 'imenu-auto-rescan t)
+  (set-default 'imenu-max-item-length 160)
+  (set-default 'imenu-max-items 400))
+
 (use-package helm
-  :defer t
   :hook
   (helm-minibuffer-set-up . siren-helm--hide-minibuffer-maybe)
   (helm-after-initialize . siren-helm--toggle-source-header-line)
@@ -16,13 +23,26 @@
   (helm-cleanup . siren-helm--show-neotree-maybe)
   (helm-cleanup . siren-helm--show-treemacs-maybe)
 
+  :bind
+  ("M-x" . helm-M-x)
+  ("C-t" . helm-imenu)
+  ("C-c t" . helm-imenu-anywhere)
+  ("C-x C-f" . helm-find-files)
+  ("C-c f f" . helm-for-files)
+  ("C-c f r" . helm-recentf)
+
   :custom
+  (helm-M-x-always-save-history t)
+  (helm-M-x-fuzzy-match t)
   (helm-autoresize-max-height 30)
   (helm-autoresize-min-height 30)
   (helm-autoresize-mode t)
   (helm-buffer-max-length 64)
   (helm-case-fold-search 'smart)
+  (helm-command-prefix-key "C-c h")
   (helm-echo-input-in-header-line t)
+  (helm-ff-file-name-history-use-recentf t)
+  (helm-ff-search-library-in-sexp t)
   (helm-file-name-case-fold-search 'smart)
   (helm-split-window-default-side 'below)
   (siren-helm--did-hide-neotree nil)
@@ -90,14 +110,14 @@
         (select-window win))))
 
   :config
+  (require 'helm-config)
+
+  (require 'helm-command)
+  (require 'helm-files)
+  (require 'helm-imenu)
+
   (advice-add 'helm :before 'siren-helm--hide-neotree)
   (advice-add 'helm :before 'siren-helm--hide-treemacs))
-
-(use-package helm-config
-  :ensure helm
-
-  :custom
-  (helm-command-prefix-key "C-c h"))
 
 (use-package helm-descbinds
   :defer t)

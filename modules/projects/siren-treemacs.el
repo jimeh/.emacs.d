@@ -48,17 +48,17 @@
 
 (use-package treemacs-projectile
   :demand
-  :requires (treemacs projectile)
+  :after (treemacs projectile)
   :custom
   (treemacs-header-function #'treemacs-projectile-create-header))
 
 (use-package treemacs-persp
   :demand
-  :requires treemacs persp-mode)
+  :after treemacs persp-mode)
 
 (use-package treemacs-magit
   :demand
-  :requires treemacs magit)
+  :after treemacs magit)
 
 (use-package lsp-treemacs
   :config

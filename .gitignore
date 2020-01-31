@@ -1,3 +1,7 @@
+straight/*
+!straight/versions/
+!straight/versions/*
+
 *.elc
 .DS_Store
 .lsp-session*

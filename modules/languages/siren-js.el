@@ -12,7 +12,7 @@
 (require 'siren-prettier-js)
 
 (use-package js-mode
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :mode
   "\\.js\\'"
   "\\.pac\\'"

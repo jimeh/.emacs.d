@@ -6,9 +6,7 @@
 
 ;;; Code:
 
-
 (use-package doom-modeline
-  :ensure t
   :hook (after-init . doom-modeline-mode)
 
   :custom
@@ -24,4 +22,4 @@
   (doom-modeline-vcs-max-length 24))
 
 (provide 'siren-doom-modeline)
-;;; siren-doom-mode-line.el ends here
+;;; siren-doom-modeline.el ends here

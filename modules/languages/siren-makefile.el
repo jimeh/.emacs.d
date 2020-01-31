@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package make-mode
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :hook
   (makefile-mode . siren-makefile-mode-setup)
 

@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package sh-script
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :mode
   "\\.tmux"
   "\\.tmuxsh"

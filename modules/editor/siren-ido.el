@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package ido
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
 
   :custom
   (ido-auto-merge-work-directories-length -1)

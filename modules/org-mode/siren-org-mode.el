@@ -12,8 +12,7 @@
 (require 'siren-flyspell)
 (require 'siren-smartparens)
 
-(use-package org-mode
-  :ensure nil ;; loaded from emacs built-ins
+(use-package org
   :bind (:map org-mode-map
               ("C-j" . newline-and-indent)
               ("RET" . newline-and-indent)

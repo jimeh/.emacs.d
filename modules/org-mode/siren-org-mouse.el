@@ -7,8 +7,7 @@
 ;;; Code:
 
 (use-package org-mouse
-  :ensure nil ;; loaded from emacs built-ins
-  )
+  :straight (:type built-in))
 
 (provide 'siren-org-mouse)
 ;;; siren-org-mouse.el ends here

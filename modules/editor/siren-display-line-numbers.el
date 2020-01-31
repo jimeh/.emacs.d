@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package display-line-numbers
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
 
   :hook
   (prog-mode . display-line-numbers-mode))
@@ -20,7 +20,7 @@ Optional ARG is passed directly to mode toggle function."
 ;; Fix issue were the left fringe's is cut off by one pixel on the left side.
 ;; from: https://github.com/dgutov/diff-hl/issues/94#issuecomment-334168416
 (use-package frame
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :defer t
   :config
   (progn
