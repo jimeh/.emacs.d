@@ -7,7 +7,9 @@
 ;;; Code:
 
 (use-package undo-tree
-  :demand
+  :hook
+  (after-init . global-undo-tree-mode)
+
   :bind
   ("C-x u" . undo-tree-visualize)
   ("M--" . undo-tree-undo)
@@ -22,10 +24,7 @@
   ;; autosave the undo-tree history
   (undo-tree-history-directory-alist
    `((".*" . ,(expand-file-name "undo-tree-history" siren-cache-dir))))
-  (undo-tree-auto-save-history t)
-
-  :config
-  (global-undo-tree-mode))
+  (undo-tree-auto-save-history nil))
 
 (provide 'siren-undo-tree)
 ;;; siren-undo-tree.el ends here

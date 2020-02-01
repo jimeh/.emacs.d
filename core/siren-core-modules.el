@@ -32,6 +32,7 @@
 (require 'siren-rainbow)
 (require 'siren-smex)
 (require 'siren-undo-tree)
+(require 'siren-undohist)
 
 ;; Help
 (require 'siren-helpful)
