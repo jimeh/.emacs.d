@@ -9,9 +9,8 @@
 (setq siren-themes-dir (expand-file-name "themes" siren-dir))
 (siren-recursive-add-to-load-path siren-themes-dir)
 
-(if window-system
-    (require 'siren-theme-doom-vibrant)
-  (require 'siren-theme-tomorrow-night-paradise))
+;; Use doom-vibrant theme
+(require 'siren-theme-doom-vibrant)
 
 (provide 'siren-core-theme)
 ;;; siren-core-theme.el ends here

@@ -52,6 +52,12 @@
   (persp-nil-name "nil")
 
   :init
+  ;; Do not auto save/load in terminal. My main instance of Emacs runs in GUI,
+  ;; terminal based instances are for smaller random things.
+  (when (not window-system)
+    (setq persp-auto-resume-time -1
+          persp-auto-save-opt 0))
+
   (defun siren-persp-mode-ibuffer (arg)
       (interactive "P")
     (with-persp-buffer-list () (ibuffer arg)))
