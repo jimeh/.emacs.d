@@ -58,6 +58,9 @@
     (setq persp-auto-resume-time -1
           persp-auto-save-opt 0))
 
+  (defun siren-persp-mode-filter-magit-buffers (buf)
+    (string-match "^magit.*:" (buffer-name buf)))
+
   (defun siren-persp-mode-ibuffer (arg)
       (interactive "P")
     (with-persp-buffer-list () (ibuffer arg)))
@@ -79,6 +82,9 @@
       (message "perspectives: %s" output)))
 
   :config
+  (add-to-list 'persp-common-buffer-filter-functions
+               'siren-persp-mode-filter-magit-buffers)
+
   (add-hook 'persp-activated-functions
             #'siren-persp-mode-show-current-perspective-name))
 
