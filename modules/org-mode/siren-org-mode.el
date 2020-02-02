@@ -25,7 +25,7 @@
   :hook (org-mode . siren-org-mode-setup)
 
   :custom
-  (org-export-backends '(ascii html icalendar latex md confluence))
+  (org-export-backends '(ascii html icalendar latex md))
   (org-export-with-section-numbers nil)
   (org-export-with-sub-superscripts '{})
 
