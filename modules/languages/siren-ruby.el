@@ -10,7 +10,6 @@
 (require 'siren-folding)
 (require 'siren-lsp)
 (require 'siren-projectile)
-(require 'siren-realgud)
 (require 'siren-toggle-quotes)
 
 (add-to-list 'projectile-globally-ignored-directories "vendor/bundle")
@@ -94,10 +93,6 @@
   :defer t
   :config
   (global-rbenv-mode))
-
-(use-package realgud-byebug
-  :commands realgud:byebug
-  :after realgud)
 
 (use-package robe
   :defer t

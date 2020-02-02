@@ -40,7 +40,6 @@
 (require 'siren-flycheck)
 
 ;; Misc.
-(require 'siren-paradox)
 (require 'siren-restart-emacs)
 (require 'siren-zone)
 
@@ -57,14 +56,12 @@
 (require 'siren-helm-swoop)
 (require 'siren-move-beginning-of-line)
 (require 'siren-scroll-half-screen)
-;; (require 'siren-goto-symbol)
 
 ;; Project management
 (require 'siren-editorconfig)
 (require 'siren-helm-projectile)
 (require 'siren-projectile)
 (require 'siren-treemacs)
-;; (require 'siren-neotree)
 
 ;; Language Servers
 (require 'siren-lsp)
@@ -102,7 +99,6 @@
 (require 'siren-github)
 (require 'siren-magit)
 (require 'siren-magit-todos)
-;; (require 'siren-magithub)
 
 ;; Window management
 (require 'siren-buffer-move)
