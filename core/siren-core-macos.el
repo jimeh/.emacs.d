@@ -1,8 +1,8 @@
-;;; siren-core-osx.el --- jimeh's Emacs Siren: OS X specific settings.
+;;; siren-core-macos.el --- jimeh's Emacs Siren: macOS specific settings.
 
 ;;; Commentary:
 
-;; OS X specific settings and tweaks for Siren.
+;; macOS specific settings and tweaks for Siren.
 
 ;;; Code:
 
@@ -10,7 +10,7 @@
 (if window-system
     (set-face-attribute 'default nil :family "Monaco" :height 120))
 
-;; Mac OS X Fullscreen (requires Emacs 24.4 or later)
+;; macOS Fullscreen (requires Emacs 24.4 or later)
 (global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
 
 ;; modifier keys
@@ -20,8 +20,11 @@
 ;; (setq ns-command-modifier 'super)
 (setq ns-function-modifier 'hyper)
 
-;; Don't use OSX Native fullscreen mode
+;; Don't use macOS' Native fullscreen mode.
 (setq ns-use-native-fullscreen nil)
 
-(provide 'siren-core-osx)
-;;; siren-core-osx.el ends here
+;; Set initial frame to fullscreen when Emacs starts.
+(add-to-list 'initial-frame-alist '(fullscreen . fullboth))
+
+(provide 'siren-core-macos)
+;;; siren-core-macos.el ends here

@@ -43,9 +43,9 @@
 (require 'siren-core-ui)
 (require 'siren-core-editor)
 
-;; OSX specific
+;; macOS specific
 (when (eq system-type 'darwin)
-  (require 'siren-core-osx))
+  (require 'siren-core-macos))
 
 ;; Linux specific
 (when (eq system-type 'gnu/linux)
