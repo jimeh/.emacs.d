@@ -6,6 +6,20 @@
 
 ;;; Code:
 
+(use-package dired
+  :straight (:type built-in)
+
+  :config
+  (when (string= system-type "darwin")
+    (let ((gls (executable-find "gls")))
+      (when gls
+        (setq dired-use-ls-dired t
+              insert-directory-program gls
+              dired-listing-switches "-aBhl")))))
+
+(use-package dired-x
+  :straight (:type built-in))
+
 (use-package dired+
   :bind (:map dired-mode-map
               ("c" . dired-create-directory)
