@@ -29,6 +29,7 @@
 (require 'siren-highlight-symbol)
 (require 'siren-ido)
 (require 'siren-minions)
+(require 'siren-mwim)
 (require 'siren-rainbow)
 (require 'siren-smex)
 (require 'siren-undo-tree)
@@ -55,7 +56,6 @@
 (require 'siren-helm-ag)
 (require 'siren-helm-open-github)
 (require 'siren-helm-swoop)
-(require 'siren-move-beginning-of-line)
 (require 'siren-scroll-half-screen)
 
 ;; Project management
