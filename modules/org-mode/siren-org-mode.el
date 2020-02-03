@@ -44,7 +44,10 @@
     (flyspell-mode)
     (smartparens-mode +1)
     (visual-line-mode +1)
-    (whitespace-mode +1)))
+    (whitespace-mode +1))
+
+  :config
+  (require 'org-mouse))
 
 (provide 'siren-org-mode)
 ;;; siren-org-mode.el ends here
