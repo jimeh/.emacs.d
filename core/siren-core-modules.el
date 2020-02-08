@@ -100,7 +100,6 @@
 (require 'siren-git-timemachine)
 (require 'siren-github)
 (require 'siren-magit)
-(require 'siren-magit-todos)
 
 ;; Window management
 (require 'siren-buffer-move)
