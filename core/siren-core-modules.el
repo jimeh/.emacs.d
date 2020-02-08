@@ -48,6 +48,7 @@
 ;; Navigation
 (require 'siren-anzu)
 (require 'siren-avy)
+(require 'siren-centaur-tabs)
 (require 'siren-dired)
 (require 'siren-direx)
 (require 'siren-dumb-jump)
