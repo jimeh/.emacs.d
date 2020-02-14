@@ -36,16 +36,26 @@
   ;; (doom-themes-org-config)
 
   ;; Override some of doom-nord-light's colors.
-  (setq fci-rule-color (doom-color 'base3))
-  (set-face-attribute 'hideshowvis-hidable-face nil
-                      :foreground (doom-color 'base7))
-  (set-face-attribute 'font-lock-variable-name-face nil
-                      :foreground (doom-lighten (doom-color 'blue) 0.25))
-  (set-face-attribute 'vertical-border nil
-                      :foreground (doom-darken (doom-color 'vertical-bar) 0.1))
+  (set-face-foreground 'font-lock-variable-name-face (doom-lighten 'blue 0.25))
+  (set-face-foreground 'vertical-border (doom-darken 'vertical-bar 0.1))
+  (set-face-background 'vertical-border (doom-darken 'vertical-bar 0.1))
+
   (when (not (version< emacs-version "27.0"))
-    (set-face-attribute 'fill-column-indicator nil
-                        :foreground (doom-lighten (doom-color 'base3) 0.10))))
+    (set-face-foreground 'fill-column-indicator (doom-lighten 'base3 0.10)))
+
+  (with-eval-after-load 'diff-hl
+    (set-face-foreground 'diff-hl-insert (doom-blend 'vc-added 'bg 0.7))
+    (set-face-background 'diff-hl-insert (doom-blend 'vc-added 'bg 0.2))
+    (set-face-foreground 'diff-hl-delete (doom-blend 'vc-deleted 'bg 0.7))
+    (set-face-background 'diff-hl-delete (doom-blend 'vc-deleted 'bg 0.2))
+    (set-face-foreground 'diff-hl-change (doom-blend 'vc-modified 'bg 0.7))
+    (set-face-background 'diff-hl-change (doom-blend 'vc-modified 'bg 0.2)))
+
+  (with-eval-after-load 'hideshowvis
+    (set-face-foreground 'hideshowvis-hidable-face (doom-color 'base7)))
+
+  (with-eval-after-load 'fill-column-indicator
+    (setq fci-rule-color (doom-lighten (doom-color 'base3) 0.10))))
 
 (provide 'siren-theme-doom-nord-light)
 ;;; siren-theme-doom-nord-light.el ends here
