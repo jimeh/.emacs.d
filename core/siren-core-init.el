@@ -34,9 +34,6 @@
 (require 'siren-core-custom)
 (require 'siren-core-funcs)
 
-;; Ensure vendor directory load-paths are configured
-(require 'siren-core-vendor)
-
 ;; Continue core stuff
 (require 'siren-core-packages)
 (require 'siren-core-env)
