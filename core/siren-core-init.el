@@ -55,8 +55,5 @@
 ;; The modules
 (require 'siren-core-modules)
 
-;; The theme
-(require 'siren-core-theme)
-
 (provide 'siren-core-init)
 ;;; siren-core-init.el ends here

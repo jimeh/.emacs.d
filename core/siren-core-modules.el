@@ -157,5 +157,8 @@
 (require 'siren-xml)
 (require 'siren-yaml)
 
+;; Theme
+(require 'siren-doom-themes)
+
 (provide 'siren-core-modules)
 ;;; siren-core-modules.el ends here

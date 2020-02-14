@@ -6,9 +6,6 @@
 
 ;;; Code:
 
-;; Work-around bug in Emacs 26.2 preventing GNU ELPA to work over HTTPS.
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
-
 ;; Initialize straight.el
 (setq straight-cache-autoloads t
       straight-check-for-modifications '(check-on-save find-when-checking)
