@@ -4,6 +4,8 @@ straight/*
 
 *.elc
 .DS_Store
+.cache/*
+.extension/*
 .lsp-session*
 .mc-lists.el
 ac-comphist.dat
