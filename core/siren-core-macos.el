@@ -6,6 +6,11 @@
 
 ;;; Code:
 
+;; Enable transparent titlebar
+(use-package ns-auto-titlebar
+  :config
+  (ns-auto-titlebar-mode))
+
 ;; Set default font
 (if window-system
     (set-face-attribute 'default nil :family "Monaco" :height 120))
