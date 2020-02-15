@@ -7,6 +7,9 @@
 ;;; Code:
 
 (use-package shell-pop
+  :bind
+  ("C-`" . shell-pop)
+
   :custom
   (shell-pop-full-span t)
   (shell-pop-shell-type '("ansi-term" "*ansi-term*"
