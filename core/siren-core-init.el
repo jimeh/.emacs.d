@@ -36,6 +36,7 @@
 
 ;; Continue core stuff
 (require 'siren-core-packages)
+(require 'siren-core-performance)
 (require 'siren-core-env)
 (require 'siren-core-ui)
 (require 'siren-core-editor)
