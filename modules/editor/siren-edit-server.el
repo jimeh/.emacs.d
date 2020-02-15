@@ -8,7 +8,7 @@
 
 (use-package edit-server
   :if window-system
-  :hook (after-init . edit-server-start)
+  :hook (emacs-startup . edit-server-start)
 
   :custom
   (edit-server-default-major-mode 'markdown-mode)

@@ -8,7 +8,7 @@
 
 (use-package persp-mode
   :hook
-  (after-init . persp-mode)
+  (emacs-startup . persp-mode)
 
   :bind
   ("s-}" . persp-next)

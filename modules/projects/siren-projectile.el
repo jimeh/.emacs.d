@@ -8,7 +8,7 @@
 
 (use-package projectile
   :hook
-  (after-init . projectile-mode)
+  (emacs-startup . projectile-mode)
 
   :bind
   ("C-c p p" . projectile-switch-project)

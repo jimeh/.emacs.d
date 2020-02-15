@@ -10,8 +10,8 @@
 
 (use-package diff-hl
   :hook
-  (after-init . global-diff-hl-mode)
-  (after-init . diff-hl-flydiff-mode)
+  (emacs-startup . global-diff-hl-mode)
+  (emacs-startup . diff-hl-flydiff-mode)
   (dired-mode . diff-hl-dired-mode)
   (magit-post-refresh . diff-hl-magit-post-refresh))
 

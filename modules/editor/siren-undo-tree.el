@@ -8,7 +8,7 @@
 
 (use-package undo-tree
   :hook
-  (after-init . global-undo-tree-mode)
+  (emacs-startup . global-undo-tree-mode)
 
   :bind
   ("C-x u" . undo-tree-visualize)

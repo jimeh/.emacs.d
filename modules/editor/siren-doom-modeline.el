@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package doom-modeline
-  :hook (after-init . doom-modeline-mode)
+  :hook (emacs-startup . doom-modeline-mode)
 
   :custom
   (doom-modeline-bar-width 3)

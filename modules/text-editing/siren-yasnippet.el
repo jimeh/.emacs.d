@@ -9,7 +9,7 @@
 (use-package yasnippet-snippets)
 
 (use-package yasnippet
-  :hook (after-init . yas-global-mode)
+  :hook (emacs-startup . yas-global-mode)
   :diminish yas-minor-mode)
 
 (provide 'siren-yasnippet)
