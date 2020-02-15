@@ -66,7 +66,8 @@
 (global-auto-revert-mode t)
 
 ;; diminish keeps the modeline tidy
-(require 'diminish)
+(use-package diminish)
+
 (diminish 'visual-line-mode)
 
 ;; Enable mouse support when running in a console

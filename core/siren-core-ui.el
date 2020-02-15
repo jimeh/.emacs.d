@@ -48,11 +48,5 @@
                               (abbreviate-file-name (buffer-file-name))
                             "%b"))))
 
-(require 'smart-mode-line)
-(setq sml/no-confirm-load-theme t)
-;; delegate theming to the currently active theme
-(setq sml/theme nil)
-(add-hook 'after-init-hook #'sml/setup)
-
 (provide 'siren-core-ui)
 ;;; siren-core-ui.el ends here

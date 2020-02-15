@@ -35,10 +35,6 @@
                 (not (y-or-n-p (format "Delete repository %S?" repo))))
       (delete-directory (straight--repos-dir repo) 'recursive 'trash))))
 
-(straight-use-package 'dash)
-(straight-use-package 'diminish)
-(straight-use-package 'exec-path-from-shell)
-(straight-use-package 'smart-mode-line)
 (straight-use-package 'use-package)
 
 (provide 'siren-core-packages)
