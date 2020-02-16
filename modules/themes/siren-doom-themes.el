@@ -11,6 +11,10 @@
 
 (use-package doom-themes
   :custom
+  ;; Initial theme to load.
+  (siren-doom-themes-init-theme 'doom-vibrant)
+
+  ;; Global doom-themes options
   (doom-themes-enable-bold t)    ; if nil, bold is universally disabled
   (doom-themes-enable-italic t)  ; if nil, italics is universally disabled
   (doom-themes-treemacs-theme "doom-colors")
@@ -30,7 +34,7 @@
 
   :config
   ;; By default load the doom-vibrant theme.
-  (siren-doom-vibrant)
+  (siren-doom-themes-load siren-doom-themes-init-theme)
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
@@ -42,35 +46,54 @@
   (doom-themes-org-config)
 
   :init
-  (defun siren-doom-vibrant ()
-    (interactive)
-    (load-theme 'doom-vibrant t)
+  (defun siren-doom-themes-load (theme)
+    (interactive (list (completing-read "Choose theme: "
+                                        (siren-doom-themes-list))))
+
+    (mapc #'disable-theme custom-enabled-themes)
+    (load-theme (if (string= (type-of theme) "string") (intern theme) theme) t)
     (siren-doom-themes-overrides))
 
-  (defun siren-doom-nord-light ()
+  (defun siren-doom-themes-vibrant-theme ()
     (interactive)
-    (load-theme 'doom-nord-light t)
-    (siren-doom-themes-overrides))
+    (siren-doom-themes-load 'doom-vibrant))
+
+  (defun siren-doom-themes-nord-light-theme ()
+    (interactive)
+    (siren-doom-themes-load 'doom-nord-light))
+
+  (defun siren-doom-themes-list ()
+    (seq-filter
+     (lambda (n) (string-prefix-p "doom-" (symbol-name n)))
+     (custom-available-themes)))
 
   (defun siren-doom-themes-overrides ()
+    (interactive)
     ;; Override some of doom-vibrant's colors.
-    (set-face-foreground 'font-lock-variable-name-face (doom-lighten 'blue 0.25))
-    (set-face-foreground 'vertical-border (doom-darken 'vertical-bar 0.1))
-    (set-face-background 'vertical-border (doom-darken 'vertical-bar 0.1))
+    (set-face-attribute 'font-lock-variable-name-face nil
+                         :foreground (doom-lighten 'blue 0.25))
+    (set-face-attribute 'vertical-border nil
+                        :foreground (doom-darken 'vertical-bar 0.1)
+                        :background (doom-darken 'vertical-bar 0.1))
 
     (when (not (version< emacs-version "27.0"))
-      (set-face-foreground 'fill-column-indicator (doom-lighten 'base3 0.10)))
+      (set-face-attribute 'fill-column-indicator nil
+                          :foreground (doom-lighten 'base3 0.10)))
 
     (with-eval-after-load 'diff-hl
-      (set-face-foreground 'diff-hl-insert (doom-blend 'vc-added 'bg 0.7))
-      (set-face-background 'diff-hl-insert (doom-blend 'vc-added 'bg 0.2))
-      (set-face-foreground 'diff-hl-delete (doom-blend 'vc-deleted 'bg 0.7))
-      (set-face-background 'diff-hl-delete (doom-blend 'vc-deleted 'bg 0.2))
-      (set-face-foreground 'diff-hl-change (doom-blend 'vc-modified 'bg 0.7))
-      (set-face-background 'diff-hl-change (doom-blend 'vc-modified 'bg 0.2)))
+      (set-face-attribute 'diff-hl-insert nil
+                          :foreground (doom-blend 'vc-added 'bg 0.7)
+                          :background (doom-blend 'vc-added 'bg 0.2))
+      (set-face-attribute 'diff-hl-delete nil
+                          :foreground (doom-blend 'vc-deleted 'bg 0.7)
+                          :background (doom-blend 'vc-deleted 'bg 0.2))
+      (set-face-attribute 'diff-hl-change nil
+                          :foreground (doom-blend 'vc-modified 'bg 0.7)
+                          :background (doom-blend 'vc-modified 'bg 0.2)))
 
     (with-eval-after-load 'hideshowvis
-      (set-face-foreground 'hideshowvis-hidable-face (doom-color 'base7)))
+      (set-face-attribute 'hideshowvis-hidable-face nil
+                          :foreground (doom-color 'base7)))
 
     (with-eval-after-load 'fill-column-indicator
       (setq fci-rule-color (doom-lighten (doom-color 'base3) 0.10)))))
