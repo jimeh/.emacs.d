@@ -113,6 +113,7 @@
 ;; Org-mode
 (require 'siren-htmlize)
 (require 'siren-org-mode)
+(require 'siren-ob-mermaid)
 (require 'siren-ox-gfm)
 (require 'siren-ox-jira)
 
@@ -140,6 +141,7 @@
 (require 'siren-lua)
 (require 'siren-makefile)
 (require 'siren-markdown)
+(require 'siren-mermaid)
 (require 'siren-php)
 (require 'siren-plantuml)
 (require 'siren-ruby)
