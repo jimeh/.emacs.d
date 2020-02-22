@@ -59,7 +59,7 @@
           persp-auto-save-opt 0))
 
   (defun siren-persp-mode-filter-magit-buffers (buf)
-    (string-match "^magit.*:" (buffer-name buf)))
+    (string-prefix-p "magit" (buffer-name buf)))
 
   (defun siren-persp-mode-ibuffer (arg)
       (interactive "P")

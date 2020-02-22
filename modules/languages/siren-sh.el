@@ -9,9 +9,12 @@
 (use-package sh-script
   :straight (:type built-in)
   :mode
-  "\\.tmux"
-  "\\.tmuxsh"
-  "\\.tmuxtheme"
+  "\\.tmux\\'"
+  "\\.tmuxsh\\'"
+  "\\.tmuxtheme\\'"
+  "zshenv\\'"
+  "zshrc\\'"
+
   :hook
   (sh-mode . siren-sh-mode-setup)
 

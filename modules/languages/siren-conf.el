@@ -9,7 +9,13 @@
 (require 'siren-prog-mode)
 
 (use-package conf-mode
-  :mode "Procfile\\'" "\\.conf\\'" "\\.cfg\\'"
+  :mode
+  "/Procfile\\'"
+  "/\\.env\\'"
+  "/\\.env\\.[^/]+\\'"
+  "\\.cfg\\'"
+  "\\.conf\\'"
+
   :hook (conf-mode . siren-conf-mode-setup)
 
   :init
