@@ -119,7 +119,7 @@
   (rspec-primary-source-dirs '("app"))
   (rspec-spec-command "env COVERAGE=0 rspec")
   (rspec-use-opts-file-when-available nil)
-  (rspec-use-spring-when-possible t)
+  (rspec-use-spring-when-possible nil)
 
   :init
   (defun siren-rspec-mode-setup ())
