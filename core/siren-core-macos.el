@@ -29,7 +29,7 @@
 (setq ns-use-native-fullscreen nil)
 
 ;; Set initial frame to fullscreen when Emacs starts.
-(add-to-list 'initial-frame-alist '(fullscreen . fullboth))
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
 (provide 'siren-core-macos)
 ;;; siren-core-macos.el ends here
