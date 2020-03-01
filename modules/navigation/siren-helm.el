@@ -24,7 +24,6 @@
   (helm-cleanup . siren-helm--show-treemacs-maybe)
 
   :bind
-  ("M-x" . helm-M-x)
   ("C-t" . helm-imenu)
   ("C-c t" . helm-imenu-anywhere)
   ("C-x C-f" . helm-find-files)

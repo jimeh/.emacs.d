@@ -21,6 +21,7 @@
 (require 'siren-dash-at-point)
 
 ;; Editor
+(require 'siren-amx)
 (require 'siren-browse-kill-ring)
 (require 'siren-display-fill-column)
 (require 'siren-display-indentation)
@@ -31,7 +32,6 @@
 (require 'siren-minions)
 (require 'siren-mwim)
 (require 'siren-rainbow)
-(require 'siren-smex)
 (require 'siren-undo-tree)
 (require 'siren-undohist)
 

@@ -21,7 +21,7 @@
   (ido-use-faces nil)
   (ido-use-filename-at-point nil)
 
-  :init
+  :config
   (ido-mode 1))
 
 (use-package ido-completing-read+
