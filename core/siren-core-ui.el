@@ -27,7 +27,7 @@
 ;;       scroll-conservatively 100000
 ;;       scroll-preserve-screen-position 1)
 ;; (setq redisplay-dont-pause t)
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 10))) ;; one line at a time
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-margin 4)
 (setq scroll-step 1)
