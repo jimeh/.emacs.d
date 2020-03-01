@@ -117,6 +117,10 @@
 (require 'siren-ox-gfm)
 (require 'siren-ox-jira)
 
+;; Tools
+(require 'siren-docker)
+(require 'siren-kubernetes)
+
 ;; Writing
 (require 'siren-writeroom)
 
