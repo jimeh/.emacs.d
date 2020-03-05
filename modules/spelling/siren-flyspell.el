@@ -6,12 +6,12 @@
 
 ;;; Code:
 
+(require 'siren-ivy)
+
 (use-package flyspell
   :straight (:type built-in)
   :demand
   :diminish flyspell-mode
-  :bind
-  ("s-." . flyspell-correct-word-before-point)
 
   :hook
   (prog-mode . flyspell-prog-mode)
@@ -26,6 +26,11 @@
   (unbind-key "C-," flyspell-mode-map)
   ;; Unbind keys used by siren-resize-window module.
   (unbind-key "C-;" flyspell-mode-map))
+
+(use-package flyspell-correct-ivy
+  :bind ("C-/" . flyspell-correct-wrapper)
+  :custom
+  (flyspell-correct-interface #'flyspell-correct-ivy))
 
 (provide 'siren-flyspell)
 ;;; siren-flyspell.el ends here

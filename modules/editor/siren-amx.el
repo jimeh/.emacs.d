@@ -12,8 +12,6 @@
   :bind
   ("M-x" . amx)
   ("C-x C-m" . amx)
-  ("C-c C-m" . amx)
-  ("C-c C-c M-x" . execute-extended-command)
 
   :custom
   (amx-backend 'ivy)
