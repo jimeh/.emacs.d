@@ -119,6 +119,7 @@
 
 ;; Tools
 (require 'siren-docker)
+(require 'siren-helm-make)
 (require 'siren-kubernetes)
 
 ;; Writing
