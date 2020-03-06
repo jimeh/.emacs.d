@@ -95,6 +95,30 @@
       (set-face-attribute 'hideshowvis-hidable-face nil
                           :foreground (doom-color 'base7)))
 
+    (with-eval-after-load 'auto-highlight-symbol
+      (set-face-attribute 'ahs-definition-face nil
+                          :foreground 'unspecified
+                          :background (doom-lighten 'bg 0.1)
+                          :underline t)
+      (set-face-attribute 'ahs-edit-mode-face nil
+                          :foreground (doom-lighten 'fg 1.0)
+                          :background (doom-darken 'red 0.25))
+      (set-face-attribute 'ahs-face nil
+                          :foreground 'unspecified
+                          :background (doom-lighten 'bg 0.1))
+      (set-face-attribute 'ahs-plugin-bod-face nil
+                          :foreground 'unspecified
+                          :background (doom-color 'bg-alt))
+      (set-face-attribute 'ahs-plugin-defalt-face nil
+                          :foreground 'unspecified
+                          :background (doom-color 'bg-alt))
+      (set-face-attribute 'ahs-plugin-whole-buffer-face nil
+                          :foreground 'unspecified
+                          :background (doom-color 'bg-alt))
+      (set-face-attribute 'ahs-warning-face nil
+                          :foreground (doom-color 'red)
+                          :background 'unspecified))
+
     (with-eval-after-load 'fill-column-indicator
       (setq fci-rule-color (doom-lighten (doom-color 'base3) 0.10)))))
 

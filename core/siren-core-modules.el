@@ -14,6 +14,9 @@
 (require 'siren-global-keybindings)
 (require 'siren-packages)
 
+;; Theme
+(require 'siren-doom-themes)
+
 ;; Completion
 (require 'siren-company)
 
@@ -22,12 +25,12 @@
 
 ;; Editor
 (require 'siren-amx)
+(require 'siren-auto-highlight-symbol)
 (require 'siren-browse-kill-ring)
 (require 'siren-display-fill-column)
 (require 'siren-display-indentation)
 (require 'siren-display-line-numbers)
 (require 'siren-folding)
-(require 'siren-highlight-symbol)
 (require 'siren-ido)
 (require 'siren-minions)
 (require 'siren-mwim)
@@ -163,9 +166,6 @@
 (require 'siren-web-mode)
 (require 'siren-xml)
 (require 'siren-yaml)
-
-;; Theme
-(require 'siren-doom-themes)
 
 (provide 'siren-core-modules)
 ;;; siren-core-modules.el ends here
