@@ -10,7 +10,7 @@
 
 (use-package flyspell
   :straight (:type built-in)
-  :demand
+  :defer t
   :diminish flyspell-mode
 
   :hook
