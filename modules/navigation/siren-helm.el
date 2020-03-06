@@ -30,6 +30,8 @@
   ("C-c f f" . helm-for-files)
   ("C-c f r" . helm-recentf)
   ("C-c C-m" . helm-M-x)
+  (:map helm-command-map
+        ("M" . helm-man-woman))
 
   :custom
   (helm-M-x-always-save-history t)
