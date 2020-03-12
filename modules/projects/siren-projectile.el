@@ -56,6 +56,7 @@
   (projectile-sort-order 'recently-active)
 
   :config
+  (push "Rakefile" projectile-project-root-files)
   ;; Treat separate directories with Gemfiles within a single git repo as
   ;; separate projects.
   (push "Gemfile" projectile-project-root-files-bottom-up))
