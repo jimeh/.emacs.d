@@ -30,18 +30,16 @@
   (add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in")
 
   (defun siren-go-mode-setup ()
-    ;; Prefer goimports to gofmt if installed
-    (let ((goimports (executable-find "goimports")))
-      (when goimports
-        (setq gofmt-command goimports)))
+    (setq-local tab-width 4
+                company-echo-delay 0
+                company-minimum-prefix-length 1)
 
-    (setq tab-width 4)
-
-    (add-hook 'before-save-hook #'gofmt-before-save 0 t)
+    (add-hook 'before-save-hook #'lsp-format-buffer t t)
+    (add-hook 'before-save-hook #'lsp-organize-imports t t)
 
     (highlight-symbol-mode -1)
     (company-mode +1)
-    (lsp)
+    (lsp-deferred)
     (siren-folding)
     (subword-mode +1))
 
@@ -79,10 +77,12 @@
   :after (go-mode)
   :hook (go-mode . siren-go-projectile-setup)
 
+  :custom
+  ;; prevent go-projectile from screwing up GOPATH
+  (go-projectile-switch-gopath 'never)
+
   :init
-  (defun siren-go-projectile-setup ()
-    ;; prevent go-projectile from screwing up GOPATH
-    (setq go-projectile-switch-gopath 'never)))
+  (defun siren-go-projectile-setup ()))
 
 (use-package flycheck-golangci-lint
   :hook
