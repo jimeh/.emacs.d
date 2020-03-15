@@ -37,6 +37,7 @@
 (require 'siren-rainbow)
 (require 'siren-undo-tree)
 (require 'siren-undohist)
+(require 'siren-which-key)
 
 ;; Help
 (require 'siren-helpful)
