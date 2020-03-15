@@ -45,6 +45,7 @@
 (require 'siren-flycheck)
 
 ;; Misc.
+(require 'siren-grip)
 (require 'siren-restart-emacs)
 (require 'siren-zone)
 
