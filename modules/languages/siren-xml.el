@@ -11,6 +11,7 @@
 
 (use-package nxml-mode
   :straight (:type built-in)
+  :defer t
   :hook (nxml-mode . siren-xml-setup)
 
   :custom

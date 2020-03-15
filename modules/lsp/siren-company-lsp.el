@@ -10,7 +10,7 @@
 (require 'siren-lsp)
 
 (use-package company-lsp
-  :commands company-lsp)
+  :defer t)
 
 (provide 'siren-company-lsp)
 ;;; siren-company-lsp.el ends here

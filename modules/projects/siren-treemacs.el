@@ -6,15 +6,12 @@
 
 ;;; Code:
 
-(require 'siren-dired)
 (require 'siren-lsp)
 (require 'siren-magit)
 (require 'siren-persp-mode)
 (require 'siren-projectile)
 
 (use-package treemacs
-  :demand
-
   :bind
   ("C-x C-p" . treemacs)
   ("C-x p" . treemacs-select-window)
@@ -34,6 +31,15 @@
   (treemacs-width 40)
 
   :config
+  (with-eval-after-load 'projectile
+    (require 'treemacs-projectile))
+  (with-eval-after-load 'persp-mode
+    (require 'treemacs-persp))
+  (with-eval-after-load 'magit
+    (require 'treemacs-magit))
+  (with-eval-after-load 'lsp-mode
+    (require 'lsp-treemacs))
+
   (treemacs-follow-mode t)
   (treemacs-filewatch-mode t)
 
@@ -47,20 +53,18 @@
    'file-node-closed #'treemacs-visit-node-in-most-recently-used-window))
 
 (use-package treemacs-projectile
-  :demand
-  :after (treemacs projectile)
+  :defer t
   :custom
   (treemacs-header-function #'treemacs-projectile-create-header))
 
 (use-package treemacs-persp
-  :demand
-  :after treemacs persp-mode)
+  :defer t)
 
 (use-package treemacs-magit
-  :demand
-  :after treemacs magit)
+  :defer t)
 
 (use-package lsp-treemacs
+  :defer t
   :config
   (lsp-treemacs-sync-mode 1)
   (setq lsp-metals-treeview-show-when-views-received t))

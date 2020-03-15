@@ -7,7 +7,6 @@
 ;;; Code:
 
 (use-package resize-window
-  :commands resize-window
   :bind
   ("C-;" . resize-window))
 

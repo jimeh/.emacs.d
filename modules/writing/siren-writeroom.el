@@ -7,10 +7,7 @@
 ;;; Code:
 
 (use-package writeroom-mode
-  :commands
-  writeroom-mode
-  global-writeroom-mode
-
+  :defer t
   :bind
   (:map writeroom-mode-map
         ("C-M-<" . writeroom-decrease-width)

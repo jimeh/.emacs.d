@@ -103,8 +103,8 @@
   :hook (ruby-mode . robe-mode)
 
   :init
-  (eval-after-load 'company
-    '(push 'company-robe company-backends))
+  (with-eval-after-load 'company
+    (push 'company-robe company-backends))
 
   :config
   ;; Unbind keys used by siren-expand-region module.
@@ -140,7 +140,7 @@
               ("C-c . D" . rubocop-autocorrect-directory)))
 
 (use-package rubocopfmt
-  :commands (rubocopfmt rubocopfmt-mode)
+  :defer t
   :bind (:map ruby-mode-map
               ("C-c C-f" . rubocopfmt))
   :hook

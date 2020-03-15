@@ -125,11 +125,12 @@
 (require 'siren-helm-make)
 (require 'siren-kubernetes)
 
-;; Writing
+;; ;; Writing
 (require 'siren-writeroom)
 
 ;; Languages
 (require 'siren-prog-mode)
+(require 'siren-applescript)
 (require 'siren-coffee)
 (require 'siren-conf)
 (require 'siren-css)
@@ -146,6 +147,7 @@
 (require 'siren-js)
 (require 'siren-json)
 (require 'siren-jsx)
+(require 'siren-lisp)
 (require 'siren-lua)
 (require 'siren-makefile)
 (require 'siren-markdown)

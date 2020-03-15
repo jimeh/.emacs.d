@@ -37,6 +37,8 @@
 
     (setq tab-width 4)
 
+    (add-hook 'before-save-hook #'gofmt-before-save 0 t)
+
     (highlight-symbol-mode -1)
     (company-mode +1)
     (lsp)
@@ -45,8 +47,6 @@
 
   :config
   (message "loading go-mode")
-
-  (add-hook 'before-save-hook #'gofmt-before-save)
 
   (when (memq window-system '(mac ns))
     (exec-path-from-shell-copy-env "GOPATH"))
@@ -57,10 +57,11 @@
   (add-to-list 'completion-ignored-extensions ".test"))
 
 (use-package go-dlv
-  :commands dlv dlv-current-func)
+  :defer t)
 
 (use-package gotest
-  :after go-mode
+  :defer t
+  :after (go-mode)
   :bind (:map go-mode-map
               ("C-c , a" . go-test-current-project)
               ("C-c , v" . go-test-current-file)
@@ -74,7 +75,8 @@
   (go-test-verbose t))
 
 (use-package go-projectile
-  :after go-mode
+  :defer t
+  :after (go-mode)
   :hook (go-mode . siren-go-projectile-setup)
 
   :init
@@ -87,7 +89,7 @@
   (go-mode . flycheck-golangci-lint-setup))
 
 (use-package go-playground
-  :commands go-playground)
+  :defer t)
 
 (provide 'siren-golang)
 ;;; siren-golang.el ends here

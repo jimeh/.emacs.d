@@ -8,6 +8,7 @@
 
 (use-package text-mode
   :straight (:type built-in)
+  :defer t
   :hook (text-mode . siren-text-mode-setup)
   :init
   (defun siren-text-mode-setup ()

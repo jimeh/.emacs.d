@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package string-edit
-  :commands (string-edit-at-point))
+  :defer t)
 
 (provide 'siren-string-edit)
 ;;; siren-string-edit.el ends here

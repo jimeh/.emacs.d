@@ -7,8 +7,7 @@
 ;;; Code:
 
 (use-package lsp-mode
-  :commands lsp
-
+  :defer t
   :bind (:map lsp-mode-map
               ("C-c C-." . lsp-rename))
 

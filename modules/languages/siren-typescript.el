@@ -14,6 +14,8 @@
 (require 'siren-web-mode)
 
 (use-package typescript-mode
+  :defer t
+  :mode "\\.ts\\'"
   :hook
   (typescript-mode . siren-typescript-mode-setup)
 
@@ -40,9 +42,8 @@
 
   :init
   (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
-  (eval-after-load 'flycheck
-    '(progn
-       (flycheck-add-mode 'typescript-tslint 'web-mode)))
+  (with-eval-after-load 'flycheck
+    (flycheck-add-mode 'typescript-tslint 'web-mode))
 
   (defun siren-tide-web-mode-setup ()
     (when (string-equal "tsx" (file-name-extension buffer-file-name))
@@ -59,11 +60,7 @@
     (flycheck-mode +1)
     (eldoc-mode +1)
     (tide-hl-identifier-mode +1)
-    (company-mode +1))
-
-  :config
-  ;; (add-hook 'before-save-hook #'tide-format-before-save)
-  )
+    (company-mode +1)))
 
 (provide 'siren-typescript)
 ;;; siren-typescript.el ends here

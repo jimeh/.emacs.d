@@ -6,7 +6,8 @@
 
 ;;; Code:
 
-(use-package htmlize)
+(use-package htmlize
+  :defer t)
 
 (provide 'siren-htmlize)
 ;;; siren-htmlize.el ends here

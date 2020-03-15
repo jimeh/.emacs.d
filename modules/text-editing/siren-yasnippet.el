@@ -6,7 +6,8 @@
 
 ;;; Code:
 
-(use-package yasnippet-snippets)
+(use-package yasnippet-snippets
+  :defer t)
 
 (use-package yasnippet
   :hook (emacs-startup . yas-global-mode)

@@ -7,6 +7,7 @@
 ;;; Code:
 
 (use-package groovy-mode
+  :mode "\\.groovy\\'"
   :hook
   (groovy-mode . siren-groovy-mode-setup)
 
