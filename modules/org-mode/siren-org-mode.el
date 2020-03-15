@@ -14,8 +14,8 @@
 
 (use-package org
   :bind (:map org-mode-map
-              ("C-j" . newline-and-indent)
-              ("RET" . newline-and-indent)
+              ("C-j" . org-return-indent)
+              ("RET" . org-return-indent)
               ("M-{" . org-promote-subtree)
               ("M-}" . org-demote-subtree)
               ("M-P" . org-metaup)
