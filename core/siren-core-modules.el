@@ -127,8 +127,11 @@
 (require 'siren-helm-make)
 (require 'siren-kubernetes)
 
-;; ;; Writing
+;; Writing
 (require 'siren-writeroom)
+
+;; XWidgets
+(require 'siren-xwidget-plus)
 
 ;; Languages
 (require 'siren-prog-mode)
