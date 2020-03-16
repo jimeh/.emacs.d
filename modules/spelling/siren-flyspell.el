@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(require 'siren-ivy)
+(require 'siren-ido)
 
 (use-package flyspell
   :straight (:type built-in)
@@ -27,10 +27,10 @@
   ;; Unbind keys used by siren-resize-window module.
   (unbind-key "C-;" flyspell-mode-map))
 
-(use-package flyspell-correct-ivy
+(use-package flyspell-correct
   :bind ("C-/" . flyspell-correct-wrapper)
   :custom
-  (flyspell-correct-interface #'flyspell-correct-ivy))
+  (flyspell-correct-interface #'flyspell-correct-ido))
 
 (provide 'siren-flyspell)
 ;;; siren-flyspell.el ends here
