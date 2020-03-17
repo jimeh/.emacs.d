@@ -16,7 +16,9 @@
 ** Installation
 
    1. Clone the repo to =~/.emacs.d=:
-      : git clone git://github.com/jimeh/.emacs.d.git ~/.emacs.d
+      #+BEGIN_SRC
+        git clone git://github.com/jimeh/.emacs.d.git ~/.emacs.d
+      #+END_SRC
    2. Launch Emacs and wait a few minutes while it installs all packages.
    3. Enjoy ^_^
 

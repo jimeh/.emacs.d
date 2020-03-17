@@ -31,6 +31,12 @@
   :hook
   (markdown-mode . siren-markdown-mode-setup)
 
+  :custom
+  (markdown-command "pandoc -f gfm -t html5")
+
+  :custom-face
+  (markdown-code-face ((t nil)))
+
   :init
   (defun siren-markdown-mode-setup ()
     (setq markdown-asymmetric-header t
@@ -42,13 +48,7 @@
     (prettier-js-mode)
     (flyspell-mode)
     (smartparens-mode +1)
-    (subword-mode))
-
-  :custom-face
-  (markdown-code-face ((t nil)))
-
-  :custom
-  (markdown-command "redcarpet"))
+    (subword-mode)))
 
 (provide 'siren-markdown)
 ;;; siren-markdown.el ends here
