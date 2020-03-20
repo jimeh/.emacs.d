@@ -22,8 +22,7 @@
   (ido-use-filename-at-point nil)
 
   :config
-  (ido-mode 1)
-  (ido-everywhere 1))
+  (ido-mode 1))
 
 (use-package ido-completing-read+
   :custom
