@@ -47,7 +47,6 @@
   :custom
   (persp-auto-save-num-of-backups 10)
   (persp-autokill-buffer-on-remove 'kill-weak)
-  (persp-interactive-completion-system 'ido)
   (persp-keymap-prefix "")
   (persp-nil-name "nil")
 
