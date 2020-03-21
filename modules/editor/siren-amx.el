@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-ido)
+
 (use-package amx
   :bind
   ("M-x" . amx)
