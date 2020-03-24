@@ -119,6 +119,9 @@
                           :foreground (doom-color 'red)
                           :background 'unspecified))
 
+    (with-eval-after-load 'zoom-window
+      (setq zoom-window-mode-line-color (doom-blend 'magenta 'bg 0.2)))
+
     (with-eval-after-load 'fill-column-indicator
       (setq fci-rule-color (doom-lighten (doom-color 'base3) 0.10)))))
 
