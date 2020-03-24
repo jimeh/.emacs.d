@@ -25,9 +25,18 @@
   :hook (org-mode . siren-org-mode-setup)
 
   :custom
+  (org-blank-before-new-entry '((heading . auto) (plain-list-item . nil)))
+  (org-catch-invisible-edits 'show)
+  (org-ctrl-k-protect-subtree t)
   (org-export-backends '(ascii html icalendar latex md))
   (org-export-with-section-numbers nil)
   (org-export-with-sub-superscripts '{})
+  (org-return-follows-link t)
+  (org-special-ctrl-a/e t)
+  (org-special-ctrl-k t)
+
+  (org-directory (if (file-directory-p "~/Dropbox/org")
+                     "~/Dropbox/org" "~/org"))
 
   :init
   (defun siren-org-mode-setup ()
@@ -47,7 +56,9 @@
     (whitespace-mode +1))
 
   :config
-  (require 'org-mouse))
+  (require 'org-mouse)
+  (setq org-id-locations-file
+        (expand-file-name ".org-id-locations" org-directory)))
 
 (provide 'siren-org-mode)
 ;;; siren-org-mode.el ends here
