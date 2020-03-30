@@ -9,7 +9,6 @@
 (require 'siren-company)
 (require 'siren-flycheck)
 (require 'siren-folding)
-(require 'siren-highlight-symbol)
 (require 'siren-lsp)
 (require 'siren-projectile)
 
@@ -37,7 +36,11 @@
     (add-hook 'before-save-hook #'lsp-format-buffer t t)
     (add-hook 'before-save-hook #'lsp-organize-imports t t)
 
-    (highlight-symbol-mode -1)
+    (when (fboundp 'highlight-symbol-mode)
+      (highlight-symbol-mode -1))
+    (when (fboundp 'auto-highlight-symbol-mode)
+      (auto-highlight-symbol-mode -1))
+
     (company-mode +1)
     (lsp-deferred)
     (siren-folding)

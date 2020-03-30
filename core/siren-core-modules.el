@@ -25,7 +25,7 @@
 
 ;; Editor
 (require 'siren-amx)
-(require 'siren-auto-highlight-symbol)
+(require 'siren-highlight-symbol)
 (require 'siren-browse-kill-ring)
 (require 'siren-display-fill-column)
 (require 'siren-display-indentation)

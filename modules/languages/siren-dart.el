@@ -8,7 +8,6 @@
 
 (require 'siren-company)
 (require 'siren-folding)
-(require 'siren-highlight-symbol)
 (require 'siren-lsp)
 (require 'siren-projectile)
 
@@ -25,8 +24,12 @@
 
   :init
   (defun siren-dart-mode-setup ()
+    (when (fboundp 'highlight-symbol-mode)
+      (highlight-symbol-mode -1))
+    (when (fboundp 'auto-highlight-symbol-mode)
+      (auto-highlight-symbol-mode -1))
+
     (company-mode +1)
-    (highlight-symbol-mode -1)
     (lsp)
     (siren-folding)
     (subword-mode +1))
