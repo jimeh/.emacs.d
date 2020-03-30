@@ -79,6 +79,13 @@
   :custom
   (go-test-verbose t))
 
+(use-package go-gen-test
+  :defer t
+  :after (go-mode)
+  :bind (:map go-mode-map
+              ("C-c , g" . go-gen-test-dwim)
+              ("C-c , G" . go-gen-test-exported)))
+
 (use-package go-projectile
   :defer t
   :after (go-mode)
