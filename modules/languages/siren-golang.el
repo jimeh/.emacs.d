@@ -31,8 +31,9 @@
 
   (defun siren-go-mode-setup ()
     (setq-local tab-width 4
-                company-echo-delay 0
-                company-minimum-prefix-length 1)
+                company-echo-delay 0.5
+                company-minimum-prefix-length 1
+                whitespace-style (delete 'indentation whitespace-style))
 
     (add-hook 'before-save-hook #'lsp-format-buffer t t)
     (add-hook 'before-save-hook #'lsp-organize-imports t t)
