@@ -24,9 +24,10 @@
   (go-mode . siren-go-mode-setup)
 
   :init
-  (add-to-list 'projectile-globally-ignored-directories "Godeps")
-  (add-to-list 'projectile-globally-ignored-directories "vendor/github.com")
-  (add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in")
+  (with-eval-after-load "projectile"
+    (add-to-list 'projectile-globally-ignored-directories "Godeps")
+    (add-to-list 'projectile-globally-ignored-directories "vendor/github.com")
+    (add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in"))
 
   (defun siren-go-mode-setup ()
     (setq-local tab-width 4
