@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-company)
+(require 'siren-display-indentation)
 (require 'siren-flycheck)
 (require 'siren-folding)
 (require 'siren-lsp)
@@ -43,6 +44,7 @@
     (when (fboundp 'auto-highlight-symbol-mode)
       (auto-highlight-symbol-mode -1))
 
+    (siren-display-indentation -1)
     (company-mode +1)
     (lsp-deferred)
     (siren-folding)

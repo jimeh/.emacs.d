@@ -9,10 +9,7 @@
 (use-package highlight-indentation
   :defer t
   :diminish (highlight-indentation-mode
-             highlight-indentation-current-column-mode)
-
-  :hook
-  (prog-mode . highlight-indent-guides-mode))
+             highlight-indentation-current-column-mode))
 
 (provide 'siren-highlight-indentation)
 ;;; siren-highlight-indentation.el ends here

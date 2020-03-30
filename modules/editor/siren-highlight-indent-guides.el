@@ -11,9 +11,6 @@
   :commands highlight-indent-guides-mode
   :diminish highlight-indent-guides-mode
 
-  :hook
-  (prog-mode . highlight-indent-guides-mode)
-
   :custom
   (highlight-indent-guides-auto-even-face-perc 3)
   (highlight-indent-guides-auto-odd-face-perc 2.5)
