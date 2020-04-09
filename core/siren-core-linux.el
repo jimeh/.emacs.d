@@ -8,7 +8,7 @@
 
 ;; Set default font
 (if window-system
-    (set-face-attribute 'default nil :family "Monaco" :height 80))
+    (set-face-attribute 'default nil :family "Menlo for Powerline" :height 90))
 
 ;; Keybindinds
 (global-set-key (kbd "s-<return>") 'siren-linux-toggle-fullscreen)
