@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-refine)
+
 (use-package persp-mode
   :hook
   (emacs-startup . persp-mode)
@@ -42,7 +44,9 @@
         ("C-z l" . persp-load-state-from-file)
         ("C-z L" . persp-load-from-file-by-names)
         ("C-z ;" . siren-persp-mode-show-current-perspective-name)
-        ("C-z C-;" . siren-persp-mode-show-current-perspective-name))
+        ("C-z C-;" . siren-persp-mode-show-current-perspective-name)
+        ("C-z e" . siren-persp-mode-edit-names-cache)
+        ("C-z C-e" . siren-persp-mode-edit-names-cache))
 
   :custom
   (persp-auto-save-num-of-backups 10)
@@ -63,6 +67,11 @@
   (defun siren-persp-mode-ibuffer (arg)
       (interactive "P")
     (with-persp-buffer-list () (ibuffer arg)))
+
+  (defun siren-persp-mode-edit-names-cache ()
+    "Use refine package to edit persp-names-cache variable."
+    (interactive)
+    (refine 'persp-names-cache))
 
   (defun siren-persp-mode-show-current-perspective-name (&rest _)
     "Show current perspectives, highlighting the active one."
