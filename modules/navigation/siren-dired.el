@@ -10,6 +10,10 @@
   :straight (:type built-in)
 
   :config
+  (when (string-match-p "^gnu" (symbol-name system-type))
+    (setq dired-use-ls-dired t
+          dired-listing-switches "-aBhl"))
+
   (when (string= system-type "darwin")
     (let ((gls (executable-find "gls")))
       (when gls
