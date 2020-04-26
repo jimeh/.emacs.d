@@ -98,10 +98,6 @@
   :init
   (defun siren-go-projectile-setup ()))
 
-(use-package flycheck-golangci-lint
-  :hook
-  (go-mode . flycheck-golangci-lint-setup))
-
 (use-package go-playground
   :defer t)
 
