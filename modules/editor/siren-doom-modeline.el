@@ -18,6 +18,7 @@
   (doom-modeline-checker-simple-format t)
   (doom-modeline-enable-word-count t)
   (doom-modeline-height 25)
+  (doom-modeline-persp-name nil)
   (doom-modeline-minor-modes t)
   (doom-modeline-vcs-max-length 24))
 
