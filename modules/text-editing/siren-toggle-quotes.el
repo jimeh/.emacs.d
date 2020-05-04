@@ -7,7 +7,8 @@
 ;;; Code:
 
 (use-package toggle-quotes
-  :bind (("C-'" . toggle-quotes)))
+  :bind
+  ("C-'" . toggle-quotes))
 
 (provide 'siren-toggle-quotes)
 ;;; siren-toggle-quotes.el ends here

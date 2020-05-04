@@ -6,6 +6,9 @@
 
 ;;; Code:
 
+(require 'siren-company)
+(require 'siren-lsp)
+(require 'siren-prettier-js)
 (require 'siren-rainbow)
 
 (use-package css-mode
@@ -22,8 +25,8 @@
     (setq tab-width 2)
 
     (company-mode +1)
+    (prettier-js-mode)
     (lsp)
-    (highlight-indentation-current-column-mode +1)
     (rainbow-mode +1)))
 
 (provide 'siren-css)

@@ -7,6 +7,7 @@
 ;;; Code:
 
 (use-package groovy-mode
+  :mode "\\.groovy\\'"
   :hook
   (groovy-mode . siren-groovy-mode-setup)
 
@@ -16,7 +17,6 @@
           groovy-indent-offset 4
           tab-width 4)
 
-    (highlight-indentation-current-column-mode)
     (subword-mode +1)))
 
 (provide 'siren-groovy)

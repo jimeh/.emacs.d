@@ -14,6 +14,9 @@
 (require 'siren-global-keybindings)
 (require 'siren-packages)
 
+;; Theme
+(require 'siren-doom-themes)
+
 ;; Completion
 (require 'siren-company)
 
@@ -21,14 +24,20 @@
 (require 'siren-dash-at-point)
 
 ;; Editor
+(require 'siren-amx)
+(require 'siren-highlight-symbol)
 (require 'siren-browse-kill-ring)
-(require 'siren-helm-command)
+(require 'siren-display-fill-column)
+(require 'siren-display-indentation)
+(require 'siren-display-line-numbers)
+(require 'siren-folding)
 (require 'siren-ido)
-(require 'siren-linum)
 (require 'siren-minions)
+(require 'siren-mwim)
 (require 'siren-rainbow)
-(require 'siren-smex)
 (require 'siren-undo-tree)
+(require 'siren-undohist)
+(require 'siren-which-key)
 
 ;; Help
 (require 'siren-helpful)
@@ -37,33 +46,29 @@
 (require 'siren-flycheck)
 
 ;; Misc.
-(require 'siren-paradox)
+(require 'siren-grip)
 (require 'siren-restart-emacs)
 (require 'siren-zone)
 
 ;; Navigation
 (require 'siren-anzu)
 (require 'siren-avy)
+(require 'siren-centaur-tabs)
 (require 'siren-dired)
 (require 'siren-direx)
 (require 'siren-dumb-jump)
-(require 'siren-folding)
 (require 'siren-git-link)
 (require 'siren-helm)
 (require 'siren-helm-ag)
-(require 'siren-helm-files)
-(require 'siren-helm-imenu)
 (require 'siren-helm-open-github)
 (require 'siren-helm-swoop)
-(require 'siren-move-beginning-of-line)
 (require 'siren-scroll-half-screen)
-;; (require 'siren-goto-symbol)
 
 ;; Project management
 (require 'siren-editorconfig)
 (require 'siren-helm-projectile)
-(require 'siren-neotree)
 (require 'siren-projectile)
+(require 'siren-treemacs)
 
 ;; Language Servers
 (require 'siren-lsp)
@@ -100,8 +105,6 @@
 (require 'siren-git-timemachine)
 (require 'siren-github)
 (require 'siren-magit)
-(require 'siren-magit-todos)
-;; (require 'siren-magithub)
 
 ;; Window management
 (require 'siren-buffer-move)
@@ -114,15 +117,26 @@
 
 ;; Org-mode
 (require 'siren-htmlize)
+(require 'siren-ob-mermaid)
 (require 'siren-org-mode)
-(require 'siren-org-mouse)
 (require 'siren-ox-gfm)
 (require 'siren-ox-jira)
+(require 'siren-ox-pandoc)
+
+;; Tools
+(require 'siren-docker)
+(require 'siren-helm-make)
+(require 'siren-kubernetes)
 
 ;; Writing
 (require 'siren-writeroom)
 
+;; XWidgets
+(require 'siren-xwidget-plus)
+
 ;; Languages
+(require 'siren-prog-mode)
+(require 'siren-applescript)
 (require 'siren-coffee)
 (require 'siren-conf)
 (require 'siren-css)
@@ -139,12 +153,14 @@
 (require 'siren-js)
 (require 'siren-json)
 (require 'siren-jsx)
+(require 'siren-lisp)
 (require 'siren-lua)
 (require 'siren-makefile)
 (require 'siren-markdown)
+(require 'siren-mermaid)
+(require 'siren-nginx)
 (require 'siren-php)
 (require 'siren-plantuml)
-(require 'siren-prog-mode)
 (require 'siren-ruby)
 (require 'siren-rust)
 (require 'siren-sass)
@@ -154,8 +170,10 @@
 (require 'siren-sql)
 (require 'siren-text-mode)
 (require 'siren-thrift)
+(require 'siren-toml)
 (require 'siren-typescript)
 (require 'siren-web-mode)
+(require 'siren-xml)
 (require 'siren-yaml)
 
 (provide 'siren-core-modules)

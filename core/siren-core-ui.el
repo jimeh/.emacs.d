@@ -27,7 +27,7 @@
 ;;       scroll-conservatively 100000
 ;;       scroll-preserve-screen-position 1)
 ;; (setq redisplay-dont-pause t)
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 10))) ;; one line at a time
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-margin 4)
 (setq scroll-step 1)
@@ -47,12 +47,6 @@
       '("Emacs - " (:eval (if (buffer-file-name)
                               (abbreviate-file-name (buffer-file-name))
                             "%b"))))
-
-(require 'smart-mode-line)
-(setq sml/no-confirm-load-theme t)
-;; delegate theming to the currently active theme
-(setq sml/theme nil)
-(add-hook 'after-init-hook #'sml/setup)
 
 (provide 'siren-core-ui)
 ;;; siren-core-ui.el ends here

@@ -34,18 +34,16 @@
 (require 'siren-core-custom)
 (require 'siren-core-funcs)
 
-;; Ensure vendor directory load-paths are configured
-(require 'siren-core-vendor)
-
 ;; Continue core stuff
 (require 'siren-core-packages)
+(require 'siren-core-performance)
 (require 'siren-core-env)
 (require 'siren-core-ui)
 (require 'siren-core-editor)
 
-;; OSX specific
+;; macOS specific
 (when (eq system-type 'darwin)
-  (require 'siren-core-osx))
+  (require 'siren-core-macos))
 
 ;; Linux specific
 (when (eq system-type 'gnu/linux)
@@ -57,9 +55,6 @@
 
 ;; The modules
 (require 'siren-core-modules)
-
-;; The theme
-(require 'siren-core-theme)
 
 (provide 'siren-core-init)
 ;;; siren-core-init.el ends here

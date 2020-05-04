@@ -6,12 +6,12 @@
 
 ;;; Code:
 
+(require 'siren-ido)
+
 (use-package flyspell
-  :ensure nil ;; loaded from emacs built-ins
-  :demand
+  :straight (:type built-in)
+  :defer t
   :diminish flyspell-mode
-  :bind
-  ("s-." . flyspell-correct-word-before-point)
 
   :hook
   (prog-mode . flyspell-prog-mode)
@@ -26,6 +26,11 @@
   (unbind-key "C-," flyspell-mode-map)
   ;; Unbind keys used by siren-resize-window module.
   (unbind-key "C-;" flyspell-mode-map))
+
+(use-package flyspell-correct
+  :bind ("C-/" . flyspell-correct-wrapper)
+  :custom
+  (flyspell-correct-interface #'flyspell-correct-ido))
 
 (provide 'siren-flyspell)
 ;;; siren-flyspell.el ends here

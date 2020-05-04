@@ -6,9 +6,9 @@
 
 ;;; Code:
 
-(require 'siren-fci)
+(require 'siren-display-fill-column)
+(require 'siren-display-line-numbers)
 (require 'siren-flyspell)
-(require 'siren-linum)
 (require 'siren-move-dup)
 (require 'siren-prettier-js)
 (require 'siren-smartparens)
@@ -31,24 +31,24 @@
   :hook
   (markdown-mode . siren-markdown-mode-setup)
 
+  :custom
+  (markdown-command "pandoc -f gfm -t html5")
+
+  :custom-face
+  (markdown-code-face ((t nil)))
+
   :init
   (defun siren-markdown-mode-setup ()
     (setq markdown-asymmetric-header t
           whitespace-action nil)
 
+    (siren-display-fill-column)
+    (siren-display-line-numbers)
     (auto-fill-mode)
     (prettier-js-mode)
-    (fci-mode)
     (flyspell-mode)
-    (linum-mode t)
     (smartparens-mode +1)
-    (subword-mode))
-
-  :custom-face
-  (markdown-code-face ((t nil)))
-
-  :custom
-  (markdown-command "redcarpet"))
+    (subword-mode)))
 
 (provide 'siren-markdown)
 ;;; siren-markdown.el ends here

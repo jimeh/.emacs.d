@@ -6,69 +6,36 @@
 
 ;;; Code:
 
-(require 'cl)
-(require 'package)
+;; Initialize straight.el
+(setq straight-cache-autoloads t
+      straight-check-for-modifications '(check-on-save find-when-checking)
+      straight-repository-branch "develop"
+      straight-use-package-by-default t
+      use-package-always-ensure nil)
 
-;; Work-around bug in Emacs 26.2 preventing GNU ELPA to work over HTTPS.
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el"
+                         user-emacs-directory))
+      (bootstrap-version 5))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
 
-(setq package-archives
-      '(("gnu"          . "https://elpa.gnu.org/packages/")
-        ("melpa-stable" . "https://stable.melpa.org/packages/")
-        ("melpa"        . "https://melpa.org/packages/"))
-      package-archive-priorities
-      '(("melpa"        . 10)
-        ("gnu"          . 5)
-        ("melpa-stable" . 0)))
+;; https://github.com/raxod502/straight.el/issues/49#issuecomment-395979478
+(defun straight-x-clean-unused-repos ()
+  (interactive)
+  (dolist (repo (straight--directory-files (straight--repos-dir)))
+    (unless (or (straight--checkhash repo straight--repo-cache)
+                (not (y-or-n-p (format "Delete repository %S?" repo))))
+      (delete-directory (straight--repos-dir repo) 'recursive 'trash))))
 
-;; set package-user-dir to be relative to config path
-(setq package-user-dir (expand-file-name "elpa" siren-dir))
-(package-initialize)
-
-(defvar siren-packages
-  '(dash
-    diminish
-    exec-path-from-shell
-    smart-mode-line
-    use-package)
-  "A list of default packages to ensure are installed at launch.")
-
-;;
-;; Package helpers (borrowed from Emacs Prelude)
-;;
-
-(defun siren-packages-installed-p ()
-  "Check if all packages in `siren-packages' are installed."
-  (every #'package-installed-p siren-packages))
-
-(defun siren-require-package (package)
-  "Install PACKAGE unless already installed."
-  (unless (memq package siren-packages)
-    (add-to-list 'siren-packages package))
-  (unless (package-installed-p package)
-    (package-install package)))
-
-(defun siren-require-packages (packages)
-  "Ensure PACKAGES are installed.
-Missing packages are installed automatically."
-  (mapc #'siren-require-package packages))
-
-(defun siren-install-packages ()
-  "Install all packages listed in `siren-packages'."
-  (unless (siren-packages-installed-p)
-    ;; check for new packages (package versions)
-    (message "%s" "Emacs is now refreshing its package database...")
-    (package-refresh-contents)
-    (message "%s" " done.")
-    ;; install the missing packages
-    (siren-require-packages siren-packages)))
-
-;; Install Melpa packages
-(siren-install-packages)
-
-;; Ensure use-package is loaded and configured
-(require 'use-package)
-(setq use-package-always-ensure t)
+(straight-use-package 'use-package)
 
 (provide 'siren-core-packages)
 ;;; siren-core-packages.el ends here

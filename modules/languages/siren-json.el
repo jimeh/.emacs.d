@@ -6,16 +6,16 @@
 
 ;;; Code:
 
-(require 'siren-eslintd-fix)
+(require 'siren-flycheck)
 (require 'siren-folding)
+(require 'siren-js)
 
 (use-package json-mode
   :mode "\\.json\\'"
-  :requires (flycheck highlight-indentation hideshowvis)
 
   :bind (:map json-mode-map
               ("C-j" . newline-and-indent)
-              ("C-c C-h" . siren-toggle-hiding))
+              ("C-c C-h" . siren-folding-toggle))
 
   :hook
   (json-mode . siren-json-mode-setup)
@@ -25,10 +25,9 @@
     "Default tweaks for `json-mode'."
 
     (let ((width 2))
-      (setq js-indent-level width)
-      (setq json-reformat:indent-width width)
-      (setq tab-width width)
-      (highlight-indentation-set-offset width))
+      (setq js-indent-level width
+            json-reformat:indent-width width
+            tab-width width))
 
     (setq flycheck-checker 'json-jsonlint)))
 

@@ -9,8 +9,7 @@
 (require 'siren-lsp)
 
 (use-package lsp-ui
-  :commands lsp-ui-mode
-
+  :defer t
   :bind (:map lsp-ui-mode-map
               ("C-c C-d" . lsp-ui-doc-show)
               ("M-?" . lsp-ui-peek-find-references)

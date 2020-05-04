@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package windmove
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :config
   (global-set-key (kbd "M-k") (siren-ignore-error-wrapper 'windmove-down))
   (global-set-key (kbd "M-i") (siren-ignore-error-wrapper 'windmove-up))

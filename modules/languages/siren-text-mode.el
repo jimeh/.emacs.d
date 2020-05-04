@@ -7,7 +7,8 @@
 ;;; Code:
 
 (use-package text-mode
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
+  :defer t
   :hook (text-mode . siren-text-mode-setup)
   :init
   (defun siren-text-mode-setup ()

@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-;; (require 'siren-fci)
-
 (use-package company
   :hook
   (company-completion-started . siren-company--turn-off-fci)
@@ -26,7 +24,7 @@
   (company-begin-commands '(self-insert-command))
   (company-dabbrev-downcase nil)
   (company-echo-delay 0)
-  (company-idle-delay 0.3)
+  (company-idle-delay 0.15)
   (company-minimum-prefix-length 2)
   (company-tooltip-limit 20)
   ;; invert the navigation direction if the the completion popup-isearch-match

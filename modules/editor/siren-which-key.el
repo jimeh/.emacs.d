@@ -7,8 +7,7 @@
 ;;; Code:
 
 (use-package which-key
-    :config
-    (which-key-mode))
+  :defer t)
 
 (provide 'siren-which-key)
 ;;; siren-which-key.el ends here

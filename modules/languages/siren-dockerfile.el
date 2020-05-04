@@ -7,7 +7,10 @@
 ;;; Code:
 
 (use-package dockerfile-mode
-  :mode "Dockerfile.*\\'"
+  :mode
+  "/Dockerfile\\'"
+  "/Dockerfile\\.[^/]+\\'"
+
   :hook (dockerfile-mode . siren-dockerfile-mode-setup)
 
   :init

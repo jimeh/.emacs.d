@@ -1,5 +1,11 @@
+straight/*
+!straight/versions/
+!straight/versions/*
+
 *.elc
 .DS_Store
+.cache/*
+.extension/*
 .lsp-session*
 .mc-lists.el
 ac-comphist.dat

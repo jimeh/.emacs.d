@@ -6,32 +6,23 @@
 
 ;;; Code:
 
-(require 'siren-fci)
-(require 'siren-flyspell)
-(require 'siren-linum)
 (require 'siren-prog-mode)
-(require 'siren-flycheck)
-(require 'siren-highlight-indentation)
-(require 'siren-highlight-symbol)
-(require 'siren-smartparens)
 
 (use-package conf-mode
-  :mode "Procfile\\'" "\\.conf\\'" "\\.cfg\\'"
+  :straight (:type built-in)
+  :mode
+  "/Procfile\\'"
+  "/\\.env\\'"
+  "/\\.env\\.[^/]+\\'"
+  "\\.cfg\\'"
+  "\\.conf\\'"
+
   :hook (conf-mode . siren-conf-mode-setup)
 
   :init
   (defun siren-conf-mode-setup ()
-    (siren-prog-mode-setup)
-    (setq tab-width 2)
-
-    (fci-mode)
-    (flycheck-mode)
-    (flyspell-prog-mode)
-    (highlight-indentation-current-column-mode)
-    (highlight-indentation-set-offset 2)
-    (highlight-symbol-mode)
-    (linum-mode)
-    (smartparens-mode)))
+    (run-hooks 'prog-mode-hook)
+    (setq tab-width 2)))
 
 (provide 'siren-conf)
 ;;; siren-conf.el ends here

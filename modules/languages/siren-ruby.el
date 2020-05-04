@@ -8,17 +8,15 @@
 
 (require 'siren-company)
 (require 'siren-folding)
-(require 'siren-highlight-indentation)
+(require 'siren-lsp)
 (require 'siren-projectile)
-(require 'siren-realgud)
-(require 'siren-smartparens)
 (require 'siren-toggle-quotes)
 
 (add-to-list 'projectile-globally-ignored-directories "vendor/bundle")
 (add-to-list 'projectile-globally-ignored-directories "vendor/ruby")
 
 (use-package ruby-mode
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :interpreter "ruby"
   :mode
   "Appraisals\\'"
@@ -61,9 +59,8 @@
           tab-width 2)
 
     (company-mode +1)
-    (hs-minor-mode 1)
-    (hideshowvis-enable)
-    (highlight-indentation-current-column-mode)
+    (siren-folding)
+    (lsp)
     (subword-mode +1))
 
   :config
@@ -90,16 +87,13 @@
     (company-mode -1))
 
   :config
-  (unbind-key "C-c C-r" inf-ruby-minor-mode-map))
+  (unbind-key "C-c C-r" inf-ruby-minor-mode-map)
+  (unbind-key "C-c C-s" inf-ruby-minor-mode-map))
 
 (use-package rbenv
   :defer t
   :config
   (global-rbenv-mode))
-
-(use-package realgud-byebug
-  :commands realgud:byebug
-  :after realgud)
 
 (use-package robe
   :defer t
@@ -109,8 +103,8 @@
   :hook (ruby-mode . robe-mode)
 
   :init
-  (eval-after-load 'company
-    '(push 'company-robe company-backends))
+  (with-eval-after-load 'company
+    (push 'company-robe company-backends))
 
   :config
   ;; Unbind keys used by siren-expand-region module.
@@ -126,7 +120,7 @@
   (rspec-primary-source-dirs '("app"))
   (rspec-spec-command "env COVERAGE=0 rspec")
   (rspec-use-opts-file-when-available nil)
-  (rspec-use-spring-when-possible t)
+  (rspec-use-spring-when-possible nil)
 
   :init
   (defun siren-rspec-mode-setup ())
@@ -146,7 +140,7 @@
               ("C-c . D" . rubocop-autocorrect-directory)))
 
 (use-package rubocopfmt
-  :commands (rubocopfmt rubocopfmt-mode)
+  :defer t
   :bind (:map ruby-mode-map
               ("C-c C-f" . rubocopfmt))
   :hook
@@ -157,10 +151,6 @@
 
 (use-package ruby-compilation
   :defer t)
-
-(use-package ruby-guard
-  :ensure nil ;; loaded from vendor
-  :commands ruby-guard)
 
 (use-package ruby-refactor
   :defer t

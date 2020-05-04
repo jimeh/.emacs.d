@@ -7,25 +7,29 @@
 ;;; Code:
 
 (use-package undo-tree
-  :demand
+  :hook
+  (emacs-startup . global-undo-tree-mode)
+
   :bind
-  ("C-x u" . undo-tree-visualize)
-  ("M--" . undo-tree-undo)
-  ("M-_" . undo-tree-redo)
-  ("s-z" . undo-tree-undo)
-  ("s-Z" . undo-tree-redo)
+  (:map undo-tree-map
+        ("C-x u" . undo-tree-visualize)
+        ("M--" . undo-tree-undo)
+        ("M-_" . undo-tree-redo)
+        ("s-z" . undo-tree-undo)
+        ("s-Z" . undo-tree-redo))
 
   :diminish
   undo-tree-mode
 
   :custom
-  ;; autosave the undo-tree history
   (undo-tree-history-directory-alist
    `((".*" . ,(expand-file-name "undo-tree-history" siren-cache-dir))))
-  (undo-tree-auto-save-history t)
+  (undo-tree-auto-save-history nil) ;; use undohist package instead
 
   :config
-  (global-undo-tree-mode))
+  ;; Unbind keys that I don't use.
+  (unbind-key "C-/" undo-tree-map)
+  (unbind-key "C-?" undo-tree-map))
 
 (provide 'siren-undo-tree)
 ;;; siren-undo-tree.el ends here

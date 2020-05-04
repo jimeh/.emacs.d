@@ -6,8 +6,9 @@
 
 ;;; Code:
 
+(require 'siren-company)
 (require 'siren-folding)
-(require 'siren-highlight-indentation)
+(require 'siren-prettier-js)
 (require 'siren-rainbow)
 
 (use-package php-mode
@@ -18,12 +19,11 @@
 
   :init
   (defun siren-php-mode-setup ()
+    (prettier-js-mode)
     (rainbow-mode +1)
     (company-mode +1)
     (subword-mode +1)
-    (highlight-indentation-current-column-mode)
-    (hs-minor-mode 1)
-    (hideshowvis-enable)))
+    (siren-folding)))
 
 (provide 'siren-php)
 ;;; siren-php.el ends here

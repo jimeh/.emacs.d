@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package ido
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
 
   :custom
   (ido-auto-merge-work-directories-length -1)
@@ -18,10 +18,10 @@
   (ido-enable-prefix nil)
   (ido-max-prospects 10)
   (ido-save-directory-list-file (expand-file-name "ido.hist" siren-cache-dir))
-  (ido-use-faces nil)
+  (ido-use-faces t)
   (ido-use-filename-at-point nil)
 
-  :init
+  :config
   (ido-mode 1))
 
 (use-package ido-completing-read+

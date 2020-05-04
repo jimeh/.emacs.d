@@ -7,6 +7,7 @@
 ;;; Code:
 
 (use-package prettier-js
+  :defer t
   :hook (prettier-js-mode . siren-prettier-js-mode-setup)
 
   :init

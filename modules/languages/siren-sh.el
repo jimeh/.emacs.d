@@ -6,14 +6,19 @@
 
 ;;; Code:
 
-(require 'siren-highlight-indentation)
-
 (use-package sh-script
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :mode
-  "\\.tmux"
-  "\\.tmuxsh"
-  "\\.tmuxtheme"
+  "\\.tmux\\'"
+  "\\.tmuxsh\\'"
+  "\\.tmuxtheme\\'"
+  "zshenv\\'"
+  "zshrc\\'"
+
+  :bind
+  (:map sh-mode-map
+        ("RET" . newline-and-indent))
+
   :hook
   (sh-mode . siren-sh-mode-setup)
 
@@ -24,10 +29,7 @@
           sh-indentation 2
           whitespace-action '(auto-cleanup))
 
-    (subword-mode +1)
-    (highlight-indentation-set-offset 2)
-    (highlight-indentation-current-column-mode)
-    (define-key sh-mode-map (kbd "RET") 'newline-and-indent)))
+    (subword-mode +1)))
 
 (provide 'siren-sh)
 ;;; siren-sh.el ends here

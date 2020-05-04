@@ -6,11 +6,25 @@
 
 ;;; Code:
 
-(require 'siren-linum)
+(use-package dired
+  :straight (:type built-in)
+
+  :config
+  (when (string-match-p "^gnu" (symbol-name system-type))
+    (setq dired-use-ls-dired t
+          dired-listing-switches "-aBhl"))
+
+  (when (string= system-type "darwin")
+    (let ((gls (executable-find "gls")))
+      (when gls
+        (setq dired-use-ls-dired t
+              insert-directory-program gls
+              dired-listing-switches "-aBhl")))))
+
+(use-package dired-x
+  :straight (:type built-in))
 
 (use-package dired+
-  :ensure nil ;; loaded from vendor
-  :demand
   :bind (:map dired-mode-map
               ("c" . dired-create-directory)
               ("C-l" . diredp-up-directory-reuse-dir-buffer))
@@ -20,7 +34,6 @@
 
   :init
   (defun siren-dired-mode-setup ()
-    (linum-mode t)
     (toggle-diredp-find-file-reuse-dir 1))
 
   :config

@@ -28,7 +28,6 @@
          (coffee-cos-mode t))
 
     (setq tab-width 2)
-    (highlight-indentation-current-column-mode)
     (subword-mode +1)))
 
 (provide 'siren-coffee)

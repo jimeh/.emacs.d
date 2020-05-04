@@ -7,6 +7,9 @@
 ;;; Code:
 
 (use-package projectile
+  :hook
+  (emacs-startup . projectile-mode)
+
   :bind
   ("C-c p p" . projectile-switch-project)
   ("C-c p k" . projectile-kill-buffers)
@@ -44,6 +47,7 @@
                                              "logs"
                                              "node_modules"
                                              "sorbet"
+                                             "straight"
                                              "tmp"
                                              "vendor/assets"))
   (projectile-globally-ignored-files '("TAGS" "*.log"))
@@ -52,11 +56,10 @@
   (projectile-sort-order 'recently-active)
 
   :config
-  ;; Treat separate directories with Gemfiles within a single git repo as separate
-  ;; projects.
-  (push "Gemfile" projectile-project-root-files-bottom-up)
-
-  (projectile-mode t))
+  (push "Rakefile" projectile-project-root-files)
+  ;; Treat separate directories with Gemfiles within a single git repo as
+  ;; separate projects.
+  (push "Gemfile" projectile-project-root-files-bottom-up))
 
 (provide 'siren-projectile)
 ;;; siren-projectile.el ends here

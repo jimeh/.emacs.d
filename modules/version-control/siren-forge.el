@@ -9,6 +9,7 @@
 (require 'siren-magit)
 
 (use-package forge
+  :defer t
   :after magit)
 
 (provide 'siren-forge)

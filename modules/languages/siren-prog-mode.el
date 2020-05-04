@@ -6,8 +6,10 @@
 
 ;;; Code:
 
+(require 'siren-display-indentation)
+
 (use-package prog-mode
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :hook
   (prog-mode . siren-prog-mode-setup)
 
@@ -17,6 +19,7 @@
     (setq fill-column 80
           whitespace-action '(auto-cleanup))
 
+    (siren-display-indentation 1)
     (visual-line-mode t)
     (whitespace-mode t)))
 

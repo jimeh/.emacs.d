@@ -9,7 +9,7 @@
 (require 'siren-rainbow)
 
 (use-package sql-mode
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :mode "\\.sql\\'"
   :hook (sql-mode . siren-sql-mode-setup)
 
@@ -17,8 +17,7 @@
   (defun siren-sql-mode-setup ()
     (setq tab-width 2)
 
-    (company-mode +1)
-    (highlight-indentation-current-column-mode +1)))
+    (company-mode +1)))
 
 (use-package sqlformat
   :hook

@@ -6,14 +6,20 @@
 
 ;;; Code:
 
-(require 'siren-prettier-js)
+(require 'siren-company)
 (require 'siren-folding)
+(require 'siren-lsp)
+(require 'siren-prettier-js)
 
 (use-package js-mode
-  :ensure nil ;; loaded from emacs built-ins
+  :straight (:type built-in)
   :mode
   "\\.js\\'"
   "\\.pac\\'"
+
+  :bind (:map js-mode-map
+              ("C-j" . newline-and-indent)
+              ("C-c C-h" . siren-toggle-hiding))
 
   :hook
   (js-mode . siren-js-mode-setup)
@@ -27,16 +33,10 @@
             tab-width width))
 
     (prettier-js-mode)
-    (company-mode +1)
+    (company-mode)
     (lsp)
-    (subword-mode +1)
-    (hs-minor-mode 1)
-    (highlight-indentation-current-column-mode)
-    (hideshowvis-enable)
-
-    (let ((map js-mode-map))
-      (define-key map (kbd "C-j") 'newline-and-indent)
-      (define-key map (kbd "C-c C-h") 'siren-toggle-hiding))))
+    (subword-mode)
+    (siren-folding)))
 
 (provide 'siren-js)
 ;;; siren-js.el ends here

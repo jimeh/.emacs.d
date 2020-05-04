@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-company)
+(require 'siren-display-indentation)
 (require 'siren-flycheck)
 (require 'siren-folding)
 (require 'siren-lsp)
@@ -24,30 +25,33 @@
   (go-mode . siren-go-mode-setup)
 
   :init
-  (add-to-list 'projectile-globally-ignored-directories "Godeps")
-  (add-to-list 'projectile-globally-ignored-directories "vendor/github.com")
-  (add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in")
+  (with-eval-after-load "projectile"
+    (add-to-list 'projectile-globally-ignored-directories "Godeps")
+    (add-to-list 'projectile-globally-ignored-directories "vendor/github.com")
+    (add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in"))
 
   (defun siren-go-mode-setup ()
-    ;; Prefer goimports to gofmt if installed
-    (let ((goimports (executable-find "goimports")))
-      (when goimports
-        (setq gofmt-command goimports)))
+    (setq-local tab-width 4
+                company-echo-delay 0.5
+                company-minimum-prefix-length 1
+                whitespace-style (delete 'indentation whitespace-style))
 
-    (setq tab-width 4)
-    (whitespace-toggle-options '(tabs))
+    (add-hook 'before-save-hook #'lsp-format-buffer t t)
+    (add-hook 'before-save-hook #'lsp-organize-imports t t)
 
+    (when (fboundp 'highlight-symbol-mode)
+      (highlight-symbol-mode -1))
+    (when (fboundp 'auto-highlight-symbol-mode)
+      (auto-highlight-symbol-mode -1))
+
+    (siren-display-indentation -1)
     (company-mode +1)
-    (lsp)
-    (highlight-symbol-mode -1)
-    (hs-minor-mode 1)
-    (hideshowvis-enable)
+    (lsp-deferred)
+    (siren-folding)
     (subword-mode +1))
 
   :config
   (message "loading go-mode")
-
-  (add-hook 'before-save-hook #'gofmt-before-save)
 
   (when (memq window-system '(mac ns))
     (exec-path-from-shell-copy-env "GOPATH"))
@@ -58,10 +62,11 @@
   (add-to-list 'completion-ignored-extensions ".test"))
 
 (use-package go-dlv
-  :commands dlv dlv-current-func)
+  :defer t)
 
 (use-package gotest
-  :after go-mode
+  :defer t
+  :after (go-mode)
   :bind (:map go-mode-map
               ("C-c , a" . go-test-current-project)
               ("C-c , v" . go-test-current-file)
@@ -74,21 +79,27 @@
   :custom
   (go-test-verbose t))
 
+(use-package go-gen-test
+  :defer t
+  :after (go-mode)
+  :bind (:map go-mode-map
+              ("C-c , g" . go-gen-test-dwim)
+              ("C-c , G" . go-gen-test-exported)))
+
 (use-package go-projectile
-  :after go-mode
+  :defer t
+  :after (go-mode)
   :hook (go-mode . siren-go-projectile-setup)
 
-  :init
-  (defun siren-go-projectile-setup ()
-    ;; prevent go-projectile from screwing up GOPATH
-    (setq go-projectile-switch-gopath 'never)))
+  :custom
+  ;; prevent go-projectile from screwing up GOPATH
+  (go-projectile-switch-gopath 'never)
 
-(use-package flycheck-golangci-lint
-  :hook
-  (go-mode . flycheck-golangci-lint-setup))
+  :init
+  (defun siren-go-projectile-setup ()))
 
 (use-package go-playground
-  :commands go-playground)
+  :defer t)
 
 (provide 'siren-golang)
 ;;; siren-golang.el ends here

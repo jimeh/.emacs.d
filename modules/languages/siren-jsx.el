@@ -6,6 +6,7 @@
 
 ;;; Code:
 
+(require 'siren-folding)
 (require 'siren-prettier-js)
 
 (use-package rjsx-mode
@@ -18,9 +19,7 @@
     (prettier-js-mode +1)
     (company-mode +1)
     (subword-mode +1)
-    (hs-minor-mode +1)
-    (highlight-indentation-current-column-mode +1)
-    (hideshowvis-enable)))
+    (siren-folding)))
 
 (provide 'siren-jsx)
 ;;; siren-jsx.el ends here

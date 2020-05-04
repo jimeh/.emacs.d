@@ -7,18 +7,23 @@
 ;;; Code:
 
 (require 'siren-company)
-(require 'siren-folding)
 (require 'siren-flycheck)
-(require 'siren-highlight-indentation)
+(require 'siren-folding)
+(require 'siren-lsp)
 (require 'siren-prettier-js)
 (require 'siren-web-mode)
 
 (use-package typescript-mode
+  :defer t
+  :mode "\\.ts\\'"
   :hook
   (typescript-mode . siren-typescript-mode-setup)
 
-  :init
+  :bind (:map typescript-mode-map
+              ("C-j" . newline-and-indent)
+              ("C-c C-h" . siren-folding-toggle))
 
+  :init
   (defun siren-typescript-mode-setup ()
     (let ((width 2))
       (setq typescript-indent-level width
@@ -28,13 +33,7 @@
     (company-mode +1)
     (lsp)
     (subword-mode +1)
-    (hs-minor-mode 1)
-    (highlight-indentation-current-column-mode)
-    (hideshowvis-enable)
-
-    (let ((map typescript-mode-map))
-      (define-key map (kbd "C-j") 'newline-and-indent)
-      (define-key map (kbd "C-c C-h") 'siren-toggle-hiding))))
+    (siren-folding)))
 
 (use-package tide
   :hook
@@ -43,9 +42,8 @@
 
   :init
   (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
-  (eval-after-load 'flycheck
-    '(progn
-       (flycheck-add-mode 'typescript-tslint 'web-mode)))
+  (with-eval-after-load 'flycheck
+    (flycheck-add-mode 'typescript-tslint 'web-mode))
 
   (defun siren-tide-web-mode-setup ()
     (when (string-equal "tsx" (file-name-extension buffer-file-name))
@@ -62,11 +60,7 @@
     (flycheck-mode +1)
     (eldoc-mode +1)
     (tide-hl-identifier-mode +1)
-    (company-mode +1))
-
-  :config
-  ;; (add-hook 'before-save-hook #'tide-format-before-save)
-  )
+    (company-mode +1)))
 
 (provide 'siren-typescript)
 ;;; siren-typescript.el ends here

@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-ido)
+
 (use-package dumb-jump
   :bind
   ("C-c C-j" . dumb-jump-go)
@@ -18,7 +20,7 @@
   ("M-g z" . dumb-jump-go-prefer-external-other-window)
 
   :custom
-  (dumb-jump-selector 'ivy))
+  (dumb-jump-selector 'ido))
 
 (provide 'siren-dumb-jump)
 ;;; siren-dumb-jump.el ends here

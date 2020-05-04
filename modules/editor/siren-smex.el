@@ -1,4 +1,4 @@
-;;; siren-smex.el --- jimeh's Emacs Siren: smex.
+;;; siren-smex.el --- jimeh's Emacs Siren: smex configuration.
 
 ;;; Commentary:
 

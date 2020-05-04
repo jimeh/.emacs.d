@@ -55,9 +55,12 @@
       `((".*" . ,(expand-file-name "backup" siren-cache-dir))))
 
 ;; Auto-save files
-(setq auto-save-interval 20
-      auto-save-file-name-transforms
-      `((".*" ,(expand-file-name "autosave" siren-cache-dir) t)))
+(let ((auto-save-dir (expand-file-name "autosave/" siren-cache-dir)))
+  (unless (file-exists-p auto-save-dir)
+    (make-directory auto-save-dir))
+  (setq auto-save-interval 20
+        auto-save-file-name-transforms
+        `((".*" ,auto-save-dir t))))
 
 ;; smart tab behavior - indent or complete
 (setq tab-always-indent 'complete)
@@ -66,7 +69,8 @@
 (global-auto-revert-mode t)
 
 ;; diminish keeps the modeline tidy
-(require 'diminish)
+(use-package diminish)
+
 (diminish 'visual-line-mode)
 
 ;; Enable mouse support when running in a console
@@ -183,10 +187,6 @@ indent yanked text (with prefix arg don't indent)."
 ;; saner regex syntax
 (require 're-builder)
 (setq reb-re-syntax 'string)
-
-;; diminish various modes
-;; (diminish 'hs-minor-mode)
-;; (diminish 'subword-mode)
 
 (provide 'siren-core-editor)
 ;;; siren-core-editor.el ends here

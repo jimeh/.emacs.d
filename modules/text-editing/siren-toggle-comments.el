@@ -27,6 +27,7 @@
 
 (global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
+(global-set-key (kbd "C-c C-_") 'comment-or-uncomment-region-or-line)
 
 (provide 'siren-toggle-comments)
 ;;; siren-toggle-comments.el ends here

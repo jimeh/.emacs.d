@@ -25,6 +25,7 @@
                              "elpa"
                              "node_modules"
                              "sorbet"
+                             "straight"
                              "vendor/assets")))
 
 (provide 'siren-helm-ag)

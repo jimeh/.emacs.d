@@ -7,22 +7,23 @@
 ;;; Code:
 
 (use-package escreen
-  :ensure nil ;; loaded from vendor
+  :straight (:type git :host github :repo "renard/escreen-el")
   :demand
 
-  :bind (("s-}" . escreen-goto-next-screen)
-         ("s-{" . escreen-goto-prev-screen)
-         :map escreen-map
-         ("C-z" . escreen-goto-last-screen)
-         ("l" . escreen-goto-last-screen)
-         ("C-l" . escreen-goto-last-screen)
-         (";" . siren-escreen-get-active-screen)
-         ("C-;" . siren-escreen-get-active-screen)
-         ("C-c" . escreen-create-screen)
-         ("C-g" . escreen-goto-screen)
-         ("C-k" . escreen-kill-screen)
-         ("C-n" . escreen-goto-next-screen)
-         ("C-p" . escreen-goto-prev-screen))
+  :bind
+  ("s-}" . escreen-goto-next-screen)
+  ("s-{" . escreen-goto-prev-screen)
+  (:map escreen-map
+        ("C-z" . escreen-goto-last-screen)
+        ("l" . escreen-goto-last-screen)
+        ("C-l" . escreen-goto-last-screen)
+        (";" . siren-escreen-get-active-screen)
+        ("C-;" . siren-escreen-get-active-screen)
+        ("C-c" . escreen-create-screen)
+        ("C-g" . escreen-goto-screen)
+        ("C-k" . escreen-kill-screen)
+        ("C-n" . escreen-goto-next-screen)
+        ("C-p" . escreen-goto-prev-screen))
 
   :hook
   (escreen-goto-screen . siren-escreen-get-active-screen)

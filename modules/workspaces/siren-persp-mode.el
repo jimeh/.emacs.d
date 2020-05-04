@@ -6,9 +6,11 @@
 
 ;;; Code:
 
+(require 'siren-refine)
+
 (use-package persp-mode
   :hook
-  (after-init . persp-mode)
+  (emacs-startup . persp-mode)
 
   :bind
   ("s-}" . persp-next)
@@ -42,19 +44,34 @@
         ("C-z l" . persp-load-state-from-file)
         ("C-z L" . persp-load-from-file-by-names)
         ("C-z ;" . siren-persp-mode-show-current-perspective-name)
-        ("C-z C-;" . siren-persp-mode-show-current-perspective-name))
+        ("C-z C-;" . siren-persp-mode-show-current-perspective-name)
+        ("C-z e" . siren-persp-mode-edit-names-cache)
+        ("C-z C-e" . siren-persp-mode-edit-names-cache))
 
   :custom
   (persp-auto-save-num-of-backups 10)
   (persp-autokill-buffer-on-remove 'kill-weak)
-  (persp-interactive-completion-system 'ido)
   (persp-keymap-prefix "")
   (persp-nil-name "nil")
 
   :init
+  ;; Do not auto save/load in terminal. My main instance of Emacs runs in GUI,
+  ;; terminal based instances are for smaller random things.
+  (when (not window-system)
+    (setq persp-auto-resume-time -1
+          persp-auto-save-opt 0))
+
+  (defun siren-persp-mode-filter-magit-buffers (buf)
+    (string-prefix-p "magit" (buffer-name buf)))
+
   (defun siren-persp-mode-ibuffer (arg)
       (interactive "P")
     (with-persp-buffer-list () (ibuffer arg)))
+
+  (defun siren-persp-mode-edit-names-cache ()
+    "Use refine package to edit persp-names-cache variable."
+    (interactive)
+    (refine 'persp-names-cache))
 
   (defun siren-persp-mode-show-current-perspective-name (&rest _)
     "Show current perspectives, highlighting the active one."
@@ -73,6 +90,9 @@
       (message "perspectives: %s" output)))
 
   :config
+  (add-to-list 'persp-common-buffer-filter-functions
+               'siren-persp-mode-filter-magit-buffers)
+
   (add-hook 'persp-activated-functions
             #'siren-persp-mode-show-current-perspective-name))
 

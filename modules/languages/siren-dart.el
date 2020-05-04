@@ -6,10 +6,13 @@
 
 ;;; Code:
 
+(require 'siren-company)
+(require 'siren-folding)
+(require 'siren-lsp)
 (require 'siren-projectile)
 
 (use-package dart-mode
-  :mode "\\.dart"
+  :mode "\\.dart\\'"
   :interpreter "dart"
 
   :hook
@@ -20,17 +23,20 @@
   (dart-enable-analysis-server t)
 
   :init
-  (defun siren-dart-mode-setup ()
-    (company-mode +1)
-    (lsp)
-    (highlight-symbol-mode -1)
-    (hs-minor-mode 1)
-    (hideshowvis-enable)
-    (subword-mode +1))
-
   (with-eval-after-load "projectile"
     (add-to-list 'projectile-project-root-files-bottom-up "pubspec.yaml")
-    (add-to-list 'projectile-project-root-files-bottom-up "BUILD")))
+    (add-to-list 'projectile-project-root-files-bottom-up "BUILD"))
+
+  (defun siren-dart-mode-setup ()
+    (when (fboundp 'highlight-symbol-mode)
+      (highlight-symbol-mode -1))
+    (when (fboundp 'auto-highlight-symbol-mode)
+      (auto-highlight-symbol-mode -1))
+
+    (company-mode +1)
+    (lsp)
+    (siren-folding)
+    (subword-mode +1)))
 
 (provide 'siren-dart)
 ;;; siren-dart.el ends here

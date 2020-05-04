@@ -6,24 +6,51 @@
 
 ;;; Code:
 
+(require 'imenu)
+
+(use-package imenu-anywhere
+  :config
+  (set-default 'imenu-auto-rescan t)
+  (set-default 'imenu-max-item-length 160)
+  (set-default 'imenu-max-items 400))
+
 (use-package helm
-  :defer t
-  :hook ((helm-minibuffer-set-up . siren-helm--hide-minibuffer-maybe)
-         (helm-after-initialize . siren-helm--toggle-source-header-line)
-         (helm-minibuffer-set-up . siren-helm--popwin-help-mode-off)
-         (helm-cleanup . siren-helm--popwin-help-mode-on)
-         (helm-cleanup . siren-helm--show-neotree-maybe))
+  :hook
+  (helm-minibuffer-set-up . siren-helm--hide-minibuffer-maybe)
+  (helm-after-initialize . siren-helm--toggle-source-header-line)
+  (helm-minibuffer-set-up . siren-helm--popwin-help-mode-off)
+  (helm-cleanup . siren-helm--popwin-help-mode-on)
+  (helm-cleanup . siren-helm--show-neotree-maybe)
+  (helm-cleanup . siren-helm--show-treemacs-maybe)
+
+  :bind
+  ("C-t" . helm-imenu)
+  ("C-c t" . helm-imenu-anywhere)
+  ("C-x C-f" . helm-find-files)
+  ("C-c f f" . helm-for-files)
+  ("C-c f r" . helm-recentf)
+  ("C-c C-m" . helm-M-x)
+  (:map helm-command-map
+        ("M" . helm-man-woman))
 
   :custom
-  (helm-autoresize-max-height 30)
-  (helm-autoresize-min-height 30)
-  (helm-autoresize-mode t)
+  (helm-M-x-always-save-history t)
+  (helm-M-x-fuzzy-match t)
+  (helm-always-two-windows t)
+  (helm-autoresize-max-height 48)
+  (helm-autoresize-min-height 10)
+  (helm-autoresize-mode nil)
   (helm-buffer-max-length 64)
   (helm-case-fold-search 'smart)
+  (helm-command-prefix-key "C-c h")
+  (helm-display-header-line t)
   (helm-echo-input-in-header-line t)
+  (helm-ff-file-name-history-use-recentf t)
+  (helm-ff-search-library-in-sexp t)
   (helm-file-name-case-fold-search 'smart)
   (helm-split-window-default-side 'below)
   (siren-helm--did-hide-neotree nil)
+  (siren-helm--did-hide-treemacs nil)
 
   :init
   ;; From: https://www.reddit.com/r/emacs/comments/3asbyn/new_and_very_useful_helm_feature_enter_search/
@@ -68,14 +95,33 @@
       (setq siren-helm--did-hide-neotree nil)
       (run-with-timer 0.01 nil #'neotree-show)))
 
+  (defun siren-helm--hide-treemacs (&rest plist)
+    (when (fboundp 'treemacs-get-local-window)
+      (let ((win (treemacs-get-local-window)))
+        (when win
+          (setq siren-helm--did-hide-treemacs t)
+          (delete-window win)))))
+
+  (defun siren-helm--show-treemacs-maybe ()
+    (when siren-helm--did-hide-treemacs
+      (setq siren-helm--did-hide-treemacs nil)
+      (run-with-timer 0.01 nil #'siren-helm--show-treemacs)))
+
+  (defun siren-helm--show-treemacs ()
+    (when (fboundp 'treemacs-select-window)
+      (let ((win (selected-window)))
+        (treemacs-select-window)
+        (select-window win))))
+
   :config
-  (advice-add 'helm :before 'siren-helm--hide-neotree))
+  (require 'helm-config)
 
-(use-package helm-config
-  :ensure helm
+  (require 'helm-command)
+  (require 'helm-files)
+  (require 'helm-imenu)
 
-  :custom
-  (helm-command-prefix-key "C-c h"))
+  (advice-add 'helm :before 'siren-helm--hide-neotree)
+  (advice-add 'helm :before 'siren-helm--hide-treemacs))
 
 (use-package helm-descbinds
   :defer t)
