@@ -17,7 +17,7 @@
   :custom
   (writeroom-global-effects nil)
   (writeroom-restore-window-config t)
-  (writeroom-width 82))
+  (writeroom-width 88))
 
 (provide 'siren-writeroom)
 ;;; siren-writeroom.el ends here
