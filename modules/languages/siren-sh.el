@@ -29,7 +29,7 @@
           sh-indentation 2
           whitespace-action '(auto-cleanup))
 
-    (subword-mode +1)x))
+    (subword-mode +1)))
 
 (provide 'siren-sh)
 ;;; siren-sh.el ends here
