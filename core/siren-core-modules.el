@@ -158,6 +158,7 @@
 (require 'siren-makefile)
 (require 'siren-markdown)
 (require 'siren-mermaid)
+(require 'siren-nginx)
 (require 'siren-php)
 (require 'siren-plantuml)
 (require 'siren-ruby)
