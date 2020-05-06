@@ -14,6 +14,7 @@
   ("C-x C-'" . helm-do-ag-project-root)
 
   :custom
+  (helm-ag-base-command "rg --no-heading")
   (helm-ag-ignore-patterns '("*.min-latest.css"
                              "*.min-latest.js"
                              "*.min.css"
