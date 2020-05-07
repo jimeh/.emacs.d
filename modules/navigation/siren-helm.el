@@ -15,6 +15,7 @@
   (set-default 'imenu-max-items 400))
 
 (use-package helm
+  :demand t
   :hook
   (helm-minibuffer-set-up . siren-helm--hide-minibuffer-maybe)
   (helm-after-initialize . siren-helm--toggle-source-header-line)
