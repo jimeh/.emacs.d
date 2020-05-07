@@ -13,16 +13,21 @@
 (require 'siren-smartparens)
 
 (use-package org
-  :bind (:map org-mode-map
-              ("C-j" . org-return-indent)
-              ("RET" . org-return-indent)
-              ("M-{" . org-promote-subtree)
-              ("M-}" . org-demote-subtree)
-              ("M-P" . org-metaup)
-              ("M-N" . org-metadown)
-              ("C-M-n" . outline-next-visible-heading)
-              ("C-M-p" . outline-previous-visible-heading))
-  :hook (org-mode . siren-org-mode-setup)
+  :bind
+  (:map org-mode-map
+        ("C-j" . org-return-indent)
+        ("RET" . org-return-indent)
+        ("M-{" . org-promote-subtree)
+        ("M-}" . org-demote-subtree)
+        ("M-P" . org-metaup)
+        ("M-N" . org-metadown)
+        ("C-M-n" . outline-next-visible-heading)
+        ("C-M-p" . outline-previous-visible-heading))
+  (:map org-src-mode-map
+        ("C-c C-c" . org-edit-src-exit))
+
+  :hook
+  (org-mode . siren-org-mode-setup)
 
   :custom
   (org-blank-before-new-entry '((heading . auto) (plain-list-item . nil)))
