@@ -10,6 +10,7 @@
 (require 'siren-folding)
 (require 'siren-lsp)
 (require 'siren-projectile)
+(require 'siren-string-inflection)
 (require 'siren-toggle-quotes)
 
 (add-to-list 'projectile-globally-ignored-directories "vendor/bundle")
@@ -45,7 +46,8 @@
               ("RET" . newline-and-indent)
               ("C-c C-l" . goto-line)
               ("C-M-f" . sp-ruby-forward-sexp)
-              ("C-M-b" . sp-ruby-backward-sexp))
+              ("C-M-b" . sp-ruby-backward-sexp)
+              ("C-c C-u" . string-inflection-ruby-style-cycle))
 
   :hook
   (ruby-mode . siren-ruby-mode-setup)

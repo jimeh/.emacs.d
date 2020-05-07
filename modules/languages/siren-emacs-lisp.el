@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-lisp)
+(require 'siren-string-inflection)
 
 (defun siren-recompile-elc-on-save ()
   "Recompile your elc when saving an elisp file."
@@ -36,6 +37,7 @@
 
 (add-hook 'emacs-lisp-mode-hook #'siren-emacs-lisp-mode-setup)
 (add-to-list 'auto-mode-alist '("Cask\\'" . emacs-lisp-mode))
+(define-key emacs-lisp-mode-map (kbd "C-c C-u") 'string-inflection-all-cycle)
 
 (provide 'siren-emacs-lisp)
 ;;; siren-emacs-lisp.el ends here
