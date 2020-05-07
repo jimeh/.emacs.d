@@ -119,6 +119,27 @@
                           :foreground (doom-color 'red)
                           :background 'unspecified))
 
+    (with-eval-after-load 'dired+
+      (set-face-attribute 'diredp-dir-heading nil
+                          :weight 'bold
+                          :foreground (doom-color 'magenta))
+      (set-face-attribute 'diredp-dir-name nil
+                          :weight 'bold
+                          :foreground (doom-lighten 'magenta 0.25))
+      (set-face-attribute 'diredp-flag-mark nil
+                          :foreground (doom-color 'green)
+                          :background (doom-blend 'bg 'orange 0.5))
+      (set-face-attribute 'diredp-flag-mark-line nil
+                          :foreground (doom-color 'base8)
+                          :background (doom-blend 'bg 'orange 0.7))
+      (set-face-attribute 'diredp-deletion nil
+                          :foreground (doom-color 'yellow)
+                          :background (doom-darken 'red 0.25))
+      (set-face-attribute 'diredp-deletion-file-name nil
+                          :foreground (doom-color 'red))
+      (set-face-attribute 'diredp-compressed-file-name nil
+                          :foreground (doom-color 'blue)))
+
     (with-eval-after-load 'zoom-window
       (setq zoom-window-mode-line-color (doom-blend 'magenta 'bg 0.2)))
 

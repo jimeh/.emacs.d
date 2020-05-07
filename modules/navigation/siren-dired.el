@@ -25,15 +25,16 @@
   :straight (:type built-in))
 
 (use-package dired+
+  :demand t
   :bind (:map dired-mode-map
               ("c" . dired-create-directory)
               ("C-l" . diredp-up-directory-reuse-dir-buffer))
 
   :hook
-  (dired-mode . siren-dired-mode-setup)
+  (dired-mode . siren-diredp-mode-setup)
 
   :init
-  (defun siren-dired-mode-setup ()
+  (defun siren-diredp-mode-setup ()
     (toggle-diredp-find-file-reuse-dir 1))
 
   :config
