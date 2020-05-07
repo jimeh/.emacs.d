@@ -32,7 +32,7 @@
 
 ;; Core stuff
 (require 'siren-core-custom)
-(require 'siren-core-funcs)
+(require 'siren-core-utils)
 
 ;; Continue core stuff
 (require 'siren-core-packages)

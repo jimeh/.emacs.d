@@ -1,8 +1,8 @@
-;;; siren-core-funcs.el --- jimeh's Emacs Siren: Core Siren functions.
+;;; siren-core-utils.el --- jimeh's Emacs Siren: Core Siren functions and macros.
 
 ;;; Commentary:
 
-;; Core Siren functions used a bit all over the place.  Some of them shamelessly
+;; Core Siren functions macros used a bit all over the place. Some shamelessly
 ;; ripped from Emacs Prelude.
 
 ;;; Code:
@@ -76,5 +76,22 @@ Borrowed from: http://emacsredux.com/blog/2013/05/04/rename-file-and-buffer/"
       (interactive)
       (ignore-errors (funcall fn)))))
 
-(provide 'siren-core-funcs)
-;;; siren-core-funcs.el ends here
+;; Shamelessly ripped from textmate.el: https://github.com/defunkt/textmate.el
+(defmacro siren-allow-line-as-region-for-function (orig-function)
+  `(defun ,(intern (concat (symbol-name orig-function) "-or-line"))
+       ()
+     ,(format "Like `%s', but acts on the current line if mark is not active."
+              orig-function)
+     (interactive)
+     (if mark-active
+         (call-interactively (function ,orig-function))
+       (save-excursion
+         ;; define a region (temporarily) -- so any C-u prefixes etc. are
+         ;; preserved.
+         (beginning-of-line)
+         (set-mark (point))
+         (end-of-line)
+         (call-interactively (function ,orig-function))))))
+
+(provide 'siren-core-utils)
+;;; siren-core-utils.el ends here
