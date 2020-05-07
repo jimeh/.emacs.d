@@ -41,5 +41,17 @@
   (unbind-key "M-i" dired-mode-map)
   (unbind-key "M-l" dired-mode-map))
 
+(use-package dired-subtree
+  :bind (:map dired-mode-map
+              ("TAB" . dired-subtree-toggle)))
+
+(use-package dired-narrow
+  :bind (:map dired-mode-map
+              ("C-s" . dired-narrow))
+
+  :custom
+  (dired-narrow-exit-action 'dired-narrow-find-file)
+  (dired-narrow-exit-when-one-left nil))
+
 (provide 'siren-dired)
 ;;; siren-dired.el ends here
