@@ -38,5 +38,5 @@
    name based on a enemy type from the game. "Siren" was short and kinda cool
    sounding.
 
-   #+CAPTIONg: Siren
+   #+CAPTION: Siren
    [[http://i.imgur.com/7PtsVDG.jpg]]
