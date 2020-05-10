@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.2](https://github.com/jimeh/.emacs.d/compare/v0.6.1...v0.6.2) (2020-05-10)
+
+
+### Features
+
+* **editor:** Replace browse-kill-ring with helm-show-kill-ring ([cdacf31](https://github.com/jimeh/.emacs.d/commit/cdacf31ca03a959a52ee8c1cd860d0fc792ea484))
+
+
+### Bug Fixes
+
+* **lsp:** Add helm-lsp-workspace-symbol keybinding for terminal use ([a6a8452](https://github.com/jimeh/.emacs.d/commit/a6a84524bd0648f5e02869302b3142cc7e135bbf))
+* **navigation:** Improve helm-ag keybindings ([decc1c5](https://github.com/jimeh/.emacs.d/commit/decc1c58c1b9da674c259826b8ad439d5ef6c04b))
+* **navigation:** Improve helm-apropos usage ([c69dec3](https://github.com/jimeh/.emacs.d/commit/c69dec37bc183e26e7d43be6b3cd0ac25bb533e4))
+* **navigation:** Lazy-load helm without breaking keybindings ([cb16ffe](https://github.com/jimeh/.emacs.d/commit/cb16ffe993ac991ee5ceb04f70c405468cb78304))
+* **projects:** Improve helm-projectile keybindings in terminal ([cc8a76c](https://github.com/jimeh/.emacs.d/commit/cc8a76c617eab90f584b60319750a774ce2b8ab9))
+
 ### [0.6.1](https://github.com/jimeh/.emacs.d/compare/v0.6.0...v0.6.1) (2020-05-07)
 
 
