@@ -17,14 +17,11 @@
   ("C-x p" . treemacs-select-window)
 
   :custom
-  (treemacs-change-root-without-asking t)
   (treemacs-collapse-dirs 3)
   (treemacs-follow-after-init t)
-  (treemacs-git-integration t)
   (treemacs-goto-tag-strategy 'refetch-index)
   (treemacs-indentation 2)
-  (treemacs-is-never-other-window nil)
-  (treemacs-never-persist nil)
+  (treemacs-is-never-other-window t)
   (treemacs-show-hidden-files t)
   (treemacs-silent-refresh nil)
   (treemacs-sorting 'alphabetic-asc)
@@ -42,6 +39,7 @@
 
   (treemacs-follow-mode t)
   (treemacs-filewatch-mode t)
+  (treemacs-git-mode 'deferred)
 
   (treemacs-define-doubleclick-action
    'file-node-open   #'treemacs-visit-node-in-most-recently-used-window)
