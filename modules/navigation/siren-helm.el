@@ -117,6 +117,13 @@
   (helm-M-x-always-save-history t)
   (helm-M-x-fuzzy-match t))
 
+(use-package helm-elisp
+  :straight (helm)
+  :after (helm-config)
+  :bind
+  (:map helm-command-map
+        ("d" . helm-apropos)))
+
 (use-package helm-files
   :straight (helm)
   :after (helm-config)
