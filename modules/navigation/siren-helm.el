@@ -148,6 +148,22 @@
   :bind
   ("C-t" . helm-imenu))
 
+(use-package helm-ring
+  :straight (helm)
+  :after (helm-config)
+  :defer t
+  :init
+  ;; This advice is borrowed from the browse-kill-ring package.
+  (defadvice yank-pop (around kill-ring-browse-maybe (arg))
+    "If last action was not a yank, run `helm-show-kill-ring' instead."
+    (interactive "p")
+    (if (not (eq last-command 'yank))
+        (helm-show-kill-ring)
+      (barf-if-buffer-read-only)
+      ad-do-it))
+
+  (ad-activate 'yank-pop))
+
 (use-package helm-descbinds
   :defer t)
 
