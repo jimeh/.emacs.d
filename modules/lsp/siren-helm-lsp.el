@@ -11,6 +11,7 @@
 
 (use-package helm-lsp
   :bind
+  ("C-c '" . helm-lsp-workspace-symbol)
   ("C-c C-'" . helm-lsp-workspace-symbol))
 
 (provide 'siren-helm-lsp)
