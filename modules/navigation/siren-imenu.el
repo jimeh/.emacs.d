@@ -9,14 +9,17 @@
 (require 'imenu)
 (require 'siren-helm)
 
+(use-package imenu
+  :straight (:type built-in)
+
+  :custom
+  (imenu-auto-rescan t)
+  (imenu-max-item-length 160)
+  (imenu-max-items 400))
+
 (use-package imenu-anywhere
   :bind
-  ("C-c t" . helm-imenu-anywhere)
-
-  :config
-  (set-default 'imenu-auto-rescan t)
-  (set-default 'imenu-max-item-length 160)
-  (set-default 'imenu-max-items 400))
+  ("C-c t" . helm-imenu-anywhere))
 
 (provide 'siren-imenu)
 ;;; siren-imenu.el ends here
