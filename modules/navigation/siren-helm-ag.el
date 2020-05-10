@@ -12,10 +12,12 @@
   :straight (:type git :host github :repo "emacsorphanage/helm-ag"
                   :fork (:host github :repo "jimeh/helm-ag"
                                :branch "personal-patches"))
-
+  :after (helm-config)
   :bind
-  ("C-c C-s" . helm-do-ag)
+  ("C-x '" . helm-do-ag-project-root)
   ("C-x C-'" . helm-do-ag-project-root)
+  (:map helm-command-map
+        ("a" . helm-do-ag))
 
   :custom
   (helm-ag-base-command "rg --no-heading")
