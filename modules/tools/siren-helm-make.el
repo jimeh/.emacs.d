@@ -9,6 +9,7 @@
 (require 'siren-helm)
 
 (use-package helm-make
+  :after (helm-config)
   :bind
   (:map helm-command-map
         ("m" . helm-make-projectile))

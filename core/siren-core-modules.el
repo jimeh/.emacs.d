@@ -62,6 +62,7 @@
 (require 'siren-helm-ag)
 (require 'siren-helm-open-github)
 (require 'siren-helm-swoop)
+(require 'siren-imenu)
 (require 'siren-recursive-narrow)
 (require 'siren-scroll-half-screen)
 
