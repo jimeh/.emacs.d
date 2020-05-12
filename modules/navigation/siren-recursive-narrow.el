@@ -15,10 +15,15 @@
   :config
   (add-hook 'recursive-narrow-dwim-functions
             'siren-recursive-narrow-org-edit-src-code)
+  (add-hook 'recursive-narrow-dwim-functions
+            'siren-recursive-narrow-markdown-edit-code-block)
 
   :init
   (defun siren-recursive-narrow-org-edit-src-code()
-    (ignore-errors (org-edit-src-code) t)))
+    (ignore-errors (org-edit-src-code) t))
+
+  (defun siren-recursive-narrow-markdown-edit-code-block()
+    (ignore-errors (markdown-edit-code-block) t)))
 
 (provide 'siren-recursive-narrow)
 ;;; siren-recursive-narrow.el ends here

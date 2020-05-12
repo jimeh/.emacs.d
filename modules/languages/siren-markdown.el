@@ -50,5 +50,9 @@
     (smartparens-mode +1)
     (subword-mode)))
 
+;; Required by markdown-edit-code-block.
+(use-package edit-indirect
+  :defer t)
+
 (provide 'siren-markdown)
 ;;; siren-markdown.el ends here
