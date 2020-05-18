@@ -149,7 +149,9 @@
   (ruby-mode . rubocopfmt-mode)
 
   :custom
-  (rubocopfmt-show-errors 'echo))
+  (rubocopfmt-show-errors 'echo)
+  (rubocopfmt-rubocop-command
+   (expand-file-name "bin/rubocop-daemon-wrapper" siren-dir)))
 
 (use-package ruby-compilation
   :defer t)

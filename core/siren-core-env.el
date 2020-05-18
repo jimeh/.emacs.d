@@ -27,5 +27,8 @@
   (when (and tmpdir (not (string-blank-p tmpdir)))
     (setq temporary-file-directory tmpdir)))
 
+;; Add bin directory within emacs configuration dir to `exec-path'.
+(add-to-list 'exec-path (expand-file-name "bin" siren-dir))
+
 (provide 'siren-core-env)
 ;;; siren-core-env.el ends here

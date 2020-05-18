@@ -20,11 +20,14 @@ new-version:
 #
 
 define vendored
-VENDORED = $(VENDORED) $(1)
+VENDORED += $(1)
 
 .SILENT: $(1)
 $(1):
-	echo "fetching $(1)..." && curl -s -L -o "$(1)" "$(2)"
+	echo "fetching $(1)..." && \
+	mkdir -p "$(dir $(1))" && \
+	curl -s -L -o "$(1)" "$(2)" && \
+	([[ "$(1)" == "bin/"* ]] && chmod +x "$(1)") || exit 0
 
 .PHONY: remove_$(1)
 .SILENT: remove_$(1)
@@ -41,6 +44,7 @@ endef
 # Defined vendored dependencies.
 #
 
+$(eval $(call vendored,bin/rubocop-daemon-wrapper,https://github.com/fohte/rubocop-daemon/raw/master/bin/rubocop-daemon-wrapper))
 
 #
 # Main targets.
