@@ -9,9 +9,6 @@
 (require 'siren-helm)
 
 (use-package helm-ag
-  :straight (:type git :host github :repo "emacsorphanage/helm-ag"
-                  :fork (:host github :repo "jimeh/helm-ag"
-                               :branch "personal-patches"))
   :after (helm-config)
   :bind
   ("C-x '" . helm-do-ag-project-root)
