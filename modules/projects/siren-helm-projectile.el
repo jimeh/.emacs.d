@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-helm)
+(require 'siren-projectile)
 
 (use-package helm-projectile
   :bind
