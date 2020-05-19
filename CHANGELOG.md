@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.3](https://github.com/jimeh/.emacs.d/compare/v0.6.2...v0.6.3) (2020-05-19)
+
+
+### Features
+
+* **lang:** Enable use of markdown-edit-code-block ([ac0bf9b](https://github.com/jimeh/.emacs.d/commit/ac0bf9b42eb85ce60c682f7961fc58dadba23cab))
+* **lang:** Format ruby files with `lsp-format-buffer` ([a71fc70](https://github.com/jimeh/.emacs.d/commit/a71fc70e66ca48d8d126f2c376583bd23afde547))
+* **lang:** Use rubocop-daemon to format ruby files on save ([25441f4](https://github.com/jimeh/.emacs.d/commit/25441f47d31880e4be29418da040adc7bfa28fe2))
+* **lsp:** Improve lsp-mode setup with a prefix key and company tweaks ([764c4da](https://github.com/jimeh/.emacs.d/commit/764c4dae74f40ab930cf2a52d2640d668a5531d4))
+* **performance:** Add explain-pause-mode ([8814bf1](https://github.com/jimeh/.emacs.d/commit/8814bf130309e4deaeff6c4eeed54a3a59ea2571))
+
+
+### Bug Fixes
+
+* **navigation:** Ensure imenu config was is set correctly ([8868e97](https://github.com/jimeh/.emacs.d/commit/8868e975e290209cabbe15cc6676e05d66ce98de))
+
 ### [0.6.2](https://github.com/jimeh/.emacs.d/compare/v0.6.1...v0.6.2) (2020-05-10)
 
 
