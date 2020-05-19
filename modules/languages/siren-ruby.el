@@ -54,15 +54,14 @@
 
   :init
   (defun siren-ruby-mode-setup ()
-    (setq c-tab-always-indent nil
-          ruby-align-chained-calls t
-          ruby-insert-encoding-magic-comment t
-          ruby-use-smie t
-          tab-width 2)
+    (setq-local c-tab-always-indent nil
+                ruby-align-chained-calls t
+                ruby-insert-encoding-magic-comment t
+                ruby-use-smie t
+                tab-width 2)
 
     (company-mode +1)
     (siren-folding)
-    (lsp)
     (subword-mode +1))
 
   :config
@@ -76,6 +75,12 @@
                  ,(rx (or "end"))                                   ;; Block end
                  ,(rx (or "#" "=begin"))                            ;; Comment start
                  ruby-forward-sexp nil)))
+
+(use-package lsp-solargraph
+  :straight (lsp-mode)
+
+  :hook
+  (ruby-mode . lsp-deferred))
 
 (use-package inf-ruby
   :defer t
