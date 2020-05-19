@@ -147,7 +147,6 @@
               ("C-c . D" . rubocop-autocorrect-directory)))
 
 (use-package rubocopfmt
-  :defer t
   :bind (:map ruby-mode-map
               ("C-c C-f" . rubocopfmt))
   :hook
@@ -155,6 +154,7 @@
 
   :custom
   (rubocopfmt-show-errors 'echo)
+  (rubocopfmt-on-save-use-lsp-format-buffer t)
   (rubocopfmt-rubocop-command
    (expand-file-name "bin/rubocop-daemon-wrapper" siren-dir)))
 
