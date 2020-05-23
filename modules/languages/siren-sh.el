@@ -22,14 +22,24 @@
   :hook
   (sh-mode . siren-sh-mode-setup)
 
+  :custom
+  (sh-basic-offset 2)
+  (sh-indentation 2)
+  (sh-indent-after-continuation 'always)
+
   :init
   (defun siren-sh-mode-setup ()
     (setq tab-width 2
-          sh-basic-offset 2
-          sh-indentation 2
           whitespace-action '(auto-cleanup))
 
     (subword-mode +1)))
+
+(use-package shfmt
+  :hook
+  (sh-mode . shfmt-on-save-mode)
+
+  :custom
+  (shfmt-arguments '("-i" "2" "-ci" "-sr")))
 
 (provide 'siren-sh)
 ;;; siren-sh.el ends here
