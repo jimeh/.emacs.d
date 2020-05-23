@@ -41,6 +41,7 @@
         ("C-z K" . persp-kill-buffer)
         ("C-z w" . persp-save-state-to-file)
         ("C-z W" . persp-save-to-file-by-names)
+        ("C-z C-l" . siren-persp-mode-switch-to-most-recent)
         ("C-z l" . persp-load-state-from-file)
         ("C-z L" . persp-load-from-file-by-names)
         ("C-z ;" . siren-persp-mode-show-current-perspective-name)
@@ -73,28 +74,72 @@
     (interactive)
     (refine 'persp-names-cache))
 
+  (defun siren-persp-before-switch-hook (name frame)
+    "Store the persp we're switching away from as the most recently active."
+    (when (framep frame)
+      (let ((recent-list (frame-parameter frame 'persp-recent-persps))
+            (current-persp (safe-persp-name (get-current-persp))))
+        (set-frame-parameter frame 'persp-recent-persps
+                             (append (list current-persp)
+                                     (delete current-persp recent-list))))))
+
+  (defun siren-persp-before-kill-hook (persp)
+    "Remove the killed perspective's name from persp-recent-persps."
+    (let* ((frame (selected-frame))
+          (recent-list (frame-parameter frame 'persp-recent-persps))
+          (persp-name (safe-persp-name persp))
+          (current-persp (safe-persp-name (get-current-persp))))
+      (set-frame-parameter frame 'persp-recent-persps
+                           (delete persp-name recent-list))
+      (if (equal persp-name current-persp)
+          (siren-persp-mode-switch-to-most-recent))))
+
+  (defun siren-persp-activated-hook (type)
+    "Remove any persp names from recent list that no longer exist."
+    (let* ((frame (selected-frame))
+           (recent-list (frame-parameter frame 'persp-recent-persps))
+           (perspectives (persp-names-current-frame-fast-ordered))
+           (current-persp (safe-persp-name (get-current-persp))))
+      (setq recent-list (delete current-persp recent-list))
+      (dolist (persp-name recent-list)
+        (if (not (member persp-name perspectives))
+            (setq recent-list (delete persp-name recent-list))))
+      (set-frame-parameter frame 'persp-recent-persps recent-list)))
+
+  (defun siren-persp-mode-switch-to-most-recent ()
+    "Switch to the most recently active persp."
+    (interactive)
+    (let* ((frame (selected-frame))
+           (persp-name (car (frame-parameter frame 'persp-recent-persps))))
+      (if (member persp-name (persp-names-current-frame-fast-ordered))
+          (persp-frame-switch persp-name frame)
+        (message "perspective %s is no longer available" persp-name))))
+
   (defun siren-persp-mode-show-current-perspective-name (&rest _)
     "Show current perspectives, highlighting the active one."
     (interactive)
     (let ((perspectives (persp-names-current-frame-fast-ordered))
-          (active-persp-name (safe-persp-name (get-current-persp)))
+          (current-persp-name (safe-persp-name (get-current-persp)))
           (output ""))
-      (dolist (current-name perspectives)
-        (message "%s" current-name)
+      (dolist (persp-name perspectives)
         (setq output
-              (concat output (if (string= active-persp-name current-name)
-                                 (propertize current-name
+              (concat output (if (string= current-persp-name persp-name)
+                                 (propertize persp-name
                                              'face 'persp-face-lighter-default)
-                               current-name)
+                               persp-name)
                       " ")))
       (message "perspectives: %s" output)))
 
   :config
-  (add-to-list 'persp-common-buffer-filter-functions
-               'siren-persp-mode-filter-magit-buffers)
+  (add-hook 'persp-common-buffer-filter-functions
+            'siren-persp-mode-filter-magit-buffers)
+
+  (add-hook 'persp-before-switch-functions 'siren-persp-before-switch-hook)
+  (add-hook 'persp-before-kill-functions 'siren-persp-before-kill-hook)
+  (add-hook 'persp-activated-functions 'siren-persp-activated-hook)
 
   (add-hook 'persp-activated-functions
-            #'siren-persp-mode-show-current-perspective-name))
+            'siren-persp-mode-show-current-perspective-name))
 
 (provide 'siren-persp-mode)
 ;;; siren-persp-mode.el ends here
