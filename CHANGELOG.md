@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.4](https://github.com/jimeh/.emacs.d/compare/v0.6.3...v0.6.4) (2020-05-23)
+
+
+### Features
+
+* **lang:** Add module for terraform-mode package ([e4c8643](https://github.com/jimeh/.emacs.d/commit/e4c864319a75d26a4d73971d41a8baf5fd5f284d))
+* **lang:** Add support for Haskell via haskell-mode ([0f13518](https://github.com/jimeh/.emacs.d/commit/0f13518f918881f1836b25aa4fab8d23d242ff5f))
+* **lang:** Format shell scripts with shfmt on save ([c220e65](https://github.com/jimeh/.emacs.d/commit/c220e65a99c5f7a93df0c6450342d8b8403be996))
+* **persp-mode:** Enable switching to most recent persp ([3c8fe70](https://github.com/jimeh/.emacs.d/commit/3c8fe70d8e525f67be9f19e88c33adc965e260d6))
+* **text-editing:** Add reformatter package ([be39020](https://github.com/jimeh/.emacs.d/commit/be39020c64e94c79f08adc8844f06f772343a2e8))
+
+
+### Bug Fixes
+
+* **lang:** Switch back to formatting Ruby with rubocop-daemon ([aee6af6](https://github.com/jimeh/.emacs.d/commit/aee6af61289cdfe3f12e02db03676c0190034d5b))
+
 ### [0.6.3](https://github.com/jimeh/.emacs.d/compare/v0.6.2...v0.6.3) (2020-05-19)
 
 
