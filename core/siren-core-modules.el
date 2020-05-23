@@ -169,6 +169,7 @@
 (require 'siren-sh)
 (require 'siren-slim)
 (require 'siren-sql)
+(require 'siren-terraform)
 (require 'siren-text-mode)
 (require 'siren-thrift)
 (require 'siren-toml)
