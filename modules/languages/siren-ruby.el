@@ -80,7 +80,10 @@
   :straight (lsp-mode)
 
   :hook
-  (ruby-mode . lsp-deferred))
+  (ruby-mode . lsp-deferred)
+
+  :custom
+  (lsp-solargraph-multi-root nil))
 
 (use-package inf-ruby
   :defer t
