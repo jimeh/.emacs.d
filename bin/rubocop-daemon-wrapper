@@ -4,7 +4,7 @@ set -e
 
 COMMAND_PREFIX=""
 
-if [ -n "$RUBOCOP_DAEMON_USE_BUNDLER" ]; then
+if [ -n "$RUBOCOP_DAEMON_USE_BUNDLER" ] || [ -n "$BUNDLER_VERSION" ]; then
   COMMAND_PREFIX="bundle exec"
 fi
 
@@ -91,7 +91,10 @@ mkdir -p "$LOCK_PATH"
 for ARG in $@; do
   if [ -z "$STDIN_CONTENT" ] && [ "$ARG" == "--stdin" ] || [ "$ARG" == "-s" ]; then
     # Preserve final new lines when ingesting from STDIN
-    STDIN_CONTENT="$(cat; printf x)"
+    STDIN_CONTENT="$(
+      cat
+      printf x
+    )"
     STDIN_CONTENT=${STDIN_CONTENT%x}
   fi
 done

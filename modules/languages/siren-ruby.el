@@ -85,6 +85,9 @@
   :custom
   (lsp-solargraph-multi-root nil))
 
+(use-package bundler
+  :defer t)
+
 (use-package inf-ruby
   :defer t
   :hook

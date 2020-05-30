@@ -1,0 +1,4 @@
+# name: rubocop:disable ...
+# key: rud
+# --
+# rubocop:disable $0

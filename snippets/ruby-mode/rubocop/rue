@@ -1,0 +1,4 @@
+# name: rubocop:enable ...
+# key: rue
+# --
+# rubocop:enable $0
