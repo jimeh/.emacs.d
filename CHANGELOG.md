@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.5](https://github.com/jimeh/.emacs.d/compare/v0.6.4...v0.6.5) (2020-05-30)
+
+
+### Features
+
+* **lang:** Add terraform-doc package ([e6ff06e](https://github.com/jimeh/.emacs.d/commit/e6ff06ea2c3ba07e31446ff356c92974649bc9f0))
+* **windows:** Integrate windmove with tmux ([0810857](https://github.com/jimeh/.emacs.d/commit/0810857131fb2cc7103dbf26d5ed48d21c151829))
+
+
+### Bug Fixes
+
+* **lang:** terraform-mode now formats buffers on save correctly ([bf4c49d](https://github.com/jimeh/.emacs.d/commit/bf4c49dd1ff3c8dbf18a98cf3ce951d287332640))
+* **themes:** Handle highlight-indent-guides when switching themes ([88ceeaa](https://github.com/jimeh/.emacs.d/commit/88ceeaa7c79ff171f62554911874d280948e148c))
+
 ### [0.6.4](https://github.com/jimeh/.emacs.d/compare/v0.6.3...v0.6.4) (2020-05-23)
 
 
