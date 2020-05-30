@@ -18,7 +18,6 @@
   :init
   (defun siren-terraform-mode-setup ()
     (setq tab-width 2)
-    (format-all-mode -1)
     (terraform-format-on-save-mode 1))
 
   :config
