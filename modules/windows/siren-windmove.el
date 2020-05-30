@@ -8,11 +8,40 @@
 
 (use-package windmove
   :straight (:type built-in)
-  :config
-  (global-set-key (kbd "M-k") (siren-ignore-error-wrapper 'windmove-down))
-  (global-set-key (kbd "M-i") (siren-ignore-error-wrapper 'windmove-up))
-  (global-set-key (kbd "M-j") (siren-ignore-error-wrapper 'windmove-left))
-  (global-set-key (kbd "M-l") (siren-ignore-error-wrapper 'windmove-right)))
+
+  :bind
+  ("M-i" . siren-windmove-up)
+  ("M-k" . siren-windmove-down)
+  ("M-j" . siren-windmove-left)
+  ("M-l" . siren-windmove-right)
+
+  :custom
+  (siren-windmove-tmux-fallback (if (getenv "TMUX") t nil))
+
+  :init
+  (defun siren-windmove-up ()
+    (interactive)
+    (if (and (not (ignore-errors (windmove-up)))
+             siren-windmove-tmux-fallback)
+        (shell-command "tmux select-pane -U")))
+
+  (defun siren-windmove-down ()
+    (interactive)
+    (if (and (not (ignore-errors (windmove-down)))
+             siren-windmove-tmux-fallback)
+        (shell-command "tmux select-pane -D")))
+
+  (defun siren-windmove-left ()
+    (interactive)
+    (if (and (not (ignore-errors (windmove-left)))
+             siren-windmove-tmux-fallback)
+        (shell-command "tmux select-pane -L")))
+
+  (defun siren-windmove-right ()
+    (interactive)
+    (if (and (not (ignore-errors (windmove-right)))
+             siren-windmove-tmux-fallback)
+        (shell-command "tmux select-pane -R"))))
 
 (provide 'siren-windmove)
 ;;; siren-windmove.el ends here
