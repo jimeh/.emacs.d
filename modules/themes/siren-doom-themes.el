@@ -140,6 +140,9 @@
       (set-face-attribute 'diredp-compressed-file-name nil
                           :foreground (doom-color 'blue)))
 
+    (with-eval-after-load 'highlight-indent-guides
+      (highlight-indent-guides-auto-set-faces))
+
     (with-eval-after-load 'zoom-window
       (setq zoom-window-mode-line-color (doom-blend 'magenta 'bg 0.2)))
 
