@@ -31,5 +31,8 @@
   (with-eval-after-load 'terraform-mode
     (company-terraform-init)))
 
+(use-package terraform-doc
+  :defer t)
+
 (provide 'siren-terraform)
 ;;; siren-terraform.el ends here
