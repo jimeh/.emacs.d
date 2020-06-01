@@ -21,6 +21,8 @@
     (terraform-format-on-save-mode 1))
 
   :config
+  ;; This does a better job of injecting formatted content than the default
+  ;; formatting commands included with terraform-mode.
   (reformatter-define terraform-format
     :program "terraform"
     :args '("fmt" "-no-color" "-")
