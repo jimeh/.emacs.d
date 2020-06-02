@@ -47,7 +47,17 @@
         ("C-z ;" . siren-persp-mode-show-current-perspective-name)
         ("C-z C-;" . siren-persp-mode-show-current-perspective-name)
         ("C-z e" . siren-persp-mode-edit-names-cache)
-        ("C-z C-e" . siren-persp-mode-edit-names-cache))
+        ("C-z C-e" . siren-persp-mode-edit-names-cache)
+        ("C-z 0" . siren-persp-switch-to-index-0)
+        ("C-z 1" . siren-persp-switch-to-index-1)
+        ("C-z 2" . siren-persp-switch-to-index-2)
+        ("C-z 3" . siren-persp-switch-to-index-3)
+        ("C-z 4" . siren-persp-switch-to-index-4)
+        ("C-z 5" . siren-persp-switch-to-index-5)
+        ("C-z 6" . siren-persp-switch-to-index-6)
+        ("C-z 7" . siren-persp-switch-to-index-7)
+        ("C-z 8" . siren-persp-switch-to-index-8)
+        ("C-z 9" . siren-persp-switch-to-index-9))
 
   :custom
   (persp-auto-save-num-of-backups 10)
@@ -74,25 +84,20 @@
     (interactive)
     (refine 'persp-names-cache))
 
-  (defun siren-persp-before-switch-hook (name frame)
-    "Store the persp we're switching away from as the most recently active."
-    (when (framep frame)
-      (let ((recent-list (frame-parameter frame 'persp-recent-persps))
-            (current-persp (safe-persp-name (get-current-persp))))
-        (set-frame-parameter frame 'persp-recent-persps
-                             (append (list current-persp)
-                                     (delete current-persp recent-list))))))
-
   (defun siren-persp-before-kill-hook (persp)
     "Remove the killed perspective's name from persp-recent-persps."
     (let* ((frame (selected-frame))
-          (recent-list (frame-parameter frame 'persp-recent-persps))
-          (persp-name (safe-persp-name persp))
-          (current-persp (safe-persp-name (get-current-persp))))
+           (recent-list (frame-parameter frame 'persp-recent-persps))
+           (most-recent (nth 1 recent-list))
+           (persp-name (safe-persp-name persp))
+           (current-persp (safe-persp-name (get-current-persp))))
+
       (set-frame-parameter frame 'persp-recent-persps
                            (delete persp-name recent-list))
-      (if (equal persp-name current-persp)
-          (siren-persp-mode-switch-to-most-recent))))
+      (set-frame-parameter frame 'persp-recent-just-killed persp-name)
+
+      (if (and most-recent (equal persp-name current-persp))
+        (persp-frame-switch most-recent frame))))
 
   (defun siren-persp-activated-hook (type)
     "Remove any persp names from recent list that no longer exist."
@@ -100,41 +105,77 @@
            (recent-list (frame-parameter frame 'persp-recent-persps))
            (perspectives (persp-names-current-frame-fast-ordered))
            (current-persp (safe-persp-name (get-current-persp))))
-      (setq recent-list (delete current-persp recent-list))
+
+      ;; And/move current persp name to beginning of recent list.
+      (setq recent-list (append (list current-persp)
+                                (delete current-persp recent-list)))
+
+      ;; Perform safetly clean-up of recent list.
       (dolist (persp-name recent-list)
-        (if (not (member persp-name perspectives))
-            (setq recent-list (delete persp-name recent-list))))
+        (when (not (member persp-name perspectives))
+          (message "WARNING: perspective %s in recent list does not exist.")
+          (setq recent-list (delete persp-name recent-list))))
+
       (set-frame-parameter frame 'persp-recent-persps recent-list)))
 
   (defun siren-persp-mode-switch-to-most-recent ()
     "Switch to the most recently active persp."
     (interactive)
     (let* ((frame (selected-frame))
-           (persp-name (car (frame-parameter frame 'persp-recent-persps))))
-      (if (member persp-name (persp-names-current-frame-fast-ordered))
-          (persp-frame-switch persp-name frame)
-        (message "perspective %s is no longer available" persp-name))))
+           (most-recent (nth 1 (frame-parameter frame 'persp-recent-persps))))
+
+      (if most-recent
+          (if (member most-recent (persp-names-current-frame-fast-ordered))
+              (persp-frame-switch most-recent frame)
+            (message "perspective %s is no longer available" most-recent)))))
 
   (defun siren-persp-mode-show-current-perspective-name (&rest _)
     "Show current perspectives, highlighting the active one."
     (interactive)
-    (let ((perspectives (persp-names-current-frame-fast-ordered))
-          (current-persp-name (safe-persp-name (get-current-persp)))
-          (output ""))
+    (let* ((frame (selected-frame))
+           (just-killed (frame-parameter frame 'persp-recent-just-killed))
+           (perspectives (persp-names-current-frame-fast-ordered))
+           (current-persp-name (safe-persp-name (get-current-persp)))
+           (output "")
+           (index 0))
       (dolist (persp-name perspectives)
-        (setq output
-              (concat output (if (string= current-persp-name persp-name)
-                                 (propertize persp-name
-                                             'face 'persp-face-lighter-default)
-                               persp-name)
-                      " ")))
+        (when (not (equal persp-name just-killed))
+          (setq output
+                (concat output
+                        (propertize (format "%d:" index) 'face
+                                    'persp-face-lighter-nil-persp)
+                        (if (string= current-persp-name persp-name)
+                            (propertize persp-name
+                                        'face 'persp-face-lighter-default)
+                          persp-name)
+                        " ")
+                index (1+ index))))
+      (set-frame-parameter frame 'persp-recent-just-killed nil)
       (message "perspectives: %s" output)))
+
+  (defmacro siren-persp-switch-to-index-builder (index)
+    `(defun ,(intern (format "siren-persp-switch-to-index-%d" index)) ()
+       ,(format "Switch to perspective with index %d" index)
+       (interactive)
+       (let ((persp-name (nth ,index
+                              (persp-names-current-frame-fast-ordered))))
+         (if persp-name (persp-switch persp-name)))))
+
+  (siren-persp-switch-to-index-builder 0)
+  (siren-persp-switch-to-index-builder 1)
+  (siren-persp-switch-to-index-builder 2)
+  (siren-persp-switch-to-index-builder 3)
+  (siren-persp-switch-to-index-builder 4)
+  (siren-persp-switch-to-index-builder 5)
+  (siren-persp-switch-to-index-builder 6)
+  (siren-persp-switch-to-index-builder 7)
+  (siren-persp-switch-to-index-builder 8)
+  (siren-persp-switch-to-index-builder 9)
 
   :config
   (add-hook 'persp-common-buffer-filter-functions
             'siren-persp-mode-filter-magit-buffers)
 
-  (add-hook 'persp-before-switch-functions 'siren-persp-before-switch-hook)
   (add-hook 'persp-before-kill-functions 'siren-persp-before-kill-hook)
   (add-hook 'persp-activated-functions 'siren-persp-activated-hook)
 
