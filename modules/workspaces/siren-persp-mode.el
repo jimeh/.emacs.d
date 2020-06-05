@@ -76,7 +76,7 @@
     (string-prefix-p "magit" (buffer-name buf)))
 
   (defun siren-persp-mode-ibuffer (arg)
-      (interactive "P")
+    (interactive "P")
     (with-persp-buffer-list () (ibuffer arg)))
 
   (defun siren-persp-mode-edit-names-cache ()
@@ -97,7 +97,7 @@
       (set-frame-parameter frame 'persp-recent-just-killed persp-name)
 
       (if (and most-recent (equal persp-name current-persp))
-        (persp-frame-switch most-recent frame))))
+          (persp-frame-switch most-recent frame))))
 
   (defun siren-persp-activated-hook (type)
     "Remove any persp names from recent list that no longer exist."
@@ -153,24 +153,21 @@
       (set-frame-parameter frame 'persp-recent-just-killed nil)
       (message "perspectives: %s" output)))
 
-  (defmacro siren-persp-switch-to-index-builder (index)
+  (defun siren-persp-switch-to-index (index)
+    "Switch to perspective with index INDEX."
+    (let ((name (nth index (persp-names-current-frame-fast-ordered))))
+      (if name (persp-switch name))))
+
+  (defun siren-persp-switch-to-index-defun (index)
     `(defun ,(intern (format "siren-persp-switch-to-index-%d" index)) ()
        ,(format "Switch to perspective with index %d" index)
        (interactive)
-       (let ((persp-name (nth ,index
-                              (persp-names-current-frame-fast-ordered))))
-         (if persp-name (persp-switch persp-name)))))
+       (siren-persp-switch-to-index ,index)))
 
-  (siren-persp-switch-to-index-builder 0)
-  (siren-persp-switch-to-index-builder 1)
-  (siren-persp-switch-to-index-builder 2)
-  (siren-persp-switch-to-index-builder 3)
-  (siren-persp-switch-to-index-builder 4)
-  (siren-persp-switch-to-index-builder 5)
-  (siren-persp-switch-to-index-builder 6)
-  (siren-persp-switch-to-index-builder 7)
-  (siren-persp-switch-to-index-builder 8)
-  (siren-persp-switch-to-index-builder 9)
+  (defmacro siren-persp-switch-to-index-defuns (indexes)
+    `(progn ,@(mapcar 'siren-persp-switch-to-index-defun indexes)))
+
+  (siren-persp-switch-to-index-defuns (0 1 2 3 4 5 6 7 8 9))
 
   :config
   (add-hook 'persp-common-buffer-filter-functions
