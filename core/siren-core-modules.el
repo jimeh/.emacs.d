@@ -135,6 +135,7 @@
 ;; Languages
 (require 'siren-prog-mode)
 (require 'siren-applescript)
+(require 'siren-caddyfile)
 (require 'siren-coffee)
 (require 'siren-conf)
 (require 'siren-css)
