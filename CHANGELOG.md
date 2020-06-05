@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.6](https://github.com/jimeh/.emacs.d/compare/v0.6.5...v0.6.6) (2020-06-05)
+
+
+### Features
+
+* **lang:** Add caddyfile-mode for Caddy config files ([e6b52a5](https://github.com/jimeh/.emacs.d/commit/e6b52a534a9ef657734512d52101b529e2c798a0))
+* **workspaces:** Improve persp-mode "UI" helpers ([984b9fb](https://github.com/jimeh/.emacs.d/commit/984b9fb3aa101e13885114637046b77827bcea29))
+
+
+### Bug Fixes
+
+* **workspaces:** Attempt to fix persp-mode forgetting persp layouts ([ca2d51b](https://github.com/jimeh/.emacs.d/commit/ca2d51bebdc651e5b036861438f54cc1c6df6191))
+
 ### [0.6.5](https://github.com/jimeh/.emacs.d/compare/v0.6.4...v0.6.5) (2020-05-30)
 
 
