@@ -150,6 +150,7 @@
 (require 'siren-groovy)
 (require 'siren-haml)
 (require 'siren-haskell)
+(require 'siren-jinja2)
 (require 'siren-js)
 (require 'siren-json)
 (require 'siren-jsx)
