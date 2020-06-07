@@ -8,6 +8,61 @@
 
 (use-package dired
   :straight (:type built-in)
+  :bind (:map dired-mode-map
+              ("M-?" . siren-dired-display-size))
+
+  :init
+  (defun siren-dired-display-size (arg)
+    "Display disk usage of marked items in Dired.
+
+    When given a PREFIX, display raw size of items instead of disk usage."
+    (interactive "P")
+    (if arg
+        (siren-dired-get-size nil)
+      (siren-dired-get-disk-usage)))
+
+  ;; Inspired by dired-get-size from:
+  ;; https://www.emacswiki.org/emacs/DiredGetFileSize
+  (defun siren-dired-get-disk-usage ()
+    "Display total disk usage of marked items in Dired."
+    (interactive)
+    (let ((files (dired-get-marked-files)))
+      (with-temp-buffer
+        (shell-command (concat "/usr/bin/env du -sch "
+                               (mapconcat 'shell-quote-argument files " ")
+                               " | tail -n 1")
+                       (current-buffer))
+        (message "Size of all marked files: %s"
+                 (progn
+                   (re-search-forward "^\s*?\\([0-9.,]+[A-Za-z]+\\).*total$")
+                   (match-string 1))))))
+
+  (defun siren-dired-get-size (arg)
+    "Display the total size of marked files in Dired."
+    (interactive "P")
+    (let ((size (siren-file-sizes (dired-get-marked-files))))
+      (message "Size of all marked files: %s"
+               (if arg
+                   (format "%.0f" size)
+                 (file-size-human-readable size 'si)))))
+
+  (defun siren-directory-size (dirname)
+    "Return the size of DIRNAME in bytes."
+    (siren-file-sizes (directory-files-recursively dirname "")))
+
+  (defun siren-file-sizes (filename-list)
+    "Return the sum of sizes of FILENAME-LIST in bytes."
+    (apply '+
+           (mapcar 'siren-file-size filename-list)))
+
+  (defun siren-file-size (filename)
+    "Return size of file FILENAME in bytes.
+    The size is converted to float for consistency.
+    This doesn't recurse directories."
+    (float (if (file-directory-p filename)
+               (siren-directory-size filename)
+             (file-attribute-size ; might be int or float
+              (file-attributes filename)))))
 
   :config
   (when (string-match-p "^gnu" (symbol-name system-type))
