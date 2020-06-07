@@ -21,20 +21,17 @@
         (siren-dired-get-size nil)
       (siren-dired-get-disk-usage)))
 
-  ;; Inspired by dired-get-size from:
+  ;; Based on dired-get-size from:
   ;; https://www.emacswiki.org/emacs/DiredGetFileSize
   (defun siren-dired-get-disk-usage ()
     "Display total disk usage of marked items in Dired."
     (interactive)
     (let ((files (dired-get-marked-files)))
       (with-temp-buffer
-        (shell-command (concat "/usr/bin/env du -sch "
-                               (mapconcat 'shell-quote-argument files " ")
-                               " | tail -n 1")
-                       (current-buffer))
+        (apply 'call-process (executable-find "du") nil t nil "-sch" files)
         (message "Size of all marked files: %s"
                  (progn
-                   (re-search-forward "^\s*?\\([0-9.,]+[A-Za-z]+\\).*total$")
+                   (re-search-backward "^\s*?\\([0-9.,]+[A-Za-z]+\\).*total$")
                    (match-string 1))))))
 
   (defun siren-dired-get-size (arg)
