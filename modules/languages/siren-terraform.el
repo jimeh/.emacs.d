@@ -6,6 +6,7 @@
 
 ;;; Code:
 
+(require 'siren-company)
 (require 'siren-reformatter)
 
 (use-package terraform-mode
