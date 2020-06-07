@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.7](https://github.com/jimeh/.emacs.d/compare/v0.6.6...v0.6.7) (2020-06-07)
+
+
+### Features
+
+* **lang:** Add jinja2-mode for Jinja2 templates ([84bdd61](https://github.com/jimeh/.emacs.d/commit/84bdd610caa4a1cca3c2c02e26f9735340c5b102))
+* **lang:** Language aware syntax highlight of markdown code-blocks ([a746106](https://github.com/jimeh/.emacs.d/commit/a74610689e2e57f5799b3fc77c080b6add5be306))
+* **navigation:** Add file/directory size commands to Dired ([ecc278b](https://github.com/jimeh/.emacs.d/commit/ecc278b83ba97643a14c3b98c1e8d9b8b0fac307))
+
+
+### Bug Fixes
+
+* **lang:** Work around for whitespace-mode issue with caddyfile-mode ([1ef8570](https://github.com/jimeh/.emacs.d/commit/1ef8570f059444a0cf31da3cfe938c4a6af87a95))
+
 ### [0.6.6](https://github.com/jimeh/.emacs.d/compare/v0.6.5...v0.6.6) (2020-06-05)
 
 
