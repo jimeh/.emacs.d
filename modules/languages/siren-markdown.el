@@ -10,6 +10,7 @@
 (require 'siren-display-line-numbers)
 (require 'siren-flyspell)
 (require 'siren-move-dup)
+(require 'siren-polymode)
 (require 'siren-prettier-js)
 (require 'siren-smartparens)
 
@@ -53,6 +54,14 @@
 ;; Required by markdown-edit-code-block.
 (use-package edit-indirect
   :defer t)
+
+(use-package poly-markdown
+  :mode
+  ("\\.md" . poly-markdown-mode)
+  ("\\.mkd" . poly-markdown-mode)
+  ("\\.mkdn" . poly-markdown-mode)
+  ("\\.mdown" . poly-markdown-mode)
+  ("\\.markdown" . poly-markdown-mode))
 
 (provide 'siren-markdown)
 ;;; siren-markdown.el ends here
