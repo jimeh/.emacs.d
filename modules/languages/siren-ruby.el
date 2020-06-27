@@ -44,6 +44,7 @@
   :bind (:map ruby-mode-map
               ("C-j" . newline-and-indent)
               ("RET" . newline-and-indent)
+              ("M-'" . ruby-toggle-string-quotes)
               ("C-c C-l" . goto-line)
               ("C-M-f" . sp-ruby-forward-sexp)
               ("C-M-b" . sp-ruby-backward-sexp)
@@ -65,6 +66,9 @@
     (subword-mode +1))
 
   :config
+  ;; Use M-' instead to togle quote styles
+  (unbind-key "C-c '" ruby-mode-map)
+
   ;; We never want to edit Rubinius bytecode
   (add-to-list 'completion-ignored-extensions ".rbc")
 
