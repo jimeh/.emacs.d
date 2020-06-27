@@ -29,7 +29,8 @@
   :config
   ;; Unbind keys that I don't use.
   (unbind-key "C-/" undo-tree-map)
-  (unbind-key "C-?" undo-tree-map))
+  (unbind-key "C-?" undo-tree-map)
+  (unbind-key "C-_" undo-tree-map))
 
 (provide 'siren-undo-tree)
 ;;; siren-undo-tree.el ends here
