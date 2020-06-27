@@ -9,6 +9,12 @@
 (use-package zoom-window
   :bind
   ("C-x C-<return>" . zoom-window-zoom)
+  ("C-z <return>" . zoom-window-zoom)
+  ("C-z C-<return>" . zoom-window-zoom)
+
+  :init
+  ;; Allow C-z to be used as a key prefix.
+  (global-set-key (kbd "C-z") nil)
 
   :config
   (with-eval-after-load "persp-mode"
