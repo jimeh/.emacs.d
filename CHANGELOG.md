@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.8](https://github.com/jimeh/.emacs.d/compare/v0.6.7...v0.6.8) (2020-07-02)
+
+
+### Features
+
+* **lang:** Enable terminal-friendly quote toggle for ruby-mode ([9b5c22f](https://github.com/jimeh/.emacs.d/commit/9b5c22f9e29726c806a7961a9b65c789e55adaf3))
+* **windows:** Enable terminal friendly zoom-window keybinding ([2fa061b](https://github.com/jimeh/.emacs.d/commit/2fa061bdec7cc1c0bf7bb27736faef5dfeb23055))
+
+
+### Bug Fixes
+
+* **editor:** Make undo-tree a bit more terminal friendly ([bbc98de](https://github.com/jimeh/.emacs.d/commit/bbc98decea771ea843639cd2386ed68ac42bdcd0))
+* **navigation:** Dired disk usage command was unreliable on Linux ([acb2d6f](https://github.com/jimeh/.emacs.d/commit/acb2d6f5fa7648e29895fb8b05085ac65e084f4d))
+
 ### [0.6.7](https://github.com/jimeh/.emacs.d/compare/v0.6.6...v0.6.7) (2020-06-07)
 
 
