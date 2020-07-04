@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.9](https://github.com/jimeh/.emacs.d/compare/v0.6.8...v0.6.9) (2020-07-04)
+
+
+### Features
+
+* **lsp:** Improve lsp-mode performance, support latest 7.x version ([efd0b42](https://github.com/jimeh/.emacs.d/commit/efd0b421e34f93cab1b990123930c1dc9877a712))
+
 ### [0.6.8](https://github.com/jimeh/.emacs.d/compare/v0.6.7...v0.6.8) (2020-07-02)
 
 
