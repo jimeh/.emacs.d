@@ -73,7 +73,6 @@
 ;; Language Servers
 (require 'siren-lsp)
 (require 'siren-lsp-ui)
-(require 'siren-company-lsp)
 (require 'siren-helm-lsp)
 
 ;; Shell

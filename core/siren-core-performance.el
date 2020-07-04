@@ -14,7 +14,7 @@
 
   :custom
   (gcmh-idle-delay 10)
-  (gcmh-high-cons-threshold 16777216))
+  (gcmh-high-cons-threshold 104857600))
 
 (provide 'siren-core-performance)
 ;;; siren-core-performance.el ends here
