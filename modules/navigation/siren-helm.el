@@ -6,6 +6,9 @@
 
 ;;; Code:
 
+;; Helm fails with tramp-methods symbol being void if tramp is not required.
+(require 'tramp)
+
 (use-package helm-config
   :straight (helm)
   :demand t
