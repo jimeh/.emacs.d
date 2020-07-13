@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.10](https://github.com/jimeh/.emacs.d/compare/v0.6.9...v0.6.10) (2020-07-13)
+
+
+### Features
+
+* **lang:** Set new rubocopfmt-include-unsafe-cops option to t ([7d0ff60](https://github.com/jimeh/.emacs.d/commit/7d0ff606a3895a6f46b562d50875a234d4dd97d8))
+
+
+### Bug Fixes
+
+* **helm:** Helm failure when tramp-methods variable is not defined ([2059714](https://github.com/jimeh/.emacs.d/commit/20597149bbd0fe873c4a81778c8f50d9f93d5a4f))
+
 ### [0.6.9](https://github.com/jimeh/.emacs.d/compare/v0.6.8...v0.6.9) (2020-07-04)
 
 
