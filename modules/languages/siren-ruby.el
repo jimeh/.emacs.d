@@ -163,8 +163,9 @@
   (ruby-mode . rubocopfmt-mode)
 
   :custom
-  (rubocopfmt-show-errors 'echo)
+  (rubocopfmt-include-unsafe-cops t)
   (rubocopfmt-on-save-use-lsp-format-buffer nil)
+  (rubocopfmt-show-errors 'echo)
   (rubocopfmt-use-bundler-when-possible nil)
   (rubocopfmt-rubocop-command
    (expand-file-name "bin/rubocop-daemon-wrapper" siren-dir)))
