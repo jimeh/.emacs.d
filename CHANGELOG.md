@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.11](https://github.com/jimeh/.emacs.d/compare/v0.6.10...v0.6.11) (2020-07-21)
+
+
+### Features
+
+* **lang:** Improve markdown formatting on save ([8376b71](https://github.com/jimeh/.emacs.d/commit/8376b71b7c929c902cab3178c6eab53127abc7b0))
+* **shell:** Switch shell-pop from ansi-term to vterm ([4338d85](https://github.com/jimeh/.emacs.d/commit/4338d85291bb48f247865796c9bfecf1eff1db09))
+
+
+### Bug Fixes
+
+* **workspaces:** Recent persp now works after renaming persps ([a04e57f](https://github.com/jimeh/.emacs.d/commit/a04e57f88710c3ca5a4a63c55cd59d7d46413320))
+
 ### [0.6.10](https://github.com/jimeh/.emacs.d/compare/v0.6.9...v0.6.10) (2020-07-13)
 
 
