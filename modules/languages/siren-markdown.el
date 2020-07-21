@@ -40,8 +40,10 @@
 
   :init
   (defun siren-markdown-mode-setup ()
-    (setq markdown-asymmetric-header t
-          whitespace-action nil)
+    (setq-local markdown-asymmetric-header t
+                prettier-js-args '("--print-width" "80"
+                                   "--prose-wrap" "always")
+                whitespace-action nil)
 
     (siren-display-fill-column)
     (siren-display-line-numbers)
