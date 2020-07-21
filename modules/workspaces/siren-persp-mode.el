@@ -113,10 +113,19 @@
       ;; Perform safetly clean-up of recent list.
       (dolist (persp-name recent-list)
         (when (not (member persp-name perspectives))
-          (message "WARNING: perspective %s in recent list does not exist.")
+          (message "WARNING: perspective %s in recent list does not exist."
+                   persp-name)
           (setq recent-list (delete persp-name recent-list))))
 
       (set-frame-parameter frame 'persp-recent-persps recent-list)))
+
+  (defun siren-persp-renamed-hook (persp old-name new-name)
+    (let* ((frame (selected-frame))
+           (recent-list (frame-parameter frame 'persp-recent-persps))
+           (index (cl-position old-name recent-list)))
+      (when index
+        (setcar (nthcdr index recent-list) new-name)
+        (set-frame-parameter frame 'persp-recent-persps recent-list))))
 
   (defun siren-persp-mode-switch-to-most-recent ()
     "Switch to the most recently active persp."
@@ -175,6 +184,7 @@
 
   (add-hook 'persp-before-kill-functions 'siren-persp-before-kill-hook)
   (add-hook 'persp-activated-functions 'siren-persp-activated-hook)
+  (add-hook 'persp-renamed-functions 'siren-persp-renamed-hook)
 
   (add-hook 'persp-activated-functions
             'siren-persp-mode-show-current-perspective-name))
