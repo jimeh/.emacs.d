@@ -148,7 +148,6 @@
  ("restart-emacs" . "9aa90d3df9e08bc420e1c9845ee3ff568e911bd9")
  ("rinari" . "134438af8fbdfa9c8077267c768d273a9792b484")
  ("rjsx-mode" . "0061587a06cdc2579a8d0e90863498d96bf982d8")
- ("robe" . "082da38797d247f9c64568ad712a345e041d5c84")
  ("rspec-mode" . "f1029cad2a8d9fd096e9a0f1ae9e7d7e2c8bd1ec")
  ("rubocop-emacs" . "03bf15558a6eb65e4f74000cab29412efd46660e")
  ("rubocopfmt.el" . "b84810105940aa5e0bde20c9a89359c95c9b6917")

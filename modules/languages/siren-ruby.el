@@ -112,22 +112,6 @@
   :config
   (global-rbenv-mode))
 
-(use-package robe
-  :defer t
-  :bind (:map robe-mode-map
-              ("C-c C-j" . robe-jump)
-              ("C-c b". pop-tag-mark))
-  :hook (ruby-mode . robe-mode)
-
-  :init
-  (with-eval-after-load 'company
-    (push 'company-robe company-backends))
-
-  :config
-  ;; Unbind keys used by siren-expand-region module.
-  (unbind-key "M-." robe-mode-map)
-  (unbind-key "M-," robe-mode-map))
-
 (use-package rspec-mode
   :defer t
   :hook (rspec-mode . siren-rspec-mode-setup)
