@@ -9,19 +9,18 @@
 ;; Helm fails with tramp-methods symbol being void if tramp is not required.
 (require 'tramp)
 
-(use-package helm-config
+(use-package helm-global-bindings
   :straight (helm)
   :demand t
   :bind
-  ("C-c h" . helm-command-prefix)
   (:map helm-command-map
         ("M" . helm-man-woman))
 
   :custom
-  (helm-command-prefix-key nil))
+  (helm-command-prefix-key "C-c h"))
 
 (use-package helm
-  :after (helm-config)
+  :after (helm-global-bindings)
   :defer t
   :hook
   (helm-minibuffer-set-up . siren-helm--hide-minibuffer-maybe)
@@ -112,7 +111,7 @@
 
 (use-package helm-command
   :straight (helm)
-  :after (helm-config)
+  :after (helm-global-bindings)
   :bind
   ("C-c C-m" . helm-M-x)
 
@@ -122,14 +121,14 @@
 
 (use-package helm-elisp
   :straight (helm)
-  :after (helm-config)
+  :after (helm-global-bindings)
   :bind
   (:map helm-command-map
         ("d" . helm-apropos)))
 
 (use-package helm-files
   :straight (helm)
-  :after (helm-config)
+  :after (helm-global-bindings)
   :bind
   ("C-x C-f" . helm-find-files)
 
@@ -140,20 +139,20 @@
 
 (use-package helm-for-files
   :straight (helm)
-  :after (helm-config)
+  :after (helm-global-bindings)
   :bind
   ("C-c f f" . helm-for-files)
   ("C-c f r" . helm-recentf))
 
 (use-package helm-imenu
   :straight (helm)
-  :after (helm-config)
+  :after (helm-global-bindings)
   :bind
   ("C-t" . helm-imenu))
 
 (use-package helm-ring
   :straight (helm)
-  :after (helm-config)
+  :after (helm-global-bindings)
   :defer t
   :init
   ;; This advice is borrowed from the browse-kill-ring package.
@@ -168,10 +167,12 @@
   (ad-activate 'yank-pop))
 
 (use-package helm-descbinds
-  :defer t)
+  :defer t
+  :after (helm-global-bindings))
 
 (use-package helm-describe-modes
-  :defer t)
+  :defer t
+  :after (helm-global-bindings))
 
 (provide 'siren-helm)
 ;;; siren-helm.el ends here

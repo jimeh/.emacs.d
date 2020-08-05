@@ -10,6 +10,7 @@
 
 (use-package helm-gtags
   :defer t
+  :after (helm-global-bindings)
 
   :custom
   (helm-gtags-auto-update t)

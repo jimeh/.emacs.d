@@ -9,7 +9,7 @@
 (require 'siren-helm)
 
 (use-package helm-ag
-  :after (helm-config)
+  :after (helm-global-bindings)
   :bind
   ("C-x '" . helm-do-ag-project-root)
   ("C-x C-'" . helm-do-ag-project-root)

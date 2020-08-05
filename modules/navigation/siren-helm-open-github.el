@@ -9,6 +9,7 @@
 (require 'siren-helm)
 
 (use-package helm-open-github
+  :after (helm-global-bindings)
   :bind
   ("C-c o f" . helm-open-github-from-file)
   ("C-c o c" . helm-open-github-from-commit)

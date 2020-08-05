@@ -10,6 +10,7 @@
 (require 'siren-projectile)
 
 (use-package helm-projectile
+  :after (helm-global-bindings)
   :bind
   ("C-x ;" . helm-projectile-find-file)
   ("C-x C-;" . helm-projectile-find-file)
