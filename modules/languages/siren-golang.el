@@ -46,7 +46,6 @@
 
     (siren-display-indentation -1)
     (company-mode +1)
-    (lsp-deferred)
     (siren-folding)
     (subword-mode +1))
 
@@ -60,6 +59,12 @@
 
   ;; Ignore go test -c output files
   (add-to-list 'completion-ignored-extensions ".test"))
+
+(use-package lsp-go
+  :straight (lsp-mode)
+
+  :hook
+  (go-mode . lsp-deferred))
 
 (use-package go-dlv
   :defer t)
