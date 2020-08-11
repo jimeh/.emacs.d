@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.12](https://github.com/jimeh/.emacs.d/compare/v0.6.11...v0.6.12) (2020-08-11)
+
+
+### Features
+
+* **lang:** add vue-mode for working with .vue files ([d1f4e13](https://github.com/jimeh/.emacs.d/commit/d1f4e138862b203e6ef0b72c2a003fa25bfdecb6))
+* **lang:** Remove robe package in favor of lsp-mode for Ruby ([4ba09d4](https://github.com/jimeh/.emacs.d/commit/4ba09d49b6019fe79fa20a257ac01ce291daf123))
+
+
+### Bug Fixes
+
+* **navigation:** Update setup for recent changes to helm ([6cca25c](https://github.com/jimeh/.emacs.d/commit/6cca25c66cc673ac6208071adc5f5f254036a599))
+
 ### [0.6.11](https://github.com/jimeh/.emacs.d/compare/v0.6.10...v0.6.11) (2020-07-21)
 
 
