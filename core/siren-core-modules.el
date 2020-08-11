@@ -173,6 +173,7 @@
 (require 'siren-thrift)
 (require 'siren-toml)
 (require 'siren-typescript)
+(require 'siren-vue)
 (require 'siren-web-mode)
 (require 'siren-xml)
 (require 'siren-yaml)
