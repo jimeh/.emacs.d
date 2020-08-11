@@ -11,7 +11,6 @@
 (use-package dumb-jump
   :bind
   ("C-c C-j" . dumb-jump-go)
-  ("C-c b" . dumb-jump-back)
   ("M-g o" . dumb-jump-go-other-window)
   ("M-g j" . dumb-jump-go)
   ("M-g b" . dumb-jump-back)
