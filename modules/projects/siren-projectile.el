@@ -16,10 +16,9 @@
   ("C-c p r" . projectile-replace)
   ("C-c p S" . projectile-save-project-buffers)
   ("C-c C-b" . projectile-ibuffer)
-  ("C-c C-k" . projectile-kill-buffers)
+  ("C-c b" . projectile-switch-to-buffer)
   ("C-x C-t" . projectile-find-file)
-  ("C-x t" . projectile-find-test-file)
-  ("C-x C-v" . projectile-switch-to-buffer)
+
   (:map projectile-mode-map
         ("C-c p" . projectile-command-map))
 
