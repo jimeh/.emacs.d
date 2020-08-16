@@ -11,6 +11,7 @@ straight/*
 ac-comphist.dat
 auto-save-list/*
 cache/*
+desktops/*
 el-get/*
 elpa/*
 forge-database.sqlite
