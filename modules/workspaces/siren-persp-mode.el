@@ -48,16 +48,16 @@
         ("C-z C-;" . siren-persp-mode-show-current-perspective-name)
         ("C-z e" . siren-persp-mode-edit-names-cache)
         ("C-z C-e" . siren-persp-mode-edit-names-cache)
-        ("C-z 0" . siren-persp-switch-to-index-0)
-        ("C-z 1" . siren-persp-switch-to-index-1)
-        ("C-z 2" . siren-persp-switch-to-index-2)
-        ("C-z 3" . siren-persp-switch-to-index-3)
-        ("C-z 4" . siren-persp-switch-to-index-4)
-        ("C-z 5" . siren-persp-switch-to-index-5)
-        ("C-z 6" . siren-persp-switch-to-index-6)
-        ("C-z 7" . siren-persp-switch-to-index-7)
-        ("C-z 8" . siren-persp-switch-to-index-8)
-        ("C-z 9" . siren-persp-switch-to-index-9))
+        ("C-z 0" . siren-persp-switch-to-index)
+        ("C-z 1" . siren-persp-switch-to-index)
+        ("C-z 2" . siren-persp-switch-to-index)
+        ("C-z 3" . siren-persp-switch-to-index)
+        ("C-z 4" . siren-persp-switch-to-index)
+        ("C-z 5" . siren-persp-switch-to-index)
+        ("C-z 6" . siren-persp-switch-to-index)
+        ("C-z 7" . siren-persp-switch-to-index)
+        ("C-z 8" . siren-persp-switch-to-index)
+        ("C-z 9" . siren-persp-switch-to-index))
 
   :custom
   (persp-auto-save-num-of-backups 10)
@@ -162,21 +162,21 @@
       (set-frame-parameter frame 'persp-recent-just-killed nil)
       (message "perspectives: %s" output)))
 
-  (defun siren-persp-switch-to-index (index)
-    "Switch to perspective with index INDEX."
-    (let ((name (nth index (persp-names-current-frame-fast-ordered))))
+  (defun siren-persp-switch-to-index (&optional arg)
+    "Switch to perspective with index ARG.
+When this command is bound to a numeric key, calling it without
+an argument will translate its bound numeric key to the numeric
+argument.
+ARG counts from 1."
+    (interactive "P")
+    (unless (integerp arg)
+      (let ((key (event-basic-type last-command-event)))
+        (setq arg (if (and (characterp key) (>= key ?0) (<= key ?9))
+                      (- key ?0)
+                    0))))
+
+    (let ((name (nth arg (persp-names-current-frame-fast-ordered))))
       (if name (persp-switch name))))
-
-  (defun siren-persp-switch-to-index-defun (index)
-    `(defun ,(intern (format "siren-persp-switch-to-index-%d" index)) ()
-       ,(format "Switch to perspective with index %d" index)
-       (interactive)
-       (siren-persp-switch-to-index ,index)))
-
-  (defmacro siren-persp-switch-to-index-defuns (indexes)
-    `(progn ,@(mapcar 'siren-persp-switch-to-index-defun indexes)))
-
-  (siren-persp-switch-to-index-defuns (0 1 2 3 4 5 6 7 8 9))
 
   :config
   (add-hook 'persp-common-buffer-filter-functions
