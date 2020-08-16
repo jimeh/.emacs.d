@@ -6,11 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-lsp)
-(require 'siren-magit)
-(require 'siren-persp-mode)
-(require 'siren-projectile)
-
 (use-package treemacs
   :bind
   ("C-x C-p" . treemacs)
