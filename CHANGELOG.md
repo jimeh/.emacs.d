@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/jimeh/.emacs.d/compare/v0.6.12...v0.7.0) (2020-08-16)
+
+
+### Features
+
+* **core:** use buffer local hl-line-mode instead of global-hl-line-mode ([7ed3e92](https://github.com/jimeh/.emacs.d/commit/7ed3e92dbb5fcbf93c231a2be2769203614043b9))
+* **projects:** tweak projectile keybindings ([208394e](https://github.com/jimeh/.emacs.d/commit/208394ef00d064fa53fe08f5d157fbebae91b5da))
+* **projects:** use all-the-icons in treemacs ([9bd34f8](https://github.com/jimeh/.emacs.d/commit/9bd34f805f2e073eb89e12e7c24a02cce3cfd709))
+* **shell:** improve vterm-mode configuration ([a8ec880](https://github.com/jimeh/.emacs.d/commit/a8ec880b69dc5ce0d7a113d1a78054b2bd3bd7b2))
+* **workspaces:** add siren-desktop module for managing emacs sessions ([5ce5740](https://github.com/jimeh/.emacs.d/commit/5ce5740b210d457b61ec7f0e8012aa31b178242b))
+* **workspaces:** add siren-tab-bar module with custom tab-bar-mode setup ([c1ddbe3](https://github.com/jimeh/.emacs.d/commit/c1ddbe37aa90eb53b379e0a42a872e67195c03b8))
+* **workspaces:** switch from persp-mode to tar-bar-mode and desktop ([e8f82a4](https://github.com/jimeh/.emacs.d/commit/e8f82a4b1ae602ac2e0d8f1664de18a069758d82))
+
+
+### Bug Fixes
+
+* **core:** set default-directory correctly during startup on macOS ([d80df8e](https://github.com/jimeh/.emacs.d/commit/d80df8e2d41fec779cf8ed7444646e9d7b215a23))
+
 ### [0.6.12](https://github.com/jimeh/.emacs.d/compare/v0.6.11...v0.6.12) (2020-08-11)
 
 
