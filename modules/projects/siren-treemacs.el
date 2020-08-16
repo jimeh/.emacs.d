@@ -37,6 +37,8 @@
   (with-eval-after-load 'lsp-mode
     (require 'lsp-treemacs))
 
+  (require 'treemacs-all-the-icons)
+
   (treemacs-follow-mode t)
   (treemacs-filewatch-mode t)
   (treemacs-git-mode 'deferred)
@@ -49,6 +51,9 @@
    'file-node-open   #'treemacs-visit-node-in-most-recently-used-window)
   (treemacs-define-RET-action
    'file-node-closed #'treemacs-visit-node-in-most-recently-used-window))
+
+(use-package treemacs-all-the-icons
+  :defer t)
 
 (use-package treemacs-projectile
   :defer t
