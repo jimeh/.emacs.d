@@ -11,9 +11,14 @@
   :config
   (ns-auto-titlebar-mode))
 
-;; Set default font
-(if window-system
-    (set-face-attribute 'default nil :family "Monaco" :height 120))
+;; When running in GUI mode.
+(when window-system
+  ;; Set default font
+  (set-face-attribute 'default nil :family "Monaco" :height 120)
+
+  ;; Fix the default default-directory value.
+  (if (string= default-directory "/")
+      (setq default-directory "~/")))
 
 ;; macOS Fullscreen (requires Emacs 24.4 or later)
 (global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
