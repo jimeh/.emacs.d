@@ -14,6 +14,7 @@
   (defun siren-text-mode-setup ()
     (setq fill-column 80)
 
+    (hl-line-mode t)
     (visual-line-mode t)))
 
 (provide 'siren-text-mode)

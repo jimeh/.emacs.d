@@ -21,9 +21,6 @@
 ;; Show matching parentheses
 (show-paren-mode t)
 
-;; Highlight current line globally
-(global-hl-line-mode t)
-
 ;; Delete the selection with a keypress
 (delete-selection-mode t)
 

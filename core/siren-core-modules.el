@@ -131,8 +131,13 @@
 ;; XWidgets
 (require 'siren-xwidget-plus)
 
-;; Languages
+;; Major modes
+(require 'siren-fundamental-mode)
 (require 'siren-prog-mode)
+(require 'siren-special-mode)
+(require 'siren-text-mode)
+
+;; Languages
 (require 'siren-applescript)
 (require 'siren-caddyfile)
 (require 'siren-coffee)
@@ -169,7 +174,6 @@
 (require 'siren-slim)
 (require 'siren-sql)
 (require 'siren-terraform)
-(require 'siren-text-mode)
 (require 'siren-thrift)
 (require 'siren-toml)
 (require 'siren-typescript)

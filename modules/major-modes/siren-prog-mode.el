@@ -20,6 +20,7 @@
           whitespace-action '(auto-cleanup))
 
     (siren-display-indentation 1)
+    (hl-line-mode t)
     (visual-line-mode t)
     (whitespace-mode t)))
 
