@@ -113,7 +113,8 @@
 (require 'siren-zoom-window)
 
 ;; Workspace management
-(require 'siren-persp-mode)
+(require 'siren-tab-bar)
+(require 'siren-desktop)
 
 ;; Org-mode
 (require 'siren-htmlize)
