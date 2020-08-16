@@ -6,15 +6,14 @@
 
 ;;; Code:
 
+(require 'siren-workspace-map)
+
 (use-package zoom-window
   :bind
-  ("C-x C-<return>" . zoom-window-zoom)
-  ("C-z <return>" . zoom-window-zoom)
-  ("C-z C-<return>" . zoom-window-zoom)
-
-  :init
-  ;; Allow C-z to be used as a key prefix.
-  (global-set-key (kbd "C-z") nil)
+  ("C-x C-RET" . zoom-window-zoom)
+  (:map siren-workspace-map
+        ("RET" . zoom-window-zoom)
+        ("C-RET" . zoom-window-zoom))
 
   :config
   (with-eval-after-load "persp-mode"
