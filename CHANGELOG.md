@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.1](https://github.com/jimeh/.emacs.d/compare/v0.7.0...v0.7.1) (2020-08-18)
+
+
+### Features
+
+* **core:** add support for native-comp/gccemacs ([658daa9](https://github.com/jimeh/.emacs.d/commit/658daa99d69f493c46e439138907f7b8ff292e46))
+
+
+### Bug Fixes
+
+* **lang:** remove poly-markdown as it was glitchy ([e533a3b](https://github.com/jimeh/.emacs.d/commit/e533a3b6d5db4c53e84b558ad08d44c01616a5db))
+* **projects:** ensure treemacs uses the central cache directory ([67498da](https://github.com/jimeh/.emacs.d/commit/67498da9536037ad6d7900cb7d6427203a63e0b8))
+* **windows:** set zoom-window keybindings correctly ([88ab8f9](https://github.com/jimeh/.emacs.d/commit/88ab8f9007d90bab89ffc6d080b7b40322538f90))
+* **workspaces:** Improve reliability of desktop restore ([4fbf607](https://github.com/jimeh/.emacs.d/commit/4fbf6079506c40ef1c5b907909b36dc9160f9e7e))
+
 ## [0.7.0](https://github.com/jimeh/.emacs.d/compare/v0.6.12...v0.7.0) (2020-08-16)
 
 
