@@ -26,7 +26,7 @@
 (add-to-list 'load-path siren-core-dir)
 
 ;; Configure siren-cache-dir
-(setq siren-cache-dir (expand-file-name "cache" siren-dir))
+(setq siren-cache-dir (expand-file-name "cache" user-emacs-directory))
 (unless (file-exists-p siren-cache-dir)
   (make-directory siren-cache-dir))
 

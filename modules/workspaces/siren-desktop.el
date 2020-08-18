@@ -23,6 +23,7 @@
   (desktop-restore-frames t)
 
   :config
+  (add-to-list 'desktop-clear-preserve-buffers "\\*Async-native-compile-log\\*")
   (push '(font . :never) frameset-filter-alist)
   (push '(fontsize . :never) frameset-filter-alist)
   (push '(fullscreen . :never) frameset-filter-alist)

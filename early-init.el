@@ -6,6 +6,14 @@
 
 ;;; Code:
 
+;; Native-Comp
+(setq comp-speed 2
+      comp-deferred-compilation t)
+
+(when (boundp 'comp-eln-load-path)
+  (add-to-list 'comp-eln-load-path
+               (expand-file-name "cache/eln-cache/" user-emacs-directory)))
+
 ;; Defer garbage collection further back in the startup process
 (setq gc-cons-threshold most-positive-fixnum)
 
