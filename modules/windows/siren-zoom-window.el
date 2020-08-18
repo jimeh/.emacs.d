@@ -10,10 +10,9 @@
 
 (use-package zoom-window
   :bind
-  ("C-x C-RET" . zoom-window-zoom)
   (:map siren-workspace-map
         ("RET" . zoom-window-zoom)
-        ("C-RET" . zoom-window-zoom))
+        ("C-<return>" . zoom-window-zoom))
 
   :config
   (with-eval-after-load "persp-mode"
