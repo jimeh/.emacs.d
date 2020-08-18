@@ -22,12 +22,13 @@
   "\\.mdown"
   "\\.markdown"
 
-  :bind (:map markdown-mode-map
-              ("C-c p" . markdown-preview)
-              ("M-p" . md-move-lines-up)
-              ("M-n" . md-move-lines-down)
-              ("M-P" . markdown-previous-link)
-              ("M-N" . markdown-next-link))
+  :bind
+  (:map markdown-mode-map
+        ("C-c p" . markdown-preview)
+        ("M-p" . md-move-lines-up)
+        ("M-n" . md-move-lines-down)
+        ("M-P" . markdown-previous-link)
+        ("M-N" . markdown-next-link))
 
   :hook
   (markdown-mode . siren-markdown-mode-setup)
@@ -56,14 +57,6 @@
 ;; Required by markdown-edit-code-block.
 (use-package edit-indirect
   :defer t)
-
-(use-package poly-markdown
-  :mode
-  ("\\.md" . poly-markdown-mode)
-  ("\\.mkd" . poly-markdown-mode)
-  ("\\.mkdn" . poly-markdown-mode)
-  ("\\.mdown" . poly-markdown-mode)
-  ("\\.markdown" . poly-markdown-mode))
 
 (provide 'siren-markdown)
 ;;; siren-markdown.el ends here
