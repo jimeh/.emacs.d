@@ -22,6 +22,10 @@
   (treemacs-sorting 'alphabetic-asc)
   (treemacs-width 40)
 
+  (treemacs-persist-file (expand-file-name "treemacs-persist" siren-cache-dir))
+  (treemacs-last-error-persist-file
+   (expand-file-name "treemacs-persist-at-last-error" siren-cache-dir))
+
   :config
   (with-eval-after-load 'projectile
     (require 'treemacs-projectile))
