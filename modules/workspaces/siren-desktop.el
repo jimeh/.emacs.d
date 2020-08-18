@@ -20,6 +20,14 @@
   (desktop-path (list siren-dir))
   (desktop-restore-forces-onscreen nil)
   (desktop-save 'ask-if-new)
+  (desktop-restore-frames t)
+
+  :config
+  (push '(font . :never) frameset-filter-alist)
+  (push '(fontsize . :never) frameset-filter-alist)
+  (push '(fullscreen . :never) frameset-filter-alist)
+  (push '(fullscreen-restore . :never) frameset-filter-alist)
+  (push '(alpha . :never) frameset-filter-alist)
 
   :init
   (defun siren-desktop-setup ()
