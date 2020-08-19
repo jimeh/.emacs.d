@@ -104,6 +104,7 @@
     (company-mode -1))
 
   :config
+  (unbind-key "C-c C-b" inf-ruby-minor-mode-map)
   (unbind-key "C-c C-r" inf-ruby-minor-mode-map)
   (unbind-key "C-c C-s" inf-ruby-minor-mode-map))
 
