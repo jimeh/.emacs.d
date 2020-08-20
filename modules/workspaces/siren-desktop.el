@@ -36,7 +36,7 @@
         (desktop-save-mode 1)))
 
   ;; Enable restoring window configurations when running in terminal
-  ;;  - from: https://emacs.stackexchange.com/a/45829[<8;233;28m]
+  ;;  - from: https://emacs.stackexchange.com/a/45829
   (defun siren-desktop-after-read-hook ()
     (frameset-restore
      desktop-saved-frameset
