@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.2](https://github.com/jimeh/.emacs.d/compare/v0.7.1...v0.7.2) (2020-08-20)
+
+
+### Features
+
+* **windows:** use new windmove-swap-* functions on Emacs 27 and later ([dccb577](https://github.com/jimeh/.emacs.d/commit/dccb57747efe78c498951deefff0ddba2f28050d))
+
+
+### Bug Fixes
+
+* **lang:** Disable ruby-specific C-c C-b binding ([0981431](https://github.com/jimeh/.emacs.d/commit/098143191da2bf0d410dbd9ad4b00d2b72bb6ca4))
+* **lang:** fix issue with json-mode when native-comp is used ([0082330](https://github.com/jimeh/.emacs.d/commit/00823307ac6d4b53f0a1f99299953be017ee69c1))
+* **native_comp:** automatically delete invalid *.eln files on startup ([cb86a67](https://github.com/jimeh/.emacs.d/commit/cb86a6721f7a29b89b21f4baf6ca43586eb91176))
+
 ### [0.7.1](https://github.com/jimeh/.emacs.d/compare/v0.7.0...v0.7.1) (2020-08-18)
 
 
