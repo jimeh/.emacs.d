@@ -21,14 +21,20 @@
          emacs-version))
 
 ;; Setup basic paths.
-(setq siren-core-dir (file-name-directory load-file-name))
-(setq siren-dir (expand-file-name ".." siren-core-dir))
-(add-to-list 'load-path siren-core-dir)
+(defvar siren-core-dir (file-name-directory load-file-name)
+  "Core directory within Emacs Siren configuration.")
+(defvar siren-dir (expand-file-name ".." siren-core-dir)
+  "Root directory of Emacs Siren configuration files.")
 
 ;; Configure siren-cache-dir
-(setq siren-cache-dir (expand-file-name "cache" user-emacs-directory))
+(defvar siren-cache-dir (expand-file-name "cache" user-emacs-directory)
+  "Main cache directory which packages should be configured to use.")
+
 (unless (file-exists-p siren-cache-dir)
   (make-directory siren-cache-dir))
+
+;; Setup load-path
+(add-to-list 'load-path siren-core-dir)
 
 ;; Core stuff
 (require 'siren-core-custom)
