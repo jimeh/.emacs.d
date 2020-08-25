@@ -7,7 +7,8 @@
 ;;; Code:
 
 (when (version< emacs-version "27.0")
-  (require 'siren-buffer-move))
+  (use-package buffer-move
+    :defer t))
 
 (use-package windmove
   :straight (:type built-in)
