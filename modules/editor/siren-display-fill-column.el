@@ -24,7 +24,14 @@ Optional ARG is passed directly to mode toggle function."
 
 ;; Emacs 26.x: Use fill-column-indicator package
 (when (version< emacs-version "27.0")
-  (require 'siren-fci)
+  (use-package fill-column-indicator
+    :hook
+    (prog-mode . fci-mode)
+
+    :custom
+    (fci-handle-line-move-visual nil)
+    (fci-handle-truncate-lines nil)
+    (fci-rule-width 1))
 
   (defun siren-display-fill-column (&optional arg)
     "Activate or deactivate visual fill column.
