@@ -10,7 +10,7 @@
 (require 'tramp)
 
 (use-package helm-global-bindings
-  :straight (helm)
+  :straight helm
   :demand t
   :bind
   (:map helm-command-map
@@ -110,7 +110,7 @@
   (advice-add 'helm :before 'siren-helm--hide-treemacs))
 
 (use-package helm-command
-  :straight (helm)
+  :straight helm
   :after (helm-global-bindings)
   :bind
   ("C-c C-m" . helm-M-x)
@@ -120,14 +120,14 @@
   (helm-M-x-fuzzy-match t))
 
 (use-package helm-elisp
-  :straight (helm)
+  :straight helm
   :after (helm-global-bindings)
   :bind
   (:map helm-command-map
         ("d" . helm-apropos)))
 
 (use-package helm-files
-  :straight (helm)
+  :straight helm
   :after (helm-global-bindings)
   :bind
   ("C-x C-f" . helm-find-files)
@@ -138,20 +138,20 @@
   (helm-ff-search-library-in-sexp t))
 
 (use-package helm-for-files
-  :straight (helm)
+  :straight helm
   :after (helm-global-bindings)
   :bind
   ("C-c f f" . helm-for-files)
   ("C-c f r" . helm-recentf))
 
 (use-package helm-imenu
-  :straight (helm)
+  :straight helm
   :after (helm-global-bindings)
   :bind
   ("C-t" . helm-imenu))
 
 (use-package helm-ring
-  :straight (helm)
+  :straight helm
   :after (helm-global-bindings)
   :defer t
   :init

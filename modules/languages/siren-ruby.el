@@ -81,7 +81,7 @@
                  ruby-forward-sexp nil)))
 
 (use-package lsp-solargraph
-  :straight (lsp-mode)
+  :straight lsp-mode
 
   :hook
   (ruby-mode . lsp-deferred)

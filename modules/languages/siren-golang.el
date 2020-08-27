@@ -61,7 +61,7 @@
   (add-to-list 'completion-ignored-extensions ".test"))
 
 (use-package lsp-go
-  :straight (lsp-mode)
+  :straight lsp-mode
 
   :hook
   (go-mode . lsp-deferred))
