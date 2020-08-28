@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.3](https://github.com/jimeh/.emacs.d/compare/v0.7.2...v0.7.3) (2020-08-28)
+
+
+### Features
+
+* **workspaces:** hide workspace name in modeline ([04b2524](https://github.com/jimeh/.emacs.d/commit/04b252438bec2ef4ef04e4808e2d21f813ae964b))
+* **workspaces:** strip down frame parameters saved to desktop file ([7a1ab57](https://github.com/jimeh/.emacs.d/commit/7a1ab57606a2d7a89f370057670db11071ecaf41))
+* **workspaces:** tweak tab-bar keybindings and turn on tab-bar-history-mode ([4203fdb](https://github.com/jimeh/.emacs.d/commit/4203fdb383cd32e4ad6089aa88598f5feac2f5da))
+
+
+### Bug Fixes
+
+* **native_comp:** correctly set custom comp-eln-load-path ([4e7ec6a](https://github.com/jimeh/.emacs.d/commit/4e7ec6ade80f5ac10a72beb6d67c3ea5fc737faa))
+* **packages:** update package definitions to be compatible with latest straight.el ([1c81570](https://github.com/jimeh/.emacs.d/commit/1c81570ef7cf6b932b888e08467f41308a23039a))
+
 ### [0.7.2](https://github.com/jimeh/.emacs.d/compare/v0.7.1...v0.7.2) (2020-08-20)
 
 
