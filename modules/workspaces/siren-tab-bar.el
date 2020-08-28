@@ -11,18 +11,15 @@
 (use-package tab-bar
   :straight (:type built-in)
 
+  :hook
+  (emacs-startup . siren-tab-bar-setup)
+
   :bind
   ("s-}" . tab-next)
   ("s-{" . tab-previous)
   (:map siren-workspace-map
-        ("n" . tab-next)
         ("C-n" . tab-next)
-        ("p" . tab-previous)
         ("C-p" . tab-previous)
-        ("b" . siren-tab-bar-move-tab-left)
-        ("C-b" . siren-tab-bar-move-tab-left)
-        ("f" . siren-tab-bar-move-tab-right)
-        ("C-f" . siren-tab-bar-move-tab-right)
         ("c" . tab-new)
         ("C-c" . tab-new)
         ("k" . tab-close)
@@ -31,6 +28,8 @@
         ("C-l" . tab-recent)
         ("r" . tab-rename)
         ("C-r" . tab-rename)
+        ("n" . siren-tab-bar-move-tab-right)
+        ("p" . siren-tab-bar-move-tab-left)
         ("s" . siren-tab-bar-switch-to-or-create-tab)
         ("C-s" . siren-tab-bar-switch-to-or-create-tab)
         ("e" . tab-switcher)
@@ -48,13 +47,24 @@
         ("6" . siren-tab-bar-switch-to-index)
         ("7" . siren-tab-bar-switch-to-index)
         ("8" . siren-tab-bar-switch-to-index)
-        ("9" . siren-tab-bar-switch-to-index))
+        ("9" . siren-tab-bar-switch-to-index)
+
+        ("b" . tab-bar-history-back)
+        ("C-b" . tab-bar-history-back)
+        ("f" . tab-bar-history-forward)
+        ("C-f" . tab-bar-history-forward))
 
   :custom
+  (tab-bar-history-limit 25)
   (tab-bar-new-tab-choice "*scratch*")
   (tab-bar-tab-hints nil)
+  (tab-bar-show nil)
 
   :init
+  (defun siren-tab-bar-setup ()
+    (tab-bar-mode)
+    (tab-bar-history-mode))
+
   (defgroup siren-tab-bar nil
     "Siren specific tweaks to tar-bar-mode."
     :group 'tab-bar)
