@@ -11,7 +11,8 @@
       comp-deferred-compilation t)
 
 (when (boundp 'comp-eln-load-path)
-  (let ((eln-cache-dir (expand-file-name "cache/eln-cache/" user-emacs-directory))
+  (let ((eln-cache-dir (expand-file-name "cache/eln-cache/"
+                                         user-emacs-directory))
         (find-exec (executable-find "find")))
     (setcar comp-eln-load-path eln-cache-dir)
     ;; Quitting emacs while native compilation in progress can leave zero byte
