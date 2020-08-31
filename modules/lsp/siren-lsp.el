@@ -7,10 +7,13 @@
 ;;; Code:
 
 (use-package lsp-mode
-  :defer t
   :bind (:map lsp-mode-map
               ("C-c C-." . lsp-rename)
               ("C-c C-f" . lsp-format-buffer))
+
+  :commands
+  lsp
+  lsp-deferred
 
   :hook
   (lsp-mode . siren-lsp-mode-setup)

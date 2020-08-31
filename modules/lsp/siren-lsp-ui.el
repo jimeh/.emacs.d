@@ -15,9 +15,6 @@
               ("M-?" . lsp-ui-peek-find-references)
               ("C-c C-j" . lsp-ui-peek-find-definitions))
 
-  :hook
-  (lsp-mode . lsp-ui-mode)
-
   :custom
   (lsp-ui-doc-enable nil)
   (lsp-ui-sideline-enable nil))
