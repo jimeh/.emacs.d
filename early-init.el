@@ -7,8 +7,7 @@
 ;;; Code:
 
 ;; Native-Comp
-(setq comp-speed 2
-      comp-deferred-compilation t)
+(setq comp-speed 2)
 
 (when (boundp 'comp-eln-load-path)
   (let ((eln-cache-dir (expand-file-name "cache/eln-cache/"
