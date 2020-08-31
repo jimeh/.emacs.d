@@ -10,6 +10,7 @@
 
 (use-package desktop
   :straight (:type built-in)
+  :demand t
 
   :hook
   (emacs-startup . siren-desktop-setup)
@@ -23,6 +24,7 @@
   (desktop-restore-frames t)
 
   :config
+  (add-to-list 'desktop-clear-preserve-buffers "\\*straight-process\\*")
   (add-to-list 'desktop-clear-preserve-buffers "\\*Async-native-compile-log\\*")
   (push '(alpha . :never) frameset-filter-alist)
   (push '(background-color . :never) frameset-filter-alist)
@@ -56,9 +58,7 @@
   (push '(vertical-scroll-bars . :never) frameset-filter-alist)
 
   :init
-  (defun siren-desktop-setup ()
-    (if (not (daemonp))
-        (desktop-save-mode 1)))
+  (defun siren-desktop-setup ())
 
   ;; Enable restoring window configurations when running in terminal
   ;;  - from: https://emacs.stackexchange.com/a/45829
@@ -91,13 +91,10 @@
   :init
   (defun siren-desktop+-setup ()
     (unless (file-exists-p desktop+-base-dir)
-      (make-directory desktop+-base-dir))
-
-    (if (not (daemonp))
-        (desktop+-load-or-create "default")))
+      (make-directory desktop+-base-dir)))
 
   (defun siren-desktop+-current-desktop ()
-    (when (boundp 'desktop-dirname)
+    (when (and (boundp 'desktop-dirname) desktop-dirname)
       (let ((dir (directory-file-name desktop-dirname))
               (base-dir (expand-file-name desktop+-base-dir)))
           (when (string-prefix-p base-dir dir)
