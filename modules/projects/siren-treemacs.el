@@ -27,17 +27,6 @@
    (expand-file-name "treemacs-persist-at-last-error" siren-cache-dir))
 
   :config
-  (with-eval-after-load 'projectile
-    (require 'treemacs-projectile))
-  (with-eval-after-load 'persp-mode
-    (require 'treemacs-persp))
-  (with-eval-after-load 'magit
-    (require 'treemacs-magit))
-  (with-eval-after-load 'lsp-mode
-    (require 'lsp-treemacs))
-
-  (require 'treemacs-all-the-icons)
-
   (treemacs-follow-mode t)
   (treemacs-filewatch-mode t)
   (treemacs-git-mode 'deferred)
@@ -52,24 +41,32 @@
    'file-node-closed #'treemacs-visit-node-in-most-recently-used-window))
 
 (use-package treemacs-all-the-icons
-  :defer t)
+  :defer t
+  :after (treemacs))
 
 (use-package treemacs-projectile
   :defer t
+  :after (treemacs projectile)
   :custom
   (treemacs-header-function #'treemacs-projectile-create-header))
 
 (use-package treemacs-persp
-  :defer t)
+  :defer t
+  :after (treemacs persp-mode))
 
 (use-package treemacs-magit
-  :defer t)
+  :defer t
+  :after (treemacs magit))
 
 (use-package lsp-treemacs
   :defer t
+  :after (treemacs lsp-mode)
+
+  :custom
+  (lsp-metals-treeview-show-when-views-received t)
+
   :config
-  (lsp-treemacs-sync-mode 1)
-  (setq lsp-metals-treeview-show-when-views-received t))
+  (lsp-treemacs-sync-mode 1))
 
 (provide 'siren-treemacs)
 ;;; siren-treemacs.el ends here
