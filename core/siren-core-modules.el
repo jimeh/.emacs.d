@@ -121,7 +121,6 @@
 (require 'siren-ob-mermaid)
 (require 'siren-org-mode)
 (require 'siren-ox-gfm)
-(require 'siren-ox-jira)
 (require 'siren-ox-pandoc)
 
 ;; Tools
