@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.4](https://github.com/jimeh/.emacs.d/compare/v0.7.3...v0.7.4) (2020-09-01)
+
+
+### Bug Fixes
+
+* **workspaces:** do not auto-load "default" desktop on startup ([6003c89](https://github.com/jimeh/.emacs.d/commit/6003c899945c50017be0f1c0cee9953a6c91e20b))
+
 ### [0.7.3](https://github.com/jimeh/.emacs.d/compare/v0.7.2...v0.7.3) (2020-08-28)
 
 
