@@ -20,6 +20,7 @@
   (defun siren-display-fill-column (&optional arg)
     "Activate or deactivate visual fill column.
 Optional ARG is passed directly to mode toggle function."
+    (interactive)
     (display-fill-column-indicator-mode arg)))
 
 ;; Emacs 26.x: Use fill-column-indicator package
@@ -36,6 +37,7 @@ Optional ARG is passed directly to mode toggle function."
   (defun siren-display-fill-column (&optional arg)
     "Activate or deactivate visual fill column.
 Optional ARG is passed directly to mode toggle function."
+    (interactive)
     (fci-mode (or arg t))))
 
 (provide 'siren-display-fill-column)

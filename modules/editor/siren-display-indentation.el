@@ -11,7 +11,8 @@
 (defun siren-display-indentation (&optional arg)
   "Activate or deactivate indentation guides.
 Optional ARG is passed directly to mode toggle function."
-  (highlight-indent-guides-mode (or arg t)))
+  (interactive)
+  (highlight-indent-guides-mode arg))
 
 (provide 'siren-display-indentation)
 ;;; siren-display-indentation.el ends here

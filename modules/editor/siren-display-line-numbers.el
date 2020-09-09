@@ -15,7 +15,8 @@
 (defun siren-display-line-numbers (&optional arg)
   "Activate or deactivate line numbers.
 Optional ARG is passed directly to mode toggle function."
-  (display-line-numbers-mode (or arg t)))
+  (interactive)
+  (display-line-numbers-mode arg))
 
 ;; Fix issue were the left fringe's is cut off by one pixel on the left side.
 ;; from: https://github.com/dgutov/diff-hl/issues/94#issuecomment-334168416
