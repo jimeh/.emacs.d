@@ -6,12 +6,17 @@
 
 ;;; Code:
 
-(use-package yasnippet-snippets
-  :defer t)
-
 (use-package yasnippet
-  :hook (emacs-startup . yas-global-mode)
-  :diminish yas-minor-mode)
+  :diminish yas-minor-mode
+  :hook
+  (prog-mode . yas-minor-mode)
+
+  :config
+  (yas-reload-all))
+
+(use-package yasnippet-snippets
+  :defer t
+  :after (yasnippet))
 
 (provide 'siren-yasnippet)
 ;;; siren-yasnippet.el ends here
