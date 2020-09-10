@@ -31,11 +31,5 @@
 
     (setq flycheck-checker 'json-jsonlint)))
 
-;; fix auto-loading issue with json-snatcher' kill-buffer-hook
-(use-package json-snatcher
-  :defer t
-  :after json-mode
-  :commands (jsons-remove-buffer))
-
 (provide 'siren-json)
 ;;; siren-js.el ends here

@@ -98,7 +98,7 @@
  ("js2-mode" . "40aab27581279d0fdbfeb9afeb85f39d401a927f")
  ("json-mode" . "0e819e519ae17a2686e0881c4ca51fa873fa9b83")
  ("json-reformat" . "8eb6668ed447988aea06467ba8f42e1f2178246f")
- ("json-snatcher" . "c4cecc0a5051bd364373aa499c47a1bb7a5ac51c")
+ ("json-snatcher" . "d07b2d7a15345cd246c582ea4373709828cf8813")
  ("kubernetes-el" . "cc33d8c7bb114c34809ee86020b9e635eff0017b")
  ("let-alist" . "b299c78897cc307f9d5521927376fbd06a26f123")
  ("list-utils" . "9bb2487c83ec46a0b6e6c4158af69334ac797b82")
