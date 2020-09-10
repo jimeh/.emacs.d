@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.5](https://github.com/jimeh/.emacs.d/compare/v0.7.4...v0.7.5) (2020-09-10)
+
+
+### Bug Fixes
+
+* **lang:** resolve json-snatcher issue by overriding it with a fork ([298587d](https://github.com/jimeh/.emacs.d/commit/298587d35d70743aca7ef7b8d5230a86469d1320))
+
 ### [0.7.4](https://github.com/jimeh/.emacs.d/compare/v0.7.3...v0.7.4) (2020-09-01)
 
 
