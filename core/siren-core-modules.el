@@ -47,6 +47,7 @@
 (require 'siren-explain-pause)
 (require 'siren-grip)
 (require 'siren-restart-emacs)
+(require 'siren-uuidgen)
 (require 'siren-zone)
 
 ;; Navigation

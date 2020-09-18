@@ -180,6 +180,7 @@
  ("undo-tree" . "7523823ca3709e0327f3e9f38ddfec71a58084be")
  ("undohist" . "6c905772e6aa9969fd9ca500d2fe93e114130fe6")
  ("use-package" . "4fb1f9a68f1e7e7d614652afc017a6652fd029f1")
+ ("uuidgen-el" . "b50e6fef2de4199a8f207b46588c2cb3890ddd85")
  ("vue-html-mode" . "1514939804bad558584feeb6298b38d22eadf64e")
  ("vue-mode" . "031edd1f97db6e7d8d6c295c0e6d58dd128b9e71")
  ("web-beautify" . "e1b45321d8c11b404b12c8e55afe55eaa7c84ee9")
