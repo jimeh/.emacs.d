@@ -122,6 +122,7 @@
  ("ns-auto-titlebar" . "60273e764bf8d95abc40dd2fdc23af87ea9ee33b")
  ("ob-mermaid" . "cca09b64eff689d8bb15a77de9d4c7fe9845a1f9")
  ("org" . "0afef17e1d7800fe09e0fd1302cc770f5741f88d")
+ ("osx-trash" . "0f1dc052d0a750b8c75f14530a4897f5d4324b4e")
  ("ox-gfm" . "99f93011b069e02b37c9660b8fcb45dab086a07f")
  ("ox-pandoc" . "aa37dc7e94213d4ebedb85c384c1ba35007da18e")
  ("package-build" . "c0858f8f5895f48421ed4f57e9f3d5f4ab7a139f")

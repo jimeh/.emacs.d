@@ -11,6 +11,14 @@
   :config
   (ns-auto-titlebar-mode))
 
+;; Enable use of macOS trash
+(use-package osx-trash
+  :custom
+  (delete-by-moving-to-trash t)
+
+  :config
+  (osx-trash-setup))
+
 ;; When running in GUI mode.
 (when window-system
   ;; Set default font
