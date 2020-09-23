@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.6](https://github.com/jimeh/.emacs.d/compare/v0.7.5...v0.7.6) (2020-09-23)
+
+
+### Features
+
+* **misc:** add uuidgen package ([9c28e42](https://github.com/jimeh/.emacs.d/commit/9c28e4229f58a5448e5ed79af58b072992f43956))
+
 ### [0.7.5](https://github.com/jimeh/.emacs.d/compare/v0.7.4...v0.7.5) (2020-09-10)
 
 
