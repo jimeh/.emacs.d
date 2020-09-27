@@ -24,7 +24,7 @@
   (lsp-enable-file-watchers t)
   (lsp-enable-imenu t)
   (lsp-keymap-prefix "M-;")
-  (lsp-prefer-capf t)
+  (lsp-completion-provider :capf)
 
   ;; Set read process output to 1MB, instead of default 4KB. As many language
   ;; servers produce output ranging from 800KB to 3MB, leaving it at 4KB affects
