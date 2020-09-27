@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.7](https://github.com/jimeh/.emacs.d/compare/v0.7.6...v0.7.7) (2020-09-27)
+
+
+### Features
+
+* **lang:** add jsonnet-mode ([5937589](https://github.com/jimeh/.emacs.d/commit/5937589cc5b040875fa7435af333c4df2893b30f))
+* **macos:** move files/folders to trash instead of deleting them on macOS ([bda82a9](https://github.com/jimeh/.emacs.d/commit/bda82a9c775e8f73fb3090b9316ffd724198b9ad))
+
 ### [0.7.6](https://github.com/jimeh/.emacs.d/compare/v0.7.5...v0.7.6) (2020-09-23)
 
 
