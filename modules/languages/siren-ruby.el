@@ -108,11 +108,6 @@
   (unbind-key "C-c C-r" inf-ruby-minor-mode-map)
   (unbind-key "C-c C-s" inf-ruby-minor-mode-map))
 
-(use-package rbenv
-  :defer t
-  :config
-  (global-rbenv-mode))
-
 (use-package rspec-mode
   :defer t
   :hook (rspec-mode . siren-rspec-mode-setup)

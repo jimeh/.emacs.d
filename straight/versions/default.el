@@ -141,7 +141,6 @@
  ("prettier-emacs" . "e9b73e81d3e1642aec682195f127a42dfb0b5774")
  ("projectile" . "7b6ac286120421216faae43f9e234d801a30ee3d")
  ("rainbow-mode" . "fdff98b12e62df7a6dbb009321430c90a47bb89b")
- ("rbenv.el" . "2ea1a5bdc1266caef1dd77700f2c8f42429b03f1")
  ("recursive-narrow" . "5e3e2067d5a148d7e64e64e0355d3b6860e4c259")
  ("reformatter.el" . "45c0add95025f53ca644a6c8b9afa05b2da3c474")
  ("resize-window" . "72018aa4d2401b60120588199d4cedd0dc1fbcfb")
