@@ -158,6 +158,7 @@
 (require 'siren-jinja2)
 (require 'siren-js)
 (require 'siren-json)
+(require 'siren-jsonnet)
 (require 'siren-jsx)
 (require 'siren-lisp)
 (require 'siren-lua)

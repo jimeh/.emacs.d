@@ -99,6 +99,7 @@
  ("json-mode" . "0e819e519ae17a2686e0881c4ca51fa873fa9b83")
  ("json-reformat" . "8eb6668ed447988aea06467ba8f42e1f2178246f")
  ("json-snatcher" . "d07b2d7a15345cd246c582ea4373709828cf8813")
+ ("jsonnet-mode" . "c8422a617438c79ade98f8d9eeb2086dacb0378c")
  ("kubernetes-el" . "f4c763016620a4ddb41698bb8aa02b18e07ac509")
  ("let-alist" . "b299c78897cc307f9d5521927376fbd06a26f123")
  ("logito" . "824acb89d2cc18cb47281a4fbddd81ad244a2052")
