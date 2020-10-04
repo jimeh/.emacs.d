@@ -10,8 +10,16 @@
 (setq comp-speed 2)
 
 (when (boundp 'comp-eln-load-path)
-  (setcar comp-eln-load-path
-          (expand-file-name "cache/eln-cache/" user-emacs-directory)))
+  (let ((eln-cache-dir (expand-file-name "cache/eln-cache/"
+                                         user-emacs-directory))
+        (find-exec (executable-find "find")))
+    (setcar comp-eln-load-path eln-cache-dir)
+    ;; Quitting emacs while native compilation in progress can leave zero byte
+    ;; sized *.eln files behind. Hence delete such files during startup.
+    (when find-exec
+      (call-process find-exec nil nil nil eln-cache-dir
+                    "-name" "*.eln" "-size" "0" "-delete" "-or"
+                    "-name" "*.eln.tmp" "-size" "0" "-delete"))))
 
 ;; Defer garbage collection further back in the startup process
 (setq gc-cons-threshold most-positive-fixnum)
