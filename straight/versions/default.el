@@ -129,7 +129,6 @@
  ("package-build" . "c0858f8f5895f48421ed4f57e9f3d5f4ab7a139f")
  ("package-lint" . "05596996286089acc7693b700c7c31780439e39f")
  ("pcache" . "1f31433ad0b37a2e68d60ee043a8188ef1ce3176")
- ("persp-mode.el" . "c132efe3094ce1368f54195028b29b82c65a64dc")
  ("pfuture" . "d7926de3ba0105a36cfd00811fd6278aea903eef")
  ("phi-search" . "c34f5800968922d1f9e7b10092b8705d6640ad18")
  ("php-mode" . "f4c7c6995dadcdc6da5fefadfd362f8418b2eec1")

@@ -50,10 +50,6 @@
   :custom
   (treemacs-header-function #'treemacs-projectile-create-header))
 
-(use-package treemacs-persp
-  :defer t
-  :after (treemacs persp-mode))
-
 (use-package treemacs-magit
   :defer t
   :after (treemacs magit))
