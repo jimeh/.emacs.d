@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.9](https://github.com/jimeh/.emacs.d/compare/v0.7.8...v0.7.9) (2020-10-09)
+
+
+### Features
+
+* **editor:** add common language statements to highlight-symbol-ignore-list ([0e204bc](https://github.com/jimeh/.emacs.d/commit/0e204bc3a7a1b6a70dddf1035946b48d7b6401a4))
+* **org-mode:** disable section body indentation ([499349c](https://github.com/jimeh/.emacs.d/commit/499349cf3aa0baf71bdca6014c28666b08e622b3))
+* **org-mode:** enable auto-fill-mode to automatically wrap lines at 80 characters ([b1689e0](https://github.com/jimeh/.emacs.d/commit/b1689e0d79f00bc703037638007ef807598223d7))
+
+
+### Bug Fixes
+
+* **lang:** ensure golang setup works with goenv ([9d45b1a](https://github.com/jimeh/.emacs.d/commit/9d45b1a908405909910b333bb89fefc86e5e1f80))
+
 ### [0.7.8](https://github.com/jimeh/.emacs.d/compare/v0.7.7...v0.7.8) (2020-10-04)
 
 ### [0.7.7](https://github.com/jimeh/.emacs.d/compare/v0.7.6...v0.7.7) (2020-09-27)
