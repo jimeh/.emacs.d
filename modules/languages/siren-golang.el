@@ -50,10 +50,10 @@
     (subword-mode +1))
 
   :config
-  (message "loading go-mode")
-
-  (when (memq window-system '(mac ns))
+  (when (not (getenv "GOPATH"))
     (exec-path-from-shell-copy-env "GOPATH"))
+  (when (not (getenv "GOENV_GOPATH_PREFIX"))
+    (exec-path-from-shell-copy-env "GOENV_GOPATH_PREFIX"))
 
   (define-key 'help-command (kbd "G") 'godoc)
 

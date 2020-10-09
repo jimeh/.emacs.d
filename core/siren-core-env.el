@@ -12,7 +12,6 @@
   (exec-path-from-shell-variables '("PATH"
                                     "MANPATH"
                                     "TMPDIR"
-                                    "GOPATH"
                                     "KUBECONFIG"))
   (exec-path-from-shell-arguments '("-l"))
   (exec-path-from-shell-check-startup-files nil)
