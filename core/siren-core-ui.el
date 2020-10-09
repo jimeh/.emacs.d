@@ -38,8 +38,12 @@
 (column-number-mode t)
 (size-indication-mode t)
 
-;; enable y/n answers
-(fset 'yes-or-no-p 'y-or-n-p)
+;; enable y/n answers in a non-destructive and native-comp friendly manner
+(defun yes-or-no-p-advice (_orig-fun &rest args)
+  "Advice to use `y-or-n-p' instead of `yes-or-no-p', passing along ARGS."
+  (apply 'y-or-n-p args))
+
+(advice-add 'yes-or-no-p :around 'yes-or-no-p-advice)
 
 ;; more useful frame title, that show either a file or a
 ;; buffer name (if the buffer isn't visiting a file)
