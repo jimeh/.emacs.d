@@ -19,7 +19,8 @@
 
   :custom
   (highlight-symbol-highlight-single-occurrence 'nil)
-  (highlight-symbol-idle-delay 0.5))
+  (highlight-symbol-idle-delay 0.5)
+  (highlight-symbol-ignore-list '("^end$" "^def$" "^class$" "^module$")))
 
 (provide 'siren-highlight-symbol)
 ;;; siren-highlight-symbol.el ends here
