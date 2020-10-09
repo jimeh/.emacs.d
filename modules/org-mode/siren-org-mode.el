@@ -52,6 +52,7 @@
     (org-set-emph-re 'org-emphasis-regexp-components
                      org-emphasis-regexp-components)
 
+    (auto-fill-mode t)
     (siren-display-fill-column)
     (siren-display-indentation)
     (siren-display-line-numbers)
