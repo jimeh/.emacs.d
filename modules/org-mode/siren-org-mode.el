@@ -39,6 +39,8 @@
   (org-return-follows-link t)
   (org-special-ctrl-a/e t)
   (org-special-ctrl-k t)
+  (org-adapt-indentation nil)
+  (org-hide-leading-stars nil)
 
   (org-directory (if (file-directory-p "~/Dropbox/org")
                      "~/Dropbox/org" "~/org"))
