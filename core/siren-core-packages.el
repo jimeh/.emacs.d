@@ -27,13 +27,7 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-;; https://github.com/raxod502/straight.el/issues/49#issuecomment-395979478
-(defun straight-x-clean-unused-repos ()
-  (interactive)
-  (dolist (repo (straight--directory-files (straight--repos-dir)))
-    (unless (or (straight--checkhash repo straight--repo-cache)
-                (not (y-or-n-p (format "Delete repository %S?" repo))))
-      (delete-directory (straight--repos-dir repo) 'recursive 'trash))))
+(autoload 'straight-x-clean-unused-repos "straight-x" nil t)
 
 (straight-use-package 'use-package)
 
