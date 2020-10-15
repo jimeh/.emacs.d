@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.10](https://github.com/jimeh/.emacs.d/compare/v0.7.9...v0.7.10) (2020-10-15)
+
+
+### Bug Fixes
+
+* **ui:** use advice to yes-or-no-p to y-or-n-p ([f987f01](https://github.com/jimeh/.emacs.d/commit/f987f01f9a099574de64880d898297d8413d88c5))
+
 ### [0.7.9](https://github.com/jimeh/.emacs.d/compare/v0.7.8...v0.7.9) (2020-10-09)
 
 
