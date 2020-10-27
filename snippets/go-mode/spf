@@ -1,0 +1,4 @@
+# name: fmt.Sprintf(format string, a ...interface{})
+# key: spf
+# --
+fmt.Sprintf(${1:format string}, ${2:a ...interface{\}})$0
