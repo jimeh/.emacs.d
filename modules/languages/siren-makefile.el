@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-display-indentation)
+
 (use-package make-mode
   :straight (:type built-in)
   :hook
@@ -16,6 +18,7 @@
 
   (defun siren-makefile-mode-setup ()
     (subword-mode +1)
+    (siren-display-indentation -1)
     (setq tab-width 4)))
 
 (provide 'siren-makefile)
