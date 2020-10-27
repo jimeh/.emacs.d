@@ -34,7 +34,7 @@
 
   :init
   (defun siren-lsp-mode-setup ()
-    (setq-local company-idle-delay 0.0
+    (setq-local company-idle-delay 0.3
                 company-minimum-prefix-length 1)))
 
 (provide 'siren-lsp)
