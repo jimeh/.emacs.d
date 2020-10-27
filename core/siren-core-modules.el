@@ -46,6 +46,7 @@
 ;; Misc.
 (require 'siren-explain-pause)
 (require 'siren-grip)
+(require 'siren-rand)
 (require 'siren-restart-emacs)
 (require 'siren-uuidgen)
 (require 'siren-zone)
