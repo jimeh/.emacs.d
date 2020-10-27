@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.11](https://github.com/jimeh/.emacs.d/compare/v0.7.10...v0.7.11) (2020-10-27)
+
+
+### Features
+
+* **lang:** add print related go-mode snippets ([ea03506](https://github.com/jimeh/.emacs.d/commit/ea0350669184adcf071db7045541ac0366032c9a))
+* **misc:** add various rand-* commands for generating randomized data ([60df63b](https://github.com/jimeh/.emacs.d/commit/60df63bc4912175a7dce7b24f787514af8431bcf))
+
+
+### Bug Fixes
+
+* **lang:** disable indentation highlights for Makefiles ([192499a](https://github.com/jimeh/.emacs.d/commit/192499a67b4c51acee0bb4fbe244931829d2405a))
+* **lang:** properly escape } in puts debug (pd) ruby-mode snippet ([c36be86](https://github.com/jimeh/.emacs.d/commit/c36be866131ce4c86dd5b699d0d6e01858b21c0d))
+* **text-editing:** enable yasnippet via global mode ([11ac1a8](https://github.com/jimeh/.emacs.d/commit/11ac1a822c7c6dcfb0c1774a676d8b7875395d15))
+
 ### [0.7.10](https://github.com/jimeh/.emacs.d/compare/v0.7.9...v0.7.10) (2020-10-15)
 
 
