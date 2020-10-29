@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.12](https://github.com/jimeh/.emacs.d/compare/v0.7.11...v0.7.12) (2020-10-29)
+
+
+### Features
+
+* **misc:** add rand-ip command to insert a random IPv4 address ([3edd57c](https://github.com/jimeh/.emacs.d/commit/3edd57c7532cb8f39f6f34632bfb01ffbeaa1c4f))
+* **version-control:** correctly format forge-post-mode buffers with prettier-js ([f540569](https://github.com/jimeh/.emacs.d/commit/f5405690b4276962020414ceddb0fa87bc1d61dd))
+
 ### [0.7.11](https://github.com/jimeh/.emacs.d/compare/v0.7.10...v0.7.11) (2020-10-27)
 
 
