@@ -38,5 +38,13 @@
     (dotimes (_ (if (numberp NUM) (abs NUM) 16 ))
       (insert (elt charset (random baseCount))))))
 
+(defun rand-ip ()
+  "Insert a random IPv4 address."
+  (interactive)
+  (insert (concat (int-to-string (random 255))
+                  "." (int-to-string (random 255))
+                  "." (int-to-string (random 255))
+                  "." (int-to-string (random 255)))))
+
 (provide 'siren-rand)
 ;;; siren-rand.el ends here
