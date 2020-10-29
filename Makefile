@@ -14,7 +14,6 @@ new-version:
 
 	npx standard-version
 
-
 #
 # Functions.
 #
@@ -38,7 +37,6 @@ remove_$(1):
 .SILENT: update_$(1)
 update_$(1): remove_$(1) $(1)
 endef
-
 
 #
 # Defined vendored dependencies.
