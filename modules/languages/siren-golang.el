@@ -52,6 +52,8 @@
   :config
   (when (not (getenv "GOPATH"))
     (exec-path-from-shell-copy-env "GOPATH"))
+  (when (not (getenv "GOPRIVATE"))
+    (exec-path-from-shell-copy-env "GOPRIVATE"))
   (when (not (getenv "GOENV_GOPATH_PREFIX"))
     (exec-path-from-shell-copy-env "GOENV_GOPATH_PREFIX"))
 
@@ -64,7 +66,22 @@
   :straight lsp-mode
 
   :hook
-  (go-mode . lsp-deferred))
+  (go-mode . lsp-deferred)
+
+  :custom
+  (lsp-go-use-placeholders nil)
+  (lsp-go-link-target "pkg.go.dev")
+
+  :init
+  (lsp-register-custom-settings
+   '(("gopls.completeUnimported" t t)
+     ("gopls.completionBudget" "100ms")
+     ("gopls.completionDocumentation" t t)
+     ("gopls.deepCompletion" t t)
+     ("gopls.gofumpt" t t)
+     ("gopls.matcher" "Fuzzy")
+     ("gopls.staticcheck" t t)
+     ("gopls.symbolMatcher" "Fuzzy"))))
 
 (use-package go-dlv
   :defer t)
