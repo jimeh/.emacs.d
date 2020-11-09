@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.13](https://github.com/jimeh/.emacs.d/compare/v0.7.12...v0.7.13) (2020-11-09)
+
+
+### Features
+
+* **lang:** enable terraform-ls language server support in terraform-mode ([3adfd0c](https://github.com/jimeh/.emacs.d/commit/3adfd0c0eb138ac2bd0e47bac993fc6a6e6b905d))
+* **lang:** format go-mode buffers on save with gofumpt via lsp-mode ([7ca255d](https://github.com/jimeh/.emacs.d/commit/7ca255db9cde01fd263f8517b94cc448e6bfa838))
+
 ### [0.7.12](https://github.com/jimeh/.emacs.d/compare/v0.7.11...v0.7.12) (2020-10-29)
 
 
