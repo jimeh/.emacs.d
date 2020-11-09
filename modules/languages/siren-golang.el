@@ -64,12 +64,13 @@
 
 (use-package lsp-go
   :straight lsp-mode
+  :after lsp-mode
 
   :hook
   (go-mode . lsp-deferred)
 
   :custom
-  (lsp-go-use-placeholders nil)
+  (lsp-go-use-placeholders t)
   (lsp-go-link-target "pkg.go.dev")
 
   :init
