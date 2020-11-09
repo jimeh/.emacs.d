@@ -34,7 +34,7 @@
       (auto-highlight-symbol-mode -1))
 
     (company-mode +1)
-    (lsp)
+    (lsp-deferred)
     (siren-folding)
     (subword-mode +1)))
 

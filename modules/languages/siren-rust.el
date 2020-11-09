@@ -25,7 +25,7 @@
     (setq rust-format-on-save t)
 
     (company-mode +1)
-    (lsp)
+    (lsp-deferred)
     (siren-folding)
     (subword-mode +1)))
 

@@ -31,7 +31,7 @@
             tab-width width))
 
     (company-mode +1)
-    (lsp)
+    (lsp-deferred)
     (subword-mode +1)
     (siren-folding)))
 

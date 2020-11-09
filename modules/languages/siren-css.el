@@ -26,7 +26,7 @@
 
     (company-mode +1)
     (prettier-js-mode)
-    (lsp)
+    (lsp-deferred)
     (rainbow-mode +1)))
 
 (provide 'siren-css)

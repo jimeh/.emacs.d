@@ -18,7 +18,7 @@
   (defun siren-vue-mode-setup ()
     (prettier-js-mode)
     (company-mode)
-    (lsp)
+    (lsp-deferred)
     (subword-mode)
     (siren-folding)))
 
