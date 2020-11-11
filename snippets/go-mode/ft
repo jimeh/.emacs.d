@@ -1,0 +1,7 @@
+# key: ft
+# --
+for _, tt := range ${1:tests} {
+	t.Run(tt.name, func(t *testing.T) {
+		$0
+	})
+}
