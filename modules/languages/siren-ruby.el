@@ -148,7 +148,10 @@
   (rubocopfmt-show-errors 'echo)
   (rubocopfmt-use-bundler-when-possible nil)
   (rubocopfmt-rubocop-command
-   (expand-file-name "bin/rubocop-daemon-wrapper" siren-dir)))
+   (expand-file-name "bin/rubocop-daemon-wrapper" siren-dir))
+
+  :config
+  (add-to-list 'safe-local-variable-values '(rubocopfmt-include-unsafe-cops)))
 
 (use-package ruby-compilation
   :defer t)
