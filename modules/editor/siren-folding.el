@@ -17,8 +17,7 @@
   (defun siren-folding (&optional arg)
     "Activate or deactivate code folding.
 Optional ARG is passed directly to mode toggle function."
-    (hs-minor-mode (or arg t))
-    (if window-system (hideshowvis-minor-mode (or arg t))))
+    (hs-minor-mode (or arg t)))
 
   (defun siren-folding-toggle (column)
     "Toggle hiding/showing blocks via hs-mode.
@@ -39,9 +38,6 @@ Borrowed from: http://www.emacswiki.org/emacs/HideShow"
      (or column
          (unless selective-display
            (1+ (current-column)))))))
-
-(use-package hideshowvis
-  :defer t)
 
 (provide 'siren-folding)
 ;;; siren-folding.el ends here
