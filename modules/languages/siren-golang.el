@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-company)
+(require 'siren-dap)
 (require 'siren-display-indentation)
 (require 'siren-flycheck)
 (require 'siren-folding)
@@ -83,6 +84,10 @@
      ("gopls.matcher" "Fuzzy")
      ("gopls.staticcheck" t t)
      ("gopls.symbolMatcher" "Fuzzy"))))
+
+(use-package dap-go
+  :straight dap-mode
+  :after (go-mode dap-mode))
 
 (use-package go-dlv
   :defer t)

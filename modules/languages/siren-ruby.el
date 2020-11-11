@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-company)
+(require 'siren-dap)
 (require 'siren-folding)
 (require 'siren-lsp)
 (require 'siren-projectile)
@@ -88,6 +89,10 @@
 
   :custom
   (lsp-solargraph-multi-root nil))
+
+(use-package dap-ruby
+  :straight dap-mode
+  :after (ruby-mode dap-mode))
 
 (use-package bundler
   :defer t)

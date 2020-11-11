@@ -77,6 +77,9 @@
 (require 'siren-lsp-ui)
 (require 'siren-helm-lsp)
 
+;; Debugging
+(require 'siren-dap)
+
 ;; Shell
 (require 'siren-shell-pop)
 
