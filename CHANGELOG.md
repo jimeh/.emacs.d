@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.14](https://github.com/jimeh/.emacs.d/compare/v0.7.13...v0.7.14) (2020-11-15)
+
+
+### Features
+
+* **debugging:** add dap-mode with basic config for Go and Ruby ([7917f6a](https://github.com/jimeh/.emacs.d/commit/7917f6ac5689de9da63bedd477a3563d978ca66d))
+* **editor:** remove hideshowvis package ([811d14f](https://github.com/jimeh/.emacs.d/commit/811d14fda0ad238b213d3e22589ff9daefbfd0b4))
+* **lang:** expand golang-related env vars which are imported ([9a51b31](https://github.com/jimeh/.emacs.d/commit/9a51b31c9e23f9e1dfd6ffcfcefbd9abfeffd1e1))
+* **lsp:** bind lsp-ui-doc-glance to C-c C-d instead of lsp-ui-doc-show ([3812b3d](https://github.com/jimeh/.emacs.d/commit/3812b3df296e97f3cdd1303e73352c6802172534))
+* **snippets:** add Golang snippet ft "for _, tt := range tests {...}" ([5c2229c](https://github.com/jimeh/.emacs.d/commit/5c2229c80744ccc2879557b123fd8b2796e38301))
+
 ### [0.7.13](https://github.com/jimeh/.emacs.d/compare/v0.7.12...v0.7.13) (2020-11-09)
 
 
