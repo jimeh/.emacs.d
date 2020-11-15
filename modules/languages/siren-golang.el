@@ -53,6 +53,10 @@
   :config
   (when (not (getenv "GOPATH"))
     (exec-path-from-shell-copy-env "GOPATH"))
+  (when (not (getenv "GOBIN"))
+    (exec-path-from-shell-copy-env "GOBIN"))
+  (when (not (getenv "GOROOT"))
+    (exec-path-from-shell-copy-env "GOROOT"))
   (when (not (getenv "GOPRIVATE"))
     (exec-path-from-shell-copy-env "GOPRIVATE"))
   (when (not (getenv "GOENV_GOPATH_PREFIX"))
