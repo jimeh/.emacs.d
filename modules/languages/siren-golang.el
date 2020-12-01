@@ -69,25 +69,24 @@
 
 (use-package lsp-go
   :straight lsp-mode
-  :after lsp-mode
 
   :hook
-  (go-mode . lsp-deferred)
+  (go-mode . siren-lsp-go-mode-setup)
 
   :custom
   (lsp-go-use-placeholders t)
   (lsp-go-link-target "pkg.go.dev")
 
-  :init
+  :config
   (lsp-register-custom-settings
-   '(("gopls.completeUnimported" t t)
-     ("gopls.completionBudget" "100ms")
-     ("gopls.completionDocumentation" t t)
-     ("gopls.deepCompletion" t t)
-     ("gopls.gofumpt" t t)
-     ("gopls.matcher" "Fuzzy")
-     ("gopls.staticcheck" t t)
-     ("gopls.symbolMatcher" "Fuzzy"))))
+   '(("gopls.gofumpt" t t)))
+
+  :init
+  (defun siren-lsp-go-mode-setup ()
+    (add-hook 'before-save-hook #'lsp-format-buffer t t)
+    (add-hook 'before-save-hook #'lsp-organize-imports t t)
+
+    (lsp-deferred)))
 
 (use-package dap-go
   :straight dap-mode
