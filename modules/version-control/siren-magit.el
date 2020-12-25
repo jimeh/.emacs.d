@@ -24,6 +24,7 @@
   (magit-completing-read-function 'magit-ido-completing-read)
   (magit-default-tracking-name-function
    'magit-default-tracking-name-branch-only)
+  (magit-diff-adjust-tab-width t)
   (magit-diff-refine-hunk t)
   (magit-display-buffer-function
    'magit-display-buffer-same-window-except-diff-v1)
@@ -41,7 +42,7 @@
   (defun siren-magit-mode-setup ())
 
   (defun siren-git-commit-mode-setup ()
-    (setq tab-width 2
+    (setq tab-width 4
           fill-column 72)
 
     (siren-display-fill-column)
