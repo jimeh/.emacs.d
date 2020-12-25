@@ -79,7 +79,8 @@
 
   :config
   (lsp-register-custom-settings
-   '(("gopls.gofumpt" t t)))
+   '(("gopls.allowModfileModifications" t t)
+     ("gopls.gofumpt" t t)))
 
   :init
   (defun siren-lsp-go-mode-setup ()
