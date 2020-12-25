@@ -130,6 +130,7 @@
 ;; Tools
 (require 'siren-docker)
 (require 'siren-helm-make)
+(require 'siren-httprepl)
 (require 'siren-kubernetes)
 (require 'siren-restclient)
 

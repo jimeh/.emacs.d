@@ -88,6 +88,7 @@
  ("highlight-indent-guides" . "cf352c85cd15dd18aa096ba9d9ab9b7ab493e8f6")
  ("highlight-symbol.el" . "7a789c779648c55b16e43278e51be5898c121b3a")
  ("ht.el" . "2850301d19176b8d3bb6cc8d95af6ab7e529bd56")
+ ("httprepl.el" . "cfa3693267a8ed1c96a86a126823f37dbfe077d8")
  ("hydra" . "2d553787aca1aceb3e6927e426200e9bb9f056f1")
  ("ido-completing-read-plus" . "b9ca2566b867464c25b720e2148d240961c110e7")
  ("ido-vertical-mode.el" . "5a6e17048528c328c129db6dccfe605f301ddef2")
