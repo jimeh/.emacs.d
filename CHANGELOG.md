@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.15](https://github.com/jimeh/.emacs.d/compare/v0.7.14...v0.7.15) (2020-12-25)
+
+
+### Features
+
+* **lang:** allow gopls language server to modify go.mod ([b31b35e](https://github.com/jimeh/.emacs.d/commit/b31b35edee44283fc04742373084b457562bb993))
+* **tools:** add and configure restclient package ([2af986d](https://github.com/jimeh/.emacs.d/commit/2af986d57fe55f3058914b662e909c78b9c5cac0))
+* **tools:** add httprepl package ([f675e1f](https://github.com/jimeh/.emacs.d/commit/f675e1f0304e1910ea05c605222996b4e1e7a9fe))
+* **tools:** add ob-http package ([bbc0e4a](https://github.com/jimeh/.emacs.d/commit/bbc0e4a7148cd695ecc2897c53057821e6d1ac87))
+* **version-control:** ensure magit uses correct width for tab indents ([07470c2](https://github.com/jimeh/.emacs.d/commit/07470c27bd6fad2e455511220ef6c5f08e0ab998))
+
 ### [0.7.14](https://github.com/jimeh/.emacs.d/compare/v0.7.13...v0.7.14) (2020-11-15)
 
 
