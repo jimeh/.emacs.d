@@ -122,6 +122,7 @@
 
 ;; Org-mode
 (require 'siren-htmlize)
+(require 'siren-ob-http)
 (require 'siren-ob-mermaid)
 (require 'siren-org-mode)
 (require 'siren-ox-gfm)

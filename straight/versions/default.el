@@ -119,6 +119,7 @@
  ("mwim.el" . "b4f3edb4c0fb8f8b71cecbf8095c2c25a8ffbf85")
  ("nginx-mode" . "a2bab83c2eb233d57d76b236e7c141c2ccc97005")
  ("ns-auto-titlebar" . "60273e764bf8d95abc40dd2fdc23af87ea9ee33b")
+ ("ob-http" . "b1428ea2a63bcb510e7382a1bf5fe82b19c104a7")
  ("ob-mermaid" . "cca09b64eff689d8bb15a77de9d4c7fe9845a1f9")
  ("org" . "7fc55f741b77713fa80f8ebfe753e19c762b9f83")
  ("osx-trash" . "0f1dc052d0a750b8c75f14530a4897f5d4324b4e")
