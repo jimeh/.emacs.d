@@ -131,6 +131,7 @@
 (require 'siren-docker)
 (require 'siren-helm-make)
 (require 'siren-kubernetes)
+(require 'siren-restclient)
 
 ;; XWidgets
 (require 'siren-xwidget-plus)

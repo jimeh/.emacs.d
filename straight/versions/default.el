@@ -141,6 +141,7 @@
  ("reformatter.el" . "45c0add95025f53ca644a6c8b9afa05b2da3c474")
  ("resize-window" . "72018aa4d2401b60120588199d4cedd0dc1fbcfb")
  ("restart-emacs" . "e5707491d7ac20879465bb52e282ad1416748378")
+ ("restclient.el" . "abc307b965bf6720bc466281f2e204cd5ce37dc3")
  ("rinari" . "134438af8fbdfa9c8077267c768d273a9792b484")
  ("rjsx-mode" . "b697fe4d92cc84fa99a7bcb476f815935ea0d919")
  ("rspec-mode" . "f1029cad2a8d9fd096e9a0f1ae9e7d7e2c8bd1ec")
