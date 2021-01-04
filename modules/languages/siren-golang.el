@@ -89,10 +89,6 @@
 
     (lsp-deferred)))
 
-(use-package dap-go
-  :straight dap-mode
-  :after (go-mode dap-mode))
-
 (use-package go-dlv
   :defer t)
 
@@ -110,6 +106,27 @@
 
   :custom
   (go-test-verbose t))
+
+(use-package dap-go
+  :straight dap-mode
+  :after (go-mode gotest dap-mode)
+  :bind (:map dap-mode-map
+              ("C-c , d" . siren-dap-go-debug-current-test))
+
+  :init
+  (defun siren-dap-go-debug-current-test ()
+    (interactive)
+    (let ((name (go-test--get-current-test)))
+      (dap-debug
+       (list :type "go"
+             :request "launch"
+             :name (concat "Go: Debug " name " test")
+             :mode "auto"
+             :program "${workspaceFolder}"
+             :buildFlags nil
+             :args (concat "-test.run ^" name "$")
+             :env nil
+             :envFile nil)))))
 
 (use-package go-gen-test
   :defer t
