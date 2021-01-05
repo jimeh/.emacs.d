@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.16](https://github.com/jimeh/.emacs.d/compare/v0.7.15...v0.7.16) (2021-01-05)
+
+
+### Features
+
+* **lang:** enable debugging current test in go-mode via dap-mode ([672d6d8](https://github.com/jimeh/.emacs.d/commit/672d6d819cf2e522581dbfc9b222ed5bc521bbe7))
+
 ### [0.7.15](https://github.com/jimeh/.emacs.d/compare/v0.7.14...v0.7.15) (2020-12-25)
 
 
