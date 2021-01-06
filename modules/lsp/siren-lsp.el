@@ -23,6 +23,7 @@
   (lsp-enable-xref t)
   (lsp-enable-file-watchers t)
   (lsp-enable-imenu t)
+  (lsp-lens-enable t)
   (lsp-keymap-prefix "M-;")
   (lsp-completion-provider :capf)
 
