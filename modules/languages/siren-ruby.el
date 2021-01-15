@@ -149,7 +149,7 @@
 
   :custom
   (rubocopfmt-include-unsafe-cops t)
-  (rubocopfmt-on-save-use-lsp-format-buffer nil)
+  (rubocopfmt-on-save-use-lsp-format-buffer t)
   (rubocopfmt-show-errors 'echo)
   (rubocopfmt-use-bundler-when-possible nil)
   (rubocopfmt-rubocop-command
