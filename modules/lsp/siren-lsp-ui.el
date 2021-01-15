@@ -18,10 +18,12 @@
 
   :custom
   (lsp-ui-doc-alignment 'window)
-  (lsp-ui-doc-delay 0)
-  (lsp-ui-doc-enable t)
+  (lsp-ui-doc-delay 0.2)
+  (lsp-ui-doc-show-with-cursor t)
+  (lsp-ui-doc-show-with-mouse t)
+  (lsp-ui-doc-enable nil)
   (lsp-ui-doc-header nil)
-  (lsp-ui-doc-include-signature t)
+  (lsp-ui-doc-include-signature nil)
   (lsp-ui-doc-max-height 45)
   (lsp-ui-doc-position 'at-point)
   (lsp-ui-doc-use-webkit nil)
