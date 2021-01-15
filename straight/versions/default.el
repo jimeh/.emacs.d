@@ -179,7 +179,7 @@
  ("typescript.el" . "1043025d42602d560949955410d3afa2562130ee")
  ("undo-tree" . "e326c6135e62f5fe8536528d3acd5e798f847407")
  ("undohist" . "6c905772e6aa9969fd9ca500d2fe93e114130fe6")
- ("use-package" . "caa92f1d64fc25480551757d854b4b49981dfa6b")
+ ("use-package" . "365c73d2618dd0040a32c2601c5456ab5495b812")
  ("uuidgen-el" . "b50e6fef2de4199a8f207b46588c2cb3890ddd85")
  ("vue-html-mode" . "1514939804bad558584feeb6298b38d22eadf64e")
  ("vue-mode" . "031edd1f97db6e7d8d6c295c0e6d58dd128b9e71")

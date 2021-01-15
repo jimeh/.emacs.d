@@ -11,9 +11,6 @@
 
 (use-package doom-themes
   :custom
-  ;; Initial theme to load.
-  (siren-doom-themes-init-theme 'doom-vibrant)
-
   ;; Global doom-themes options
   (doom-themes-enable-bold t)    ; if nil, bold is universally disabled
   (doom-themes-enable-italic t)  ; if nil, italics is universally disabled
@@ -34,7 +31,7 @@
 
   :config
   ;; By default load the doom-vibrant theme.
-  (siren-doom-themes-load siren-doom-themes-init-theme)
+  (siren-doom-themes-load 'doom-vibrant)
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
@@ -50,7 +47,9 @@
     (interactive (list (completing-read "Choose theme: "
                                         (siren-doom-themes-list))))
 
-    (mapc #'disable-theme custom-enabled-themes)
+    (dolist (theme custom-enabled-themes)
+      (when (not (string= theme "use-package"))
+        (disable-theme theme)))
     (load-theme (if (string= (type-of theme) "string") (intern theme) theme) t)
     (siren-doom-themes-overrides))
 

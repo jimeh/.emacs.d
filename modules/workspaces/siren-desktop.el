@@ -74,9 +74,6 @@
   :hook
   (emacs-startup . siren-desktop+-setup)
 
-  :custom
-  (desktop+-base-dir (expand-file-name "desktops" siren-dir))
-
   :bind
   (:map siren-workspace-map
         ("C-z c" . desktop+-create)
@@ -89,20 +86,22 @@
         ("C-z C-l" . desktop+-load))
 
   :init
+  (defvar siren-desktop+-base-dir (expand-file-name "desktops" siren-dir))
+
   (defun siren-desktop+-setup ()
-    (unless (file-exists-p desktop+-base-dir)
-      (make-directory desktop+-base-dir)))
+    (unless (file-exists-p siren-desktop+-base-dir)
+      (make-directory siren-desktop+-base-dir)))
 
   (defun siren-desktop+-current-desktop ()
     (when (and (boundp 'desktop-dirname) desktop-dirname)
       (let ((dir (directory-file-name desktop-dirname))
-              (base-dir (expand-file-name desktop+-base-dir)))
+              (base-dir (expand-file-name siren-desktop+-base-dir)))
           (when (string-prefix-p base-dir dir)
             (file-name-nondirectory dir)))))
 
   (defun siren-desktop+-list ()
     "Return a list of available desktops"
-    (remove "." (remove ".." (directory-files desktop+-base-dir))))
+    (remove "." (remove ".." (directory-files siren-desktop+-base-dir))))
 
   (defun siren-desktop+-list-interactive ()
     (let ((current (siren-desktop+-current-desktop))
@@ -124,7 +123,7 @@
 
   (defun siren-desktop+-create-new (name)
     "Create a new empty session, identified by a name.
-The session is created in a subdirectory of `desktop+-base-dir'.
+The session is created in a subdirectory of `siren-desktop+-base-dir'.
 It can afterwards be reloaded using `desktop+-load'.
 
 As a special case, if NAME is left blank, the session is

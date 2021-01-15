@@ -40,10 +40,11 @@
   (helm-echo-input-in-header-line t)
   (helm-file-name-case-fold-search 'smart)
   (helm-split-window-default-side 'below)
-  (siren-helm--did-hide-neotree nil)
-  (siren-helm--did-hide-treemacs nil)
 
   :init
+  (defvar siren-helm--did-hide-neotree nil)
+  (defvar siren-helm--did-hide-treemacs nil)
+
   ;; From: https://www.reddit.com/r/emacs/comments/3asbyn/new_and_very_useful_helm_feature_enter_search/
   (defun siren-helm--hide-minibuffer-maybe ()
     (when (with-helm-buffer helm-echo-input-in-header-line)
