@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.17](https://github.com/jimeh/.emacs.d/compare/v0.7.16...v0.7.17) (2021-01-15)
+
+
+### Features
+
+* **lang:** format ruby-mode buffers with language server ([996a5b8](https://github.com/jimeh/.emacs.d/commit/996a5b8bf673c16194914dac0bd7598e92972dcb))
+* **lsp:** enable code lenses, improve lsp-ui-doc setup ([e8544e7](https://github.com/jimeh/.emacs.d/commit/e8544e79e92dfd8545ddfdbe6384772c4a941982))
+* **lsp:** tweak lsp-ui settings ([6271425](https://github.com/jimeh/.emacs.d/commit/6271425e150e207930501cc4a77d98a41f97f67e))
+* **projects:** add all-the-icons-ibuffer package ([6425b46](https://github.com/jimeh/.emacs.d/commit/6425b4625cc72d9131cb5a0f0baefbb1a4ea2a50))
+* **snippets:** add various snippets for go-mode ([d79e999](https://github.com/jimeh/.emacs.d/commit/d79e9999fd066b1438db9e027f52343783fa03dd))
+
+
+### Bug Fixes
+
+* **lang:** correctly load dap-mode for go-mode ([c1865ad](https://github.com/jimeh/.emacs.d/commit/c1865ad30950b18908b57d28f0fa2be34a896181))
+* **lang:** correctly set projectile igonore directories ([2438f0a](https://github.com/jimeh/.emacs.d/commit/2438f0ab9000c8dcdfb0a5ab0b0be9e97d48fc79))
+* **packages:** fix incompatibility with latest use-package ([50a85ca](https://github.com/jimeh/.emacs.d/commit/50a85ca8d8fbd2685b36d9d63e9245981e3e8907))
+* **projects:** add missing dependency for all-the-icons ([5f278ab](https://github.com/jimeh/.emacs.d/commit/5f278ab2771438bb97b59a3af5d7a15004139a89))
+* **projects:** correctly suppress treemacs load-time warnings ([8329c7e](https://github.com/jimeh/.emacs.d/commit/8329c7e91297c8ffbe7a366131fa218693607193))
+
 ### [0.7.16](https://github.com/jimeh/.emacs.d/compare/v0.7.15...v0.7.16) (2021-01-05)
 
 
