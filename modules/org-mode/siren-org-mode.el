@@ -13,6 +13,7 @@
 (require 'siren-smartparens)
 
 (use-package org
+  :straight (:type built-in)
   :bind
   (:map org-mode-map
         ("C-j" . org-return-indent)

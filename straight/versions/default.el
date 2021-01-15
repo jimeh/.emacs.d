@@ -122,7 +122,6 @@
  ("ns-auto-titlebar" . "60273e764bf8d95abc40dd2fdc23af87ea9ee33b")
  ("ob-http" . "b1428ea2a63bcb510e7382a1bf5fe82b19c104a7")
  ("ob-mermaid" . "cca09b64eff689d8bb15a77de9d4c7fe9845a1f9")
- ("org" . "94d1753ec8b171442f0e789ca38beee2415198b0")
  ("osx-trash" . "0f1dc052d0a750b8c75f14530a4897f5d4324b4e")
  ("ox-gfm" . "99f93011b069e02b37c9660b8fcb45dab086a07f")
  ("ox-pandoc" . "aa37dc7e94213d4ebedb85c384c1ba35007da18e")
