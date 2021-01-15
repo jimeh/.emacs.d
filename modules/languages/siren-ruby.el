@@ -14,9 +14,6 @@
 (require 'siren-string-inflection)
 (require 'siren-toggle-quotes)
 
-(add-to-list 'projectile-globally-ignored-directories "vendor/bundle")
-(add-to-list 'projectile-globally-ignored-directories "vendor/ruby")
-
 (use-package ruby-mode
   :straight (:type built-in)
   :interpreter "ruby"
@@ -55,6 +52,10 @@
   (ruby-mode . siren-ruby-mode-setup)
 
   :init
+  (with-eval-after-load "projectile"
+    (add-to-list 'projectile-globally-ignored-directories "vendor/bundle")
+    (add-to-list 'projectile-globally-ignored-directories "vendor/ruby"))
+
   (defun siren-ruby-mode-setup ()
     (setq-local c-tab-always-indent nil
                 ruby-align-chained-calls t
