@@ -140,21 +140,20 @@ ARG counts from 1."
     (interactive)
     (let* ((tabs (funcall tab-bar-tabs-function))
            (current-index (or (tab-bar--current-tab-index tabs) 0))
-           (output "")
+           (output '())
            (index 0))
       (dolist (tab tabs)
-        (setq output
-              (concat output
-                      (propertize (format "%d:" index)
-                                  'face 'siren-tab-bar-echo-index)
-                      (propertize (alist-get 'name tab)
-                                  'face (if (eq index current-index)
-                                            'siren-tab-bar-echo-current
-                                          'siren-tab-bar-echo-default))
-                      " ")
-              index (1+ index)))
+        (add-to-list 'output
+                     (concat (propertize (format "%d:" index)
+                                         'face 'siren-tab-bar-echo-index)
+                             (propertize (alist-get 'name tab)
+                                         'face (if (eq index current-index)
+                                                   'siren-tab-bar-echo-current
+                                                 'siren-tab-bar-echo-default)))
+                     t)
+        (setq index (1+ index)))
 
-      (message "tabs: %s" output)))
+      (message "tabs: %s" (string-join output " "))))
 
   (defun siren-tab-bar-echo-tab-list-advice (&rest _)
     (when siren-tab-bar-echo-tab-list
