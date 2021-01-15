@@ -27,10 +27,11 @@
    (expand-file-name "treemacs-persist-at-last-error" siren-cache-dir))
 
   :config
+  (defvar treemacs-no-load-time-warnings t)
+
   (treemacs-follow-mode t)
   (treemacs-filewatch-mode t)
   (treemacs-git-mode 'deferred)
-  (treemacs-no-load-time-warnings t)
 
   (treemacs-define-doubleclick-action
    'file-node-open   #'treemacs-visit-node-in-most-recently-used-window)
