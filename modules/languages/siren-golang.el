@@ -109,7 +109,7 @@
 
 (use-package dap-go
   :straight dap-mode
-  :after (go-mode gotest dap-mode)
+  :after (go-mode gotest)
   :bind (:map dap-mode-map
               ("C-c , d" . siren-dap-go-debug-current-test))
 
