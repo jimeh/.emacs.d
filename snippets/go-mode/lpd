@@ -1,0 +1,4 @@
+# name: log.Printf("[DEBUG] ...\n", ...)
+# key: lpd
+# --
+log.Printf("[DEBUG] $1\n"$2)$0

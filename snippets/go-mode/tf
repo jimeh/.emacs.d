@@ -1,0 +1,18 @@
+# name: func TestName(t *testing.T) { tests := []struct{ ... } ... }
+# key: tf
+# --
+func Test${1:Name}(t *testing.T) {
+	tests := []struct {
+		name string
+		$0
+	}{
+		{
+			name: "",
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			
+		})
+	}
+}

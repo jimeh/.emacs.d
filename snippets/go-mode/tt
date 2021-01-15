@@ -1,0 +1,11 @@
+# name: tests := []struct{ ... }
+# key: tt
+# --
+tests := []struct {
+	name string
+	$0
+}{
+	{
+		name: "",
+	},
+}
