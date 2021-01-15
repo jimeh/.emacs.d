@@ -13,5 +13,10 @@
   :after memoize
   :if window-system)
 
+(use-package all-the-icons-ibuffer
+  :after all-the-icons
+  :if window-system
+  :init (all-the-icons-ibuffer-mode 1))
+
 (provide 'siren-all-the-icons)
 ;;; siren-all-the-icons.el ends here

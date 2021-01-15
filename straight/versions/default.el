@@ -1,4 +1,5 @@
 (("ace-window" . "c7cb315c14e36fded5ac4096e158497ae974bec9")
+ ("all-the-icons-ibuffer" . "0260cd194d150126bcb81823742ab53036942c73")
  ("all-the-icons.el" . "6917b08f64dd8487e23769433d6cb9ba11f4152f")
  ("amx" . "b99149715266b5c2c48f5a0fc43716d36575da5f")
  ("anzu" . "bdb3da5028935a4aea55c40769bc191a81afb54e")
