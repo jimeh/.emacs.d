@@ -158,8 +158,9 @@
 
   :config
   (add-to-list 'safe-local-variable-values
-               '(rubocopfmt-include-unsafe-cops
-                 rubocopfmt-on-save-use-lsp-format-buffer)))
+               '(rubocopfmt-include-unsafe-cops))
+  (add-to-list 'safe-local-variable-values
+               '(rubocopfmt-on-save-use-lsp-format-buffer)))
 
 (use-package ruby-compilation
   :defer t)
