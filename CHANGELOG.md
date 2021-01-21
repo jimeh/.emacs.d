@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.18](https://github.com/jimeh/.emacs.d/compare/v0.7.17...v0.7.18) (2021-01-21)
+
+
+### Bug Fixes
+
+* **lang:** correctly add rubocopfmt package vars to list of safe local vars ([4f1e68f](https://github.com/jimeh/.emacs.d/commit/4f1e68f33eaf6c7cfe6c3509663ad63f1e23211d))
+* **workspaces:** don't hide tab-bar on startup ([3e8bbe3](https://github.com/jimeh/.emacs.d/commit/3e8bbe36f4a21a5778648346b84c5830bc01b9a7))
+
 ### [0.7.17](https://github.com/jimeh/.emacs.d/compare/v0.7.16...v0.7.17) (2021-01-15)
 
 
