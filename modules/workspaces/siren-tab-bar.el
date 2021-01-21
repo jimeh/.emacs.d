@@ -58,7 +58,6 @@
   (tab-bar-history-limit 25)
   (tab-bar-new-tab-choice "*scratch*")
   (tab-bar-tab-hints nil)
-  (tab-bar-show nil)
 
   :init
   (defun siren-tab-bar-setup ()
