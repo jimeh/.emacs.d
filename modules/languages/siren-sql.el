@@ -21,9 +21,10 @@
 
 (use-package sqlformat
   :hook
-  (sql-mode . sqlformat-mode)
+  (sql-mode . sqlformat-on-save-mode)
 
   :custom
+  (sqlformat-args '("-g"))
   (sqlformat-command 'pgformatter))
 
 (provide 'siren-sql)
