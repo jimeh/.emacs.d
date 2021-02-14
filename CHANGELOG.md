@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.19](https://github.com/jimeh/.emacs.d/compare/v0.7.18...v0.7.19) (2021-02-14)
+
+
+### Features
+
+* **lang:** enable lsp-mode for sql-mode via sqls language server ([1ff9e88](https://github.com/jimeh/.emacs.d/commit/1ff9e880ba6cda9a1ace3e6a99398957a63e9864))
+
+
+### Bug Fixes
+
+* **lang:** debug current go test now works in non-root module packages ([f41a9da](https://github.com/jimeh/.emacs.d/commit/f41a9daff106588a14a8a2e96d469c3875497158))
+* **lang:** for formatting of *.sql files with pgformatter ([dd4c77a](https://github.com/jimeh/.emacs.d/commit/dd4c77ad24595ae093cd5cb96e1d9e45261a5092))
+
 ### [0.7.18](https://github.com/jimeh/.emacs.d/compare/v0.7.17...v0.7.18) (2021-01-21)
 
 
