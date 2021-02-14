@@ -19,6 +19,16 @@
 
     (company-mode +1)))
 
+(use-package lsp-sqls
+  :straight lsp-mode
+
+  :hook
+  (sql-mode . lsp-deferred)
+
+  :custom
+  (lsp-sqls-connections
+   '(((driver . "mysql") (dataSourceName . "root@tcp(localhost:3306)/")))))
+
 (use-package sqlformat
   :hook
   (sql-mode . sqlformat-on-save-mode)
