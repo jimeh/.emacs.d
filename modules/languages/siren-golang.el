@@ -109,7 +109,7 @@
 
 (use-package dap-go
   :straight dap-mode
-  :after (go-mode gotest)
+  :after (go-mode)
   :bind (:map dap-mode-map
               ("C-c , d" . siren-dap-go-debug-current-test))
 
@@ -122,7 +122,7 @@
              :request "launch"
              :name (concat "Go: Debug " name " test")
              :mode "auto"
-             :program "${workspaceFolder}"
+             :program "${fileDirname}"
              :buildFlags nil
              :args (concat "-test.run ^" name "$")
              :env nil
