@@ -24,7 +24,10 @@
   :custom
   (undo-tree-history-directory-alist
    `((".*" . ,(expand-file-name "undo-tree-history" siren-cache-dir))))
-  (undo-tree-auto-save-history nil) ;; use undohist package instead
+  ;; Use undohist package to persist history to disk, it seems more reliable
+  ;; than undo-tree's auto-save feature which randomly fails to restore history
+  ;; for no obvious reason.
+  (undo-tree-auto-save-history nil)
 
   :config
   ;; Unbind keys that I don't use.

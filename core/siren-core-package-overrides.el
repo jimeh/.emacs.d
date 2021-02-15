@@ -7,7 +7,12 @@
 ;;; Code:
 
 (setq straight-recipe-overrides
-      '((nil . ())))
+      '((nil . (
+                ;; Use latest version of undo-tree from main git repo. The
+                ;; package on elpa.gnu.org is quite old.
+                (undo-tree :type git :host gitlab
+                           :repo "tsc25/undo-tree"
+                               :branch "master")))))
 
 (provide 'siren-core-package-overrides)
 ;;; siren-core-packages.el ends here
