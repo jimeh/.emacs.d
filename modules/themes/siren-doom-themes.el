@@ -90,6 +90,17 @@
                           :foreground (doom-blend 'vc-modified 'bg 0.7)
                           :background (doom-blend 'vc-modified 'bg 0.2)))
 
+    (with-eval-after-load 'diff-hl-margin
+      (set-face-attribute 'diff-hl-margin-insert nil
+                          :foreground (doom-blend 'vc-added 'bg 0.6)
+                          :background (doom-blend 'vc-added 'bg 0.1))
+      (set-face-attribute 'diff-hl-margin-delete nil
+                          :foreground (doom-blend 'vc-deleted 'bg 0.7)
+                          :background (doom-blend 'vc-deleted 'bg 0.1))
+      (set-face-attribute 'diff-hl-margin-change nil
+                          :foreground (doom-blend 'vc-modified 'bg 0.5)
+                          :background (doom-blend 'vc-modified 'bg 0.1)))
+
     (with-eval-after-load 'hideshowvis
       (set-face-attribute 'hideshowvis-hidable-face nil
                           :foreground (doom-color 'base7)))

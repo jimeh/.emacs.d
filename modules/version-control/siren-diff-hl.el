@@ -18,7 +18,11 @@
   :init
   (defun siren-turn-on-diff-hl-mode ()
     (turn-on-diff-hl-mode)
-    (diff-hl-flydiff-mode 1)))
+    (diff-hl-flydiff-mode 1))
+
+  :config
+  (if (not (window-system))
+      (diff-hl-margin-mode 1)))
 
 (provide 'siren-diff-hl)
 ;;; siren-diff-hl.el ends here
