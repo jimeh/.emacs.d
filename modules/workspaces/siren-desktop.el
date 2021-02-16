@@ -25,6 +25,7 @@
   (siren-desktop-setup)
 
   (add-to-list 'desktop-clear-preserve-buffers "\\*straight-process\\*")
+  (add-to-list 'desktop-clear-preserve-buffers "\\*explain-pause-top\\*")
   (add-to-list 'desktop-clear-preserve-buffers "\\*Async-native-compile-log\\*")
   (push '(alpha . :never) frameset-filter-alist)
   (push '(background-color . :never) frameset-filter-alist)

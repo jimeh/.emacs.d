@@ -10,7 +10,10 @@
   :straight (:type git :host github :repo "lastquestion/explain-pause-mode")
 
   :custom
-  (explain-pause-blocking-too-long-ms 40))
+  (explain-pause-blocking-too-long-ms 40)
+
+  :config
+  (explain-pause-mode))
 
 (provide 'siren-explain-pause)
 ;;; siren-explain-pause.el ends here
