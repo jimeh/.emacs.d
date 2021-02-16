@@ -1,0 +1,10 @@
+# name: func BenchmarkName(b *testing.B) { for ... { ... } }
+# key: bf
+# --
+func Benchmark${1:Name}(b *testing.B) {
+	$0
+
+	for n := 0; n < b.N; n++ {
+		
+	}
+}
