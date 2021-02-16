@@ -116,7 +116,7 @@
  ("mermaid-mode" . "6ec97ab934023a8aa094705bb1c9803fd85d24c1")
  ("minions" . "4a81446e13f5bfb514e593d0e1c5253a60113301")
  ("mmm-mode" . "0d00cdf4d02cc166304f6967a20fa22e2eaf208b")
- ("move-dup" . "c5a346d3058011b8152cceeb45858f9b4cef1b69")
+ ("move-dup" . "5906503e0b9b832b1d5062c9cd27cf72a2ce4817")
  ("multiple-cursors.el" . "a9d7764f80b241978f3d4e76bc981ef10bab5d70")
  ("mwim.el" . "b4f3edb4c0fb8f8b71cecbf8095c2c25a8ffbf85")
  ("nginx-mode" . "a2bab83c2eb233d57d76b236e7c141c2ccc97005")

@@ -8,9 +8,9 @@
 
 (use-package move-dup
   :bind
-  ("M-p" . md-move-lines-up)
-  ("M-n" . md-move-lines-down)
-  ("C-x C-d" . md-duplicate-down))
+  ("M-p" . move-dup-move-lines-up)
+  ("M-n" . move-dup-move-lines-down)
+  ("C-x C-d" . move-dup-duplicate-down))
 
 (provide 'siren-move-dup)
 ;;; siren-move-dup.el ends here
