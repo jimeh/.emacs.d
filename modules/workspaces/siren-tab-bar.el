@@ -11,9 +11,6 @@
 (use-package tab-bar
   :straight (:type built-in)
 
-  :hook
-  (emacs-startup . siren-tab-bar-setup)
-
   :bind
   ("s-}" . tab-next)
   ("s-{" . tab-previous)
@@ -58,6 +55,9 @@
   (tab-bar-history-limit 25)
   (tab-bar-new-tab-choice "*scratch*")
   (tab-bar-tab-hints nil)
+
+  :config
+  (siren-tab-bar-setup)
 
   :init
   (defun siren-tab-bar-setup ()

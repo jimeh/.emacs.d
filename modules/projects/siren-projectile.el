@@ -7,9 +7,6 @@
 ;;; Code:
 
 (use-package projectile
-  :hook
-  (emacs-startup . projectile-mode)
-
   :bind
   ("C-c p p" . projectile-switch-project)
   ("C-c p k" . projectile-kill-buffers)
@@ -58,7 +55,9 @@
   (push "Rakefile" projectile-project-root-files)
   ;; Treat separate directories with Gemfiles within a single git repo as
   ;; separate projects.
-  (push "Gemfile" projectile-project-root-files-bottom-up))
+  (push "Gemfile" projectile-project-root-files-bottom-up)
+
+  (projectile-mode))
 
 (provide 'siren-projectile)
 ;;; siren-projectile.el ends here

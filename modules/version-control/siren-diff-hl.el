@@ -10,10 +10,15 @@
 
 (use-package diff-hl
   :hook
-  (emacs-startup . global-diff-hl-mode)
-  (emacs-startup . diff-hl-flydiff-mode)
+  (prog-mode . siren-turn-on-diff-hl-mode)
+  (text-mode . siren-turn-on-diff-hl-mode)
   (dired-mode . diff-hl-dired-mode)
-  (magit-post-refresh . diff-hl-magit-post-refresh))
+  (magit-post-refresh . diff-hl-magit-post-refresh)
+
+  :init
+  (defun siren-turn-on-diff-hl-mode ()
+    (turn-on-diff-hl-mode)
+    (diff-hl-flydiff-mode 1)))
 
 (provide 'siren-diff-hl)
 ;;; siren-diff-hl.el ends here

@@ -8,15 +8,13 @@
 
 (use-package yasnippet
   :diminish yas-minor-mode
-  :hook
-  (emacs-startup . yas-global-mode)
 
   :config
+  (yas-global-mode)
   (yas-reload-all))
 
 (use-package yasnippet-snippets
-  :defer t
-  :after (yasnippet))
+  :after yasnippet)
 
 (provide 'siren-yasnippet)
 ;;; siren-yasnippet.el ends here

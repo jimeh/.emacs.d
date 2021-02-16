@@ -10,9 +10,6 @@
 (require 'siren-workspace-map)
 
 (use-package persp-mode
-  :hook
-  (emacs-startup . persp-mode)
-
   :bind
   ("s-}" . persp-next)
   ("s-{" . persp-prev)
@@ -180,6 +177,8 @@ ARG counts from 1."
       (if name (persp-switch name))))
 
   :config
+  (persp-mode)
+
   (add-hook 'persp-common-buffer-filter-functions
             'siren-persp-mode-filter-magit-buffers)
 

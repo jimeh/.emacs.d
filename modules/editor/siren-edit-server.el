@@ -8,7 +8,6 @@
 
 (use-package edit-server
   :if window-system
-  :hook (emacs-startup . edit-server-start)
 
   :custom
   (edit-server-default-major-mode 'markdown-mode)
@@ -17,7 +16,10 @@
      (width . 90)
      (height . 45)
      (minibuffer . t)
-     (menu-bar-lines . t))))
+     (menu-bar-lines . t)))
+
+  :config
+  (edit-server-start))
 
 (provide 'siren-edit-server)
 ;;; siren-edit-server.el ends here

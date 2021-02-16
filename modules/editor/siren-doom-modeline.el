@@ -7,8 +7,6 @@
 ;;; Code:
 
 (use-package doom-modeline
-  :hook (emacs-startup . doom-modeline-mode)
-
   :custom
   (doom-modeline-bar-width 3)
   (doom-modeline-buffer-encoding nil)
@@ -22,7 +20,10 @@
   (doom-modeline-minor-modes t)
   (doom-modeline-persp-name nil)
   (doom-modeline-vcs-max-length 24)
-  (doom-modeline-workspace-name nil))
+  (doom-modeline-workspace-name nil)
+
+  :config
+  (doom-modeline-mode))
 
 (provide 'siren-doom-modeline)
 ;;; siren-doom-modeline.el ends here

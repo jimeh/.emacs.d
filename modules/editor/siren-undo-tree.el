@@ -7,9 +7,7 @@
 ;;; Code:
 
 (use-package undo-tree
-  :hook
-  (emacs-startup . global-undo-tree-mode)
-
+  :demand
   :bind
   (:map undo-tree-map
         ("C-x u" . undo-tree-visualize)
@@ -30,6 +28,8 @@
   (undo-tree-auto-save-history nil)
 
   :config
+  (global-undo-tree-mode)
+
   ;; Unbind keys that I don't use.
   (unbind-key "C-/" undo-tree-map)
   (unbind-key "C-?" undo-tree-map)

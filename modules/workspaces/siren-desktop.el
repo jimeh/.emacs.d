@@ -10,10 +10,8 @@
 
 (use-package desktop
   :straight (:type built-in)
-  :demand t
 
   :hook
-  (emacs-startup . siren-desktop-setup)
   (desktop-after-read . siren-desktop-after-read-hook)
 
   :custom
@@ -24,6 +22,8 @@
   (desktop-restore-frames t)
 
   :config
+  (siren-desktop-setup)
+
   (add-to-list 'desktop-clear-preserve-buffers "\\*straight-process\\*")
   (add-to-list 'desktop-clear-preserve-buffers "\\*Async-native-compile-log\\*")
   (push '(alpha . :never) frameset-filter-alist)
@@ -71,9 +71,6 @@
      :force-onscreen desktop-restore-forces-onscreen)))
 
 (use-package desktop+
-  :hook
-  (emacs-startup . siren-desktop+-setup)
-
   :bind
   (:map siren-workspace-map
         ("C-z c" . desktop+-create)
@@ -84,6 +81,9 @@
         ("C-z C-s" . desktop+-load-or-create)
         ("C-z l" . desktop+-load)
         ("C-z C-l" . desktop+-load))
+
+  :config
+  (siren-desktop+-setup)
 
   :init
   (defvar siren-desktop+-base-dir (expand-file-name "desktops" siren-dir))
