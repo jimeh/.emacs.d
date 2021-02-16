@@ -11,10 +11,10 @@
 
 (setq comp-deferred-compilation-deny-list
       '("\\(?:[/\\\\]\\.dir-locals\\.el$\\)"
-        ;; Don't native-compile *-authloads.el files as they all seem to produce
-        ;; errors during native-compile.
+        ;; Don't native-compile *-authloads.el and *-pkg.el files as they
+        ;; seem to produce errors during native-compile.
         "\\(?:[^z-a]*-autoloads\\.el$\\)"
-        "\\(?:helm[/\\\\]helm-pkg\\.el$\\)"))
+        "\\(?:[^z-a]*-pkg\\.el$\\)"))
 
 (when (boundp 'comp-eln-load-path)
   (let ((eln-cache-dir (expand-file-name "cache/eln-cache/"
