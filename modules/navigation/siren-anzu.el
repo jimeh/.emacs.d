@@ -7,6 +7,10 @@
 ;;; Code:
 
 (use-package anzu
+  :bind
+  ("C-x C-r" . anzu-query-replace-regexp)
+  ("M-%" . anzu-query-replace)
+
   :custom
   (anzu-mode-lighter "")
   (anzu-deactivate-region t)
@@ -20,7 +24,6 @@
 
   (global-set-key [remap query-replace] 'anzu-query-replace)
   (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp)
-  (global-set-key (kbd "C-x C-r") 'anzu-query-replace-regexp)
 
   (global-anzu-mode +1))
 

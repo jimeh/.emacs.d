@@ -8,6 +8,7 @@
 
 (use-package dired
   :straight (:type built-in)
+  :defer t
   :bind (:map dired-mode-map
               ("M-?" . siren-dired-display-size))
 
@@ -62,6 +63,7 @@
               (file-attributes filename)))))
 
   :config
+  (require 'dired+)
   (when (string-match-p "^gnu" (symbol-name system-type))
     (setq dired-use-ls-dired t
           dired-listing-switches "-aBhl"))
@@ -74,10 +76,11 @@
               dired-listing-switches "-aBhl")))))
 
 (use-package dired-x
-  :straight (:type built-in))
+  :straight (:type built-in)
+  :after dired)
 
 (use-package dired+
-  :demand t
+  :defer t
   :bind (:map dired-mode-map
               ("c" . dired-create-directory)
               ("C-l" . diredp-up-directory-reuse-dir-buffer))
@@ -94,10 +97,12 @@
   (unbind-key "M-l" dired-mode-map))
 
 (use-package dired-subtree
+  :after dired
   :bind (:map dired-mode-map
               ("TAB" . dired-subtree-toggle)))
 
 (use-package dired-narrow
+  :after dired
   :bind (:map dired-mode-map
               ("C-s" . dired-narrow))
 

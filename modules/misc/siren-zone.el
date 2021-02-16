@@ -8,6 +8,7 @@
 
 (use-package zone
   :straight (:type built-in)
+  :defer t
 
   :init
   (defun zone-choose (pgm)
@@ -20,7 +21,8 @@
     (let ((zone-programs (list (intern pgm))))
       (zone))))
 
-(use-package zone-nyan)
+(use-package zone-nyan
+  :defer t)
 
 (provide 'siren-zone)
 ;;; siren-zone.el ends here

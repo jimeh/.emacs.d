@@ -24,6 +24,7 @@
 
 ;; Allows searching forward/back (C-s/C-r) searching with multiple cursors.
 (use-package phi-search
+  :after multiple-cursors
   :custom
   (phi-search-limit 3000))
 

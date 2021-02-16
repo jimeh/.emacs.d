@@ -11,7 +11,7 @@
 
 (use-package helm-global-bindings
   :straight helm
-  :demand t
+  :demand
   :bind
   (:map helm-command-map
         ("M" . helm-man-woman))

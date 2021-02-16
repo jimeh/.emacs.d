@@ -11,6 +11,7 @@
 
 (use-package imenu
   :straight (:type built-in)
+  :defer t
 
   :custom
   (imenu-auto-rescan t)

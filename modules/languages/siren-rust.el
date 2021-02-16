@@ -36,7 +36,8 @@
   :after rust-mode
   :hook (flycheck-mode . flycheck-rust-setup))
 
-(use-package rust-playground)
+(use-package rust-playground
+  :defer t)
 
 (provide 'siren-rust)
 ;;; siren-rust.el ends here

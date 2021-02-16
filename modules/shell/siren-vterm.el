@@ -9,6 +9,7 @@
 (require 'siren-windmove)
 
 (use-package vterm
+  :defer t
   :hook
   (vterm-mode . siren-vterm-mode-setup)
 

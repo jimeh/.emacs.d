@@ -25,6 +25,7 @@
     (subword-mode +1)))
 
 (use-package yaml-imenu
+  :after yaml-mode
   :config
   (yaml-imenu-enable))
 
