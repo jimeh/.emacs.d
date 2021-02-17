@@ -88,7 +88,28 @@
                           :background (doom-blend 'vc-deleted 'bg 0.2))
       (set-face-attribute 'diff-hl-change nil
                           :foreground (doom-blend 'vc-modified 'bg 0.7)
-                          :background (doom-blend 'vc-modified 'bg 0.2)))
+                          :background (doom-blend 'vc-modified 'bg 0.2))
+
+      (set-face-attribute 'siren-diff-hl-insert nil
+                          :foreground (doom-blend 'vc-added 'bg 0.6)
+                          :background (doom-color 'bg))
+      (set-face-attribute 'siren-diff-hl-delete nil
+                          :foreground (doom-blend 'vc-deleted 'bg 0.65)
+                          :background (doom-color 'bg))
+      (set-face-attribute 'siren-diff-hl-change nil
+                          :foreground (doom-blend 'vc-modified 'bg 0.5)
+                          :background (doom-color 'bg)))
+
+    (with-eval-after-load 'diff-hl-margin
+      (set-face-attribute 'diff-hl-margin-insert nil
+                          :foreground (doom-blend 'vc-added 'bg 0.6)
+                          :background (doom-blend 'vc-added 'bg 0.1))
+      (set-face-attribute 'diff-hl-margin-delete nil
+                          :foreground (doom-blend 'vc-deleted 'bg 0.7)
+                          :background (doom-blend 'vc-deleted 'bg 0.1))
+      (set-face-attribute 'diff-hl-margin-change nil
+                          :foreground (doom-blend 'vc-modified 'bg 0.5)
+                          :background (doom-blend 'vc-modified 'bg 0.1)))
 
     (with-eval-after-load 'diff-hl-margin
       (set-face-attribute 'diff-hl-margin-insert nil
