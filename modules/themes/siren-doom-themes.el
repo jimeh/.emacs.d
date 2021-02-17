@@ -122,6 +122,22 @@
                           :foreground (doom-blend 'vc-modified 'bg 0.5)
                           :background (doom-blend 'vc-modified 'bg 0.1)))
 
+    (with-eval-after-load 'git-gutter
+      (set-face-attribute 'git-gutter:added nil
+                          :foreground (doom-blend 'vc-added 'bg 0.7))
+      (set-face-attribute 'git-gutter:deleted nil
+                          :foreground (doom-blend 'vc-deleted 'bg 0.7))
+      (set-face-attribute 'git-gutter:modified nil
+                          :foreground (doom-blend 'vc-modified 'bg 0.7)))
+
+    (with-eval-after-load 'git-gutter-fringe
+      (set-face-attribute 'git-gutter-fr:added nil
+                          :foreground (doom-blend 'vc-added 'bg 0.7))
+      (set-face-attribute 'git-gutter-fr:deleted nil
+                          :foreground (doom-blend 'vc-deleted 'bg 0.7))
+      (set-face-attribute 'git-gutter-fr:modified nil
+                          :foreground (doom-blend 'vc-modified 'bg 0.7)))
+
     (with-eval-after-load 'hideshowvis
       (set-face-attribute 'hideshowvis-hidable-face nil
                           :foreground (doom-color 'base7)))
