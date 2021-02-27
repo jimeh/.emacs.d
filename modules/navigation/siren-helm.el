@@ -154,7 +154,6 @@
 (use-package helm-ring
   :straight helm
   :after (helm-global-bindings)
-  :defer t
   :init
   ;; This advice is borrowed from the browse-kill-ring package.
   (defadvice yank-pop (around kill-ring-browse-maybe (arg))
