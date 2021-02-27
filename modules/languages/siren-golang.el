@@ -51,17 +51,6 @@
     (subword-mode +1))
 
   :config
-  (when (not (getenv "GOPATH"))
-    (exec-path-from-shell-copy-env "GOPATH"))
-  (when (not (getenv "GOBIN"))
-    (exec-path-from-shell-copy-env "GOBIN"))
-  (when (not (getenv "GOROOT"))
-    (exec-path-from-shell-copy-env "GOROOT"))
-  (when (not (getenv "GOPRIVATE"))
-    (exec-path-from-shell-copy-env "GOPRIVATE"))
-  (when (not (getenv "GOENV_GOPATH_PREFIX"))
-    (exec-path-from-shell-copy-env "GOENV_GOPATH_PREFIX"))
-
   (define-key 'help-command (kbd "G") 'godoc)
 
   ;; Ignore go test -c output files

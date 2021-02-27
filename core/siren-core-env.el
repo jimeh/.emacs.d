@@ -12,7 +12,13 @@
   (exec-path-from-shell-variables '("PATH"
                                     "MANPATH"
                                     "TMPDIR"
-                                    "KUBECONFIG"))
+                                    "KUBECONFIG"
+                                    "GOPATH"
+                                    "GOBIN"
+                                    "GOROOT"
+                                    "GOPRIVATE"
+                                    "GOENV_GOPATH_PREFIX"
+                                    "GOENV_VERSION"))
   (exec-path-from-shell-arguments '("-l"))
   (exec-path-from-shell-check-startup-files nil)
   (exec-path-from-shell-debug nil)
