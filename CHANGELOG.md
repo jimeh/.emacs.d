@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.20](https://github.com/jimeh/.emacs.d/compare/v0.7.19...v0.7.20) (2021-02-27)
+
+
+### Features
+
+* **editor:** update undo-tree to 0.8 ([0368206](https://github.com/jimeh/.emacs.d/commit/03682066c7bc47d772e4cf02dc4c5f1da63fe429))
+* **lang:** add bf (benchmark func) snippet for go-mode ([62029fd](https://github.com/jimeh/.emacs.d/commit/62029fd83422366149f51b792199b0901e1a01de))
+* **version-control:** add git-gutter support to siren-doom-themes customizations ([601a040](https://github.com/jimeh/.emacs.d/commit/601a040d2cf4a145a670e7cfc6a2521aed1cd80a))
+* **version-control:** change diff-hl fringe bitmap style to be a thin solid line ([00f6db6](https://github.com/jimeh/.emacs.d/commit/00f6db64de004091300106b83785d67684c88be7))
+* **version-control:** use diff-hl-margin-mode when running Emacs in a terminal ([efae487](https://github.com/jimeh/.emacs.d/commit/efae487c94a4a3c146616a238e230ac87a6d383c))
+
+
+### Bug Fixes
+
+* **lang:** ensure Go related env vars are correctly loaded ([e74800b](https://github.com/jimeh/.emacs.d/commit/e74800b5cbc01dd59e8cfdb03d27a56cc66bc914))
+* **lang:** prevent dockerfile-mode wrongfully activating certain files ([147e9ed](https://github.com/jimeh/.emacs.d/commit/147e9ed1d3887f79935b2d264801e6acfe66327b))
+* **native-comp:** expand ignored file patterns ([702b4eb](https://github.com/jimeh/.emacs.d/commit/702b4eb5d12184c88adf8e2272dee99ffc6b9824))
+* **native-comp:** reduce warning by ignoring specific files which always fail to native-compile ([d0a1927](https://github.com/jimeh/.emacs.d/commit/d0a19270818f778e7fbc300cf7e4da5eabe4d454))
+* **navigation:** ensure helm-ring is correctly loaded on startup ([bcd3440](https://github.com/jimeh/.emacs.d/commit/bcd34409db5d8dfddab8f70325c6b81b43f27b47))
+* **startup:** correctly setup deferred loading for various packages ([395ad7c](https://github.com/jimeh/.emacs.d/commit/395ad7ccacd9f35750260230b7df5f04825e81a6))
+* **text-editing:** correctly load custom snippets on emacs startup ([affbe2e](https://github.com/jimeh/.emacs.d/commit/affbe2e113975e4485c1fd280ee608872a8fedf4))
+
 ### [0.7.19](https://github.com/jimeh/.emacs.d/compare/v0.7.18...v0.7.19) (2021-02-14)
 
 
