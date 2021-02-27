@@ -8,10 +8,10 @@
 
 (use-package yasnippet
   :diminish yas-minor-mode
+  :hook (emacs-startup . yas-reload-all)
 
   :config
-  (yas-global-mode)
-  (yas-reload-all))
+  (yas-global-mode))
 
 (use-package yasnippet-snippets
   :after yasnippet)
