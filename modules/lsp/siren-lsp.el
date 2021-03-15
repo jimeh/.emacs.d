@@ -19,13 +19,21 @@
   (lsp-mode . siren-lsp-mode-setup)
 
   :custom
+  (lsp-completion-provider :capf)
+  (lsp-completion-show-detail t)
+  (lsp-completion-show-kind t)
+  (lsp-eldoc-enable-hover t)
   (lsp-eldoc-render-all nil)
-  (lsp-enable-xref t)
   (lsp-enable-file-watchers t)
   (lsp-enable-imenu t)
-  (lsp-lens-enable t)
+  (lsp-enable-symbol-highlighting t)
+  (lsp-enable-xref t)
+  (lsp-headerline-breadcrumb-enable t)
   (lsp-keymap-prefix "M-;")
-  (lsp-completion-provider :capf)
+  (lsp-lens-enable t)
+  (lsp-modeline-diagnostics-enable t)
+  (lsp-signature-auto-activate t)
+  (lsp-signature-render-documentation t)
 
   ;; Set read process output to 1MB, instead of default 4KB. As many language
   ;; servers produce output ranging from 800KB to 3MB, leaving it at 4KB affects
