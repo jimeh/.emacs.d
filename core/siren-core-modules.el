@@ -74,7 +74,6 @@
 
 ;; Language Servers
 (require 'siren-lsp)
-(require 'siren-lsp-ui)
 (require 'siren-helm-lsp)
 
 ;; Debugging

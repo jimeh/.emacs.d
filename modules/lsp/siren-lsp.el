@@ -46,5 +46,30 @@
     (setq-local company-idle-delay 0.3
                 company-minimum-prefix-length 1)))
 
+(use-package lsp-ui
+  :defer t
+  :bind (:map lsp-ui-mode-map
+              ("C-c C-d" . lsp-ui-doc-glance)
+              ("C-c d" . lsp-ui-doc-show)
+              ("M-?" . lsp-ui-peek-find-references)
+              ("C-c C-j" . lsp-ui-peek-find-definitions))
+
+  :custom
+  (lsp-ui-doc-alignment 'window)
+  (lsp-ui-doc-delay 0.2)
+  (lsp-ui-doc-enable t)
+  (lsp-ui-doc-header nil)
+  (lsp-ui-doc-include-signature t)
+  (lsp-ui-doc-max-height 45)
+  (lsp-ui-doc-position 'at-point)
+  (lsp-ui-doc-show-with-cursor nil)
+  (lsp-ui-doc-show-with-mouse t)
+  (lsp-ui-doc-use-webkit nil)
+  (lsp-ui-peek-always-show nil)
+  (lsp-ui-sideline-enable t)
+  (lsp-ui-sideline-show-code-actions t)
+  (lsp-ui-sideline-show-diagnostics t)
+  (lsp-ui-sideline-show-hover t))
+
 (provide 'siren-lsp)
 ;;; siren-lsp.el ends here
