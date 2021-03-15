@@ -72,8 +72,10 @@
     (set-face-attribute 'font-lock-variable-name-face nil
                          :foreground (doom-lighten 'blue 0.25))
     (set-face-attribute 'vertical-border nil
-                        :foreground (doom-darken 'vertical-bar 0.1)
-                        :background (doom-darken 'vertical-bar 0.1))
+                        :foreground (doom-darken 'vertical-bar 0.2)
+                        :background (doom-darken 'vertical-bar 0.2))
+    (set-face-attribute 'font-lock-comment-face nil
+                        :foreground (doom-lighten 'comments 0.15))
 
     (when (not (version< emacs-version "27.0"))
       (set-face-attribute 'fill-column-indicator nil
