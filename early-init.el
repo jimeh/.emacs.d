@@ -7,7 +7,8 @@
 ;;; Code:
 
 ;; Native-Comp
-(setq comp-speed 2)
+(setq comp-speed 2
+      comp-async-query-on-exit t)
 
 (setq comp-deferred-compilation-deny-list
       '("\\(?:[/\\\\]\\.dir-locals\\.el$\\)"
