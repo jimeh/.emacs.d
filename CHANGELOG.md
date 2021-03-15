@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.21](https://github.com/jimeh/.emacs.d/compare/v0.7.20...v0.7.21) (2021-03-15)
+
+
+### Features
+
+* **lang:** enable manual formatting of go-mode buffers with golines ([da5ecff](https://github.com/jimeh/.emacs.d/commit/da5ecfffcd8c09f7cb3173cd5c7a4e52511f6ed0))
+* **lsp:** tweak configuration for lsp-mode and lsp-ui ([b7bc119](https://github.com/jimeh/.emacs.d/commit/b7bc119af06c2c39f7544bd75ec68e4ffdddb460))
+* **native_comp:** set comp-async-query-on-exit to t ([1767dae](https://github.com/jimeh/.emacs.d/commit/1767dae080c53031b0099acbe8ba73557ec7540d))
+* **themes:** make comments and vertical bar slightly more visible ([49c8548](https://github.com/jimeh/.emacs.d/commit/49c85482b1a778e6401318303405e71f33638f28))
+
+
+### Bug Fixes
+
+* **lang:** disable duplicate before-save hooks for go-mode ([bc4328c](https://github.com/jimeh/.emacs.d/commit/bc4328c6d5af44a8e541c368724e10657abfa6a2))
+* **misc:** do not enable explain-pause-mode automatically when emacs starts ([98b4e80](https://github.com/jimeh/.emacs.d/commit/98b4e800f509d6aa5219a0daeb5aeb506500842c))
+
 ### [0.7.20](https://github.com/jimeh/.emacs.d/compare/v0.7.19...v0.7.20) (2021-02-27)
 
 
