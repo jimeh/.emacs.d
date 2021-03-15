@@ -37,8 +37,6 @@
                 company-minimum-prefix-length 1
                 whitespace-style (delete 'indentation whitespace-style))
 
-    (add-hook 'before-save-hook #'lsp-format-buffer t t)
-    (add-hook 'before-save-hook #'lsp-organize-imports t t)
 
     (when (fboundp 'highlight-symbol-mode)
       (highlight-symbol-mode -1))
