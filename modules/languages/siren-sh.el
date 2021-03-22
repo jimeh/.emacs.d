@@ -9,11 +9,11 @@
 (use-package sh-script
   :straight (:type built-in)
   :mode
-  "\\.tmux\\'"
-  "\\.tmuxsh\\'"
-  "\\.tmuxtheme\\'"
-  "zshenv\\'"
-  "zshrc\\'"
+  ("\\.tmux\\'" . sh-mode)
+  ("\\.tmuxsh\\'" . sh-mode)
+  ("\\.tmuxtheme\\'" . sh-mode)
+  ("/zshenv\\'" . sh-mode)
+  ("/zshrc\\'" . sh-mode)
 
   :bind
   (:map sh-mode-map
