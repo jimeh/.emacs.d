@@ -17,8 +17,11 @@
   (magit-post-refresh . diff-hl-magit-post-refresh)
 
   :custom
-  (diff-hl-fringe-bmp-function 'siren-diff-hl-fringe-bmp-line)
-  (diff-hl-fringe-face-function 'siren-diff-hl-fringe-face-from-type)
+  ;; (diff-hl-fringe-bmp-function 'siren-diff-hl-fringe-bmp-line)
+  ;; (diff-hl-fringe-face-function 'siren-diff-hl-fringe-face-from-type)
+  (diff-hl-fringe-bmp-function 'diff-hl-fringe-bmp-from-pos)
+  (diff-hl-fringe-face-function 'diff-hl-fringe-face-from-type)
+
   (diff-hl-margin-symbols-alist
    '((insert . "+")
      (delete . "-")
