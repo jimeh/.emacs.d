@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.22](https://github.com/jimeh/.emacs.d/compare/v0.7.21...v0.7.22) (2021-03-22)
+
+
+### Features
+
+* **lang:** use reformatter to enable golines formatting ([06f0db1](https://github.com/jimeh/.emacs.d/commit/06f0db1035a6f31d50e9468976e5d89c72e3d238))
+* **version-control:** switch diff-hl style back to default ([268b902](https://github.com/jimeh/.emacs.d/commit/268b9020aae3854fab9adbacbc984320fc8a0abd))
+
+
+### Bug Fixes
+
+* **lang:** populate auto-mode-alist with correct sh-mode function ([43ce3f6](https://github.com/jimeh/.emacs.d/commit/43ce3f6f73ceb0776f9b0c90c794cdf7cde89377))
+* **version-control:** add missing magit hook for diff-hl ([d0223d4](https://github.com/jimeh/.emacs.d/commit/d0223d4253a64d4aa336fd091b82c98c92c29a1e))
+
 ### [0.7.21](https://github.com/jimeh/.emacs.d/compare/v0.7.20...v0.7.21) (2021-03-15)
 
 
