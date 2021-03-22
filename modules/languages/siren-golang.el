@@ -13,6 +13,7 @@
 (require 'siren-folding)
 (require 'siren-lsp)
 (require 'siren-projectile)
+(require 'siren-reformatter)
 
 (use-package go-mode
   :mode "\\.go\\'"
@@ -37,15 +38,6 @@
                 company-minimum-prefix-length 1
                 whitespace-style (delete 'indentation whitespace-style))
 
-    ;; Enable manually formatting with golines by executing M-x gofmt
-    (let ((golines (executable-find "golines"))
-          (gofumports (executable-find "gofumports")))
-      (when golines
-        (setq gofmt-command golines)
-        (setq gofmt-args '("-t" "4" "-m" "80" "--no-reformat-tags"))
-        (when gofumports
-          (add-to-list 'gofmt-args "--base-formatter=gofumports"))))
-
     (when (fboundp 'highlight-symbol-mode)
       (highlight-symbol-mode -1))
     (when (fboundp 'auto-highlight-symbol-mode)
@@ -57,6 +49,14 @@
     (subword-mode +1))
 
   :config
+  ;; Setup golines formatter for manual use - on save formatting is handled by
+  ;; lsp-mode.
+  (reformatter-define golines
+    :program "golines"
+    :args '("-t" "4" "-m" "80" "--no-reformat-tags"
+            "--base-formatter=gofumports")
+    :lighter "GOLINES")
+
   (define-key 'help-command (kbd "G") 'godoc)
 
   ;; Ignore go test -c output files
