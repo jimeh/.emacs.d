@@ -8,6 +8,7 @@
 
 (use-package explain-pause-mode
   :straight (:type git :host github :repo "lastquestion/explain-pause-mode")
+  :defer t
 
   :custom
   (explain-pause-blocking-too-long-ms 40))
