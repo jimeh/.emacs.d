@@ -63,7 +63,7 @@
   (lsp-ui-doc-max-height 45)
   (lsp-ui-doc-position 'at-point)
   (lsp-ui-doc-show-with-cursor nil)
-  (lsp-ui-doc-show-with-mouse t)
+  (lsp-ui-doc-show-with-mouse nil)
   (lsp-ui-doc-use-webkit nil)
   (lsp-ui-peek-always-show nil)
   (lsp-ui-sideline-enable t)
