@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.23](https://github.com/jimeh/.emacs.d/compare/v0.7.22...v0.7.23) (2021-04-01)
+
+
+### Features
+
+* **lang:** handle additional file patterns with sh-mode ([009c3dc](https://github.com/jimeh/.emacs.d/commit/009c3dc4b1638f9f5ee128c45e3256212157f2bc))
+* **lsp:** disable lsp-ui docs on mouse hover ([29e7e06](https://github.com/jimeh/.emacs.d/commit/29e7e066ce0ed6b890e36d4857b921cf54976901))
+
+
+### Bug Fixes
+
+* **version-control:** pin diff-hl to a known good commit ([5a425b5](https://github.com/jimeh/.emacs.d/commit/5a425b58122e6b134de60a20e7c18d2c29150aa0))
+
 ### [0.7.22](https://github.com/jimeh/.emacs.d/compare/v0.7.21...v0.7.22) (2021-03-22)
 
 
