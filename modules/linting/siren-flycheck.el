@@ -15,7 +15,18 @@
   (flycheck-idle-change-delay 1.0)
   (flycheck-indication-mode 'right-fringe)
   (flycheck-ruby-rubocop-executable "rubocop-bundle-safe")
-  (flycheck-javascript-standard-executable "semistandard"))
+  (flycheck-javascript-standard-executable "semistandard")
+
+  :config
+  (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
+    [#b00000000
+     #b00011001
+     #b00110010
+     #b01100100
+     #b11001000
+     #b01100100
+     #b00110010
+     #b00011001] nil nil nil))
 
 (provide 'siren-flycheck)
 ;;; siren-flycheck.el ends here
