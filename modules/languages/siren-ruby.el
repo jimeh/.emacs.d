@@ -86,10 +86,19 @@
   :straight lsp-mode
 
   :hook
-  (ruby-mode . lsp-deferred)
+  (ruby-mode . siren-lsp-ruby-mode-setup)
 
   :custom
-  (lsp-solargraph-multi-root nil))
+  (lsp-solargraph-multi-root nil)
+
+  :init
+  (add-to-list 'safe-local-variable-values
+               '(lsp-solargraph-use-bundler . t))
+
+  (defun siren-lsp-ruby-mode-setup ()
+    (add-hook 'before-save-hook #'lsp-format-buffer t t)
+
+    (lsp-deferred)))
 
 (use-package dap-ruby
   :straight dap-mode
@@ -145,22 +154,15 @@
 (use-package rubocopfmt
   :bind (:map ruby-mode-map
               ("C-c C-f" . rubocopfmt))
-  :hook
-  (ruby-mode . rubocopfmt-mode)
 
   :custom
   (rubocopfmt-include-unsafe-cops t)
-  (rubocopfmt-on-save-use-lsp-format-buffer t)
   (rubocopfmt-show-errors 'echo)
-  (rubocopfmt-use-bundler-when-possible nil)
-  (rubocopfmt-rubocop-command
-   (expand-file-name "bin/rubocop-daemon-wrapper" siren-dir))
+  (rubocopfmt-use-bundler-when-possible t)
 
   :config
   (add-to-list 'safe-local-variable-values
-               '(rubocopfmt-include-unsafe-cops))
-  (add-to-list 'safe-local-variable-values
-               '(rubocopfmt-on-save-use-lsp-format-buffer)))
+               '(rubocopfmt-include-unsafe-cops)))
 
 (use-package ruby-compilation
   :defer t)
