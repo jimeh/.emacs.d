@@ -72,8 +72,8 @@
     (set-face-attribute 'font-lock-variable-name-face nil
                          :foreground (doom-lighten 'blue 0.25))
     (set-face-attribute 'vertical-border nil
-                        :foreground (doom-darken 'vertical-bar 0.2)
-                        :background (doom-darken 'vertical-bar 0.2))
+                        :foreground (doom-darken 'vertical-bar 0.3)
+                        :background (doom-darken 'vertical-bar 0.3))
     (set-face-attribute 'font-lock-comment-face nil
                         :foreground (doom-lighten 'comments 0.15))
 
