@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.24](https://github.com/jimeh/.emacs.d/compare/v0.7.23...v0.7.24) (2021-04-02)
+
+
+### Features
+
+* **themes:** make vertical divider between windows slightly more prominent ([301a134](https://github.com/jimeh/.emacs.d/commit/301a134a721ef3a7f91308a005b1eaba7f88834b))
+* **version-control:** add module for git-gutter as an alternative to diff-hl ([1e5cc84](https://github.com/jimeh/.emacs.d/commit/1e5cc844d26d88df5b3fb4a65b81b65531eed288))
+* **version-control:** tweak diff-hl style ([e7020e8](https://github.com/jimeh/.emacs.d/commit/e7020e814a399a274785f6ec82c063ec230f3f64))
+
+
+### Bug Fixes
+
+* **linting:** change flycheck fringe indicator to a left-pointing arrow ([d564fbe](https://github.com/jimeh/.emacs.d/commit/d564fbe75728b6368f0cb7bf8b5c2fe905afbf74))
+
 ### [0.7.23](https://github.com/jimeh/.emacs.d/compare/v0.7.22...v0.7.23) (2021-04-01)
 
 
