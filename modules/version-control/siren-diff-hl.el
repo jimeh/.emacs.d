@@ -21,11 +21,8 @@
     (magit-post-refresh . diff-hl-magit-post-refresh)
 
     :custom
-    ;; (diff-hl-fringe-bmp-function 'siren-diff-hl-fringe-bmp-line)
-    ;; (diff-hl-fringe-face-function 'siren-diff-hl-fringe-face-from-type)
-    (diff-hl-fringe-bmp-function 'diff-hl-fringe-bmp-from-pos)
-    (diff-hl-fringe-face-function 'diff-hl-fringe-face-from-type)
-
+    (diff-hl-fringe-bmp-function 'siren-diff-hl-fringe-bmp-from-type)
+    (diff-hl-fringe-face-function 'siren-diff-hl-fringe-face-from-type)
     (diff-hl-margin-symbols-alist
      '((insert . "+")
        (delete . "-")
@@ -62,20 +59,17 @@
     (defun siren-diff-hl-fringe-bmp-from-type(type _pos)
       (intern (format "siren-diff-hl-%s" type)))
 
-    (defun siren-diff-hl-fringe-bmp-line(type _pos)
-      'siren-diff-hl-insert)
-
     :config
     (if (not (window-system))
         (diff-hl-margin-mode 1))
 
     ;; Fringe bitmaps borrowed from doom-emacs' ui/vc-gutter module
     (define-fringe-bitmap 'siren-diff-hl-insert
-      [224] nil nil '(center repeated))
+      [#b00000011] nil nil '(center repeated))
     (define-fringe-bitmap 'siren-diff-hl-change
-      [224] nil nil '(center repeated))
+      [#b00000011] nil nil '(center repeated))
     (define-fringe-bitmap 'siren-diff-hl-delete
-      [128 192 224 240] nil nil 'bottom)))
+      [#b00000011] nil nil '(center repeated))))
 
 (provide 'siren-diff-hl)
 ;;; siren-diff-hl.el ends here
