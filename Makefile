@@ -4,12 +4,6 @@
 
 default: vendor
 
-.PHONY: new-version
-new-version:
-	$(if $(shell which npx),,\
-		$(error No npx found in PATH, please install NodeJS))
-	npx standard-version
-
 #
 # Functions.
 #
@@ -48,3 +42,19 @@ vendor: $(VENDORED)
 update_vendor: $(foreach file,$(VENDORED),update_$(file))
 remove_vendor: $(foreach file,$(VENDORED),remove_$(file))
 
+#
+# Release
+#
+
+.PHONY: new-version
+new-version: check-npx
+	npx standard-version
+
+.PHONY: next-version
+next-version: check-npx
+	npx standard-version --dry-run
+
+.PHONY: check-npx
+check-npx:
+	$(if $(shell which npx),,\
+		$(error No npx execuable found in PATH, please install NodeJS))
