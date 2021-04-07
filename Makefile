@@ -48,6 +48,3 @@ vendor: $(VENDORED)
 update_vendor: $(foreach file,$(VENDORED),update_$(file))
 remove_vendor: $(foreach file,$(VENDORED),remove_$(file))
 
-.PHONY: backup-elpa
-backup-elpa:
-	tar -cjf elpa_$(shell date "+%Y-%m-%d").tar.bz2 elpa
