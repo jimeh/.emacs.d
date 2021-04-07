@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.25](https://github.com/jimeh/.emacs.d/compare/v0.7.24...v0.7.25) (2021-04-07)
+
+
+### Features
+
+* **lang:** add rufo package for Ruby ([f374dc4](https://github.com/jimeh/.emacs.d/commit/f374dc4eabe070244b0755b091649b738c9ff340))
+* **lsp:** create and use on-save minor modes for lsp-format-buffer and lsp-organize-imports commands ([dc24cd4](https://github.com/jimeh/.emacs.d/commit/dc24cd4f7f45f7ddb7425288ffefc495164156e6))
+* **makefile:** add next-version target to preview next version and changelog ([1fba384](https://github.com/jimeh/.emacs.d/commit/1fba3842dae25d5ef5c4e4aba04527250866e8e0))
+* **shell:** add xterm-color package to colorize compilation buffers ([349f007](https://github.com/jimeh/.emacs.d/commit/349f007fe9420a5af0b6f4b19e4c47cf28c3bb47))
+* **theme:** improve doom-themes overrides by using a proper theme ([5f4aa98](https://github.com/jimeh/.emacs.d/commit/5f4aa98abdf39a1e8927955ee8c19f66f382b390))
+
+
+### Bug Fixes
+
+* **formatting:** specify parser for prettier-js to avoid errors ([7de79dd](https://github.com/jimeh/.emacs.d/commit/7de79dd7049aa867ccf85f3aee1bb00b7175c08c))
+
 ### [0.7.24](https://github.com/jimeh/.emacs.d/compare/v0.7.23...v0.7.24) (2021-04-02)
 
 
