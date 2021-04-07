@@ -90,6 +90,7 @@
 
   :custom
   (lsp-solargraph-multi-root nil)
+  (lsp-solargraph-log-level "warn")
 
   :init
   (add-to-list 'safe-local-variable-values
@@ -170,9 +171,11 @@
   (rubocopfmt-show-errors 'echo)
   (rubocopfmt-use-bundler-when-possible t)
 
-  :config
+  :init
   (add-to-list 'safe-local-variable-values
-               '(rubocopfmt-include-unsafe-cops)))
+               '(rubocopfmt-include-unsafe-cops))
+  (add-to-list 'safe-local-variable-values
+               '(rubocopfmt-on-save-use-lsp-format-buffer)))
 
 (use-package ruby-compilation
   :defer t)
