@@ -79,9 +79,8 @@
 
   :init
   (defun siren-lsp-go-mode-setup ()
-    (add-hook 'before-save-hook #'lsp-format-buffer t t)
-    (add-hook 'before-save-hook #'lsp-organize-imports t t)
-
+    (lsp-format-buffer-on-save-mode t)
+    (lsp-organize-imports-on-save-mode t)
     (lsp-deferred)))
 
 (use-package go-dlv

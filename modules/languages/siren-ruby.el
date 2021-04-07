@@ -96,8 +96,7 @@
                '(lsp-solargraph-use-bundler . t))
 
   (defun siren-lsp-ruby-mode-setup ()
-    (add-hook 'before-save-hook #'lsp-format-buffer t t)
-
+    (lsp-format-buffer-on-save-mode t)
     (lsp-deferred)))
 
 (use-package dap-ruby

@@ -14,6 +14,8 @@
   :commands
   lsp
   lsp-deferred
+  lsp-format-buffer-on-save-mode
+  lsp-organize-imports-on-save-mode
 
   :hook
   (lsp-mode . siren-lsp-mode-setup)
@@ -44,7 +46,22 @@
   :init
   (defun siren-lsp-mode-setup ()
     (setq-local company-idle-delay 0.3
-                company-minimum-prefix-length 1)))
+                company-minimum-prefix-length 1))
+
+  :config
+  (define-minor-mode lsp-format-buffer-on-save-mode
+    "Run lsp-format-buffer as a before-save-hook."
+    :lighter " fmt"
+    (if lsp-format-buffer-on-save-mode
+      (add-hook 'before-save-hook 'lsp-format-buffer t t)
+      (remove-hook 'before-save-hook 'lsp-format-buffer t)))
+
+  (define-minor-mode lsp-organize-imports-on-save-mode
+    "Run lsp-organize-imports as a before-save-hook."
+    :lighter " imp"
+    (if lsp-organize-imports-on-save-mode
+        (add-hook 'before-save-hook 'lsp-organize-imports t t)
+      (remove-hook 'before-save-hook 'lsp-organize-imports t))))
 
 (use-package lsp-ui
   :defer t
