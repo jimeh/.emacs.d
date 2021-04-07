@@ -21,6 +21,7 @@
  ("dash-at-point" . "4d795a23a8428c421d5107f1b005c9d8e0d1816c")
  ("dash.el" . "b9286a84975874b10493f1cb4ea051c501f51273")
  ("desktop-plus" . "88055cee526a000056201898499cebbd35e3ea76")
+ ("diff-hl" . "9d5a0d8bf6efc125e5d37301a34b93e5b8e2873e")
  ("diminish.el" . "6ec6ebc391371418efc6c98d70b013f34af5a2ee")
  ("dired-hacks" . "d1a2bda6aa8f890cb367297ed93aee6d3b5ba388")
  ("dired-plus" . "40881cbe37faa27c14ef47af0a0449bcbb2c38af")
