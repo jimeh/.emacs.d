@@ -60,6 +60,9 @@
 (setq custom-file (expand-file-name "custom.el" siren-dir))
 (load-file custom-file)
 
+;; Enable custom themes
+(require 'siren-core-themes)
+
 ;; The modules
 (require 'siren-core-modules)
 

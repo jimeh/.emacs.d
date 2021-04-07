@@ -10,13 +10,13 @@
   "Root directory for Emacs Siren modules.")
 (siren-recursive-add-to-load-path siren-modules-dir)
 
+;; Theme
+(require 'siren-doom-themes)
+
 ;; Core
 (require 'siren-aliases)
 (require 'siren-global-keybindings)
 (require 'siren-packages)
-
-;; Theme
-(require 'siren-doom-themes)
 
 ;; Completion
 (require 'siren-company)
