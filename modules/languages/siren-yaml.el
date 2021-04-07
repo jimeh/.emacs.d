@@ -20,7 +20,8 @@
   :init
   (defun siren-yaml-mode-setup ()
     (run-hooks 'prog-mode-hook)
-    (setq tab-width 2)
+    (setq tab-width 2
+          prettier-js-args '("--parser" "yaml"))
     (prettier-js-mode)
     (subword-mode +1)))
 

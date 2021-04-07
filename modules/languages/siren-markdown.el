@@ -42,7 +42,8 @@
   :init
   (defun siren-markdown-mode-setup ()
     (setq-local markdown-asymmetric-header t
-                prettier-js-args '("--print-width" "80"
+                prettier-js-args '("--parser" "markdown"
+                                   "--print-width" "80"
                                    "--prose-wrap" "always")
                 whitespace-action nil)
 
