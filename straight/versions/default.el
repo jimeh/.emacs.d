@@ -188,6 +188,7 @@
  ("web-beautify" . "e1b45321d8c11b404b12c8e55afe55eaa7c84ee9")
  ("web-mode" . "8ef47935d638902ba35a557cae5edd6ab6ab1346")
  ("with-editor" . "ebcbd3b137154e6c5a2b976bacbb89d48ddfa242")
+ ("xterm-color" . "1a4012854c69a5cdaeb5a73d2ad705011892fca3")
  ("xwidget-plus" . "f67e070a6e1b233e60274deb717274b000923231")
  ("yaml-imenu.el" . "fa37d9bf8a09af144980a42cc22891b1555a12ae")
  ("yaml-mode" . "fc5e1c58f94472944c4aa838f00f6adcac6fa992")

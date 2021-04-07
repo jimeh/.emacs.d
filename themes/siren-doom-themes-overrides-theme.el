@@ -106,6 +106,28 @@
  `(fci-rule-color ,(doom-lighten 'base3 0.10))
 
  ;; zoom-window
- `(zoom-window-mode-line-color ,(doom-blend 'magenta 'bg 0.2)))
+ `(zoom-window-mode-line-color ,(doom-blend 'magenta 'bg 0.2))
+
+ ;; xterm-color
+ `(xterm-color-names
+   [,(doom-color 'bg)      ; black
+    ,(doom-color 'red)     ; red
+    ,(doom-color 'green)   ; green
+    ,(doom-color 'yellow)  ; yellow
+    ,(doom-color 'blue)    ; blue
+    ,(doom-color 'magenta) ; magenta
+    ,(doom-color 'cyan)    ; cyan
+    ,(doom-color 'fg)]     ; white
+   )
+ `(xterm-color-names-bright
+   [,(doom-lighten 'bg 0.25)      ; black
+    ,(doom-lighten 'red 0.25)     ; red
+    ,(doom-lighten 'green 0.25)   ; green
+    ,(doom-lighten 'yellow 0.25)  ; yellow
+    ,(doom-lighten 'blue 0.25)    ; blue
+    ,(doom-lighten 'magenta 0.25) ; magenta
+    ,(doom-lighten 'cyan 0.25)    ; cyan
+    ,(doom-lighten 'fg 0.25)]     ; white
+   ))
 
 (provide-theme 'siren-doom-themes-overrides)

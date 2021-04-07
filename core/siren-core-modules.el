@@ -81,6 +81,8 @@
 
 ;; Shell
 (require 'siren-shell-pop)
+(require 'siren-vterm)
+(require 'siren-xterm-color)
 
 ;; Spelling
 (require 'siren-flyspell)
