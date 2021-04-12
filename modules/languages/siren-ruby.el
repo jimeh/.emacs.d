@@ -97,7 +97,6 @@
                '(lsp-solargraph-use-bundler . t))
 
   (defun siren-lsp-ruby-mode-setup ()
-    (lsp-format-buffer-on-save-mode t)
     (lsp-deferred)))
 
 (use-package rufo
@@ -163,6 +162,9 @@
               ("C-c . D" . rubocop-autocorrect-directory)))
 
 (use-package rubocopfmt
+  :hook
+  (ruby-mode . rubocopfmt-mode)
+
   :bind (:map ruby-mode-map
               ("C-c C-f" . rubocopfmt))
 
@@ -170,6 +172,7 @@
   (rubocopfmt-include-unsafe-cops t)
   (rubocopfmt-show-errors 'echo)
   (rubocopfmt-use-bundler-when-possible t)
+  (rubocopfmt-on-save-use-lsp-format-buffer t)
 
   :init
   (add-to-list 'safe-local-variable-values
