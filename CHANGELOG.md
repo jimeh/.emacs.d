@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.26](https://github.com/jimeh/.emacs.d/compare/v0.7.25...v0.7.26) (2021-04-15)
+
+
+### Features
+
+* **shell:** improve vterm setup making vterm-copy-mode easier to use ([2d39ce9](https://github.com/jimeh/.emacs.d/commit/2d39ce9fc11991a4fa12e8d55fcacc88dd311685))
+
+
+### Bug Fixes
+
+* **lang:** control Ruby formatting method on a per-project basis ([8728d5d](https://github.com/jimeh/.emacs.d/commit/8728d5da9e235bdfa76a9f89976a1e51bd2e84b7))
+* **shell:** windmove keybindings within vterm-mode ([397b7ed](https://github.com/jimeh/.emacs.d/commit/397b7edb2062723dfae1ad89314a6bf9d0b5a35e))
+
 ### [0.7.25](https://github.com/jimeh/.emacs.d/compare/v0.7.24...v0.7.25) (2021-04-07)
 
 
