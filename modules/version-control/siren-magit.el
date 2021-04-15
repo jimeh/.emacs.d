@@ -31,6 +31,7 @@
   (magit-repository-directories '(("~/Projects" . 2)
                                   ("~/src" . 1)
                                   ("~/.emacs.d" . 0)
+                                  ("~/.config/emacs-siren" . 0)
                                   ("~/.dotfiles" . 2)))
   (magit-restore-window-configuration nil)
   (magit-revert-buffers 'silent)
