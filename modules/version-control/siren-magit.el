@@ -52,7 +52,6 @@
     (auto-fill-mode))
 
   :config
-  (require 'magit)
   (when (fboundp 'system-move-file-to-trash)
     (setq magit-delete-by-moving-to-trash t)))
 
