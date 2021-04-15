@@ -134,7 +134,6 @@
  ("php-mode" . "a2bca9be4c34a9dc38393602cb2708df24587838")
  ("pkg-info" . "76ba7415480687d05a4353b27fea2ae02b8d9d61")
  ("plantuml-mode" . "ea45a13707abd2a70df183f1aec6447197fc9ccc")
- ("polymode" . "b3871e946d278a256d95a3bd4615b1df234ad75a")
  ("popup-el" . "866a091b83369873b4d1c5d62a590fbb0a150bd0")
  ("posframe" . "320c0354280e0dbe2d7f9ca9bb066af257473372")
  ("powerline" . "cfff1cfe63793ea1a8bcfcae50c296558384cf08")

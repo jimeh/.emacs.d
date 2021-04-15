@@ -10,7 +10,6 @@
 (require 'siren-display-line-numbers)
 (require 'siren-flyspell)
 (require 'siren-move-dup)
-(require 'siren-polymode)
 (require 'siren-prettier-js)
 (require 'siren-smartparens)
 
