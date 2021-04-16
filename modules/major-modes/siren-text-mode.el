@@ -12,7 +12,7 @@
   :hook (text-mode . siren-text-mode-setup)
   :init
   (defun siren-text-mode-setup ()
-    (setq fill-column 80)
+    (setq-local fill-column 80)
 
     (hl-line-mode t)
     (visual-line-mode t)))

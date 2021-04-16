@@ -14,10 +14,13 @@
   (prog-mode . siren-prog-mode-setup)
 
   :init
+  (add-to-list 'safe-local-variable-values
+               '(fill-column . 120))
+
   (defun siren-prog-mode-setup ()
     "Default coding hook, useful with any programming language."
-    (setq fill-column 80
-          whitespace-action '(auto-cleanup))
+    (setq-local fill-column 80
+                whitespace-action '(auto-cleanup))
 
     (siren-display-indentation 1)
     (hl-line-mode t)

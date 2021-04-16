@@ -40,10 +40,12 @@
 
   :init
   (defun siren-markdown-mode-setup ()
+    ;; Configure prettier after local vars are processed, allowing local
+    ;; override of fill-column and have prettier respect it.
+    (add-hook 'hack-local-variables-hook
+              'siren-markdown-mode-setup-prettier nil t)
+
     (setq-local markdown-asymmetric-header t
-                prettier-js-args '("--parser" "markdown"
-                                   "--print-width" "80"
-                                   "--prose-wrap" "always")
                 whitespace-action nil)
 
     (siren-display-fill-column)
@@ -52,7 +54,12 @@
     (prettier-js-mode)
     (flyspell-mode)
     (smartparens-mode +1)
-    (subword-mode)))
+    (subword-mode))
+
+  (defun siren-markdown-mode-setup-prettier ()
+    (setq-local prettier-js-args `("--parser" "markdown"
+                                   "--print-width" ,(number-to-string fill-column)
+                                   "--prose-wrap" "always"))))
 
 ;; Required by markdown-edit-code-block.
 (use-package edit-indirect
