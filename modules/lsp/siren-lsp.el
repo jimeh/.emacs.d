@@ -34,6 +34,7 @@
   (lsp-keymap-prefix "M-;")
   (lsp-lens-enable t)
   (lsp-modeline-diagnostics-enable t)
+  (lsp-semantic-tokens-enable t)
   (lsp-signature-auto-activate t)
   (lsp-signature-render-documentation t)
 
