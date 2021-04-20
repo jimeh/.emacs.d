@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.27](https://github.com/jimeh/.emacs.d/compare/v0.7.26...v0.7.27) (2021-04-20)
+
+
+### Features
+
+* **lang:** ensure markdown formatting respects local fill-column width ([1fade1a](https://github.com/jimeh/.emacs.d/commit/1fade1ab4d954a9f08c7f65c93eaa4ea91b51838))
+* **lsp:** enable lsp-semantic-tokens ([c5ffefd](https://github.com/jimeh/.emacs.d/commit/c5ffefdb97d269b195dd13abdb46cac5d205dbd7))
+* **org:** enable left/right shift keybinds which are available everywhere else ([cacb7d2](https://github.com/jimeh/.emacs.d/commit/cacb7d2fe90ca79cd0a63f9e8c75344c3c1dc270))
+* **org:** expand and tweak org-src and org-babel setup ([c8187b4](https://github.com/jimeh/.emacs.d/commit/c8187b4be8bd3b8681c4fc2b122918b1ce3576da))
+
 ### [0.7.26](https://github.com/jimeh/.emacs.d/compare/v0.7.25...v0.7.26) (2021-04-15)
 
 
