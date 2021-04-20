@@ -31,25 +31,55 @@
   (org-mode . siren-org-mode-setup)
 
   :custom
+  (org-adapt-indentation nil)
   (org-blank-before-new-entry '((heading . auto) (plain-list-item . nil)))
   (org-catch-invisible-edits 'show)
   (org-ctrl-k-protect-subtree t)
   (org-export-backends '(ascii html icalendar latex md))
   (org-export-with-section-numbers nil)
   (org-export-with-sub-superscripts '{})
+  (org-hide-leading-stars nil)
   (org-return-follows-link t)
   (org-special-ctrl-a/e t)
   (org-special-ctrl-k t)
-  (org-adapt-indentation nil)
-  (org-hide-leading-stars nil)
+  (org-src-fontify-natively t)
+  (org-src-preserve-indentation t)
+  (org-src-tab-acts-natively t)
+  (org-src-window-setup 'current-window)
 
   (org-directory (if (file-directory-p "~/Dropbox/org")
                      "~/Dropbox/org" "~/org"))
 
+  (org-babel-load-languages
+   '((awk . t)
+     (calc . t)
+     (clojure . t)
+     (css . t)
+     (dot . t)
+     (emacs-lisp . t)
+     (forth . t)
+     (fortran . t)
+     (haskell . t)
+     (js . t)
+     (latex . t)
+     (lisp . t)
+     (makefile . t)
+     (org . t)
+     (perl . t)
+     (plantuml . t)
+     (python . t)
+     (ruby . t)
+     (sass . t)
+     (scheme . t)
+     (shell . t)
+     (sql . t)
+     (sqlite . t)))
+
   :init
   (defun siren-org-mode-setup ()
     (setq fill-column 80
-          whitespace-action '(auto-cleanup))
+          whitespace-action '(auto-cleanup)
+          tab-width 2)
 
     (setcar (nthcdr 4 org-emphasis-regexp-components) 20)
     (org-set-emph-re 'org-emphasis-regexp-components
