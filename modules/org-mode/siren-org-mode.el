@@ -10,6 +10,7 @@
 (require 'siren-display-indentation)
 (require 'siren-display-line-numbers)
 (require 'siren-flyspell)
+(require 'siren-smart-shift)
 (require 'siren-smartparens)
 
 (use-package org
@@ -23,7 +24,9 @@
         ("M-P" . org-metaup)
         ("M-N" . org-metadown)
         ("C-M-n" . outline-next-visible-heading)
-        ("C-M-p" . outline-previous-visible-heading))
+        ("C-M-p" . outline-previous-visible-heading)
+        ("C-c [" . smart-shift-left)
+        ("C-c ]" . smart-shift-right))
   (:map org-src-mode-map
         ("C-c C-c" . org-edit-src-exit))
 
