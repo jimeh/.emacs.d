@@ -188,6 +188,7 @@
  ("vue-mode" . "031edd1f97db6e7d8d6c295c0e6d58dd128b9e71")
  ("web-beautify" . "e1b45321d8c11b404b12c8e55afe55eaa7c84ee9")
  ("web-mode" . "8ef47935d638902ba35a557cae5edd6ab6ab1346")
+ ("whitespace-cleanup-mode" . "3c5a7161c0dd0caa65e9a61640b06aff101be848")
  ("with-editor" . "ebcbd3b137154e6c5a2b976bacbb89d48ddfa242")
  ("xterm-color" . "1a4012854c69a5cdaeb5a73d2ad705011892fca3")
  ("xwidget-plus" . "f67e070a6e1b233e60274deb717274b000923231")

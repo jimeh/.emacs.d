@@ -104,6 +104,9 @@
 (require 'siren-toggle-quotes)
 (require 'siren-yasnippet)
 
+;; Formatting
+(require 'siren-whitespace-cleanup)
+
 ;; Version control
 (require 'siren-diff-hl)
 (require 'siren-ediff)

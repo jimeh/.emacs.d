@@ -19,8 +19,7 @@
 
   (defun siren-prog-mode-setup ()
     "Default coding hook, useful with any programming language."
-    (setq-local fill-column 80
-                whitespace-action '(auto-cleanup))
+    (setq-local fill-column 80)
 
     (siren-display-indentation 1)
     (hl-line-mode t)
