@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.28](https://github.com/jimeh/.emacs.d/compare/v0.7.27...v0.7.28) (2021-05-08)
+
+
+### Features
+
+* **formatting:** use whitespace-clean-mode ([b7d914c](https://github.com/jimeh/.emacs.d/commit/b7d914c51ee5aee9a2553160356bd2788570a64a))
+* **navigation:** improve list of files searched by helm-ag via ripgrep ([fc0e0ac](https://github.com/jimeh/.emacs.d/commit/fc0e0acd655b2710389b39d1cba8c24b09bdf9a2))
+
+
+### Bug Fixes
+
+* **native-comp:** support new *.eln load path variable name ([8a47421](https://github.com/jimeh/.emacs.d/commit/8a47421c1ade18afc849acc25de0134f1e9b936b))
+
 ### [0.7.27](https://github.com/jimeh/.emacs.d/compare/v0.7.26...v0.7.27) (2021-04-20)
 
 
