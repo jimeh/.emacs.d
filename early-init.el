@@ -7,15 +7,26 @@
 ;;; Code:
 
 ;; Native-Comp
-(setq comp-speed 2
-      comp-async-query-on-exit t)
+(if (boundp 'native-comp-speed)
+    (setq native-comp-speed 2)
+  (setq comp-speed 2))
 
-(setq comp-deferred-compilation-deny-list
-      '("\\(?:[/\\\\]\\.dir-locals\\.el$\\)"
-        ;; Don't native-compile *-authloads.el and *-pkg.el files as they
-        ;; seem to produce errors during native-compile.
-        "\\(?:[^z-a]*-autoloads\\.el$\\)"
-        "\\(?:[^z-a]*-pkg\\.el$\\)"))
+(if (boundp 'native-comp-async-report-warnings-errors)
+    (setq native-comp-async-report-warnings-errors nil)
+  (setq comp-async-report-warnings-errors 2))
+
+(if (boundp 'native-comp-async-query-on-exit)
+    (setq native-comp-async-query-on-exit t)
+  (setq comp-async-query-on-exit t))
+
+(let ((deny-list '("\\(?:[/\\\\]\\.dir-locals\\.el$\\)"
+                   ;; Don't native-compile *-authloads.el and *-pkg.el files as they
+                   ;; seem to produce errors during native-compile.
+                   "\\(?:[^z-a]*-autoloads\\.el$\\)"
+                   "\\(?:[^z-a]*-pkg\\.el$\\)")))
+  (if (boundp 'native-comp-deferred-compilation-deny-list)
+      (setq native-comp-deferred-compilation-deny-list deny-list)
+    (setq comp-deferred-compilation-deny-list deny-list)))
 
 (when (or (boundp 'comp-eln-load-path) (boundp 'native-comp-eln-load-path))
   (let ((eln-cache-dir (expand-file-name "cache/eln-cache/"
@@ -23,9 +34,8 @@
         (find-exec (executable-find "find")))
 
     (if (boundp 'native-comp-eln-load-path)
-        (setcar native-comp-eln-load-path eln-cache-dir))
-    (if (boundp 'comp-eln-load-path)
-        (setcar comp-eln-load-path eln-cache-dir))
+        (setcar native-comp-eln-load-path eln-cache-dir)
+      (setcar comp-eln-load-path eln-cache-dir))
     ;; Quitting emacs while native compilation in progress can leave zero byte
     ;; sized *.eln files behind. Hence delete such files during startup.
     (when find-exec
