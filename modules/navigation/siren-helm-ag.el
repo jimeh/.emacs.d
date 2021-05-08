@@ -17,7 +17,11 @@
         ("a" . helm-do-ag))
 
   :custom
-  (helm-ag-base-command "rg --no-heading")
+  (helm-ag-base-command (mapconcat 'identity
+                                   '("rg" "--no-heading" "--hidden"
+                                     "--glob !.git/*"
+                                     "--glob !.bundle/*"
+                                     "--glob !.vscode/*") " "))
   (helm-ag-use-emacs-lisp-regexp nil)
   (helm-ag-ignore-patterns '("*.min-latest.css"
                              "*.min-latest.js"
