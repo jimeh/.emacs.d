@@ -17,11 +17,15 @@
         "\\(?:[^z-a]*-autoloads\\.el$\\)"
         "\\(?:[^z-a]*-pkg\\.el$\\)"))
 
-(when (boundp 'comp-eln-load-path)
+(when (or (boundp 'comp-eln-load-path) (boundp 'native-comp-eln-load-path))
   (let ((eln-cache-dir (expand-file-name "cache/eln-cache/"
                                          user-emacs-directory))
         (find-exec (executable-find "find")))
-    (setcar comp-eln-load-path eln-cache-dir)
+
+    (if (boundp 'native-comp-eln-load-path)
+        (setcar native-comp-eln-load-path eln-cache-dir))
+    (if (boundp 'comp-eln-load-path)
+        (setcar comp-eln-load-path eln-cache-dir))
     ;; Quitting emacs while native compilation in progress can leave zero byte
     ;; sized *.eln files behind. Hence delete such files during startup.
     (when find-exec
