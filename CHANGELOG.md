@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.29](https://github.com/jimeh/.emacs.d/compare/v0.7.28...v0.7.29) (2021-05-09)
+
+
+### Bug Fixes
+
+* **native-comp:** update config to support recent variable name changes ([7fad360](https://github.com/jimeh/.emacs.d/commit/7fad360c3e8fd157cfad9e6ce9732bb4053773d1))
+
 ### [0.7.28](https://github.com/jimeh/.emacs.d/compare/v0.7.27...v0.7.28) (2021-05-08)
 
 
