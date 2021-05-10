@@ -107,7 +107,7 @@
  ("kubernetes-el" . "de4ff6ccdf58a939908d384efe9cf06b2bcabe12")
  ("let-alist" . "6708ec0b2e6dff80ff5b64698aa009d9070a2ed2")
  ("loop.el" . "e22807f83a0890dc8a904c51ee0742c34efccc6c")
- ("lsp-mode" . "fd05f0d4d87510bdf25aeeeb7e7d90dace71af4c")
+ ("lsp-mode" . "efac7f9f6d03173201503ba61534cb877dfecd6e")
  ("lsp-treemacs" . "b07868740d6f7d364e496048cee00bce10a6ab33")
  ("lsp-ui" . "efae00eb6a733d5271cb33e9d92c3d8c2fa98dde")
  ("lua-mode" . "2d9a468b94acd8480299d47449b53136060b7b23")
