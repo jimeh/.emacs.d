@@ -7,17 +7,12 @@
 ;;; Code:
 
 ;; Native-Comp
-(if (boundp 'native-comp-speed)
-    (setq native-comp-speed 2)
-  (setq comp-speed 2))
-
-(if (boundp 'native-comp-async-report-warnings-errors)
-    (setq native-comp-async-report-warnings-errors nil)
-  (setq comp-async-report-warnings-errors 2))
-
-(if (boundp 'native-comp-async-query-on-exit)
-    (setq native-comp-async-query-on-exit t)
-  (setq comp-async-query-on-exit t))
+(setq native-comp-speed 2
+      comp-speed 2)
+(setq native-comp-async-report-warnings-errors nil
+      comp-async-report-warnings-errors nil)
+(setq native-comp-async-query-on-exit t
+      comp-async-query-on-exit t)
 
 (let ((deny-list '("\\(?:[/\\\\]\\.dir-locals\\.el$\\)"
                    ;; Don't native-compile *-authloads.el and *-pkg.el files as they
