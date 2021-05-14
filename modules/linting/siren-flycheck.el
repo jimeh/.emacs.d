@@ -20,13 +20,13 @@
   :config
   (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
     [#b00000000
-     #b00011001
-     #b00110010
-     #b01100100
-     #b11001000
-     #b01100100
-     #b00110010
-     #b00011001] nil nil nil))
+     #b00011000
+     #b00110000
+     #b01100000
+     #b11000000
+     #b01100000
+     #b00110000
+     #b00011000] nil nil nil))
 
 (provide 'siren-flycheck)
 ;;; siren-flycheck.el ends here
