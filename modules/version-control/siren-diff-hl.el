@@ -15,6 +15,7 @@
   (dired-mode . diff-hl-dired-mode)
   (magit-pre-refresh . diff-hl-magit-pre-refresh)
   (magit-post-refresh . diff-hl-magit-post-refresh)
+  (desktop-after-read . siren-diff-hl-set-render-mode)
 
   :custom
   (diff-hl-fringe-bmp-function 'siren-diff-hl-fringe-bmp-from-type)
@@ -55,9 +56,11 @@
   (defun siren-diff-hl-fringe-bmp-from-type(type _pos)
     (intern (format "siren-diff-hl-%s" type)))
 
+  (defun siren-diff-hl-set-render-mode ()
+    (diff-hl-margin-mode (if (window-system) -1 1)))
+
   :config
-  (if (not (window-system))
-      (diff-hl-margin-mode 1))
+  (siren-diff-hl-set-render-mode)
 
   ;; Fringe bitmaps borrowed from doom-emacs' ui/vc-gutter module
   (define-fringe-bitmap 'siren-diff-hl-insert
