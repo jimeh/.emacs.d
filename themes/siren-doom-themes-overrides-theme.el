@@ -35,20 +35,18 @@
 
  `(siren-diff-hl-insert ((t ( :foreground ,(doom-blend 'vc-added 'bg 0.7)
                               :background ,(doom-color 'bg)))))
- `(siren-diff-hl-delete ((t ( :foreground ,(doom-blend 'vc-deleted 'bg 0.7)
+ `(siren-diff-hl-delete ((t ( :foreground ,(doom-blend 'vc-deleted 'bg 0.8)
                               :background ,(doom-color 'bg)))))
  `(siren-diff-hl-change ((t ( :foreground ,(doom-blend 'vc-modified 'bg 0.7)
                               :background ,(doom-color 'bg)))))
 
  ;; diff-hl-margin
  `(diff-hl-margin-insert ((t ( :foreground ,(doom-blend 'vc-added 'bg 0.6)
-                               :background ,(doom-blend 'vc-added 'bg 0.1) ))))
+                               :background ,(doom-color 'bg)))))
  `(diff-hl-margin-delete ((t ( :foreground ,(doom-blend 'vc-deleted 'bg 0.7)
-                               :background
-                               ,(doom-blend 'vc-deleted 'bg 0.1) ))))
- `(diff-hl-margin-change ((t ( :foreground ,(doom-blend 'vc-modified 'bg 0.5)
-                               :background
-                               ,(doom-blend 'vc-modified 'bg 0.1) ))))
+                               :background ,(doom-color 'bg)))))
+ `(diff-hl-margin-change ((t ( :foreground ,(doom-blend 'vc-modified 'bg 0.6)
+                               :background ,(doom-color 'bg)))))
 
  ;; git-gutter
  `(git-gutter:added ((t ( :foreground ,(doom-blend 'vc-added 'bg 0.9) ))))

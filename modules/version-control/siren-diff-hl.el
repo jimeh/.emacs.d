@@ -20,9 +20,9 @@
   (diff-hl-fringe-bmp-function 'siren-diff-hl-fringe-bmp-from-type)
   (diff-hl-fringe-face-function 'siren-diff-hl-fringe-face-from-type)
   (diff-hl-margin-symbols-alist
-   '((insert . "+")
-     (delete . "-")
-     (change . "=")
+   '((insert . "┃")
+     (delete . "┃")
+     (change . "┃")
      (unknown . "?")
      (ignored . "i")))
 
