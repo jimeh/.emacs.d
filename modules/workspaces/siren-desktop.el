@@ -22,8 +22,6 @@
   (desktop-restore-frames t)
 
   :config
-  (siren-desktop-setup)
-
   (add-to-list 'desktop-clear-preserve-buffers "\\*straight-process\\*")
   (add-to-list 'desktop-clear-preserve-buffers "\\*explain-pause-top\\*")
   (add-to-list 'desktop-clear-preserve-buffers "\\*Async-native-compile-log\\*")
@@ -59,8 +57,6 @@
   (push '(vertical-scroll-bars . :never) frameset-filter-alist)
 
   :init
-  (defun siren-desktop-setup ())
-
   ;; Enable restoring window configurations when running in terminal
   ;;  - from: https://emacs.stackexchange.com/a/45829
   (defun siren-desktop-after-read-hook ()
@@ -84,25 +80,30 @@
         ("C-z C-l" . desktop+-load))
 
   :config
-  (siren-desktop+-setup)
+  (unless (file-exists-p desktop+-base-dir)
+    (make-directory desktop+-base-dir))
 
   :init
-  (defvar siren-desktop+-base-dir (expand-file-name "desktops" siren-dir))
-
-  (defun siren-desktop+-setup ()
-    (unless (file-exists-p siren-desktop+-base-dir)
-      (make-directory siren-desktop+-base-dir)))
+  (defvar desktop+-base-dir (expand-file-name "desktops" siren-dir)
+    "Base directory for desktop files.")
 
   (defun siren-desktop+-current-desktop ()
     (when (and (boundp 'desktop-dirname) desktop-dirname)
       (let ((dir (directory-file-name desktop-dirname))
-              (base-dir (expand-file-name siren-desktop+-base-dir)))
+              (base-dir (expand-file-name desktop+-base-dir)))
           (when (string-prefix-p base-dir dir)
             (file-name-nondirectory dir)))))
 
   (defun siren-desktop+-list ()
     "Return a list of available desktops"
-    (remove "." (remove ".." (directory-files siren-desktop+-base-dir))))
+    (remove nil (mapcar 'siren-desktop+--list-filter-item
+                        (directory-files desktop+-base-dir t))))
+
+  (defun siren-desktop+--list-filter-item (path)
+    (let ((basename (file-name-nondirectory path))
+          (is-dir (car (file-attributes path))))
+      (if (and is-dir (not (member basename '("." ".."))))
+          (file-name-nondirectory path))))
 
   (defun siren-desktop+-list-interactive ()
     (let ((current (siren-desktop+-current-desktop))
@@ -124,7 +125,7 @@
 
   (defun siren-desktop+-create-new (name)
     "Create a new empty session, identified by a name.
-The session is created in a subdirectory of `siren-desktop+-base-dir'.
+The session is created in a subdirectory of `desktop+-base-dir'.
 It can afterwards be reloaded using `desktop+-load'.
 
 As a special case, if NAME is left blank, the session is
