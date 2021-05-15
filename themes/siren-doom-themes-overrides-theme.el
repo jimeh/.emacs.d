@@ -18,8 +18,8 @@
  'siren-doom-themes-overrides
 
  `(font-lock-variable-name-face ((t (:foreground ,(doom-lighten 'blue 0.25)))))
- `(vertical-border ((t ( :foreground ,(doom-darken 'vertical-bar 0.3)
-                         :background ,(doom-darken 'vertical-bar 0.3) ))))
+ `(vertical-border ((t ( :foreground ,(doom-darken 'vertical-bar 0.5)
+                         :background ,(doom-color 'bg) ))))
  `(font-lock-comment-face ((t ( :foreground ,(doom-lighten 'comments 0.15) ))))
 
  ;; fill-column-indicator
