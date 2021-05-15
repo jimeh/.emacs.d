@@ -25,6 +25,8 @@
   (add-to-list 'desktop-clear-preserve-buffers "\\*straight-process\\*")
   (add-to-list 'desktop-clear-preserve-buffers "\\*explain-pause-top\\*")
   (add-to-list 'desktop-clear-preserve-buffers "\\*Async-native-compile-log\\*")
+  (add-to-list 'desktop-clear-preserve-buffers "\\*Native-compile-Log\\*")
+
   (push '(alpha . :never) frameset-filter-alist)
   (push '(background-color . :never) frameset-filter-alist)
   (push '(background-mode . :never) frameset-filter-alist)
@@ -55,6 +57,8 @@
   (push '(tool-bar-lines . :never) frameset-filter-alist)
   (push '(tool-bar-position . :never) frameset-filter-alist)
   (push '(vertical-scroll-bars . :never) frameset-filter-alist)
+  (push '(zoom-window-buffers . :never) frameset-filter-alist)
+  (push '(zoom-window-enabled . :never) frameset-filter-alist)
 
   :init
   ;; Enable restoring window configurations when running in terminal
