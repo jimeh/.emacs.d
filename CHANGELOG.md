@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.30](https://github.com/jimeh/.emacs.d/compare/v0.7.29...v0.7.30) (2021-05-15)
+
+
+### Features
+
+* **lang:** enable lsp-mode in lua-mode ([0ef8ea7](https://github.com/jimeh/.emacs.d/commit/0ef8ea787f096f1d8142a518731381aff1613632))
+* **linting:** simplify warning arrow glyph used by flycheck ([f50e2d9](https://github.com/jimeh/.emacs.d/commit/f50e2d925e7dc7318b1b0717b4cf872483ee4b3c))
+* **ui:** improve vertical bar styling, especially in terminal ([d191cee](https://github.com/jimeh/.emacs.d/commit/d191ceea5d207eae5668b789c07cb5530660e57d))
+* **version-control:** improve styling of diff-hl indicators ([e434e41](https://github.com/jimeh/.emacs.d/commit/e434e41d97a28d4c150ecdda2e07bc031a403893))
+
+
+### Bug Fixes
+
+* **native-comp:** set old/new config values to ensure they work ([23f2da6](https://github.com/jimeh/.emacs.d/commit/23f2da6210e1ceb4459fb5c616572a049009bfe3))
+* **version-control:** set correct diff-hl mode after desktop-read ([c8196d7](https://github.com/jimeh/.emacs.d/commit/c8196d759061716bdd17df4aed6f913066dd64e0))
+* **workspaces:** set base desktop base dir correctly ([f20ebd3](https://github.com/jimeh/.emacs.d/commit/f20ebd3f1ee33a2124100897c72c3484a92fc55c))
+
 ### [0.7.29](https://github.com/jimeh/.emacs.d/compare/v0.7.28...v0.7.29) (2021-05-09)
 
 
