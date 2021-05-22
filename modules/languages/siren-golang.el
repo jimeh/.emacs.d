@@ -48,14 +48,17 @@
     (siren-folding)
     (subword-mode +1))
 
+  (defun siren-define-golines-format-mode ()
+    ;; Setup golines formatter for manual use - on save formatting is handled by
+    ;; lsp-mode.
+    (reformatter-define golines-format
+      :program "golines"
+      :args '("-t" "4" "-m" "80" "--no-reformat-tags"
+              "--base-formatter=gofumports")
+      :lighter "GOLINES"))
+
   :config
-  ;; Setup golines formatter for manual use - on save formatting is handled by
-  ;; lsp-mode.
-  (reformatter-define golines
-    :program "golines"
-    :args '("-t" "4" "-m" "80" "--no-reformat-tags"
-            "--base-formatter=gofumports")
-    :lighter "GOLINES")
+  (siren-define-golines-format-mode)
 
   (define-key 'help-command (kbd "G") 'godoc)
 

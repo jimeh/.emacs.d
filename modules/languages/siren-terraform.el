@@ -22,14 +22,16 @@
     (setq-local tab-width 2)
     (terraform-format-on-save-mode 1))
 
+  (defun siren-define-terraform-format-mode ()
+    ;; This does a better job of injecting formatted content than the default
+    ;; formatting commands included with terraform-mode.
+    (reformatter-define terraform-format
+      :program "terraform"
+      :args '("fmt" "-no-color" "-")
+      :lighter " TF"))
 
   :config
-  ;; This does a better job of injecting formatted content than the default
-  ;; formatting commands included with terraform-mode.
-  (reformatter-define terraform-format
-    :program "terraform"
-    :args '("fmt" "-no-color" "-")
-    :lighter " TF")
+  (siren-define-terraform-format-mode)
 
   ;; When terraform-ls CLI tool is available, setup lsp-mode to use it
   (when (executable-find "terraform-ls")
