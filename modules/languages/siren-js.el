@@ -9,7 +9,6 @@
 (require 'siren-company)
 (require 'siren-folding)
 (require 'siren-lsp)
-(require 'siren-prettier-js)
 
 (use-package js-mode
   :straight (:type built-in)
@@ -32,9 +31,9 @@
             indent-level width
             tab-width width))
 
-    (prettier-js-mode)
     (company-mode)
     (lsp-deferred)
+    (lsp-format-buffer-on-save-mode)
     (subword-mode)
     (siren-folding)))
 
