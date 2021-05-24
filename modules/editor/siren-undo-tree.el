@@ -26,6 +26,7 @@
   ;; than undo-tree's auto-save feature which randomly fails to restore history
   ;; for no obvious reason.
   (undo-tree-auto-save-history nil)
+  (undo-tree-incompatible-major-modes '(term-mode vterm-mode))
 
   :config
   (global-undo-tree-mode)
