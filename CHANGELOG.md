@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.31](https://github.com/jimeh/.emacs.d/compare/v0.7.30...v0.7.31) (2021-06-14)
+
+
+### Features
+
+* **formatting:** swap from prettier.js to lsp-mode to format js/json ([a07cc67](https://github.com/jimeh/.emacs.d/commit/a07cc6746f2dba7c8b528a730eb40747759c0307))
+* **lang:** improve yaml formatting and enable lsp-mode ([38544ef](https://github.com/jimeh/.emacs.d/commit/38544ef7f2c084214e7b7af30495033d1ad72f0c))
+
+
+### Bug Fixes
+
+* **editor:** disable undo-tree in terminal buffers ([263400c](https://github.com/jimeh/.emacs.d/commit/263400c4c19e44a4fa971f1478c4ff2628d61788))
+* **theme:** override whitespace-tab background to match normal bg color ([3ab4ef5](https://github.com/jimeh/.emacs.d/commit/3ab4ef51e3d8dda78e15b303abf250e2dfa843f5))
+
 ### [0.7.30](https://github.com/jimeh/.emacs.d/compare/v0.7.29...v0.7.30) (2021-05-15)
 
 
