@@ -22,6 +22,10 @@
                          :background ,(doom-color 'bg) ))))
  `(font-lock-comment-face ((t ( :foreground ,(doom-lighten 'comments 0.15) ))))
 
+ ;; whitespace-mode
+ `(whitespace-tab ((t ( :foreground ,(doom-color 'base4)
+                        :background ,(doom-color 'bg) ))))
+
  ;; fill-column-indicator
  `(fill-column-indicator ((t ( :foreground ,(doom-lighten 'base3 0.10) ))))
 
