@@ -9,14 +9,15 @@
 (require 'siren-prescient)
 
 (use-package selectrum
-  :straight (:host github :repo "raxod502/selectrum")
+  :custom
+  (selectrum-display-action nil)
+  (selectrum-fix-vertical-window-height t)
+  (selectrum-max-window-height 12)
 
   :config
   (selectrum-mode +1))
 
 (use-package selectrum-prescient
-  :straight (:host github :repo "raxod502/prescient.el"
-                   :files ("selectrum-prescient.el"))
   :after (selectrum)
 
   :config

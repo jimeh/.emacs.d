@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-ido)
-
 (use-package flyspell
   :straight (:type built-in)
   :defer t
@@ -28,9 +26,7 @@
   (unbind-key "C-;" flyspell-mode-map))
 
 (use-package flyspell-correct
-  :bind ("C-/" . flyspell-correct-wrapper)
-  :custom
-  (flyspell-correct-interface #'flyspell-correct-ido))
+  :bind ("C-/" . flyspell-correct-wrapper))
 
 (provide 'siren-flyspell)
 ;;; siren-flyspell.el ends here

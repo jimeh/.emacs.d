@@ -21,7 +21,7 @@
 
   :custom
   (projectile-cache-file (expand-file-name "projectile" siren-cache-dir))
-  (projectile-completion-system 'ido)
+  (projectile-completion-system 'default)
   (projectile-enable-caching nil)
   (projectile-globally-ignored-directories '(".bzr"
                                              ".eunit"

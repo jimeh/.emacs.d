@@ -99,7 +99,20 @@
  `(diredp-deletion ((t ( :foreground ,(doom-color 'yellow)
                          :background ,(doom-darken 'red 0.25) ))))
  `(diredp-deletion-file-name ((t ( :foreground ,(doom-color 'red) ))))
- `(diredp-compressed-file-name ((t ( :foreground ,(doom-color 'blue) )))))
+ `(diredp-compressed-file-name ((t ( :foreground ,(doom-color 'blue) ))))
+
+ ;; selectrum
+ `(selectrum-current-candidate ((t ( :background ,(doom-blend 'violet 'bg 0.2)
+                                     :foreground ,(doom-blend 'violet 'fg 0.3)
+                                    ;; :background ,(doom-color 'region)
+                                     :distant-foreground nil :extend t ))))
+ `(selectrum-prescient-primary-highlight ((t ( :background nil
+                                               :foreground ,(doom-lighten 'magenta 0.15)
+                                               :weight 'light ))))
+ `(selectrum-prescient-secondary-highlight ((t ( :inherit 'selectrum-prescient-primary-highlight
+                                                 :background nil
+                                                 :foreground ,(doom-blend 'magenta 'red 0.6)
+                                                 :weight 'bold)))))
 
 (custom-theme-set-variables
  'siren-doom-themes-overrides

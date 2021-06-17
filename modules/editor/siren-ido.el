@@ -16,7 +16,7 @@
   (ido-default-file-method 'selected-window)
   (ido-enable-flex-matching t)
   (ido-enable-prefix nil)
-  (ido-max-prospects 10)
+  (ido-max-prospects 12)
   (ido-save-directory-list-file (expand-file-name "ido.hist" siren-cache-dir))
   (ido-use-faces t)
   (ido-use-filename-at-point nil)

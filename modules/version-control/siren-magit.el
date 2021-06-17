@@ -21,7 +21,7 @@
   :custom
   (magit-bury-buffer-function 'magit-mode-quit-window)
   (magit-commit-arguments '("-S"))
-  (magit-completing-read-function 'magit-ido-completing-read)
+  (magit-completing-read-function 'magit-builtin-completing-read)
   (magit-default-tracking-name-function
    'magit-default-tracking-name-branch-only)
   (magit-diff-adjust-tab-width t)

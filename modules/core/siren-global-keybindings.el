@@ -6,6 +6,9 @@
 
 ;;; Code:
 
+;; Enable alternative to M-x.
+(global-set-key (kbd "C-x C-m") 'execute-extended-command)
+
 ;; Enable dabbrev-expand via custom keybinding.
 (global-set-key (kbd "C-x M-/") 'dabbrev-expand)
 
