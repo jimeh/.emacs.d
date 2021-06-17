@@ -29,6 +29,7 @@
 (require 'siren-display-fill-column)
 (require 'siren-display-indentation)
 (require 'siren-display-line-numbers)
+(require 'siren-embark)
 (require 'siren-folding)
 (require 'siren-highlight-symbol)
 (require 'siren-marginalia)
@@ -91,7 +92,6 @@
 
 ;; Text editing
 (require 'siren-expand-region)
-(require 'siren-goto-chg)
 (require 'siren-move-dup)
 (require 'siren-multiple-cursors)
 (require 'siren-randomize-region)
