@@ -22,7 +22,7 @@
 ;; When running in GUI mode.
 (when window-system
   ;; Set default font
-  (set-face-attribute 'default nil :family "Monaco" :height 120)
+  (set-face-attribute 'default nil :family "Menlo" :height 120)
 
   ;; Fix the default default-directory value.
   (if (string= default-directory "/")
