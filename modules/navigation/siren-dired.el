@@ -9,10 +9,15 @@
 (use-package dired
   :straight (:type built-in)
   :defer t
+  :hook
+  (dired-mode . siren-dired-mode-setup)
   :bind (:map dired-mode-map
               ("M-?" . siren-dired-display-size))
 
   :init
+  (defun siren-dired-mode-setup ()
+    (hl-line-mode +1))
+
   (defun siren-dired-display-size (arg)
     "Display disk usage of marked items in Dired.
 
