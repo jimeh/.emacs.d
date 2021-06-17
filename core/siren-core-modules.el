@@ -55,6 +55,7 @@
 (require 'siren-anzu)
 (require 'siren-avy)
 (require 'siren-centaur-tabs)
+(require 'siren-ctrlf)
 (require 'siren-dired)
 (require 'siren-direx)
 (require 'siren-dumb-jump)

@@ -14,6 +14,7 @@
  ("coffee-mode" . "35a41c7d8233eac0b267d9593e67fb8b6235e134")
  ("company-mode" . "e0f8c9ad754bdc2c02318f4baf433886c7aa83e3")
  ("company-nginx" . "82bdb730ad5971c594d9c99c069f3c7bb067897d")
+ ("ctrlf" . "dbe83710d06bc39315f1455f6f21479f3747c0aa")
  ("cucumber.el" . "8e1464113b489b54067294cd988ff6a11a423fdb")
  ("dap-mode" . "cc395e066755c7513d4862f5639f3d162b3bd30f")
  ("dart-mode" . "43975c92080e307c4bc14a4773a61195d2062fd9")
