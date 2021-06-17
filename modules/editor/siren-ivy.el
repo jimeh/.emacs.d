@@ -10,6 +10,8 @@
 
 (use-package ivy
   :defer t
+  :bind
+  ("C-c C-r" . ivy-resume)
 
   :custom
   (ivy-use-virtual-buffers nil)
