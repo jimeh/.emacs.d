@@ -18,7 +18,7 @@
  'siren-doom-themes-overrides
 
  `(font-lock-variable-name-face ((t (:foreground ,(doom-lighten 'blue 0.25)))))
- `(vertical-border ((t ( :foreground ,(doom-darken 'vertical-bar 0.5)
+ `(vertical-border ((t ( :foreground ,(doom-darken 'vertical-bar 0.4)
                          :background ,(doom-color 'bg) ))))
  `(font-lock-comment-face ((t ( :foreground ,(doom-lighten 'comments 0.15) ))))
 
@@ -112,7 +112,10 @@
  `(selectrum-prescient-secondary-highlight ((t ( :inherit 'selectrum-prescient-primary-highlight
                                                  :background nil
                                                  :foreground ,(doom-blend 'magenta 'red 0.6)
-                                                 :weight 'bold)))))
+                                                 :weight 'bold))))
+
+ ;; helm
+ `(helm-posframe-border ((t ( :background ,(doom-color 'dark-blue) )))))
 
 (custom-theme-set-variables
  'siren-doom-themes-overrides

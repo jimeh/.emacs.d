@@ -85,6 +85,7 @@
  ("helm-describe-modes" . "11fb36af119b784539d31c6160002de1957408aa")
  ("helm-lsp" . "c2c6974dadfac459b1a69a1217441283874cea92")
  ("helm-make" . "ebd71e85046d59b37f6a96535e01993b6962c559")
+ ("helm-posframe" . "2412e5b3c584c7683982a7e9cfa10a67427f2567")
  ("helm-projectile" . "58123f14c392021714fc5d23b9f95c7f95ce07f1")
  ("helm-swoop" . "1b3285791f1dc1fde548fe67aec07214d698fd57")
  ("helpful" . "7e4b1f0d5572a4e2b8ee7a9b084ef863d0315a73")

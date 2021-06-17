@@ -174,5 +174,17 @@
   :defer t
   :after (helm-global-bindings))
 
+(use-package helm-posframe
+  :custom
+  (helm-posframe-border-width 3)
+  (helm-posframe-height nil)
+  (helm-posframe-min-height 70)
+  (helm-posframe-width 400)
+  (helm-posframe-min-width nil)
+
+  :config
+  (when window-system
+    (helm-posframe-enable)))
+
 (provide 'siren-helm)
 ;;; siren-helm.el ends here
