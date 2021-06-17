@@ -194,7 +194,7 @@
  ("whitespace-cleanup-mode" . "b108b73ddf8f7e747d5a20a681560171e02ad037")
  ("with-editor" . "5519b6a67ecd66865b4fdd5447425eee900c54f4")
  ("xterm-color" . "1a4012854c69a5cdaeb5a73d2ad705011892fca3")
- ("xwidget-plus" . "f67e070a6e1b233e60274deb717274b000923231")
+ ("xwwp" . "f67e070a6e1b233e60274deb717274b000923231")
  ("yaml-imenu.el" . "01741205fb33d2ed511502d1cd65a711e07a3117")
  ("yaml-mode" . "3a57058468211f3cb18e71aecc630dcacb87636b")
  ("yari.el" . "a2cb9656ee5dfe1fc2ee3854f3079a1c8e85dbe9")

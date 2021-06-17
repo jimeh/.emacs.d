@@ -143,7 +143,7 @@
 (require 'siren-restclient)
 
 ;; XWidgets
-(require 'siren-xwidget-plus)
+(require 'siren-xwwp)
 
 ;; Major modes
 (require 'siren-fundamental-mode)
