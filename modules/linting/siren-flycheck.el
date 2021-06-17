@@ -11,7 +11,7 @@
   (prog-mode . flycheck-mode)
 
   :custom
-  (flycheck-idle-change-delay 1.0)
+  (flycheck-idle-change-delay 0.5)
   (flycheck-indication-mode 'right-fringe)
   (flycheck-ruby-rubocop-executable "rubocop-bundle-safe")
   (flycheck-javascript-standard-executable "semistandard")
