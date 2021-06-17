@@ -34,7 +34,6 @@
 
   (defun siren-go-mode-setup ()
     (setq-local tab-width 4
-                company-echo-delay 0.5
                 company-minimum-prefix-length 1
                 whitespace-style (delete 'indentation whitespace-style))
 

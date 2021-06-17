@@ -31,6 +31,7 @@
   (lsp-enable-symbol-highlighting t)
   (lsp-enable-xref t)
   (lsp-headerline-breadcrumb-enable t)
+  (lsp-idle-delay 0.4)
   (lsp-keymap-prefix "M-;")
   (lsp-lens-enable t)
   (lsp-modeline-diagnostics-enable t)
@@ -46,7 +47,7 @@
 
   :init
   (defun siren-lsp-mode-setup ()
-    (setq-local company-idle-delay 0.3
+    (setq-local company-idle-delay 0.1
                 company-minimum-prefix-length 1))
 
   :config
