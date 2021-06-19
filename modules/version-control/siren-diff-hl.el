@@ -62,7 +62,6 @@
   :config
   (siren-diff-hl-set-render-mode)
 
-  ;; Fringe bitmaps borrowed from doom-emacs' ui/vc-gutter module
   (define-fringe-bitmap 'siren-diff-hl-insert
     [#b00000011] nil nil '(center repeated))
   (define-fringe-bitmap 'siren-diff-hl-change
