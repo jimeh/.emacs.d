@@ -52,5 +52,16 @@
                               (abbreviate-file-name (buffer-file-name))
                             "%b"))))
 
+;; customize vertical-border character when running in terminal
+(when (not window-system)
+  (defun siren-change-window-divider ()
+    "Change vertical-border character"
+    (let ((display-table (or buffer-display-table standard-display-table)))
+      (set-display-table-slot display-table
+                              'vertical-border (make-glyph-code ?\u2503))
+      (set-window-display-table (selected-window) display-table)))
+
+  (add-hook 'window-configuration-change-hook 'siren-change-window-divider))
+
 (provide 'siren-core-ui)
 ;;; siren-core-ui.el ends here
