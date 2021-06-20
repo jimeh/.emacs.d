@@ -26,6 +26,5 @@
   :config
   (company-prescient-mode +1))
 
-
 (provide 'siren-prescient)
 ;;; siren-prescient.el ends here
