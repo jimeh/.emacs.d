@@ -62,11 +62,9 @@
  `(git-gutter-fr:added ((t ( :foreground ,(doom-blend 'vc-added 'bg 0.7)
                              :background ,(doom-blend 'vc-added 'bg 0.0) ))))
  `(git-gutter-fr:deleted ((t ( :foreground ,(doom-blend 'vc-deleted 'bg 0.7)
-                               :background
-                               ,(doom-blend 'vc-deleted 'bg 0.0) ))))
+                               :background ,(doom-blend 'vc-deleted 'bg 0.0) ))))
  `(git-gutter-fr:modified ((t ( :foreground ,(doom-blend 'vc-modified 'bg 0.7)
-                                :background
-                                ,(doom-blend 'vc-modified 'bg 0.0) ))))
+                                :background ,(doom-blend 'vc-modified 'bg 0.0) ))))
 
  ;; hideshowvis
  `(hideshowvis-hidable-face ((t ( :foreground ,(doom-color 'base7) ))))
@@ -89,10 +87,8 @@
                           :background 'unspecified ))))
 
  ;; dired+
- `(diredp-dir-heading ((t ( ;; :weight 'bold
-                            :foreground ,(doom-color 'magenta) ))))
- `(diredp-dir-name ((t ( ;; :weight 'bold
-                         :foreground ,(doom-lighten 'magenta 0.25) ))))
+ `(diredp-dir-heading ((t ( :foreground ,(doom-color 'magenta) ))))
+ `(diredp-dir-name ((t ( :foreground ,(doom-lighten 'magenta 0.25) ))))
  `(diredp-flag-mark ((t ( :foreground ,(doom-color 'green)
                           :background ,(doom-blend 'bg 'orange 0.5) ))))
  `(diredp-flag-mark-line ((t ( :foreground ,(doom-color 'base8)
@@ -105,15 +101,11 @@
  ;; selectrum
  `(selectrum-current-candidate ((t ( :background ,(doom-blend 'violet 'bg 0.2)
                                      :foreground ,(doom-blend 'violet 'fg 0.3)
-                                    ;; :background ,(doom-color 'region)
                                      :distant-foreground nil :extend t ))))
- `(selectrum-prescient-primary-highlight ((t ( :background nil
-                                               :foreground ,(doom-lighten 'magenta 0.15)
+ `(selectrum-prescient-primary-highlight ((t ( :foreground ,(doom-lighten 'magenta 0.15)
                                                :weight 'light ))))
- `(selectrum-prescient-secondary-highlight ((t ( :inherit 'selectrum-prescient-primary-highlight
-                                                 :background nil
-                                                 :foreground ,(doom-blend 'magenta 'red 0.6)
-                                                 :weight 'bold))))
+ `(selectrum-prescient-secondary-highlight ((t ( :foreground ,(doom-blend 'magenta 'red 0.6)
+                                                 :weight 'bold ))))
 
  ;; vertico
  `(vertico-current ((t ( :background ,(doom-blend 'violet 'bg 0.2)
@@ -121,14 +113,10 @@
                          :distant-foreground nil :extend t ))))
 
  ;; orderless
- `(orderless-match-face-0 ((t ( :background nil
-                                :foreground ,(doom-lighten 'magenta 0.15) ))))
- `(orderless-match-face-1 ((t ( :background nil
-                                :foreground ,(doom-lighten 'magenta '0.3) ))))
- `(orderless-match-face-2 ((t ( :background nil
-                                :foreground ,(doom-blend 'magenta 'red 0.4) ))))
- `(orderless-match-face-3 ((t ( :background nil
-                                :foreground ,(doom-blend 'magenta 'red 0.7) ))))
+ `(orderless-match-face-0 ((t ( :foreground ,(doom-lighten 'magenta 0.15) ))))
+ `(orderless-match-face-1 ((t ( :foreground ,(doom-lighten 'magenta '0.3) ))))
+ `(orderless-match-face-2 ((t ( :foreground ,(doom-blend 'magenta 'red 0.4) ))))
+ `(orderless-match-face-3 ((t ( :foreground ,(doom-blend 'magenta 'red 0.7) ))))
 
  ;; helm
  `(helm-posframe-border ((t ( :background ,(doom-color 'dark-blue) )))))
