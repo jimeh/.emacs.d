@@ -6,10 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-prescient)
-(require 'siren-projectile)
-(require 'siren-selectrum)
-
 (use-package consult
   :defer t
   :bind

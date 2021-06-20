@@ -115,6 +115,21 @@
                                                  :foreground ,(doom-blend 'magenta 'red 0.6)
                                                  :weight 'bold))))
 
+ ;; vertico
+ `(vertico-current ((t ( :background ,(doom-blend 'violet 'bg 0.2)
+                         :foreground ,(doom-blend 'violet 'fg 0.3)
+                         :distant-foreground nil :extend t ))))
+
+ ;; orderless
+ `(orderless-match-face-0 ((t ( :background nil
+                                :foreground ,(doom-lighten 'magenta 0.15) ))))
+ `(orderless-match-face-1 ((t ( :background nil
+                                :foreground ,(doom-lighten 'magenta '0.3) ))))
+ `(orderless-match-face-2 ((t ( :background nil
+                                :foreground ,(doom-blend 'magenta 'red 0.4) ))))
+ `(orderless-match-face-3 ((t ( :background nil
+                                :foreground ,(doom-blend 'magenta 'red 0.7) ))))
+
  ;; helm
  `(helm-posframe-border ((t ( :background ,(doom-color 'dark-blue) )))))
 
