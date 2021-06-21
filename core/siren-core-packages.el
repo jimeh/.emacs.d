@@ -6,6 +6,14 @@
 
 ;;; Code:
 
+;; TODO: Look into a better solution for this workaround.
+;;
+;; Hacky workaround for recursive load error caused by jka-compr when
+;; load-prefer-newer is enabled.
+(setq load-prefer-newer nil)
+(require 'jka-compr)
+(setq load-prefer-newer t)
+
 ;; Initialize straight.el
 (setq straight-cache-autoloads t
       straight-check-for-modifications '(check-on-save find-when-checking)
