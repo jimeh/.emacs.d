@@ -76,7 +76,8 @@
                                            'help-mode nil #'eq))))
 
   (defun siren-helm--hide-neotree (&rest plist)
-    (when (and (fboundp 'neotree-hide)
+    (when (and (not (eq helm-display-function 'helm-posframe-display))
+               (fboundp 'neotree-hide)
                (fboundp 'neo-global--window-exists-p)
                (neo-global--window-exists-p))
       (setq siren-helm--did-hide-neotree t)
@@ -89,7 +90,8 @@
       (run-with-timer 0.01 nil #'neotree-show)))
 
   (defun siren-helm--hide-treemacs (&rest plist)
-    (when (fboundp 'treemacs-get-local-window)
+    (when (and (not (eq helm-display-function 'helm-posframe-display))
+               (fboundp 'treemacs-get-local-window))
       (let ((win (treemacs-get-local-window)))
         (when win
           (setq siren-helm--did-hide-treemacs t)
@@ -179,12 +181,21 @@
   (helm-posframe-border-width 3)
   (helm-posframe-height nil)
   (helm-posframe-min-height 70)
-  (helm-posframe-width 400)
   (helm-posframe-min-width nil)
+  (helm-posframe-parameters '((left-fringe . 10) (right-fringe . 10)))
+  (helm-posframe-width 400)
+
+  :init
+  ;; helm-posframe does not come with a minor mode to toggle it on/off, so let's
+  ;; make one to make life easier.
+  (define-minor-mode helm-posframe-mode
+    "Toggle helm-posframe."
+    :lighter " fmt"
+    (if helm-posframe-mode (helm-posframe-enable) (helm-posframe-disable)))
 
   :config
   (when window-system
-    (helm-posframe-enable)))
+    (helm-posframe-mode +1)))
 
 (provide 'siren-helm)
 ;;; siren-helm.el ends here
