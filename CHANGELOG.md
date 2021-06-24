@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/jimeh/.emacs.d/compare/v0.7.31...v0.8.0) (2021-06-24)
+
+
+### Features
+
+* **completion:** insert current company-mode selection with tab ([cb1296e](https://github.com/jimeh/.emacs.d/commit/cb1296ed9c7eb40dac2f512603a96b9783b38bff))
+* **editor:** add config for vertico + orderless as a alternative to selectrum ([07b0013](https://github.com/jimeh/.emacs.d/commit/07b0013c75fc2542d9f417afe5ac9eea2b31ffc7))
+* **editor:** add embark ([49cef56](https://github.com/jimeh/.emacs.d/commit/49cef56c82f90ba4ae921bf00e8198e089b82883))
+* **editor:** replace ido and amx with selectrum, prescient and marginalia ([93c22e1](https://github.com/jimeh/.emacs.d/commit/93c22e1bb99d3e5dedcb82a8567ece97ca03f70f))
+* **editor:** switch to vertico+orderless from selectrum+prescient ([0e6a7b6](https://github.com/jimeh/.emacs.d/commit/0e6a7b6290d15c084c2b144961aa6adb48b32c0f))
+* **navigation:** add consult ([354ed23](https://github.com/jimeh/.emacs.d/commit/354ed23d21a396a3af8a396ee96ee391df4a9395))
+* **navigation:** add ctrlf-mode, a isearch replacement ([5878449](https://github.com/jimeh/.emacs.d/commit/5878449963a2107a150ae37c44cfc7617267adb9))
+* **navigation:** enabled hl-line-mode in dired ([d90e559](https://github.com/jimeh/.emacs.d/commit/d90e55904785d47a545a9b67c9d07d69a296867f))
+* **navigation:** use helm-posframe ([63b5441](https://github.com/jimeh/.emacs.d/commit/63b5441deb648cf3970df09776b9c63ff9175e45))
+* **ui:** change macOS GUI font from Monaco to Menlo ([639f813](https://github.com/jimeh/.emacs.d/commit/639f813ab023b62f40fbcc368be7fc8bd6b46a19))
+* **ui:** improve vertical-border border character when running in terminal ([8c96e38](https://github.com/jimeh/.emacs.d/commit/8c96e38141172a0d524132e664400d1c6d526e94))
+
+
+### Bug Fixes
+
+* **editor:** ensure selectrum current item always highlights full line ([ee89505](https://github.com/jimeh/.emacs.d/commit/ee895054fd883c79e5784e2e490e7008d96ed912))
+* **editor:** improve filtering performance of M-x when marginalia is active ([689dc6a](https://github.com/jimeh/.emacs.d/commit/689dc6a1e4b0aab9e94143e6bf7ccad8953bf411))
+* **init:** workaround recursive load error in jka-compr with latest nightly builds ([b049ec6](https://github.com/jimeh/.emacs.d/commit/b049ec652a064bc211abd6a022d135a08d548e15))
+* **nativation:** make consult-buffer (C-x b) work before projectile is loaded ([b647d64](https://github.com/jimeh/.emacs.d/commit/b647d6447b1d1a747b21a6f446dcc7bffcf9cba6))
+* **navigation:** make helm play nicer with treemacs when helm-posframe is enabled ([b53cef4](https://github.com/jimeh/.emacs.d/commit/b53cef4d30a91f255d1e319498d44e33f25dda09))
+* **navigation:** workaround dired+ incompatibility with dired in master branch ([688b14a](https://github.com/jimeh/.emacs.d/commit/688b14a775e2e052ceb32631d329f86f290d6d2d))
+
 ### [0.7.31](https://github.com/jimeh/.emacs.d/compare/v0.7.30...v0.7.31) (2021-06-14)
 
 
