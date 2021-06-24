@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-prescient)
-
 (use-package selectrum
   :custom
   (selectrum-display-action nil)
@@ -17,12 +15,6 @@
 
   :config
   (selectrum-mode +1))
-
-(use-package selectrum-prescient
-  :after (selectrum)
-
-  :config
-  (selectrum-prescient-mode +1))
 
 (provide 'siren-selectrum)
 ;;; siren-selectrum.el ends here

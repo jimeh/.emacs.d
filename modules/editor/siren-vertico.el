@@ -6,14 +6,14 @@
 
 ;;; Code:
 
-(require 'siren-orderless)
-
 (use-package vertico
   :custom
-  (enable-recursive-minibuffers t)
   (resize-mini-windows nil)
   (vertico-count 12)
   (vertico-cycle t)
+
+  (enable-recursive-minibuffers t)
+  (resize-mini-windows nil)
 
   :init
   (defun siren-crm-indicator (args)

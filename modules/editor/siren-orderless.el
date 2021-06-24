@@ -14,7 +14,12 @@
                                orderless-prefixes
                                orderless-regexp
                                orderless-initialism
-                               orderless-flex)))
+                               orderless-flex))
+
+  :init
+  (with-eval-after-load 'selectrum
+    (setq selectrum-refine-candidates-function #'orderless-filter)
+    (setq selectrum-highlight-candidates-function #'orderless-highlight-matches)))
 
 (provide 'siren-orderless)
 ;;; siren-orderless.el ends here

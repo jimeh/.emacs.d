@@ -19,12 +19,5 @@
   :config
   (prescient-persist-mode +1))
 
-(use-package company-prescient
-  :defer t
-  :after (prescient company)
-
-  :config
-  (company-prescient-mode +1))
-
 (provide 'siren-prescient)
 ;;; siren-prescient.el ends here
