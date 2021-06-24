@@ -1,0 +1,22 @@
+;;; siren-uniquify.el --- jimeh's Emacs Siren: uniquify configuration.
+
+;;; Commentary:
+
+;; Basic configuration for uniquify.
+
+;;; Code:
+
+(use-package uniquify
+  :straight (:type built-in)
+  :demand t
+
+  :custom
+  (uniquify-buffer-name-style 'post-forward-angle-brackets)
+  (uniquify-separator "/")
+  ;; rename after killing uniquified
+  (uniquify-after-kill-buffer-p t)
+  ;; don't muck with special buffers
+  (uniquify-ignore-buffers-re "^\\*"))
+
+(provide 'siren-uniquify)
+;;; siren-uniquify.el ends here

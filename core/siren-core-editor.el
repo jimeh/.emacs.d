@@ -86,45 +86,6 @@
   ;; (global-set-key [mouse-5] 'scroll-up-line)
   )
 
-;; savehist keeps track of some history
-(require 'savehist)
-(setq savehist-additional-variables
-      ;; search entries
-      '(search-ring regexp-search-ring)
-      ;; save every minute
-      savehist-autosave-interval 60
-      ;; keep the home clean
-      savehist-file (expand-file-name "savehist" siren-cache-dir))
-(savehist-mode +1)
-
-;; Recentf
-(require 'recentf)
-(setq recentf-save-file (expand-file-name "recentf" siren-cache-dir)
-      recentf-max-saved-items 5000
-      recentf-max-menu-items 1000
-      ;; disable recentf-cleanup on Emacs start, because it can cause
-      ;; problems with remote files
-      recentf-auto-cleanup 'never
-      recentf-exclude '("\\.git.*" "\\.hg.*" "\\.svn.*"))
-
-(defun siren-recentf-exclude-p (file)
-  "A predicate to decide whether to exclude FILE from recentf."
-  (let ((file-dir (file-truename (file-name-directory file))))
-    (-any-p (lambda (dir)
-              (string-prefix-p dir file-dir))
-            (mapcar 'file-truename (list siren-cache-dir package-user-dir)))))
-
-(add-to-list 'recentf-exclude 'siren-recentf-exclude-p)
-
-(recentf-mode +1)
-
-;; meaningful names for buffers with the same name
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets
-      uniquify-separator "/"
-      uniquify-after-kill-buffer-p t     ; rename after killing uniquified
-      uniquify-ignore-buffers-re "^\\*") ; don't muck with special buffers
-
 ;; Display whitespace characters globally
 (diminish 'whitespace-mode)
 (diminish 'global-whitespace-mode)

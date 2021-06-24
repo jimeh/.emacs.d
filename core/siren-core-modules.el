@@ -37,8 +37,11 @@
 (require 'siren-mwim)
 (require 'siren-rainbow)
 (require 'siren-selectrum)
+(require 'siren-recentf)
+(require 'siren-savehist)
 (require 'siren-undo-tree)
 (require 'siren-undohist)
+(require 'siren-uniquify)
 (require 'siren-which-key)
 
 ;; Linting
