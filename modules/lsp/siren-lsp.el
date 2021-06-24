@@ -35,7 +35,9 @@
   (lsp-keymap-prefix "M-;")
   (lsp-lens-enable t)
   (lsp-modeline-diagnostics-enable t)
+  (lsp-semantic-tokens-apply-modifiers t)
   (lsp-semantic-tokens-enable t)
+  (lsp-semantic-tokens-warn-on-missing-face nil)
   (lsp-signature-auto-activate t)
   (lsp-signature-render-documentation t)
 
@@ -88,7 +90,7 @@
   (lsp-ui-sideline-enable t)
   (lsp-ui-sideline-show-code-actions t)
   (lsp-ui-sideline-show-diagnostics t)
-  (lsp-ui-sideline-show-hover t))
+  (lsp-ui-sideline-show-hover nil))
 
 (provide 'siren-lsp)
 ;;; siren-lsp.el ends here
