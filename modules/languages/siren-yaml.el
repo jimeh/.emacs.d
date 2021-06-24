@@ -21,19 +21,8 @@
   (defun siren-yaml-mode-setup ()
     (run-hooks 'prog-mode-hook)
 
-    ;; Configure prettier after local vars are processed, allowing local
-    ;; override of fill-column and have prettier respect it.
-    (add-hook 'hack-local-variables-hook
-              'siren-yaml-mode-setup-prettier nil t)
-
     (setq tab-width 2)
-    (prettier-js-mode)
-    (subword-mode +1))
-
-  (defun siren-yaml-mode-setup-prettier ()
-    (setq-local prettier-js-args `("--parser" "yaml"
-                                   "--print-width" ,(number-to-string fill-column)
-                                   "--prose-wrap" "always"))))
+    (subword-mode +1)))
 
 (use-package lsp-yaml
   :straight lsp-mode
@@ -43,7 +32,8 @@
 
   :init
   (defun siren-lsp-yaml-mode-setup ()
-    (lsp-deferred)))
+    (lsp-deferred)
+    (lsp-format-buffer-on-save-mode)))
 
 (use-package yaml-imenu
   :after yaml-mode

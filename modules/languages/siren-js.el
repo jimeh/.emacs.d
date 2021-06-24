@@ -32,10 +32,19 @@
             tab-width width))
 
     (company-mode)
-    (lsp-deferred)
-    (lsp-format-buffer-on-save-mode)
     (subword-mode)
     (siren-folding)))
+
+(use-package lsp-javascript
+  :straight lsp-mode
+
+  :hook
+  (js-mode . siren-lsp-js-mode-setup)
+
+  :init
+  (defun siren-lsp-js-mode-setup ()
+    (lsp-deferred)
+    (lsp-format-buffer-on-save-mode)))
 
 (provide 'siren-js)
 ;;; siren-js.el ends here

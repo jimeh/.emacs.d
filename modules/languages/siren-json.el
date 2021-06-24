@@ -6,9 +6,9 @@
 
 ;;; Code:
 
-(require 'siren-flycheck)
 (require 'siren-folding)
 (require 'siren-js)
+(require 'siren-lsp)
 
 (use-package json-mode
   :mode "\\.json\\'"
@@ -27,9 +27,18 @@
     (let ((width 2))
       (setq js-indent-level width
             json-reformat:indent-width width
-            tab-width width))
+            tab-width width))))
 
-    (setq flycheck-checker 'json-jsonlint)))
+(use-package lsp-json
+  :straight lsp-mode
+
+  :hook
+  (json-mode . siren-lsp-json-mode-setup)
+
+  :init
+  (defun siren-lsp-json-mode-setup ()
+    (lsp-deferred)
+    (lsp-format-buffer-on-save-mode)))
 
 (provide 'siren-json)
 ;;; siren-js.el ends here
