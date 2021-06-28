@@ -9,7 +9,7 @@
 (use-package lsp-mode
   :bind (:map lsp-mode-map
               ("C-c C-." . lsp-rename)
-              ("C-c C-f" . lsp-format-buffer))
+              ("C-c C-f" . siren-lsp-format-buffer))
 
   :commands
   lsp
@@ -51,6 +51,16 @@
   (defun siren-lsp-mode-setup ()
     (setq-local company-idle-delay 0.1
                 company-minimum-prefix-length 1))
+
+  ;; Allow overriding manual buffer formatting triggered by C-c C-f. Typically
+  ;; this will be used to perform additional formatting steps not performed by
+  ;; default via the on-safe hook.
+  (defvar-local siren-lsp-format-buffer-func nil)
+  (defun siren-lsp-format-buffer ()
+    (interactive)
+    (if siren-lsp-format-buffer-func
+        (apply siren-lsp-format-buffer-func nil)
+      (lsp-format-buffer)))
 
   :config
   (define-minor-mode lsp-format-buffer-on-save-mode

@@ -81,9 +81,14 @@
 
   :init
   (defun siren-lsp-go-mode-setup ()
+    (setq-local siren-lsp-format-buffer-func 'siren-lsp-go-format-buffer)
     (lsp-format-buffer-on-save-mode t)
     (lsp-organize-imports-on-save-mode t)
-    (lsp-deferred)))
+    (lsp-deferred))
+
+  (defun siren-lsp-go-format-buffer ()
+    (lsp-format-buffer)
+    (golines-format-buffer)))
 
 (use-package go-dlv
   :defer t)
