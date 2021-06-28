@@ -38,6 +38,16 @@
 
     (subword-mode +1)))
 
+(use-package lsp-bash
+  :straight lsp-mode
+
+  :hook
+  (sh-mode . siren-lsp-bash-mode-setup)
+
+  :init
+  (defun siren-lsp-bash-mode-setup ()
+    (lsp-deferred)))
+
 (use-package shfmt
   :hook
   (sh-mode . shfmt-on-save-mode)
