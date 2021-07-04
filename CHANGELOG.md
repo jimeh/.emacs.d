@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.1](https://github.com/jimeh/.emacs.d/compare/v0.8.0...v0.8.1) (2021-07-04)
+
+
+### Features
+
+* **lang:** enable lsp-mode for bash and sh script files in sh-mode ([850c9db](https://github.com/jimeh/.emacs.d/commit/850c9dbbddd7a88dc2169d2582811ffb958545a0))
+* **lsp:** allow C-c C-f to perform extra formatting not done by on-save hook ([14f394c](https://github.com/jimeh/.emacs.d/commit/14f394c7ca884d5287a27e48bd3a778ac731167a))
+
+
+### Bug Fixes
+
+* **editor:** switch from vertico to selectrum due lsp-mode issue ([4c8384b](https://github.com/jimeh/.emacs.d/commit/4c8384bcec5a38206ee19433572ef6a45d68a468))
+
 ## [0.8.0](https://github.com/jimeh/.emacs.d/compare/v0.7.31...v0.8.0) (2021-06-24)
 
 
