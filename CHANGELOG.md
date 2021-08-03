@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.2](https://github.com/jimeh/.emacs.d/compare/v0.8.1...v0.8.2) (2021-08-03)
+
+
+### Features
+
+* **lang:** improve jsonnet-mode setup with format on save, and more ([17f6325](https://github.com/jimeh/.emacs.d/commit/17f63255d9ee25d9fde2b75a2123e36589b60bf4))
+* **misc:** add lorem-ipsum package ([8096cb3](https://github.com/jimeh/.emacs.d/commit/8096cb34ab1602631a61ea8d6ebd74484f98a9e5))
+
+
+### Bug Fixes
+
+* **editor:** do not highlight indentation levels on large files ([0435cb2](https://github.com/jimeh/.emacs.d/commit/0435cb28d69911217b794f52828dcb115499ec63))
+
 ### [0.8.1](https://github.com/jimeh/.emacs.d/compare/v0.8.0...v0.8.1) (2021-07-04)
 
 
