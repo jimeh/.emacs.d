@@ -42,6 +42,7 @@
  ("emacs-htmlize" . "49205105898ba8993b5253beec55d8bddd820a70")
  ("emacs-kv" . "721148475bce38a70e0b678ba8aa923652e8900e")
  ("emacs-libvterm" . "d9dfa624679afdd5db6ad25429ef86d3dd91401e")
+ ("emacs-lorem-ipsum" . "da75c155da327c7a7aedb80f5cfe409984787049")
  ("emacs-memoize" . "51b075935ca7070f62fae1d69fe0ff7d8fa56fdd")
  ("emacs-reformatter" . "e02a9ea94287f4195edeeab3033e017a56872f5b")
  ("emacs-shfmt" . "49c9e11567874bc4c5c4b3578a6b8f6b1948c691")

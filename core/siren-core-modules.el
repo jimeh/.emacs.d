@@ -53,6 +53,7 @@
 ;; Misc.
 (require 'siren-explain-pause)
 (require 'siren-grip)
+(require 'siren-lorem-ipsum)
 (require 'siren-rand)
 (require 'siren-restart-emacs)
 (require 'siren-uuidgen)
