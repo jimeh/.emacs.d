@@ -46,7 +46,8 @@
 
   :init
   (defun siren-lsp-bash-mode-setup ()
-    (lsp-deferred)))
+    (if (member sh-shell '(bash sh))
+        (lsp-deferred))))
 
 (use-package shfmt
   :hook
