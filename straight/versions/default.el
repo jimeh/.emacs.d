@@ -117,6 +117,7 @@
  ("marginalia" . "db5812c8750f729627a927aa1d0dd9178ffc2b58")
  ("markdown-mode" . "f28e263b915d48ee9757990da1cdd160b355cb8c")
  ("melpa" . "2571aed58ce9c4df998588cbcffdde704f4dce54")
+ ("makefile-executor.el" . "d0a34c355fb80a8616ae7ed5eebbda8507aa14ac")
  ("mermaid-mode" . "562ffe86cad91627e2b94b8684818562c3ad2b5d")
  ("minions" . "1be68e8571336672d6cbec86246d1bf7844976be")
  ("mmm-mode" . "0d00cdf4d02cc166304f6967a20fa22e2eaf208b")

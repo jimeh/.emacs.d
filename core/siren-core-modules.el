@@ -147,6 +147,7 @@
 (require 'siren-helm-make)
 (require 'siren-httprepl)
 (require 'siren-kubernetes)
+(require 'siren-makefile-executor)
 (require 'siren-restclient)
 
 ;; XWidgets

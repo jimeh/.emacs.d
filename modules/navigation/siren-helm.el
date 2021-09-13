@@ -112,16 +112,6 @@
   (advice-add 'helm :before 'siren-helm--hide-neotree)
   (advice-add 'helm :before 'siren-helm--hide-treemacs))
 
-(use-package helm-command
-  :straight helm
-  :after (helm-global-bindings)
-  :bind
-  ("C-c C-m" . helm-M-x)
-
-  :custom
-  (helm-M-x-always-save-history t)
-  (helm-M-x-fuzzy-match t))
-
 (use-package helm-elisp
   :straight helm
   :after (helm-global-bindings)

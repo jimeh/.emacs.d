@@ -7,11 +7,16 @@
 ;;; Code:
 
 (require 'siren-display-indentation)
+(require 'siren-makefile-executor)
 
 (use-package make-mode
   :straight (:type built-in)
   :hook
   (makefile-mode . siren-makefile-mode-setup)
+
+  :bind
+  (:map makefile-mode-map
+        ("C-c C-m" . makefile-executor-execute-project-target))
 
   :init
   (add-to-list 'siren-indent-sensitive-modes 'makefile-mode)
