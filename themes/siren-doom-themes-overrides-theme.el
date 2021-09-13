@@ -30,6 +30,10 @@
  ;; fill-column-indicator
  `(fill-column-indicator ((t ( :foreground ,(doom-lighten 'base3 0.10) ))))
 
+ ;; magit
+ `(magit-diff-hunk-heading ((t ( :foreground ,(doom-color 'violet)
+                                 :background ,(doom-blend 'violet 'bg 0.3)))))
+
  ;; diff-hl
  `(diff-hl-insert ((t ( :foreground ,(doom-blend 'vc-added 'bg 0.7)
                         :background ,(doom-blend 'vc-added 'bg 0.2)))))
