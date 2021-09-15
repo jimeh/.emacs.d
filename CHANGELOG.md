@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.3](https://github.com/jimeh/.emacs.d/compare/v0.8.2...v0.8.3) (2021-09-15)
+
+
+### Features
+
+* **makefile:** improve makefile execution and bind it to C-c C-m ([4cb9c3d](https://github.com/jimeh/.emacs.d/commit/4cb9c3d3a0b7cafc8c707d72b28769474da684d6))
+
+
+### Bug Fixes
+
+* **lang:** tweak golines arguments to not use deprecated gofumports ([32f23ea](https://github.com/jimeh/.emacs.d/commit/32f23ea33baa0ddc3ff98c60e9991ec6b9c1ef22))
+* **lsp:** only use lsp-mode in bash and sh based sh-mode buffer ([46a8169](https://github.com/jimeh/.emacs.d/commit/46a8169ed356e085b8e109c8518175aa8cb99ec8))
+* **theme:** tweak magit-diff-hunk-heading face to make it more readable ([784a295](https://github.com/jimeh/.emacs.d/commit/784a29585a4a4e69dbb6f887bf19638d395979c9))
+
 ### [0.8.2](https://github.com/jimeh/.emacs.d/compare/v0.8.1...v0.8.2) (2021-08-03)
 
 
