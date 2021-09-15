@@ -52,8 +52,7 @@
     ;; lsp-mode.
     (reformatter-define golines-format
       :program "golines"
-      :args '("-t" "4" "-m" "80" "--no-reformat-tags"
-              "--base-formatter=gofumports")
+      :args '("-t" "4" "-m" "80" "--no-reformat-tags")
       :lighter "GOLINES"))
 
   :config
