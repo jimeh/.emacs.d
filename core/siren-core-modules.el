@@ -189,6 +189,7 @@
 (require 'siren-nginx)
 (require 'siren-php)
 (require 'siren-plantuml)
+(require 'siren-protobuf)
 (require 'siren-ruby)
 (require 'siren-rust)
 (require 'siren-sass)
