@@ -197,6 +197,7 @@
 (require 'siren-sh)
 (require 'siren-slim)
 (require 'siren-sql)
+(require 'siren-ssh-config)
 (require 'siren-terraform)
 (require 'siren-thrift)
 (require 'siren-toml)
