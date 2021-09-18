@@ -14,11 +14,8 @@
 (setq native-comp-async-query-on-exit t
       comp-async-query-on-exit t)
 
-(let ((deny-list '("\\(?:[/\\\\]\\.dir-locals\\.el$\\)"
-                   ;; Don't native-compile *-authloads.el and *-pkg.el files as they
-                   ;; seem to produce errors during native-compile.
-                   "\\(?:[^z-a]*-autoloads\\.el$\\)"
-                   "\\(?:[^z-a]*-pkg\\.el$\\)")))
+;; Prevent native-compiling .dir-locals.el files.
+(let ((deny-list '("\\(?:[/\\\\]\\.dir-locals\\.el$\\)")))
   (if (boundp 'native-comp-deferred-compilation-deny-list)
       (setq native-comp-deferred-compilation-deny-list deny-list)
     (setq comp-deferred-compilation-deny-list deny-list)))
