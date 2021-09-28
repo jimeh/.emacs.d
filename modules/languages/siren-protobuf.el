@@ -19,6 +19,7 @@
   :init
   (defun siren-protobuf-mode-setup ()
     (run-hooks 'prog-mode-hook)
+    (setq tab-width 2)
     (c-add-style "siren" '((c-basic-offset . 2)
                            (indent-tabs-mode . nil)) t)
 
