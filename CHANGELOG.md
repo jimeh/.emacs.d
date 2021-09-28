@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.4](https://github.com/jimeh/.emacs.d/compare/v0.8.3...v0.8.4) (2021-09-28)
+
+
+### Features
+
+* **lang:** add protobuf-mode and configure flycheck to support buf ([d3ee782](https://github.com/jimeh/.emacs.d/commit/d3ee78224ad15153caa61342e80ed30ccc634b07))
+* **lang:** add ssh-config-mode for ssh config and authorized_keys files ([093f4a6](https://github.com/jimeh/.emacs.d/commit/093f4a62c3109f2885f7a80f3490a107bca2d221))
+
+
+### Bug Fixes
+
+* **lang:** set tab-width in protobuf-mode ([abc1ddd](https://github.com/jimeh/.emacs.d/commit/abc1dddcf968d5cad9ecb18eb0b94fecbea0694c))
+
 ### [0.8.3](https://github.com/jimeh/.emacs.d/compare/v0.8.2...v0.8.3) (2021-09-15)
 
 
