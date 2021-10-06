@@ -15,6 +15,7 @@
  ("company-mode" . "1887974e7ad50cb4884fbec27985078bba754b60")
  ("company-nginx" . "82bdb730ad5971c594d9c99c069f3c7bb067897d")
  ("consult" . "a07ca383318cdce6935a370f1d17687ba9f225c3")
+ ("consult-lsp" . "b9aa9617f174a304040ae75d35483fa8d4ade5d7")
  ("ctrlf" . "b8a7899faf9d37f1990dfefd9c6b2998c40d7fcc")
  ("cucumber.el" . "8e1464113b489b54067294cd988ff6a11a423fdb")
  ("dap-mode" . "00e1a5d70c32019800b8eb09d2fbcecbcb727a16")

@@ -9,6 +9,7 @@
 (use-package consult
   :defer t
   :bind
+  ("C-t" . consult-imenu)
   ("C-x b" . consult-buffer)
   ("M-g M-g" . consult-goto-line)
 

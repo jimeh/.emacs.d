@@ -137,11 +137,6 @@
   ("C-c f f" . helm-for-files)
   ("C-c f r" . helm-recentf))
 
-(use-package helm-imenu
-  :straight helm
-  :after (helm-global-bindings)
-  :bind
-  ("C-t" . helm-imenu))
 
 (use-package helm-ring
   :straight helm

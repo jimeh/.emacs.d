@@ -84,6 +84,7 @@
 
 ;; Language Servers
 (require 'siren-lsp)
+(require 'siren-consult-lsp)
 (require 'siren-helm-lsp)
 
 ;; Debugging
