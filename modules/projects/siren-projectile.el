@@ -22,6 +22,7 @@
         ("C-c p" . projectile-command-map))
 
   :custom
+  (projectile-buffers-filter-function 'projectile-buffers-with-file-or-process)
   (projectile-cache-file (expand-file-name "projectile" siren-cache-dir))
   (projectile-completion-system 'default)
   (projectile-enable-caching nil)
