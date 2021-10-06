@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.5](https://github.com/jimeh/.emacs.d/compare/v0.8.4...v0.8.5) (2021-10-06)
+
+
+### Features
+
+* **editor:** add project-buffer marginalia annotator ([f4e1c40](https://github.com/jimeh/.emacs.d/commit/f4e1c403b0c483b77e9ea501f56f77b9ffaf4144))
+* **editor:** decorate various projectile commands with marginalia ([6dc661f](https://github.com/jimeh/.emacs.d/commit/6dc661f14e0776fea436c5d83364b5c91a1d13ae))
+* **editor:** don't use helm for projectile-switch-project ([b8fe28f](https://github.com/jimeh/.emacs.d/commit/b8fe28f07c0b659caeab3bf7f77334305e34c9c1))
+* **lang:** enable a few gopls analyzers which are disabled by default ([5849a7b](https://github.com/jimeh/.emacs.d/commit/5849a7b522abf559a461a0704e518b2e54cf023b))
+* **lsp:** add keybindings for helm-lsp-diagnostics ([9a3828c](https://github.com/jimeh/.emacs.d/commit/9a3828c293f8007cffb54988458ea1fba1d7fb8e))
+* **navigation:** make helm take up full frame ([bde7650](https://github.com/jimeh/.emacs.d/commit/bde765001b0fe70830b80f888664c9f9c8633bc8))
+* **navigation:** stop using helm-posframe ([cb0cf52](https://github.com/jimeh/.emacs.d/commit/cb0cf52769a36d3771416525efbfc8f5dd5f0d68))
+* **navigation:** use consult instead of helm for imenu completion ([2236947](https://github.com/jimeh/.emacs.d/commit/22369470c4866ec17ea94bd3bae04f979b460f27))
+* **projects:** only show file/process buffers in projectile buffer list ([11bb56b](https://github.com/jimeh/.emacs.d/commit/11bb56b4ac3401884b9a317e253a2d9221489265))
+* **projects:** use helm-projectile for project switching again ([6e34c36](https://github.com/jimeh/.emacs.d/commit/6e34c36e69604a01fba6985e38332baf54f670ea))
+
 ### [0.8.4](https://github.com/jimeh/.emacs.d/compare/v0.8.3...v0.8.4) (2021-09-28)
 
 
