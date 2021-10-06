@@ -43,11 +43,12 @@
   (helm-display-header-line t)
   (helm-echo-input-in-header-line t)
   (helm-file-name-case-fold-search 'smart)
-  (helm-follow-mode-persistent t)
-  (helm-full-frame nil)
+  (helm-follow-mode-persistent nil)
+  (helm-full-frame t)
   (helm-show-completion-display-function 'helm-display-buffer-in-own-frame)
-  (helm-split-window-default-side 'below)
+  (helm-split-window-default-side 'above)
   (helm-split-window-inside-p nil)
+  (helm-use-undecorated-frame-option t)
 
   :init
   (defvar siren-helm--did-hide-neotree nil)

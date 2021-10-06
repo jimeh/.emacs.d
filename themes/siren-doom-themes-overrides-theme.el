@@ -123,6 +123,9 @@
  `(orderless-match-face-3 ((t ( :foreground ,(doom-blend 'magenta 'red 0.7) ))))
 
  ;; helm
+ `(helm-selection ((t ( :inherit 'bold
+                        :background ,(doom-blend 'violet 'bg 0.2)
+                        :extend t ))))
  `(helm-posframe-border ((t ( :background ,(doom-color 'dark-blue) )))))
 
 (custom-theme-set-variables
