@@ -36,10 +36,18 @@
   (helm-autoresize-min-height 10)
   (helm-autoresize-mode nil)
   (helm-case-fold-search 'smart)
+  (helm-display-buffer-height 64)
+  (helm-display-buffer-reuse-frame nil)
+  (helm-display-buffer-width 160)
+  (helm-display-function 'helm-default-display-buffer)
   (helm-display-header-line t)
   (helm-echo-input-in-header-line t)
   (helm-file-name-case-fold-search 'smart)
+  (helm-follow-mode-persistent t)
+  (helm-full-frame nil)
+  (helm-show-completion-display-function 'helm-display-buffer-in-own-frame)
   (helm-split-window-default-side 'below)
+  (helm-split-window-inside-p nil)
 
   :init
   (defvar siren-helm--did-hide-neotree nil)
@@ -176,11 +184,7 @@
   (define-minor-mode helm-posframe-mode
     "Toggle helm-posframe."
     :lighter " fmt"
-    (if helm-posframe-mode (helm-posframe-enable) (helm-posframe-disable)))
-
-  :config
-  (when window-system
-    (helm-posframe-mode +1)))
+    (if helm-posframe-mode (helm-posframe-enable) (helm-posframe-disable))))
 
 (provide 'siren-helm)
 ;;; siren-helm.el ends here
