@@ -43,14 +43,31 @@
   (helm-display-header-line t)
   (helm-echo-input-in-header-line t)
   (helm-file-name-case-fold-search 'smart)
-  (helm-follow-mode-persistent nil)
+  (helm-follow-mode-persistent t)
   (helm-full-frame t)
   (helm-show-completion-display-function 'helm-display-buffer-in-own-frame)
   (helm-split-window-default-side 'above)
   (helm-split-window-inside-p nil)
   (helm-use-undecorated-frame-option t)
 
+  (siren-helm-auto-toggle-neotree t)
+  (siren-helm-auto-toggle-treemacs t)
+
   :init
+  (defgroup siren-helm nil
+    "Siren specific settings for helm."
+    :group 'helm)
+
+  (defcustom siren-helm-auto-toggle-neotree t
+    "When t and automatically hide and show neotree when helm is activated."
+    :type 'boolean
+    :group 'siren-helm)
+
+  (defcustom siren-helm-auto-toggle-treemacs t
+    "When t and automatically hide and show treemacs when helm is activated."
+    :type 'boolean
+    :group 'siren-helm)
+
   (defvar siren-helm--did-hide-neotree nil)
   (defvar siren-helm--did-hide-treemacs nil)
 
@@ -85,7 +102,8 @@
                                            'help-mode nil #'eq))))
 
   (defun siren-helm--hide-neotree (&rest plist)
-    (when (and (not (eq helm-display-function 'helm-posframe-display))
+    (when (and siren-helm-auto-toggle-neotree
+               (not (eq helm-display-function 'helm-posframe-display))
                (fboundp 'neotree-hide)
                (fboundp 'neo-global--window-exists-p)
                (neo-global--window-exists-p))
@@ -99,7 +117,8 @@
       (run-with-timer 0.01 nil #'neotree-show)))
 
   (defun siren-helm--hide-treemacs (&rest plist)
-    (when (and (not (eq helm-display-function 'helm-posframe-display))
+    (when (and siren-helm-auto-toggle-treemacs
+               (not (eq helm-display-function 'helm-posframe-display))
                (fboundp 'treemacs-get-local-window))
       (let ((win (treemacs-get-local-window)))
         (when win
