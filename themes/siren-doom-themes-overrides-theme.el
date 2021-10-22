@@ -102,6 +102,10 @@
  `(diredp-deletion-file-name ((t ( :foreground ,(doom-color 'red) ))))
  `(diredp-compressed-file-name ((t ( :foreground ,(doom-color 'blue) ))))
 
+ ;; treemacs
+ `(siren-treemacs-line-highlight ((t ( :background ,(doom-blend 'violet 'bg 0.2)
+                                       :extend t ))))
+
  ;; selectrum
  `(selectrum-current-candidate ((t ( :background ,(doom-blend 'violet 'bg 0.2)
                                      :foreground ,(doom-blend 'violet 'fg 0.3)

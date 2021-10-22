@@ -11,6 +11,9 @@
   ("C-x C-p" . treemacs)
   ("C-x p" . treemacs-select-window)
 
+  :hook
+  (treemacs-mode . siren-treemacs-change-hl-line-mode)
+
   :custom
   (treemacs-collapse-dirs 3)
   (treemacs-follow-after-init t)
@@ -25,6 +28,21 @@
   (treemacs-persist-file (expand-file-name "treemacs-persist" siren-cache-dir))
   (treemacs-last-error-persist-file
    (expand-file-name "treemacs-persist-at-last-error" siren-cache-dir))
+
+  :init
+  (defgroup siren-treemacs nil
+    "Siren specific settings for treemacs."
+    :group 'treemacs)
+
+  (defface siren-treemacs-line-highlight '((t (:extend t)))
+    "Custom line-highlight face for treemacs."
+    :group 'siren-treemacs)
+
+  (defun siren-treemacs-change-hl-line-mode ()
+    "Use a custom face to control style of highlighted line."
+    (setq-local hl-line-face 'siren-treemacs-line-highlight)
+    (overlay-put hl-line-overlay 'face hl-line-face)
+    (treemacs--setup-icon-background-colors))
 
   :config
   (defvar treemacs-no-load-time-warnings t)
