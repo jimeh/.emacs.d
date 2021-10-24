@@ -189,6 +189,10 @@
   :defer t
   :after (helm-global-bindings))
 
+(use-package helm-xref
+  :defer t
+  :after (helm-global-bindings))
+
 (use-package helm-posframe
   :custom
   (helm-posframe-border-width 3)

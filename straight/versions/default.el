@@ -93,6 +93,7 @@
  ("helm-projectile" . "58123f14c392021714fc5d23b9f95c7f95ce07f1")
  ("helm-swoop" . "1b3285791f1dc1fde548fe67aec07214d698fd57")
  ("helpful" . "7e4b1f0d5572a4e2b8ee7a9b084ef863d0315a73")
+ ("helm-xref" . "ea0e4ed8a9baf236e4085cbc7178241f109a53fa")
  ("highlight-indent-guides" . "cf352c85cd15dd18aa096ba9d9ab9b7ab493e8f6")
  ("highlight-symbol.el" . "7a789c779648c55b16e43278e51be5898c121b3a")
  ("ht.el" . "c4c1be487d6ecb353d07881526db05d7fc90ea87")
