@@ -58,7 +58,10 @@
   (treemacs-define-RET-action
    'file-node-open   #'treemacs-visit-node-in-most-recently-used-window)
   (treemacs-define-RET-action
-   'file-node-closed #'treemacs-visit-node-in-most-recently-used-window))
+   'file-node-closed #'treemacs-visit-node-in-most-recently-used-window)
+
+  ;; Unbind keys which conflict with global keybindings I use.
+  (unbind-key "M-l" treemacs-mode-map))
 
 (use-package treemacs-all-the-icons
   :defer t
