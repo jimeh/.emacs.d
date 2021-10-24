@@ -11,9 +11,7 @@
 
 (use-package consult-lsp
   :bind
-  (:map lsp-mode-map
-        ("C-t" . consult-lsp-file-symbols)
-        ("C-c C-\\" . consult-lsp-diagnostics)))
+  ("C-c C-\\" . consult-lsp-diagnostics))
 
 (provide 'siren-consult-lsp)
 ;;; siren-consult-lsp.el ends here
