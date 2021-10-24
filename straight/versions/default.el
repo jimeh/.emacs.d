@@ -68,7 +68,7 @@
  ("gcmh" . "0089f9c3a6d4e9a310d0791cf6fa8f35642ecfd9")
  ("ghub" . "192eff9da2c0f61813f3bc9c00913985c1804180")
  ("git-link" . "c4cb0edc92013ae4e3660f94c0c0d4d13fca6ee6")
- ("git-modes" . "433e1c57a63c88855fc41a942e29d7bc8c9c16c7")
+ ("git-modes" . "62fbf2e5b84ca789e7bc2f87939386023b5ba3df")
  ("git-timemachine" . "3381797bcbf906b18dff654a2361032d2d01b4a3")
  ("github-browse-file" . "9742a5183af853788c6ecb83fb7ee0b00d1675ac")
  ("gnu-elpa-mirror" . "a4cb56778914a8d438341173b2312f49b637e59a")
