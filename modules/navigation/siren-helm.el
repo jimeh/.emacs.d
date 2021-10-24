@@ -46,6 +46,7 @@
   (helm-follow-mode-persistent t)
   (helm-full-frame t)
   (helm-show-completion-display-function 'helm-display-buffer-in-own-frame)
+  (helm-source-names-using-follow '("AG" "Diagnostics" "Helm Xref"))
   (helm-split-window-default-side 'above)
   (helm-split-window-inside-p nil)
   (helm-use-undecorated-frame-option t)
