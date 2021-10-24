@@ -33,7 +33,8 @@
     (diff-hl-flydiff-mode 1))
 
   (defgroup siren-diff-hl nil
-    "Siren specific tweaks to diff-hl.")
+    "Siren specific tweaks to diff-hl."
+    :group 'diff-hl)
 
   (defface siren-diff-hl-insert
     '((default :inherit diff-hl-insert))
@@ -57,7 +58,7 @@
     (intern (format "siren-diff-hl-%s" type)))
 
   (defun siren-diff-hl-set-render-mode ()
-    (diff-hl-margin-mode (if (window-system) -1 1)))
+    (diff-hl-margin-mode (if window-system -1 1)))
 
   :config
   (siren-diff-hl-set-render-mode)
