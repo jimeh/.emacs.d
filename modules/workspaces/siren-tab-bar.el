@@ -55,6 +55,8 @@
   (tab-bar-history-limit 25)
   (tab-bar-new-tab-choice "*scratch*")
   (tab-bar-tab-hints nil)
+  ;; Don't show visual tab-bar unless there are more than 99 tabs.
+  (tab-bar-show 99)
 
   :config
   (siren-tab-bar-setup)
