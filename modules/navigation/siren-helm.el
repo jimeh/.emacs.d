@@ -194,13 +194,15 @@
   :after (helm-global-bindings))
 
 (use-package helm-posframe
+  :if window-system
+
   :custom
   (helm-posframe-border-width 3)
   (helm-posframe-height nil)
   (helm-posframe-min-height 70)
   (helm-posframe-min-width nil)
   (helm-posframe-parameters '((left-fringe . 10) (right-fringe . 10)))
-  (helm-posframe-width 400)
+  (helm-posframe-width 500)
 
   :init
   ;; helm-posframe does not come with a minor mode to toggle it on/off, so let's
@@ -208,7 +210,20 @@
   (define-minor-mode helm-posframe-mode
     "Toggle helm-posframe."
     :lighter " fmt"
-    (if helm-posframe-mode (helm-posframe-enable) (helm-posframe-disable))))
+    (if helm-posframe-mode (helm-posframe-enable) (helm-posframe-disable)))
+
+  (defun siren-helm-posframe-clear-on-fullscreen (frame)
+    (let ((fullscreen  (frame-parameter frame 'fullscreen)))
+      (when (and helm-posframe-mode
+                 (memq fullscreen '(fullscreen fullboth)))
+        (posframe-hide-all))))
+
+  :config
+  (add-hook 'window-size-change-functions
+            'siren-helm-posframe-clear-on-fullscreen)
+
+  ;; (helm-posframe-mode +1)
+  )
 
 (provide 'siren-helm)
 ;;; siren-helm.el ends here
