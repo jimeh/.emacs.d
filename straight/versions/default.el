@@ -115,6 +115,7 @@
  ("lsp-ui" . "69880741041d5c61abcef941d06234f7cbd545b0")
  ("lua-mode" . "5a9bee8d5fc978dc64fcb677167417010321ba65")
  ("magit" . "5b0d1ce31e3d41397255f6de6bb5a7b75ef78fff")
+ ("magit-delta" . "56cdffd377279589aa0cb1df99455c098f1848cf")
  ("magit-popup" . "d8585fa39f88956963d877b921322530257ba9f5")
  ("makefile-executor.el" . "d0a34c355fb80a8616ae7ed5eebbda8507aa14ac")
  ("marginalia" . "56ac0265b37d5331bb3d2520245df8a900cb326c")
