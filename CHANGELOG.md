@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.6](https://github.com/jimeh/.emacs.d/compare/v0.8.5...v0.8.6) (2021-10-28)
+
+
+### Features
+
+* **lsp:** tweak lsp diagnostics related keybindings ([c52853e](https://github.com/jimeh/.emacs.d/commit/c52853e832745c9335b46d4503df80e068be6c54))
+* **navigation/helm:** add helm-xref package ([11099af](https://github.com/jimeh/.emacs.d/commit/11099af502b5d2cf20c9673ca1e83cc56bd67cc9))
+* **navigation/helm:** make treemacs/neotree auto-hiding customizable ([6e65e27](https://github.com/jimeh/.emacs.d/commit/6e65e27ca2606b9742738c95355e3b9078a9dc59))
+* **navigation/imenu:** improve C-t imenu keybinding ([1f7d739](https://github.com/jimeh/.emacs.d/commit/1f7d739193b4e4f30e6ce43636f300417e6e0efb))
+* **projects/treemacs:** customize highlight line background color ([cccff71](https://github.com/jimeh/.emacs.d/commit/cccff7190a80a6e5a9e8f357de09e32320b1fb78))
+* **version-control/magit:** add magit-delta package ([1dbb563](https://github.com/jimeh/.emacs.d/commit/1dbb5631f6d77b1af625b6e3404094f3198e68f6))
+* **workspaces/tab-bar:** hide tab-bar ([205af00](https://github.com/jimeh/.emacs.d/commit/205af0097a61987f7210f10c38595244bf113300))
+
+
+### Bug Fixes
+
+* **lang:** gitconfig-mode and gitignore-mode have been replaced with git-modes ([01bd757](https://github.com/jimeh/.emacs.d/commit/01bd757c15b51932e1083166eaab281557581322))
+* **lang/dockerfile:** add custom hadolint flycheck checker which actually works ([6daac86](https://github.com/jimeh/.emacs.d/commit/6daac868e22b4c08e3a5ab0d29a1ccc3196f72ef))
+* **navigation:** resolve dired/dired+ load order issue ([35d6e12](https://github.com/jimeh/.emacs.d/commit/35d6e1261269d123d842858e2f5db4089abfe192))
+* **projects:** unbind M-l from treemacs as it interfered with a global keybinding ([09c27ab](https://github.com/jimeh/.emacs.d/commit/09c27ab0a7fa4dd41ed2f6384e471b4c91b6ae00))
+
 ### [0.8.5](https://github.com/jimeh/.emacs.d/compare/v0.8.4...v0.8.5) (2021-10-06)
 
 
