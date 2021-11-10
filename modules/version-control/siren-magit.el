@@ -73,22 +73,23 @@
   :custom
   (magit-delta-default-dark-theme "OneHalfDark")
   (magit-delta-default-light-theme "OneHalfLight")
-  (siren-magit-delta-auto-enable nil)
+  (siren-magit-delta-enabled nil)
 
   :init
   (defgroup siren-magit-delta nil
     "Siren specific options for magit-delta."
     :group 'magit-delta)
 
-  (defcustom siren-magit-delta-auto-enable t
-    "Automatically enable magit-delta-mode when delta executable is available."
+  (defcustom siren-magit-delta-enabled t
+    "Enable magit-delta-mode when delta executable is available."
     :type 'boolean
     :group 'siren-magit-delta)
 
   (defun siren-setup-magit-delta ()
-    (let ((delta (executable-find "delta")))
-      (when delta
-        (magit-delta-mode (if siren-magit-delta-auto-enable +1 -1))))))
+    (when siren-magit-delta-enabled
+      (let ((delta-bin (executable-find "delta")))
+        (when delta-bin
+          (magit-delta-mode +1))))))
 
 (provide 'siren-magit)
 ;;; siren-magit.el ends here
