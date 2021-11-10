@@ -64,6 +64,9 @@
 
 ;; revert buffers automatically when underlying files are changed externally
 (global-auto-revert-mode t)
+(when (eq system-type 'darwin)
+  ;; File notifications seem unreliable on macOS.
+  (setq auto-revert-use-notify nil))
 
 ;; diminish keeps the modeline tidy
 (use-package diminish)
