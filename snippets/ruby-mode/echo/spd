@@ -1,4 +1,4 @@
-# name: STDOUT.puts debug
+# name: $stdout.puts debug
 # key: spd
 # --
-STDOUT.puts "\n>>>>>> ${1:name}: ${2:#{$1${3:.inspect}}}\n"$0
+$stdout.puts "\n>>>>>> ${1:name}: ${2:#{$1${3:.inspect}}}\n"$0
