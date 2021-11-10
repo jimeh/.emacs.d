@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.7](https://github.com/jimeh/.emacs.d/compare/v0.8.6...v0.8.7) (2021-11-10)
+
+
+### Bug Fixes
+
+* **editor:** disable auto-revert-mode's use of file notifications on macOS ([78cb7fc](https://github.com/jimeh/.emacs.d/commit/78cb7fcd049bfbef99f7121813eddef4b83a669d))
+* **version-control/magit:** when disabled delta still caused issues ([ab001ee](https://github.com/jimeh/.emacs.d/commit/ab001eeb0ee8d2e183b7e229b1086ed89ed61c5f))
+
 ### [0.8.6](https://github.com/jimeh/.emacs.d/compare/v0.8.5...v0.8.6) (2021-10-28)
 
 
