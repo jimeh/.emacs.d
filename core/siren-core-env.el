@@ -18,7 +18,8 @@
                                     "GOROOT"
                                     "GOPRIVATE"
                                     "GOENV_GOPATH_PREFIX"
-                                    "GOENV_VERSION"))
+                                    "GOENV_VERSION"
+                                    "MallocNanoZone"))
   (exec-path-from-shell-arguments '("-l"))
   (exec-path-from-shell-check-startup-files nil)
   (exec-path-from-shell-debug nil)
