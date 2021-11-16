@@ -24,6 +24,9 @@
 ;; Delete the selection with a keypress
 (delete-selection-mode t)
 
+;; Separate sentences with a single space instead of two.
+(setq sentence-end-double-space nil)
+
 ;; Save place in files
 (setq save-place-file (expand-file-name "saveplace" siren-cache-dir))
 (save-place-mode 1)
