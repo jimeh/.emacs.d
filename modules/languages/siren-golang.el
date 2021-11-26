@@ -82,6 +82,23 @@
    '(("gopls.allowModfileModifications" t t)
      ("gopls.gofumpt" t t)))
 
+  ;; Create custom lsp-client for golangci-lint-langserver.
+  (lsp-register-custom-settings
+   '(("golangci-lint.command" ["golangci-lint" "run" "--out-format" "json"])))
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection
+                                     '("golangci-lint-langserver"))
+                    :major-modes '(go-mode)
+                    :language-id "go"
+                    :priority 0
+                    :server-id 'golangci-lint
+                    :add-on? t
+                    :library-folders-fn #'lsp-go--library-default-directories
+                    :initialization-options (lambda ()
+                                              (gethash "golangci-lint"
+                                                       (lsp-configuration-section "golangci-lint")))))
+  (add-to-list 'lsp-language-id-configuration '(go-mode . "golangci-lint"))
+
   :init
   (defun siren-lsp-go-mode-setup ()
     (setq-local siren-lsp-format-buffer-func 'siren-lsp-go-format-buffer)
