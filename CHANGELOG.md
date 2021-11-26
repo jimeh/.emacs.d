@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.8](https://github.com/jimeh/.emacs.d/compare/v0.8.7...v0.8.8) (2021-11-26)
+
+
+### Features
+
+* **editor:** separate sentences with a single space instead of two ([6a95b32](https://github.com/jimeh/.emacs.d/commit/6a95b32f3815a3612215038538b1dfa067ae1bab))
+* **lang/go:** add custom lsp-client for golangci-lint-langserver ([0ac1c86](https://github.com/jimeh/.emacs.d/commit/0ac1c861026fc3bfb8285ead4c8f2d7b79376b3f))
+
+
+### Bug Fixes
+
+* **dired:** prevent dired from prompting about removing dired buffers ([819f068](https://github.com/jimeh/.emacs.d/commit/819f06887975a8a9a9962c9f2e20cb536786c74d))
+* **env:** set MallocNanoZone var to fix Go race detector issue in Monterey ([0c89367](https://github.com/jimeh/.emacs.d/commit/0c893670cf9d42f806ee748684c093788a5474ad))
+
 ### [0.8.7](https://github.com/jimeh/.emacs.d/compare/v0.8.6...v0.8.7) (2021-11-10)
 
 
