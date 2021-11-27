@@ -10,6 +10,14 @@
   "Root directory for Emacs Siren custom themes.")
 (add-to-list 'custom-theme-load-path siren-themes-dir)
 
+;; Ensure mode-line uses fixed-width font in nightly builds after 2021-11-26
+;; when new mode-line faces were introduced:
+;; https://github.com/emacs-mirror/emacs/commit/57bb675cde25bc1b54d8eb8716b0024d5c1d5687
+(if (get 'mode-line-active 'face-defface-spec)
+    (set-face-attribute 'mode-line-active nil :inherit 'mode-line))
+(if (get 'mode-line-inactive 'face-defface-spec)
+    (set-face-attribute 'mode-line-inactive nil :inherit 'mode-line))
+
 ;; Globally disable setting face weight to bold.
 (defvar siren-set-face-ignore-attributes '(:weight))
 (defadvice set-face-attribute
