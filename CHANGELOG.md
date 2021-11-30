@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.9](https://github.com/jimeh/.emacs.d/compare/v0.8.8...v0.8.9) (2021-11-30)
+
+
+### Features
+
+* **misc:** enable refine package ([1c303c9](https://github.com/jimeh/.emacs.d/commit/1c303c942441650b74b73ae253c463fd40bba4fa))
+* **version-control:** add code-review package ([70f776d](https://github.com/jimeh/.emacs.d/commit/70f776d4f3fe7761b2a4788107dff73e02d7b51c))
+
+
+### Bug Fixes
+
+* **faces:** handle new mode-line-active and mode-line-inactive faces ([1b81c91](https://github.com/jimeh/.emacs.d/commit/1b81c91490e55a1a6de3502e1119d8c4a9c0abc6))
+
 ### [0.8.8](https://github.com/jimeh/.emacs.d/compare/v0.8.7...v0.8.8) (2021-11-26)
 
 
