@@ -10,7 +10,11 @@
 
 (use-package forge
   :defer t
-  :after magit)
+  :after magit
+
+  :custom
+  (forge-database-file (expand-file-name
+                        "forge-database.sqlite" siren-cache-dir)))
 
 (use-package forge-post
   :straight forge
