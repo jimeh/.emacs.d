@@ -56,6 +56,7 @@
 (require 'siren-lorem-ipsum)
 (require 'siren-rand)
 (require 'siren-restart-emacs)
+(require 'siren-refine)
 (require 'siren-uuidgen)
 (require 'siren-zone)
 

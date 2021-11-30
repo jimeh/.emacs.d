@@ -151,6 +151,7 @@
  ("queue" . "130c2d656cd5d7376552272fab9e50a7c37d0c4a")
  ("rainbow-mode" . "949166cc0146bc9fabf74ce70c1c4a097f4cffd4")
  ("recursive-narrow" . "5e3e2067d5a148d7e64e64e0355d3b6860e4c259")
+ ("refine" . "d72fa50910b86217a35bb1b7e56adea206052021")
  ("resize-window" . "72018aa4d2401b60120588199d4cedd0dc1fbcfb")
  ("restart-emacs" . "1607da2bc657fe05ae01f7fdf26f716eafead02c")
  ("restclient.el" . "f59a7f5abf366145a2c9c1e9f0a2184139d2adce")
