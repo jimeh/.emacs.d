@@ -119,6 +119,7 @@
 (require 'siren-whitespace-cleanup)
 
 ;; Version control
+(require 'siren-code-review)
 (require 'siren-diff-hl)
 (require 'siren-ediff)
 (require 'siren-forge)
