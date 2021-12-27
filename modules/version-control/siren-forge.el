@@ -6,7 +6,9 @@
 
 ;;; Code:
 
+(require 'siren-code-review)
 (require 'siren-gh-notify)
+(require 'siren-github-review)
 (require 'siren-magit)
 
 (use-package forge
@@ -18,6 +20,10 @@
                         "forge-database.sqlite" siren-cache-dir))
 
   :config
+  (transient-insert-suffix 'forge-dispatch '(1)
+    ["Pull Request"
+     ("p c" "code-review at point" code-review-forge-pr-at-point)
+     ("p g" "github-review at point" github-review-forge-pr-at-point)])
   (transient-insert-suffix 'forge-dispatch '(1)
     ["GitHub"
      ("g n" "notifications" gh-notify)]))

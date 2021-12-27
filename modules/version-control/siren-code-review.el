@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-forge)
-
 (use-package code-review
   :defer t
   :custom
@@ -15,13 +13,7 @@
                                  "code-review-db.sqlite" siren-cache-dir))
   (code-review-fill-column 80)
   (code-review-lgtm-message "lgtm :)")
-  (code-review-new-buffer-window-strategy 'switch-to-buffer)
-
-  :init
-  (with-eval-after-load 'forge
-    (transient-insert-suffix 'forge-dispatch '(1)
-      ["""Pull Request"
-       ("p r" "review at point" code-review-forge-pr-at-point)])))
+  (code-review-new-buffer-window-strategy 'switch-to-buffer))
 
 (provide 'siren-code-review)
 ;;; siren-code-review.el ends here

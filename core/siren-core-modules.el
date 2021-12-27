@@ -126,6 +126,7 @@
 (require 'siren-gh-notify)
 (require 'siren-git-timemachine)
 (require 'siren-github)
+(require 'siren-github-review)
 (require 'siren-magit)
 
 ;; Window management
