@@ -12,7 +12,7 @@
                 ;; package on elpa.gnu.org is quite old.
                 (undo-tree :type git :host gitlab
                            :repo "tsc25/undo-tree"
-                               :branch "master")))))
+                           :branch "master")))))
 
 (provide 'siren-core-package-overrides)
 ;;; siren-core-packages.el ends here
