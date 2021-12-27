@@ -123,6 +123,7 @@
 (require 'siren-diff-hl)
 (require 'siren-ediff)
 (require 'siren-forge)
+(require 'siren-gh-notify)
 (require 'siren-git-timemachine)
 (require 'siren-github)
 (require 'siren-magit)

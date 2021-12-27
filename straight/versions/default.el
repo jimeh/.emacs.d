@@ -72,6 +72,7 @@
  ("gcmh" . "0089f9c3a6d4e9a310d0791cf6fa8f35642ecfd9")
  ("ghub" . "fb2ecd726577b0049cd56883649c6ccb8072ae63")
  ("git-link" . "b2d803ad8764b896f5dd7f7e139ceb4903f7d8b6")
+ ("gh-notify" . "aa4d8bc0c56366d437e7c126e7eedc5938109342")
  ("git-modes" . "62fbf2e5b84ca789e7bc2f87939386023b5ba3df")
  ("git-timemachine" . "3381797bcbf906b18dff654a2361032d2d01b4a3")
  ("github-browse-file" . "9742a5183af853788c6ecb83fb7ee0b00d1675ac")

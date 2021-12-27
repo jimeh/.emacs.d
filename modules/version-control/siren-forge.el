@@ -6,6 +6,7 @@
 
 ;;; Code:
 
+(require 'siren-gh-notify)
 (require 'siren-magit)
 
 (use-package forge
@@ -14,7 +15,12 @@
 
   :custom
   (forge-database-file (expand-file-name
-                        "forge-database.sqlite" siren-cache-dir)))
+                        "forge-database.sqlite" siren-cache-dir))
+
+  :config
+  (transient-insert-suffix 'forge-dispatch '(1)
+    ["GitHub"
+     ("g n" "notifications" gh-notify)]))
 
 (use-package forge-post
   :straight forge
