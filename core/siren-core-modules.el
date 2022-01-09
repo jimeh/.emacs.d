@@ -44,7 +44,7 @@
 (require 'siren-which-key)
 
 ;; Completion Systems and Interfaces
-(require 'siren-selectrum)
+(require 'siren-vertico)
 (require 'siren-orderless)
 
 ;; Linting
