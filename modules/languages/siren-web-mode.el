@@ -40,11 +40,8 @@
 
     (company-mode +1)
     (siren-folding)
-    (subword-mode +1)))
-
-(use-package web-beautify
-  :bind (:map web-mode-map
-              ("C-c C-f" . web-beautify-html)))
+    (subword-mode +1)
+    (lsp-deferred)))
 
 (provide 'siren-web-mode)
 ;;; siren-web-mode.el ends here

@@ -14,7 +14,9 @@
   (defun siren-dockerfile-mode-setup ()
     (with-eval-after-load 'flycheck
       (flycheck-select-checker 'hadolint))
-    (subword-mode +1))
+    (subword-mode +1)
+    (lsp-deferred)
+    (lsp-format-buffer-on-save-mode +1))
 
   (with-eval-after-load 'flycheck
     ;; Define fixed Hadolint checker, built-in checker expects lines to start
