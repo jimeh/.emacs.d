@@ -20,34 +20,16 @@
   :init
   (defun siren-terraform-mode-setup ()
     (setq-local tab-width 2)
-    (terraform-format-on-save-mode 1))
-
-  (defun siren-define-terraform-format-mode ()
-    ;; This does a better job of injecting formatted content than the default
-    ;; formatting commands included with terraform-mode.
-    (reformatter-define terraform-format
-      :program "terraform"
-      :args '("fmt" "-no-color" "-")
-      :lighter " TF"))
+    (terraform-format-on-save-mode 1)
+    (lsp-deferred))
 
   :config
-  (siren-define-terraform-format-mode)
-
-  ;; When terraform-ls CLI tool is available, setup lsp-mode to use it
-  (when (executable-find "terraform-ls")
-    (with-eval-after-load 'lsp-mode
-      ;; Disable terraform client included with lsp-mode, because it uses
-      ;; terraform-lsp which I have not managed to get working.
-      (add-to-list 'lsp-disabled-clients 'tfls)
-
-      (lsp-register-client
-       (make-lsp-client
-        :new-connection (lsp-stdio-connection '("terraform-ls" "serve"))
-        :major-modes '(terraform-mode)
-        :priority 1
-        :server-id 'terraform-ls))
-
-      (add-hook 'terraform-mode-hook #'lsp-deferred))))
+  ;; This does a better job of injecting formatted content than the default
+  ;; formatting commands included with terraform-mode.
+  (reformatter-define terraform-format
+    :program "terraform"
+    :args '("fmt" "-no-color" "-")
+    :lighter " TF"))
 
 (use-package terraform-doc
   :defer t)
