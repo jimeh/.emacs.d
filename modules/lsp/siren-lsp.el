@@ -63,6 +63,9 @@
       (lsp-format-buffer)))
 
   :config
+  ;; Add "tmp" directories to ignored list of directories.
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]tmp")
+
   (define-minor-mode lsp-format-buffer-on-save-mode
     "Run lsp-format-buffer as a before-save-hook."
     :lighter " fmt"
