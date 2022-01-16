@@ -27,9 +27,14 @@
   :straight (:type git :host github :repo "emacs-straight/vertico"
                    :files ("extensions/*.el"))
   :after vertico
-  :ensure nil
+  :hook (rfn-eshadow-update-overlay . vertico-directory-tidy)
   :bind
-  ("C-c C-v" . vertico-restore))
+  ("C-c C-v" . vertico-restore)
+  (:map vertico-map
+        ("RET" . vertico-directory-enter)
+        ("DEL" . vertico-directory-delete-char)
+        ("M-DEL" . vertico-directory-delete-word)
+        ("C-l" . vertico-directory-up)))
 
 (provide 'siren-vertico)
 ;;; siren-vertico.el ends here
