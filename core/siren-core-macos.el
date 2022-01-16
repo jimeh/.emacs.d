@@ -44,5 +44,20 @@
 ;; Set initial frame to fullscreen when Emacs starts.
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
+;; Override default ctrl+scroll text size keybindings on macOS to not have any
+;; effect.
+(defun siren-mouse-wheel-text-scale (_event)
+  "Custom version of `mouse-wheel-text-scale' which does NOTHING.
+
+macOS scroll momentum often leads to excessive text size changes
+when using ctrl-based keybindings right after scrolling up/down.
+This is very annoying, and in extreme cases locks up Emacs for
+minutes as it's trying to reach 100,000 font size or something
+crazy."
+  (interactive (list last-input-event)))
+
+(global-set-key (kbd "C-<wheel-down>") 'siren-mouse-wheel-text-scale)
+(global-set-key (kbd "C-<wheel-up>") 'siren-mouse-wheel-text-scale)
+
 (provide 'siren-core-macos)
 ;;; siren-core-macos.el ends here
