@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.10](https://github.com/jimeh/.emacs.d/compare/v0.8.9...v0.8.10) (2022-01-16)
+
+
+### Features
+
+* **completion:** switch from selectrum to vertico ([56a577a](https://github.com/jimeh/.emacs.d/commit/56a577ae918a6739e65d4d43f3b83b59bc24d1a8))
+* **editor/veritco:** add vertico-directory extension ([04d83a2](https://github.com/jimeh/.emacs.d/commit/04d83a23cd1de1d76dd373c784ee6e08feb55e21))
+* **version-control:** add gh-notify package ([90441a2](https://github.com/jimeh/.emacs.d/commit/90441a259086c6ffa88c8ecd7ad8365f285ad662))
+* **version-control:** add github-review package ([fd707a6](https://github.com/jimeh/.emacs.d/commit/fd707a6e1b20406ff9725b2be52df455efbdf289))
+
+
+### Bug Fixes
+
+* **lsp-mode:** add "tmp" to ignored directory names ([3a8b04b](https://github.com/jimeh/.emacs.d/commit/3a8b04b59cd3df8357d3445aa524ccb5e38e47b9))
+* **macos:** disable ctrl+scroll emacs keybindings on macOS ([d6860c0](https://github.com/jimeh/.emacs.d/commit/d6860c0fe52fe4cdb111fdbdf8426b135deb9bfa))
+
 ### [0.8.9](https://github.com/jimeh/.emacs.d/compare/v0.8.8...v0.8.9) (2021-11-30)
 
 
