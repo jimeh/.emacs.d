@@ -153,7 +153,7 @@
   :straight helm
   :after (helm-global-bindings)
   :bind
-  ("C-x C-f" . helm-find-files)
+  ("C-x f" . helm-find-files)
 
   :custom
   (helm-buffer-max-length 64)
