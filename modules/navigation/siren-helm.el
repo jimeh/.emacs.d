@@ -138,6 +138,7 @@
         (select-window win))))
 
   :config
+  (require 'helm-mode)
   (advice-add 'helm :before 'siren-helm--hide-neotree)
   (advice-add 'helm :before 'siren-helm--hide-treemacs))
 
