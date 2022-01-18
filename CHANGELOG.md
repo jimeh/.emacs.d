@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.11](https://github.com/jimeh/.emacs.d/compare/v0.8.10...v0.8.11) (2022-01-18)
+
+
+### Features
+
+* **editor/vertico:** improve extension setup ([309bc2a](https://github.com/jimeh/.emacs.d/commit/309bc2a611b68aabc7bc4cb8a6145b370af8caca))
+* **languages:** enable lsp-mode in Dockerfiles and web-mode buffers ([fdc443e](https://github.com/jimeh/.emacs.d/commit/fdc443ea740dac0e5c1f70fb04acf3a9799a4a93))
+
+
+### Bug Fixes
+
+* **navigation/helm:** add require helm-mode to fix errors ([b5daa4f](https://github.com/jimeh/.emacs.d/commit/b5daa4f2e5143250ec75e80f9318a5ce3e3651f3))
+* **navigation/helm:** set helm-find-files to C-x f ([bd36da4](https://github.com/jimeh/.emacs.d/commit/bd36da4bfeb042e80f9402523a790ada3a80b8df))
+
 ### [0.8.10](https://github.com/jimeh/.emacs.d/compare/v0.8.9...v0.8.10) (2022-01-16)
 
 
