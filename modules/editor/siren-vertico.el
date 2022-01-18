@@ -23,18 +23,60 @@
   (vertico-mode +1)
   (advice-add #'completing-read-multiple :filter-args #'siren-crm-indicator))
 
-(use-package vertico-extensions
-  :straight (:type git :host github :repo "emacs-straight/vertico"
-                   :files ("extensions/*.el"))
+(use-package vertico-mouse
   :after vertico
-  :hook (rfn-eshadow-update-overlay . vertico-directory-tidy)
+  :config
+  (vertico-mouse-mode +1))
+
+(use-package vertico-repeat
+  :after vertico
   :bind
-  ("C-c C-v" . vertico-restore)
+  ("C-c C-v" . vertico-repeat))
+
+(use-package vertico-directory
+  :after vertico
+  :demand t
+  :bind
   (:map vertico-map
-        ("RET" . vertico-directory-enter)
-        ("DEL" . vertico-directory-delete-char)
-        ("M-DEL" . vertico-directory-delete-word)
-        ("C-l" . vertico-directory-up)))
+        ("C-l" . vertico-directory-up))
+
+  :init
+  ;; Hacky minor-mode to toggle vertico-directory features on and off.
+  (define-minor-mode vertico-directory-mode
+    "Remap vertico keybindings to handle files/folders better."
+    :global t
+    (let ((map vertico-map))
+      (if vertico-directory-mode
+          (progn
+            (add-hook 'rfn-eshadow-update-overlay-hook
+                      'vertico-directory-tidy)
+            (define-key map (kbd "RET") 'vertico-directory-enter)
+            (define-key map (kbd "DEL") 'vertico-directory-delete-char)
+            (define-key map (kbd "M-DEL") 'vertico-directory-delete-word))
+        (progn
+          (remove-hook 'rfn-eshadow-update-overlay-hook
+                       'vertico-directory-tidy)
+          (define-key map (kbd "RET") 'vertico-exit)
+          (define-key map (kbd "DEL") 'backward-delete-char)
+          (define-key map (kbd "M-DEL") 'backward-kill-word)))))
+
+  :config
+  (vertico-directory-mode +1)
+
+  (with-eval-after-load 'projectile
+    ;; Hackily disable vertico-directory-mode when completing things for
+    ;; projectile. This avoids breaking projectile-switch-project command.
+    (defun siren-vertico-projectile-completing-read (orig-fun &rest args)
+      (if vertico-directory-mode
+          (progn
+            (vertico-directory-mode -1)
+            (let ((result (apply orig-fun args)))
+              (vertico-directory-mode +1)
+              result))
+        (apply orig-fun args)))
+
+    (advice-add 'projectile-completing-read :around
+                'siren-vertico-projectile-completing-read)))
 
 (provide 'siren-vertico)
 ;;; siren-vertico.el ends here
