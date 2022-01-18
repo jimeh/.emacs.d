@@ -70,9 +70,9 @@
       (if vertico-directory-mode
           (progn
             (vertico-directory-mode -1)
-            (let ((result (apply orig-fun args)))
-              (vertico-directory-mode +1)
-              result))
+            (unwind-protect
+                (apply orig-fun args)
+              (vertico-directory-mode +1)))
         (apply orig-fun args)))
 
     (advice-add 'projectile-completing-read :around
