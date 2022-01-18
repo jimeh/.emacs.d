@@ -19,7 +19,7 @@
 
  `(font-lock-variable-name-face ((t (:foreground ,(doom-lighten 'blue 0.25)))))
  `(vertical-border ((t ( :foreground ,(doom-darken 'vertical-bar
-                                                   (if window-system 0.4 0.1))
+                                                   (if window-system 0.4 0.0))
                          :background ,(doom-color 'bg) ))))
  `(font-lock-comment-face ((t ( :foreground ,(doom-lighten 'comments 0.15) ))))
 
