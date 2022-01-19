@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.12](https://github.com/jimeh/.emacs.d/compare/v0.8.11...v0.8.12) (2022-01-19)
+
+
+### Bug Fixes
+
+* **editor/vertico:** cleanup if projectile command is canceled ([c80b4e2](https://github.com/jimeh/.emacs.d/commit/c80b4e24fa6af0d510238070344d8093818fdf2e))
+
 ### [0.8.11](https://github.com/jimeh/.emacs.d/compare/v0.8.10...v0.8.11) (2022-01-18)
 
 
