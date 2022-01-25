@@ -79,7 +79,6 @@
 
 ;; Project management
 (require 'siren-editorconfig)
-(require 'siren-helm-projectile)
 (require 'siren-projectile)
 (require 'siren-treemacs)
 

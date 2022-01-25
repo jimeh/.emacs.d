@@ -15,6 +15,10 @@
   ("C-c C-b" . projectile-ibuffer)
   ("C-c b" . projectile-switch-to-buffer)
   ("C-x C-t" . projectile-find-file)
+  ("C-x ;" . projectile-find-file)
+  ("C-x C-;" . projectile-find-file)
+  ("C-c ;" . projectile-switch-project)
+  ("C-c C-;" . projectile-switch-project)
 
   (:map projectile-mode-map
         ("C-c p" . projectile-command-map))
