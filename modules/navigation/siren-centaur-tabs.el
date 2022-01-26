@@ -16,13 +16,15 @@
   ("s->" . centaur-tabs-forward-group)
 
   :custom
+  (centaur-tabs-gray-out-icons 'buffer)
   (centaur-tabs-height 32)
   (centaur-tabs-modified-marker "•") ;; Unicode Bullet (0x2022)
-  (centaur-tabs-set-bar 'left)
+  (centaur-tabs-set-bar 'over)
   (centaur-tabs-set-icons t)
   (centaur-tabs-set-modified-marker t)
   (centaur-tabs-show-navigation-buttons nil)
   (centaur-tabs-style "bar")
+  (centaur-tabs-enable-ido-completion nil)
 
   :config
   (centaur-tabs-mode t)
