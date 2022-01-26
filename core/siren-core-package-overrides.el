@@ -8,6 +8,11 @@
 
 (setq straight-recipe-overrides
       '((nil . (
+                ;; Override company-nginx recipe as the original repo was
+                ;; deleted.
+                (company-nginx :type git :host github
+                               :repo "emacsmirror/company-nginx"
+                               :branch "master")
                 ;; Use latest version of undo-tree from main git repo. The
                 ;; package on elpa.gnu.org is quite old.
                 (undo-tree :type git :host gitlab
