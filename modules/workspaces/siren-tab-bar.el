@@ -45,18 +45,20 @@
         ("7" . siren-tab-bar-switch-to-index)
         ("8" . siren-tab-bar-switch-to-index)
         ("9" . siren-tab-bar-switch-to-index)
-
         ("b" . tab-bar-history-back)
         ("C-b" . tab-bar-history-back)
         ("f" . tab-bar-history-forward)
         ("C-f" . tab-bar-history-forward))
 
   :custom
+  (tab-bar-close-button-show nil)
+  (tab-bar-format '(tab-bar-format-tabs-groups tab-bar-separator))
   (tab-bar-history-limit 25)
   (tab-bar-new-tab-choice "*scratch*")
-  (tab-bar-tab-hints nil)
-  ;; Don't show visual tab-bar unless there are more than 99 tabs.
-  (tab-bar-show 99)
+  (tab-bar-show t)
+  (tab-bar-tab-group-format-function #'siren-tab-bar-tab-group-format-default)
+  (tab-bar-tab-hints t)
+  (tab-bar-tab-name-format-function #'siren-tab-bar-tab-name-format-default)
 
   :config
   (siren-tab-bar-setup)
@@ -89,6 +91,57 @@
     '((t :inherit font-lock-comment-face))
     "Face for index numbers in echo area."
     :group 'siren-tab-bar)
+
+  (defface siren-tab-bar-tab
+    `((t :inherit 'tab-bar-tab
+         :foreground ,(face-attribute 'font-lock-keyword-face :foreground nil t)))
+    "Face for active tab in tab-bar."
+    :group 'siren-tab-bar)
+
+  (defface siren-tab-bar-tab-hint
+    `((t :inherit 'siren-tab-bar-tab
+         :foreground ,(face-attribute 'tab-bar-tab-inactive :foreground nil t)))
+    "Face for active tab hint in tab-bar."
+    :group 'siren-tab-bar)
+
+  (defface siren-tab-bar-tab-inactive
+    `((t :inherit 'tab-bar-tab-inactive
+         :foreground ,(face-attribute 'font-lock-comment-face :foreground nil t)))
+    "Face for inactive tab in tab-bar."
+    :group 'siren-tab-bar)
+
+  (defface siren-tab-bar-tab-hint-inactive
+    `((t :inherit 'siren-tab-bar-tab-inactive
+         :foreground ,(face-attribute 'tab-bar-tab-inactive :foreground nil t)))
+    "Face for inactive tab hint in tab-bar."
+    :group 'siren-tab-bar)
+
+  (defun siren-tab-bar-tab-name-format-default (tab i)
+    (let* ((current-p (eq (car tab) 'current-tab))
+           (tab-face (if current-p
+                         'siren-tab-bar-tab
+                       'siren-tab-bar-tab-inactive))
+           (hint-face (if current-p
+                          'siren-tab-bar-tab-hint
+                        'siren-tab-bar-tab-hint-inactive)))
+      (concat (propertize (if tab-bar-tab-hints (format "  %d:" (- i 1)) "  ")
+                          'face hint-face)
+              (propertize
+               (concat
+                (alist-get 'name tab)
+                (or (and tab-bar-close-button-show
+                         (not (eq tab-bar-close-button-show
+                                  (if current-p 'non-selected 'selected)))
+                         tab-bar-close-button)
+                    "")
+                "  ")
+               'face tab-face))))
+
+  (defun siren-tab-bar-tab-group-format-default (tab i)
+    (propertize
+     (concat (if tab-bar-tab-hints (format "%d:" (- i 1)) "")
+             (funcall tab-bar-tab-group-function tab))
+     'face 'tab-bar-tab-group-inactive))
 
   (defun siren-tab-bar-switch-to-or-create-tab (name)
     "Switch to or create a tab by NAME."
@@ -165,7 +218,9 @@ ARG counts from 1."
   (advice-add 'tab-bar-new-tab-to :after #'siren-tab-bar-echo-tab-list-advice)
   (advice-add 'tab-bar-rename-tab :after #'siren-tab-bar-echo-tab-list-advice)
   (advice-add 'tab-bar-select-tab :after #'siren-tab-bar-echo-tab-list-advice)
-  (advice-add 'tab-switcher-select :after #'siren-tab-bar-echo-tab-list-advice))
+  (advice-add 'tab-switcher-select :after #'siren-tab-bar-echo-tab-list-advice)
+  (advice-add 'display-buffer-in-new-tab :after #'siren-tab-bar-echo-tab-list-advice)
+  (advice-add 'tab-bar-change-tab-group :after #'siren-tab-bar-echo-tab-list-advice))
 
 (provide 'siren-tab-bar)
 ;;; siren-tab-bar.el ends here
