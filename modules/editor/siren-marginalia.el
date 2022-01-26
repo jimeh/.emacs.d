@@ -11,6 +11,11 @@
   :bind (:map minibuffer-local-map
          ("M-A" . marginalia-cycle))
 
+  :custom
+  (marginalia-align-offset 10)
+  (marginalia-field-width 120)
+  (marginalia-separator "  ")
+
   :init
   (defun marginalia-annotate-project-buffer (cand)
     "Annotate project buffer CAND with modification status, file name and major
