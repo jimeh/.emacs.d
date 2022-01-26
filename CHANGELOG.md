@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.13](https://github.com/jimeh/.emacs.d/compare/v0.8.12...v0.8.13) (2022-01-26)
+
+
+### Features
+
+* **projects:** switch from helm-projectile to regular projectile commands ([0312a36](https://github.com/jimeh/.emacs.d/commit/0312a360b4918d155d67443a8d75056e19152e10))
+* **workspaces/tab-bar:** display tab-bar and make it pretty ([ddc99ac](https://github.com/jimeh/.emacs.d/commit/ddc99acaa0fc794608f568497307a449dec4d53b))
+
 ### [0.8.12](https://github.com/jimeh/.emacs.d/compare/v0.8.11...v0.8.12) (2022-01-19)
 
 
