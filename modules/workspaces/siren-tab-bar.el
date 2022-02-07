@@ -55,7 +55,7 @@
   (tab-bar-format '(tab-bar-format-tabs-groups tab-bar-separator))
   (tab-bar-history-limit 25)
   (tab-bar-new-tab-choice "*scratch*")
-  (tab-bar-show t)
+  (tab-bar-show 1)
   (tab-bar-tab-group-format-function #'siren-tab-bar-tab-group-format-default)
   (tab-bar-tab-hints t)
   (tab-bar-tab-name-format-function #'siren-tab-bar-tab-name-format-default)
