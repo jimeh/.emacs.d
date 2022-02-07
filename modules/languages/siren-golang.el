@@ -72,16 +72,13 @@
   :custom
   (lsp-go-use-placeholders t)
   (lsp-go-link-target "pkg.go.dev")
+  (lsp-go-use-gofumpt t)
   (lsp-go-analyses '((nilness . t)
                      (shadow . t)
                      (unusedparams . t)
                      (unusedwrite . t)))
 
   :config
-  (lsp-register-custom-settings
-   '(("gopls.allowModfileModifications" t t)
-     ("gopls.gofumpt" t t)))
-
   ;; Create custom lsp-client for golangci-lint-langserver.
   (lsp-register-custom-settings
    '(("golangci-lint.command" ["golangci-lint" "run" "--out-format" "json"])))
