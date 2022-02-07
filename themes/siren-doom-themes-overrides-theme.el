@@ -135,6 +135,9 @@
 (custom-theme-set-variables
  'siren-doom-themes-overrides
 
+ ;; lsp-ui
+ `(lsp-ui-doc-border ,(doom-blend 'blue 'bg 0.75))
+
  ;; fill-column-indicator
  `(fci-rule-color ,(doom-lighten 'base3 0.10))
 
