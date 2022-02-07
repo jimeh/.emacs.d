@@ -60,9 +60,6 @@
           (define-key map (kbd "DEL") 'backward-delete-char)
           (define-key map (kbd "M-DEL") 'backward-kill-word)))))
 
-  :config
-  (vertico-directory-mode +1)
-
   (with-eval-after-load 'projectile
     ;; Hackily disable vertico-directory-mode when completing things for
     ;; projectile. This avoids breaking projectile-switch-project command.
@@ -76,7 +73,10 @@
         (apply orig-fun args)))
 
     (advice-add 'projectile-completing-read :around
-                'siren-vertico-projectile-completing-read)))
+                'siren-vertico-projectile-completing-read))
+
+  :config
+  (vertico-directory-mode +1))
 
 (provide 'siren-vertico)
 ;;; siren-vertico.el ends here
