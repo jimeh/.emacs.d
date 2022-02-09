@@ -19,6 +19,10 @@
   :custom
   (helm-command-prefix-key "C-c h"))
 
+(use-package helm-core
+  :after helm-global-bindings
+  :defer t)
+
 (use-package helm
   :after (helm-global-bindings)
   :defer t
@@ -166,7 +170,6 @@
   :bind
   ("C-c f f" . helm-for-files)
   ("C-c f r" . helm-recentf))
-
 
 (use-package helm-ring
   :straight helm
