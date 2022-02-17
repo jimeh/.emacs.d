@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.14](https://github.com/jimeh/.emacs.d/compare/v0.8.13...v0.8.14) (2022-02-17)
+
+
+### Features
+
+* **font:** change default font "Menlo" to "Menlo Nerd Font Mono" ([b428d26](https://github.com/jimeh/.emacs.d/commit/b428d262ff4d3475c2753d7f8c96a44b8e00bae6))
+* **nativation/consult:** custom groups for consult-buffer ([1db4018](https://github.com/jimeh/.emacs.d/commit/1db40184978a750f8a156298499397bdab6ddcde))
+* **themes:** add lsp-ui-doc-border styling to override theme ([f496e14](https://github.com/jimeh/.emacs.d/commit/f496e14710e723bb626e1b01bfe60b4af8f742a9))
+
+
+### Bug Fixes
+
+* **docs/helpful:** add workarounds for recent Emacs 29.x issues ([d6d7b3a](https://github.com/jimeh/.emacs.d/commit/d6d7b3a450538a7cd668a1dc240986b8ca70f351))
+* **editor/vertico:** resolve race-condition issue with projectile-switch-project ([4a552aa](https://github.com/jimeh/.emacs.d/commit/4a552aa96dddc1304e161cacf4add721d782df58))
+* **nativation/helm:** resolve helm loading issue after update ([1a41eea](https://github.com/jimeh/.emacs.d/commit/1a41eea77e859430a8ddeadd8d407b699b3ed74a))
+* **ui:** prevent tab-bar being visible in lsp-ui-doc child frame ([27fae46](https://github.com/jimeh/.emacs.d/commit/27fae4666453491f9413763abfa4ddab6467ac40))
+
 ### [0.8.13](https://github.com/jimeh/.emacs.d/compare/v0.8.12...v0.8.13) (2022-01-26)
 
 
