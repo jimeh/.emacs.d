@@ -17,6 +17,7 @@
 
   :config
   ;; Hide the mode line of the Embark live/completions buffers
+  (add-to-list 'embark-keymap-alist '(project-buffer . embark-buffer-map))
   (add-to-list 'display-buffer-alist
                '("\\`\\*Embark Collect \\(Live\\|Completions\\)\\*"
                  nil
