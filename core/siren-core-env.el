@@ -25,7 +25,7 @@
   (exec-path-from-shell-debug nil)
 
   :config
-  (when (memq window-system '(mac ns x))
+  (when (memq window-system '(mac ns x pgtk))
     (exec-path-from-shell-initialize)))
 
 ;; Set temporary-file-directory to match TMPDIR environment variable
