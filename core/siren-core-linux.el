@@ -8,22 +8,21 @@
 
 ;; Set default font
 (if window-system
-    (let* ((primary "Menlo Nerd Font Mono")
-           (fallback "Menlo")
-           (family (if (member primary (font-family-list)) primary fallback)))
+    ;; Set default font based on priority list
+    (let* ((families '("Menlo Nerd Font Mono"
+                       "Menlo for Powerline"
+                       "Menlo"
+                       "Monaco Nerd Font Mono"
+                       "Monaco for Powerline"
+                       "Monaco"))
+           (family (catch 'found
+                     (dolist (f families)
+                       (if (member f (font-family-list))
+                           (throw 'found f))))))
       (set-face-attribute 'default nil :family family :height 90)))
 
 ;; Keybindinds
-(global-set-key (kbd "s-<return>") 'siren-linux-toggle-fullscreen)
-
-;; Fullscreen helper function
-(defun siren-linux-toggle-fullscreen ()
-  "Toggle full screen on X11."
-  (interactive)
-  (when (eq window-system 'x)
-    (set-frame-parameter
-     nil 'fullscreen
-     (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
+(global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
 
 (provide 'siren-core-linux)
 ;;; siren-core-linux.el ends here
