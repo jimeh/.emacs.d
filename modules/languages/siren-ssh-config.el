@@ -9,7 +9,8 @@
 (require 'siren-prog-mode)
 
 (use-package ssh-config-mode
-  :mode "/ssh/config\\'"
+  :mode
+  "/\\.local/ssh/config\\(\\.d/.*\\.conf\\)?\\'"
   :hook (ssh-config-mode . siren-ssh-config-mode-setup)
 
   :init
