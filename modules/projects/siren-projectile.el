@@ -15,6 +15,8 @@
   ("C-c C-b" . projectile-ibuffer)
   ("C-c b" . projectile-switch-to-buffer)
   ("C-x C-t" . projectile-find-file)
+  ("C-x j" . projectile-dired)
+
   ("C-x ;" . projectile-find-file)
   ("C-x C-;" . projectile-find-file)
   ("C-c ;" . projectile-switch-project)

@@ -67,7 +67,6 @@
 (require 'siren-consult)
 (require 'siren-ctrlf)
 (require 'siren-dired)
-(require 'siren-direx)
 (require 'siren-dumb-jump)
 (require 'siren-git-link)
 (require 'siren-helm)
