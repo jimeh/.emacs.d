@@ -13,7 +13,6 @@
   ("C-c p r" . projectile-replace)
   ("C-c p S" . projectile-save-project-buffers)
   ("C-c C-b" . projectile-ibuffer)
-  ("C-c b" . projectile-switch-to-buffer)
   ("C-x C-t" . projectile-find-file)
   ("C-x j" . projectile-dired)
 
