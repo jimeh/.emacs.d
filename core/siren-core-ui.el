@@ -16,6 +16,9 @@
 
 (menu-bar-mode -1)
 
+;; disable UI-based dialog boxes
+(setq use-dialog-box nil)
+
 ;; disable startup screen
 (setq inhibit-startup-screen t)
 
