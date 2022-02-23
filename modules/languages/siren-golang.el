@@ -113,6 +113,9 @@
 (use-package gotest
   :defer t
   :after (go-mode)
+  :hook
+  (go-mode . siren-gotest-setup)
+
   :bind (:map go-mode-map
               ("C-c , a" . go-test-current-project)
               ("C-c , v" . go-test-current-file)
@@ -120,10 +123,34 @@
               ("C-c , c" . go-test-current-coverage)
               ("C-c , b" . go-test-current-benchmark)
               ("C-c , B" . go-test-current-project-benchmarks)
-              ("C-c , r" . go-run))
+              ("C-c , r" . go-run)
+              ("C-c , t" . ff-find-other-file))
 
   :custom
-  (go-test-verbose t))
+  (go-test-verbose t)
+
+  :init
+  (defun siren-gotest-setup ()
+    (let ((count-arg "-count=1"))
+      (if (and (boundp 'go-test-local) go-test-local)
+          (setq-local go-test-args (concat go-test-args " " count-arg))
+        (setq-local go-test-args count-arg))))
+
+  (when (not (version< emacs-version "28.0"))
+    ;; Change ff-other-file-name to ff-find-the-other-file in Emacs 28.x and
+    ;; later.
+    (defun go-test--get-current-buffer ()
+      "Return the test buffer for the current `buffer-file-name'.
+If `buffer-file-name' ends with `_test.go', `current-buffer' is returned.
+Otherwise, `ff-other-file-name' is used to find the test buffer.
+For example, if the current buffer is `foo.go', the buffer for
+`foo_test.go' is returned."
+      (if (string-match "_test\.go$" buffer-file-name)
+          (current-buffer)
+        (let ((ff-always-try-to-create nil)
+	      (filename (ff-find-the-other-file)))
+          (when filename
+	    (find-file-noselect filename)))))))
 
 (use-package dap-go
   :straight dap-mode
