@@ -29,7 +29,6 @@
  ("diminish.el" . "6b7e837b0cf0129e9d7d6abae48093cf599bb9e8")
  ("dired-hacks" . "7c0ef09d57a80068a11edc74c3568e5ead5cc15a")
  ("dired-plus" . "8e09cc67cbbcd9277927acfa765d325da382493b")
- ("direx" . "a79bfdb5980cf6ed7bfb3b41ddc471a7b6c0ede4")
  ("docker-tramp.el" . "930d7b46c180d8a13240a028c1b40af84f2a3219")
  ("docker.el" . "6e77b57d041c9ba8252fd6dbad8e43eca9854d8b")
  ("dockerfile-mode" . "11c43de04b128b7638cd98a1e80be2b661c18fbb")
