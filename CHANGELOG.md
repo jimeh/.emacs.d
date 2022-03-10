@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.15](https://github.com/jimeh/.emacs.d/compare/v0.8.14...v0.8.15) (2022-03-10)
+
+
+### Features
+
+* **core:** update linux font and fullscreen command ([a0bc641](https://github.com/jimeh/.emacs.d/commit/a0bc64107c0477c6a6a8ab83af4fb4e8b81cbbd9))
+* **core/editor:** disable graphical dialog boxes ([f39714b](https://github.com/jimeh/.emacs.d/commit/f39714b1ca6b7ffb6b19bce49cdfcc5786b84346))
+* **language/go:** improve and fix usage of gotest package ([2554669](https://github.com/jimeh/.emacs.d/commit/2554669fea92a1628199333f9d37444b48c90267))
+* **language/go:** use tree-sitter-mode and tree-sitter-hl-mode ([92c16d4](https://github.com/jimeh/.emacs.d/commit/92c16d4dcbdc0401d8710dce1019dbf0dfde18f7))
+* **language/markdown:** enable polymode in markdown buffers ([6f42277](https://github.com/jimeh/.emacs.d/commit/6f422773a5c8d3b8d765c0f2719c9053ed32402e))
+* **language/ssh-config:** add custom file path to mode list ([75543de](https://github.com/jimeh/.emacs.d/commit/75543de052e6eb750d776b989baa2063ff32cdcd))
+
+
+### Bug Fixes
+
+* **env:** initialize env from shell in pgtk window-system ([a1f30f6](https://github.com/jimeh/.emacs.d/commit/a1f30f6d1579344b56672ef470f6a8166e0ca33f))
+* **navigation:** disable direx as it is broken on recent Emacs 29.x builds ([96d5bab](https://github.com/jimeh/.emacs.d/commit/96d5bab074e418d52641b00516e5a1b8e08b4ce9))
+* **navigation:** remove ctrlf package in favor of isearch ([246a459](https://github.com/jimeh/.emacs.d/commit/246a459622705e04f93a5cbac24c8d26dd6f9081))
+
 ### [0.8.14](https://github.com/jimeh/.emacs.d/compare/v0.8.13...v0.8.14) (2022-02-17)
 
 
