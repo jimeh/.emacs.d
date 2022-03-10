@@ -65,7 +65,6 @@
 (require 'siren-avy)
 (require 'siren-centaur-tabs)
 (require 'siren-consult)
-(require 'siren-ctrlf)
 (require 'siren-dired)
 (require 'siren-dumb-jump)
 (require 'siren-git-link)
@@ -73,6 +72,7 @@
 (require 'siren-helm-ag)
 (require 'siren-helm-swoop)
 (require 'siren-imenu)
+(require 'siren-isearch)
 (require 'siren-recursive-narrow)
 (require 'siren-scroll-half-screen)
 
