@@ -14,6 +14,7 @@
 (require 'siren-lsp)
 (require 'siren-projectile)
 (require 'siren-reformatter)
+(require 'siren-tree-sitter)
 
 (use-package go-mode
   :mode "\\.go\\'"
@@ -41,6 +42,9 @@
       (highlight-symbol-mode -1))
     (when (fboundp 'auto-highlight-symbol-mode)
       (auto-highlight-symbol-mode -1))
+
+    (tree-sitter-mode +1)
+    (tree-sitter-hl-mode +1)
 
     (siren-display-indentation -1)
     (company-mode +1)

@@ -70,6 +70,11 @@
  `(git-gutter-fr:modified ((t ( :foreground ,(doom-blend 'vc-modified 'bg 0.7)
                                 :background ,(doom-blend 'vc-modified 'bg 0.0) ))))
 
+ ;; tree-sitter
+ `(tree-sitter-hl-face:property ((t (:inherit font-lock-constant-face)))) ;; disable italic
+ `(tree-sitter-hl-face:method.call ((t ( :foreground ,(doom-blend 'functions 'keywords 0.6) ))))
+ `(tree-sitter-hl-face:function.call ((t ( :foreground ,(doom-blend 'functions 'keywords 0.8) ))))
+
  ;; hideshowvis
  `(hideshowvis-hidable-face ((t ( :foreground ,(doom-color 'base7) ))))
 
