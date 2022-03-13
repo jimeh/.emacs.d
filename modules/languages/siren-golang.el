@@ -133,10 +133,10 @@
 
   :init
   (defun siren-gotest-setup ()
-    (let ((count-arg "-count=1"))
+    (let ((extra-args "-count=1 -race"))
       (if (and (boundp 'go-test-local) go-test-local)
-          (setq-local go-test-args (concat go-test-args " " count-arg))
-        (setq-local go-test-args count-arg))))
+          (setq-local go-test-args (concat go-test-args " " extra-args))
+        (setq-local go-test-args extra-args))))
 
   (when (not (version< emacs-version "28.0"))
     ;; Change ff-other-file-name to ff-find-the-other-file in Emacs 28.x and
