@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-company)
 (require 'siren-folding)
 
 (use-package haskell-mode
@@ -18,7 +17,6 @@
 
   :init
   (defun siren-haskell-mode-setup ()
-    (company-mode +1)
     (siren-folding)
     (subword-mode +1)))
 

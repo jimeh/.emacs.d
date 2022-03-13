@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-company)
 (require 'siren-dap)
 (require 'siren-folding)
 (require 'siren-lsp)
@@ -63,7 +62,6 @@
                 ruby-use-smie t
                 tab-width 2)
 
-    (company-mode +1)
     (siren-folding)
     (subword-mode +1))
 
@@ -126,7 +124,8 @@
 
   :init
   (defun siren-inf-ruby-mode-setup ()
-    (company-mode -1))
+    (if (fboundp 'company-mode)
+        (company-mode -1)))
 
   :config
   (unbind-key "C-c C-b" inf-ruby-minor-mode-map)

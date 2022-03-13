@@ -20,7 +20,6 @@
     (run-hooks 'prog-mode-hook)
     (setq tab-width 4)
 
-    (company-mode +1)
     (highlight-symbol-mode -1)
     (subword-mode +1)))
 

@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-company)
 (require 'siren-display-fill-column)
 (require 'siren-folding)
 
@@ -38,7 +37,6 @@
     (when (version< emacs-version "27.0")
       (siren-display-fill-column -1))
 
-    (company-mode +1)
     (siren-folding)
     (subword-mode +1)
     (lsp-deferred)))

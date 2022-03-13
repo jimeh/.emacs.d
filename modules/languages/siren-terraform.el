@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-company)
 (require 'siren-reformatter)
 (require 'siren-lsp)
 

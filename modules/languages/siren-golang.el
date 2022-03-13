@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-company)
 (require 'siren-dap)
 (require 'siren-display-indentation)
 (require 'siren-flycheck)
@@ -47,7 +46,6 @@
     (tree-sitter-hl-mode +1)
 
     (siren-display-indentation -1)
-    (company-mode +1)
     (siren-folding)
     (subword-mode +1))
 

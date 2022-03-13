@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-company)
 (require 'siren-flycheck)
 (require 'siren-folding)
 (require 'siren-lsp)
@@ -30,7 +29,6 @@
             indent-level width
             tab-width width))
 
-    (company-mode +1)
     (lsp-deferred)
     (subword-mode +1)
     (siren-folding)))
@@ -59,8 +57,7 @@
     (prettier-js-mode +1)
     (flycheck-mode +1)
     (eldoc-mode +1)
-    (tide-hl-identifier-mode +1)
-    (company-mode +1)))
+    (tide-hl-identifier-mode +1)))
 
 (provide 'siren-typescript)
 ;;; siren-typescript.el ends here

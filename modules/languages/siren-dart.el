@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-company)
 (require 'siren-folding)
 (require 'siren-lsp)
 (require 'siren-projectile)
@@ -33,7 +32,6 @@
     (when (fboundp 'auto-highlight-symbol-mode)
       (auto-highlight-symbol-mode -1))
 
-    (company-mode +1)
     (lsp-deferred)
     (siren-folding)
     (subword-mode +1)))

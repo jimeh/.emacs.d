@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-company)
 (require 'siren-prettier-js)
 (require 'siren-mmm)
 
@@ -17,7 +16,6 @@
   :init
   (defun siren-vue-mode-setup ()
     (prettier-js-mode)
-    (company-mode)
     (lsp-deferred)
     (subword-mode)
     (siren-folding)))

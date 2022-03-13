@@ -17,7 +17,6 @@
   :init
   (defun siren-rjsx-mode-setup ()
     (prettier-js-mode +1)
-    (company-mode +1)
     (subword-mode +1)
     (siren-folding)))
 

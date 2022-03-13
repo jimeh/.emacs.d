@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-company)
 (require 'siren-flycheck)
 (require 'siren-folding)
 (require 'siren-prog-mode)
@@ -23,7 +22,6 @@
     (c-add-style "siren" '((c-basic-offset . 2)
                            (indent-tabs-mode . nil)) t)
 
-    (company-mode +1)
     (subword-mode +1)
     (siren-folding))
 

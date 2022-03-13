@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-company)
 (require 'siren-folding)
 (require 'siren-prettier-js)
 (require 'siren-rainbow)
@@ -21,7 +20,6 @@
   (defun siren-php-mode-setup ()
     (prettier-js-mode)
     (rainbow-mode +1)
-    (company-mode +1)
     (subword-mode +1)
     (siren-folding)))
 

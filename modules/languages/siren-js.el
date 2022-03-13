@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-company)
 (require 'siren-folding)
 (require 'siren-lsp)
 
@@ -31,7 +30,6 @@
             indent-level width
             tab-width width))
 
-    (company-mode)
     (subword-mode)
     (siren-folding)))
 
