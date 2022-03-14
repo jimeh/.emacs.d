@@ -7,9 +7,9 @@
 ;;; Code:
 
 (use-package anzu
-  :bind
-  ("C-x C-r" . anzu-query-replace-regexp)
-  ("M-%" . anzu-query-replace)
+  :general
+  ("C-x C-r" 'anzu-query-replace-regexp)
+  ("M-%" 'anzu-query-replace)
 
   :custom
   (anzu-mode-lighter "")

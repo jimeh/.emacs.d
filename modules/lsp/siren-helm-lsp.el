@@ -11,10 +11,10 @@
 
 (use-package helm-lsp
   :after (helm-global-bindings)
-  :bind
-  ("C-c '" . helm-lsp-workspace-symbol)
-  ("C-c C-'" . helm-lsp-workspace-symbol)
-  ("C-c \\" . helm-lsp-diagnostics))
+  :general
+  ("C-c '" 'helm-lsp-workspace-symbol)
+  ("C-c C-'" 'helm-lsp-workspace-symbol)
+  ("C-c \\" 'helm-lsp-diagnostics))
 
 (provide 'siren-helm-lsp)
 ;;; siren-helm-lsp.el ends here

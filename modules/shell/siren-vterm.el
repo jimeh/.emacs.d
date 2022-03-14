@@ -13,20 +13,20 @@
   :hook
   (vterm-mode . siren-vterm-mode-setup)
 
-  :bind
-  (:map vterm-mode-map
-        ("C-c [" . vterm-copy-mode)
-        ("M-i" . windmove-up)
-        ("M-k" . windmove-down)
-        ("M-j" . windmove-left)
-        ("M-l" . windmove-right)
-        ("M-K" . windmove-swap-states-down)
-        ("M-I" . windmove-swap-states-up)
-        ("M-J" . windmove-swap-states-left)
-        ("M-L" . windmove-swap-states-right))
-  (:map vterm-copy-mode-map
-        ("C-g" . siren-vterm-copy-mode-cancel)
-        ("C-c [" . vterm-copy-mode))
+  :general
+  (:keymaps 'vterm-mode-map
+            "C-c [" 'vterm-copy-mode
+            "M-i" 'windmove-up
+            "M-k" 'windmove-down
+            "M-j" 'windmove-left
+            "M-l" 'windmove-right
+            "M-K" 'windmove-swap-states-down
+            "M-I" 'windmove-swap-states-up
+            "M-J" 'windmove-swap-states-left
+            "M-L" 'windmove-swap-states-right)
+  (:keymaps 'vterm-copy-mode-map
+            "C-g" 'siren-vterm-copy-mode-cancel
+            "C-c [" 'vterm-copy-mode)
 
   :custom
   (vterm-always-compile-module t)

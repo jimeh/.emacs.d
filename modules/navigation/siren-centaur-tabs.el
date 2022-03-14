@@ -9,11 +9,11 @@
 (use-package centaur-tabs
   :commands centaur-tabs-mode
 
-  :bind
-  ("s-[" . centaur-tabs-backward-tab)
-  ("s-]" . centaur-tabs-forward-tab)
-  ("s-<" . centaur-tabs-backward-group)
-  ("s->" . centaur-tabs-forward-group)
+  :general
+  ("s-[" 'centaur-tabs-backward-tab)
+  ("s-]" 'centaur-tabs-forward-tab)
+  ("s-<" 'centaur-tabs-backward-group)
+  ("s->" 'centaur-tabs-forward-group)
 
   :custom
   (centaur-tabs-gray-out-icons 'buffer)

@@ -10,52 +10,52 @@
 (require 'siren-workspace-map)
 
 (use-package persp-mode
-  :bind
-  ("s-}" . persp-next)
-  ("s-{" . persp-prev)
-  (:map siren-workspace-map
-        ("n" . persp-next)
-        ("C-n" . persp-next)
-        ("p" . persp-prev)
-        ("C-p" . persp-prev)
-        ("s" . persp-frame-switch)
-        ("C-s" . persp-frame-switch)
-        ("S" . persp-window-switch)
-        ("r" . persp-rename)
-        ("C-r" . persp-rename)
-        ("c" . persp-copy)
-        ("C-c" . persp-copy)
-        ("C" . persp-kill)
-        ("z" . persp-save-and-kill)
-        ("a" . persp-add-buffer)
-        ("C-a" . persp-add-buffer)
-        ("b" . persp-switch-to-buffer)
-        ("C-b" . siren-persp-mode-ibuffer)
-        ("t" . persp-temporarily-display-buffer)
-        ("i" . persp-import-buffers)
-        ("I" . persp-import-win-conf)
-        ("k" . persp-remove-buffer)
-        ("C-k" . persp-remove-buffer)
-        ("K" . persp-kill-buffer)
-        ("w" . persp-save-state-to-file)
-        ("W" . persp-save-to-file-by-names)
-        ("C-l" . siren-persp-mode-switch-to-most-recent)
-        ("l" . persp-load-state-from-file)
-        ("L" . persp-load-from-file-by-names)
-        (";" . siren-persp-mode-show-current-perspective-name)
-        ("C-;" . siren-persp-mode-show-current-perspective-name)
-        ("e" . siren-persp-mode-edit-names-cache)
-        ("C-e" . siren-persp-mode-edit-names-cache)
-        ("0" . siren-persp-switch-to-index)
-        ("1" . siren-persp-switch-to-index)
-        ("2" . siren-persp-switch-to-index)
-        ("3" . siren-persp-switch-to-index)
-        ("4" . siren-persp-switch-to-index)
-        ("5" . siren-persp-switch-to-index)
-        ("6" . siren-persp-switch-to-index)
-        ("7" . siren-persp-switch-to-index)
-        ("8" . siren-persp-switch-to-index)
-        ("9" . siren-persp-switch-to-index))
+  :general
+  ("s-}" 'persp-next)
+  ("s-{" 'persp-prev)
+  (:keymaps 'siren-workspace-map
+            "n" 'persp-next
+            "C-n" 'persp-next
+            "p" 'persp-prev
+            "C-p" 'persp-prev
+            "s" 'persp-frame-switch
+            "C-s" 'persp-frame-switch
+            "S" 'persp-window-switch
+            "r" 'persp-rename
+            "C-r" 'persp-rename
+            "c" 'persp-copy
+            "C-c" 'persp-copy
+            "C" 'persp-kill
+            "z" 'persp-save-and-kill
+            "a" 'persp-add-buffer
+            "C-a" 'persp-add-buffer
+            "b" 'persp-switch-to-buffer
+            "C-b" 'siren-persp-mode-ibuffer
+            "t" 'persp-temporarily-display-buffer
+            "i" 'persp-import-buffers
+            "I" 'persp-import-win-conf
+            "k" 'persp-remove-buffer
+            "C-k" 'persp-remove-buffer
+            "K" 'persp-kill-buffer
+            "w" 'persp-save-state-to-file
+            "W" 'persp-save-to-file-by-names
+            "C-l" 'siren-persp-mode-switch-to-most-recent
+            "l" 'persp-load-state-from-file
+            "L" 'persp-load-from-file-by-names
+            ";" 'siren-persp-mode-show-current-perspective-name
+            "C-;" 'siren-persp-mode-show-current-perspective-name
+            "e" 'siren-persp-mode-edit-names-cache
+            "C-e" 'siren-persp-mode-edit-names-cache
+            "0" 'siren-persp-switch-to-index
+            "1" 'siren-persp-switch-to-index
+            "2" 'siren-persp-switch-to-index
+            "3" 'siren-persp-switch-to-index
+            "4" 'siren-persp-switch-to-index
+            "5" 'siren-persp-switch-to-index
+            "6" 'siren-persp-switch-to-index
+            "7" 'siren-persp-switch-to-index
+            "8" 'siren-persp-switch-to-index
+            "9" 'siren-persp-switch-to-index)
 
   :custom
   (persp-auto-save-num-of-backups 10)

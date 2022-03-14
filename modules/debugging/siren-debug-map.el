@@ -7,13 +7,8 @@
 
 ;;; Code:
 
-(use-package siren-debug-map
-  :straight (:type built-in)
-  :no-require t
-
-  :bind
-  (:prefix-map siren-debug-map
-               :prefix "C-c -"))
+(define-prefix-command 'siren-debug-map)
+(general-define-key "C-c -" 'siren-debug-map)
 
 (provide 'siren-debug-map)
 ;;; siren-debug-map.el ends here

@@ -19,9 +19,10 @@
   :mode "\\.go\\'"
   :interpreter "go"
   :commands go-mode
-  :bind (:map go-mode-map
-              ("RET" . newline-and-indent)
-              ("C-h f" . godoc-at-point))
+  :general
+  (:keymaps 'go-mode-map
+            "RET" 'newline-and-indent
+            "C-h f" 'godoc-at-point)
 
   :hook
   (go-mode . siren-go-mode-setup)
@@ -118,15 +119,16 @@
   :hook
   (go-mode . siren-gotest-setup)
 
-  :bind (:map go-mode-map
-              ("C-c , a" . go-test-current-project)
-              ("C-c , v" . go-test-current-file)
-              ("C-c , s" . go-test-current-test)
-              ("C-c , c" . go-test-current-coverage)
-              ("C-c , b" . go-test-current-benchmark)
-              ("C-c , B" . go-test-current-project-benchmarks)
-              ("C-c , r" . go-run)
-              ("C-c , t" . ff-find-other-file))
+  :general
+  (:keymaps 'go-mode-map
+            "C-c , a" 'go-test-current-project
+            "C-c , v" 'go-test-current-file
+            "C-c , s" 'go-test-current-test
+            "C-c , c" 'go-test-current-coverage
+            "C-c , b" 'go-test-current-benchmark
+            "C-c , B" 'go-test-current-project-benchmarks
+            "C-c , r" 'go-run
+            "C-c , t" 'ff-find-other-file)
 
   :custom
   (go-test-verbose t)
@@ -156,9 +158,10 @@ For example, if the current buffer is `foo.go', the buffer for
 
 (use-package dap-go
   :straight dap-mode
-  :after (go-mode)
-  :bind (:map dap-mode-map
-              ("C-c , d" . siren-dap-go-debug-current-test))
+  :after go-mode
+  :general
+  (:keymaps 'dap-mode-map
+            "C-c , d" 'siren-dap-go-debug-current-test)
 
   :init
   (defun siren-dap-go-debug-current-test ()
@@ -178,9 +181,10 @@ For example, if the current buffer is `foo.go', the buffer for
 (use-package go-gen-test
   :defer t
   :after (go-mode)
-  :bind (:map go-mode-map
-              ("C-c , g" . go-gen-test-dwim)
-              ("C-c , G" . go-gen-test-exported)))
+  :general
+  (:keymaps 'go-mode-map
+            "C-c , g" 'go-gen-test-dwim
+            "C-c , G" 'go-gen-test-exported))
 
 (use-package go-projectile
   :defer t

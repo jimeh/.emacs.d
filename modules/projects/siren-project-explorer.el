@@ -7,8 +7,8 @@
 ;;; Code:
 
 (use-package project-explorer
-  :bind
-  ("C-x C-p" . project-explorer-toggle)
+  :general
+  ("C-x C-p" 'project-explorer-toggle)
 
   :custom
   (pe/follow-current t)

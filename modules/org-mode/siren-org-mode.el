@@ -15,20 +15,20 @@
 
 (use-package org
   :straight (:type built-in)
-  :bind
-  (:map org-mode-map
-        ("C-j" . org-return-indent)
-        ("RET" . org-return-indent)
-        ("M-{" . org-promote-subtree)
-        ("M-}" . org-demote-subtree)
-        ("M-P" . org-metaup)
-        ("M-N" . org-metadown)
-        ("C-M-n" . outline-next-visible-heading)
-        ("C-M-p" . outline-previous-visible-heading)
-        ("C-c [" . smart-shift-left)
-        ("C-c ]" . smart-shift-right))
-  (:map org-src-mode-map
-        ("C-c C-c" . org-edit-src-exit))
+  :general
+  (:keymaps 'org-mode-map
+            "C-j" 'org-return-indent
+            "RET" 'org-return-indent
+            "M-{" 'org-promote-subtree
+            "M-}" 'org-demote-subtree
+            "M-P" 'org-metaup
+            "M-N" 'org-metadown
+            "C-M-n" 'outline-next-visible-heading
+            "C-M-p" 'outline-previous-visible-heading
+            "C-c [" 'smart-shift-left
+            "C-c ]" 'smart-shift-right)
+  (:keymaps 'org-src-mode-map
+            "C-c C-c" 'org-edit-src-exit)
 
   :hook
   (org-mode . siren-org-mode-setup)

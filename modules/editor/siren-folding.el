@@ -9,9 +9,9 @@
 (use-package hideshow
   :straight (:type built-in)
 
-  :bind
-  ("C-=" . siren-folding-toggle-selective-display)
-  ("C-c C-h" . siren-folding-toggle)
+  :general
+  ("C-=" 'siren-folding-toggle-selective-display)
+  ("C-c C-h" 'siren-folding-toggle)
 
   :init
   (defun siren-folding (&optional arg)

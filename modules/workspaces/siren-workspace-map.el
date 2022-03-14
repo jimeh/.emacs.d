@@ -7,13 +7,8 @@
 
 ;;; Code:
 
-(use-package siren-workspace-map
-  :straight (:type built-in)
-  :no-require t
-
-  :bind
-  (:prefix-map siren-workspace-map
-               :prefix "C-z"))
+(define-prefix-command 'siren-workspace-map)
+(general-define-key "C-z" 'siren-workspace-map)
 
 (provide 'siren-workspace-map)
 ;;; siren-workspace-map.el ends here

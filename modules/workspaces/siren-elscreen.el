@@ -8,24 +8,17 @@
 
 (use-package elscreen
   :demand
-  :bind (("s-}" . elscreen-next)
-         ("s-{" . elscreen-previous)
-
-         :map elscreen-map
-         ;; Prefix key.
-         ("C-z" . elscreen-map)
-
-         ;; Set screen nickname
-         ("," . elscreen-screen-nickname)
-         ("C-," . elscreen-screen-nickname)
-
-         ;; Toggle screens.
-         ("l" . elscreen-toggle)
-         ("C-l" . elscreen-toggle)
-
-         ;; Display list of screens.
-         (";" . elscreen-display-screen-name-list)
-         ("C-;" . elscreen-display-screen-name-list))
+  :general
+  ("s-}" 'elscreen-next)
+  ("s-{" 'elscreen-previous)
+  (:keymaps 'elscreen-map
+            "C-z" 'elscreen-map
+            "," 'elscreen-screen-nickname
+            "C-," 'elscreen-screen-nickname
+            "l" 'elscreen-toggle
+            "C-l" 'elscreen-toggle
+            ";" 'elscreen-display-screen-name-list
+            "C-;" 'elscreen-display-screen-name-list)
 
   :config
   (elscreen-start))

@@ -9,9 +9,9 @@
 (require 'siren-ido)
 
 (use-package amx
-  :bind
-  ("M-x" . amx)
-  ("C-x C-m" . amx)
+  :general
+  ("M-x" 'amx)
+  ("C-x C-m" 'amx)
 
   :custom
   (amx-backend 'ido)

@@ -8,8 +8,9 @@
 
 (use-package dired+
   :defer t
-  :bind (:map dired-mode-map
-              ("C-l" . diredp-up-directory-reuse-dir-buffer))
+  :general
+  (:keymaps 'dired-mode-map
+            "C-l" 'diredp-up-directory-reuse-dir-buffer)
 
   :hook
   (dired-mode . siren-diredp-mode-setup)

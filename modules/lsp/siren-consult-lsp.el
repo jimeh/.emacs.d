@@ -10,8 +10,8 @@
 (require 'siren-lsp)
 
 (use-package consult-lsp
-  :bind
-  ("C-c C-\\" . consult-lsp-diagnostics))
+  :general
+  ("C-c C-\\" 'consult-lsp-diagnostics))
 
 (provide 'siren-consult-lsp)
 ;;; siren-consult-lsp.el ends here

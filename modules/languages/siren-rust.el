@@ -13,8 +13,9 @@
   :mode "\\.rs\\'"
   :interpreter "rust"
   :commands rust-mode
-  :bind (:map rust-mode-map
-              ("RET" . newline-and-indent))
+  :general
+  (:keymaps 'rust-mode-map
+            "RET" 'newline-and-indent)
 
   :hook
   (rust-mode . siren-rust-mode-setup)

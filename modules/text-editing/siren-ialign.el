@@ -7,8 +7,8 @@
 ;;; Code:
 
 (use-package ialign
-  :bind
-  ("C-x l" . ialign))
+  :general
+  ("C-x l" 'ialign))
 
 (provide 'siren-ialign)
 ;;; siren-ialign.el ends here

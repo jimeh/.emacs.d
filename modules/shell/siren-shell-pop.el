@@ -9,8 +9,8 @@
 (require 'siren-vterm)
 
 (use-package shell-pop
-  :bind
-  ("C-`" . shell-pop)
+  :general
+  ("C-`" 'shell-pop)
 
   :custom
   (shell-pop-full-span t)

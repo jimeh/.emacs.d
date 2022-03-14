@@ -7,22 +7,20 @@
 ;;; Code:
 
 (use-package projectile
-  :bind
-  ("C-c p p" . projectile-switch-project)
-  ("C-c p k" . projectile-kill-buffers)
-  ("C-c p r" . projectile-replace)
-  ("C-c p S" . projectile-save-project-buffers)
-  ("C-c C-b" . projectile-ibuffer)
-  ("C-x C-t" . projectile-find-file)
-  ("C-x j" . projectile-dired)
-
-  ("C-x ;" . projectile-find-file)
-  ("C-x C-;" . projectile-find-file)
-  ("C-c ;" . projectile-switch-project)
-  ("C-c C-;" . projectile-switch-project)
-
-  (:map projectile-mode-map
-        ("C-c p" . projectile-command-map))
+  :general
+  ("C-c p p" 'projectile-switch-project)
+  ("C-c p k" 'projectile-kill-buffers)
+  ("C-c p r" 'projectile-replace)
+  ("C-c p S" 'projectile-save-project-buffers)
+  ("C-c C-b" 'projectile-ibuffer)
+  ("C-c ;" 'projectile-switch-project)
+  ("C-c C-;" 'projectile-switch-project)
+  ("C-x C-t" 'projectile-find-file)
+  ("C-x j" 'projectile-dired)
+  ("C-x ;" 'projectile-find-file)
+  ("C-x C-;" 'projectile-find-file)
+  (:keymaps 'projectile-mode-map
+            "C-c p" 'projectile-command-map)
 
   :custom
   (projectile-buffers-filter-function 'projectile-buffers-with-file-or-process)

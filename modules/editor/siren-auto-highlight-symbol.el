@@ -11,11 +11,11 @@
 (use-package auto-highlight-symbol
   :diminish auto-highlight-symbol-mode
 
-  :bind
-  (:map auto-highlight-symbol-mode-map
-        ("C-c C-p" . ahs-backward)
-        ("C-c C-n" . ahs-forward)
-        ("C-c C-r" . ahs-edit-mode))
+  :general
+  (:keymaps 'auto-highlight-symbol-mode-map
+            "C-c C-p" 'ahs-backward
+            "C-c C-n" 'ahs-forward
+            "C-c C-r" 'ahs-edit-mode)
 
   :hook
   (prog-mode . auto-highlight-symbol-mode)

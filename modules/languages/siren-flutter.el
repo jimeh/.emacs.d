@@ -10,8 +10,9 @@
 
 (use-package flutter
   :after dart-mode
-  :bind (:map dart-mode-map
-              ("C-M-x" . #'flutter-run-or-hot-reload)))
+  :general
+  (:keymaps 'dart-mode-map
+            "C-M-x" 'flutter-run-or-hot-reload))
 
 (provide 'siren-flutter)
 ;;; siren-flutter.el ends here

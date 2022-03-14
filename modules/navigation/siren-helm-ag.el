@@ -10,11 +10,12 @@
 
 (use-package helm-ag
   :after (helm-global-bindings)
-  :bind
-  ("C-x '" . helm-do-ag-project-root)
-  ("C-x C-'" . helm-do-ag-project-root)
-  (:map helm-command-map
-        ("a" . helm-do-ag))
+
+  :general
+  ("C-x '" 'helm-do-ag-project-root)
+  ("C-x C-'" 'helm-do-ag-project-root)
+  (:keymaps 'helm-command-map
+        "a" 'helm-do-ag)
 
   :custom
   (helm-ag-base-command (mapconcat 'identity

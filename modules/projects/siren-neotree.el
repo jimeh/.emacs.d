@@ -10,9 +10,9 @@
 (require 'siren-projectile)
 
 (use-package neotree
-  :bind
-  ("C-x C-p" . neotree-toggle)
-  ("C-x p" . neotree-project-dir)
+  :general
+  ("C-x C-p" 'neotree-toggle)
+  ("C-x p" 'neotree-project-dir)
 
   :custom
   (neo-autorefresh t)

@@ -7,8 +7,9 @@
 ;;; Code:
 
 (use-package grip-mode
-  :bind (:map markdown-mode-command-map
-              ("g" . grip-mode)))
+  :general
+  (:keymaps 'markdown-mode-command-map
+            "g" 'grip-mode))
 
 (provide 'siren-grip)
 ;;; siren-grip.el ends here

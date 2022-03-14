@@ -19,8 +19,8 @@
   (imenu-max-items 400))
 
 (use-package imenu-anywhere
-  :bind
-  ("C-c t" . helm-imenu-anywhere))
+  :general
+  ("C-c t" 'helm-imenu-anywhere))
 
 (provide 'siren-imenu)
 ;;; siren-imenu.el ends here

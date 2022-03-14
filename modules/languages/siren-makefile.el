@@ -14,9 +14,9 @@
   :hook
   (makefile-mode . siren-makefile-mode-setup)
 
-  :bind
-  (:map makefile-mode-map
-        ("C-c C-m" . makefile-executor-execute-project-target))
+  :general
+  (:keymaps 'makefile-mode-map
+            "C-c C-m" 'makefile-executor-execute-project-target)
 
   :init
   (add-to-list 'siren-indent-sensitive-modes 'makefile-mode)

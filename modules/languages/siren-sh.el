@@ -19,9 +19,9 @@
   ("\\.tmuxsh\\'" . sh-mode)
   ("\\.tmuxtheme\\'" . sh-mode)
 
-  :bind
-  (:map sh-mode-map
-        ("RET" . newline-and-indent))
+  :general
+  (:keymaps 'sh-mode-map
+            "RET" 'newline-and-indent)
 
   :hook
   (sh-mode . siren-sh-mode-setup)

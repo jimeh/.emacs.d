@@ -7,8 +7,8 @@
 ;;; Code:
 
 (use-package full-ack
-  :bind
-  ("C-c C-a" . ack)
+  :general
+  ("C-c C-a" 'ack)
 
   :custom
   (ack-arguments '("--sort-files"

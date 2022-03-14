@@ -9,8 +9,8 @@
 (use-package dired-sidebar
   :commands dired-sidebar-toggle-sidebar
 
-  :bind
-  ("C-x C-p" . dired-sidebar-toggle-sidebar)
+  :general
+  ("C-x C-p" 'dired-sidebar-toggle-sidebar)
 
   :config
   (setq dired-sidebar-subtree-line-prefix " .")

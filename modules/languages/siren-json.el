@@ -13,9 +13,10 @@
 (use-package json-mode
   :mode "\\.json\\'"
 
-  :bind (:map json-mode-map
-              ("C-j" . newline-and-indent)
-              ("C-c C-h" . siren-folding-toggle))
+  :general
+  (:keymaps 'json-mode-map
+            "C-j" 'newline-and-indent
+            "C-c C-h" 'siren-folding-toggle)
 
   :hook
   (json-mode . siren-json-mode-setup)

@@ -11,6 +11,10 @@
 (use-package desktop
   :straight (:type built-in)
 
+  :general
+  (:keymaps 'siren-workspace-map
+            "C-z" 'siren-desktop-map)
+
   :hook
   (desktop-after-read . siren-desktop-after-read-hook)
 
@@ -60,7 +64,9 @@
   (push '(zoom-window-buffers . :never) frameset-filter-alist)
   (push '(zoom-window-enabled . :never) frameset-filter-alist)
 
-  :init
+  :preface
+  (define-prefix-command 'siren-desktop-map)
+
   ;; Enable restoring window configurations when running in terminal
   ;;  - from: https://emacs.stackexchange.com/a/45829
   (defun siren-desktop-after-read-hook ()
@@ -72,22 +78,22 @@
      :force-onscreen desktop-restore-forces-onscreen)))
 
 (use-package desktop+
-  :bind
-  (:map siren-workspace-map
-        ("C-z c" . desktop+-create)
-        ("C-z C-c" . desktop+-create)
-        ("C-z n" . siren-desktop+-create-new)
-        ("C-z C-n" . siren-desktop+-create-new)
-        ("C-z s" . desktop+-load-or-create)
-        ("C-z C-s" . desktop+-load-or-create)
-        ("C-z l" . desktop+-load)
-        ("C-z C-l" . desktop+-load))
+  :general
+  (:keymaps 'siren-desktop-map
+            "c" 'desktop+-create
+            "C-c" 'desktop+-create
+            "n" 'siren-desktop+-create-new
+            "C-n" 'siren-desktop+-create-new
+            "s" 'desktop+-load-or-create
+            "C-s" 'desktop+-load-or-create
+            "l" 'desktop+-load
+            "C-l" 'desktop+-load)
 
   :config
   (unless (file-exists-p desktop+-base-dir)
     (make-directory desktop+-base-dir))
 
-  :init
+  :preface
   (defvar desktop+-base-dir (expand-file-name "desktops" siren-dir)
     "Base directory for desktop files.")
 

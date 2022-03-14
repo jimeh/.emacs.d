@@ -7,9 +7,9 @@
 ;;; Code:
 
 (use-package expand-region
-  :bind
-  ("M-." . er/expand-region)
-  ("M-," . er/contract-region))
+  :general
+  ("M-." 'er/expand-region)
+  ("M-," 'er/contract-region))
 
 (provide 'siren-expand-region)
 ;;; siren-expand-region.el ends here

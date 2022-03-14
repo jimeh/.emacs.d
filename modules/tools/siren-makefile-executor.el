@@ -12,8 +12,8 @@
   :hook
   (makefile-mode . makefile-executor-mode)
 
-  :bind
-  ("C-c C-m" . makefile-executor-execute-project-target)
+  :general
+  ("C-c C-m" 'makefile-executor-execute-project-target)
 
   :config
   ;; Replace get targets function with that from helm-make as it faster and more

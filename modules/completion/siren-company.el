@@ -7,14 +7,14 @@
 ;;; Code:
 
 (use-package company
-  :bind
+  :general
   ;; Enable indent and complete at point functionality by pressing tab.
-  ("TAB" . company-indent-or-complete-common)
+  ("TAB" 'company-indent-or-complete-common)
   ;; Scroll through company suggestions with C-n and C-p.
-  (:map company-active-map
-              ("C-n" . company-select-next)
-              ("C-p" . company-select-previous)
-              ("<tab>" . company-complete-selection))
+  (:keymaps 'company-active-map
+            "C-n" 'company-select-next
+            "C-p" 'company-select-previous
+            "<tab>" 'company-complete-selection)
 
   :custom
   (company-begin-commands '(self-insert-command))

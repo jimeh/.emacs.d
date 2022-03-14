@@ -11,8 +11,9 @@
 
 (use-package yaml-mode
   :mode "\\.yml\\'" "\\.yaml\\'"
-  :bind (:map yaml-mode-map
-              ("RET" . newline-and-indent))
+  :general
+  (:keyamps 'yaml-mode-map
+            "RET" 'newline-and-indent)
 
   :hook
   (yaml-mode . siren-yaml-mode-setup)

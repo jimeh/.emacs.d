@@ -38,14 +38,15 @@
   "\\.thor\\'"
   "\\.rb\\'"
 
-  :bind (:map ruby-mode-map
-              ("C-j" . newline-and-indent)
-              ("RET" . newline-and-indent)
-              ("M-'" . ruby-toggle-string-quotes)
-              ("C-c C-l" . goto-line)
-              ("C-M-f" . sp-ruby-forward-sexp)
-              ("C-M-b" . sp-ruby-backward-sexp)
-              ("C-c C-u" . string-inflection-ruby-style-cycle))
+  :general
+  (:keymaps 'ruby-mode-map
+            "C-j" 'newline-and-indent
+            "RET" 'newline-and-indent
+            "M-'" 'ruby-toggle-string-quotes
+            "C-c C-l" 'goto-line
+            "C-M-f" 'sp-ruby-forward-sexp
+            "C-M-b" 'sp-ruby-backward-sexp
+            "C-c C-u" 'string-inflection-ruby-style-cycle)
 
   :hook
   (ruby-mode . siren-ruby-mode-setup)
@@ -152,20 +153,22 @@
 (use-package rubocop
   :defer t
   :after ruby-mode
-  :bind (:map ruby-mode-map
-              ("C-c . f" . rubocop-check-current-file)
-              ("C-c . p" . rubocop-check-project)
-              ("C-c . d" . rubocop-check-directory)
-              ("C-c . F" . rubocop-autocorrect-current-file)
-              ("C-c . P" . rubocop-autocorrect-project)
-              ("C-c . D" . rubocop-autocorrect-directory)))
+  :general
+  (:keymaps 'ruby-mode-map
+            "C-c . f" 'rubocop-check-current-file
+            "C-c . p" 'rubocop-check-project
+            "C-c . d" 'rubocop-check-directory
+            "C-c . F" 'rubocop-autocorrect-current-file
+            "C-c . P" 'rubocop-autocorrect-project
+            "C-c . D" 'rubocop-autocorrect-directory))
 
 (use-package rubocopfmt
   :hook
   (ruby-mode . rubocopfmt-mode)
 
-  :bind (:map ruby-mode-map
-              ("C-c C-f" . rubocopfmt))
+  :general
+  (:keymaps 'ruby-mode-map
+            "C-c C-f" 'rubocopfmt)
 
   :custom
   (rubocopfmt-include-unsafe-cops t)
@@ -194,8 +197,9 @@
 (use-package ruby-tools
   :defer t
   :diminish ruby-tools-mode
-  :bind (:map ruby-tools-mode-map
-              ("C-'" . toggle-quotes))
+  :general
+  (:keymaps 'ruby-tools-mode-map
+            "C-'" 'toggle-quotes)
   :hook
   (ruby-mode . ruby-tools-mode)
 
@@ -209,8 +213,9 @@
 
 (use-package yari
   :defer t
-  :init
-  (define-key 'help-command (kbd "R") 'yari))
+  :general
+  (:keymaps 'help-command
+            "R" 'yari))
 
 (provide 'siren-ruby)
 ;;; siren-ruby.el ends here

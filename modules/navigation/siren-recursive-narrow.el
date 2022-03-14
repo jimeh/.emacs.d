@@ -7,10 +7,10 @@
 ;;; Code:
 
 (use-package recursive-narrow
-  :bind
-  ("C-x C-n" . recursive-narrow-or-widen-dwim)
-  ("C-x n w" . recursive-widen)
-  ("C-x n n" . recursive-narrow-or-widen-dwim)
+  :general
+  ("C-x C-n" 'recursive-narrow-or-widen-dwim)
+  ("C-x n w" 'recursive-widen)
+  ("C-x n n" 'recursive-narrow-or-widen-dwim)
 
   :config
   (add-hook 'recursive-narrow-dwim-functions

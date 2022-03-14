@@ -7,8 +7,8 @@
 ;;; Code:
 
 (use-package resize-window
-  :bind
-  ("C-;" . resize-window))
+  :general
+  ("C-;" 'resize-window))
 
 (provide 'siren-resize-window)
 ;;; siren-resize-window.el ends here

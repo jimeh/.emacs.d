@@ -7,9 +7,9 @@
 ;;; Code:
 
 (use-package xwwp
-  :bind
-  (:map xwidget-webkit-mode-map
-        ("v" . xwwp-follow-link)))
+  :general
+  (:keymaps 'xwidget-webkit-mode-map
+            "v" 'xwwp-follow-link))
 
 (provide 'siren-xwwp)
 ;;; siren-xwwp.el ends here

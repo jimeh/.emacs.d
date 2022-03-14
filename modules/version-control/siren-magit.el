@@ -11,8 +11,8 @@
 (require 'siren-flyspell)
 
 (use-package magit
-  :bind
-  ("C-x g". magit-status)
+  :general
+  ("C-x g" 'magit-status)
 
   :hook
   (siren-magit-mode . siren-magit-mode-setup)

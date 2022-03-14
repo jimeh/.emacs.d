@@ -11,11 +11,11 @@
 
 (use-package consult
   :defer t
-  :bind
-  ("C-t" . siren-consult-imenu)
-  ("C-x b" . consult-buffer)
-  ("C-c b" . siren-consult-projectile-buffer)
-  ("M-g M-g" . consult-goto-line)
+  :general
+  ("C-t" 'siren-consult-imenu)
+  ("C-x b" 'consult-buffer)
+  ("C-c b" 'siren-consult-projectile-buffer)
+  ("M-g M-g" 'consult-goto-line)
 
   :custom
   (consult-buffer-sources '(siren-consult--source-buffer-outside-project

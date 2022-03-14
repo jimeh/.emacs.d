@@ -10,9 +10,9 @@
 
 (use-package helm-make
   :after (helm-global-bindings)
-  :bind
-  (:map helm-command-map
-        ("m" . helm-make-projectile))
+  :general
+  (:keymaps 'helm-command-map
+            "m" 'helm-make-projectile)
 
   :custom
   (helm-make-cache-targets nil)

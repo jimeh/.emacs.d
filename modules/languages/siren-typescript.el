@@ -18,9 +18,10 @@
   :hook
   (typescript-mode . siren-typescript-mode-setup)
 
-  :bind (:map typescript-mode-map
-              ("C-j" . newline-and-indent)
-              ("C-c C-h" . siren-folding-toggle))
+  :general
+  (:keymaps 'typescript-mode-map
+            "C-j" 'newline-and-indent
+            "C-c C-h" 'siren-folding-toggle)
 
   :init
   (defun siren-typescript-mode-setup ()

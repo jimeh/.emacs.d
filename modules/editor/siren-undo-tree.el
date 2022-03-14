@@ -8,13 +8,13 @@
 
 (use-package undo-tree
   :demand
-  :bind
-  (:map undo-tree-map
-        ("C-x u" . undo-tree-visualize)
-        ("M--" . undo-tree-undo)
-        ("M-_" . undo-tree-redo)
-        ("s-z" . undo-tree-undo)
-        ("s-Z" . undo-tree-redo))
+  :general
+  (:keymaps 'undo-tree-map
+            "C-x u" 'undo-tree-visualize
+            "M--" 'undo-tree-undo
+            "M-_" 'undo-tree-redo
+            "s-z" 'undo-tree-undo
+            "s-Z" 'undo-tree-redo)
 
   :diminish
   undo-tree-mode

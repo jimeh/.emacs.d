@@ -26,7 +26,8 @@
   (unbind-key "C-;" flyspell-mode-map))
 
 (use-package flyspell-correct
-  :bind ("C-/" . flyspell-correct-wrapper))
+  :general
+  ("C-/" 'flyspell-correct-wrapper))
 
 (provide 'siren-flyspell)
 ;;; siren-flyspell.el ends here

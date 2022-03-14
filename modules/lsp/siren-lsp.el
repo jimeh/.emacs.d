@@ -7,9 +7,10 @@
 ;;; Code:
 
 (use-package lsp-mode
-  :bind (:map lsp-mode-map
-              ("C-c C-." . lsp-rename)
-              ("C-c C-f" . siren-lsp-format-buffer))
+  :general
+  (:keymaps 'lsp-mode-map
+            "C-c C-." 'lsp-rename
+            "C-c C-f" 'siren-lsp-format-buffer)
 
   :commands
   lsp
@@ -82,11 +83,12 @@
 
 (use-package lsp-ui
   :defer t
-  :bind (:map lsp-ui-mode-map
-              ("C-c C-d" . lsp-ui-doc-glance)
-              ("C-c d" . lsp-ui-doc-show)
-              ("M-?" . lsp-ui-peek-find-references)
-              ("C-c C-j" . lsp-ui-peek-find-definitions))
+  :general
+  (:keymaps 'lsp-ui-mode-map
+            "C-c C-d" 'lsp-ui-doc-glance
+            "C-c d" 'lsp-ui-doc-show
+            "M-?" 'lsp-ui-peek-find-references
+            "C-c C-j" 'lsp-ui-peek-find-definitions)
 
   :custom
   (lsp-ui-doc-alignment 'window)

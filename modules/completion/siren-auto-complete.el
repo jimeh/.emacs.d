@@ -9,12 +9,13 @@
 (require 'siren-flyspell)
 
 (use-package auto-complete
-  :bind (:map ac-completing-map
-              ("RET" . ac-complete)
-              ("C-m" . ac-complete)
-              ("C-s" . ac-isearch)
-              ("C-n" . ac-next)
-              ("C-p" . ac-previous))
+  :general
+  (:keymaps 'ac-completing-map
+            "RET" 'ac-complete
+            "C-m" 'ac-complete
+            "C-s" 'ac-isearch
+            "C-n" 'ac-next
+            "C-p" 'ac-previous)
 
   :custom
   (ac-auto-show-menu 0.2)

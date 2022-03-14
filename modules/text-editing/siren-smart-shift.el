@@ -7,11 +7,11 @@
 ;;; Code:
 
 (use-package smart-shift
-  :bind
-  ("C-c [" . smart-shift-left)
-  ("C-c ]" . smart-shift-right)
-  ("M-{" . smart-shift-left)
-  ("M-}" . smart-shift-right)
+  :general
+  ("C-c [" 'smart-shift-left)
+  ("C-c ]" 'smart-shift-right)
+  ("M-{" 'smart-shift-left)
+  ("M-}" 'smart-shift-right)
 
   :config
   ;; Override default keymap adding support additional keybindings once

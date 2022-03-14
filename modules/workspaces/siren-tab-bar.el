@@ -11,44 +11,44 @@
 (use-package tab-bar
   :straight (:type built-in)
 
-  :bind
-  ("s-}" . tab-next)
-  ("s-{" . tab-previous)
-  (:map siren-workspace-map
-        ("C-n" . tab-next)
-        ("C-p" . tab-previous)
-        ("c" . tab-new)
-        ("C-c" . tab-new)
-        ("k" . tab-close)
-        ("C-k" . tab-close)
-        ("l" . tab-recent)
-        ("C-l" . tab-recent)
-        ("r" . tab-rename)
-        ("C-r" . tab-rename)
-        ("n" . siren-tab-bar-move-tab-right)
-        ("p" . siren-tab-bar-move-tab-left)
-        ("s" . siren-tab-bar-switch-to-or-create-tab)
-        ("C-s" . siren-tab-bar-switch-to-or-create-tab)
-        ("e" . tab-switcher)
-        ("C-e" . tab-switcher)
-        ("u" . tab-undo)
-        ("C-u" . tab-undo)
-        (";" . siren-tab-bar-echo-tab-list)
-        ("C-;" . siren-tab-bar-echo-tab-list)
-        ("0" . siren-tab-bar-switch-to-index)
-        ("1" . siren-tab-bar-switch-to-index)
-        ("2" . siren-tab-bar-switch-to-index)
-        ("3" . siren-tab-bar-switch-to-index)
-        ("4" . siren-tab-bar-switch-to-index)
-        ("5" . siren-tab-bar-switch-to-index)
-        ("6" . siren-tab-bar-switch-to-index)
-        ("7" . siren-tab-bar-switch-to-index)
-        ("8" . siren-tab-bar-switch-to-index)
-        ("9" . siren-tab-bar-switch-to-index)
-        ("b" . tab-bar-history-back)
-        ("C-b" . tab-bar-history-back)
-        ("f" . tab-bar-history-forward)
-        ("C-f" . tab-bar-history-forward))
+  :general
+  ("s-}" 'tab-next)
+  ("s-{" 'tab-previous)
+  (:keymaps 'siren-workspace-map
+            "C-n" 'tab-next
+            "C-p" 'tab-previous
+            "c" 'tab-new
+            "C-c" 'tab-new
+            "k" 'tab-close
+            "C-k" 'tab-close
+            "l" 'tab-recent
+            "C-l" 'tab-recent
+            "r" 'tab-rename
+            "C-r" 'tab-rename
+            "n" 'siren-tab-bar-move-tab-right
+            "p" 'siren-tab-bar-move-tab-left
+            "s" 'siren-tab-bar-switch-to-or-create-tab
+            "C-s" 'siren-tab-bar-switch-to-or-create-tab
+            "e" 'tab-switcher
+            "C-e" 'tab-switcher
+            "u" 'tab-undo
+            "C-u" 'tab-undo
+            ";" 'siren-tab-bar-echo-tab-list
+            "C-;" 'siren-tab-bar-echo-tab-list
+            "0" 'siren-tab-bar-switch-to-index
+            "1" 'siren-tab-bar-switch-to-index
+            "2" 'siren-tab-bar-switch-to-index
+            "3" 'siren-tab-bar-switch-to-index
+            "4" 'siren-tab-bar-switch-to-index
+            "5" 'siren-tab-bar-switch-to-index
+            "6" 'siren-tab-bar-switch-to-index
+            "7" 'siren-tab-bar-switch-to-index
+            "8" 'siren-tab-bar-switch-to-index
+            "9" 'siren-tab-bar-switch-to-index
+            "b" 'tab-bar-history-back
+            "C-b" 'tab-bar-history-back
+            "f" 'tab-bar-history-forward
+            "C-f" 'tab-bar-history-forward)
 
   :custom
   (tab-bar-close-button-show nil)
@@ -63,7 +63,7 @@
   :config
   (siren-tab-bar-setup)
 
-  :init
+  :preface
   (defun siren-tab-bar-setup ()
     (tab-bar-mode)
     (tab-bar-history-mode))

@@ -12,9 +12,9 @@
 (use-package helm-global-bindings
   :straight helm
   :demand
-  :bind
-  (:map helm-command-map
-        ("M" . helm-man-woman))
+  :general
+  (:keymaps 'helm-command-map
+            "M" 'helm-man-woman)
 
   :custom
   (helm-command-prefix-key "C-c h"))

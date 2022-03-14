@@ -15,9 +15,10 @@
   "\\.js\\'"
   "\\.pac\\'"
 
-  :bind (:map js-mode-map
-              ("C-j" . newline-and-indent)
-              ("C-c C-h" . siren-toggle-hiding))
+  :general
+  (:keymaps 'js-mode-map
+            "C-j" 'newline-and-indent
+            "C-c C-h" 'siren-toggle-hiding)
 
   :hook
   (js-mode . siren-js-mode-setup)

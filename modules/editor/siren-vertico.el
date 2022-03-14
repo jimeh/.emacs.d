@@ -30,15 +30,15 @@
 
 (use-package vertico-repeat
   :after vertico
-  :bind
-  ("C-c C-v" . vertico-repeat))
+  :general
+  ("C-c C-v" 'vertico-repeat))
 
 (use-package vertico-directory
   :after vertico
   :demand t
-  :bind
-  (:map vertico-map
-        ("C-l" . vertico-directory-up))
+  :general
+  (:keymaps 'vertico-map
+            "C-l" 'vertico-directory-up)
 
   :init
   ;; Hacky minor-mode to toggle vertico-directory features on and off.

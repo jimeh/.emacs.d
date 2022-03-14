@@ -9,8 +9,9 @@
 (require 'siren-folding)
 
 (use-package haskell-mode
-  :bind (:map haskell-mode-map
-              ("RET" . newline-and-indent))
+  :general
+  (:keymaps 'haskell-mode-map
+            "RET" 'newline-and-indent)
 
   :hook
   (haskell-mode . siren-haskell-mode-setup)

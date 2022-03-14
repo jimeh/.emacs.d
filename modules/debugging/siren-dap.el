@@ -12,14 +12,15 @@
 (use-package dap-mode
   :defer t
 
-  :bind (:map siren-debug-map
-              ("d" . dap-debug)
-              ("t" . dap-breakpoint-toggle)
-              ("c" . dap-breakpoint-condition)
-              ("h" . dap-breakpoint-hit-condition)
-              ("m" . dap-breakpoint-log-message)
-              ("l" . dap-ui-breakpoints-list)
-              ("b" . dap-ui-breakpoints))
+  :general
+  (:keymaps 'siren-debug-map
+            "d" 'dap-debug
+            "t" 'dap-breakpoint-toggle
+            "c" 'dap-breakpoint-condition
+            "h" 'dap-breakpoint-hit-condition
+            "m" 'dap-breakpoint-log-message
+            "l" 'dap-ui-breakpoints-list
+            "b" 'dap-ui-breakpoints)
 
   :custom
   (dap-auto-configure-features '(sessions locals controls tooltip))

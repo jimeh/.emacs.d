@@ -22,13 +22,13 @@
   "\\.mdown"
   "\\.markdown"
 
-  :bind
-  (:map markdown-mode-map
-        ("C-c p" . markdown-preview)
-        ("M-p" . md-move-lines-up)
-        ("M-n" . md-move-lines-down)
-        ("M-P" . markdown-previous-link)
-        ("M-N" . markdown-next-link))
+  :general
+  (:keymaps 'markdown-mode-map
+            "C-c p" 'markdown-preview
+            "M-p" 'md-move-lines-up
+            "M-n" 'md-move-lines-down
+            "M-P" 'markdown-previous-link
+            "M-N" 'markdown-next-link)
 
   :hook
   (markdown-mode . siren-markdown-mode-setup)

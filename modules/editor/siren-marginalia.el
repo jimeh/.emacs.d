@@ -8,8 +8,9 @@
 
 (use-package marginalia
   :demand t
-  :bind (:map minibuffer-local-map
-         ("M-A" . marginalia-cycle))
+  :general
+  (:keymaps 'minibuffer-local-map
+            "M-A" 'marginalia-cycle)
 
   :custom
   (marginalia-align-offset 10)

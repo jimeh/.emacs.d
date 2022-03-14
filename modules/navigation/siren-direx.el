@@ -7,7 +7,8 @@
 ;;; Code:
 
 (use-package direx
-  :bind ("C-x j" . direx-project:jump-to-project-root)
+  :general
+  ("C-x j" 'direx-project:jump-to-project-root)
   :hook
   (direx-mode . siren-direx-mode-setup)
 

@@ -7,8 +7,9 @@
 ;;; Code:
 
 (use-package goto-chg
-  :bind (("C-." . goto-last-change)
-         ("C-," . goto-last-change-reverse)))
+  :general
+  ("C-." 'goto-last-change)
+  ("C-," 'goto-last-change-reverse))
 
 (provide 'siren-goto-chg)
 ;;; siren-goto-chg.el ends here

@@ -7,8 +7,8 @@
 ;;; Code:
 
 (use-package string-inflection
-  :bind
-  ("C-c C-u" . string-inflection-cycle))
+  :general
+  ("C-c C-u" 'string-inflection-cycle))
 
 (provide 'siren-string-inflection)
 ;;; siren-string-inflection.el ends here

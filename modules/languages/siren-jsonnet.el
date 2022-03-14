@@ -7,10 +7,11 @@
 ;;; Code:
 
 (use-package jsonnet-mode
-  :bind (:map jsonnet-mode-map
-              ("C-c C-c" . jsonnet-eval-buffer)
-              ("C-c C-f" . jsonnet-reformat-buffer)
-              ("C-c C-j" . jsonnet-jump))
+  :general
+  (:keymaps 'jsonnet-mode-map
+            "C-c C-c" 'jsonnet-eval-buffer
+            "C-c C-f" 'jsonnet-reformat-buffer
+            "C-c C-j" 'jsonnet-jump)
 
   :hook
   (jsonnet-mode . siren-jsonnet-mode-setup)

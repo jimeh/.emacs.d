@@ -9,10 +9,10 @@
 (require 'siren-workspace-map)
 
 (use-package zoom-window
-  :bind
-  (:map siren-workspace-map
-        ("RET" . zoom-window-zoom)
-        ("C-<return>" . zoom-window-zoom))
+  :general
+  (:keymaps 'siren-workspace-map
+            "RET" 'zoom-window-zoom
+            "C-<return>" 'zoom-window-zoom)
 
   :config
   (with-eval-after-load "persp-mode"

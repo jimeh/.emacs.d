@@ -8,11 +8,11 @@
 
 (use-package writeroom-mode
   :defer t
-  :bind
-  (:map writeroom-mode-map
-        ("C-M-<" . writeroom-decrease-width)
-        ("C-M->" . writeroom-increase-width)
-        ("C-M-=" . writeroom-adjust-width))
+  :general
+  (:keymaps 'writeroom-mode-map
+            "C-M-<" 'writeroom-decrease-width
+            "C-M->" 'writeroom-increase-width
+            "C-M-=" 'writeroom-adjust-width)
 
   :custom
   (writeroom-global-effects nil)

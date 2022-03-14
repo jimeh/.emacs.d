@@ -11,11 +11,14 @@
 (use-package dired
   :straight (:type built-in)
   :defer t
+
   :hook
   (dired-mode . siren-dired-mode-setup)
-  :bind (:map dired-mode-map
-              ("c" . dired-create-directory)
-              ("M-?" . siren-dired-display-size))
+
+  :general
+  (:keymaps 'dired-mode-map
+            "c" 'dired-create-directory
+            "M-?" 'siren-dired-display-size)
 
   :custom
   (siren-dired-clean-up-dired-buffers-after-deletion nil)
@@ -151,13 +154,15 @@ confirmation.  To disable the confirmation, see
 
 (use-package dired-subtree
   :after dired
-  :bind (:map dired-mode-map
-              ("TAB" . dired-subtree-toggle)))
+  :general
+  (:keymaps 'dired-mode-map
+            "TAB" 'dired-subtree-toggle))
 
 (use-package dired-narrow
   :after dired
-  :bind (:map dired-mode-map
-              ("C-s" . dired-narrow))
+  :general
+  (:keymaps 'dired-mode-map
+            "C-s" 'dired-narrow)
 
   :custom
   (dired-narrow-exit-action 'dired-narrow-find-file)

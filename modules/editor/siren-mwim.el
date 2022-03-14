@@ -7,9 +7,9 @@
 ;;; Code:
 
 (use-package mwim
-  :bind
-  ("C-a" . mwim-beginning)
-  ("C-e" . mwim-end))
+  :general
+  ("C-a" 'mwim-beginning)
+  ("C-e" 'mwim-end))
 
 (provide 'siren-mwim)
 ;;; siren-mwim.el ends here

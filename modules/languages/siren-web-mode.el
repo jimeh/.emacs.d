@@ -15,9 +15,10 @@
   "\\.html.erb\\'"
   "\\.tpl\\'"
 
-  :bind (:map web-mode-map
-              ("C-j" . newline-and-indent)
-              ("C-c C-h" . siren-folding-toggle))
+  :general
+  (:keymaps 'web-mode-map
+            "C-j" 'newline-and-indent
+            "C-c C-h" 'siren-folding-toggle)
 
   :hook
   (web-mode . siren-web-mode-setup)

@@ -7,8 +7,8 @@
 ;;; Code:
 
 (use-package git-link
-  :bind
-  ("C-c g" . git-link)
+  :general
+  ("C-c g" 'git-link)
 
   :custom
   (git-link-open-in-browser t)

@@ -8,10 +8,10 @@
 
 (use-package refine
   :commands refine
-  :bind
-  (:map refine-mode-map
-        ("M-n" . refine-move-forward)
-        ("M-p" . refine-move-backward)))
+  :general
+  (:keymaps 'refine-mode-map
+            "M-n" 'refine-move-forward
+            "M-p" 'refine-move-backward))
 
 (provide 'siren-refine)
 ;;; siren-refine.el ends here

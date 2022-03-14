@@ -9,8 +9,8 @@
 (require 'siren-ivy)
 
 (use-package swiper
-  :bind
-  ("C-s" . swiper)
+  :general
+  ("C-s" 'swiper)
 
   :custom-face
   (ivy-current-match ((t (:background "#7e9fc9" :foreground "black"))))
