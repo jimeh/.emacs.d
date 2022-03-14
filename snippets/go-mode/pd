@@ -1,3 +1,4 @@
+# name: fmt.Println(...)
 # key: pd
 # --
 fmt.Println($0)

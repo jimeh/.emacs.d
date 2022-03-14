@@ -1,4 +1,0 @@
-# name: Then(...)
-# key: Then
-# --
-Then(/^${1:match}$/)$0

@@ -1,6 +1,0 @@
-# name: do |variable| ... end
-# key: do
-# --
-do $1
-  $0
-end

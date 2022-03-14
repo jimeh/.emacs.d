@@ -1,6 +1,0 @@
-# name: def self. ... end
-# key: defs
-# --
-def self.${1:method_name}
-  $0
-end

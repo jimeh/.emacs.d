@@ -1,5 +1,0 @@
-# name: pp ...
-# key: pp
-# --
-require 'pp'
-pp $0

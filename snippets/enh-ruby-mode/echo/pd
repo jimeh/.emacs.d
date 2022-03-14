@@ -1,4 +1,0 @@
-# name: puts debug
-# key: pd
-# --
-puts "\n>>>>>> ${1:name}: ${2:#{${3:variable}${4:.inspect}}}\n"$0

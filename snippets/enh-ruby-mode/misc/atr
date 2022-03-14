@@ -1,7 +1,0 @@
-# name: attributes(:name => :name, :market_name => "")
-# key: atr
-# --
-attributes(
-  :name        => :${1:name},
-  :market_name => "$0"
-)

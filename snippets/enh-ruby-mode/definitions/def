@@ -1,6 +1,0 @@
-# name: def ... end
-# key: def
-# --
-def ${1:method_name}
-  $0
-end

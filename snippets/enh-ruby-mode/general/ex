@@ -1,4 +1,0 @@
-# name: expect(...).to ...
-# key: ex
-# --
-expect($1).to $0

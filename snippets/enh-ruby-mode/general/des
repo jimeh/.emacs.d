@@ -1,4 +1,0 @@
-# name: describe '...'
-# key: des
-# --
-describe "$1"$0
