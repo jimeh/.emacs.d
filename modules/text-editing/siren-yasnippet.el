@@ -14,7 +14,13 @@
   (yas-global-mode))
 
 (use-package yasnippet-snippets
-  :after yasnippet)
+  :after yasnippet
+
+  :config
+  (let ((skip-file (expand-file-name "prog-mode/.yas-skip"
+                                     yasnippet-snippets-dir)))
+    (when (not (file-exists-p skip-file))
+      (make-empty-file skip-file t))))
 
 (provide 'siren-yasnippet)
 ;;; siren-yasnippet.el ends here
