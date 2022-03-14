@@ -89,7 +89,6 @@
  ("go-playground" . "9ee7dcc7f78be67cc391f13efa6570c2baac0204")
  ("go-projectile" . "ad4ca3b5695a0e31e95e3cc4ccab498f87d68303")
  ("gotest.el" . "298335fab797d0465516ed396f6e2acbe8f2ed93")
- ("grip-mode" . "1fd737f7f1e34e27b6d317ba16507bbbe0d2588c")
  ("groovy-emacs-modes" . "bf732d367b16887f81d404481c11ed1a58671d4e")
  ("haml-mode" . "bf5b6c11b1206759d2b28af48765e04882dd1fc4")
  ("haskell-mode" . "f13b6db78bc880e680c320e015ae232f525e0a27")
