@@ -73,6 +73,7 @@
  ("flyspell-correct" . "e9fde6f93af991b0528d6ed47d44bed470dc70af")
  ("forge" . "0f436173d1660321edac761e3e82c40e97709f63")
  ("gcmh" . "0089f9c3a6d4e9a310d0791cf6fa8f35642ecfd9")
+ ("general.el" . "9651024e7f40a8ac5c3f31f8675d3ebe2b667344")
  ("gh-notify" . "aa4d8bc0c56366d437e7c126e7eedc5938109342")
  ("ghub" . "2f50383cb35f0cc54599c54cc9794bf25387c050")
  ("git-link" . "f5691f8c66eb0f6050d9ab3834ab32661244b378")

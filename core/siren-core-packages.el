@@ -46,7 +46,11 @@
   (add-to-list 'straight-x-pinned-packages
                `(,package . ,gitsha)))
 
+;; Make use-package available.
 (straight-use-package 'use-package)
+
+;; Make general.el keybinding helpers available.
+(use-package general)
 
 (provide 'siren-core-packages)
 ;;; siren-core-packages.el ends here
