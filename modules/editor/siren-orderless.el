@@ -8,6 +8,8 @@
 
 (use-package orderless
   :custom
+  (completion-ignore-case t)
+  (pcomplete-ignore-case t)
   (completion-styles '(orderless))
   (orderless-matching-styles '(orderless-literal
                                orderless-prefixes
