@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.16](https://github.com/jimeh/.emacs.d/compare/v0.8.15...v0.8.16) (2022-03-14)
+
+
+### Features
+
+* **completion:** ignore case in minibuffer completion ([ee91287](https://github.com/jimeh/.emacs.d/commit/ee91287b52671c1b7582138d31189f753f276174))
+* **completion:** improve completion-at-point/company candidates ([106245a](https://github.com/jimeh/.emacs.d/commit/106245af8b2c716df5671196b1523f69c6d21ae9))
+* **core:** add general.el for easier / flexible keybinding definitions ([3fc0d2d](https://github.com/jimeh/.emacs.d/commit/3fc0d2d77d39619d1a449104c56d2537826f3265))
+* **core:** use general.el for keybind definitions nearly everywhere ([a861893](https://github.com/jimeh/.emacs.d/commit/a8618938bf0e76949cebaa40e508fb0a9df8485c))
+* **language/go:** add -race flag to gotest invocations ([7da944b](https://github.com/jimeh/.emacs.d/commit/7da944b04d3289f27af49900038885e92bed93a5))
+* **language/markdown:** add vmd-mode to preview markdown via vmd ([0b7ecb9](https://github.com/jimeh/.emacs.d/commit/0b7ecb91a27c4e38f368e9d7f1dd121c906f85b1))
+* **misc:** disable grip-mode as I never use it ([c64b717](https://github.com/jimeh/.emacs.d/commit/c64b717e59cc23f551626a1f6ba8c4df3be65e18))
+* **projects:** enable all-the-icons in minibuffer completion ([e8978f7](https://github.com/jimeh/.emacs.d/commit/e8978f7b44d1b454d7335f37e2adb9d62834cf8c))
+* **snippets:** add wip config for tempel to try it out ([6bada58](https://github.com/jimeh/.emacs.d/commit/6bada58d495538f2a5c2eff9b4f38c6c7324e568))
+* **snippets:** disable prog-mode snippets from yasnippet-snippets ([b742c90](https://github.com/jimeh/.emacs.d/commit/b742c9026f87b1bef6676abeeb7159ae0abc4f7b))
+
+
+### Bug Fixes
+
+* **snippets/org-mode:** update gfm snippet so it actually works ([dbe14e8](https://github.com/jimeh/.emacs.d/commit/dbe14e827ebd152ccf2eee508bee117de69b725f))
+
 ### [0.8.15](https://github.com/jimeh/.emacs.d/compare/v0.8.14...v0.8.15) (2022-03-10)
 
 
