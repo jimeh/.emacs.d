@@ -20,7 +20,6 @@
  ("company-nginx" . "8a9f1a5653fe2d9a5042bfb9377d54f37fcc64c8")
  ("consult" . "116e30998ef3d97fb194edaff0854ca5a0732447")
  ("consult-lsp" . "f4f195046b97be5ce0406e0723921b3393d9442e")
- ("ctrlf" . "38b5e94bf718eeea0b880a78ed52926dec89fea9")
  ("cucumber.el" . "8e1464113b489b54067294cd988ff6a11a423fdb")
  ("dap-mode" . "6933fca0b53ea5d2d65a0545e5a4ae6424d32e9b")
  ("dart-mode" . "43975c92080e307c4bc14a4773a61195d2062fd9")
