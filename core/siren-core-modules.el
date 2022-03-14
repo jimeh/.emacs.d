@@ -110,6 +110,7 @@
 (require 'siren-sort-words)
 (require 'siren-string-edit)
 (require 'siren-string-inflection)
+(require 'siren-tempel)
 (require 'siren-toggle-comments)
 (require 'siren-toggle-quotes)
 (require 'siren-yasnippet)

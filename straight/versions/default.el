@@ -193,6 +193,7 @@
  ("string-edit.el" . "0e225df6f8740467231c787a50025e4552b3eddb")
  ("string-inflection" . "fd7926ac17293e9124b31f706a4e8f38f6a9b855")
  ("tablist" . "faab7a035ef2258cc4ea2182f67e3aedab7e2af9")
+ ("tempel" . "a725dfc5bcd21423ebc108cd4d5d92fb33becded")
  ("terraform-doc" . "16179e57ce290190c222b27961900657a1981330")
  ("terraform-mode" . "e560caaa9d9a11b0868adf6d9dcae5ebb5055730")
  ("themes" . "83fd9545c2823b4b2610947802fa3a52995517b4")
