@@ -69,5 +69,8 @@
 (use-package poly-markdown
   :ensure t)
 
+(use-package vmd-mode
+  :defer t)
+
 (provide 'siren-markdown)
 ;;; siren-markdown.el ends here

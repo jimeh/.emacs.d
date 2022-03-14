@@ -207,6 +207,7 @@
  ("use-package" . "a7422fb8ab1baee19adb2717b5b47b9c3812a84c")
  ("uuidgen-el" . "b50e6fef2de4199a8f207b46588c2cb3890ddd85")
  ("vertico" . "2de617a9199d152533ce280c6eb653147f15f8d1")
+ ("vmd-mode" . "b2bdf2ab54f8fc37780e6b473e4ad69c0e9ff4a6")
  ("vue-html-mode" . "1514939804bad558584feeb6298b38d22eadf64e")
  ("vue-mode" . "031edd1f97db6e7d8d6c295c0e6d58dd128b9e71")
  ("web-mode" . "f70277774a725e177774cc81ecbd228792cd6656")
