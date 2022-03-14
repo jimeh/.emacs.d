@@ -1,5 +1,3 @@
 # key: gfm
 # --
-# Local variables:
-# after-save-hook: (lambda () (org-gfm-export-to-markdown) t)
-# end:$0
+# -*- eval: (add-hook 'after-save-hook 'org-gfm-export-to-markdown t t); -*-$0
