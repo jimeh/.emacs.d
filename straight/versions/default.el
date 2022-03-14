@@ -8,6 +8,7 @@
  ("bui.el" . "f3a137628e112a91910fd33c0cff0948fa58d470")
  ("bundler.el" . "43efb6be4ed118b06d787ce7fbcffd68a31732a7")
  ("caddyfile-mode" . "976ad0664c3f44bfa11cb9b8787ddfb094d0a666")
+ ("cape" . "79e8771c18c76a5bef5fdbf74718527e74b6d702")
  ("cargo.el" . "841ea7d85edd10c94138339469c4d8bbd03c8a29")
  ("centaur-tabs" . "f4cef95acbd2eb99c8db3b6cdde74a6e0a966a0a")
  ("cfrs" . "f3a21f237b2a54e6b9f8a420a9da42b4f0a63121")

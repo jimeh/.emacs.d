@@ -20,6 +20,7 @@
 
 ;; Completion
 (require 'siren-company)
+(require 'siren-cape)
 
 ;; Documentation
 (require 'siren-dash-at-point)
