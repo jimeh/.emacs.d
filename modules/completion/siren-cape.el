@@ -20,13 +20,11 @@
     (siren-cape-capf-add-hooks t))
 
   (defun siren-cape-capf-add-hooks (&optional local)
-    (add-hook 'completion-at-point-functions
-              'siren-yasnippet-capf -65 local)
+    (add-hook 'completion-at-point-functions 'siren-yasnippet-capf -65 local)
     (add-hook 'completion-at-point-functions 'cape-file -10 local))
 
   (defun siren-cape-capf-remove-hooks (&optional local)
-    (remove-hook 'completion-at-point-functions
-                 'siren-yasnippet-capf local)
+    (remove-hook 'completion-at-point-functions 'siren-yasnippet-capf local)
     (remove-hook 'completion-at-point-functions 'cape-file local))
 
   :init
