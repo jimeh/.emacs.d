@@ -149,15 +149,15 @@
 (use-package helm-elisp
   :straight helm
   :after (helm-global-bindings)
-  :bind
-  (:map helm-command-map
-        ("d" . helm-apropos)))
+  :general
+  (:keymaps 'helm-command-map
+            "d" 'helm-apropos))
 
 (use-package helm-files
   :straight helm
   :after (helm-global-bindings)
-  :bind
-  ("C-x f" . helm-find-files)
+  :general
+  ("C-x f" 'helm-find-files)
 
   :custom
   (helm-buffer-max-length 64)
@@ -167,9 +167,9 @@
 (use-package helm-for-files
   :straight helm
   :after (helm-global-bindings)
-  :bind
-  ("C-c f f" . helm-for-files)
-  ("C-c f r" . helm-recentf))
+  :general
+  ("C-c f f" 'helm-for-files)
+  ("C-c f r" 'helm-recentf))
 
 (use-package helm-ring
   :straight helm
