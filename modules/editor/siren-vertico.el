@@ -7,6 +7,7 @@
 ;;; Code:
 
 (use-package vertico
+  :demand t
   :custom
   (vertico-count 16)
   (vertico-cycle t)
@@ -24,17 +25,17 @@
   (advice-add #'completing-read-multiple :filter-args #'siren-crm-indicator))
 
 (use-package vertico-mouse
-  :after vertico
+  :straight vertico
   :config
   (vertico-mouse-mode +1))
 
 (use-package vertico-repeat
-  :after vertico
+  :straight vertico
   :general
   ("C-c C-v" 'vertico-repeat))
 
 (use-package vertico-directory
-  :after vertico
+  :straight vertico
   :demand t
   :general
   (:keymaps 'vertico-map
