@@ -44,6 +44,9 @@
 (require 'siren-uniquify)
 (require 'siren-which-key)
 
+;; UI
+(require 'siren-pixel-scroll)
+
 ;; Completion Systems and Interfaces
 (require 'siren-vertico)
 (require 'siren-orderless)
