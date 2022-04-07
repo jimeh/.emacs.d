@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.17](https://github.com/jimeh/.emacs.d/compare/v0.8.16...v0.8.17) (2022-04-07)
+
+
+### Features
+
+* **ui:** enable pixel-scroll-precision-mode in GUI if available ([f0f7c53](https://github.com/jimeh/.emacs.d/commit/f0f7c53cb3d139fd6db6ec6097a181ec92090ac0))
+
 ### [0.8.16](https://github.com/jimeh/.emacs.d/compare/v0.8.15...v0.8.16) (2022-03-14)
 
 
