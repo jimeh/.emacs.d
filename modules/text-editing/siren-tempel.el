@@ -15,7 +15,7 @@
             "TAB" 'tempel-next)
 
   :custom
-  (tempel-path (expand-file-name "templates" siren-dir))
+  (tempel-path (expand-file-name "templates/*.el" siren-dir))
 
   :hook
   (prog-mode . siren-tempel-setup-capf)
