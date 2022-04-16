@@ -124,8 +124,9 @@
            (hint-face (if current-p
                           'siren-tab-bar-tab-hint
                         'siren-tab-bar-tab-hint-inactive)))
-      (concat (propertize (if tab-bar-tab-hints (format "  %d:" (- i 1)) "  ")
-                          'face hint-face)
+      (concat (propertize "  " 'face tab-face)
+              (if tab-bar-tab-hints (propertize
+                                     (format "%d:" (- i 1)) 'face hint-face))
               (propertize
                (concat
                 (alist-get 'name tab)
