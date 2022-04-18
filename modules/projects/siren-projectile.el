@@ -7,6 +7,9 @@
 ;;; Code:
 
 (use-package projectile
+  :commands
+  projectile-project-root
+
   :general
   ("C-c p p" 'projectile-switch-project)
   ("C-c p k" 'projectile-kill-buffers)

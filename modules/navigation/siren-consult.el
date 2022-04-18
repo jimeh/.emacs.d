@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-projectile)
+
 (eval-when-compile
   (require 'cl-lib))
 
@@ -24,10 +26,7 @@
   (consult-preview-max-count 10)
 
   :config
-  ;; (consult-customize consult--source-bookmark :hidden t)
-  ;; (consult-customize consult--source-recent-file :hidden t)
-  (with-eval-after-load 'projectile
-    (setq consult-project-root-function 'projectile-project-root))
+  (setq consult-project-root-function 'projectile-project-root)
 
   :init
   (defun siren-consult-imenu ()
