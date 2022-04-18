@@ -9,6 +9,7 @@
 (require 'siren-folding)
 (require 'siren-js)
 (require 'siren-lsp)
+(require 'siren-tree-sitter)
 
 (use-package json-mode
   :mode "\\.json\\'"
@@ -28,7 +29,9 @@
     (let ((width 2))
       (setq js-indent-level width
             json-reformat:indent-width width
-            tab-width width))))
+            tab-width width))
+
+    (tree-sitter-mode +1)))
 
 (use-package lsp-json
   :straight lsp-mode

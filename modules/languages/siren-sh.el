@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-tree-sitter)
+
 (use-package sh-script
   :straight (:type built-in)
   :mode
@@ -36,7 +38,8 @@
     (setq tab-width 2
           whitespace-action '(auto-cleanup))
 
-    (subword-mode +1)))
+    (subword-mode +1)
+    (tree-sitter-mode +1)))
 
 (use-package lsp-bash
   :straight lsp-mode

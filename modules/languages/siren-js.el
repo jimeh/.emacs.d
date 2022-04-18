@@ -8,6 +8,7 @@
 
 (require 'siren-folding)
 (require 'siren-lsp)
+(require 'siren-tree-sitter)
 
 (use-package js-mode
   :straight (:type built-in)
@@ -31,6 +32,7 @@
             indent-level width
             tab-width width))
 
+    (tree-sitter-mode +1)
     (subword-mode)
     (siren-folding)))
 

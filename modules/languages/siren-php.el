@@ -9,6 +9,7 @@
 (require 'siren-folding)
 (require 'siren-prettier-js)
 (require 'siren-rainbow)
+(require 'siren-tree-sitter)
 
 (use-package php-mode
   :interpreter "php"
@@ -18,6 +19,7 @@
 
   :init
   (defun siren-php-mode-setup ()
+    (tree-sitter-mode +1)
     (prettier-js-mode)
     (rainbow-mode +1)
     (subword-mode +1)

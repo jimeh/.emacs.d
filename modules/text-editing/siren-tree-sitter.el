@@ -6,9 +6,13 @@
 
 ;;; Code:
 
-(use-package tree-sitter)
+(use-package tree-sitter
+  :defer t)
 
 (use-package tree-sitter-langs
+  :hook
+  (tree-sitter-after-on . tree-sitter-hl-mode)
+
   :config
   (tree-sitter-hl-add-patterns 'go
     ;; from: https://github.com/tree-sitter/tree-sitter-go/pull/61

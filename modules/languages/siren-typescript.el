@@ -10,6 +10,7 @@
 (require 'siren-folding)
 (require 'siren-lsp)
 (require 'siren-prettier-js)
+(require 'siren-tree-sitter)
 (require 'siren-web-mode)
 
 (use-package typescript-mode
@@ -39,11 +40,7 @@
   (typescript-mode . siren-tide-mode-setup)
   (web-mode . siren-tide-web-mode-setup)
 
-  :init
-  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
-  (with-eval-after-load 'flycheck
-    (flycheck-add-mode 'typescript-tslint 'web-mode))
-
+  :preface
   (defun siren-tide-web-mode-setup ()
     (when (string-equal "tsx" (file-name-extension buffer-file-name))
       (siren-tide-mode-setup)))
@@ -55,10 +52,16 @@
     (setq flycheck-check-syntax-automatically '(save mode-enabled)
           company-tooltip-align-annotations t)
 
+    (tree-sitter-mode +1)
     (prettier-js-mode +1)
     (flycheck-mode +1)
     (eldoc-mode +1)
-    (tide-hl-identifier-mode +1)))
+    (tide-hl-identifier-mode +1))
+
+  :init
+  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+  (with-eval-after-load 'flycheck
+    (flycheck-add-mode 'typescript-tslint 'web-mode)))
 
 (provide 'siren-typescript)
 ;;; siren-typescript.el ends here

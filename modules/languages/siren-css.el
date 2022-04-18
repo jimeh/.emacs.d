@@ -9,6 +9,7 @@
 (require 'siren-lsp)
 (require 'siren-prettier-js)
 (require 'siren-rainbow)
+(require 'siren-tree-sitter)
 
 (use-package css-mode
   :mode "\\.css\\'"
@@ -23,6 +24,7 @@
   (defun siren-css-mode-setup ()
     (setq tab-width 2)
 
+    (tree-sitter-mode +1)
     (prettier-js-mode)
     (lsp-deferred)
     (rainbow-mode +1)))

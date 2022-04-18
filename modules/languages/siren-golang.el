@@ -44,8 +44,6 @@
       (auto-highlight-symbol-mode -1))
 
     (tree-sitter-mode +1)
-    (tree-sitter-hl-mode +1)
-
     (siren-display-indentation -1)
     (siren-folding)
     (subword-mode +1))

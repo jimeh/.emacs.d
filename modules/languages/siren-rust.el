@@ -8,6 +8,7 @@
 
 (require 'siren-folding)
 (require 'siren-lsp)
+(require 'siren-tree-sitter)
 
 (use-package rust-mode
   :mode "\\.rs\\'"
@@ -24,6 +25,7 @@
   (defun siren-rust-mode-setup ()
     (setq rust-format-on-save t)
 
+    (tree-sitter-mode +1)
     (lsp-deferred)
     (siren-folding)
     (subword-mode +1)))
