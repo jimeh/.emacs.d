@@ -17,7 +17,7 @@
   (marginalia-field-width 120)
   (marginalia-separator "  ")
 
-  :init
+  :preface
   (defun marginalia-annotate-project-buffer (cand)
     "Annotate project buffer CAND with modification status, file name and major
 mode."
@@ -25,7 +25,7 @@ mode."
       (marginalia--fields
        ((marginalia--buffer-status buffer))
        ((marginalia--project-buffer-file buffer)
-        :truncate (/ marginalia-truncate-width 2)
+        :truncate (/ marginalia-field-width 2)
         :face 'marginalia-file-name))))
 
   (defun marginalia--project-buffer-file (buffer)
