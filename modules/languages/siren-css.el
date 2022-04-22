@@ -20,7 +20,7 @@
   :custom
   (css-indent-offset 2)
 
-  :init
+  :preface
   (defun siren-css-mode-setup ()
     (setq tab-width 2)
 

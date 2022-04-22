@@ -18,7 +18,7 @@
   :hook
   (yaml-mode . siren-yaml-mode-setup)
 
-  :init
+  :preface
   (defun siren-yaml-mode-setup ()
     (run-hooks 'prog-mode-hook)
 
@@ -31,7 +31,7 @@
   :hook
   (yaml-mode . siren-lsp-yaml-mode-setup)
 
-  :init
+  :preface
   (defun siren-lsp-yaml-mode-setup ()
     (lsp-deferred)
     (lsp-format-buffer-on-save-mode)))

@@ -19,7 +19,7 @@
   (org-pandoc-options-for-markdown '((columns . "80")))
   (org-pandoc-options-for-org '((columns . "80")))
 
-  :init
+  :preface
   (defun siren-ox-pandoc-setup ()
     (require 'ox-pandoc)))
 

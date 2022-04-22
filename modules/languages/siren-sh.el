@@ -33,7 +33,7 @@
   (sh-indentation 2)
   (sh-indent-after-continuation 'always)
 
-  :init
+  :preface
   (defun siren-sh-mode-setup ()
     (setq tab-width 2
           whitespace-action '(auto-cleanup))
@@ -47,7 +47,7 @@
   :hook
   (sh-mode . siren-lsp-bash-mode-setup)
 
-  :init
+  :preface
   (defun siren-lsp-bash-mode-setup ()
     (if (member sh-shell '(bash sh))
         (lsp-deferred))))

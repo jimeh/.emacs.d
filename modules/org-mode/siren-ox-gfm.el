@@ -14,7 +14,7 @@
   :hook
   (org-mode . siren-ox-gfm-setup)
 
-  :init
+  :preface
   (defun siren-ox-gfm-setup ()
     (require 'ox-gfm)))
 

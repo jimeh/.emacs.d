@@ -28,7 +28,7 @@
   :hook
   (escreen-goto-screen . siren-escreen-get-active-screen)
 
-  :init
+  :preface
   (defun siren-escreen-get-active-screen ()
     "what the name says"
     (interactive)

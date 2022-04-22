@@ -14,7 +14,7 @@
   :custom
   (plantuml-default-exec-mode 'executable)
 
-  :init
+  :preface
   (defun siren-plantuml-mode-setup ()
     (setq tab-width 2)))
 

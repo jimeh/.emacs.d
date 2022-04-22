@@ -15,7 +15,7 @@
   :hook
   (caddyfile-mode . siren-caddyfile-mode-setup)
 
-  :init
+  :preface
   (defun siren-caddyfile-mode-setup ()
     (setq-local tab-width 4
                 indent-tabs-mode nil)

@@ -13,7 +13,7 @@
   ("C-=" 'siren-folding-toggle-selective-display)
   ("C-c C-h" 'siren-folding-toggle)
 
-  :init
+  :preface
   (defun siren-folding (&optional arg)
     "Activate or deactivate code folding.
 Optional ARG is passed directly to mode toggle function."

@@ -12,7 +12,7 @@
   :mode "\\.thrift\\'"
   :hook (thrift-mode . siren-thrift-mode-setup)
 
-  :init
+  :preface
   (defun siren-thrift-mode-setup ()
     (run-hooks 'prog-mode-hook)
     (setq tab-width 2)

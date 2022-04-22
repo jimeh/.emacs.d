@@ -42,7 +42,7 @@
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config)
 
-  :init
+  :preface
   (defun siren-doom-themes-load (theme)
     (interactive (list (completing-read "Choose theme: "
                                         (siren-doom-themes-list))))

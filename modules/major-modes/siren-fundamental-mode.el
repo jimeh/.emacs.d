@@ -13,7 +13,7 @@
   :hook
   (fundamental-mode . siren-fundamental-mode-setup)
 
-  :init
+  :preface
   (defun siren-fundamental-mode-setup ()
     (hl-line-mode t)))
 

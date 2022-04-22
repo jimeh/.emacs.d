@@ -13,10 +13,7 @@
   :hook
   (prog-mode . siren-prog-mode-setup)
 
-  :init
-  (add-to-list 'safe-local-variable-values
-               '(fill-column . 120))
-
+  :preface
   (defun siren-prog-mode-setup ()
     "Default coding hook, useful with any programming language."
     (setq-local fill-column 80)
@@ -28,7 +25,10 @@
 
     (hl-line-mode t)
     (visual-line-mode t)
-    (whitespace-mode t)))
+    (whitespace-mode t))
+
+  :init
+  (add-to-list 'safe-local-variable-values '(fill-column . 120)))
 
 (provide 'siren-prog-mode)
 ;;; siren-prog-mode.el ends here

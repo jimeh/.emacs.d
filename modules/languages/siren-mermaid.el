@@ -14,7 +14,7 @@
   :hook
   (mermaid-mode . siren-mermaid-mode-setup)
 
-  :init
+  :preface
   (defun siren-mermaid-mode-setup ()
     (run-hooks 'prog-mode-hook)))
 

@@ -24,7 +24,7 @@
             "C-j" 'newline-and-indent
             "C-c C-h" 'siren-folding-toggle)
 
-  :init
+  :preface
   (defun siren-typescript-mode-setup ()
     (let ((width 2))
       (setq typescript-indent-level width

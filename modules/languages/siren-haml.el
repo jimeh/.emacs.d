@@ -10,7 +10,7 @@
   :mode "\\.haml\\'" "\\.hamlc\\'"
   :hook (haml-mode . siren-haml-mode-setup)
 
-  :init
+  :preface
   (defun siren-haml-mode-setup ()
     (setq tab-width 2)))
 

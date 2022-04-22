@@ -14,7 +14,7 @@
 
   :hook (rjsx-mode . siren-rjsx-mode-setup)
 
-  :init
+  :preface
   (defun siren-rjsx-mode-setup ()
     (prettier-js-mode +1)
     (subword-mode +1)

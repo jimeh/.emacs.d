@@ -17,7 +17,7 @@
   (recentf-auto-cleanup 'never)
   (recentf-exclude '("\\.git.*" "\\.hg.*" "\\.svn.*"))
 
-  :init
+  :preface
   (defun siren-recentf-exclude-p (file)
     "A predicate to decide whether to exclude FILE from recentf."
     (let ((file-dir (file-truename (file-name-directory file))))

@@ -78,7 +78,7 @@
      (sql . t)
      (sqlite . t)))
 
-  :init
+  :preface
   (defun siren-org-mode-setup ()
     (setq fill-column 80
           whitespace-action '(auto-cleanup)

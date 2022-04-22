@@ -39,7 +39,7 @@
   :custom-face
   (markdown-code-face ((t nil)))
 
-  :init
+  :preface
   (defun siren-markdown-mode-setup ()
     ;; Configure prettier after local vars are processed, allowing local
     ;; override of fill-column and have prettier respect it.

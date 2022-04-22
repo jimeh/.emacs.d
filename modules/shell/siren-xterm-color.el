@@ -11,7 +11,7 @@
   :custom
   (compilation-environment '("TERM=xterm-256color"))
 
-  :init
+  :preface
   (defun siren-advice-compilation-filter (f proc string)
     (funcall f proc (xterm-color-filter string)))
 

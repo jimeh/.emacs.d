@@ -24,7 +24,7 @@
   :hook
   (js-mode . siren-js-mode-setup)
 
-  :init
+  :preface
   (defun siren-js-mode-setup ()
     "Default tweaks for `js-mode'."
     (let ((width 2))
@@ -42,7 +42,7 @@
   :hook
   (js-mode . siren-lsp-js-mode-setup)
 
-  :init
+  :preface
   (defun siren-lsp-js-mode-setup ()
     (lsp-deferred)
     (lsp-format-buffer-on-save-mode)))

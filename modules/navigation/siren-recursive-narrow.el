@@ -18,7 +18,7 @@
   (add-hook 'recursive-narrow-dwim-functions
             'siren-recursive-narrow-markdown-edit-code-block)
 
-  :init
+  :preface
   (defun siren-recursive-narrow-org-edit-src-code()
     (ignore-errors (org-edit-src-code) t))
 

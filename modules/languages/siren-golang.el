@@ -27,12 +27,7 @@
   :hook
   (go-mode . siren-go-mode-setup)
 
-  :init
-  (with-eval-after-load "projectile"
-    (add-to-list 'projectile-globally-ignored-directories "Godeps")
-    (add-to-list 'projectile-globally-ignored-directories "vendor/github.com")
-    (add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in"))
-
+  :preface
   (defun siren-go-mode-setup ()
     (setq-local tab-width 4
                 company-minimum-prefix-length 1
@@ -55,6 +50,12 @@
       :program "golines"
       :args '("-t" "4" "-m" "80" "--no-reformat-tags")
       :lighter "GOLINES"))
+
+  :init
+  (with-eval-after-load "projectile"
+    (add-to-list 'projectile-globally-ignored-directories "Godeps")
+    (add-to-list 'projectile-globally-ignored-directories "vendor/github.com")
+    (add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in"))
 
   :config
   (siren-define-golines-format-mode)
@@ -97,7 +98,7 @@
                                                        (lsp-configuration-section "golangci-lint")))))
   (add-to-list 'lsp-language-id-configuration '(go-mode . "golangci-lint"))
 
-  :init
+  :preface
   (defun siren-lsp-go-mode-setup ()
     (setq-local siren-lsp-format-buffer-func 'siren-lsp-go-format-buffer)
     (lsp-format-buffer-on-save-mode t)
@@ -131,13 +132,14 @@
   :custom
   (go-test-verbose t)
 
-  :init
+  :preface
   (defun siren-gotest-setup ()
     (let ((extra-args "-count=1 -race"))
       (if (and (boundp 'go-test-local) go-test-local)
           (setq-local go-test-args (concat go-test-args " " extra-args))
         (setq-local go-test-args extra-args))))
 
+  :init
   (when (not (version< emacs-version "28.0"))
     ;; Change ff-other-file-name to ff-find-the-other-file in Emacs 28.x and
     ;; later.
@@ -161,7 +163,7 @@ For example, if the current buffer is `foo.go', the buffer for
   (:keymaps 'dap-mode-map
             "C-c , d" 'siren-dap-go-debug-current-test)
 
-  :init
+  :preface
   (defun siren-dap-go-debug-current-test ()
     (interactive)
     (let ((name (go-test--get-current-test)))
@@ -193,7 +195,7 @@ For example, if the current buffer is `foo.go', the buffer for
   ;; prevent go-projectile from screwing up GOPATH
   (go-projectile-switch-gopath 'never)
 
-  :init
+  :preface
   (defun siren-go-projectile-setup ()))
 
 (use-package go-playground

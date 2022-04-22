@@ -19,7 +19,7 @@
 
   :hook (conf-mode . siren-conf-mode-setup)
 
-  :init
+  :preface
   (defun siren-conf-mode-setup ()
     (run-hooks 'prog-mode-hook)
     (setq tab-width 2)))

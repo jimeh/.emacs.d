@@ -30,7 +30,7 @@
   (treemacs-last-error-persist-file
    (expand-file-name "treemacs-persist-at-last-error" siren-cache-dir))
 
-  :init
+  :preface
   (defgroup siren-treemacs nil
     "Siren specific settings for treemacs."
     :group 'treemacs)

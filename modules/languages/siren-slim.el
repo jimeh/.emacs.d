@@ -10,7 +10,7 @@
   :mode "\\.slim\\'"
   :hook (slim-mode . siren-slim-mode-hook)
 
-  :init
+  :preface
   (defun siren-slim-mode-setup ()))
 
 (provide 'siren-slim)

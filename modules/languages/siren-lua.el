@@ -10,7 +10,7 @@
   :hook
   (lua-mode . siren-lua-mode-setup)
 
-  :init
+  :preface
   (defun siren-lua-mode-setup ()
     (setq lua-indent-level 2
           whitespace-action '(auto-cleanup))
@@ -27,7 +27,7 @@
   (lsp-lua-hint-enable t)
   (lsp-lua-telemetry-enable nil)
 
-  :init
+  :preface
   (defun siren-lsp-lua-mode-setup ()
     (lsp-deferred)))
 

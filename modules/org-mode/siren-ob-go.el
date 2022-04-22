@@ -14,7 +14,7 @@
   :hook
   (org-mode . siren-ob-go-setup)
 
-  :init
+  :preface
   (defun siren-ob-go-setup ()
     (require 'ob-go)))
 

@@ -37,7 +37,7 @@
   (magit-revert-buffers 'silent)
   (magit-status-buffer-switch-function 'switch-to-buffer)
 
-  :init
+  :preface
   (defalias 'bl 'magit-blame)
 
   (defun siren-magit-mode-setup ())
@@ -75,7 +75,7 @@
   (magit-delta-default-light-theme "OneHalfLight")
   (siren-magit-delta-enabled nil)
 
-  :init
+  :preface
   (defgroup siren-magit-delta nil
     "Siren specific options for magit-delta."
     :group 'magit-delta)

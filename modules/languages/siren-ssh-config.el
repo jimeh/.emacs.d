@@ -13,7 +13,7 @@
   "/\\.local/ssh/config\\(\\.d/.*\\.conf\\)?\\'"
   :hook (ssh-config-mode . siren-ssh-config-mode-setup)
 
-  :init
+  :preface
   (defun siren-ssh-config-mode-setup ()
     (run-hooks 'prog-mode-hook)
     (setq tab-width 2)))

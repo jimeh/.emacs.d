@@ -23,7 +23,7 @@
   :custom
   (siren-dired-clean-up-dired-buffers-after-deletion nil)
 
-  :init
+  :preface
   (defun siren-dired-mode-setup ()
     (hl-line-mode +1))
 
@@ -86,7 +86,6 @@
     :group 'siren-dired)
 
   :config
-
   ;; Replace built-in dired buffer cleanup function with a custom patched
   ;; version that allows separately configuring if dired buffers are cleaned up
   ;; along with file buffers. Without this, whenever you delete a file in dired,

@@ -10,7 +10,7 @@
   :defer t
   :hook (prettier-js-mode . siren-prettier-js-mode-setup)
 
-  :init
+  :preface
   (defun siren-prettier-js-mode-setup ()))
 
 (provide 'siren-prettier-js)

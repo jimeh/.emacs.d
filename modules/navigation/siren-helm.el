@@ -58,7 +58,7 @@
   (siren-helm-auto-toggle-neotree t)
   (siren-helm-auto-toggle-treemacs t)
 
-  :init
+  :preface
   (defgroup siren-helm nil
     "Siren specific settings for helm."
     :group 'helm)
@@ -209,7 +209,7 @@
   (helm-posframe-parameters '((left-fringe . 10) (right-fringe . 10)))
   (helm-posframe-width 500)
 
-  :init
+  :preface
   ;; helm-posframe does not come with a minor mode to toggle it on/off, so let's
   ;; make one to make life easier.
   (define-minor-mode helm-posframe-mode

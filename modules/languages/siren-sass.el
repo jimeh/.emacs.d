@@ -18,7 +18,7 @@
   ;; Turn off annoying auto-compile on save.
   (sass-compile-at-save nil)
 
-  :init
+  :preface
   (defun siren-sass-mode-setup ()
     (siren-css-mode-css)))
 

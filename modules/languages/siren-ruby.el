@@ -52,11 +52,7 @@
   :hook
   (ruby-mode . siren-ruby-mode-setup)
 
-  :init
-  (with-eval-after-load "projectile"
-    (add-to-list 'projectile-globally-ignored-directories "vendor/bundle")
-    (add-to-list 'projectile-globally-ignored-directories "vendor/ruby"))
-
+  :preface
   (defun siren-ruby-mode-setup ()
     (setq-local c-tab-always-indent nil
                 ruby-align-chained-calls t
@@ -67,6 +63,11 @@
     (tree-sitter-mode +1)
     (siren-folding)
     (subword-mode +1))
+
+  :init
+  (with-eval-after-load "projectile"
+    (add-to-list 'projectile-globally-ignored-directories "vendor/bundle")
+    (add-to-list 'projectile-globally-ignored-directories "vendor/ruby"))
 
   :config
   ;; Use M-' instead to togle quote styles
@@ -93,12 +94,13 @@
   (lsp-solargraph-multi-root nil)
   (lsp-solargraph-log-level "warn")
 
+  :preface
+  (defun siren-lsp-ruby-mode-setup ()
+    (lsp-deferred))
+
   :init
   (add-to-list 'safe-local-variable-values
-               '(lsp-solargraph-use-bundler . t))
-
-  (defun siren-lsp-ruby-mode-setup ()
-    (lsp-deferred)))
+               '(lsp-solargraph-use-bundler . t)))
 
 (use-package rufo
   :defer t
@@ -125,7 +127,7 @@
   (inf-ruby-mode . siren-inf-ruby-mode-setup)
   (compilation-filter . inf-ruby-auto-enter)
 
-  :init
+  :preface
   (defun siren-inf-ruby-mode-setup ()
     (if (fboundp 'company-mode)
         (company-mode -1)))
@@ -146,7 +148,7 @@
   (rspec-use-opts-file-when-available nil)
   (rspec-use-spring-when-possible nil)
 
-  :init
+  :preface
   (defun siren-rspec-mode-setup ())
 
   :config

@@ -27,7 +27,7 @@
      (unknown . "?")
      (ignored . "i")))
 
-  :init
+  :preface
   (defun siren-turn-on-diff-hl-mode ()
     (turn-on-diff-hl-mode)
     (diff-hl-flydiff-mode 1))

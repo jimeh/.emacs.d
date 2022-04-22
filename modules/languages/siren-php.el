@@ -17,7 +17,7 @@
   :hook
   (php-mode . siren-php-mode-setup)
 
-  :init
+  :preface
   (defun siren-php-mode-setup ()
     (tree-sitter-mode +1)
     (prettier-js-mode)

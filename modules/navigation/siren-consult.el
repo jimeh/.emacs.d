@@ -28,7 +28,7 @@
   :config
   (setq consult-project-root-function 'projectile-project-root)
 
-  :init
+  :preface
   (defun siren-consult-imenu ()
     "Intelligently trigger consult-lsp-file-symbols or consult-imenu."
     (interactive)

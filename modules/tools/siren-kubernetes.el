@@ -9,7 +9,7 @@
 (use-package kubernetes
   :defer t
 
-  :init
+  :preface
   (defalias 'ko 'kubernetes-overview))
 
 (provide 'siren-kubernetes)

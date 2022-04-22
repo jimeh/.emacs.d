@@ -14,7 +14,7 @@
   :hook
   (org-mode . siren-ob-mermaid-setup)
 
-  :init
+  :preface
   (defun siren-ob-mermaid-setup ()
     (require 'ob-mermaid)))
 

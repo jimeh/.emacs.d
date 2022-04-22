@@ -16,7 +16,7 @@
   (direx:closed-icon " + ")
   (direx:open-icon " - ")
 
-  :init
+  :preface
   (defun siren-direx-mode-setup ()))
 
 (provide 'siren-direx)

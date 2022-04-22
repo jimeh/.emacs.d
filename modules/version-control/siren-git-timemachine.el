@@ -8,7 +8,7 @@
 
 (use-package git-timemachine
   :defer t
-  :init
+  :preface
   (defalias 'gt 'git-timemachine))
 
 (provide 'siren-git-timemachine)

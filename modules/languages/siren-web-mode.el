@@ -30,7 +30,7 @@
   (web-mode-sql-indent-offset 2)
   (web-mode-engines-alist '(("go" . "\\.tpl\\'")))
 
-  :init
+  :preface
   (defun siren-web-mode-setup ()
     "Default tweaks for `web-mode'."
     (setq tab-width 2)

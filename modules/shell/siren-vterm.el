@@ -33,7 +33,7 @@
   (vterm-kill-buffer-on-exit t)
   (vterm-max-scrollback 50000)
 
-  :init
+  :preface
   (defun siren-vterm-mode-setup ()
     (hl-line-mode -1))
 

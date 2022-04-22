@@ -35,7 +35,7 @@
   :hook
   (forge-post-mode . siren-forge-post-mode-setup)
 
-  :init
+  :preface
   (defun siren-forge-post-mode-setup ()
     (setq-local prettier-js-args '("--parser" "markdown"
                                    "--print-width" "80"

@@ -10,7 +10,7 @@
   :straight (:type built-in)
   :defer t
 
-  :init
+  :preface
   (defun zone-choose (pgm)
     "Choose a PGM to run for `zone'."
     (interactive

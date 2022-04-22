@@ -10,7 +10,7 @@
   :hook
   (dockerfile-mode . siren-dockerfile-mode-setup)
 
-  :init
+  :preface
   (defun siren-dockerfile-mode-setup ()
     (with-eval-after-load 'flycheck
       (flycheck-select-checker 'hadolint))
@@ -18,6 +18,7 @@
     (lsp-deferred)
     (lsp-format-buffer-on-save-mode +1))
 
+  :init
   (with-eval-after-load 'flycheck
     ;; Define fixed Hadolint checker, built-in checker expects lines to start
     ;; with "<filename>:", but when input is provided via STDIN, the each line

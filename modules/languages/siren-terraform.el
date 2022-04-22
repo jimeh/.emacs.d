@@ -16,7 +16,7 @@
   :custom
   (terraform-indent-level 2)
 
-  :init
+  :preface
   (defun siren-terraform-mode-setup ()
     (setq-local tab-width 2)
     (terraform-format-on-save-mode 1)

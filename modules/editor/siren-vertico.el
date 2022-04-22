@@ -16,7 +16,7 @@
   (enable-recursive-minibuffers t)
   (read-extended-command-predicate #'command-completion-default-include-p)
 
-  :init
+  :preface
   (defun siren-crm-indicator (args)
     (cons (concat "[CRM] " (car args)) (cdr args)))
 
@@ -41,7 +41,7 @@
   (:keymaps 'vertico-map
             "C-l" 'vertico-directory-up)
 
-  :init
+  :preface
   ;; Hacky minor-mode to toggle vertico-directory features on and off.
   (define-minor-mode vertico-directory-mode
     "Remap vertico keybindings to handle files/folders better."
@@ -61,6 +61,7 @@
           (define-key map (kbd "DEL") 'backward-delete-char)
           (define-key map (kbd "M-DEL") 'backward-kill-word)))))
 
+  :init
   (with-eval-after-load 'projectile
     ;; Hackily disable vertico-directory-mode when completing things for
     ;; projectile. This avoids breaking projectile-switch-project command.

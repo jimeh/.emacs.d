@@ -63,13 +63,7 @@
   (persp-keymap-prefix "")
   (persp-nil-name "nil")
 
-  :init
-  ;; Do not auto save/load in terminal. My main instance of Emacs runs in GUI,
-  ;; terminal based instances are for smaller random things.
-  (when (not window-system)
-    (setq persp-auto-resume-time -1
-          persp-auto-save-opt 0))
-
+  :preface
   (defun siren-persp-mode-filter-magit-buffers (buf)
     (string-prefix-p "magit" (buffer-name buf)))
 
@@ -175,6 +169,13 @@ ARG counts from 1."
 
     (let ((name (nth arg (persp-names-current-frame-fast-ordered))))
       (if name (persp-switch name))))
+
+  :init
+  ;; Do not auto save/load in terminal. My main instance of Emacs runs in GUI,
+  ;; terminal based instances are for smaller random things.
+  (when (not window-system)
+    (setq persp-auto-resume-time -1
+          persp-auto-save-opt 0))
 
   :config
   (persp-mode)

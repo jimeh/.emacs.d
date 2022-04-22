@@ -18,7 +18,7 @@
   (nxml-attribute-indent 2)
   (nxml-child-indent 2)
 
-  :init
+  :preface
   (defun siren-xml-setup ()
     (run-hooks 'prog-mode-hook)
     (setq tab-width 2)

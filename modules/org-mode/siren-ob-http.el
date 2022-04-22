@@ -14,7 +14,7 @@
   :hook
   (org-mode . siren-ob-http-setup)
 
-  :init
+  :preface
   (defun siren-ob-http-setup ()
     (require 'ob-http)))
 

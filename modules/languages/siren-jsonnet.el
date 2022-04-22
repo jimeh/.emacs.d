@@ -19,7 +19,7 @@
   :custom
   (jsonnet-library-search-directories '("vendor"))
 
-  :init
+  :preface
   (defun siren-jsonnet-mode-setup ()
     "Default tweaks for `jsonnet-mode'."
     (jsonnet-format-buffer-on-save-mode t)

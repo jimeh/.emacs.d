@@ -26,7 +26,7 @@
   (neo-vc-integration '(face char))
   (neo-window-width 54)
 
-  :init
+  :preface
   (defun neotree-project-dir ()
     "Open NeoTree using the project root, using find-file-in-project,
 or the current buffer directory."

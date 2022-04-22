@@ -18,13 +18,14 @@
   (:keymaps 'makefile-mode-map
             "C-c C-m" 'makefile-executor-execute-project-target)
 
-  :init
-  (add-to-list 'siren-indent-sensitive-modes 'makefile-mode)
-
+  :preface
   (defun siren-makefile-mode-setup ()
     (subword-mode +1)
     (siren-display-indentation -1)
-    (setq tab-width 4)))
+    (setq tab-width 4))
+
+  :init
+  (add-to-list 'siren-indent-sensitive-modes 'makefile-mode))
 
 (provide 'siren-makefile)
 ;;; siren-makefile.el ends here

@@ -15,7 +15,7 @@
   :hook
   (dired-mode . siren-diredp-mode-setup)
 
-  :init
+  :preface
   (defun siren-diredp-mode-setup ()
     (toggle-diredp-find-file-reuse-dir 1))
 

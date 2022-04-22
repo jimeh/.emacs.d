@@ -11,7 +11,7 @@
   :hook
   (groovy-mode . siren-groovy-mode-setup)
 
-  :init
+  :preface
   (defun siren-groovy-mode-setup ()
     (setq groovy-highlight-assignments t
           groovy-indent-offset 4

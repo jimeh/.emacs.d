@@ -14,7 +14,7 @@
   :mode "\\.toml\\'"
   :hook (conf-toml-mode . siren-toml-mode-setup)
 
-  :init
+  :preface
   (defun siren-toml-mode-setup ()
     (run-hooks 'prog-mode-hook)
     (setq tab-width 2)

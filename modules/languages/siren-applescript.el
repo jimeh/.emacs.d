@@ -15,7 +15,7 @@
 
   :hook (applescript-mode . siren-applescript-mode-setup)
 
-  :init
+  :preface
   (defun siren-applescript-mode-setup ()
     (run-hooks 'prog-mode-hook)
     (setq tab-width 4)

@@ -13,7 +13,7 @@
   :interpreter "cucumber"
   :hook (feature-mode . siren-feature-mode-setup)
 
-  :init
+  :preface
   (defun siren-feature-mode-setup ()
     (run-hooks 'prog-mode-hook)
     (setq tab-width 2)))

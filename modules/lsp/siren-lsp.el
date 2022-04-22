@@ -48,7 +48,7 @@
   ;; https://emacs-lsp.github.io/lsp-mode/page/performance/
   (read-process-output-max (* 1024 1024))
 
-  :init
+  :preface
   (defun siren-lsp-mode-setup ()
     (setq-local company-idle-delay 0.1
                 company-minimum-prefix-length 1))

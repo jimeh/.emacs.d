@@ -13,7 +13,7 @@
   :hook
   (vue-mode . siren-vue-mode-setup)
 
-  :init
+  :preface
   (defun siren-vue-mode-setup ()
     (prettier-js-mode)
     (lsp-deferred)

@@ -14,7 +14,7 @@
   :hook
   (org-mode . siren-ox-jira-setup)
 
-  :init
+  :preface
   (defun siren-ox-jira-setup ()
     (require 'ox-jira)))
 

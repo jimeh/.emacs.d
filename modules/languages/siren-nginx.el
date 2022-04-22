@@ -14,7 +14,7 @@
   (nginx-indent-level 4)
   (nginx-indent-tabs-mode nil)
 
-  :init
+  :preface
   (defun siren-nginx-mode-setup ()
     (setq tab-width 4)))
 

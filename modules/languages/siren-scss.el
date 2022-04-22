@@ -18,7 +18,7 @@
   ;; Turn off annoying auto-compile on save.
   (scss-compile-at-save nil)
 
-  :init
+  :preface
   (defun siren-scss-mode-setup ()
     (siren-css-mode-setup)))
 

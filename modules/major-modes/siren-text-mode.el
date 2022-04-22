@@ -10,7 +10,7 @@
   :straight (:type built-in)
   :defer t
   :hook (text-mode . siren-text-mode-setup)
-  :init
+  :preface
   (defun siren-text-mode-setup ()
     (setq-local fill-column 80)
 

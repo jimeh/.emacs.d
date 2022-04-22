@@ -16,15 +16,17 @@
 (use-package all-the-icons-ibuffer
   :after all-the-icons
   :if window-system
-  :init (all-the-icons-ibuffer-mode 1))
+  :init
+  (all-the-icons-ibuffer-mode 1))
 
 (use-package all-the-icons-completion
   :after (marginalia all-the-icons)
+  :if window-system
   :hook (marginalia-mode . all-the-icons-completion-marginalia-setup)
   :init
   (all-the-icons-completion-mode)
-  :config
 
+  :config
   ;; Override default category lookup function.
   (defun all-the-icons-completion-get-icon (cand cat)
     "Return the icon for the candidate CAND of completion category CAT."

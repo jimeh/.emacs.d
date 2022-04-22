@@ -12,7 +12,7 @@
   :hook
   (jinja2-mode . siren-jinja2-mode-setup)
 
-  :init
+  :preface
   (defun siren-jinja2-mode-setup ()
     (run-hooks 'prog-mode-hook)
     (subword-mode +1)))

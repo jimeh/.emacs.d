@@ -13,7 +13,7 @@
   :hook
   (special-mode . siren-special-mode-setup)
 
-  :init
+  :preface
   (defun siren-special-mode-setup ()
     (hl-line-mode t)))
 

@@ -22,7 +22,7 @@
   :hook
   (json-mode . siren-json-mode-setup)
 
-  :init
+  :preface
   (defun siren-json-mode-setup ()
     "Default tweaks for `json-mode'."
 
@@ -39,7 +39,7 @@
   :hook
   (json-mode . siren-lsp-json-mode-setup)
 
-  :init
+  :preface
   (defun siren-lsp-json-mode-setup ()
     (lsp-deferred)
     (lsp-format-buffer-on-save-mode)))

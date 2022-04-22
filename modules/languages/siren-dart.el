@@ -21,11 +21,7 @@
   (dart-format-on-save t)
   (dart-enable-analysis-server t)
 
-  :init
-  (with-eval-after-load "projectile"
-    (add-to-list 'projectile-project-root-files-bottom-up "pubspec.yaml")
-    (add-to-list 'projectile-project-root-files-bottom-up "BUILD"))
-
+  :preface
   (defun siren-dart-mode-setup ()
     (when (fboundp 'highlight-symbol-mode)
       (highlight-symbol-mode -1))
@@ -34,7 +30,12 @@
 
     (lsp-deferred)
     (siren-folding)
-    (subword-mode +1)))
+    (subword-mode +1))
+
+  :init
+  (with-eval-after-load "projectile"
+    (add-to-list 'projectile-project-root-files-bottom-up "pubspec.yaml")
+    (add-to-list 'projectile-project-root-files-bottom-up "BUILD")))
 
 (provide 'siren-dart)
 ;;; siren-dart.el ends here

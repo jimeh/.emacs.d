@@ -13,7 +13,7 @@
   :mode "\\.sql\\'"
   :hook (sql-mode . siren-sql-mode-setup)
 
-  :init
+  :preface
   (defun siren-sql-mode-setup ()
     (setq tab-width 2)))
 

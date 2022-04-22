@@ -21,7 +21,7 @@
   :hook
   (rust-mode . siren-rust-mode-setup)
 
-  :init
+  :preface
   (defun siren-rust-mode-setup ()
     (setq rust-format-on-save t)
 

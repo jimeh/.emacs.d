@@ -16,7 +16,7 @@
   :hook
   (haskell-mode . siren-haskell-mode-setup)
 
-  :init
+  :preface
   (defun siren-haskell-mode-setup ()
     (siren-folding)
     (subword-mode +1)))

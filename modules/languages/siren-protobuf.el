@@ -15,7 +15,7 @@
   :hook
   (protobuf-mode . siren-protobuf-mode-setup)
 
-  :init
+  :preface
   (defun siren-protobuf-mode-setup ()
     (run-hooks 'prog-mode-hook)
     (setq tab-width 2)
