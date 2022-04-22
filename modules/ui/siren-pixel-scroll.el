@@ -41,7 +41,7 @@
                 siren-pixel-scroll--original-scroll-preserve-screen-position))))
 
     :config
-    (siren-pixel-scroll +1)))
+    (siren-pixel-scroll-mode +1)))
 
 (provide 'siren-pixel-scroll)
 ;;; siren-pixel-scroll.el ends here
