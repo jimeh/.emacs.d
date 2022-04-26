@@ -91,25 +91,6 @@
   ;; (global-set-key [mouse-5] 'scroll-up-line)
   )
 
-;; Display whitespace characters globally
-(diminish 'whitespace-mode)
-(diminish 'global-whitespace-mode)
-(setq whitespace-line-column 80)
-
-;; Customize Whitespace Characters
-;;  - Newline: \u00AC = ¬
-;;  - Tab:     \u2192 = →
-;;             \u00BB = »
-;;             \u25B6 = ▶
-(setq whitespace-display-mappings
-      (quote ((newline-mark ?\n [?\u00AC ?\n] [?$ ?\n])
-              (tab-mark     ?\t [?\u2192 ?\t] [?\u00BB ?\t] [?\\ ?\t]))))
-
-(setq whitespace-style
-      (quote (face tabs trailing space-before-tab newline
-                   indentation space-after-tab tab-mark newline-mark
-                   empty)))
-
 ;; enabled change region case commands
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)

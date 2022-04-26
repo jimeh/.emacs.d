@@ -43,6 +43,7 @@
 (require 'siren-undohist)
 (require 'siren-uniquify)
 (require 'siren-which-key)
+(require 'siren-whitespace)
 
 ;; UI
 (require 'siren-pixel-scroll)
@@ -115,9 +116,6 @@
 (require 'siren-toggle-comments)
 (require 'siren-toggle-quotes)
 (require 'siren-yasnippet)
-
-;; Formatting
-(require 'siren-whitespace-cleanup)
 
 ;; Version control
 (require 'siren-code-review)
