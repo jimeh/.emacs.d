@@ -94,7 +94,7 @@
     (make-directory desktop+-base-dir))
 
   :preface
-  (defvar desktop+-base-dir (expand-file-name "desktops" siren-dir)
+  (defvar desktop+-base-dir (siren-dir "desktops")
     "Base directory for desktop files.")
 
   (defun siren-desktop+-current-desktop ()

@@ -27,7 +27,7 @@
 
   :custom
   (projectile-buffers-filter-function 'projectile-buffers-with-file-or-process)
-  (projectile-cache-file (expand-file-name "projectile" siren-cache-dir))
+  (projectile-cache-file (siren-cache-dir "projectile"))
   (projectile-completion-system 'default)
   (projectile-enable-caching nil)
   (projectile-globally-ignored-directories '(".bzr"

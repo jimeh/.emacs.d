@@ -12,7 +12,7 @@
   :custom
   (prescient-filter-method '(literal-prefix literal regexp initialism fuzzy))
   (prescient-history-length 100)
-  (prescient-save-file (expand-file-name "prescient-save.el" siren-cache-dir))
+  (prescient-save-file (siren-cache-dir "prescient-save.el"))
   (prescient-sort-full-matches-first t)
   (prescient-sort-length-enable nil)
 

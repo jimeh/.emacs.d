@@ -28,7 +28,7 @@
 (setq sentence-end-double-space nil)
 
 ;; Save place in files
-(setq save-place-file (expand-file-name "saveplace" siren-cache-dir))
+(setq save-place-file (siren-cache-dir "saveplace"))
 (save-place-mode 1)
 
 ;; Electric behavior
@@ -51,11 +51,10 @@
       kept-old-versions 0
       vc-make-backup-files t
       version-control t
-      backup-directory-alist
-      `((".*" . ,(expand-file-name "backup" siren-cache-dir))))
+      backup-directory-alist `((".*" . ,(siren-cache-dir "backup"))))
 
 ;; Auto-save files
-(let ((auto-save-dir (expand-file-name "autosave/" siren-cache-dir)))
+(let ((auto-save-dir (siren-cache-dir "autosave/")))
   (unless (file-exists-p auto-save-dir)
     (make-directory auto-save-dir))
   (setq auto-save-interval 20

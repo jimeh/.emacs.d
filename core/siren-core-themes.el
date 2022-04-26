@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(defvar siren-themes-dir (expand-file-name "themes" siren-dir)
+(defvar siren-themes-dir (siren-dir "themes")
   "Root directory for Emacs Siren custom themes.")
 (add-to-list 'custom-theme-load-path siren-themes-dir)
 

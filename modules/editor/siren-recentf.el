@@ -11,7 +11,7 @@
   :demand t
 
   :custom
-  (recentf-save-file (expand-file-name "recentf" siren-cache-dir))
+  (recentf-save-file (siren-cache-dir "recentf"))
   (recentf-max-saved-items 5000)
   (recentf-max-menu-items 1000)
   (recentf-auto-cleanup 'never)

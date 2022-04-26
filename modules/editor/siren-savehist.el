@@ -12,7 +12,7 @@
   :custom
   (savehist-additional-variables '(search-ring regexp-search-ring))
   (savehist-autosave-interval 60)
-  (savehist-file (expand-file-name "savehist" siren-cache-dir))
+  (savehist-file (siren-cache-dir "savehist"))
 
   :init
   (savehist-mode +1))

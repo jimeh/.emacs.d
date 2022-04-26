@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(defvar siren-modules-dir (expand-file-name "modules" siren-dir)
+(defvar siren-modules-dir (siren-dir "modules")
   "Root directory for Emacs Siren modules.")
 (siren-recursive-add-to-load-path siren-modules-dir)
 

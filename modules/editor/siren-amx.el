@@ -17,7 +17,7 @@
   (amx-backend 'ido)
   (amx-histroy-lenth 15)
   (amx-prompt-string "M-x ")
-  (amx-save-file (expand-file-name "amx-items" siren-cache-dir))
+  (amx-save-file (siren-cache-dir "amx-items"))
   (amx-show-key-bindings t)
 
   :config

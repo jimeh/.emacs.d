@@ -26,9 +26,9 @@
   (treemacs-sorting 'alphabetic-asc)
   (treemacs-width 40)
 
-  (treemacs-persist-file (expand-file-name "treemacs-persist" siren-cache-dir))
+  (treemacs-persist-file (siren-cache-dir "treemacs-persist"))
   (treemacs-last-error-persist-file
-   (expand-file-name "treemacs-persist-at-last-error" siren-cache-dir))
+   (siren-cache-dir "treemacs-persist-at-last-error"))
 
   :preface
   (defgroup siren-treemacs nil

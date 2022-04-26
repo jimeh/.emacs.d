@@ -59,12 +59,9 @@
 (use-package transient
   :defer t
   :custom
-  (transient-history-file
-   (expand-file-name "transient/history.el" siren-cache-dir))
-  (transient-levels-file
-   (expand-file-name "transient/levels.el" siren-cache-dir))
-  (transient-values-file
-   (expand-file-name "transient/values.el" siren-cache-dir)))
+  (transient-history-file (siren-cache-dir "transient/history.el"))
+  (transient-levels-file (siren-cache-dir "transient/levels.el"))
+  (transient-values-file (siren-cache-dir "transient/values.el")))
 
 (use-package magit-delta
   :hook

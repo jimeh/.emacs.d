@@ -16,8 +16,7 @@
   :after magit
 
   :custom
-  (forge-database-file (expand-file-name
-                        "forge-database.sqlite" siren-cache-dir))
+  (forge-database-file (siren-cache-dir "forge-database.sqlite"))
 
   :config
   (transient-insert-suffix 'forge-dispatch '(1)

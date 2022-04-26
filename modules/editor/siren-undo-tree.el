@@ -21,7 +21,7 @@
 
   :custom
   (undo-tree-history-directory-alist
-   `((".*" . ,(expand-file-name "undo-tree-history" siren-cache-dir))))
+   `((".*" . ,(siren-cache-dir "undo-tree-history"))))
   ;; Use undohist package to persist history to disk, it seems more reliable
   ;; than undo-tree's auto-save feature which randomly fails to restore history
   ;; for no obvious reason.

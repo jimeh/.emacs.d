@@ -33,6 +33,14 @@
 (unless (file-exists-p siren-cache-dir)
   (make-directory siren-cache-dir))
 
+(defun siren-dir (name)
+  "Return absolute path to sub-directory NAME under siren-dir."
+  (expand-file-name name siren-dir))
+
+(defun siren-cache-dir (name)
+  "Return absolute path to sub-directory NAME under siren-cache-dir."
+  (expand-file-name name siren-cache-dir))
+
 ;; Setup load-path
 (add-to-list 'load-path siren-core-dir)
 
@@ -57,7 +65,7 @@
   (require 'siren-core-linux))
 
 ;; Config changes made through the customize UI will be store here
-(setq custom-file (expand-file-name "custom.el" siren-dir))
+(setq custom-file (siren-dir "custom.el"))
 (load-file custom-file)
 
 ;; Enable custom themes

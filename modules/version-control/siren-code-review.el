@@ -9,8 +9,7 @@
 (use-package code-review
   :defer t
   :custom
-  (code-review-db-database-file (expand-file-name
-                                 "code-review-db.sqlite" siren-cache-dir))
+  (code-review-db-database-file (siren-cache-dir "code-review-db.sqlite"))
   (code-review-fill-column 80)
   (code-review-lgtm-message "lgtm :)")
   (code-review-new-buffer-window-strategy 'switch-to-buffer))

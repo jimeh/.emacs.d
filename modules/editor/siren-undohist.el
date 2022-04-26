@@ -9,7 +9,7 @@
 (use-package undohist
   :demand
   :custom
-  (undohist-directory (expand-file-name "undohist" siren-cache-dir))
+  (undohist-directory (siren-cache-dir "undohist"))
   (undohist-ignored-files '("COMMIT_EDITMSG"))
 
   :config

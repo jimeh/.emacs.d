@@ -14,7 +14,7 @@
   ("C-c C-c M-x" 'execute-extended-command)
 
   :custom
-  (smex-save-file (expand-file-name "smex-items" siren-cache-dir))
+  (smex-save-file (siren-cache-dir "smex-items"))
 
   :config
   (smex-initialize))
