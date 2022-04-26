@@ -18,7 +18,7 @@
       scroll-preserve-screen-position)
 
     (define-minor-mode siren-pixel-scroll-mode
-      "enable pixel-scroll-precision-mode with other tweaks."
+      "Enable pixel-scroll-precision-mode with other tweaks."
       :global t
       (if siren-pixel-scroll-mode
           (progn
