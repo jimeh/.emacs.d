@@ -39,9 +39,10 @@
 (require 'siren-rainbow)
 (require 'siren-recentf)
 (require 'siren-savehist)
-(require 'siren-undo-tree)
-(require 'siren-undohist)
+(require 'siren-undo-fu)
+(require 'siren-undo-fu-session)
 (require 'siren-uniquify)
+(require 'siren-vundo)
 (require 'siren-which-key)
 (require 'siren-whitespace)
 
