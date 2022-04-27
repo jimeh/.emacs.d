@@ -15,6 +15,7 @@
   ("/\\.env\\." . sh-mode)
   ("/\\.envrc\\'" . sh-mode)
   ("/\\.envrc\\." . sh-mode)
+  ("\\.zsh\\'" . sh-mode)
   ("/zshenv\\'" . sh-mode)
   ("/zshrc\\'" . sh-mode)
   ("\\.tmux\\'" . sh-mode)

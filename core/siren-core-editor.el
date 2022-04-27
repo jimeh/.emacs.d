@@ -125,9 +125,6 @@ indent yanked text (with prefix arg don't indent)."
 (add-hook 'after-save-hook
           'executable-make-buffer-file-executable-if-script-p)
 
-;; .zsh file is shell script too
-(add-to-list 'auto-mode-alist '("\\.zsh\\'" . shell-script-mode))
-
 ;; saner regex syntax
 (require 're-builder)
 (setq reb-re-syntax 'string)
