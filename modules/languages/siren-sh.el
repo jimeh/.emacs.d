@@ -51,7 +51,34 @@
   :preface
   (defun siren-lsp-bash-mode-setup ()
     (if (member sh-shell '(bash sh))
-        (lsp-deferred))))
+        (lsp-deferred)))
+
+  :config
+  ;; Create custom lsp-client for shellcheck diagnostics via efm-langserver.
+  (when (and (executable-find "efm-langserver")
+             (executable-find "shellcheck"))
+    (lsp-register-custom-settings
+     '(("shellcheck.rootMarkers" [".git/"])
+       ("shellcheck.languages"
+        ((shellscript . [((lintCommand . "shellcheck -f gcc -x -")
+                          (lintStdin . t)
+                          (lintSource . "shellcheck")
+                          (lintFormats . ["%f:%l:%c: %trror: %m"
+                                          "%f:%l:%c: %tarning: %m"
+                                          "%f:%l:%c: %tote: %m"]))])))))
+    (lsp-register-client
+     (make-lsp-client :new-connection (lsp-stdio-connection
+                                       '("efm-langserver"))
+                      :priority 0
+                      :activation-fn #'lsp-bash-check-sh-shell
+                      :initialized-fn
+                      (lambda (workspace)
+                        (with-lsp-workspace workspace
+                          (lsp--set-configuration
+                           (gethash "shellcheck"
+                                    (lsp-configuration-section "shellcheck")))))
+                      :server-id 'shellcheck
+                      :add-on? t))))
 
 (use-package shfmt
   :hook
