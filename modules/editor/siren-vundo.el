@@ -10,6 +10,13 @@
   :demand
   :general
   ("C-x u" 'vundo)
+  (:keymaps 'vundo-mode-map
+            "C-f" 'vundo-forward
+            "C-b" 'vundo-backward
+            "C-n" 'vundo-next
+            "C-p" 'vundo-previous
+            "C-a" 'vundo-stem-root
+            "C-e" 'vundo-stem-end)
 
   :custom
   (vundo-glyph-alist vundo-unicode-symbols))
