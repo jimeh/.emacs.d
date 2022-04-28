@@ -22,7 +22,12 @@
 
   :config
   (with-eval-after-load 'company
-    (delq 'company-preview-if-just-one-frontend company-frontends)))
+    ;; Use company popup even when there's only one result
+    (delq 'company-preview-if-just-one-frontend company-frontends)
+    (setf (nth (position 'company-pseudo-tooltip-unless-just-one-frontend
+                         company-frontends)
+               company-frontends)
+          'company-pseudo-tooltip-frontend)))
 
 (provide 'siren-copilot)
 ;;; siren-copilot.el ends here
