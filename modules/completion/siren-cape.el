@@ -9,6 +9,7 @@
 (require 'siren-company)
 
 (use-package cape
+  :after company
   :hook
   (lsp-completion-mode . siren-cape-capf-lsp-mode-setup)
 

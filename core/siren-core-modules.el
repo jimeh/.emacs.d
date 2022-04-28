@@ -19,8 +19,9 @@
 (require 'siren-packages)
 
 ;; Completion
-(require 'siren-company)
 (require 'siren-cape)
+(require 'siren-company)
+(require 'siren-copilot)
 
 ;; Documentation
 (require 'siren-dash-at-point)
