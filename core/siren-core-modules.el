@@ -105,6 +105,7 @@
 
 ;; Text editing
 (require 'siren-expand-region)
+(require 'siren-insert)
 (require 'siren-move-dup)
 (require 'siren-multiple-cursors)
 (require 'siren-randomize-region)
