@@ -12,7 +12,6 @@
 (require 'siren-move-dup)
 (require 'siren-prettier-js)
 (require 'siren-smartparens)
-(require 'siren-polymode)
 
 (use-package markdown-mode
   :mode
@@ -65,9 +64,6 @@
 ;; Required by markdown-edit-code-block.
 (use-package edit-indirect
   :defer t)
-
-(use-package poly-markdown
-  :ensure t)
 
 (use-package vmd-mode
   :defer t)
