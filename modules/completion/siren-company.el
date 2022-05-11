@@ -58,6 +58,10 @@
     (add-hook 'company-completion-cancelled-hook
               #'siren-company--maybe-turn-on-fci)))
 
+(use-package company-box
+  :if window-system
+  :hook (company-mode . company-box-mode))
+
 (use-package company-yasnippet
   :straight company
 
