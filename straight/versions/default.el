@@ -200,7 +200,7 @@
  ("tide" . "83c34c636f47cb0c10c7d1a728fa308bfec40890")
  ("toggle-quotes.el" . "33abc221d6887f0518337851318065cd86c34b03")
  ("transient" . "84f2d12ef31ec74c85e616283926780532fed13f")
- ("tree-sitter-langs" . "0dd5e56e2f5646aa51ed0fc9eb869a8f7090228a")
+ ("tree-sitter-langs" . "deb2d8674be8f777ace50e15c7c041aeddb1d0b2")
  ("treemacs" . "2f38579b1626bb22d9391bfb6e6f28a84689816e")
  ("treepy.el" . "3ac940e97f3d03e48ca9d7fcd74916a9b01c72f3")
  ("typescript.el" . "188350c222e68bb5c73a914738223a8c73299cfc")
