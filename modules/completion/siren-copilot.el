@@ -10,7 +10,7 @@
   :straight (:host github :repo "zerolfx/copilot.el"
                    :files ("dist" "copilot.el"))
   :hook
-  (prog-mode . copilot-mode)
+  (prog-mode . siren-copilot-setup)
 
   :general
   ("C-<tab>" 'copilot-accept-completion)
@@ -19,6 +19,14 @@
             "C-<tab>" 'copilot-accept-completion
             "C-TAB" 'copilot-accept-completion
             "<backtab>" 'copilot-accept-completion)
+
+  :preface
+  (defun siren-copilot-setup ()
+    ;; Disable visual-line-mode when copilot-mode is enabled. It prevents
+    ;; freezing issues, details:
+    ;; https://github.com/zerolfx/copilot.el/issues/15#issuecomment-1124244140
+    (visual-line-mode -1)
+    (copilot-mode))
 
   :config
   (with-eval-after-load 'company

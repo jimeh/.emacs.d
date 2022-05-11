@@ -21,7 +21,7 @@
  ("compat" . "65cd985320536065beea311a2b40219ffea49146")
  ("consult" . "a568960aa2603e1c976d11b826110e21e743526b")
  ("consult-lsp" . "a8eb3a062feb2715f174500d0624d3a85e000cf7")
- ("copilot.el" . "34e5fb9607409576684eda637fc51b1aa30002b5")
+ ("copilot.el" . "b9c8816bf97d34cdbd22bee189235596e6d3801a")
  ("cucumber.el" . "e204d9e204b767cf95d6a051ff283f05dc51e9d3")
  ("dap-mode" . "ea437b24b059ad5be8ccf7ac8c17838c95657f23")
  ("dart-mode" . "43975c92080e307c4bc14a4773a61195d2062fd9")
