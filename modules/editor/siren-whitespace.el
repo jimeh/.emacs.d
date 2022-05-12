@@ -2,7 +2,7 @@
 
 ;;; Commentary:
 
-;; Basic configuration for whitespace package
+;; Basic configuration for whitespace-mode.
 
 ;;; Code:
 
