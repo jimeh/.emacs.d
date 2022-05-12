@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.18](https://github.com/jimeh/.emacs.d/compare/v0.8.17...v0.8.18) (2022-05-12)
+
+
+### Features
+
+* **completion:** add support for GitHub Copilot via copilot.el ([44c4cc9](https://github.com/jimeh/.emacs.d/commit/44c4cc93c11733e891a523768e96aadfbe2c3ae2))
+* **completion/company:** use company-box front-end in GUI mode ([ce4fd06](https://github.com/jimeh/.emacs.d/commit/ce4fd06ccca49c08fc241dbcdfb56a579962fe87))
+* **editor:** add extra navigation keybindings for vundo ([911bdb7](https://github.com/jimeh/.emacs.d/commit/911bdb71821e6e0166dd8d9f1742aa1916e28ed8))
+* **editor:** improve whitespace-mode setup and cleanup on save ([c84bf1d](https://github.com/jimeh/.emacs.d/commit/c84bf1dea67c73e14faccfcf7e7d17eabad9b77d))
+* **editor:** replace undo-tree with undo-fu and vundo ([177f075](https://github.com/jimeh/.emacs.d/commit/177f0758536582d1770ac79129172facb873bfa3))
+* **language:** enable tree-sitter for most languages that are supported ([d86f6c4](https://github.com/jimeh/.emacs.d/commit/d86f6c4490239d5cecd8818e1c1266ae5f255d87))
+* **language/terraform:** enable tree-sitter in terraform-mode ([682896a](https://github.com/jimeh/.emacs.d/commit/682896a67f4b082af2578582179183961de7c5c6))
+* **languages:** enable shellcheck linting when using bash language server ([cb719af](https://github.com/jimeh/.emacs.d/commit/cb719af306a5760ffd82e99f7b829a05edf8c51d))
+* **text-editing:** add siren-insert module ([ad2e2d2](https://github.com/jimeh/.emacs.d/commit/ad2e2d2bab15c31b1b9248fbeff20663c9e6e57f))
+* **ui:** define custom siren-pixel-scroll-mode ([be59506](https://github.com/jimeh/.emacs.d/commit/be595062e62981841e93a7a4d4ef7a3eb2f80b05))
+
+
+### Bug Fixes
+
+* **completion/copilot:** improve copilot's interaction with company-mode ([e14bfa3](https://github.com/jimeh/.emacs.d/commit/e14bfa37d8810bfd35fbbfdbef3ed02f23cc7b29))
+* **completion/copilot:** work around freezing issue caused by visual-line-mode ([7c2beb4](https://github.com/jimeh/.emacs.d/commit/7c2beb4cdfbde496b6ed54fa1e50ec58c0c6e187))
+* **editor:** use new marginalia-field-width variable name ([dad8f77](https://github.com/jimeh/.emacs.d/commit/dad8f778b31dc722d7c044ec82c931c83324ab9f))
+* **language/markdown:** disable polymode in markdown-mode ([1fda5dc](https://github.com/jimeh/.emacs.d/commit/1fda5dc0ccc7214131ecfec3eee2d02e753eed22))
+* **navigation:** resolve load order between consult and projectile ([846c138](https://github.com/jimeh/.emacs.d/commit/846c13881efbf405526fb30185fb2e35d52f36e4))
+* **text-editing:** use wildcard in tempel-path ([d85671a](https://github.com/jimeh/.emacs.d/commit/d85671a44cb4f4b93cc526052dada476990450c6))
+* **ui/pixel-scroll:** fix typo with siren-pixel-scroll-mode init ([16ad040](https://github.com/jimeh/.emacs.d/commit/16ad0402a28d39fd30a0b09818ccb2521693e452))
+
 ### [0.8.17](https://github.com/jimeh/.emacs.d/compare/v0.8.16...v0.8.17) (2022-04-07)
 
 
