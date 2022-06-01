@@ -146,7 +146,9 @@ Only shows file-based buffers."
     "Normalize directory DIR.
 DIR can be project, not-project, nil or a path."
     (cond
-     ((or (eq dir 'project) (eq dir 'not-project)) (consult--project-root))
+     ((or (eq dir 'project) (eq dir 'not-project)) (if consult-project-root-function
+                                                       (funcall consult-project-root-function)
+                                                     (consult--project-root)))
      (dir (expand-file-name dir))))
 
   (cl-defun siren-consult--buffer-query (&key sort directory mode as predicate (filter t)
@@ -188,10 +190,10 @@ AS is a conversion function."
                          (not (not (string-match-p include-re (buffer-name it)))))))))
              (or (not root)
                  (when-let (dir (buffer-local-value 'default-directory it))
-                   (let ((in-project (string-prefix-p root
-                                                      (if (and (/= 0 (length dir)) (eq (aref dir 0) ?/))
-                                                          dir
-                                                        (expand-file-name dir)))))
+                   (let* ((expanded-dir (if (and (/= 0 (length dir)) (eq (aref dir 0) ?/))
+                                           dir
+                                         (expand-file-name dir)))
+                         (in-project (string-prefix-p root expanded-dir)))
                      (or (and not-project (not in-project))
                          (and (not not-project) in-project)))))
              (or (not predicate) (funcall predicate it))
