@@ -42,6 +42,10 @@
   (lsp-signature-auto-activate t)
   (lsp-signature-render-documentation t)
 
+  :custom-face
+  ;; Override the default semhl label face.
+  (lsp-face-semhl-label ((t (:inherit font-lock-keyword-face))))
+
   ;; Set read process output to 1MB, instead of default 4KB. As many language
   ;; servers produce output ranging from 800KB to 3MB, leaving it at 4KB affects
   ;; performance. More info here:
