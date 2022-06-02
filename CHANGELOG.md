@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.19](https://github.com/jimeh/.emacs.d/compare/v0.8.18...v0.8.19) (2022-06-02)
+
+
+### Bug Fixes
+
+* **navigation/consult:** fix custom project directory lookup function ([c5b1494](https://github.com/jimeh/.emacs.d/commit/c5b149497b0548af99d5e1177d6c3c4aab504f20))
+
 ### [0.8.18](https://github.com/jimeh/.emacs.d/compare/v0.8.17...v0.8.18) (2022-05-12)
 
 
