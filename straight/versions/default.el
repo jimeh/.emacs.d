@@ -77,6 +77,8 @@
  ("flyspell-correct" . "7d7b6b01188bd28e20a13736ac9f36c3367bd16e")
  ("forge" . "05babf69068de7a982bd2e8ad888f37dc7319003")
  ("frame-local" . "7ee1106c3bcd4022f48421f8cb1ef4f995da816e")
+ ("fussy" . "1e77aa133b1bed8164a927b9090af839d0383774")
+ ("fzf-native" . "8fc9f7e207e2610434745c37b3953f577d257728")
  ("gcmh" . "0089f9c3a6d4e9a310d0791cf6fa8f35642ecfd9")
  ("general.el" . "9651024e7f40a8ac5c3f31f8675d3ebe2b667344")
  ("gh-notify" . "aa4d8bc0c56366d437e7c126e7eedc5938109342")

@@ -52,7 +52,7 @@
 
 ;; Completion Systems and Interfaces
 (require 'siren-vertico)
-(require 'siren-orderless)
+(require 'siren-fussy)
 
 ;; Linting
 (require 'siren-flycheck)
