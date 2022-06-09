@@ -13,11 +13,6 @@
                 (company-nginx :type git :host github
                                :repo "emacsmirror/company-nginx"
                                :branch "master")
-                ;; Use latest version of undo-tree from main git repo. The
-                ;; package on elpa.gnu.org is quite old.
-                (undo-tree :type git :host gitlab
-                           :repo "tsc25/undo-tree"
-                           :branch "master")
                 ;; Override vertico recipe to fix issues with extensions.
                 (vertico :type git :host github :repo "minad/vertico"
                          :files (:defaults "extensions/*")
