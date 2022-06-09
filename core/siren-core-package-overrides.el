@@ -13,6 +13,10 @@
                 (company-nginx :type git :host github
                                :repo "emacsmirror/company-nginx"
                                :branch "master")
+                (undo-fu :type git :flavor melpa :host github
+                         :repo "emacsmirror/undo-fu")
+                (undo-fu-session :type git :flavor melpa :host github
+                                 :repo "emacsmirror/undo-fu-session")
                 ;; Override vertico recipe to fix issues with extensions.
                 (vertico :type git :host github :repo "minad/vertico"
                          :files (:defaults "extensions/*")
