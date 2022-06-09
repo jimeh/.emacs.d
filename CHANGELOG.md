@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.20](https://github.com/jimeh/.emacs.d/compare/v0.8.19...v0.8.20) (2022-06-09)
+
+
+### Features
+
+* **completion:** replace orderless with fussy ([f6ecda7](https://github.com/jimeh/.emacs.d/commit/f6ecda7bf4d72ff693003fc719fad916b2d397a8))
+
+
+### Bug Fixes
+
+* **packages:** override undo-fu and undo-fu-session recipes ([bd3e53b](https://github.com/jimeh/.emacs.d/commit/bd3e53bdc86c5b128da6c50063d5491375da3ec3))
+
 ### [0.8.19](https://github.com/jimeh/.emacs.d/compare/v0.8.18...v0.8.19) (2022-06-02)
 
 
