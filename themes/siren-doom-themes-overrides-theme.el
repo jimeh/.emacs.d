@@ -75,6 +75,17 @@
  `(tree-sitter-hl-face:method.call ((t ( :foreground ,(doom-blend 'functions 'keywords 0.6) ))))
  `(tree-sitter-hl-face:function.call ((t ( :foreground ,(doom-blend 'functions 'keywords 0.8) ))))
 
+ ;; highlight-indent-guides
+ `(highlight-indent-guides-odd-face ((t ( :background ,(doom-lighten 'bg 0.06) ))))
+ `(highlight-indent-guides-top-odd-face ((t ( :background ,(doom-lighten 'bg 0.12) ))))
+ `(highlight-indent-guides-stack-odd-face ((t ( :background ,(doom-lighten 'bg 0.12) ))))
+ `(highlight-indent-guides-even-face ((t ( :background ,(doom-lighten 'bg 0.07) ))))
+ `(highlight-indent-guides-top-even-face ((t ( :background ,(doom-lighten 'bg 0.14) ))))
+ `(highlight-indent-guides-stack-even-face ((t ( :background ,(doom-lighten 'bg 0.14) ))))
+ `(highlight-indent-guides-character-face ((t ( :foreground ,(doom-lighten 'bg 0.12) ))))
+ `(highlight-indent-guides-top-character-face ((t ( :foreground ,(doom-lighten 'bg 0.25) ))))
+ `(highlight-indent-guides-stack-character-face ((t ( :foreground ,(doom-lighten 'bg 0.25) ))))
+
  ;; hideshowvis
  `(hideshowvis-hidable-face ((t ( :foreground ,(doom-color 'base7) ))))
 
