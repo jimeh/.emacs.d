@@ -16,7 +16,13 @@
 
   :custom
   (undo-fu-allow-undo-in-region nil)
-  (undo-fu-ignore-keyboard-quit t))
+  (undo-fu-ignore-keyboard-quit t)
+
+  ;; Customize undo limits to ensure lots of history is retained, essentially
+  ;; settings limits to the same values as undo-tree does.
+  (undo-limit 80000000)
+  (undo-strong-limit 120000000)
+  (undo-outer-limit 360000000))
 
 (provide 'siren-undo-fu)
 ;;; siren-undo-fu.el ends here
