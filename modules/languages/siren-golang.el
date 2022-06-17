@@ -150,9 +150,9 @@ For example, if the current buffer is `foo.go', the buffer for
       (if (string-match "_test\.go$" buffer-file-name)
           (current-buffer)
         (let ((ff-always-try-to-create nil)
-	      (filename (ff-find-the-other-file)))
+              (filename (ff-find-the-other-file)))
           (when filename
-	    (find-file-noselect filename)))))))
+            (find-file-noselect filename)))))))
 
 (use-package dap-go
   :straight dap-mode
