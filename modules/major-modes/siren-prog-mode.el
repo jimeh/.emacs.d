@@ -24,7 +24,6 @@
         (siren-display-indentation 1))
 
     (hl-line-mode t)
-    (visual-line-mode t)
     (whitespace-mode t))
 
   :init
