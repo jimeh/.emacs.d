@@ -30,8 +30,7 @@
   :preface
   (defun siren-go-mode-setup ()
     (setq-local tab-width 4
-                company-minimum-prefix-length 1
-                whitespace-style (delete 'indentation whitespace-style))
+                company-minimum-prefix-length 1)
 
     (when (fboundp 'highlight-symbol-mode)
       (highlight-symbol-mode -1))

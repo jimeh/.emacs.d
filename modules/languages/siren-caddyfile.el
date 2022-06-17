@@ -25,8 +25,9 @@
     ;; indent-tabs-mode var is set to nil. Hence we need to toggle
     ;; whitespace-mode off, and then on again to fix it's complaints about a
     ;; space indentation.
-    (whitespace-mode -1)
-    (whitespace-mode +1)))
+    (when (bound-and-true-p whitespace-mode)
+      (whitespace-mode -1)
+      (whitespace-mode +1))))
 
 (provide 'siren-caddyfile)
 ;;; siren-caddyfile.el ends here

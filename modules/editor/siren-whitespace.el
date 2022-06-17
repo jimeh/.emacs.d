@@ -24,18 +24,18 @@
     (when (bound-and-true-p whitespace-cleanup-on-save-mode)
       (whitespace-cleanup)))
 
-  :custom
-  (whitespace-line-column 80)
-  (whitespace-style '(face tabs trailing space-before-tab newline
-                           indentation space-after-tab tab-mark newline-mark
-                           empty))
-  (whitespace-display-mappings '((newline-mark ?\n
-                                               [?\u00AC ?\n] ;; \u00AC = ¬
-                                               [?$ ?\n])
-                                 (tab-mark ?\t
-                                           [?\u2192 ?\t] ;; \u2192 = →
-                                           [?\u00BB ?\t] ;; \u00BB = »
-                                           [?\\ ?\t]))))
+  :config
+  (setq whitespace-line-column 80
+        whitespace-style '(face tabs trailing space-before-tab newline
+                                indentation space-after-tab tab-mark
+                                newline-mark empty)
+        whitespace-display-mappings '((newline-mark ?\n
+                                                    [?\u00AC ?\n] ;; \u00AC = ¬
+                                                    [?$ ?\n])
+                                      (tab-mark ?\t
+                                                [?\u2192 ?\t] ;; \u2192 = →
+                                                [?\u00BB ?\t] ;; \u00BB = »
+                                                [?\\ ?\t]))))
 
 (provide 'siren-whitespace)
 ;;; siren-whitespace.el ends here
