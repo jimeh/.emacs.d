@@ -15,7 +15,7 @@
   (highlight-indent-guides-auto-enabled nil)
   (highlight-indent-guides-character ?\u2502)
   (highlight-indent-guides-method 'character)
-  (highlight-indent-guides-responsive 'top))
+  (highlight-indent-guides-responsive nil))
 
 (provide 'siren-highlight-indent-guides)
 ;;; siren-highlight-indent-guides.el ends here
