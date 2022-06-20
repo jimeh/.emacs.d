@@ -26,6 +26,8 @@
  ;; whitespace-mode
  `(whitespace-tab ((t ( :foreground ,(doom-color 'base4)
                         :background ,(doom-color 'bg) ))))
+ `(trailing-whitespace  ((t ( :foregroup ,(doom-color 'base4)
+                              :background ,(doom-color 'red) ))))
 
  ;; fill-column-indicator
  `(fill-column-indicator ((t ( :foreground ,(doom-lighten 'base3 0.10) ))))

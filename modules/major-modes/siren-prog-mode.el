@@ -23,7 +23,8 @@
     (if (< (buffer-size) (* 100 1024))
         (siren-display-indentation 1))
 
-    (hl-line-mode t))
+    (hl-line-mode t)
+    (whitespace-mode t))
 
   :init
   (add-to-list 'safe-local-variable-values '(fill-column . 120)))

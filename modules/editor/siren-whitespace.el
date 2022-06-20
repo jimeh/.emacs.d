@@ -26,10 +26,12 @@
 
   :config
   (setq whitespace-line-column 80
-        whitespace-style '(face tabs trailing space-before-tab newline
-                                indentation space-after-tab tab-mark
-                                newline-mark empty)
-        whitespace-display-mappings '((newline-mark ?\n
+        whitespace-style '(face tabs spaces trailing space-before-tab newline
+                                indentation space-after-tab tab-mark empty)
+        whitespace-display-mappings '((space-mark ?\s
+                                                  [?\u00B7] ;; \u00B7 = ·
+                                                  [46]) ;; 46 = .
+                                      (newline-mark ?\n
                                                     [?\u00AC ?\n] ;; \u00AC = ¬
                                                     [?$ ?\n])
                                       (tab-mark ?\t
