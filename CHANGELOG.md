@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.21](https://github.com/jimeh/.emacs.d/compare/v0.8.20...v0.8.21) (2022-06-22)
+
+
+### Features
+
+* **editor:** don't highlight current indent level ([efde4ea](https://github.com/jimeh/.emacs.d/commit/efde4eaaf27537b9245d4c7c392ba116b942f8ed))
+* **editor:** improve styling of highlight-indent-guides package ([c501012](https://github.com/jimeh/.emacs.d/commit/c5010120da8f6eda5388f2340c8b31c4d706d221))
+* **editor:** switch indent guide style to a thin line ([7ecfb8f](https://github.com/jimeh/.emacs.d/commit/7ecfb8fd866e6e1ea5e33ca4086ac83a5ad91585))
+* **language:** stop using visual-line-mode in prog-mode derived modes ([262a661](https://github.com/jimeh/.emacs.d/commit/262a66155730ed7df6b6adaf69502e3d9f7beb1b))
+* **whitespace:** re-enable whitespace mode without newline-mark ([f319097](https://github.com/jimeh/.emacs.d/commit/f3190978218482c5986bdd1c71a843f46aec14ee))
+
+
+### Bug Fixes
+
+* **completion/copilot:** disable whitespace-mode to fix cursor placement issue ([25b6493](https://github.com/jimeh/.emacs.d/commit/25b64935307b4f74abce26999de823443af450a2))
+* **editor/undo:** increase undo limits when using undo-fu ([5b054bd](https://github.com/jimeh/.emacs.d/commit/5b054bdd07c2b78d89e0159cdda52e0b9b1b1c61))
+
 ### [0.8.20](https://github.com/jimeh/.emacs.d/compare/v0.8.19...v0.8.20) (2022-06-09)
 
 
