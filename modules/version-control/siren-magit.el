@@ -9,6 +9,8 @@
 (require 'siren-display-fill-column)
 (require 'siren-display-line-numbers)
 (require 'siren-flyspell)
+(require 'siren-smartparens)
+(require 'siren-whitespace)
 
 (use-package magit
   :general
@@ -48,9 +50,11 @@
 
     (siren-display-fill-column)
     (siren-display-line-numbers)
-    (subword-mode)
-    (flyspell-mode)
-    (auto-fill-mode))
+    (auto-fill-mode t)
+    (flyspell-mode t)
+    (smartparens-mode t)
+    (subword-mode t)
+    (whitespace-mode t))
 
   :config
   (when (fboundp 'system-move-file-to-trash)
