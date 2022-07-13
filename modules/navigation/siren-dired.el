@@ -17,6 +17,8 @@
 
   :general
   (:keymaps 'dired-mode-map
+            "i" 'wdired-change-to-wdired-mode
+            "." 'dired-omit-mode
             "c" 'dired-create-directory
             "M-?" 'siren-dired-display-size)
 
@@ -86,6 +88,8 @@
     :group 'siren-dired)
 
   :config
+  (unbind-key "M-b" dired-mode-map)
+
   ;; Replace built-in dired buffer cleanup function with a custom patched
   ;; version that allows separately configuring if dired buffers are cleaned up
   ;; along with file buffers. Without this, whenever you delete a file in dired,
@@ -136,16 +140,17 @@ confirmation.  To disable the confirmation, see
   (require 'dired+)
 
   ;; Set custom ls flags when a GNU ls command is available.
-  (when (string-match-p "^gnu" (symbol-name system-type))
-    (setq dired-use-ls-dired t
-          dired-listing-switches "-aBhl"))
+  (let ((gnu-ls-flags "--all --ignore-backups --human-readable -l"))
+    (when (string-match-p "^gnu" (symbol-name system-type))
+      (setq dired-use-ls-dired t
+            dired-listing-switches gnu-ls-flags))
 
-  (when (string= system-type "darwin")
-    (let ((gls (executable-find "gls")))
-      (when gls
-        (setq dired-use-ls-dired t
-              insert-directory-program gls
-              dired-listing-switches "-aBhl")))))
+    (when (string= system-type "darwin")
+      (let ((gls (executable-find "gls")))
+        (when gls
+          (setq dired-use-ls-dired t
+                insert-directory-program gls
+                dired-listing-switches gnu-ls-flags))))))
 
 (use-package dired-x
   :straight (:type built-in)
