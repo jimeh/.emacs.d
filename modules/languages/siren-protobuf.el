@@ -9,6 +9,7 @@
 (require 'siren-flycheck)
 (require 'siren-folding)
 (require 'siren-prog-mode)
+(require 'siren-reformatter)
 
 (use-package protobuf-mode
   :mode "\\.proto\\'"
@@ -22,6 +23,10 @@
     (c-add-style "siren" '((c-basic-offset . 2)
                            (indent-tabs-mode . nil)) t)
 
+    ;; Enable formatting on save with `buf format' for buf projects.
+    (if (flycheck-protobuf-buf-project-root)
+        (protobuf-format-on-save-mode +1))
+
     (subword-mode +1)
     (siren-folding))
 
@@ -32,6 +37,12 @@
 
   :config
   (unbind-key "C-c C-u" 'c-mode-base-map)
+
+  (reformatter-define protobuf-format
+    :program "buf"
+    :args `("format" "--path" ,input-file)
+    :stdin nil
+    :input-file (reformatter-temp-file-in-current-directory))
 
   (flycheck-define-checker protobuf-buf
     "A protobuf syntax checker using buf.
