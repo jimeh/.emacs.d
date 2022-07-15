@@ -6,8 +6,8 @@
 
 ;;; Code:
 
-(require 'siren-reformatter)
 (require 'siren-lsp)
+(require 'siren-reformatter)
 (require 'siren-tree-sitter)
 
 (use-package terraform-mode
@@ -21,8 +21,7 @@
   (defun siren-terraform-mode-setup ()
     (setq-local tab-width 2)
     (tree-sitter-hl-mode +1)
-    (terraform-format-on-save-mode 1)
-    (lsp-deferred))
+    (terraform-format-on-save-mode 1))
 
   :config
   ;; This does a better job of injecting formatted content than the default
