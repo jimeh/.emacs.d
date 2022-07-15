@@ -20,6 +20,7 @@
     (toggle-diredp-find-file-reuse-dir 1))
 
   :config
+  (unbind-key "M-b" dired-mode-map)
   (unbind-key "M-i" dired-mode-map)
   (unbind-key "M-l" dired-mode-map))
 
