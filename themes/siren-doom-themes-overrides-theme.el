@@ -19,9 +19,10 @@
 (doom-themes-set-faces
   'siren-doom-themes-overrides
   '(font-lock-variable-name-face :foreground (doom-lighten blue 0.25))
-  '(vertical-border :foreground (doom-darken vertical-bar
-                                              (if window-system 0.4 0.0))
-                    :background (doom-color bg) )
+  '(vertical-border (&all :background bg)
+                    (&light :foreground vertical-bar)
+                    (&dark :foreground (doom-darken vertical-bar
+                                                    (if window-system 0.4 0))))
   '(font-lock-comment-face :foreground (doom-lighten comments 0.15))
 
   ;; whitespace-mode
