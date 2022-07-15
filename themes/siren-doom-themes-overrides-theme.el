@@ -152,6 +152,11 @@
   '(orderless-match-face-2 :foreground (doom-blend magenta red 0.4))
   '(orderless-match-face-3 :foreground (doom-blend magenta red 0.7))
 
+  ;; solaire-mode
+  '(solaire-hl-line-face :inherit 'hl-line
+                         :background (doom-blend region bg-alt 0.35)
+                         :extend t)
+
   ;; helm
   '(helm-selection :inherit 'bold
                    :background (doom-blend violet bg 0.2)

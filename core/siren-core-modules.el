@@ -13,6 +13,10 @@
 ;; Theme
 (require 'siren-doom-themes)
 
+;; UI
+(require 'siren-pixel-scroll)
+(require 'siren-solaire-mode)
+
 ;; Core
 (require 'siren-aliases)
 (require 'siren-global-keybindings)
@@ -46,9 +50,6 @@
 (require 'siren-vundo)
 (require 'siren-which-key)
 (require 'siren-whitespace)
-
-;; UI
-(require 'siren-pixel-scroll)
 
 ;; Completion Systems and Interfaces
 (require 'siren-vertico)

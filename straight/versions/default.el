@@ -58,6 +58,7 @@
  ("emacs-request" . "38ed1d2e64138eb16a9d8ed2987cff2e01b4a93b")
  ("emacs-shfmt" . "279a51defa3e0d97dc40b8a26e078699d4e22e90")
  ("emacs-slim" . "3636d18ab1c8b316eea71c4732eb44743e2ded87")
+ ("emacs-solaire-mode" . "8af65fbdc50b25ed3214da949b8a484527c7cc14")
  ("emacs-which-key" . "1ab1d0cc88843c9a614ed3226c5a1070e32e4823")
  ("emacsmirror-mirror" . "ebaa7a97ab71b1af4236e730e54845b380eb1792")
  ("emacsql" . "373975cbccf7776af771e23f86043b236a330702")
