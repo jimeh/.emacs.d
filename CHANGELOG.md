@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.22](https://github.com/jimeh/.emacs.d/compare/v0.8.21...v0.8.22) (2022-07-15)
+
+
+### Features
+
+* **completion/copilot:** add new and improve existing keybindings ([2b55cf7](https://github.com/jimeh/.emacs.d/commit/2b55cf7bd93f5038f59ecdb1909d3d4f20e339f8))
+* **core:** add siren-reopen-current-file interactive command ([731be46](https://github.com/jimeh/.emacs.d/commit/731be46b932456c11fc8c63cb745e5ba813da851))
+* **editor:** add marginalia tab annotator with tab group support ([3d40d3b](https://github.com/jimeh/.emacs.d/commit/3d40d3b0efe39cc5924316bed7871d8afcfe7c4f))
+* **language/protobuf:** enable format-on-save with buf format ([a1a3c3d](https://github.com/jimeh/.emacs.d/commit/a1a3c3d9f5a8c8ade34fbf8290ff67da1b9aea96))
+* **navigation/dired:** improve keybindings and listing switches setup ([caf8791](https://github.com/jimeh/.emacs.d/commit/caf879136372088792fe1ef9b2f590eb88b4aab2))
+* **ui:** add solaire-mode ([9d72997](https://github.com/jimeh/.emacs.d/commit/9d72997be082fc8d9f86c647bff18ea528217483))
+* **vc/git-commit-mode:** enable smartparens-mode and whitespace-mode ([978667f](https://github.com/jimeh/.emacs.d/commit/978667fc3460461398edd1c00c80dba522ac6ec6))
+* **workspaces/tab-bar:** add keybindings for tab-duplicate ([05ad42d](https://github.com/jimeh/.emacs.d/commit/05ad42d77e8b198902bc0753ba222073974116c7))
+* **workspaces/tab-bar:** easier use of tab groups ([558e6a9](https://github.com/jimeh/.emacs.d/commit/558e6a97d1a3f2f8a68ff56f2317b4c3ae1f79e9))
+
+
+### Bug Fixes
+
+* **editor:** change highlight indentation guides back to 'column mode ([2fa3838](https://github.com/jimeh/.emacs.d/commit/2fa38381ee2e96fd21bd6ec55cc64a898d303712))
+* **language/terraform:** disable lsp-mode in terraform files ([f8ed102](https://github.com/jimeh/.emacs.d/commit/f8ed1029da71409ec59a7d4d35f8257bf855ccf5))
+* **navigation/dired:** fix unbinding of M-b ([2a60c0d](https://github.com/jimeh/.emacs.d/commit/2a60c0d42f36e8b9385c8227fd363ad733733af5))
+* **themes/doom-overrides:** don't tweak vertical-bar in light themes ([9c13005](https://github.com/jimeh/.emacs.d/commit/9c130059370865f560dcf5329219f2ab02737cd2))
+
 ### [0.8.21](https://github.com/jimeh/.emacs.d/compare/v0.8.20...v0.8.21) (2022-06-22)
 
 
