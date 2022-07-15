@@ -18,6 +18,40 @@
   (marginalia-separator "  ")
 
   :preface
+  (defun siren-marginalia-annotate-tab (cand)
+    "Annotate named tab CAND with index, group, window and buffer information."
+    (when-let* ((tabs (funcall tab-bar-tabs-function))
+                (index (seq-position
+                        tabs nil
+                        (lambda (tab _) (equal (alist-get 'name tab) cand)))))
+      (let* ((tab (nth index tabs))
+             (groups (mapcar (lambda (tab) (alist-get 'group tab)) tabs))
+             (group-width (if (length> groups 0)
+                              (length (car (seq-sort-by #'length #'> groups)))
+                            0))
+             (group-format (format "%%%ds" (- group-width)))
+             (ws (alist-get 'ws tab))
+             (group (alist-get 'group tab))
+             (bufs (window-state-buffers ws)))
+        ;; NOTE: When the buffer key is present in the window state
+        ;; it is added in front of the window buffer list and gets duplicated.
+        (when (cadr (assq 'buffer ws)) (pop bufs))
+
+        (concat
+         (format #(" (%s)" 0 5 (face marginalia-key)) index)
+         (marginalia--fields
+          ((format group-format (if group group ""))
+           :face 'marginalia-key)
+          ((if (cdr bufs)
+               (format "%d windows" (length bufs))
+             "1 window ")
+           :face 'marginalia-size)
+          ((if (memq 'current-tab tab)
+               "*current tab*"
+             (string-join bufs " "))
+           :face 'marginalia-documentation)
+          )))))
+
   (defun marginalia-annotate-project-buffer (cand)
     "Annotate project buffer CAND with modification status, file name and major
 mode."
@@ -48,9 +82,11 @@ is within project root."
                         (remq 'marginalia-annotate-binding (cdr x)))))))
    marginalia-annotator-registry)
 
-  ;; Add project-buffer annotator.
+  ;; Add custom annotators.
   (add-to-list 'marginalia-annotator-registry
                '(project-buffer marginalia-annotate-project-buffer))
+  (add-to-list 'marginalia-annotator-registry
+               '(tab siren-marginalia-annotate-tab))
 
   ;; Enable marginalia.
   (marginalia-mode +1))
