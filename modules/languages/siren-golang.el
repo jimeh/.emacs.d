@@ -7,7 +7,6 @@
 ;;; Code:
 
 (require 'siren-dap)
-(require 'siren-display-indentation)
 (require 'siren-flycheck)
 (require 'siren-folding)
 (require 'siren-lsp)

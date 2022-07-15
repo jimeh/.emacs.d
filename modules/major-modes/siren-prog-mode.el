@@ -18,9 +18,8 @@
     "Default coding hook, useful with any programming language."
     (setq-local fill-column 80)
 
-    ;; Only show indentation if file size is below 100KB. It tends to cause a lot
-    ;; of lag and slowdowns on larger files, especially YAML files.
-    (if (< (buffer-size) (* 100 1024))
+    ;; Highlight indentation if we are not indenting with real tabs.
+    (if (not indent-tabs-mode)
         (siren-display-indentation 1))
 
     (hl-line-mode t)

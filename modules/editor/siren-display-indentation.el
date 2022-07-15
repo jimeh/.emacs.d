@@ -12,7 +12,10 @@
   "Activate or deactivate indentation guides.
 Optional ARG is passed directly to mode toggle function."
   (interactive)
-  (highlight-indent-guides-mode arg))
+  ;; Only allow indentation markers if file size is below 100KB. Above that
+  ;; performance is very bad.
+  (if (< (buffer-size) (* 100 1024))
+      (highlight-indent-guides-mode arg)))
 
 (provide 'siren-display-indentation)
 ;;; siren-display-indentation.el ends here
