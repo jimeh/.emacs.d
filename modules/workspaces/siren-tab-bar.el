@@ -25,6 +25,8 @@
             "C-l" 'tab-recent
             "r" 'tab-rename
             "C-r" 'tab-rename
+            "d" 'tab-duplicate
+            "C-d" 'tab-duplicate
             "n" 'siren-tab-bar-move-tab-right
             "p" 'siren-tab-bar-move-tab-left
             "s" 'siren-tab-bar-switch-to-or-create-tab
