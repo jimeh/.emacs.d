@@ -62,21 +62,17 @@
    'file-node-closed #'treemacs-visit-node-in-most-recently-used-window))
 
 (use-package treemacs-all-the-icons
-  :defer t
   :after (treemacs))
 
 (use-package treemacs-projectile
-  :defer t
   :after (treemacs projectile)
   :custom
   (treemacs-header-function #'treemacs-projectile-create-header))
 
 (use-package treemacs-magit
-  :defer t
   :after (treemacs magit))
 
 (use-package lsp-treemacs
-  :defer t
   :after (treemacs lsp-mode)
 
   :custom

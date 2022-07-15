@@ -45,16 +45,15 @@
     (add-hook 'hack-local-variables-hook
               'siren-markdown-mode-setup-prettier nil t)
 
-    (setq-local markdown-asymmetric-header t
-                whitespace-action nil)
+    (setq-local markdown-asymmetric-header t)
 
-    (siren-display-fill-column)
-    (siren-display-line-numbers)
-    (auto-fill-mode)
-    (prettier-js-mode)
-    (flyspell-mode)
-    (smartparens-mode +1)
-    (subword-mode))
+    (siren-display-fill-column t)
+    (siren-display-line-numbers t)
+    (auto-fill-mode t)
+    (prettier-js-mode t)
+    (flyspell-mode t)
+    (smartparens-mode t)
+    (subword-mode t))
 
   (defun siren-markdown-mode-setup-prettier ()
     (setq-local prettier-js-args `("--parser" "markdown"

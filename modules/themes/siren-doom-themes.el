@@ -24,7 +24,6 @@
 
   (doom-vibrant-brighter-comments nil)
   (doom-vibrant-brighter-modeline nil)
-  (doom-vibrant-comment-bg nil)
   (doom-vibrant-padded-modeline nil)
 
   (nlinum-highlight-current-line t)
