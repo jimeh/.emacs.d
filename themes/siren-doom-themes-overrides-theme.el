@@ -31,6 +31,9 @@
   '(trailing-whitespace :foregroup (doom-color base4)
                         :background (doom-color red))
 
+  ;; tab-bar
+  '(tab-bar-tab-group-current :foreground (doom-darken violet 0.3))
+
   ;; fill-column-indicator
   '(fill-column-indicator :foreground (doom-lighten base3 0.10))
 

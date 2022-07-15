@@ -29,8 +29,9 @@
             "p" 'siren-tab-bar-move-tab-left
             "s" 'siren-tab-bar-switch-to-or-create-tab
             "C-s" 'siren-tab-bar-switch-to-or-create-tab
-            "e" 'tab-switcher
-            "C-e" 'tab-switcher
+            "g" 'tab-group
+            "e" 'tab-group
+            "C-e" 'tab-group
             "u" 'tab-undo
             "C-u" 'tab-undo
             ";" 'siren-tab-bar-echo-tab-list
