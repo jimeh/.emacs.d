@@ -6,16 +6,39 @@
 
 ;;; Code:
 
+;; (use-package orderless
+;;   :commands (orderless-filter))
+
+;; (use-package fzf-native
+;;   :straight (fzf-native :repo "dangduc/fzf-native" :host github
+;;                         :files (:defaults "bin"))
+;;   :config
+;;   (fzf-native-load-dyn))
+
+(use-package flx-rs
+  :straight (flx-rs :repo "jcs-elpa/flx-rs" :fetcher github
+                    :files (:defaults "bin"))
+  :config
+  (flx-rs-load-dyn))
+
 (use-package fussy
-  :ensure t
+  :demand t
   :custom
   (completion-category-overrides nil)
   (completion-ignore-case t)
   (pcomplete-ignore-case t)
 
   (fussy-ignore-case t)
-  (fussy-filter-fn 'fussy-filter-orderless-flex)
-  (fussy-score-fn 'fussy-fzf-native-score)
+
+  (fussy-filter-fn
+   'fussy-filter-default
+   ;; 'fussy-filter-orderless-flex
+   )
+
+  (fussy-score-fn
+   ;; 'fussy-fzf-native-score
+   'flx-rs-score
+   )
 
   :preface
   (defun siren-fussy--company-transform-advice (f &rest args)
@@ -29,14 +52,7 @@
               :around 'siren-fussy--company-transform-advice)
   (setq completion-category-defaults nil))
 
-(use-package orderless
-  :commands (orderless-filter))
 
-(use-package fzf-native
-  :straight (fzf-native :repo "dangduc/fzf-native" :host github
-                        :files (:defaults "bin"))
-  :config
-  (fzf-native-load-dyn))
 
 (provide 'siren-fussy)
 ;;; siren-fussy.el ends here
