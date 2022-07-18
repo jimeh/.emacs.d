@@ -23,7 +23,7 @@
 
   :preface
   (defun siren-rust-mode-setup ()
-    (setq rust-format-on-save t)
+    (setq-local rust-format-on-save t)
 
     (tree-sitter-mode +1)
     (lsp-deferred)

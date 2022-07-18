@@ -13,9 +13,9 @@
 
   :preface
   (defun siren-groovy-mode-setup ()
-    (setq groovy-highlight-assignments t
-          groovy-indent-offset 4
-          tab-width 4)
+    (setq-local groovy-highlight-assignments t
+                groovy-indent-offset 4
+                tab-width 4)
 
     (subword-mode +1)))
 

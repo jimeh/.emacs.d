@@ -15,7 +15,7 @@
 
   :preface
   (defun siren-sql-mode-setup ()
-    (setq tab-width 2)))
+    (setq-local tab-width 2)))
 
 (use-package lsp-sqls
   :straight lsp-mode

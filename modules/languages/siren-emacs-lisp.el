@@ -27,7 +27,7 @@
     ;; (eldoc-mode +1)
     ;; (siren-recompile-elc-on-save)
     ;; (rainbow-mode +1)
-    ;; (setq mode-name "EL")
+    ;; (setq-local mode-name "EL")
     ;; (siren-conditional-emacs-lisp-checker)
     )
 

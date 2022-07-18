@@ -22,7 +22,7 @@
   (defun siren-makefile-mode-setup ()
     (subword-mode +1)
     (siren-display-indentation -1)
-    (setq tab-width 4))
+    (setq-local tab-width 4))
 
   :init
   (add-to-list 'siren-indent-sensitive-modes 'makefile-mode))

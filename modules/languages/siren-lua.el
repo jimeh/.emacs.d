@@ -12,8 +12,8 @@
 
   :preface
   (defun siren-lua-mode-setup ()
-    (setq lua-indent-level 2
-          whitespace-action '(auto-cleanup))
+    (setq-local lua-indent-level 2
+                whitespace-action '(auto-cleanup))
 
     (subword-mode +1)))
 

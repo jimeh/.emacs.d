@@ -27,9 +27,9 @@
     "Default tweaks for `json-mode'."
 
     (let ((width 2))
-      (setq js-indent-level width
-            json-reformat:indent-width width
-            tab-width width))
+      (setq-local js-indent-level width
+                  json-reformat:indent-width width
+                  tab-width width))
 
     (tree-sitter-mode +1)))
 

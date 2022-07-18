@@ -22,7 +22,7 @@
 
   :preface
   (defun siren-css-mode-setup ()
-    (setq tab-width 2)
+    (setq-local tab-width 2)
 
     (tree-sitter-mode +1)
     (prettier-js-mode)

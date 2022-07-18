@@ -18,7 +18,7 @@
   :preface
   (defun siren-applescript-mode-setup ()
     (run-hooks 'prog-mode-hook)
-    (setq tab-width 4)
+    (setq-local tab-width 4)
 
     (highlight-symbol-mode -1)
     (subword-mode +1)))

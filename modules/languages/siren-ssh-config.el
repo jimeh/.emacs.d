@@ -16,7 +16,7 @@
   :preface
   (defun siren-ssh-config-mode-setup ()
     (run-hooks 'prog-mode-hook)
-    (setq tab-width 2)))
+    (setq-local tab-width 2)))
 
 (provide 'siren-ssh-config)
 ;;; siren-ssh-config.el ends here

@@ -89,13 +89,13 @@
                      org-emphasis-regexp-components)
 
     (auto-fill-mode t)
-    (siren-display-fill-column)
-    (siren-display-indentation)
-    (siren-display-line-numbers)
-    (flyspell-mode)
-    (smartparens-mode +1)
-    (visual-line-mode +1)
-    (whitespace-mode +1))
+    (siren-display-fill-column t)
+    (siren-display-indentation t)
+    (siren-display-line-numbers t)
+    (flyspell-mode t)
+    (smartparens-mode t)
+    (visual-line-mode t)
+    (whitespace-mode t))
 
   :config
   (require 'org-mouse)

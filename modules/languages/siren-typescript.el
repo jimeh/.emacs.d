@@ -27,9 +27,9 @@
   :preface
   (defun siren-typescript-mode-setup ()
     (let ((width 2))
-      (setq typescript-indent-level width
-            indent-level width
-            tab-width width))
+      (setq-local typescript-indent-level width
+                  indent-level width
+                  tab-width width))
 
     (lsp-deferred)
     (subword-mode +1)
@@ -49,8 +49,8 @@
     (interactive)
     (tide-setup)
 
-    (setq flycheck-check-syntax-automatically '(save mode-enabled)
-          company-tooltip-align-annotations t)
+    (setq-local flycheck-check-syntax-automatically '(save mode-enabled)
+                company-tooltip-align-annotations t)
 
     (tree-sitter-mode +1)
     (prettier-js-mode +1)

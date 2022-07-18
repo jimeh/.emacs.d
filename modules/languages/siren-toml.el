@@ -17,7 +17,7 @@
   :preface
   (defun siren-toml-mode-setup ()
     (run-hooks 'prog-mode-hook)
-    (setq tab-width 2)
+    (setq-local tab-width 2)
     (prettier-js-mode)))
 
 (provide 'siren-toml)

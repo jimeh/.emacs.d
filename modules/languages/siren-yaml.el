@@ -22,8 +22,8 @@
   (defun siren-yaml-mode-setup ()
     (run-hooks 'prog-mode-hook)
 
-    (setq tab-width 2)
-    (subword-mode +1)))
+    (setq-local tab-width 2)
+    (subword-mode t)))
 
 (use-package lsp-yaml
   :straight lsp-mode

@@ -21,7 +21,7 @@
   :preface
   (defun siren-xml-setup ()
     (run-hooks 'prog-mode-hook)
-    (setq tab-width 2)
+    (setq-local tab-width 2)
     (prettier-js-mode)))
 
 (provide 'siren-xml)

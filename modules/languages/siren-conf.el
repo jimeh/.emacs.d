@@ -22,7 +22,7 @@
   :preface
   (defun siren-conf-mode-setup ()
     (run-hooks 'prog-mode-hook)
-    (setq tab-width 2)))
+    (setq-local tab-width 2)))
 
 (provide 'siren-conf)
 ;;; siren-conf.el ends here

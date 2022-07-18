@@ -16,7 +16,7 @@
 
   :preface
   (defun siren-nginx-mode-setup ()
-    (setq tab-width 4)))
+    (setq-local tab-width 4)))
 
 (use-package company-nginx
   :hook

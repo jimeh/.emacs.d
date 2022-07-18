@@ -28,9 +28,9 @@
   (defun siren-js-mode-setup ()
     "Default tweaks for `js-mode'."
     (let ((width 2))
-      (setq js-indent-level width
-            indent-level width
-            tab-width width))
+      (setq-local js-indent-level width
+                  indent-level width
+                  tab-width width))
 
     (tree-sitter-mode +1)
     (subword-mode)

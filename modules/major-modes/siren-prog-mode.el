@@ -20,7 +20,7 @@
 
     ;; Highlight indentation if we are not indenting with real tabs.
     (if (not indent-tabs-mode)
-        (siren-display-indentation 1))
+        (siren-display-indentation t))
 
     (hl-line-mode t)
     (whitespace-mode t))

@@ -16,7 +16,7 @@
   :preface
   (defun siren-feature-mode-setup ()
     (run-hooks 'prog-mode-hook)
-    (setq tab-width 2)))
+    (setq-local tab-width 2)))
 
 (provide 'siren-cucumber)
 ;;; siren-cucumber.el ends here

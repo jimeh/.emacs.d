@@ -16,7 +16,7 @@
 
   :preface
   (defun siren-plantuml-mode-setup ()
-    (setq tab-width 2)))
+    (setq-local tab-width 2)))
 
 (provide 'siren-plantuml)
 ;;; siren-plantuml.el ends here

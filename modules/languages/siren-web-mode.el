@@ -34,7 +34,7 @@
   :preface
   (defun siren-web-mode-setup ()
     "Default tweaks for `web-mode'."
-    (setq tab-width 2)
+    (setq-local tab-width 2)
 
     (when (version< emacs-version "27.0")
       (siren-display-fill-column -1))
