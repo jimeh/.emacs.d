@@ -23,9 +23,10 @@
     (c-add-style "siren" '((c-basic-offset . 2)
                            (indent-tabs-mode . nil)) t)
 
-    ;; Enable formatting on save with `buf format' for buf projects.
-    (if (flycheck-protobuf-buf-project-root)
-        (protobuf-format-on-save-mode +1))
+    ;; Lint and format with buf if file is in a buf project.
+    (when (flycheck-protobuf-buf-project-root)
+      (setq-local flycheck-checker 'protobuf-buf)
+      (protobuf-format-on-save-mode +1))
 
     (subword-mode +1)
     (siren-folding))
