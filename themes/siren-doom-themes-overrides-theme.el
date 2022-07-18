@@ -25,6 +25,11 @@
                                                     (if window-system 0.4 0))))
   '(font-lock-comment-face :foreground (doom-lighten comments 0.15))
 
+  ;; built-in completion faces, based on doom-themes' defaults for orderless
+  '(completions-common-part :weight 'bold
+                            :foreground (doom-blend blue    fg 0.6)
+                            :background (doom-blend blue    bg 0.1))
+
   ;; whitespace-mode
   '(whitespace-tab :foreground (doom-color base4)
                    :background (doom-color bg))
@@ -129,28 +134,6 @@
   ;; treemacs
   '(siren-treemacs-line-highlight :background (doom-blend violet bg 0.2)
                                   :extend t)
-
-  ;; selectrum
-  '(selectrum-current-candidate :background (doom-blend violet bg 0.2)
-                                 :foreground (doom-blend violet fg 0.3)
-                                 :distant-foreground nil
-                                 :extend t)
-  '(selectrum-prescient-primary-highlight :foreground (doom-lighten magenta 0.15)
-                                           :weight 'light)
-  '(selectrum-prescient-secondary-highlight :foreground (doom-blend magenta red 0.6)
-                                             :weight 'bold)
-
-  ;; vertico
-  '(vertico-current :background (doom-blend violet bg 0.2)
-                    :foreground (doom-blend violet fg 0.3)
-                    :distant-foreground nil
-                    :extend t)
-
-  ;; orderless
-  '(orderless-match-face-0 :foreground (doom-lighten magenta 0.15))
-  '(orderless-match-face-1 :foreground (doom-lighten magenta 0.3))
-  '(orderless-match-face-2 :foreground (doom-blend magenta red 0.4))
-  '(orderless-match-face-3 :foreground (doom-blend magenta red 0.7))
 
   ;; solaire-mode
   '(solaire-hl-line-face :inherit 'hl-line
