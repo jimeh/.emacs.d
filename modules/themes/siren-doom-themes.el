@@ -64,10 +64,12 @@
   (defun siren-doom-themes-vibrant-theme ()
     (interactive)
     (siren-doom-themes-load 'doom-vibrant))
+  (defalias 'vib 'siren-doom-themes-vibrant-theme)
 
   (defun siren-doom-themes-nord-light-theme ()
     (interactive)
     (siren-doom-themes-load 'doom-nord-light))
+  (defalias 'nord 'siren-doom-themes-nord-light-theme)
 
   (defun siren-doom-themes-list ()
     (seq-filter
