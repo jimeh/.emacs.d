@@ -6,8 +6,8 @@
 
 ;;; Code:
 
-(require 'siren-folding)
 (require 'siren-lsp)
+(require 'siren-origami)
 (require 'siren-tree-sitter)
 
 (use-package js-mode
@@ -32,9 +32,9 @@
                   indent-level width
                   tab-width width))
 
-    (tree-sitter-mode +1)
-    (subword-mode)
-    (siren-folding)))
+    (tree-sitter-mode t)
+    (subword-mode t)
+    (origami-mode t)))
 
 (use-package lsp-javascript
   :straight lsp-mode

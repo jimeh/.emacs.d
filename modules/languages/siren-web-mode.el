@@ -7,7 +7,7 @@
 ;;; Code:
 
 (require 'siren-display-fill-column)
-(require 'siren-folding)
+(require 'siren-hideshow)
 
 (use-package web-mode
   :mode
@@ -39,9 +39,9 @@
     (when (version< emacs-version "27.0")
       (siren-display-fill-column -1))
 
-    (siren-folding)
-    (subword-mode +1)
-    (lsp-deferred)))
+    (lsp-deferred)
+    (hs-minor-mode t)
+    (subword-mode t)))
 
 (provide 'siren-web-mode)
 ;;; siren-web-mode.el ends here

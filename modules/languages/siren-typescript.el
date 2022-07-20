@@ -7,8 +7,8 @@
 ;;; Code:
 
 (require 'siren-flycheck)
-(require 'siren-folding)
 (require 'siren-lsp)
+(require 'siren-origami)
 (require 'siren-prettier-js)
 (require 'siren-tree-sitter)
 (require 'siren-web-mode)
@@ -32,8 +32,13 @@
                   tab-width width))
 
     (lsp-deferred)
-    (subword-mode +1)
-    (siren-folding)))
+    (subword-mode t)
+    (origami-mode t))
+
+  :init
+  (with-eval-after-load 'origami
+    (add-to-list 'origami-parser-alist
+                 '(typescript-mode . origami-c-style-parser))))
 
 (use-package tide
   :hook
@@ -52,11 +57,11 @@
     (setq-local flycheck-check-syntax-automatically '(save mode-enabled)
                 company-tooltip-align-annotations t)
 
-    (tree-sitter-mode +1)
-    (prettier-js-mode +1)
-    (flycheck-mode +1)
-    (eldoc-mode +1)
-    (tide-hl-identifier-mode +1))
+    (tree-sitter-mode t)
+    (prettier-js-mode t)
+    (flycheck-mode t)
+    (eldoc-mode t)
+    (tide-hl-identifier-mode t))
 
   :init
   (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))

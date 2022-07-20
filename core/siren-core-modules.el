@@ -36,7 +36,6 @@
 (require 'siren-display-indentation)
 (require 'siren-display-line-numbers)
 (require 'siren-embark)
-(require 'siren-folding)
 (require 'siren-highlight-symbol)
 (require 'siren-marginalia)
 (require 'siren-minions)

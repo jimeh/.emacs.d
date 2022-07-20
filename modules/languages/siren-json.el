@@ -6,9 +6,9 @@
 
 ;;; Code:
 
-(require 'siren-folding)
 (require 'siren-js)
 (require 'siren-lsp)
+(require 'siren-origami)
 (require 'siren-tree-sitter)
 
 (use-package json-mode
@@ -31,7 +31,13 @@
                   json-reformat:indent-width width
                   tab-width width))
 
-    (tree-sitter-mode +1)))
+    (tree-sitter-mode t)
+    (origami-mode t))
+
+  :init
+  (with-eval-after-load 'origami
+    (add-to-list 'origami-parser-alist
+                 '(json-mode . origami-c-style-parser))))
 
 (use-package lsp-json
   :straight lsp-mode

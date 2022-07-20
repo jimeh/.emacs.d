@@ -6,8 +6,8 @@
 
 ;;; Code:
 
-(require 'siren-folding)
 (require 'siren-lsp)
+(require 'siren-origami)
 (require 'siren-tree-sitter)
 
 (use-package rust-mode
@@ -25,10 +25,15 @@
   (defun siren-rust-mode-setup ()
     (setq-local rust-format-on-save t)
 
-    (tree-sitter-mode +1)
+    (tree-sitter-mode t)
     (lsp-deferred)
-    (siren-folding)
-    (subword-mode +1)))
+    (origami-mode t)
+    (subword-mode t))
+
+  :init
+  (with-eval-after-load 'origami
+    (add-to-list 'origami-parser-alist
+                 '(rust-mode . origami-c-style-parser))))
 
 (use-package cargo
   :hook (rust-mode . cargo-minor-mode))

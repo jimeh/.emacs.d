@@ -8,8 +8,8 @@
 
 (require 'siren-dap)
 (require 'siren-flycheck)
-(require 'siren-folding)
 (require 'siren-lsp)
+(require 'siren-origami)
 (require 'siren-projectile)
 (require 'siren-reformatter)
 (require 'siren-tree-sitter)
@@ -36,9 +36,9 @@
     (when (fboundp 'auto-highlight-symbol-mode)
       (auto-highlight-symbol-mode -1))
 
-    (tree-sitter-mode +1)
-    (siren-folding)
-    (subword-mode +1))
+    (tree-sitter-mode t)
+    (origami-mode t)
+    (subword-mode t))
 
   (defun siren-define-golines-format-mode ()
     ;; Setup golines formatter for manual use - on save formatting is handled by

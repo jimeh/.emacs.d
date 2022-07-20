@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(require 'siren-folding)
+(require 'siren-origami)
 (require 'siren-prettier-js)
 (require 'siren-rainbow)
 (require 'siren-tree-sitter)
@@ -19,11 +19,11 @@
 
   :preface
   (defun siren-php-mode-setup ()
-    (tree-sitter-mode +1)
-    (prettier-js-mode)
-    (rainbow-mode +1)
-    (subword-mode +1)
-    (siren-folding)))
+    (tree-sitter-mode t)
+    (prettier-js-mode t)
+    (rainbow-mode t)
+    (subword-mode t)
+    (origami-mode t)))
 
 (provide 'siren-php)
 ;;; siren-php.el ends here

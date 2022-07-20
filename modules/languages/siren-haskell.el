@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(require 'siren-folding)
+(require 'siren-hideshow)
 
 (use-package haskell-mode
   :general
@@ -18,8 +18,8 @@
 
   :preface
   (defun siren-haskell-mode-setup ()
-    (siren-folding)
-    (subword-mode +1)))
+    (hs-minor-mode)
+    (subword-mode t)))
 
 (provide 'siren-haskell)
 ;;; siren-haskell.el ends here

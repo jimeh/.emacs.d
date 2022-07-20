@@ -7,7 +7,7 @@
 ;;; Code:
 
 (require 'siren-dap)
-(require 'siren-folding)
+(require 'siren-hideshow)
 (require 'siren-lsp)
 (require 'siren-projectile)
 (require 'siren-string-inflection)
@@ -60,9 +60,9 @@
                 ruby-use-smie t
                 tab-width 2)
 
-    (tree-sitter-mode +1)
-    (siren-folding)
-    (subword-mode +1))
+    (tree-sitter-mode t)
+    (hs-minor-mode t)
+    (subword-mode t))
 
   :init
   (with-eval-after-load "projectile"

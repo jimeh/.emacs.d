@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(require 'siren-folding)
+(require 'siren-origami)
 (require 'siren-prettier-js)
 
 (use-package rjsx-mode
@@ -17,8 +17,13 @@
   :preface
   (defun siren-rjsx-mode-setup ()
     (prettier-js-mode +1)
-    (subword-mode +1)
-    (siren-folding)))
+    (origami-mode t)
+    (subword-mode t))
+
+  :init
+  (with-eval-after-load 'origami
+    (add-to-list 'origami-parser-alist
+                 '(rjsx-mode . origami-c-style-parser))))
 
 (provide 'siren-jsx)
 ;;; siren-jsx.el ends here
