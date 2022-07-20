@@ -71,6 +71,9 @@
 ;; Enable custom themes
 (require 'siren-core-themes)
 
+;; Vendor directories
+(require 'siren-core-vendor)
+
 ;; The modules
 (require 'siren-core-modules)
 
