@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.23](https://github.com/jimeh/.emacs.d/compare/v0.8.22...v0.8.23) (2022-07-20)
+
+
+### Features
+
+* **core/vendor:** add support for loading files from vendor directory ([a67b8f5](https://github.com/jimeh/.emacs.d/commit/a67b8f5047737cdea815ce514d9b6d369a4d3d99))
+* **editor/consult:** massively simplify consult setup ([ca9ec4f](https://github.com/jimeh/.emacs.d/commit/ca9ec4f7a220918916f7561a4e117a0f66ffe8ac))
+* **editor/fussy:** improve completion performance ([29db7b6](https://github.com/jimeh/.emacs.d/commit/29db7b63ac663b9c14d0cfbfeb971a6ca9b8b01a))
+* **editor:** improve code folding with origami ([7c253d9](https://github.com/jimeh/.emacs.d/commit/7c253d986c35b5646c38575aea378a58e8a0d92e))
+* **language/protobuf:** format non-buf protobuf files with clang-format ([b92bd7b](https://github.com/jimeh/.emacs.d/commit/b92bd7b19ebbd309aa154ac346a4542b2339450e))
+* **text-editing:** add beginend package which improves M-< and M-> keybindings ([ab7d541](https://github.com/jimeh/.emacs.d/commit/ab7d5411483646893013a7e76f970a8462e7b3b9))
+* **text-editing:** add shift-number package ([86464e8](https://github.com/jimeh/.emacs.d/commit/86464e80b15d51791b0915cae20034f39eae72ea))
+* **text-editing:** replace toggle-quotes with cycle-quotes package ([0de0c4c](https://github.com/jimeh/.emacs.d/commit/0de0c4ca23a4b34f56c1696a23f1038beb9b91b2))
+* **theme:** add alias commands to quickly activate light/dark theme ([3355244](https://github.com/jimeh/.emacs.d/commit/33552444ab6d4e7e053b4d6e135bd4e983cba1b0))
+* **theme:** tweak completion related faces ([ccb2d7a](https://github.com/jimeh/.emacs.d/commit/ccb2d7a70374a424da15799d8d17c3f20531e5b9))
+* **vendor/clang-format:** add custom reformatter-based clang-format package ([72c33e7](https://github.com/jimeh/.emacs.d/commit/72c33e7b37c0448dff4ffc76b5a11f37028e9c79))
+
+
+### Bug Fixes
+
+* **editor:** correctly filter buffer results from consult-buffer ([92a6db7](https://github.com/jimeh/.emacs.d/commit/92a6db71e61429ade2ed5f0e0b38d3781132899d))
+* **language/protobuf:** enforce buf flycheck linter in buf projects ([a3c3840](https://github.com/jimeh/.emacs.d/commit/a3c384027dc560493857cdb5831d22e478bc90a9))
+
 ### [0.8.22](https://github.com/jimeh/.emacs.d/compare/v0.8.21...v0.8.22) (2022-07-15)
 
 
