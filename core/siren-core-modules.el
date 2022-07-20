@@ -111,6 +111,7 @@
 (require 'siren-multiple-cursors)
 (require 'siren-randomize-region)
 (require 'siren-safe-change-case)
+(require 'siren-shift-number)
 (require 'siren-smart-shift)
 (require 'siren-smartparens)
 (require 'siren-sort-symbols)

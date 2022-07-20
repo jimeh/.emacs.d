@@ -191,6 +191,7 @@
  ("scss-mode" . "cf58dbec5394280503eb5502938f3b5445d1b53d")
  ("seeing-is-believing" . "fbbe246c0fda87bb26227bb826eebadb418a220f")
  ("shell-pop-el" . "4b4394037940a890a313d715d203d9ead2d156a6")
+ ("shift-number.el" . "cd099a5582fc996b800ac7607f6c38a004ce9740")
  ("shrink-path.el" . "c14882c8599aec79a6e8ef2d06454254bb3e1e41")
  ("smart-shift" . "a26ab2b240137e62ec4bce1698ed9c5f7b6d13ae")
  ("smartparens" . "8b6a3c3b31afd5b3f846e09859b5fc62eb06e7c1")
