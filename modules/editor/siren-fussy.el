@@ -6,15 +6,6 @@
 
 ;;; Code:
 
-;; (use-package orderless
-;;   :commands (orderless-filter))
-
-;; (use-package fzf-native
-;;   :straight (fzf-native :repo "dangduc/fzf-native" :host github
-;;                         :files (:defaults "bin"))
-;;   :config
-;;   (fzf-native-load-dyn))
-
 (use-package flx-rs
   :straight (flx-rs :repo "jcs-elpa/flx-rs" :fetcher github
                     :files (:defaults "bin"))
@@ -43,16 +34,8 @@ string as provided."
   (pcomplete-ignore-case t)
 
   (fussy-ignore-case t)
-
-  (fussy-filter-fn
-   'fussy-filter-default
-   ;; 'fussy-filter-orderless-flex
-   )
-
-  (fussy-score-fn
-   ;; 'fussy-fzf-native-score
-   'flx-rs-score
-   )
+  (fussy-filter-fn 'fussy-filter-default)
+  (fussy-score-fn 'flx-rs-score)
 
   :preface
   (defun siren-fussy--company-transform-advice (f &rest args)
