@@ -6,6 +6,7 @@
  ("anzu" . "5abb37455ea44fa401d5f4c1bdc58adb2448db67")
  ("applescript-mode" . "9b84a7cb74d687745df37ba15113933fc6256274")
  ("avy" . "ba5f035be33693d1a136a5cbeedb24327f551a92")
+ ("beginend" . "bbcfdc0909c20ddee41e95b7ade7de63af73b220")
  ("bui.el" . "f3a137628e112a91910fd33c0cff0948fa58d470")
  ("bundler.el" . "43efb6be4ed118b06d787ce7fbcffd68a31732a7")
  ("caddyfile-mode" . "fc41148f5a7eb320f070666f046fb9d88cf17680")

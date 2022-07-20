@@ -104,6 +104,7 @@
 (require 'siren-flyspell)
 
 ;; Text editing
+(require 'siren-beginend)
 (require 'siren-expand-region)
 (require 'siren-insert)
 (require 'siren-move-dup)
