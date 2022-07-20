@@ -28,7 +28,7 @@
     ;; Lint and format with buf if file is in a buf project.
     (when (flycheck-protobuf-buf-project-root)
       (setq-local flycheck-checker 'protobuf-buf)
-      (protobuf-format-on-save-mode +1))
+      (buf-format-on-save-mode t))
 
     (subword-mode t)
     (origami-mode t))
@@ -46,7 +46,7 @@
   :config
   (unbind-key "C-c C-u" 'c-mode-base-map)
 
-  (reformatter-define protobuf-format
+  (reformatter-define buf-format
     :program "buf"
     :args `("format" "--path" ,input-file)
     :stdin nil
