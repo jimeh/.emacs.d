@@ -105,6 +105,7 @@
 
 ;; Text editing
 (require 'siren-beginend)
+(require 'siren-cycle-quotes)
 (require 'siren-expand-region)
 (require 'siren-insert)
 (require 'siren-move-dup)
@@ -119,7 +120,6 @@
 (require 'siren-string-edit)
 (require 'siren-string-inflection)
 (require 'siren-toggle-comments)
-(require 'siren-toggle-quotes)
 (require 'siren-yasnippet)
 
 ;; Version control

@@ -11,7 +11,7 @@
 (require 'siren-lsp)
 (require 'siren-projectile)
 (require 'siren-string-inflection)
-(require 'siren-toggle-quotes)
+(require 'siren-cycle-quotes)
 (require 'siren-tree-sitter)
 
 (use-package ruby-mode
@@ -203,7 +203,7 @@
   :diminish ruby-tools-mode
   :general
   (:keymaps 'ruby-tools-mode-map
-            "C-'" 'toggle-quotes)
+            "C-'" 'cycle-quotes)
   :hook
   (ruby-mode . ruby-tools-mode)
 
