@@ -26,7 +26,8 @@
                            (indent-tabs-mode . nil)) t)
 
     ;; Lint and format with buf if file is in a buf project.
-    (when (flycheck-protobuf-buf-project-root)
+    (if (not (flycheck-protobuf-buf-project-root))
+        (clang-format-on-save-mode t)
       (setq-local flycheck-checker 'protobuf-buf)
       (buf-format-on-save-mode t))
 
