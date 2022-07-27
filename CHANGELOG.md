@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.24](https://github.com/jimeh/.emacs.d/compare/v0.8.23...v0.8.24) (2022-07-27)
+
+
+### Bug Fixes
+
+* add missing siren-clang-format module ([3319a5c](https://github.com/jimeh/.emacs.d/commit/3319a5ce3657933dfa55faa7a48695fd356f91a7))
+
 ### [0.8.23](https://github.com/jimeh/.emacs.d/compare/v0.8.22...v0.8.23) (2022-07-20)
 
 
