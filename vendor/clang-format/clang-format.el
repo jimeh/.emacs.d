@@ -9,13 +9,6 @@
 
 (require 'reformatter)
 
-(reformatter-define clang-format
-  :program "clang-format"
-  :args '("-style=file" "--assume-filename=%s")
-  :lighter " TF")
-
-(require 'reformatter)
-
 (defgroup clang-format nil
   "Format buffers with clang-format."
   :group 'tools)
@@ -78,7 +71,7 @@ As determined by the SortIncludes style flag."
 (reformatter-define clang-format
   :program clang-format-executable
   :args (clang-format--make-args)
-  :lighter "CLFmt"
+  :lighter " fmt"
   :group 'clang-format)
 
 (provide 'clang-format)

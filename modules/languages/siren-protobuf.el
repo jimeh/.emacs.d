@@ -50,6 +50,7 @@
   (reformatter-define buf-format
     :program "buf"
     :args `("format" "--path" ,input-file)
+    :lighter " fmt"
     :stdin nil
     :input-file (reformatter-temp-file-in-current-directory))
 

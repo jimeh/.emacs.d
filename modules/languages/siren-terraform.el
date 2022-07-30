@@ -29,7 +29,7 @@
   (reformatter-define terraform-format
     :program "terraform"
     :args '("fmt" "-no-color" "-")
-    :lighter " TF"))
+    :lighter " fmt"))
 
 (use-package terraform-doc
   :defer t)

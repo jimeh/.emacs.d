@@ -46,7 +46,7 @@
     (reformatter-define golines-format
       :program "golines"
       :args '("-t" "4" "-m" "80" "--no-reformat-tags")
-      :lighter "GOLINES"))
+      :lighter " GOLINES"))
 
   :init
   (with-eval-after-load "projectile"
