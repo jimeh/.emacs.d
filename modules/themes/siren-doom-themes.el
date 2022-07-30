@@ -29,8 +29,12 @@
   (nlinum-highlight-current-line t)
 
   :config
-  ;; By default load the doom-vibrant theme.
-  (siren-doom-themes-load 'doom-vibrant)
+  (if (boundp 'ns-system-appearance)
+      (progn
+        (siren-doom-themes-set-appearance ns-system-appearance)
+        (add-hook 'ns-system-appearance-change-functions
+                  'siren-doom-themes-set-appearance))
+    (siren-doom-themes-set-appearance 'dark))
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
@@ -42,24 +46,55 @@
   (doom-themes-org-config)
 
   :preface
-  (defun siren-doom-themes-load (theme)
+  (defgroup siren-doom-themes nil
+    "siren-doom-themes customizations."
+    :group 'doom-themes)
+
+  (defcustom siren-doom-themes-light-theme 'doom-nord-light
+    "The theme to apply when system appearance is light."
+        :type '(symbol)
+        :group 'siren-doom-themes)
+
+  (defcustom siren-doom-themes-dark-theme 'doom-vibrant
+    "The theme to apply when system appearance is dark."
+        :type '(symbol)
+        :group 'siren-doom-themes)
+
+  (defun siren-doom-themes-set-appearance (appearance)
+    "Load theme, taking current system APPEARANCE into consideration."
+    (pcase appearance
+      ('light (siren-doom-themes-load siren-doom-themes-light-theme t))
+      ('dark (siren-doom-themes-load siren-doom-themes-dark-theme t))))
+
+  (defun siren-doom-themes-load (theme &optional no-reapply)
+    "Load doom-theme THEME, and apply siren overrides.
+
+If NO-REAPPLY is non-nil, do nothing if the specified theme is
+already loaded, otherwise re-apply the theme and siren-overrides."
     (interactive (list (completing-read "Choose theme: "
                                         (siren-doom-themes-list))))
 
-    ;; disable all themes
-    (dolist (theme custom-enabled-themes)
-      (when (not (string= theme "use-package"))
-        (disable-theme theme)))
+    (if (string= (type-of theme) "string")
+        (setq theme (intern theme)))
+    (if (not (string-prefix-p "doom-" (symbol-name theme)))
+        (error "'%s is not a doom-themes theme" theme))
 
-    ;; load doom theme
-    (load-theme (if (string= (type-of theme) "string") (intern theme) theme) t)
+    (when (or (not no-reapply)
+              (not (member theme custom-enabled-themes)))
+      ;; disable all themes
+      (dolist (theme custom-enabled-themes)
+        (when (not (string= theme "use-package"))
+          (disable-theme theme)))
 
-    ;; load overrides theme: ../../themes/siren-doom-themes-overrides-theme.el
-    (load-theme 'siren-doom-themes-overrides t)
+      ;; load doom theme
+      (load-theme theme t)
 
-    ;; execute custom function after loading/switching theme
-    (with-eval-after-load 'highlight-indent-guides
-      (highlight-indent-guides-auto-set-faces)))
+      ;; load overrides theme: ../../themes/siren-doom-themes-overrides-theme.el
+      (load-theme 'siren-doom-themes-overrides t)
+
+      ;; execute custom function after loading/switching theme
+      (with-eval-after-load 'highlight-indent-guides
+        (highlight-indent-guides-auto-set-faces))))
 
   (defun siren-doom-themes-vibrant-theme ()
     (interactive)
