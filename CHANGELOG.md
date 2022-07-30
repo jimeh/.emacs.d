@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.25](https://github.com/jimeh/.emacs.d/compare/v0.8.24...v0.8.25) (2022-07-30)
+
+
+### Features
+
+* **language/caddyfile:** format on save, use tab indentation ([646876f](https://github.com/jimeh/.emacs.d/commit/646876f1cd91976ac1416c72456d96256727e271))
+* **themes/doom:** add support for ns-system-appearance ([9db2724](https://github.com/jimeh/.emacs.d/commit/9db27243f75e18a7efb8a42a4afcc98e87ad7f20))
+* **ui/display-time:** add config for display-time-mode ([e662ee6](https://github.com/jimeh/.emacs.d/commit/e662ee6552a8b8ad0d076842a1a33c89195b0f59))
+* **utils:** add siren-prepend and siren-append macros ([bbd8f11](https://github.com/jimeh/.emacs.d/commit/bbd8f11719d15580da2e2bb0d98ea7afe97cf601))
+
+
+### Bug Fixes
+
+* **completion:** ensure correct order of completion-at-point-functions ([7f32de8](https://github.com/jimeh/.emacs.d/commit/7f32de8c49bc86da6cd9126e503cd276cd8fd036))
+* **themes/doom:** set foreground of tab-bar and tab-line to fg-alt ([0932f6c](https://github.com/jimeh/.emacs.d/commit/0932f6c5fa98943021fce28036f1ad6ed27bd72f))
+
 ### [0.8.24](https://github.com/jimeh/.emacs.d/compare/v0.8.23...v0.8.24) (2022-07-27)
 
 
