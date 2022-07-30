@@ -7,6 +7,14 @@
 
 ;;; Code:
 
+(defmacro siren-prepend (list-var element)
+  "Add ELEMENT to beginning of LIST-VAR, removing duplicates."
+  `(setq ,list-var (cons ,element (remove ,element ,list-var))))
+
+(defmacro siren-append (list-var element)
+  "Add ELEMENT to end of LIST-VAR, removing duplicates."
+  `(setq ,list-var (append (remove ,element ,list-var) (list ,element))))
+
 (defun siren-recursive-add-to-load-path (dir)
   "Add DIR and all its sub-directories to `load-path'."
   (add-to-list 'load-path dir)
