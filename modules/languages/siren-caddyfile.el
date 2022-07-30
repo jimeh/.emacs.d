@@ -17,17 +17,14 @@
 
   :preface
   (defun siren-caddyfile-mode-setup ()
-    (setq-local tab-width 4
-                indent-tabs-mode nil)
+    (setq-local tab-width 4)
+    (caddyfile-format-on-save-mode t))
 
-    ;; TODO: Fix this horrible Hock. To work around prog-mode hooks running
-    ;; before current method, enabling whitespace-mode before the local
-    ;; indent-tabs-mode var is set to nil. Hence we need to toggle
-    ;; whitespace-mode off, and then on again to fix it's complaints about a
-    ;; space indentation.
-    (when (bound-and-true-p whitespace-mode)
-      (whitespace-mode -1)
-      (whitespace-mode +1))))
+  :config
+  (reformatter-define caddyfile-format
+    :program "caddy"
+    :args '("fmt" "-")
+    :lighter " fmt"))
 
 (provide 'siren-caddyfile)
 ;;; siren-caddyfile.el ends here
