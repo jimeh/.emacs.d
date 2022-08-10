@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.26](https://github.com/jimeh/.emacs.d/compare/v0.8.25...v0.8.26) (2022-08-10)
+
+
+### Bug Fixes
+
+* **themes/doom:** correctly load theme when running in terminal ([e1fe7ef](https://github.com/jimeh/.emacs.d/commit/e1fe7ef4e974251d37eeda58a47f1630b8a5686e))
+
 ### [0.8.25](https://github.com/jimeh/.emacs.d/compare/v0.8.24...v0.8.25) (2022-07-30)
 
 
