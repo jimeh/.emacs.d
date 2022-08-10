@@ -8,11 +8,6 @@
 
 (setq straight-recipe-overrides
       '((nil . (
-                ;; Override company-nginx recipe as the original repo was
-                ;; deleted.
-                (company-nginx :type git :host github
-                               :repo "emacsmirror/company-nginx"
-                               :branch "master")
                 ;; Override vertico recipe to fix issues with extensions.
                 (vertico :type git :host github :repo "minad/vertico"
                          :files (:defaults "extensions/*")
