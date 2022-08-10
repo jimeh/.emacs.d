@@ -29,12 +29,11 @@
   (nlinum-highlight-current-line t)
 
   :config
-  (if (boundp 'ns-system-appearance)
-      (progn
-        (siren-doom-themes-set-appearance ns-system-appearance)
-        (add-hook 'ns-system-appearance-change-functions
-                  'siren-doom-themes-set-appearance))
-    (siren-doom-themes-set-appearance 'dark))
+  (if (not (siren-ns-system-appearance))
+      (siren-doom-themes-set-appearance 'dark)
+    (siren-doom-themes-set-appearance ns-system-appearance)
+    (add-hook 'ns-system-appearance-change-functions
+              'siren-doom-themes-set-appearance))
 
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
@@ -46,6 +45,16 @@
   (doom-themes-org-config)
 
   :preface
+  (defun siren-ns-system-appearance()
+    "Return the system appearance, either `dark', `light', or `nil'.
+
+A return value of `nil' means that the system appearance is could
+not be determined. This happens on non-macOS systems, or on macOS
+if running Emacs in a terminal."
+    (if (boundp 'ns-system-appearance)
+        ns-system-appearance
+      nil))
+
   (defgroup siren-doom-themes nil
     "siren-doom-themes customizations."
     :group 'doom-themes)
