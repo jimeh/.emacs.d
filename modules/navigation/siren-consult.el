@@ -44,5 +44,12 @@
           ('error (consult-imenu)))
       (consult-imenu))))
 
+(use-package consult-dir
+  :general
+  (:keymaps '(minibuffer-local-completion-map vertico-map
+                                              selectrum-minibuffer-map)
+            "C-x C-d" 'consult-dir
+            "C-x C-j" 'consult-dir-jump-file))
+
 (provide 'siren-consult)
 ;;; siren-consult.el ends here
