@@ -9,21 +9,27 @@
 (use-package flx-rs
   :straight (flx-rs :repo "jcs-elpa/flx-rs" :fetcher github
                     :files (:defaults "bin"))
-  :preface
-  (defun siren-flx-rs-score-consult-buffer-fix (orig-fun str query &rest args)
-    "Fix input string provided by consult-buffer to be compatible with flx-rs.
-
-Consult buffer adds some extra bytes at the end of input
-candidates which causes flx-rs to not match some inputs
-correctly. This function will attempt to extract buffer name from
-text properties added by consult-buffer, or fallback on the input
-string as provided."
-    (let* ((props (text-properties-at 0 str))
-           (buffer (if props (alist-get 'buffer props))))
-      (apply orig-fun (or buffer str) query args)))
-
   :config
-  (advice-add 'flx-rs-score :around 'siren-flx-rs-score-consult-buffer-fix)
+  (with-eval-after-load 'consult
+    (defun siren-flx-rs-score-consult-fix (orig-fun str query &rest args)
+      "Fix input string provided by consult to be compatible with flx-rs.
+
+Some commands that use consult seem to add metadata to candidates
+in the form of some extra bytes at the end of the string. These
+extra bytes causes flx-rs to not match against it correctly.
+
+Consult uses the `invisible' text property to mark these extra
+bytes so that they are not displayed to the user in completion
+frameworks.
+
+This function attempts to extract the original input string by
+looking for where the `invisible' text property begins, and
+grabbing all text before it."
+      (let ((end (next-single-property-change 0 'invisible str)))
+        (apply orig-fun (if end (substring str 0 end) str) query args)))
+
+    (advice-add 'flx-rs-score :around 'siren-flx-rs-score-consult-fix))
+
   (flx-rs-load-dyn))
 
 (use-package fussy
