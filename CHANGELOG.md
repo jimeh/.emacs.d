@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.27](https://github.com/jimeh/.emacs.d/compare/v0.8.26...v0.8.27) (2022-08-11)
+
+
+### Features
+
+* **navigation:** add consult-dir package ([99bbb27](https://github.com/jimeh/.emacs.d/commit/99bbb27f79ced1b5f25fc233589fce2ae6e876b4))
+
+
+### Bug Fixes
+
+* **editor:** resolve flx-rs+consult issues ([19713d3](https://github.com/jimeh/.emacs.d/commit/19713d30e3f31e5785660678aae79b2725d4974d))
+
 ### [0.8.26](https://github.com/jimeh/.emacs.d/compare/v0.8.25...v0.8.26) (2022-08-10)
 
 
