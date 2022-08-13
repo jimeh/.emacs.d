@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.28](https://github.com/jimeh/.emacs.d/compare/v0.8.27...v0.8.28) (2022-08-13)
+
+
+### Features
+
+* **languages/x509:** add x509-mode ([f1c0030](https://github.com/jimeh/.emacs.d/commit/f1c0030aff99e1e750cd1a45cc253c4ae4901f47))
+* **navigation:** setup better-jumper to jump back after goto def style operations ([de72250](https://github.com/jimeh/.emacs.d/commit/de722509f5dd4008d5ed7b2c47aea64c9c4fb8c7))
+
 ### [0.8.27](https://github.com/jimeh/.emacs.d/compare/v0.8.26...v0.8.27) (2022-08-11)
 
 
