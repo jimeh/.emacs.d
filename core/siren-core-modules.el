@@ -213,6 +213,7 @@
 (require 'siren-typescript)
 (require 'siren-vue)
 (require 'siren-web-mode)
+(require 'siren-x509)
 (require 'siren-xml)
 (require 'siren-yaml)
 

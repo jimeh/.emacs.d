@@ -227,6 +227,7 @@
  ("vundo" . "80f5cb5775bb4120e36b2959db07fc88993eff81")
  ("web-mode" . "d8258fb33cc1918a2d83ff637157061e804acd6f")
  ("with-editor" . "1d5860cfd05d6805018bd071b8f9b56493ba11c6")
+ ("x509-mode" . "0e34667fac01fe42f0d8a6e501b5bbd5d4982e8e")
  ("xref" . "feb30d284d45e4904501d65b515069a1e365e07a")
  ("xterm-color" . "1a4012854c69a5cdaeb5a73d2ad705011892fca3")
  ("xwwp" . "f67e070a6e1b233e60274deb717274b000923231")
