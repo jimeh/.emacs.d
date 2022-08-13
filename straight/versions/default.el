@@ -7,6 +7,7 @@
  ("applescript-mode" . "9b84a7cb74d687745df37ba15113933fc6256274")
  ("avy" . "ba5f035be33693d1a136a5cbeedb24327f551a92")
  ("beginend" . "eb77d82dc88846c5715353b7fd99c9030a2e2ee7")
+ ("better-jumper" . "47622213783ece37d5337dc28d33b530540fc319")
  ("bui.el" . "f3a137628e112a91910fd33c0cff0948fa58d470")
  ("bundler.el" . "43efb6be4ed118b06d787ce7fbcffd68a31732a7")
  ("caddyfile-mode" . "fc41148f5a7eb320f070666f046fb9d88cf17680")
