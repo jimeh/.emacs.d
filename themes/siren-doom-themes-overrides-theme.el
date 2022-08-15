@@ -86,7 +86,6 @@
   '(git-gutter-fr:modified :foreground (doom-blend vc-modified bg 0.7)
                            :background (doom-blend vc-modified bg 0.0))
 
-
   ;; tree-sitter
   '(tree-sitter-hl-face:property :inherit font-lock-constant-face) ;; disable italic
   '(tree-sitter-hl-face:method.call  :foreground (doom-blend functions keywords 0.6))
@@ -122,6 +121,27 @@
                                  :background (doom-color bg-alt))
   '(ahs-warning-face :foreground (doom-color red)
                      :background 'unspecified)
+
+  ;; symbol-overlay
+  '(symbol-overlay-default-face
+    (&dark  :background (doom-lighten region 0.1) :distant-foreground fg-alt)
+    (&light :background (doom-darken region 0.1) :distant-foreground fg-alt))
+  '(symbol-overlay-face-1 :background (doom-blend blue bg 0.4)
+                          :distant-foreground fg-alt)
+  '(symbol-overlay-face-2 :background (doom-blend violet bg 0.4)
+                          :distant-foreground fg-alt)
+  '(symbol-overlay-face-3 :background (doom-blend yellow bg 0.3)
+                          :distant-foreground fg-alt)
+  '(symbol-overlay-face-4 :background (doom-blend orange bg 0.3)
+                          :distant-foreground fg-alt)
+  '(symbol-overlay-face-5 :background (doom-blend red bg 0.3)
+                          :distant-foreground fg-alt)
+  '(symbol-overlay-face-6 :background (doom-blend magenta bg 0.3)
+                          :distant-foreground fg-alt)
+  '(symbol-overlay-face-7 :background (doom-blend green bg 0.4)
+                          :distant-foreground fg-alt)
+  '(symbol-overlay-face-8 :background (doom-blend cyan bg 0.2)
+                          :distant-foreground fg-alt)
 
   ;; dired+
   '(diredp-dir-heading :foreground (doom-color magenta))
