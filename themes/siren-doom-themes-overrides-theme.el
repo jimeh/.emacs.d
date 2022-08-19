@@ -143,6 +143,11 @@
   '(symbol-overlay-face-8 :background (doom-blend cyan bg 0.2)
                           :distant-foreground fg-alt)
 
+  ;; go-mode
+  '(go-dot-mod-module-name :inherit font-lock-constant-face)
+  '(go-dot-mod-module-version :inherit font-lock-type-face)
+  '(go-dot-mod-module-semver (&inherit go-dot-mod-module-version))
+
   ;; dired+
   '(diredp-dir-heading :foreground (doom-color magenta))
   '(diredp-dir-name :foreground (doom-lighten magenta 0.25))

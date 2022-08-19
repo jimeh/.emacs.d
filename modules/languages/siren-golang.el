@@ -10,6 +10,7 @@
 (require 'siren-flycheck)
 (require 'siren-lsp)
 (require 'siren-origami)
+(require 'siren-prog-mode)
 (require 'siren-projectile)
 (require 'siren-reformatter)
 (require 'siren-tree-sitter)
@@ -25,10 +26,21 @@
 
   :hook
   (go-mode . siren-go-mode-setup)
+  (go-dot-mod-mode . siren-go-dot-mod-mode-setup)
+  (go-dot-work-mode . siren-go-dot-mod-mode-setup)
 
   :preface
+  (defgroup siren-go nil
+    "Siren: go-mode configuration."
+    :group 'go)
+
+  (defcustom siren-go-tab-width 4
+    "Tab width to set in all Go related modes."
+    :type 'number
+    :group 'siren-go)
+
   (defun siren-go-mode-setup ()
-    (setq-local tab-width 4
+    (setq-local tab-width siren-go-tab-width
                 company-minimum-prefix-length 1)
 
     (when (fboundp 'highlight-symbol-mode)
@@ -38,6 +50,11 @@
 
     (tree-sitter-mode t)
     (origami-mode t)
+    (subword-mode t))
+
+  (defun siren-go-dot-mod-mode-setup ()
+    (run-hooks 'prog-mode-hook)
+    (setq-local tab-width siren-go-tab-width)
     (subword-mode t))
 
   (defun siren-define-golines-format-mode ()
