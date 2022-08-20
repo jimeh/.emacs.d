@@ -10,7 +10,7 @@
   :custom
   (doom-modeline-bar-width 3)
   (doom-modeline-buffer-encoding nil)
-  (doom-modeline-buffer-file-name-style 'truncate-with-project)
+  (doom-modeline-buffer-file-name-style 'auto)
   (doom-modeline-buffer-modification-icon t)
   (doom-modeline-buffer-state-icon t)
   (doom-modeline-checker-simple-format t)
