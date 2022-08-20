@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.29](https://github.com/jimeh/.emacs.d/compare/v0.8.28...v0.8.29) (2022-08-20)
+
+
+### Features
+
+* **editor:** don't enable vertico-mouse-mode ([1e5761a](https://github.com/jimeh/.emacs.d/commit/1e5761afc763df64a140678de86068276d5cf7b0))
+* **editor:** replace highlight-symbol with symbol-overlay ([c7d1f1d](https://github.com/jimeh/.emacs.d/commit/c7d1f1d7491af7f66aaca4a0b683b6c9e8effb1b))
+* **language/go:** configure modes for go.mod and go.work files ([43d9d30](https://github.com/jimeh/.emacs.d/commit/43d9d309da844ab35bc4232b80ace0c4faa1923b))
+
 ### [0.8.28](https://github.com/jimeh/.emacs.d/compare/v0.8.27...v0.8.28) (2022-08-13)
 
 
