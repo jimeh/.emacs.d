@@ -26,8 +26,7 @@
 
 (use-package vertico-mouse
   :straight vertico
-  :config
-  (vertico-mouse-mode +1))
+  :defer t)
 
 (use-package vertico-repeat
   :straight vertico
