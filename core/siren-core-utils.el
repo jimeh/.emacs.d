@@ -76,15 +76,6 @@ Borrowed from: http://emacsredux.com/blog/2013/05/04/rename-file-and-buffer/"
           (set-visited-file-name new-name)
           (set-buffer-modified-p nil)))))))
 
-(defun siren-reopen-current-file ()
-  "Reopen the current file."
-  (interactive)
-  (let ((filename (buffer-file-name)))
-    (if (not (and filename (file-exists-p filename)))
-        (message "Buffer is not visiting a file!")
-      (kill-buffer)
-      (find-file filename))))
-
 (defun siren-ignore-error-wrapper (fn)
   "Funtion return new function that ignore errors.
    The function wraps a function with `ignore-errors' macro."

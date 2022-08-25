@@ -61,8 +61,9 @@
 (require 'siren-explain-pause)
 (require 'siren-lorem-ipsum)
 (require 'siren-rand)
-(require 'siren-restart-emacs)
 (require 'siren-refine)
+(require 'siren-reopen)
+(require 'siren-restart-emacs)
 (require 'siren-uuidgen)
 (require 'siren-zone)
 
