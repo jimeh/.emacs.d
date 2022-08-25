@@ -203,7 +203,8 @@ For example, if the current buffer is `foo.go', the buffer for
 (use-package go-projectile
   :defer t
   :after (go-mode)
-  :hook (go-mode . siren-go-projectile-setup)
+  :hook
+  (go-mode . siren-go-projectile-setup)
 
   :custom
   ;; prevent go-projectile from screwing up GOPATH
@@ -213,7 +214,18 @@ For example, if the current buffer is `foo.go', the buffer for
   (defun siren-go-projectile-setup ()))
 
 (use-package go-playground
-  :defer t)
+  :defer t
+  :hook
+  (go-mode . siren-go-playground-setup)
+
+  :custom
+  (go-playground-basedir
+   (expand-file-name "src/playground" (or (getenv "GOPATH") "~/go")))
+
+   :preface
+   (defun siren-go-playground-setup ()
+     (if (fboundp 'solaire-mode)
+         (solaire-mode -1))))
 
 (provide 'siren-golang)
 ;;; siren-golang.el ends here
