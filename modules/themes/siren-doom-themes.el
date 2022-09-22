@@ -108,12 +108,12 @@ already loaded, otherwise re-apply the theme and siren-overrides."
   (defun siren-doom-themes-vibrant-theme ()
     (interactive)
     (siren-doom-themes-load 'doom-vibrant))
-  (defalias 'vib 'siren-doom-themes-vibrant-theme)
+  (defalias 'doom-vibrant 'siren-doom-themes-vibrant-theme)
 
   (defun siren-doom-themes-nord-light-theme ()
     (interactive)
     (siren-doom-themes-load 'doom-nord-light))
-  (defalias 'nord 'siren-doom-themes-nord-light-theme)
+  (defalias 'nord-light 'siren-doom-themes-nord-light-theme)
 
   (defun siren-doom-themes-list ()
     (seq-filter
