@@ -56,9 +56,12 @@
     (subword-mode t))
 
   (defun siren-markdown-mode-setup-prettier ()
-    (setq-local prettier-js-args `("--parser" "markdown"
-                                   "--print-width" ,(number-to-string fill-column)
-                                   "--prose-wrap" "always"))))
+    (let ((args '("--parser" "markdown")))
+      (when (bound-and-true-p auto-fill-function) ;; is auto-fill-mode enabled?
+        (setq args (append args (list "--print-width" (format "%d" fill-column)
+                                      "--prose-wrap" "always"))))
+
+      (setq-local prettier-js-args args))))
 
 ;; Required by markdown-edit-code-block.
 (use-package edit-indirect
