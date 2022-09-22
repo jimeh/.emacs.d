@@ -59,7 +59,7 @@ if running Emacs in a terminal."
     "siren-doom-themes customizations."
     :group 'doom-themes)
 
-  (defcustom siren-doom-themes-light-theme 'doom-nord-light
+  (defcustom siren-doom-themes-light-theme 'doom-solarized-light
     "The theme to apply when system appearance is light."
         :type '(symbol)
         :group 'siren-doom-themes)
@@ -114,6 +114,11 @@ already loaded, otherwise re-apply the theme and siren-overrides."
     (interactive)
     (siren-doom-themes-load 'doom-nord-light))
   (defalias 'nord-light 'siren-doom-themes-nord-light-theme)
+
+  (defun siren-doom-themes-solarized-light-theme ()
+    (interactive)
+    (siren-doom-themes-load 'doom-solarized-light))
+  (defalias 'solarized-light 'siren-doom-themes-solarized-light-theme)
 
   (defun siren-doom-themes-list ()
     (seq-filter
