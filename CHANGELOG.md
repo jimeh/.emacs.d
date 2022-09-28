@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.30](https://github.com/jimeh/.emacs.d/compare/v0.8.29...v0.8.30) (2022-09-28)
+
+
+### Features
+
+* **language/go:** improve setup of go-playground ([efccea6](https://github.com/jimeh/.emacs.d/commit/efccea6cbdf4c04e0099d35e27252a83e1d1793c))
+* **language/markdown:** improve prettier setup ([ae4da2c](https://github.com/jimeh/.emacs.d/commit/ae4da2c2489a51ee06efade754df8b53b6042767))
+* **misc:** add new siren-reopen helper function ([06bf89a](https://github.com/jimeh/.emacs.d/commit/06bf89af61413aaf610e7a293306c01e330f3302))
+* **theme:** change default light theme to doom-solarized-light ([4d3de5d](https://github.com/jimeh/.emacs.d/commit/4d3de5def2a73d3b1f727511118f5205d6227138))
+
+
+### Bug Fixes
+
+* **completion/copilot:** custom accept fun ignoring trailing "{" chars ([fd1c57a](https://github.com/jimeh/.emacs.d/commit/fd1c57a96c1b71ccd1a430234030a700d468b80e))
+
 ### [0.8.29](https://github.com/jimeh/.emacs.d/compare/v0.8.28...v0.8.29) (2022-08-20)
 
 
