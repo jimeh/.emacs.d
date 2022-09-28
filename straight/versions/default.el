@@ -141,7 +141,7 @@
  ("magit" . "ada7b21fcc90004d7ac1c5a42c0750e12c2a5ef8")
  ("magit-delta" . "5fc7dbddcfacfe46d3fd876172ad02a9ab6ac616")
  ("magit-popup" . "d8585fa39f88956963d877b921322530257ba9f5")
- ("makefile-executor.el" . "3e7ad8b2fe9420c681483d0beb9715960d4c3dbb")
+ ("makefile-executor.el" . "170d14d834a0d163cd618d642d4580ff75b014be")
  ("marginalia" . "ddba3a384916d83b68527379bbdf01161201853e")
  ("markdown-mode" . "92d037504742cb3e579f1f488bc3fc23c648ff29")
  ("melpa" . "a24b706cdc277fec9d3998574430882f318e26f8")
