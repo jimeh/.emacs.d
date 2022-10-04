@@ -15,11 +15,11 @@
             "C-<return>" 'zoom-window-zoom)
 
   :config
-  (with-eval-after-load "persp-mode"
+  (with-eval-after-load 'persp-mode
     (setq zoom-window-use-persp t)
     (zoom-window-setup))
 
-  (with-eval-after-load "elscreen"
+  (with-eval-after-load 'elscreen
     (setq zoom-window-use-elscreen t)
     (zoom-window-setup)))
 

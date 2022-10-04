@@ -65,7 +65,7 @@
     (subword-mode t))
 
   :init
-  (with-eval-after-load "projectile"
+  (with-eval-after-load 'projectile
     (add-to-list 'projectile-globally-ignored-directories "vendor/bundle")
     (add-to-list 'projectile-globally-ignored-directories "vendor/ruby"))
 

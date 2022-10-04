@@ -66,7 +66,7 @@
       :lighter " GOLINES"))
 
   :init
-  (with-eval-after-load "projectile"
+  (with-eval-after-load 'projectile
     (add-to-list 'projectile-globally-ignored-directories "Godeps")
     (add-to-list 'projectile-globally-ignored-directories "vendor/github.com")
     (add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in"))
