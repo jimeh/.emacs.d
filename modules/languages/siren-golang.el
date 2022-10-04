@@ -71,6 +71,16 @@
     (add-to-list 'projectile-globally-ignored-directories "vendor/github.com")
     (add-to-list 'projectile-globally-ignored-directories "vendor/gopkg.in"))
 
+  (with-eval-after-load 'tree-sitter-langs
+    (tree-sitter-hl-add-patterns 'go
+      [
+       ;; Highlight built-in functions with the built-in face, based on:
+       ;; https://github.com/tree-sitter/tree-sitter-go/pull/61
+       (call_expression
+        function: (identifier) @function.builtin
+        (.match? @function.builtin "^(append|cap|close|complex|copy|delete|imag|len|make|new|panic|print|println|real|recover)$"))
+       ]))
+
   :config
   (siren-define-golines-format-mode)
 
