@@ -232,7 +232,7 @@ For example, if the current buffer is `foo.go', the buffer for
 (use-package go-playground
   :defer t
   :hook
-  (go-mode . siren-go-playground-setup)
+  (go-playground-mode . siren-go-playground-setup)
 
   :custom
   (go-playground-basedir
