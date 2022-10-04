@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.32](https://github.com/jimeh/.emacs.d/compare/v0.8.31...v0.8.32) (2022-10-04)
+
+
+### Features
+
+* **ui:** do not enable pixel-scroll-precision-mode on startup ([938f138](https://github.com/jimeh/.emacs.d/commit/938f138ba86513aad3d3a18640cbc6b63cd5c6bc))
+
+
+### Bug Fixes
+
+* **language/go:** add tree-sitter query for highlighting struct properties ([6d4665f](https://github.com/jimeh/.emacs.d/commit/6d4665f3dd5c40a612b2a3cada148642fadf488f))
+* **language/go:** attach go-playground setup function correct hook ([6bf20de](https://github.com/jimeh/.emacs.d/commit/6bf20de60e57712b6c61c6441faa0c5f8b510c3c))
+
 ### [0.8.31](https://github.com/jimeh/.emacs.d/compare/v0.8.30...v0.8.31) (2022-09-28)
 
 ### [0.8.30](https://github.com/jimeh/.emacs.d/compare/v0.8.29...v0.8.30) (2022-09-28)
