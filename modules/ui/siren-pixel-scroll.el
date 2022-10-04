@@ -38,10 +38,7 @@
           (pixel-scroll-precision-mode -1)
           (setq scroll-margin siren-pixel-scroll--original-scroll-margin)
           (setq scroll-preserve-screen-position
-                siren-pixel-scroll--original-scroll-preserve-screen-position))))
-
-    :config
-    (siren-pixel-scroll-mode +1)))
+                siren-pixel-scroll--original-scroll-preserve-screen-position))))))
 
 (provide 'siren-pixel-scroll)
 ;;; siren-pixel-scroll.el ends here
