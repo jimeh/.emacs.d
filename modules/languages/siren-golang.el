@@ -113,7 +113,9 @@
   :config
   ;; Create custom lsp-client for golangci-lint-langserver.
   (lsp-register-custom-settings
-   '(("golangci-lint.command" ["golangci-lint" "run" "--out-format" "json"])))
+   '(("golangci-lint.command" ["golangci-lint" "run"
+                               "--out-format" "json"
+                               "--issues-exit-code=1"])))
   (lsp-register-client
    (make-lsp-client :new-connection (lsp-stdio-connection
                                      '("golangci-lint-langserver"))
