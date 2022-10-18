@@ -1,6 +1,6 @@
 (("a.el" . "93e5ed8c495794d1ba3c04b43041b95ce01079b1")
  ("ace-window" . "77115afc1b0b9f633084cf7479c767988106c196")
- ("all-the-icons-completion" . "286e2c064a1298be0d8d4100dc91d7a7a554d04a")
+ ("all-the-icons-completion" . "b8e3c4ceb862a3cbb771884c1e6b5d884356f141")
  ("all-the-icons-ibuffer" . "54c99aeb17989f684eb7bf3aa88b12adf7dd2d34")
  ("all-the-icons.el" . "51bf77da1ebc3c199dfc11f54c0dce67559f5f40")
  ("anzu" . "5abb37455ea44fa401d5f4c1bdc58adb2448db67")
