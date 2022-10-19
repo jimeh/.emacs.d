@@ -61,20 +61,6 @@
   :config
   (push "Gemfile" projectile-project-root-files-bottom-up)
 
-  ;; Customize marginalia if loaded.
-  (with-eval-after-load 'marginalia
-    (add-to-list 'marginalia-command-categories
-                 '(projectile-switch-project . file))
-    (add-to-list 'marginalia-command-categories
-                 '(projectile-switch-open-project . file))
-    (add-to-list 'marginalia-command-categories
-                 '(projectile-find-file . project-file))
-    (add-to-list 'marginalia-command-categories
-                 '(projectile-recentf . project-file))
-    (add-to-list 'marginalia-command-categories
-                 '(projectile-display-buffer . project-buffer))
-    (add-to-list 'marginalia-command-categories
-                 '(projectile-switch-to-buffer . project-buffer)))
 
   ;; Enable projectile.
   (projectile-mode))

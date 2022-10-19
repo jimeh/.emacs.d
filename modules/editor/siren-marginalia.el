@@ -88,6 +88,21 @@ is within project root."
   (add-to-list 'marginalia-annotator-registry
                '(tab siren-marginalia-annotate-tab))
 
+  ;; Customize projectile commands when/if loaded.
+  (with-eval-after-load 'projectile
+    (add-to-list 'marginalia-command-categories
+                 '(projectile-switch-project . file))
+    (add-to-list 'marginalia-command-categories
+                 '(projectile-switch-open-project . file))
+    (add-to-list 'marginalia-command-categories
+                 '(projectile-find-file . project-file))
+    (add-to-list 'marginalia-command-categories
+                 '(projectile-recentf . project-file))
+    (add-to-list 'marginalia-command-categories
+                 '(projectile-display-buffer . project-buffer))
+    (add-to-list 'marginalia-command-categories
+                 '(projectile-switch-to-buffer . project-buffer)))
+
   ;; Enable marginalia.
   (marginalia-mode +1))
 
