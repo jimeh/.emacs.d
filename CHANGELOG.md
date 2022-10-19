@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.33](https://github.com/jimeh/.emacs.d/compare/v0.8.32...v0.8.33) (2022-10-19)
+
+
+### Features
+
+* **editor:** switch to fork of all-the-icons-completion ([dfe7250](https://github.com/jimeh/.emacs.d/commit/dfe725021833912ac02305fffc0a522121ce6846))
+* **formatting/prettier-js:** enforce use of ~/.prettierrc.js config if it exists ([4d9fdb8](https://github.com/jimeh/.emacs.d/commit/4d9fdb84145fbb90aafe85956dde17662b99a43c))
+* **navigation/consult:** improve global and project buffer completion ([082aebb](https://github.com/jimeh/.emacs.d/commit/082aebbdd5a3fcb258c34979711bde665219619e))
+
+
+### Bug Fixes
+
+* **editor:** move siren-all-the-icons module from projects to editor directory ([d498f20](https://github.com/jimeh/.emacs.d/commit/d498f20336f71818c3c363b1416844a9cb6f368a))
+* **navigation/helm-ag:** correctly set ignore patterns for ripgrep ([6e9262d](https://github.com/jimeh/.emacs.d/commit/6e9262da2cac31e22bedaf4b3f4c8bf5420c7a60))
+
 ### [0.8.32](https://github.com/jimeh/.emacs.d/compare/v0.8.31...v0.8.32) (2022-10-04)
 
 
