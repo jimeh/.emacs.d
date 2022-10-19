@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(require 'siren-projectile)
+;; (require 'siren-projectile)
 
 (eval-when-compile
   (require 'cl-lib))
@@ -20,15 +20,7 @@
   ("M-g M-g" 'consult-goto-line)
 
   :custom
-  (consult-buffer-sources '(consult--source-hidden-buffer
-                            consult--source-modified-buffer
-                            consult--source-buffer
-                            consult--source-bookmark
-                            consult--source-project-buffer))
   (consult-preview-max-count 10)
-
-  :config
-  (setq consult-project-root-function 'projectile-project-root)
 
   :preface
   (defun siren-consult-imenu ()
@@ -42,7 +34,58 @@
         (condition-case nil
             (consult-lsp-file-symbols)
           ('error (consult-imenu)))
-      (consult-imenu))))
+      (consult-imenu)))
+
+  :config
+  (defvar siren-consult--source-recent-file-hidden
+    (let ((source (copy-tree consult--source-recent-file)))
+      (plist-put source :hidden t)
+      source)
+    "Recent file candidate source for `consult-buffer'.")
+
+  (defvar siren-consult--source-project-buffer-hidden
+    (let ((source (copy-tree consult--source-project-buffer)))
+      (plist-put source :category 'project-buffer)
+      (plist-put source :hidden t)
+      source)
+    "Project buffer candidate source for `consult-buffer'.")
+
+  (defvar siren-consult--source-project-buffer
+    (let ((source (copy-tree consult--source-project-buffer)))
+      (plist-put source :category 'project-buffer)
+      (cl-remf source :hidden)
+      (cl-remf source :narrow)
+      source)
+    "Project buffer candidate source for `consult-buffer'.")
+
+  (defvar siren-consult--source-project-recent-file-hidden
+    (let ((source (copy-tree consult--source-project-recent-file)))
+      (plist-put source :category 'project-file)
+      (plist-put source :hidden t)
+      source)
+    "Project buffer candidate source for `consult-buffer'.")
+
+  (defvar siren-consult--source-project-recent-file
+    (let ((source (copy-tree consult--source-project-recent-file)))
+      (plist-put source :category 'project-file)
+      (cl-remf source :hidden)
+      (cl-remf source :narrow)
+      source)
+    "Project buffer candidate source for `consult-buffer'.")
+
+  (setq consult-buffer-sources '(consult--source-hidden-buffer
+                                 consult--source-modified-buffer
+                                 consult--source-buffer
+                                 siren-consult--source-recent-file-hidden
+                                 consult--source-bookmark
+                                 siren-consult--source-project-buffer-hidden
+                                 siren-consult--source-project-recent-file-hidden)
+        consult-project-buffer-sources '(siren-consult--source-project-buffer
+                                         siren-consult--source-project-recent-file))
+
+  ;; (with-eval-after-load 'projectile
+  ;;   (setq consult-project-root-function 'projectile-project-root))
+  )
 
 (use-package consult-dir
   :general
