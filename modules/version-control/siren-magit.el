@@ -17,7 +17,9 @@
   ("C-x g" 'magit-status)
 
   :hook
-  (siren-magit-mode . siren-magit-mode-setup)
+  (magit-mode . siren-magit-mode-setup)
+  (magit-status-mode . siren-magit-common-setup)
+  (magit-diff-mode . siren-magit-common-setup)
   (git-commit-setup . siren-git-commit-mode-setup)
 
   :custom
@@ -41,6 +43,9 @@
 
   :preface
   (defalias 'bl 'magit-blame)
+
+  (defun siren-magit-common-setup ()
+    (setq tab-width 4))
 
   (defun siren-magit-mode-setup ())
 
