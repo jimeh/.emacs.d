@@ -8,7 +8,8 @@
 
 (setq straight-recipe-overrides
       '((nil . (
-                ;; Use fork with more features until PR is merged: https://github.com/iyefrat/all-the-icons-completion/pull/19
+                ;; Override all-the-icons-completion to use fork with more
+                ;; features.
                 (all-the-icons-completion :type git :flavor melpa :host github :repo "iyefrat/all-the-icons-completion"
                                           :fork (:host github :repo "MintSoup/all-the-icons-completion"))
                 ;; Override go-playground to use my fork, which has a fix for
