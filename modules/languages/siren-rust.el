@@ -26,7 +26,6 @@
     (setq-local rust-format-on-save t)
 
     (tree-sitter-mode t)
-    (lsp-deferred)
     (origami-mode t)
     (subword-mode t))
 
@@ -34,6 +33,18 @@
   (with-eval-after-load 'origami
     (add-to-list 'origami-parser-alist
                  '(rust-mode . origami-c-style-parser))))
+
+(use-package lsp-rust
+  :straight lsp-mode
+
+  :hook
+  (rust-mode . siren-lsp-rust-mode-setup)
+
+  :preface
+   (defun siren-lsp-rust-mode-setup ()
+    (lsp-format-buffer-on-save-mode t)
+    (lsp-organize-imports-on-save-mode t)
+    (lsp-deferred)))
 
 (use-package cargo
   :hook (rust-mode . cargo-minor-mode))
