@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.34](https://github.com/jimeh/.emacs.d/compare/v0.8.33...v0.8.34) (2022-10-29)
+
+
+### Features
+
+* **language/rust:** improve lsp-mode setup ([eea90ad](https://github.com/jimeh/.emacs.d/commit/eea90adfa661f4720ded6193869ab1b8cbbf1504))
+
+
+### Bug Fixes
+
+* **dired+:** dired operations with multiple selected files work again ([5d442da](https://github.com/jimeh/.emacs.d/commit/5d442da04efcb544bfc9d02606e867bc9bb1ff0a))
+
 ### [0.8.33](https://github.com/jimeh/.emacs.d/compare/v0.8.32...v0.8.33) (2022-10-19)
 
 
