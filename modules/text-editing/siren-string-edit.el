@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(use-package string-edit
+(use-package string-edit-at-point
   :defer t)
 
 (provide 'siren-string-edit)
