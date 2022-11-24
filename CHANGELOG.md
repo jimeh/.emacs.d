@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.35](https://github.com/jimeh/.emacs.d/compare/v0.8.34...v0.8.35) (2022-11-24)
+
+
+### Features
+
+* **language/yaml:** enable tree-sitter syntax highlighting ([ebbdab3](https://github.com/jimeh/.emacs.d/commit/ebbdab36fb2a3d635d591cc3179b8f4ed9a476d0))
+
 ### [0.8.34](https://github.com/jimeh/.emacs.d/compare/v0.8.33...v0.8.34) (2022-10-29)
 
 
