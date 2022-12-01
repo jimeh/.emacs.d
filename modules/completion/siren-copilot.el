@@ -61,8 +61,9 @@
   (with-eval-after-load 'company
     ;; Use company popup even when there's only one result
     (when (member 'company-preview-if-just-one-frontend company-frontends)
+      (require 'cl-seq)
       (delq 'company-preview-if-just-one-frontend company-frontends)
-      (setf (nth (position 'company-pseudo-tooltip-unless-just-one-frontend
+      (setf (nth (cl-position 'company-pseudo-tooltip-unless-just-one-frontend
                            company-frontends)
                  company-frontends)
             'company-pseudo-tooltip-frontend))))
