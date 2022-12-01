@@ -214,7 +214,7 @@
  ("themes" . "b5ff201f4bea4286e9ed015a2043cf2394182232")
  ("tide" . "4cf6a0d89da7f946565a425a632ee2410a40c7da")
  ("transient" . "79d1426de173312bd6a3091731675bb010d804ec")
- ("tree-sitter-langs" . "8a33fd0ae8c4f9ee15fb5062c0d1199ebc1def09")
+ ("tree-sitter-langs" . "bf125472c185f098136b26b30d5e74332b4ee46b")
  ("treemacs" . "b19060f25e55514f3d798d9f5af2dcd5b94a6026")
  ("treepy.el" . "de1a2ddc3fd7152d0bfbd9e14312ff8a4864ab2b")
  ("typescript.el" . "17d06bdf938281cf7cd9157189966a2fdfd4f62b")
