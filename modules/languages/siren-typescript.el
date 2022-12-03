@@ -10,7 +10,6 @@
 (require 'siren-lsp)
 (require 'siren-origami)
 (require 'siren-prettier-js)
-(require 'siren-tree-sitter)
 (require 'siren-web-mode)
 
 (use-package typescript-mode
@@ -57,7 +56,6 @@
     (setq-local flycheck-check-syntax-automatically '(save mode-enabled)
                 company-tooltip-align-annotations t)
 
-    (tree-sitter-mode t)
     (prettier-js-mode t)
     (flycheck-mode t)
     (eldoc-mode t)

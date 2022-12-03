@@ -8,7 +8,6 @@
 
 (require 'siren-lsp)
 (require 'siren-origami)
-(require 'siren-tree-sitter)
 
 (use-package rust-mode
   :mode "\\.rs\\'"
@@ -25,7 +24,6 @@
   (defun siren-rust-mode-setup ()
     (setq-local rust-format-on-save t)
 
-    (tree-sitter-mode t)
     (origami-mode t)
     (subword-mode t))
 

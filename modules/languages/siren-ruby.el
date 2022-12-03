@@ -12,7 +12,6 @@
 (require 'siren-projectile)
 (require 'siren-string-inflection)
 (require 'siren-cycle-quotes)
-(require 'siren-tree-sitter)
 
 (use-package ruby-mode
   :straight (:type built-in)
@@ -60,7 +59,6 @@
                 ruby-use-smie t
                 tab-width 2)
 
-    (tree-sitter-mode t)
     (hs-minor-mode t)
     (subword-mode t))
 

@@ -13,7 +13,6 @@
 (require 'siren-prog-mode)
 (require 'siren-projectile)
 (require 'siren-reformatter)
-(require 'siren-tree-sitter)
 
 (use-package go-mode
   :mode "\\.go\\'"
@@ -48,7 +47,6 @@
     (when (fboundp 'auto-highlight-symbol-mode)
       (auto-highlight-symbol-mode -1))
 
-    (tree-sitter-mode t)
     (origami-mode t)
     (subword-mode t))
 

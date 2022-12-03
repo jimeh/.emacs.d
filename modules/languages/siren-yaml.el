@@ -8,7 +8,6 @@
 
 (require 'siren-lsp)
 (require 'siren-prog-mode)
-(require 'siren-tree-sitter)
 
 (use-package yaml-mode
   :mode "\\.yml\\'" "\\.yaml\\'"
@@ -24,7 +23,6 @@
     (run-hooks 'prog-mode-hook)
 
     (setq-local tab-width 2)
-    (tree-sitter-mode t)
     (subword-mode t)))
 
 (use-package lsp-yaml

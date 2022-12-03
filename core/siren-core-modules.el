@@ -122,6 +122,7 @@
 (require 'siren-string-edit)
 (require 'siren-string-inflection)
 (require 'siren-toggle-comments)
+(require 'siren-tree-sitter)
 (require 'siren-yasnippet)
 
 ;; Version control

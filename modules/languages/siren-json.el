@@ -9,7 +9,6 @@
 (require 'siren-js)
 (require 'siren-lsp)
 (require 'siren-origami)
-(require 'siren-tree-sitter)
 
 (use-package json-mode
   :mode "\\.json\\'"
@@ -31,7 +30,6 @@
                   json-reformat:indent-width width
                   tab-width width))
 
-    (tree-sitter-mode t)
     (origami-mode t))
 
   :init

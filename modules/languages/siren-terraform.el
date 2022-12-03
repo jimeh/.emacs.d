@@ -8,7 +8,6 @@
 
 (require 'siren-lsp)
 (require 'siren-reformatter)
-(require 'siren-tree-sitter)
 
 (use-package terraform-mode
   :hook
@@ -20,7 +19,6 @@
   :preface
   (defun siren-terraform-mode-setup ()
     (setq-local tab-width 2)
-    (tree-sitter-hl-mode +1)
     (terraform-format-on-save-mode 1))
 
   :config

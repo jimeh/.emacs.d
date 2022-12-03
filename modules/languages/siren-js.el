@@ -8,7 +8,6 @@
 
 (require 'siren-lsp)
 (require 'siren-origami)
-(require 'siren-tree-sitter)
 
 (use-package js-mode
   :straight (:type built-in)
@@ -32,7 +31,6 @@
                   indent-level width
                   tab-width width))
 
-    (tree-sitter-mode t)
     (subword-mode t)
     (origami-mode t)))
 
