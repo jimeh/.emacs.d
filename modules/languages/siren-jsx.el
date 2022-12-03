@@ -7,7 +7,6 @@
 ;;; Code:
 
 (require 'siren-origami)
-(require 'siren-prettier-js)
 
 (use-package rjsx-mode
   :mode "components\\/.*\\.js\\'"
@@ -16,7 +15,6 @@
 
   :preface
   (defun siren-rjsx-mode-setup ()
-    (prettier-js-mode +1)
     (origami-mode t)
     (subword-mode t))
 

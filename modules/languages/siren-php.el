@@ -7,7 +7,6 @@
 ;;; Code:
 
 (require 'siren-origami)
-(require 'siren-prettier-js)
 (require 'siren-rainbow)
 
 (use-package php-mode
@@ -18,7 +17,6 @@
 
   :preface
   (defun siren-php-mode-setup ()
-    (prettier-js-mode t)
     (rainbow-mode t)
     (subword-mode t)
     (origami-mode t)))

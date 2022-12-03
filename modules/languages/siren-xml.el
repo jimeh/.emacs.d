@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-prettier-js)
 (require 'siren-prog-mode)
 
 (use-package nxml-mode
@@ -21,8 +20,7 @@
   :preface
   (defun siren-xml-setup ()
     (run-hooks 'prog-mode-hook)
-    (setq-local tab-width 2)
-    (prettier-js-mode)))
+    (setq-local tab-width 2)))
 
 (provide 'siren-xml)
 ;;; siren-xml.el ends here

@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-prettier-js)
 (require 'siren-prog-mode)
 
 (use-package conf-toml-mode
@@ -17,8 +16,7 @@
   :preface
   (defun siren-toml-mode-setup ()
     (run-hooks 'prog-mode-hook)
-    (setq-local tab-width 2)
-    (prettier-js-mode)))
+    (setq-local tab-width 2)))
 
 (provide 'siren-toml)
 ;;; siren-toml.el ends here

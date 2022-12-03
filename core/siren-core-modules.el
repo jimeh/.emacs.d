@@ -54,6 +54,9 @@
 (require 'siren-vertico)
 (require 'siren-fussy)
 
+;; Formatting
+(require 'siren-prettier-js)
+
 ;; Linting
 (require 'siren-flycheck)
 

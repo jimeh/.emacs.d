@@ -8,10 +8,19 @@
 
 (use-package prettier-js
   :defer t
-  :hook (prettier-js-mode . siren-prettier-js-mode-setup)
+  :hook
+  ((conf-toml-mode
+    css-mode
+    markdown-mode
+    nxml-mode
+    php-mode
+    rjsx-mode
+    typescript-mode
+    vue-mode) . siren-prettier-js-mode-enable)
 
   :preface
-  (defun siren-prettier-js-mode-setup ())
+  (defun siren-prettier-js-mode-enable ()
+    (prettier-js-mode t))
 
   :config
   (let ((rc (expand-file-name "~/.prettierrc.js")))

@@ -7,7 +7,6 @@
 ;;; Code:
 
 (require 'siren-lsp)
-(require 'siren-prettier-js)
 (require 'siren-rainbow)
 
 (use-package css-mode
@@ -23,7 +22,6 @@
   (defun siren-css-mode-setup ()
     (setq-local tab-width 2)
 
-    (prettier-js-mode)
     (lsp-deferred)
     (rainbow-mode +1)))
 
