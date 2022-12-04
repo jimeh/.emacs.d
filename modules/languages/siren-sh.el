@@ -34,9 +34,7 @@
 
   :preface
   (defun siren-sh-mode-setup ()
-    (setq-local tab-width 2)
-
-    (subword-mode +1)))
+    (setq-local tab-width 2)))
 
 (use-package lsp-bash
   :straight lsp-mode

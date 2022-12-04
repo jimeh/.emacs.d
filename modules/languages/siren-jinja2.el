@@ -14,8 +14,7 @@
 
   :preface
   (defun siren-jinja2-mode-setup ()
-    (run-hooks 'prog-mode-hook)
-    (subword-mode +1)))
+    (run-hooks 'prog-mode-hook)))
 
 (provide 'siren-jinja2)
 ;;; siren-jinja2.el ends here

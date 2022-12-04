@@ -29,7 +29,6 @@
                   tab-width width))
 
     (lsp-deferred)
-    (subword-mode t)
     (flycheck-mode t)))
 
 (use-package tide

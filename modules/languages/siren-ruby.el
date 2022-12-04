@@ -59,8 +59,7 @@
                 ruby-use-smie t
                 tab-width 2)
 
-    (hs-minor-mode t)
-    (subword-mode t))
+    (hs-minor-mode t))
 
   :init
   (with-eval-after-load 'projectile

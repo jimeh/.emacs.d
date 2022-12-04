@@ -58,7 +58,6 @@
     (auto-fill-mode t)
     (flyspell-mode t)
     (smartparens-mode t)
-    (subword-mode t)
     (whitespace-mode t))
 
   :config

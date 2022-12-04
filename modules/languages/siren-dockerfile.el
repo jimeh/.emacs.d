@@ -14,7 +14,6 @@
   (defun siren-dockerfile-mode-setup ()
     (with-eval-after-load 'flycheck
       (flycheck-select-checker 'hadolint))
-    (subword-mode +1)
     (lsp-deferred)
     (lsp-format-buffer-on-save-mode +1))
 

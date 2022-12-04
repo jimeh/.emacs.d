@@ -15,9 +15,7 @@
   :preface
   (defun siren-thrift-mode-setup ()
     (run-hooks 'prog-mode-hook)
-    (setq-local tab-width 2)
-
-    (subword-mode +1)))
+    (setq-local tab-width 2)))
 
 (provide 'siren-thrift)
 ;;; siren-thrift.el ends here

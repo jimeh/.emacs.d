@@ -44,14 +44,11 @@
     (when (fboundp 'highlight-symbol-mode)
       (highlight-symbol-mode -1))
     (when (fboundp 'auto-highlight-symbol-mode)
-      (auto-highlight-symbol-mode -1))
-
-    (subword-mode t))
+      (auto-highlight-symbol-mode -1)))
 
   (defun siren-go-dot-mod-mode-setup ()
     (run-hooks 'prog-mode-hook)
-    (setq-local tab-width siren-go-tab-width)
-    (subword-mode t))
+    (setq-local tab-width siren-go-tab-width))
 
   (defun siren-define-golines-format-mode ()
     ;; Setup golines formatter for manual use - on save formatting is handled by

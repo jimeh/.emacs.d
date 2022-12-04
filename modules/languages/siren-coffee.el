@@ -27,8 +27,7 @@
          (file-exists-p (coffee-compiled-file-name (buffer-file-name)))
          (coffee-cos-mode t))
 
-    (setq-local tab-width 2)
-    (subword-mode +1)))
+    (setq-local tab-width 2)))
 
 (provide 'siren-coffee)
 ;;; siren-coffee.el ends here

@@ -23,7 +23,6 @@
   (defun siren-jsonnet-mode-setup ()
     "Default tweaks for `jsonnet-mode'."
     (jsonnet-format-buffer-on-save-mode t)
-    (subword-mode)
     (siren-folding))
 
   :config

@@ -21,9 +21,7 @@
 
   :preface
   (defun siren-rust-mode-setup ()
-    (setq-local rust-format-on-save t)
-
-    (subword-mode t)))
+    (setq-local rust-format-on-save t)))
 
 (use-package lsp-rust
   :straight lsp-mode

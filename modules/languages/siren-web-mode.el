@@ -40,8 +40,7 @@
       (siren-display-fill-column -1))
 
     (lsp-deferred)
-    (hs-minor-mode t)
-    (subword-mode t)))
+    (hs-minor-mode t)))
 
 (provide 'siren-web-mode)
 ;;; siren-web-mode.el ends here

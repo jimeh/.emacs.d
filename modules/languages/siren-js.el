@@ -27,9 +27,7 @@
     (let ((width 2))
       (setq-local js-indent-level width
                   indent-level width
-                  tab-width width))
-
-    (subword-mode t)))
+                  tab-width width))))
 
 (use-package lsp-javascript
   :straight lsp-mode

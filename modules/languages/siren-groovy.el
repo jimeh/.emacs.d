@@ -15,9 +15,7 @@
   (defun siren-groovy-mode-setup ()
     (setq-local groovy-highlight-assignments t
                 groovy-indent-offset 4
-                tab-width 4)
-
-    (subword-mode +1)))
+                tab-width 4)))
 
 (provide 'siren-groovy)
 ;;; siren-groovy.el ends here

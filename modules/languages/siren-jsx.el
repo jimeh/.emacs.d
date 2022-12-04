@@ -12,8 +12,7 @@
   :hook (rjsx-mode . siren-rjsx-mode-setup)
 
   :preface
-  (defun siren-rjsx-mode-setup ()
-    (subword-mode t)))
+  (defun siren-rjsx-mode-setup ()))
 
 (provide 'siren-jsx)
 ;;; siren-jsx.el ends here

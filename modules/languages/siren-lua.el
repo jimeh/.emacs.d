@@ -12,10 +12,7 @@
 
   :preface
   (defun siren-lua-mode-setup ()
-    (setq-local lua-indent-level 2
-                whitespace-action '(auto-cleanup))
-
-    (subword-mode +1)))
+    (setq-local lua-indent-level 2)))
 
 (use-package lsp-lua
   :straight lsp-mode

@@ -15,7 +15,6 @@
   :preface
   (defun siren-vue-mode-setup ()
     (lsp-deferred)
-    (subword-mode)
     (siren-folding)))
 
 (provide 'siren-vue)

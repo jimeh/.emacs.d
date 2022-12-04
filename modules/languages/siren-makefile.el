@@ -20,7 +20,6 @@
 
   :preface
   (defun siren-makefile-mode-setup ()
-    (subword-mode +1)
     (siren-display-indentation -1)
     (setq-local tab-width 4))
 

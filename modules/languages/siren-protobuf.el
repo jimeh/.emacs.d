@@ -28,9 +28,7 @@
     (if (not (flycheck-protobuf-buf-project-root))
         (clang-format-on-save-mode t)
       (setq-local flycheck-checker 'protobuf-buf)
-      (buf-format-on-save-mode t))
-
-    (subword-mode t))
+      (buf-format-on-save-mode t)))
 
   (defun flycheck-protobuf-buf-project-root (&optional _checker)
     "Return the nearest directory holding the buf.yaml configuration."

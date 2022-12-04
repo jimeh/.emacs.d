@@ -14,8 +14,7 @@
   (php-mode . siren-php-mode-setup)
 
   :preface
-  (defun siren-php-mode-setup ()
-    (subword-mode t)))
+  (defun siren-php-mode-setup ()))
 
 (provide 'siren-php)
 ;;; siren-php.el ends here

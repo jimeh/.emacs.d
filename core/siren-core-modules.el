@@ -43,6 +43,7 @@
 (require 'siren-rainbow)
 (require 'siren-recentf)
 (require 'siren-savehist)
+(require 'siren-subword)
 (require 'siren-symbol-overlay)
 (require 'siren-undo-fu)
 (require 'siren-undo-fu-session)

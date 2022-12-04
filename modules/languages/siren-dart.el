@@ -27,8 +27,7 @@
     (when (fboundp 'auto-highlight-symbol-mode)
       (auto-highlight-symbol-mode -1))
 
-    (lsp-deferred)
-    (subword-mode y))
+    (lsp-deferred))
 
   :init
   (with-eval-after-load 'projectile
