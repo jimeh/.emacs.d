@@ -33,12 +33,6 @@ Position the cursor at it's beginning, according to the current mode."
   (forward-line -1)
   (indent-according-to-mode))
 
-(defun siren-wrap-with (s)
-  "Create a wrapper function for smartparens using S."
-  `(lambda (&optional arg)
-     (interactive "P")
-     (sp-wrap-with-pair ,s)))
-
 (defun siren-align-region-to-equals (begin end)
   "Align region (specified with BEGIN and END) to equal signs."
   (interactive "r")

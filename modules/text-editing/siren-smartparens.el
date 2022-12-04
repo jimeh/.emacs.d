@@ -28,7 +28,10 @@
             "M-R" 'sp-rewrap-sexp)
 
   :hook
-  (prog-mode . smartparens-mode)
+  ((git-commit-setup
+    markdown-mode
+    org-mode
+    prog-mode) . siren-smartparens-mode-enable)
 
   :custom-face
   (sp-pair-overlay-face ((t (:inherit nil))))
@@ -37,6 +40,16 @@
   (sp-base-key-bindings nil)
   (sp-autoskip-closing-pair 'always)
   (sp-hybrid-kill-entire-symbol nil)
+
+  :preface
+  (defun siren-smartparens-mode-enable ()
+    (smartparens-mode t))
+
+  (defun siren-wrap-with (s)
+    "Create a wrapper function for smartparens using S."
+    `(lambda (&optional arg)
+       (interactive "P")
+       (sp-wrap-with-pair ,s)))
 
   :config
   ;; smart pairing for all

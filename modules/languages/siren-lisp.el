@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-smartparens)
+
 ;; Lisp configuration
 (define-key read-expression-map (kbd "TAB") 'completion-at-point)
 

@@ -11,7 +11,6 @@
 (require 'siren-display-line-numbers)
 (require 'siren-flyspell)
 (require 'siren-smart-shift)
-(require 'siren-smartparens)
 
 (use-package org
   :straight (:type built-in)
@@ -93,7 +92,6 @@
     (siren-display-indentation t)
     (siren-display-line-numbers t)
     (flyspell-mode t)
-    (smartparens-mode t)
     (visual-line-mode t)
     (whitespace-mode t))
 
