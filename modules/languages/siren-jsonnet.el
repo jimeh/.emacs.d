@@ -22,8 +22,7 @@
   :preface
   (defun siren-jsonnet-mode-setup ()
     "Default tweaks for `jsonnet-mode'."
-    (jsonnet-format-buffer-on-save-mode t)
-    (siren-folding))
+    (jsonnet-format-buffer-on-save-mode t))
 
   :config
   (with-eval-after-load 'flycheck

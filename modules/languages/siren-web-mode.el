@@ -17,8 +17,7 @@
 
   :general
   (:keymaps 'web-mode-map
-            "C-j" 'newline-and-indent
-            "C-c C-h" 'siren-folding-toggle)
+            "C-j" 'newline-and-indent)
 
   :hook
   (web-mode . siren-web-mode-setup)

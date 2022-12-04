@@ -14,8 +14,7 @@
 
   :preface
   (defun siren-vue-mode-setup ()
-    (lsp-deferred)
-    (siren-folding)))
+    (lsp-deferred)))
 
 (provide 'siren-vue)
 ;;; siren-vue.el ends here

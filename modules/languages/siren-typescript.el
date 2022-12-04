@@ -18,8 +18,7 @@
 
   :general
   (:keymaps 'typescript-mode-map
-            "C-j" 'newline-and-indent
-            "C-c C-h" 'siren-folding-toggle)
+            "C-j" 'newline-and-indent)
 
   :preface
   (defun siren-typescript-mode-setup ()

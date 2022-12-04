@@ -14,8 +14,7 @@
 
   :general
   (:keymaps 'json-mode-map
-            "C-j" 'newline-and-indent
-            "C-c C-h" 'siren-folding-toggle)
+            "C-j" 'newline-and-indent)
 
   :hook
   (json-mode . siren-json-mode-setup)
