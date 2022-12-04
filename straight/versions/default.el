@@ -100,7 +100,7 @@
  ("go-eldoc" . "cbbd2ea1e94a36004432a9ac61414cb5a95a39bd")
  ("go-gen-test" . "35df36dcd555233ee1a618c0f6a58ce6db4154d9")
  ("go-mode.el" . "08aa90d52f0e7d2ad02f961b554e13329672d7cb")
- ("go-playground" . "2591a4990b43492fb3374ab81834d31602827aa3")
+ ("go-playground" . "e70aeb111fbb4487b464a813feb8ecad1542dc1c")
  ("go-projectile" . "ad4ca3b5695a0e31e95e3cc4ccab498f87d68303")
  ("gotest.el" . "2ec82dcc70d5f6aa22f66b44f8b537be33bd7903")
  ("groovy-emacs-modes" . "c612ac1e9f742856914ad6e8eb9e9dc169f489ab")
