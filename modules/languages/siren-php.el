@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-rainbow)
 
 (use-package php-mode
   :interpreter "php"
@@ -16,7 +15,6 @@
 
   :preface
   (defun siren-php-mode-setup ()
-    (rainbow-mode t)
     (subword-mode t)))
 
 (provide 'siren-php)

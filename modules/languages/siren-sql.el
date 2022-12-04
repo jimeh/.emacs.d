@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-rainbow)
-
 (use-package sql-mode
   :straight (:type built-in)
   :mode "\\.sql\\'"

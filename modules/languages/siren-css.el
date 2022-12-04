@@ -7,7 +7,6 @@
 ;;; Code:
 
 (require 'siren-lsp)
-(require 'siren-rainbow)
 
 (use-package css-mode
   :mode "\\.css\\'"
@@ -22,8 +21,7 @@
   (defun siren-css-mode-setup ()
     (setq-local tab-width 2)
 
-    (lsp-deferred)
-    (rainbow-mode +1)))
+    (lsp-deferred)))
 
 (provide 'siren-css)
 ;;; siren-css.el ends here
