@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-origami)
-
 (use-package rjsx-mode
   :mode "components\\/.*\\.js\\'"
 
@@ -15,13 +13,7 @@
 
   :preface
   (defun siren-rjsx-mode-setup ()
-    (origami-mode t)
-    (subword-mode t))
-
-  :init
-  (with-eval-after-load 'origami
-    (add-to-list 'origami-parser-alist
-                 '(rjsx-mode . origami-c-style-parser))))
+    (subword-mode t)))
 
 (provide 'siren-jsx)
 ;;; siren-jsx.el ends here

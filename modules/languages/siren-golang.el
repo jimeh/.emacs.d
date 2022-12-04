@@ -9,7 +9,6 @@
 (require 'siren-dap)
 (require 'siren-flycheck)
 (require 'siren-lsp)
-(require 'siren-origami)
 (require 'siren-prog-mode)
 (require 'siren-projectile)
 (require 'siren-reformatter)
@@ -47,7 +46,6 @@
     (when (fboundp 'auto-highlight-symbol-mode)
       (auto-highlight-symbol-mode -1))
 
-    (origami-mode t)
     (subword-mode t))
 
   (defun siren-go-dot-mod-mode-setup ()

@@ -39,6 +39,7 @@
 (require 'siren-marginalia)
 (require 'siren-minions)
 (require 'siren-mwim)
+(require 'siren-origami)
 (require 'siren-rainbow)
 (require 'siren-recentf)
 (require 'siren-savehist)

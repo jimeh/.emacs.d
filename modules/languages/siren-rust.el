@@ -7,7 +7,6 @@
 ;;; Code:
 
 (require 'siren-lsp)
-(require 'siren-origami)
 
 (use-package rust-mode
   :mode "\\.rs\\'"
@@ -24,13 +23,7 @@
   (defun siren-rust-mode-setup ()
     (setq-local rust-format-on-save t)
 
-    (origami-mode t)
-    (subword-mode t))
-
-  :init
-  (with-eval-after-load 'origami
-    (add-to-list 'origami-parser-alist
-                 '(rust-mode . origami-c-style-parser))))
+    (subword-mode t)))
 
 (use-package lsp-rust
   :straight lsp-mode

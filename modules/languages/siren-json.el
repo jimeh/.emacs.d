@@ -8,7 +8,6 @@
 
 (require 'siren-js)
 (require 'siren-lsp)
-(require 'siren-origami)
 
 (use-package json-mode
   :mode "\\.json\\'"
@@ -28,14 +27,7 @@
     (let ((width 2))
       (setq-local js-indent-level width
                   json-reformat:indent-width width
-                  tab-width width))
-
-    (origami-mode t))
-
-  :init
-  (with-eval-after-load 'origami
-    (add-to-list 'origami-parser-alist
-                 '(json-mode . origami-c-style-parser))))
+                  tab-width width))))
 
 (use-package lsp-json
   :straight lsp-mode

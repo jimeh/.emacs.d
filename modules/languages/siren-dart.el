@@ -7,7 +7,6 @@
 ;;; Code:
 
 (require 'siren-lsp)
-(require 'siren-origami)
 (require 'siren-projectile)
 
 (use-package dart-mode
@@ -29,14 +28,9 @@
       (auto-highlight-symbol-mode -1))
 
     (lsp-deferred)
-    (origami-mode t)
     (subword-mode y))
 
   :init
-  (with-eval-after-load 'origami
-    (add-to-list 'origami-parser-alist
-                 '(dart-mode . origami-c-style-parser)))
-
   (with-eval-after-load 'projectile
     (add-to-list 'projectile-project-root-files-bottom-up "pubspec.yaml")
     (add-to-list 'projectile-project-root-files-bottom-up "BUILD")))

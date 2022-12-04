@@ -8,7 +8,6 @@
 
 (require 'siren-clang-format)
 (require 'siren-flycheck)
-(require 'siren-origami)
 (require 'siren-prog-mode)
 (require 'siren-reformatter)
 
@@ -31,18 +30,12 @@
       (setq-local flycheck-checker 'protobuf-buf)
       (buf-format-on-save-mode t))
 
-    (subword-mode t)
-    (origami-mode t))
+    (subword-mode t))
 
   (defun flycheck-protobuf-buf-project-root (&optional _checker)
     "Return the nearest directory holding the buf.yaml configuration."
     (and buffer-file-name
          (locate-dominating-file buffer-file-name "buf.yaml")))
-
-  :init
-  (with-eval-after-load 'origami
-    (add-to-list 'origami-parser-alist
-                 '(protobuf-mode . origami-c-style-parser)))
 
   :config
   (unbind-key "C-c C-u" 'c-mode-base-map)

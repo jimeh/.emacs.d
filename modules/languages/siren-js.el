@@ -7,7 +7,6 @@
 ;;; Code:
 
 (require 'siren-lsp)
-(require 'siren-origami)
 
 (use-package js-mode
   :straight (:type built-in)
@@ -17,8 +16,7 @@
 
   :general
   (:keymaps 'js-mode-map
-            "C-j" 'newline-and-indent
-            "C-c C-h" 'siren-toggle-hiding)
+            "C-j" 'newline-and-indent)
 
   :hook
   (js-mode . siren-js-mode-setup)
@@ -31,8 +29,7 @@
                   indent-level width
                   tab-width width))
 
-    (subword-mode t)
-    (origami-mode t)))
+    (subword-mode t)))
 
 (use-package lsp-javascript
   :straight lsp-mode

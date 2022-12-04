@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-origami)
 (require 'siren-rainbow)
 
 (use-package php-mode
@@ -18,8 +17,7 @@
   :preface
   (defun siren-php-mode-setup ()
     (rainbow-mode t)
-    (subword-mode t)
-    (origami-mode t)))
+    (subword-mode t)))
 
 (provide 'siren-php)
 ;;; siren-php.el ends here

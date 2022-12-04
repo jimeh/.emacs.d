@@ -8,7 +8,6 @@
 
 (require 'siren-flycheck)
 (require 'siren-lsp)
-(require 'siren-origami)
 (require 'siren-web-mode)
 
 (use-package typescript-mode
@@ -31,12 +30,7 @@
 
     (lsp-deferred)
     (subword-mode t)
-    (origami-mode t))
-
-  :init
-  (with-eval-after-load 'origami
-    (add-to-list 'origami-parser-alist
-                 '(typescript-mode . origami-c-style-parser))))
+    (flycheck-mode t)))
 
 (use-package tide
   :hook
@@ -55,7 +49,6 @@
     (setq-local flycheck-check-syntax-automatically '(save mode-enabled)
                 company-tooltip-align-annotations t)
 
-    (flycheck-mode t)
     (eldoc-mode t)
     (tide-hl-identifier-mode t))
 
