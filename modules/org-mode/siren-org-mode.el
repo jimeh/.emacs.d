@@ -9,7 +9,6 @@
 (require 'siren-display-fill-column)
 (require 'siren-display-indentation)
 (require 'siren-display-line-numbers)
-(require 'siren-flyspell)
 (require 'siren-smart-shift)
 
 (use-package org
@@ -91,7 +90,6 @@
     (siren-display-fill-column t)
     (siren-display-indentation t)
     (siren-display-line-numbers t)
-    (flyspell-mode t)
     (visual-line-mode t)
     (whitespace-mode t))
 

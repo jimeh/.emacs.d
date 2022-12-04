@@ -8,7 +8,6 @@
 
 (require 'siren-display-fill-column)
 (require 'siren-display-line-numbers)
-(require 'siren-flyspell)
 (require 'siren-move-dup)
 
 (use-package markdown-mode
@@ -48,8 +47,7 @@
 
     (siren-display-fill-column t)
     (siren-display-line-numbers t)
-    (auto-fill-mode t)
-    (flyspell-mode t))
+    (auto-fill-mode t))
 
   (defun siren-markdown-mode-setup-prettier ()
     "Configure prettier-js-args based on auto-fill-column mode."

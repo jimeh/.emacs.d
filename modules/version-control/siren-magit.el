@@ -8,7 +8,6 @@
 
 (require 'siren-display-fill-column)
 (require 'siren-display-line-numbers)
-(require 'siren-flyspell)
 (require 'siren-whitespace)
 
 (use-package magit
@@ -55,7 +54,6 @@
     (siren-display-fill-column)
     (siren-display-line-numbers)
     (auto-fill-mode t)
-    (flyspell-mode t)
     (whitespace-mode t))
 
   :config

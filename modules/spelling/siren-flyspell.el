@@ -12,11 +12,19 @@
   :diminish flyspell-mode
 
   :hook
-  (prog-mode . flyspell-prog-mode)
+  (prog-mode . siren-flyspell-prog-mode-enable)
+  ((git-commit-setup text-mode) . siren-flyspell-mode-enable)
 
   :custom
   (ispell-program-name "aspell") ;; use aspell instead of ispell
   (ispell-extra-args '("--lang=en" "--sug-mode=ultra"))
+
+  :preface
+  (defun siren-flyspell-mode-enable ()
+    (flyspell-mode t))
+
+  (defun siren-flyspell-prog-mode-enable ()
+    (flyspell-prog-mode t))
 
   :config
   ;; Unbind keys used by siren-goto-chg module.
