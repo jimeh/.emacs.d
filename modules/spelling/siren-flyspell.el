@@ -12,7 +12,7 @@
   :diminish flyspell-mode
 
   :hook
-  (prog-mode . siren-flyspell-prog-mode-enable)
+  (prog-mode . flyspell-prog-mode)
   ((git-commit-setup text-mode) . siren-flyspell-mode-enable)
 
   :custom
@@ -22,9 +22,6 @@
   :preface
   (defun siren-flyspell-mode-enable ()
     (flyspell-mode t))
-
-  (defun siren-flyspell-prog-mode-enable ()
-    (flyspell-prog-mode t))
 
   :config
   ;; Unbind keys used by siren-goto-chg module.
