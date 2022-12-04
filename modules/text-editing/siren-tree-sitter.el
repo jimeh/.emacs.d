@@ -21,9 +21,7 @@
 
   :preface
   (defun siren-tree-sitter-mode-enable ()
-    (tree-sitter-mode t))
-
-  :defer t)
+    (tree-sitter-mode t)))
 
 (use-package tree-sitter-langs
   :hook
