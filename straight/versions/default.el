@@ -153,6 +153,7 @@
  ("multiple-cursors.el" . "fe0d5167459b792a699af782685582a195852cb9")
  ("mwim.el" . "b4f3edb4c0fb8f8b71cecbf8095c2c25a8ffbf85")
  ("nginx-mode" . "6e9d96f58eddd69f62f7fd443d9b9753e16e0e96")
+ ("nix-mode" . "54e5626829168e22126b233e079f04dff3c71b90")
  ("nongnu-elpa" . "ddfb68cf9fa55823d815d426910e07ea3a2a5130")
  ("ns-auto-titlebar" . "60273e764bf8d95abc40dd2fdc23af87ea9ee33b")
  ("ob-go" . "2067ed55f4c1d33a43cb3f6948609d240a8915f5")

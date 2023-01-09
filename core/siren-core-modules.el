@@ -204,6 +204,7 @@
 (require 'siren-markdown)
 (require 'siren-mermaid)
 (require 'siren-nginx)
+(require 'siren-nix)
 (require 'siren-php)
 (require 'siren-plantuml)
 (require 'siren-protobuf)
