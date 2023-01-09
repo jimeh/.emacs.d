@@ -51,6 +51,7 @@
  ("emacs-aio" . "da93523e235529fa97d6f251319d9e1d6fc24a41")
  ("emacs-async" . "10cedd8ac7173e92a6822317f1782550199d2d6d")
  ("emacs-deferred" . "2239671d94b38d92e9b28d4e12fd79814cfb9c16")
+ ("emacs-direnv" . "268536f564b7eba99264a89a9149268eb4bc67ac")
  ("emacs-emojify" . "1b726412f19896abf5e4857d4c32220e33400b55")
  ("emacs-hcl-mode" . "e4d9eef631e8a386341ae8f94f7c2579586e65b5")
  ("emacs-htmlize" . "dd27bc3f26efd728f2b1f01f9e4ac4f61f2ffbf9")
