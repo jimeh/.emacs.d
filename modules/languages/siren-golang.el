@@ -229,6 +229,11 @@ For example, if the current buffer is `foo.go', the buffer for
   :hook
   (go-playground-mode . siren-go-playground-setup)
 
+  :general
+  (:keymaps 'go-playground-mode-map
+            "C-c C-c" 'go-playground-exec
+            "C-c k" 'go-playground-rm)
+
   :custom
   (go-playground-basedir
    (expand-file-name "src/playground" (or (getenv "GOPATH") "~/go")))
