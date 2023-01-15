@@ -21,6 +21,7 @@
                           (pinned . "pinned.el"))
       straight-repository-branch "develop"
       straight-use-package-by-default t
+      straight-use-version-specific-build-dir t
       use-package-always-ensure nil)
 
 (defvar bootstrap-version)
