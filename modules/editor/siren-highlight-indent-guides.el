@@ -14,7 +14,7 @@
   :custom
   (highlight-indent-guides-auto-enabled nil)
   (highlight-indent-guides-character ?\u2502)
-  (highlight-indent-guides-method 'column)
+  (highlight-indent-guides-method 'character)
   (highlight-indent-guides-responsive nil))
 
 (provide 'siren-highlight-indent-guides)
