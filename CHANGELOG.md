@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.36](https://github.com/jimeh/.emacs.d/compare/v0.8.35...v0.8.36) (2023-01-15)
+
+
+### Features
+
+* **core/straight.el:** use version specific build dir ([ce0a9bf](https://github.com/jimeh/.emacs.d/commit/ce0a9bfc5c87a1dcd51e7aebbb88647af160fd40))
+* **editor:** add direnv-mode to set env vars via direnv ([d6457f2](https://github.com/jimeh/.emacs.d/commit/d6457f26dee85fc109392b6e84b82594f1d1d3ba))
+* **editor:** change highlight indent guides style to a thin line ([d83ca98](https://github.com/jimeh/.emacs.d/commit/d83ca9867ab675cec47c14ffb95a31bb762a3314))
+* **editor:** enable subword-word globally in all buffers ([9654403](https://github.com/jimeh/.emacs.d/commit/9654403bee1333a4225e47c1e682a5805fc95ce4))
+* **language/go:** make go-playground nicer to use with extra keybindings ([09aa5cb](https://github.com/jimeh/.emacs.d/commit/09aa5cb1c6a1db129f4a53d1ba7e46afffeffc3d))
+* **language/nix:** add nix-mode for editing *.nix files ([23d6664](https://github.com/jimeh/.emacs.d/commit/23d66646091b14ec9da49596679172064920a59f))
+* **language/rust:** major improvements to Rust dev experience ([7e29a78](https://github.com/jimeh/.emacs.d/commit/7e29a78b05ff14dd67285327a01ed1a4c715b760))
+
+
+### Bug Fixes
+
+* **completion/copilot:** resolve startup error in Emacs 30.x ([3b59f17](https://github.com/jimeh/.emacs.d/commit/3b59f17a9981eefc27bcd923fe3ecd764c520cf4))
+* remove references to deprecated and removed siren functions ([03efc3b](https://github.com/jimeh/.emacs.d/commit/03efc3b84786df90768faf33a6555129c3414170))
+* **spelling/flyspell:** incorrect call to flyspell-prog-mode ([bc5add2](https://github.com/jimeh/.emacs.d/commit/bc5add2f031ebc28899a009da83abb07414d9d0c))
+
 ### [0.8.35](https://github.com/jimeh/.emacs.d/compare/v0.8.34...v0.8.35) (2022-11-24)
 
 
