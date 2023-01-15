@@ -19,6 +19,7 @@
                                     "GOPRIVATE"
                                     "GOENV_GOPATH_PREFIX"
                                     "GOENV_VERSION"
+                                    "RUST_BACKTRACE"
                                     "MallocNanoZone"))
   (exec-path-from-shell-arguments '("-l"))
   (exec-path-from-shell-check-startup-files nil)

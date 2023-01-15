@@ -10,7 +10,7 @@
 
 (use-package conf-toml-mode
   :straight (:type built-in)
-  :mode "\\.toml\\'"
+  :mode "\\.toml\\'" "Cargo\\.lock\\'"
   :hook (conf-toml-mode . siren-toml-mode-setup)
 
   :preface
