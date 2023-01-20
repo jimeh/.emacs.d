@@ -21,7 +21,16 @@
             "M-N" 'copilot-next-completion
             "M-P" 'copilot-previous-completion)
 
+  :custom
+  (copilot-disable-predicates '(siren-copilot-disable-predicate))
+
   :preface
+  (defun siren-copilot-disable-predicate ()
+    (when buffer-file-name
+      (let ((base (file-name-nondirectory buffer-file-name))
+            (dir (file-name-directory buffer-file-name)))
+        (or (string-prefix-p ".env" base)))))
+
   (defun siren-copilot-accept-completion-dwim ()
     "Accept the current completion or trigger copilot-compilot."
     (interactive)
