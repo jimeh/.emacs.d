@@ -121,7 +121,6 @@
                     :initialization-options (lambda ()
                                               (gethash "golangci-lint"
                                                        (lsp-configuration-section "golangci-lint")))))
-  (add-to-list 'lsp-language-id-configuration '(go-mode . "golangci-lint"))
 
   :preface
   (defun siren-lsp-go-mode-setup ()
