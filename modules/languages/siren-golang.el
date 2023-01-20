@@ -51,8 +51,7 @@
     (setq-local tab-width siren-go-tab-width))
 
   (defun siren-define-golines-format-mode ()
-    ;; Setup golines formatter for manual use - on save formatting is handled by
-    ;; lsp-mode.
+    "Setup and define golines formatter."
     (reformatter-define golines-format
       :program "golines"
       :args '("-t" "4" "-m" "80" "--no-reformat-tags")
