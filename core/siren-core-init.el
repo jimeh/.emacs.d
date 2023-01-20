@@ -12,8 +12,7 @@
   "Display startup echo area message."
   (message "Siren initialized in %s" (emacs-init-time)))
 
-(message "Siren is powering up... Be patient, Master %s!"
-         (getenv (if (equal system-type 'windows-nt) "USERNAME" "USER")))
+(message "Siren is powering up, please be patient...")
 
 ;; Check Emacs version.
 (when (version< emacs-version "26.1")
