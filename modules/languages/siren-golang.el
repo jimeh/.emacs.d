@@ -125,12 +125,13 @@
 
   :preface
   (defun siren-lsp-go-mode-setup ()
-    (setq-local siren-lsp-format-buffer-func 'siren-lsp-go-format-buffer)
+    (setq-local siren-lsp-manual-format-buffer-func
+                'siren-lsp-go-manual-format-buffer)
     (lsp-format-buffer-on-save-mode t)
     (lsp-organize-imports-on-save-mode t)
     (lsp-deferred))
 
-  (defun siren-lsp-go-format-buffer ()
+  (defun siren-lsp-go-manual-format-buffer ()
     (lsp-format-buffer)
     (golines-format-buffer)))
 

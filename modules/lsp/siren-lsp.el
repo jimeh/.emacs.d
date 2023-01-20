@@ -10,7 +10,7 @@
   :general
   (:keymaps 'lsp-mode-map
             "C-c C-." 'lsp-rename
-            "C-c C-f" 'siren-lsp-format-buffer)
+            "C-c C-f" 'siren-lsp-manual-format-buffer)
 
   :commands
   lsp
@@ -57,14 +57,18 @@
     (setq-local company-idle-delay 0.1
                 company-minimum-prefix-length 1))
 
-  ;; Allow overriding manual buffer formatting triggered by C-c C-f. Typically
-  ;; this will be used to perform additional formatting steps not performed by
-  ;; default via the on-safe hook.
-  (defvar-local siren-lsp-format-buffer-func nil)
-  (defun siren-lsp-format-buffer ()
+  (defvar-local siren-lsp-manual-format-buffer-func nil)
+  (defun siren-lsp-manual-format-buffer ()
+    "Intended for manual formatting triggering, e.g. C-c C-f.
+
+Supports overriding the default formatting function by setting the
+`siren-lsp-manual-format-buffer-func' buffer-local variable.
+
+Typically this will be used to perform additional formatting
+steps not performed by default via the on-save hook."
     (interactive)
-    (if siren-lsp-format-buffer-func
-        (apply siren-lsp-format-buffer-func nil)
+    (if siren-lsp-manual-format-buffer-func
+        (apply siren-lsp-manual-format-buffer-func nil)
       (lsp-format-buffer)))
 
   :config
