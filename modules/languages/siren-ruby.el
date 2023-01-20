@@ -6,12 +6,13 @@
 
 ;;; Code:
 
+(require 'siren-cycle-quotes)
 (require 'siren-dap)
 (require 'siren-hideshow)
 (require 'siren-lsp)
 (require 'siren-projectile)
+(require 'siren-reformatter)
 (require 'siren-string-inflection)
-(require 'siren-cycle-quotes)
 
 (use-package ruby-mode
   :straight (:type built-in)
@@ -61,12 +62,21 @@
 
     (hs-minor-mode t))
 
+  (defun siren-define-stree-format-mode ()
+    "Setup stree (syntax_tree) formatter."
+    (reformatter-define stree-format
+      :program "stree"
+      :args '("format" "--print-width=80")
+      :lighter " STREE"))
+
   :init
   (with-eval-after-load 'projectile
     (add-to-list 'projectile-globally-ignored-directories "vendor/bundle")
     (add-to-list 'projectile-globally-ignored-directories "vendor/ruby"))
 
   :config
+  (siren-define-stree-format-mode)
+
   ;; Use M-' instead to togle quote styles
   (unbind-key "C-c '" ruby-mode-map)
 
@@ -93,7 +103,14 @@
 
   :preface
   (defun siren-lsp-ruby-mode-setup ()
+    (setq-local siren-lsp-manual-format-buffer-func
+                'siren-lsp-ruby-manual-format-buffer)
+    (lsp-format-buffer-on-save-mode t)
     (lsp-deferred))
+
+  (defun siren-lsp-ruby-manual-format-buffer ()
+    (stree-format-buffer)
+    (lsp-format-buffer))
 
   :init
   (add-to-list 'safe-local-variable-values
@@ -164,9 +181,6 @@
             "C-c . D" 'rubocop-autocorrect-directory))
 
 (use-package rubocopfmt
-  :hook
-  (ruby-mode . rubocopfmt-mode)
-
   :general
   (:keymaps 'ruby-mode-map
             "C-c C-f" 'rubocopfmt)
@@ -175,7 +189,6 @@
   (rubocopfmt-include-unsafe-cops t)
   (rubocopfmt-show-errors 'echo)
   (rubocopfmt-use-bundler-when-possible t)
-  (rubocopfmt-on-save-use-lsp-format-buffer t)
 
   :init
   (add-to-list 'safe-local-variable-values
