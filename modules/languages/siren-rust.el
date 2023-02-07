@@ -84,7 +84,9 @@
   :defer t
   :general
   (:keymaps 'rust-playground-mode-map
-            "C-<return>" 'rust-playground-exec))
+            "C-<return>" 'rust-playground-exec)
+  :custom
+  (rust-playground-basedir (expand-file-name "~/.rust/playground")))
 
 (provide 'siren-rust)
 ;;; siren-rust.el ends here
