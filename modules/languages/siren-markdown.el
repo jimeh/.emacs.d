@@ -43,7 +43,8 @@
       (add-hook 'hack-local-variables-hook
                 'siren-markdown-mode-setup-prettier nil t))
 
-    (setq-local markdown-asymmetric-header t)
+    (setq-local markdown-asymmetric-header t
+                tab-width 2)
 
     (siren-display-fill-column t)
     (siren-display-line-numbers t)
