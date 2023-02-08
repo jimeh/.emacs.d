@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: dbg!($0);
+# key: pd
+# --
+dbg!($0);
