@@ -1,4 +1,4 @@
 # name: fmt.Printf("...: %+v\n", ...)
 # key: ppd
 # --
-fmt.Printf("$1: %+v\n", $1)$0
+fmt.Printf("$1: %+v\n", ${1:})$0
