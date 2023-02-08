@@ -30,6 +30,7 @@ sessions/*
 smex-items
 srecode-map.el
 tramp
+tree-sitter/*
 url/*
 var/*
 
