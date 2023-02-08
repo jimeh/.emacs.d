@@ -44,8 +44,11 @@
 
   :preface
   (defun siren-lsp-bash-mode-setup ()
-    (if (member sh-shell '(bash sh))
-        (lsp-deferred)))
+    (when (member sh-shell '(bash sh))
+      (if (fboundp 'lsp-deferred)
+          (lsp-deferred))
+      (if (fboundp 'tree-sitter-mode)
+          (tree-sitter-mode t))))
 
   :config
   ;; Create custom lsp-client for shellcheck diagnostics via efm-langserver.

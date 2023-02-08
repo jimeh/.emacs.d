@@ -14,7 +14,6 @@
     php-mode
     ruby-mode
     rust-mode
-    sh-mode
     terraform-mode
     typescript-mode
     yaml-mode) . siren-tree-sitter-mode-enable)
