@@ -8,52 +8,38 @@
 
 (require 'siren-flycheck)
 (require 'siren-lsp)
-(require 'siren-web-mode)
+(require 'siren-treesit)
 
-(use-package typescript-mode
-  :defer t
+(let ((repo "https://github.com/tree-sitter/tree-sitter-typescript")
+      (ref "v0.20.2"))
+  (siren-treesit-prepare
+   'typescript-ts-mode
+   `(typescript . (,repo ,ref "typescript/src")))
+  (siren-treesit-prepare
+   'tsx-ts-mode
+   `(tsx . (,repo ,ref "tsx/src"))))
+
+(use-package typescript-ts-mode
+  :straight (:type built-in)
   :mode "\\.ts\\'"
   :hook
-  (typescript-mode . siren-typescript-mode-setup)
+  (typescript-mode . siren-typescript-mode-setup))
 
-  :general
-  (:keymaps 'typescript-mode-map
-            "C-j" 'newline-and-indent)
-
-  :preface
-  (defun siren-typescript-mode-setup ()
-    (let ((width 2))
-      (setq-local typescript-indent-level width
-                  indent-level width
-                  tab-width width))
-
-    (lsp-deferred)
-    (flycheck-mode t)))
-
-(use-package tide
+(use-package tsx-ts-mode
+  :straight (:type built-in)
+  :mode "\\.tsx\\'"
   :hook
-  (typescript-mode . siren-tide-mode-setup)
-  (web-mode . siren-tide-web-mode-setup)
+  (typescript-mode . siren-typescript-mode-setup))
 
-  :preface
-  (defun siren-tide-web-mode-setup ()
-    (when (string-equal "tsx" (file-name-extension buffer-file-name))
-      (siren-tide-mode-setup)))
+(defun siren-typescript-mode-setup ()
+  "Default setup function for `typescript-mode' and `typescript-ts-mode'."
+  (let ((width 2))
+    (setq-local typescript-indent-level width
+                indent-level width
+                tab-width width))
 
-  (defun siren-tide-mode-setup ()
-    (interactive)
-    (tide-setup)
-
-    (setq-local flycheck-check-syntax-automatically '(save mode-enabled)
-                company-tooltip-align-annotations t)
-
-    (eldoc-mode t)
-    (tide-hl-identifier-mode t))
-
-  :init
-  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
-  (with-eval-after-load 'flycheck
-    (flycheck-add-mode 'typescript-tslint 'web-mode)))
+  (lsp-deferred)
+  (flycheck-mode t))
 
 (provide 'siren-typescript)
 ;;; siren-typescript.el ends here
