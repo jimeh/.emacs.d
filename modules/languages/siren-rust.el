@@ -61,10 +61,17 @@
    (advice-add #'lsp-eldoc-function :after (lambda (&rest _) (setq lsp--hover-saved-bounds nil))))
 
 (use-package cargo
-  :hook (rust-mode . cargo-minor-mode)
+  :hook
+  (rust-mode . cargo-minor-mode)
+
   :general
   (:keymaps 'rust-mode-map
-            "C-c , a" 'cargo-process-test))
+            "C-c , a" 'cargo-process-test
+            "C-c , s" 'cargo-process-current-test
+            "C-c , v" 'cargo-process-current-file-tests)
+
+  :custom
+  (cargo-process--command-test--additional-args "-- --nocapture"))
 
 (use-package cargo-transient
   :general
