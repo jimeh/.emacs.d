@@ -8,9 +8,9 @@
 
 (use-package caddyfile-mode
   :mode
-  ("Caddyfile\\'" . caddyfile-mode)
-  ("caddy\\.conf\\'" . caddyfile-mode)
-  ("\\.caddy\\'" . caddyfile-mode)
+  "[/\\]Caddyfile\\(?:\\.[^/\\]*\\)?\\'"
+  "\\.caddyfile\\'"
+  "\\.caddy\\'"
 
   :hook
   (caddyfile-mode . siren-caddyfile-mode-setup)
