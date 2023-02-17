@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.37](https://github.com/jimeh/.emacs.d/compare/v0.8.36...v0.8.37) (2023-02-17)
+
+
+### Features
+
+* **completion/copilot:** do not use copilot-mode in .env* files ([bbbc979](https://github.com/jimeh/.emacs.d/commit/bbbc9794cad092921734e48fc377ea5922aea9fe))
+* **completion/copilot:** improve curly-bracket handling at end of completion ([7792cfc](https://github.com/jimeh/.emacs.d/commit/7792cfc965cb4515252d5c52b960bd0d03bab27c))
+* **language/caddyfile:** improve file patterns that are handled by caddyfile-mode ([73b1eec](https://github.com/jimeh/.emacs.d/commit/73b1eec11cc67d41b2e4fb4c32bc5eed816157c5))
+* **language/dockerfile:** use dockerfile-ts-mode if available ([04b8c37](https://github.com/jimeh/.emacs.d/commit/04b8c37dd48db6a97f9693f22bf31a42778ba412))
+* **language/go:** improve ppd snippet ([58c161b](https://github.com/jimeh/.emacs.d/commit/58c161b63217ce8925092ce8d1c54f6445a8de42))
+* **language/markdown:** change tab-width to 2 (from the default 4) ([a30e06c](https://github.com/jimeh/.emacs.d/commit/a30e06c9bb8eedd491d4afeccc973ba501b77716))
+* **language/ruby:** enable formatting with syntax_tree/stree ([51451ec](https://github.com/jimeh/.emacs.d/commit/51451ecffd9a083da52eb2d5be1eb33f60d4be87))
+* **language/rust:** add custom keybindings for running cargo test ([4babea1](https://github.com/jimeh/.emacs.d/commit/4babea1fad82c11186199e1063cf0ed1b3f494f0))
+* **language/rust:** add pd and ppd debug print snippets ([57167c4](https://github.com/jimeh/.emacs.d/commit/57167c49359bd0804bd1ce9a3b3e31978e5d2993))
+* **language/rust:** change pd snippet to use eprintln! instead of dbg! ([58cc0a3](https://github.com/jimeh/.emacs.d/commit/58cc0a39a9ec65a29ae991731285d7d8ff064a25))
+* **language/ssh-config:** add setup hook for ssh-known-hosts-mode ([0882edb](https://github.com/jimeh/.emacs.d/commit/0882edb6fe62516a18f57772e007f47edc659ab7))
+* **language/typescript:** switch to new typescript-ts-mode ([cead803](https://github.com/jimeh/.emacs.d/commit/cead803781172aa0304923a350dc0d4c68bbd8f2))
+
+
+### Bug Fixes
+
+* **editor/indent-guides:** switch back to column display due to performance ([1a55833](https://github.com/jimeh/.emacs.d/commit/1a55833d09292d7e9e5d68de46cfafd6bff5a81d))
+* **language/go:** add-on lsp servers do not need to be registered anymore ([bc5d60c](https://github.com/jimeh/.emacs.d/commit/bc5d60c07c06b04e41ea60023dd8f2336ec813e2))
+* **language/rust:** set rust-playground basedir so lsp-mode works correctly ([346b22a](https://github.com/jimeh/.emacs.d/commit/346b22a06be95301efb775f7eebdb16a2c9a061f))
+* **language/sh:** only activate tree-sitter in sh and bash scripts ([e138cb3](https://github.com/jimeh/.emacs.d/commit/e138cb3a84ac84b2bc95c8a3bdd50af01b26ec78))
+
 ### [0.8.36](https://github.com/jimeh/.emacs.d/compare/v0.8.35...v0.8.36) (2023-01-15)
 
 
