@@ -11,7 +11,10 @@
 (use-package ssh-config-mode
   :mode
   "/\\.local/ssh/config\\(\\.d/.*\\.conf\\)?\\'"
-  :hook (ssh-config-mode . siren-ssh-config-mode-setup)
+
+  :hook
+  (ssh-config-mode . siren-ssh-config-mode-setup)
+  (ssh-known-hosts-mode . siren-ssh-config-mode-setup)
 
   :preface
   (defun siren-ssh-config-mode-setup ()
