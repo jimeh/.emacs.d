@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: dbg!($0);
+# name: eprintln!("x = {:#?}", x);
 # key: pd
 # --
-dbg!($0);
+eprintln!("$1 = {:#?}", ${1:});$0
