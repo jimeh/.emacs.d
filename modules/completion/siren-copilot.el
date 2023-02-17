@@ -13,8 +13,8 @@
   (prog-mode . copilot-mode)
 
   :general
-  ("C-<tab>" 'siren-copilot-accept-completion-without-trailing-opening-curly-bracket-dwim)
-  ("<backtab>" 'siren-copilot-accept-completion-without-trailing-opening-curly-bracket-dwim)
+  ("C-<tab>" 'siren-copilot-accept-completion-dwim)
+  ("<backtab>" 'siren-copilot-accept-completion-dwim)
   ("M-F" 'siren-copilot-accept-completion-by-word-dwim)
   ("M-E" 'siren-copilot-accept-completion-by-line-dwim)
   (:keymaps 'copilot-completion-map
@@ -34,7 +34,8 @@
   (defun siren-copilot-accept-completion-dwim ()
     "Accept the current completion or trigger copilot-compilot."
     (interactive)
-    (siren-copilot-complete-or-call 'copilot-accept-completion))
+    (siren-copilot-complete-or-call
+     'siren-copilot-accept-completion-with-balanced-brackets))
 
   (defun siren-copilot-accept-completion-by-word-dwim ()
     "Accept the current completion by word, or trigger copilot-compilot."
@@ -52,19 +53,17 @@
         (apply f args)
       (copilot-complete)))
 
-  (defun siren-copilot-accept-completion-without-trailing-opening-curly-bracket-dwim ()
-    "Accept the current completion or trigger copilot-compilot."
+  (defun siren-copilot-accept-completion-with-balanced-brackets ()
+    "Accept completion, add '}' after point if completion ends with '{'."
     (interactive)
-    (siren-copilot-complete-or-call 'siren-copilot-accept-completion-without-trailing-opening-curly-bracket))
-
-  (defun siren-copilot-accept-completion-without-trailing-opening-curly-bracket ()
-    "Accept completion removing ` {' or `{' from the end of the completion."
-    (interactive)
-    (copilot-accept-completion (lambda (completion)
-                                 (let ((index (string-match-p "\s*{\\'" completion)))
-                                   (if (and index (> index 0))
-                                       (substring completion 0 index)
-                                     completion)))))
+    (let ((bracket-open nil))
+      (copilot-accept-completion (lambda (completion)
+                                   (setq bracket-open
+                                         (string-suffix-p "{" completion))
+                                   completion))
+      (when bracket-open
+        (insert "}")
+        (backward-char))))
 
   :config
   (with-eval-after-load 'company
