@@ -71,7 +71,31 @@
             "C-c , v" 'cargo-process-current-file-tests)
 
   :custom
-  (cargo-process--command-test--additional-args "-- --nocapture"))
+  (cargo-process--command-test--additional-args "-- --nocapture")
+
+  :preface
+  (defun siren-cargo-process-get-current-mod-path ()
+    "Get the current module name."
+    (let ((filename (buffer-file-name)))
+      (when (and filename
+                 (string-match "/\\(src\\|tests\\)/\\(.*\\)\\.rs$" filename))
+        (let ((path (match-string 2 filename)))
+          (unless (member path '("" "lib" "main"))
+            (let ((mod (replace-regexp-in-string
+                        "-" "_" (string-remove-suffix "/mod" path))))
+              (when mod (replace-regexp-in-string "/" "::" mod))))))))
+
+  (defun siren-cargo-process--get-current-mod-advice (orig-fun &rest args)
+    "Get the current module name."
+    (let ((path (siren-cargo-process--get-current-mod-path))
+          (mod (apply orig-fun args)))
+      (cond ((and path mod) (concat path "::" mod))
+            (path path)
+            (t mod))))
+
+  :config
+  (advice-add 'cargo-process--get-current-mod
+              :around 'siren-cargo-process--get-current-mod-advice))
 
 (use-package cargo-transient
   :general
