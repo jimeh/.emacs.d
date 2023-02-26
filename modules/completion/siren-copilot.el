@@ -30,10 +30,12 @@
   :preface
   (defun siren-copilot-disable-predicate ()
     (when buffer-file-name
-      (let ((base (file-name-nondirectory buffer-file-name))
-            (dir (file-name-directory buffer-file-name)))
+      (let* ((full buffer-file-name)
+             (base (file-name-nondirectory full))
+             (dir (file-name-directory full)))
         (or (string-prefix-p ".env" base)
-            (string-match-p "\/\.ansible\/tmp\/ansible-local-.+$" dir)))))
+            (string-match-p "\/\.ansible\/tmp\/ansible-local-.+$" dir)
+            (string-suffix-p ".kube/config" full)))))
 
   (defun siren-copilot-dwim ()
     "Trigger or accept completion."
