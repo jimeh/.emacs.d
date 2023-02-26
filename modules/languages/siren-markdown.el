@@ -46,6 +46,7 @@
     (setq-local markdown-asymmetric-header t
                 tab-width 2)
 
+    (whitespace-mode t)
     (siren-display-fill-column t)
     (siren-display-line-numbers t)
     (auto-fill-mode t))
