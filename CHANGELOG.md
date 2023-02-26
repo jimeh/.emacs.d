@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.38](https://github.com/jimeh/.emacs.d/compare/v0.8.37...v0.8.38) (2023-02-26)
+
+
+### Features
+
+* **completion/copilot:** add .kube/config to exclude list ([76368c2](https://github.com/jimeh/.emacs.d/commit/76368c26eb17972128344d27a70645a5101629de))
+* **completion/copilot:** add accept completion "mods" concept ([41b18aa](https://github.com/jimeh/.emacs.d/commit/41b18aa74cb49bf46f953f8adcf7ad5ff688142d))
+* **completion/copilot:** major improvements to accept "mods" concept ([c3ccf4f](https://github.com/jimeh/.emacs.d/commit/c3ccf4f51b09e2e3e1d42e48439fbc133a22b0fd))
+* **language/markdown:** enable whitespace-mode ([26d300f](https://github.com/jimeh/.emacs.d/commit/26d300f3916047056e9512878a5f3ed524cab51a))
+* **language/rust:** improve cargo test run commands ([a8e92eb](https://github.com/jimeh/.emacs.d/commit/a8e92eb311768e52d8452c7b10610c4b8eafe0ac))
+* **lsp:** add .devbox to ignored directories ([713ce68](https://github.com/jimeh/.emacs.d/commit/713ce6843dd4aad2319c79bcf0c5163f34c9f854))
+* **snippets/go:** switch ppd snippet from "%+v" to "%#v" ([e7e5fc8](https://github.com/jimeh/.emacs.d/commit/e7e5fc87da825bcc36f8bc6ca0a11ea7d5983b15))
+
+
+### Bug Fixes
+
+* **lsp:** move misplaced :custom-face definition ([7021114](https://github.com/jimeh/.emacs.d/commit/7021114d558669d485d582ee16cada45ec35aeb7))
+
 ### [0.8.37](https://github.com/jimeh/.emacs.d/compare/v0.8.36...v0.8.37) (2023-02-17)
 
 
