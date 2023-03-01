@@ -64,6 +64,7 @@
 (require 'siren-flycheck)
 
 ;; Misc.
+(require 'siren-chatgpt)
 (require 'siren-explain-pause)
 (require 'siren-lorem-ipsum)
 (require 'siren-rand)
