@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.39](https://github.com/jimeh/.emacs.d/compare/v0.8.38...v0.8.39) (2023-03-07)
+
+
+### Features
+
+* **language/rust:** add sf snippet for String::from($0) ([2369d50](https://github.com/jimeh/.emacs.d/commit/2369d509c75c586513f22e2254fb3ed7804cd648))
+* **misc/chatgpt:** add unofficial package for interacting with ChatGPT ([9207050](https://github.com/jimeh/.emacs.d/commit/9207050c23a2daf176c0dd92bd7a9ce58d077e54))
+
+
+### Bug Fixes
+
+* **language/go:** enable tree-sitter syntax highlighting ([b8b7c7b](https://github.com/jimeh/.emacs.d/commit/b8b7c7be84aafbc73966b72955662ab74063eac2))
+* **language/rust:** fix typo in function name ([d27c0bc](https://github.com/jimeh/.emacs.d/commit/d27c0bc67ed3d5be0ee600fc5e8c22a942dae6f1))
+
 ### [0.8.38](https://github.com/jimeh/.emacs.d/compare/v0.8.37...v0.8.38) (2023-02-26)
 
 
