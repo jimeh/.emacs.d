@@ -9,6 +9,7 @@
 (use-package tree-sitter
   :hook
   ((css-mode
+    go-mode
     js-mode
     json-mode
     php-mode
