@@ -74,7 +74,7 @@
   (cargo-process--command-test--additional-args "-- --nocapture")
 
   :preface
-  (defun siren-cargo-process-get-current-mod-path ()
+  (defun siren-cargo-process--get-current-mod-path ()
     "Get the current module name."
     (let ((filename (buffer-file-name)))
       (when (and filename
