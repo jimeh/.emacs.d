@@ -31,13 +31,13 @@
 
   :preface
   (defun siren-lsp-rust-mode-setup ()
-    (lsp-format-buffer-on-save-mode t)
-    (lsp)
-
     ;; Disable semantic tokens as it typically causes an annoying delay with the
     ;; syntax highlighting as you type. Essentially all new text is a very faded
     ;; out grey color for the first 1-2 seconds as you type.
-    (lsp-semantic-tokens-mode -1))
+    (setq-local lsp-semantic-tokens-enable nil)
+
+    (lsp-format-buffer-on-save-mode t)
+    (lsp-deferred))
 
    ;; Fixes for eldoc, see:
    ;; - https://github.com/emacs-lsp/lsp-mode/pull/1740
