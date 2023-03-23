@@ -40,6 +40,7 @@
 
 ;; macOS Fullscreen (requires Emacs 24.4 or later)
 (global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
+(global-set-key (kbd "C-s-<return>") 'toggle-frame-fullscreen)
 
 ;; modifier keys
 ;; (setq mac-command-modifier 'super)
