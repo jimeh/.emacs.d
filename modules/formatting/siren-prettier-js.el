@@ -16,6 +16,8 @@
     php-mode
     rjsx-mode
     typescript-mode
+    toml-mode
+    toml-ts-mode
     vue-mode) . siren-prettier-js-mode-enable)
 
   :preface
