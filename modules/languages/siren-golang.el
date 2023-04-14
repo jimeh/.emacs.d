@@ -163,7 +163,35 @@
           (setq-local go-test-args (concat go-test-args " " extra-args))
         (setq-local go-test-args extra-args))))
 
-  :init
+  (defvar-local siren-gotest-golden-update nil
+    "If non-nil, update golden files by setting GOLDEN_UPDATE=1 env var.")
+
+  (defun siren-gotest-run (gotest-fun)
+    "Run a Go test function with an optional prefix argument.
+If called with a prefix argument, set the variable
+siren-gotest-golden-update to t, which will update the golden
+files when running the test. Otherwise, set it to nil, which will
+compare the output with the existing golden files. The argument
+GOTEST-FUN should be a function that runs a Go test command."
+    (interactive "P")
+    ;; (message "siren-gotest-run: ")
+    ;; (message gotest-fun)
+    ;; (message "prefix-arg: ")
+    (message "siren-gotest-run: %s, prefix: " gotest-fun current-prefix-arg)
+    (let ((siren-gotest-golden-update current-prefix-arg))
+      (funcall gotest-fun)))
+
+  (defun siren-gotest--get-program-advice(orig-fun args &optional env)
+    "Advice to set the program to use for go test.
+When siren-gotest-golden-update is non-nil, add `GOLDEN_UPDATE=1' to env."
+    (let ((env (if current-prefix-arg
+                   (cons "GOLDEN_UPDATE=1" env)
+                 env)))
+      (apply orig-fun args env)))
+
+  :config
+  (advice-add 'go-test--get-program :around #'siren-gotest--get-program-advice)
+
   (when (not (version< emacs-version "28.0"))
     ;; Change ff-other-file-name to ff-find-the-other-file in Emacs 28.x and
     ;; later.
