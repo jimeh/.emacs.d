@@ -51,6 +51,7 @@
   (treemacs-follow-mode t)
   (treemacs-filewatch-mode t)
   (treemacs-git-mode 'deferred)
+  (treemacs-project-follow-mode t)
 
   (treemacs-define-doubleclick-action
    'file-node-open   #'treemacs-visit-node-in-most-recently-used-window)
