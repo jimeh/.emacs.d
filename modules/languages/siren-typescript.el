@@ -23,7 +23,7 @@
   :straight (:type built-in)
   :mode "\\.ts\\'"
   :hook
-  (typescript-mode . siren-typescript-mode-setup))
+  (typescript-ts-mode . siren-typescript-mode-setup))
 
 (use-package tsx-ts-mode
   :straight (:type built-in)
