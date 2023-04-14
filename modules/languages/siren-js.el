@@ -37,6 +37,11 @@
 
   :preface
   (defun siren-lsp-js-mode-setup ()
+    ;; Disable semantic tokens as it typically causes an annoying delay with the
+    ;; syntax highlighting as you type. Essentially all new text is a very faded
+    ;; out grey color for the first 1-2 seconds as you type.
+    (setq-local lsp-semantic-tokens-enable nil)
+
     (lsp-deferred)
     (lsp-format-buffer-on-save-mode)))
 
