@@ -26,6 +26,7 @@
 
   :preface
   (defun siren-lsp-lua-mode-setup ()
+    (setq-local tab-width 4)
     (lsp-deferred)))
 
 (provide 'siren-lua)
