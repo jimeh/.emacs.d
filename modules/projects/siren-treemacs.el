@@ -76,10 +76,7 @@
   :after (treemacs lsp-mode)
 
   :custom
-  (lsp-metals-treeview-show-when-views-received t)
-
-  :config
-  (lsp-treemacs-sync-mode 1))
+  (lsp-metals-treeview-show-when-views-received t))
 
 (provide 'siren-treemacs)
 ;;; siren-treemacs.el ends here
