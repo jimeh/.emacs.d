@@ -6,24 +6,42 @@
 
 ;;; Code:
 
-(use-package chatgpt
-  :straight (:host github :repo "joshcho/ChatGPT.el"
-                   :files ("dist" "*.el" "*.py"))
-  :bind
-  ("C-c C-q" . chatgpt-query)
+(defvar siren-openai-api-key nil
+  "OpenAI API key.")
+
+(defun siren-openai-api-key ()
+  "Return OpenAI API key.
+If the key is not already set, try to retrieve it from the auth-source."
+  (unless siren-openai-api-key
+    (setq siren-openai-api-key
+          (or (auth-source-pick-first-password :host "openai.com")
+              (error "OpenAI API key not found in auth-source"))))
+  siren-openai-api-key)
+
+(use-package openai
+  :straight (:host github :repo "emacs-openai/openai")
 
   :custom
-  (chatgpt-query-format-string-map
-   '(("doc" . "Please write the documentation for the following code:\n\n%s")
-     ("bug" . "There is a bug in the following code, please help me fix it:\n\n%s")
-     ("understand" . "What is the following?\n\n%s")
-     ("explain" . "Explain the following in detail:\n\n%s")
-     ("improve" . "Please improve the following:\n\n%s")))
+  (openai-key (siren-openai-api-key)))
 
-  :init
-  (require 'python)
-  (setq chatgpt-repo-path
-        (expand-file-name "straight/repos/ChatGPT.el/" straight-base-dir)))
+(use-package chatgpt
+  :straight (:host github :repo "emacs-openai/chatgpt")
+  :after openai)
+
+(use-package codegpt
+  :straight (:host github :repo "emacs-openai/codegpt")
+  :after openai)
+
+(use-package chat
+  :straight (:host github :repo "iwahbe/chat.el")
+
+  :bind
+  ("C-c C-q" . chat)
+
+  :custom
+  (chat-api-key (siren-openai-api-key))
+  (chat-max-tokens 2000)
+  (chat-temperature 0.13))
 
 (provide 'siren-chatgpt)
 ;;; siren-chatgpt.el ends here
