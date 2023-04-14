@@ -16,6 +16,8 @@
   "/\\.env\\.[^/]+\\'"
   "\\.cfg\\'"
   "\\.conf\\'"
+  "\\tool-versions\\'"
+  "\\.tool-versions\\'"
 
   :hook (conf-mode . siren-conf-mode-setup)
 
