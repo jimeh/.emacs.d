@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.40](https://github.com/jimeh/.emacs.d/compare/v0.8.39...v0.8.40) (2023-04-16)
+
+
+### Features
+
+* **core/macos:** add C-s-<return> alternative binding for fullscreen toggle ([f058bee](https://github.com/jimeh/.emacs.d/commit/f058bee1dfdd9d6e17d2527ee3bad858545d47f6))
+* **editor:** add custom yank-indent package ([0eedc37](https://github.com/jimeh/.emacs.d/commit/0eedc37603c4b6f16ed5d6cf83184090ee100bce))
+* **formatting:** enable prettier-js-mode in toml files ([ede5843](https://github.com/jimeh/.emacs.d/commit/ede5843bd719ccb6c8fd1c54dc38083817558e01))
+* **language/conf:** handle .tool-versions files with conf-mode ([98c0d16](https://github.com/jimeh/.emacs.d/commit/98c0d16b23d10d5c6bb68a2cadabe5f260bc3ca4))
+* **language/go:** enable gotest to pass GOLDEN_UPDATE=1 env var ([0886d77](https://github.com/jimeh/.emacs.d/commit/0886d77f321898e383090ee1766f3ceb06cd9e0b))
+* **language/lua:** set tab-width to 4 ([201bb6d](https://github.com/jimeh/.emacs.d/commit/201bb6d394315a20afeb09ad4f31fba86642343f))
+* **language/terraform:** use lsp-mode in terraform buffers ([42ed25d](https://github.com/jimeh/.emacs.d/commit/42ed25d16558bbfa49bbd10bedcbaaa1d5b9d414))
+* **language/toml:** use toml-ts-mode if available ([7f618b3](https://github.com/jimeh/.emacs.d/commit/7f618b309cdd801aea03f8fdb4abee50389fbf8a))
+* **lsp:** disable semantic tokens in Dockerfile and JS files ([e4f9e00](https://github.com/jimeh/.emacs.d/commit/e4f9e002623872bd6044499769036d254d0b5e5e))
+* **misc/chatgpt:** swap out ChatGPT related packages ([3da4562](https://github.com/jimeh/.emacs.d/commit/3da4562bb6b8312a78f100cd212dc2901d3000fa))
+* **projects/treemacs:** disable lsp-treemacs-sync-mode ([5239dac](https://github.com/jimeh/.emacs.d/commit/5239dacc5e2ee776a3b0ecc8813ead9dec671247))
+* **projects/treemacs:** enable treemacs-project-follow-mode ([90d98d7](https://github.com/jimeh/.emacs.d/commit/90d98d7a514da63fb17caef8fdfeb54617f4d876))
+
+
+### Bug Fixes
+
+* **language/rust:** correctly disable lsp-semnatic-tokens-mode ([32dae1d](https://github.com/jimeh/.emacs.d/commit/32dae1d558e9162239ebc3df1565ef46e453e01d))
+* **language/typescript:** add setup hook to correct major mode ([cad2638](https://github.com/jimeh/.emacs.d/commit/cad2638c2d96335ed4e0279eb66e7f48c097d512))
+
 ### [0.8.39](https://github.com/jimeh/.emacs.d/compare/v0.8.38...v0.8.39) (2023-03-07)
 
 
