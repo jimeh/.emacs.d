@@ -21,10 +21,7 @@
   :preface
   (defun siren-makefile-mode-setup ()
     (siren-display-indentation -1)
-    (setq-local tab-width 4))
-
-  :init
-  (add-to-list 'siren-indent-sensitive-modes 'makefile-mode))
+    (setq-local tab-width 4)))
 
 (provide 'siren-makefile)
 ;;; siren-makefile.el ends here

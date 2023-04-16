@@ -52,6 +52,7 @@
 (require 'siren-vundo)
 (require 'siren-which-key)
 (require 'siren-whitespace)
+(require 'siren-yank-indent)
 
 ;; Completion Systems and Interfaces
 (require 'siren-vertico)

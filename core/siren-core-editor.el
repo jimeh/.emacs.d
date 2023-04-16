@@ -95,32 +95,6 @@
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
-;; automatically indenting yanked text if in programming-modes
-(defun yank-advised-indent-function (beg end)
-  "Do indentation, as long as the region isn't too large."
-  (if (<= (- end beg) siren-yank-indent-threshold)
-      (indent-region beg end nil)))
-
-(defmacro advise-commands (advice-name commands class &rest body)
-  "Apply advice named ADVICE-NAME to multiple COMMANDS.
-
-The body of the advice is in BODY."
-  `(progn
-     ,@(mapcar (lambda (command)
-                 `(defadvice ,command (,class ,(intern (concat (symbol-name command) "-" advice-name)) activate)
-                    ,@body))
-               commands)))
-
-(advise-commands "indent" (yank yank-pop) after
-  "If current mode is one of `siren-yank-indent-modes',
-indent yanked text (with prefix arg don't indent)."
-  (if (and (not (ad-get-arg 0))
-           (not (member major-mode siren-indent-sensitive-modes))
-           (or (derived-mode-p 'prog-mode)
-               (member major-mode siren-yank-indent-modes)))
-      (let ((transient-mark-mode nil))
-        (yank-advised-indent-function (region-beginning) (region-end)))))
-
 ;; make a shell script executable automatically on save
 (add-hook 'after-save-hook
           'executable-make-buffer-file-executable-if-script-p)
