@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.41](https://github.com/jimeh/.emacs.d/compare/v0.8.40...v0.8.41) (2023-04-16)
+
+
+### Features
+
+* **ai/chatgpt:** improvements with a focus on gptel and chatgpt-shell packages ([4f32191](https://github.com/jimeh/.emacs.d/commit/4f32191983b2ba87c695728e5995bc1e4fd8004f))
+
 ### [0.8.40](https://github.com/jimeh/.emacs.d/compare/v0.8.39...v0.8.40) (2023-04-16)
 
 
