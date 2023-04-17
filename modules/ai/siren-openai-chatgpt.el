@@ -10,14 +10,15 @@
 
 (use-package openai
   :straight (:host github :repo "emacs-openai/openai")
+  :defer t
 
   :config
-  (setq openai-key (siren-openai-api-key)))
+  (siren-chatgpt-register-api-key-var 'openai-key))
 
 (use-package chatgpt
   :straight (:host github :repo "emacs-openai/chatgpt")
+  :defer t
   :after openai
-
   :custom
   (chatgpt-max-tokens 2000)
   (chatgpt-temperature 1.0)
@@ -27,6 +28,7 @@
 
 (use-package codegpt
   :straight (:host github :repo "emacs-openai/codegpt")
+  :defer t
   :after openai)
 
 (provide 'siren-openai-chatgpt)

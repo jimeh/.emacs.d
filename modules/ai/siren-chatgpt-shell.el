@@ -10,17 +10,16 @@
 
 (use-package chatgpt-shell
   :straight (:host github :repo "xenodium/chatgpt-shell")
+  :defer t
 
   :custom
   (chatgpt-shell-chatgpt-streaming t)
-  (chatgpt-shell-model-temperature 0.13)
+  (chatgpt-shell-model-temperature 1.0)
 
   :config
-  ;; Dynamically load the API key after package has loaded.
-  (setq chatgpt-shell-openai-key (siren-openai-api-key))
-  (setq dall-e-shell-openai-key (siren-openai-api-key))
-
-  ;; Set model via `siren-chatgpt-model'.
+  ;; Set and manage API Key and Model via `siren-chatgpt' helpers.
+  (siren-chatgpt-register-api-key-var 'chatgpt-shell-openai-key)
+  (siren-chatgpt-register-api-key-var 'dall-e-shell-openai-key)
   (siren-chatgpt-register-model-var 'chatgpt-shell-model-version)
 
   (require 'ob-chatgpt-shell)

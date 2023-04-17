@@ -22,18 +22,16 @@
 
   :custom
   (gptel-stream t) ;; Requires curl.
-  (gptel-temperature 1)
+  (gptel-temperature 1.0)
   (gptel-use-curl (and (executable-find "curl") t))
 
   :config
-  ;; Dynamically load the API key after package has loaded.
-  (setq gptel-api-key (siren-openai-api-key))
+  ;; Set and manage API Key and Model via `siren-chatgpt' helpers.
+  (siren-chatgpt-register-api-key-var 'gptel-api-key)
+  (siren-chatgpt-register-model-var 'gptel-model)
 
   ;; Set default mode to org-mode, must be done after package load.
-  (setq gptel-default-mode 'org-mode)
-
-  ;; Set model via `siren-chatgpt-model'.
-  (siren-chatgpt-register-model-var 'gptel-model))
+  (setq gptel-default-mode 'org-mode))
 
 (provide 'siren-gptel)
 ;;; siren-gptel.el ends here

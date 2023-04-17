@@ -68,7 +68,6 @@
 (require 'siren-chatgpt)
 (require 'siren-chatgpt-shell)
 (require 'siren-gptel)
-(require 'siren-openai-chatgpt)
 
 ;; Misc.
 (require 'siren-explain-pause)
