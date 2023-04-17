@@ -1,0 +1,9 @@
+# name: <details><summary>...</summary>...</details>
+# key: details
+# --
+<details>
+  <summary>$1</summary>
+
+$0
+
+</details>
