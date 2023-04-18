@@ -7,8 +7,7 @@
 ;;; Code:
 
 (use-package yank-indent
-  :straight (:type built-in) ;; from vendor directory
-  :demand
+  :straight (:host github :repo "jimeh/yank-indent")
 
   :config
   (global-yank-indent-mode t))
