@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.42](https://github.com/jimeh/.emacs.d/compare/v0.8.41...v0.8.42) (2023-04-18)
+
+
+### Features
+
+* **ai/chatgpt:** all per-model API key configuration in shared setup ([d0d604b](https://github.com/jimeh/.emacs.d/commit/d0d604bbc7f65fc34f7c6d0ba3f2480504034a2a))
+* **language/markdown:** add details snippet ([66efcdb](https://github.com/jimeh/.emacs.d/commit/66efcdb8a082a4f8cb89f22720303805e0e74ae1))
+
 ### [0.8.41](https://github.com/jimeh/.emacs.d/compare/v0.8.40...v0.8.41) (2023-04-16)
 
 
