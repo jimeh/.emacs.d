@@ -7,6 +7,7 @@
 ;;; Code:
 
 (require 'siren-lsp)
+(require 'siren-treesit)
 
 (if (fboundp 'dockerfile-ts-mode)
     ;; Use built-in treesit support if available.
@@ -22,12 +23,15 @@
       (require 'siren-treesit)
       (siren-treesit-prepare
        'dockerfile-ts-mode
-       '(dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile")))
+       '(dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile"))
+
+      :config
+      (siren-flycheck-setup-hadolint))
 
   ;; Otherwise, fallback to regular dockerfile-mode.
   (use-package dockerfile-mode
-    :hook
-    (dockerfile-mode . siren-dockerfile-mode-setup)))
+    :hook (dockerfile-mode . siren-dockerfile-mode-setup)
+    :config (siren-flycheck-setup-hadolint)))
 
 (defun siren-dockerfile-mode-setup ()
   "Shared setup for both `dockerfile-mode' and `dockerfile-ts-mode'."
@@ -45,31 +49,34 @@
 ;; Define fixed Hadolint checker, built-in checker expects lines to start
 ;; with "<filename>:", but when input is provided via STDIN, the each line
 ;; starts with "-:".
-(with-eval-after-load 'flycheck
-  (flycheck-define-checker hadolint
-    "A Dockerfile syntax checker using the hadolint.
+(defun siren-flycheck-setup-hadolint()
+  "Setup hadolint flycheck checker."
+  (with-eval-after-load 'flycheck
+    (flycheck-define-checker hadolint
+      "A Dockerfile syntax checker using the hadolint.
 
 See URL `http://github.com/hadolint/hadolint/'."
-    :command ("hadolint" "--no-color" "-")
-    :standard-input t
-    :error-patterns
-    ((error line-start
-            "-:" line " " (id (one-or-more alnum)) " error: " (message)
-            line-end)
-     (warning line-start
-              "-:" line " " (id (one-or-more alnum))
-              " warning: " (message) line-end)
-     (info line-start
-           "-:" line " " (id (one-or-more alnum)) " info: " (message)
-           line-end)
-     (error line-start
-            "-:" line ":" column " " (message)
-            line-end))
-    :error-filter
-    (lambda (errors)
-      (flycheck-sanitize-errors
-       (flycheck-remove-error-file-names "/dev/stdin" errors)))
-    :modes (dockerfile-mode dockerfile-ts-mode)))
+      :command ("hadolint" "--no-color" "-")
+      :standard-input t
+      :error-patterns
+      ((error line-start
+              "-:" line " " (id (one-or-more alnum)) " error: " (message)
+              line-end)
+       (warning line-start
+                "-:" line " " (id (one-or-more alnum))
+                " warning: " (message) line-end)
+       (info line-start
+             "-:" line " " (id (one-or-more alnum)) " info: " (message)
+             line-end)
+       (error line-start
+              "-:" line ":" column " " (message)
+              line-end))
+      :error-filter
+      (lambda (errors)
+        (flycheck-sanitize-errors
+         (flycheck-remove-error-file-names "/dev/stdin" errors)))
+      :modes (dockerfile-mode dockerfile-ts-mode))
+    (add-to-list 'flycheck-checkers 'hadolint)))
 
 (provide 'siren-dockerfile)
 ;;; siren-dockerfile.el ends here
