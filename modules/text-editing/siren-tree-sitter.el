@@ -12,6 +12,7 @@
     go-mode
     js-mode
     json-mode
+    lua-mode
     php-mode
     ruby-mode
     rust-mode
