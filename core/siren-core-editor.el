@@ -70,11 +70,6 @@
   ;; File notifications seem unreliable on macOS.
   (setq auto-revert-use-notify nil))
 
-;; diminish keeps the modeline tidy
-(use-package diminish)
-
-(diminish 'visual-line-mode)
-
 ;; Enable mouse support when running in a console
 (unless window-system
   (require 'mouse)
