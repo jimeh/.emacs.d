@@ -13,6 +13,7 @@
     js-mode
     json-mode
     lua-mode
+    markdown-mode
     php-mode
     ruby-mode
     rust-mode
