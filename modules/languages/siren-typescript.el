@@ -27,9 +27,7 @@
 
 (use-package tsx-ts-mode
   :straight (:type built-in)
-  :mode "\\.tsx\\'"
-  :hook
-  (typescript-mode . siren-typescript-mode-setup))
+  :mode "\\.tsx\\'")
 
 (defun siren-typescript-mode-setup ()
   "Default setup function for `typescript-mode' and `typescript-ts-mode'."
