@@ -16,6 +16,7 @@
     markdown-mode
     nix-mode
     php-mode
+    php-mode
     ruby-mode
     rust-mode
     terraform-mode
