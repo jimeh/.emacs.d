@@ -18,7 +18,7 @@
 
   :preface
   (defun siren-haskell-mode-setup ()
-    (hs-minor-mode)))
+    (hs-minor-mode t)))
 
 (provide 'siren-haskell)
 ;;; siren-haskell.el ends here
