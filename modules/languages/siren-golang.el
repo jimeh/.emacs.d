@@ -100,7 +100,17 @@
   (lsp-go-analyses '((nilness . t)
                      (shadow . t)
                      (unusedparams . t)
-                     (unusedwrite . t)))
+                     (unusedvariable . t)
+                     (unusedwrite . t)
+                     (useany . t)))
+  (lsp-go-codelenses '((gc_details . :json-false)
+                       (generate . t)
+                       (regenerate_cgo . t)
+                       (run_govulncheck . t)
+                       (tidy . t)
+                       (upgrade_dependency . t)
+                       (test . t)
+                       (vendor . t)))
 
   :config
   ;; Create custom lsp-client for golangci-lint-langserver.
