@@ -272,13 +272,15 @@ For example, if the current buffer is `foo.go', the buffer for
             "C-c k" 'go-playground-rm)
 
   :custom
+  (go-playground-init-command "touch .projectile && go mod init playground")
   (go-playground-basedir
-   (expand-file-name "src/playground" (or (getenv "GOPATH") "~/go")))
+   (expand-file-name "src/playground" (or (getenv "GOPATH")
+                                          "~/Projects/Go")))
 
-   :preface
-   (defun siren-go-playground-setup ()
-     (if (fboundp 'solaire-mode)
-         (solaire-mode -1))))
+  :preface
+  (defun siren-go-playground-setup ()
+    (if (fboundp 'solaire-mode)
+        (solaire-mode -1))))
 
 (provide 'siren-golang)
 ;;; siren-golang.el ends here
