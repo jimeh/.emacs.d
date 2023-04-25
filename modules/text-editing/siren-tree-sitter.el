@@ -17,6 +17,7 @@
     nix-mode
     php-mode
     php-mode
+    python-mode
     ruby-mode
     rust-mode
     terraform-mode
