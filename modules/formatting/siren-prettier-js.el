@@ -14,7 +14,6 @@
     markdown-mode
     nxml-mode
     php-mode
-    rjsx-mode
     typescript-mode
     toml-mode
     toml-ts-mode
