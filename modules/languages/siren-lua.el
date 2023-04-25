@@ -26,7 +26,13 @@
 
   :preface
   (defun siren-lsp-lua-mode-setup ()
-    (setq-local tab-width 4)
+    (setq-local tab-width 2)
+
+    ;; Disable semantic tokens as it typically causes an annoying delay with the
+    ;; syntax highlighting as you type. Essentially all new text is a very faded
+    ;; out grey color for the first 1-2 seconds as you type.
+    (setq-local lsp-semantic-tokens-enable nil)
+    (lsp-format-buffer-on-save-mode t)
     (lsp-deferred)))
 
 (provide 'siren-lua)
