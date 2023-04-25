@@ -24,7 +24,7 @@
   (treemacs-show-hidden-files t)
   (treemacs-silent-refresh nil)
   (treemacs-sorting 'alphabetic-asc)
-  (treemacs-width 40)
+  (treemacs-width 46)
 
   (treemacs-persist-file (siren-cache-dir "treemacs-persist"))
   (treemacs-last-error-persist-file
@@ -51,7 +51,6 @@
   (treemacs-follow-mode t)
   (treemacs-filewatch-mode t)
   (treemacs-git-mode 'deferred)
-  (treemacs-project-follow-mode t)
 
   (treemacs-define-doubleclick-action
    'file-node-open   #'treemacs-visit-node-in-most-recently-used-window)
