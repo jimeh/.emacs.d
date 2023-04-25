@@ -16,6 +16,7 @@
 ;; UI
 (require 'siren-pixel-scroll)
 (require 'siren-solaire-mode)
+(require 'siren-transparency)
 
 ;; Core
 (require 'siren-aliases)
