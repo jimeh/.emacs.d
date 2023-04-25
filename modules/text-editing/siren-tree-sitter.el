@@ -14,6 +14,7 @@
     json-mode
     lua-mode
     markdown-mode
+    nix-mode
     php-mode
     ruby-mode
     rust-mode
