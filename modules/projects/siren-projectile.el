@@ -46,6 +46,7 @@
                                              "doc"
                                              "docs"
                                              "elpa"
+                                             "elpaca"
                                              "log"
                                              "logs"
                                              "node_modules"
