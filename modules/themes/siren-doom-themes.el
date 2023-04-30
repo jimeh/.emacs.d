@@ -8,6 +8,7 @@
 
 (require 'siren-all-the-icons)
 (require 'siren-doom-modeline)
+(require 'siren-nerd-icons)
 
 (use-package doom-themes
   :custom

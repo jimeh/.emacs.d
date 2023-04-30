@@ -61,9 +61,6 @@
   (treemacs-define-RET-action
    'file-node-closed #'treemacs-visit-node-in-most-recently-used-window))
 
-(use-package treemacs-all-the-icons
-  :after (treemacs))
-
 (use-package treemacs-projectile
   :after (treemacs projectile)
   :custom
