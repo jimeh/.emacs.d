@@ -13,7 +13,6 @@
     js-mode
     json-mode
     lua-mode
-    markdown-mode
     nix-mode
     php-mode
     php-mode
