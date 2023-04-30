@@ -45,6 +45,7 @@
 (require 'siren-rainbow)
 (require 'siren-recentf)
 (require 'siren-savehist)
+(require 'siren-snap-indent)
 (require 'siren-subword)
 (require 'siren-symbol-overlay)
 (require 'siren-undo-fu)
@@ -53,7 +54,6 @@
 (require 'siren-vundo)
 (require 'siren-which-key)
 (require 'siren-whitespace)
-(require 'siren-yank-indent)
 
 ;; Completion Systems and Interfaces
 (require 'siren-vertico)

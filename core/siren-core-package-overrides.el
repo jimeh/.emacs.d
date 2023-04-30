@@ -12,6 +12,9 @@
                 ;; features.
                 (all-the-icons-completion :type git :flavor melpa :host github :repo "iyefrat/all-the-icons-completion"
                                           :fork (:host github :repo "MintSoup/all-the-icons-completion"))
+                ;; Override snap-indent to use fork with more features.
+                (snap-indent :type git :flavor melpa :host github :repo "jeffvalk/snap-indent"
+                             :fork (:host github :repo "jimeh/snap-indent" :branch "various-features"))
                 ;; Override vertico recipe to fix issues with extensions.
                 (vertico :type git :host github :repo "minad/vertico"
                          :files (:defaults "extensions/*" (:exclude ".git")))))))
