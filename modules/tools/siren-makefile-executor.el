@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(require 'helm-make)
+(require 'siren-helm-make)
 
 (use-package makefile-executor
   :hook
@@ -18,6 +18,7 @@
   :config
   ;; Replace get targets function with that from helm-make as it faster and more
   ;; efficient by not needing to write any temporary files to disk.
+  (require 'helm-make)
   (defalias 'makefile-executor-get-targets 'helm--make-target-list-qp))
 
 (provide 'siren-makefile-executor)
