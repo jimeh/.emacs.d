@@ -17,6 +17,7 @@
   :general
   ("C-<tab>" 'siren-copilot-dwim-with-mods)
   ("<backtab>" 'siren-copilot-dwim-with-mods)
+  ("M-]" 'siren-copilot-dwim-with-mods)
   ("M-F" 'siren-copilot-dwim-by-word)
   ("M-E" 'siren-copilot-dwim-by-line)
   (:keymaps 'copilot-completion-map
