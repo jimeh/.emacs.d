@@ -13,7 +13,10 @@
 
 (use-package all-the-icons
   :after memoize
-  :if window-system)
+  :if window-system
+  :custom
+  (all-the-icons-scale-factor 1.0)
+  (all-the-icons-default-adjust -0.2))
 
 (use-package all-the-icons-ibuffer
   :after all-the-icons
@@ -25,7 +28,10 @@
   :after all-the-icons
   :if window-system
   :hook
-  (dired-mode . all-the-icons-dired-mode))
+  (dired-mode . all-the-icons-dired-mode)
+  :custom
+  (all-the-icons-dired-monochrome nil)
+  (all-the-icons-dired-v-adjust -0.05))
 
 (use-package treemacs-all-the-icons
   :after (all-the-icons treemacs)

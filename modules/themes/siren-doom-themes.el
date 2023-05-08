@@ -7,8 +7,9 @@
 ;;; Code:
 
 (require 'siren-all-the-icons)
-(require 'siren-doom-modeline)
 (require 'siren-nerd-icons)
+
+(require 'siren-doom-modeline)
 
 (use-package doom-themes
   :custom
