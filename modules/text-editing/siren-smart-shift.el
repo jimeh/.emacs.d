@@ -10,8 +10,6 @@
   :general
   ("C-c [" 'smart-shift-left)
   ("C-c ]" 'smart-shift-right)
-  ("M-{" 'smart-shift-left)
-  ("M-}" 'smart-shift-right)
 
   :config
   ;; Override default keymap adding support additional keybindings once
@@ -22,10 +20,6 @@
           (let ((map (copy-keymap smart-shift-mode-map)))
             (define-key map (kbd "[") 'smart-shift-left)
             (define-key map (kbd "]") 'smart-shift-right)
-            (define-key map (kbd "C-b") 'smart-shift-left)
-            (define-key map (kbd "C-f") 'smart-shift-right)
-            (define-key map (kbd "C-p") 'smart-shift-up)
-            (define-key map (kbd "C-b") 'smart-shift-down)
             (define-key map (kbd "<left>") 'smart-shift-left)
             (define-key map (kbd "<right>") 'smart-shift-right)
             (define-key map (kbd "<up>") 'smart-shift-up)
