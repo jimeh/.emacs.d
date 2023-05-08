@@ -12,10 +12,11 @@
     :straight (:type built-in)
 
     :general
-    ("M-i" 'siren-windmove-up)
-    ("M-k" 'siren-windmove-down)
-    ("M-j" 'siren-windmove-left)
-    ("M-l" 'siren-windmove-right))
+    (:keymaps '(global ibuffer-mode-map)
+              "M-i" 'windmove-up
+              "M-k" 'windmove-down
+              "M-j" 'windmove-left
+              "M-l" 'windmove-right))
 
   (use-package buffer-move
     :general
@@ -30,10 +31,11 @@
     :straight (:type built-in)
 
     :general
-    ("M-i" 'windmove-up)
-    ("M-k" 'windmove-down)
-    ("M-j" 'windmove-left)
-    ("M-l" 'windmove-right)
+    (:keymaps '(global ibuffer-mode-map)
+              "M-i" 'windmove-up
+              "M-k" 'windmove-down
+              "M-j" 'windmove-left
+              "M-l" 'windmove-right)
     ("M-K" 'windmove-swap-states-down)
     ("M-I" 'windmove-swap-states-up)
     ("M-J" 'windmove-swap-states-left)
