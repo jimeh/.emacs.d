@@ -136,6 +136,7 @@
 (require 'siren-string-inflection)
 (require 'siren-toggle-comments)
 (require 'siren-tree-sitter)
+(require 'siren-treesit)
 (require 'siren-yasnippet)
 
 ;; Version control

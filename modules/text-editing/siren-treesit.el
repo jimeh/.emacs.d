@@ -16,5 +16,13 @@
                                 (when (not (treesit-ready-p ',lang))
                                   (treesit-install-language-grammar ',lang))))))
 
+(use-package treesit-auto
+  :demand t
+  :if (fboundp 'treesit-ready-p)
+  :custom
+  (treesit-auto-install nil)
+  :config
+  (global-treesit-auto-mode))
+
 (provide 'siren-treesit)
 ;;; siren-treesit.el ends here

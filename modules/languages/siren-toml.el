@@ -22,10 +22,7 @@
       (toml-ts-mode . siren-toml-mode-setup)
 
       :init
-      (require 'siren-treesit)
-      (siren-treesit-prepare
-       'toml-ts-mode
-       '(toml "https://github.com/tree-sitter/tree-sitter-toml"))))
+      (require 'siren-treesit)))
 
 (defun siren-toml-mode-setup ()
   (run-hooks 'prog-mode-hook)

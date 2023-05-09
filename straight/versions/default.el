@@ -228,6 +228,7 @@
  ("treemacs" . "127485317a19254ca20ba1910d10edf7dbaa2d97")
  ("treemacs-nerd-icons" . "c6f4a74ea4f414528fc43a6fe95f7f17687faeb4")
  ("treepy.el" . "7c4a0d21322506a4d4b2301b4274ec955b429b47")
+ ("treesit-auto" . "bac3b9d1d61a4d759f87c80de7be3b808d19cbf6")
  ("use-package" . "77945e002f11440eae72d8730d3de218163d551e")
  ("uuidgen-el" . "7b728c1d92e196c3acf87a004949335cfc18eab3")
  ("vertico" . "7e2375b6f09579b5845dbf35ad168a8c6fc70e66")

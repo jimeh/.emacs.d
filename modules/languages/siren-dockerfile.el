@@ -7,7 +7,6 @@
 ;;; Code:
 
 (require 'siren-lsp)
-(require 'siren-treesit)
 
 (if (fboundp 'dockerfile-ts-mode)
     ;; Use built-in treesit support if available.
@@ -21,17 +20,24 @@
 
       :init
       (require 'siren-treesit)
-      (siren-treesit-prepare
-       'dockerfile-ts-mode
-       '(dockerfile "https://github.com/camdencheek/tree-sitter-dockerfile"))
 
       :config
-      (siren-flycheck-setup-hadolint))
+      (siren-flycheck-setup-hadolint)
+
+      ;; Remove auto-mode-alist entry added by dockerfile-ts-mode, as it's too
+      ;; greedy and matches on files such as "siren-dockerfile.el" which is a
+      ;; problem when trying to edit this file for example.
+      (setq auto-mode-alist
+            (delete '("\\(?:Dockerfile\\(?:\\..*\\)?\\|\\.[Dd]ockerfile\\)\\'"
+                      . dockerfile-ts-mode)
+                    auto-mode-alist)))
 
   ;; Otherwise, fallback to regular dockerfile-mode.
   (use-package dockerfile-mode
-    :hook (dockerfile-mode . siren-dockerfile-mode-setup)
-    :config (siren-flycheck-setup-hadolint)))
+    :hook
+    (dockerfile-mode . siren-dockerfile-mode-setup)
+    :config
+    (siren-flycheck-setup-hadolint)))
 
 (defun siren-dockerfile-mode-setup ()
   "Shared setup for both `dockerfile-mode' and `dockerfile-ts-mode'."
