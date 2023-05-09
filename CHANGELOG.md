@@ -1,7 +1,5 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
 ## [0.8.43](https://github.com/jimeh/.emacs.d/compare/v0.8.42...v0.8.43) (2023-05-09)
 
 
@@ -34,7 +32,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **tools:** resolve require issues makefile-executor setup ([e8cca90](https://github.com/jimeh/.emacs.d/commit/e8cca905c31c665e93345646ce3c732cb9da4fef))
 * **windows:** allow window switching keybindings to work in dired ([4526952](https://github.com/jimeh/.emacs.d/commit/4526952932b32c0440a2bc98f833065cb6dbf647))
 
-### [0.8.42](https://github.com/jimeh/.emacs.d/compare/v0.8.41...v0.8.42) (2023-04-18)
+## [0.8.42](https://github.com/jimeh/.emacs.d/compare/v0.8.41...v0.8.42) (2023-04-18)
 
 
 ### Features
@@ -42,14 +40,14 @@ All notable changes to this project will be documented in this file. See [standa
 * **ai/chatgpt:** all per-model API key configuration in shared setup ([d0d604b](https://github.com/jimeh/.emacs.d/commit/d0d604bbc7f65fc34f7c6d0ba3f2480504034a2a))
 * **language/markdown:** add details snippet ([66efcdb](https://github.com/jimeh/.emacs.d/commit/66efcdb8a082a4f8cb89f22720303805e0e74ae1))
 
-### [0.8.41](https://github.com/jimeh/.emacs.d/compare/v0.8.40...v0.8.41) (2023-04-16)
+## [0.8.41](https://github.com/jimeh/.emacs.d/compare/v0.8.40...v0.8.41) (2023-04-16)
 
 
 ### Features
 
 * **ai/chatgpt:** improvements with a focus on gptel and chatgpt-shell packages ([4f32191](https://github.com/jimeh/.emacs.d/commit/4f32191983b2ba87c695728e5995bc1e4fd8004f))
 
-### [0.8.40](https://github.com/jimeh/.emacs.d/compare/v0.8.39...v0.8.40) (2023-04-16)
+## [0.8.40](https://github.com/jimeh/.emacs.d/compare/v0.8.39...v0.8.40) (2023-04-16)
 
 
 ### Features
@@ -73,7 +71,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **language/rust:** correctly disable lsp-semnatic-tokens-mode ([32dae1d](https://github.com/jimeh/.emacs.d/commit/32dae1d558e9162239ebc3df1565ef46e453e01d))
 * **language/typescript:** add setup hook to correct major mode ([cad2638](https://github.com/jimeh/.emacs.d/commit/cad2638c2d96335ed4e0279eb66e7f48c097d512))
 
-### [0.8.39](https://github.com/jimeh/.emacs.d/compare/v0.8.38...v0.8.39) (2023-03-07)
+## [0.8.39](https://github.com/jimeh/.emacs.d/compare/v0.8.38...v0.8.39) (2023-03-07)
 
 
 ### Features
@@ -87,7 +85,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **language/go:** enable tree-sitter syntax highlighting ([b8b7c7b](https://github.com/jimeh/.emacs.d/commit/b8b7c7be84aafbc73966b72955662ab74063eac2))
 * **language/rust:** fix typo in function name ([d27c0bc](https://github.com/jimeh/.emacs.d/commit/d27c0bc67ed3d5be0ee600fc5e8c22a942dae6f1))
 
-### [0.8.38](https://github.com/jimeh/.emacs.d/compare/v0.8.37...v0.8.38) (2023-02-26)
+## [0.8.38](https://github.com/jimeh/.emacs.d/compare/v0.8.37...v0.8.38) (2023-02-26)
 
 
 ### Features
@@ -105,7 +103,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **lsp:** move misplaced :custom-face definition ([7021114](https://github.com/jimeh/.emacs.d/commit/7021114d558669d485d582ee16cada45ec35aeb7))
 
-### [0.8.37](https://github.com/jimeh/.emacs.d/compare/v0.8.36...v0.8.37) (2023-02-17)
+## [0.8.37](https://github.com/jimeh/.emacs.d/compare/v0.8.36...v0.8.37) (2023-02-17)
 
 
 ### Features
@@ -131,7 +129,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **language/rust:** set rust-playground basedir so lsp-mode works correctly ([346b22a](https://github.com/jimeh/.emacs.d/commit/346b22a06be95301efb775f7eebdb16a2c9a061f))
 * **language/sh:** only activate tree-sitter in sh and bash scripts ([e138cb3](https://github.com/jimeh/.emacs.d/commit/e138cb3a84ac84b2bc95c8a3bdd50af01b26ec78))
 
-### [0.8.36](https://github.com/jimeh/.emacs.d/compare/v0.8.35...v0.8.36) (2023-01-15)
+## [0.8.36](https://github.com/jimeh/.emacs.d/compare/v0.8.35...v0.8.36) (2023-01-15)
 
 
 ### Features
@@ -151,14 +149,14 @@ All notable changes to this project will be documented in this file. See [standa
 * remove references to deprecated and removed siren functions ([03efc3b](https://github.com/jimeh/.emacs.d/commit/03efc3b84786df90768faf33a6555129c3414170))
 * **spelling/flyspell:** incorrect call to flyspell-prog-mode ([bc5add2](https://github.com/jimeh/.emacs.d/commit/bc5add2f031ebc28899a009da83abb07414d9d0c))
 
-### [0.8.35](https://github.com/jimeh/.emacs.d/compare/v0.8.34...v0.8.35) (2022-11-24)
+## [0.8.35](https://github.com/jimeh/.emacs.d/compare/v0.8.34...v0.8.35) (2022-11-24)
 
 
 ### Features
 
 * **language/yaml:** enable tree-sitter syntax highlighting ([ebbdab3](https://github.com/jimeh/.emacs.d/commit/ebbdab36fb2a3d635d591cc3179b8f4ed9a476d0))
 
-### [0.8.34](https://github.com/jimeh/.emacs.d/compare/v0.8.33...v0.8.34) (2022-10-29)
+## [0.8.34](https://github.com/jimeh/.emacs.d/compare/v0.8.33...v0.8.34) (2022-10-29)
 
 
 ### Features
@@ -170,7 +168,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **dired+:** dired operations with multiple selected files work again ([5d442da](https://github.com/jimeh/.emacs.d/commit/5d442da04efcb544bfc9d02606e867bc9bb1ff0a))
 
-### [0.8.33](https://github.com/jimeh/.emacs.d/compare/v0.8.32...v0.8.33) (2022-10-19)
+## [0.8.33](https://github.com/jimeh/.emacs.d/compare/v0.8.32...v0.8.33) (2022-10-19)
 
 
 ### Features
@@ -185,7 +183,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **editor:** move siren-all-the-icons module from projects to editor directory ([d498f20](https://github.com/jimeh/.emacs.d/commit/d498f20336f71818c3c363b1416844a9cb6f368a))
 * **navigation/helm-ag:** correctly set ignore patterns for ripgrep ([6e9262d](https://github.com/jimeh/.emacs.d/commit/6e9262da2cac31e22bedaf4b3f4c8bf5420c7a60))
 
-### [0.8.32](https://github.com/jimeh/.emacs.d/compare/v0.8.31...v0.8.32) (2022-10-04)
+## [0.8.32](https://github.com/jimeh/.emacs.d/compare/v0.8.31...v0.8.32) (2022-10-04)
 
 
 ### Features
@@ -198,9 +196,9 @@ All notable changes to this project will be documented in this file. See [standa
 * **language/go:** add tree-sitter query for highlighting struct properties ([6d4665f](https://github.com/jimeh/.emacs.d/commit/6d4665f3dd5c40a612b2a3cada148642fadf488f))
 * **language/go:** attach go-playground setup function correct hook ([6bf20de](https://github.com/jimeh/.emacs.d/commit/6bf20de60e57712b6c61c6441faa0c5f8b510c3c))
 
-### [0.8.31](https://github.com/jimeh/.emacs.d/compare/v0.8.30...v0.8.31) (2022-09-28)
+## [0.8.31](https://github.com/jimeh/.emacs.d/compare/v0.8.30...v0.8.31) (2022-09-28)
 
-### [0.8.30](https://github.com/jimeh/.emacs.d/compare/v0.8.29...v0.8.30) (2022-09-28)
+## [0.8.30](https://github.com/jimeh/.emacs.d/compare/v0.8.29...v0.8.30) (2022-09-28)
 
 
 ### Features
@@ -215,7 +213,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **completion/copilot:** custom accept fun ignoring trailing "{" chars ([fd1c57a](https://github.com/jimeh/.emacs.d/commit/fd1c57a96c1b71ccd1a430234030a700d468b80e))
 
-### [0.8.29](https://github.com/jimeh/.emacs.d/compare/v0.8.28...v0.8.29) (2022-08-20)
+## [0.8.29](https://github.com/jimeh/.emacs.d/compare/v0.8.28...v0.8.29) (2022-08-20)
 
 
 ### Features
@@ -224,7 +222,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **editor:** replace highlight-symbol with symbol-overlay ([c7d1f1d](https://github.com/jimeh/.emacs.d/commit/c7d1f1d7491af7f66aaca4a0b683b6c9e8effb1b))
 * **language/go:** configure modes for go.mod and go.work files ([43d9d30](https://github.com/jimeh/.emacs.d/commit/43d9d309da844ab35bc4232b80ace0c4faa1923b))
 
-### [0.8.28](https://github.com/jimeh/.emacs.d/compare/v0.8.27...v0.8.28) (2022-08-13)
+## [0.8.28](https://github.com/jimeh/.emacs.d/compare/v0.8.27...v0.8.28) (2022-08-13)
 
 
 ### Features
@@ -232,7 +230,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **languages/x509:** add x509-mode ([f1c0030](https://github.com/jimeh/.emacs.d/commit/f1c0030aff99e1e750cd1a45cc253c4ae4901f47))
 * **navigation:** setup better-jumper to jump back after goto def style operations ([de72250](https://github.com/jimeh/.emacs.d/commit/de722509f5dd4008d5ed7b2c47aea64c9c4fb8c7))
 
-### [0.8.27](https://github.com/jimeh/.emacs.d/compare/v0.8.26...v0.8.27) (2022-08-11)
+## [0.8.27](https://github.com/jimeh/.emacs.d/compare/v0.8.26...v0.8.27) (2022-08-11)
 
 
 ### Features
@@ -244,14 +242,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **editor:** resolve flx-rs+consult issues ([19713d3](https://github.com/jimeh/.emacs.d/commit/19713d30e3f31e5785660678aae79b2725d4974d))
 
-### [0.8.26](https://github.com/jimeh/.emacs.d/compare/v0.8.25...v0.8.26) (2022-08-10)
+## [0.8.26](https://github.com/jimeh/.emacs.d/compare/v0.8.25...v0.8.26) (2022-08-10)
 
 
 ### Bug Fixes
 
 * **themes/doom:** correctly load theme when running in terminal ([e1fe7ef](https://github.com/jimeh/.emacs.d/commit/e1fe7ef4e974251d37eeda58a47f1630b8a5686e))
 
-### [0.8.25](https://github.com/jimeh/.emacs.d/compare/v0.8.24...v0.8.25) (2022-07-30)
+## [0.8.25](https://github.com/jimeh/.emacs.d/compare/v0.8.24...v0.8.25) (2022-07-30)
 
 
 ### Features
@@ -267,14 +265,14 @@ All notable changes to this project will be documented in this file. See [standa
 * **completion:** ensure correct order of completion-at-point-functions ([7f32de8](https://github.com/jimeh/.emacs.d/commit/7f32de8c49bc86da6cd9126e503cd276cd8fd036))
 * **themes/doom:** set foreground of tab-bar and tab-line to fg-alt ([0932f6c](https://github.com/jimeh/.emacs.d/commit/0932f6c5fa98943021fce28036f1ad6ed27bd72f))
 
-### [0.8.24](https://github.com/jimeh/.emacs.d/compare/v0.8.23...v0.8.24) (2022-07-27)
+## [0.8.24](https://github.com/jimeh/.emacs.d/compare/v0.8.23...v0.8.24) (2022-07-27)
 
 
 ### Bug Fixes
 
 * add missing siren-clang-format module ([3319a5c](https://github.com/jimeh/.emacs.d/commit/3319a5ce3657933dfa55faa7a48695fd356f91a7))
 
-### [0.8.23](https://github.com/jimeh/.emacs.d/compare/v0.8.22...v0.8.23) (2022-07-20)
+## [0.8.23](https://github.com/jimeh/.emacs.d/compare/v0.8.22...v0.8.23) (2022-07-20)
 
 
 ### Features
@@ -297,7 +295,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **editor:** correctly filter buffer results from consult-buffer ([92a6db7](https://github.com/jimeh/.emacs.d/commit/92a6db71e61429ade2ed5f0e0b38d3781132899d))
 * **language/protobuf:** enforce buf flycheck linter in buf projects ([a3c3840](https://github.com/jimeh/.emacs.d/commit/a3c384027dc560493857cdb5831d22e478bc90a9))
 
-### [0.8.22](https://github.com/jimeh/.emacs.d/compare/v0.8.21...v0.8.22) (2022-07-15)
+## [0.8.22](https://github.com/jimeh/.emacs.d/compare/v0.8.21...v0.8.22) (2022-07-15)
 
 
 ### Features
@@ -320,7 +318,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **navigation/dired:** fix unbinding of M-b ([2a60c0d](https://github.com/jimeh/.emacs.d/commit/2a60c0d42f36e8b9385c8227fd363ad733733af5))
 * **themes/doom-overrides:** don't tweak vertical-bar in light themes ([9c13005](https://github.com/jimeh/.emacs.d/commit/9c130059370865f560dcf5329219f2ab02737cd2))
 
-### [0.8.21](https://github.com/jimeh/.emacs.d/compare/v0.8.20...v0.8.21) (2022-06-22)
+## [0.8.21](https://github.com/jimeh/.emacs.d/compare/v0.8.20...v0.8.21) (2022-06-22)
 
 
 ### Features
@@ -337,7 +335,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **completion/copilot:** disable whitespace-mode to fix cursor placement issue ([25b6493](https://github.com/jimeh/.emacs.d/commit/25b64935307b4f74abce26999de823443af450a2))
 * **editor/undo:** increase undo limits when using undo-fu ([5b054bd](https://github.com/jimeh/.emacs.d/commit/5b054bdd07c2b78d89e0159cdda52e0b9b1b1c61))
 
-### [0.8.20](https://github.com/jimeh/.emacs.d/compare/v0.8.19...v0.8.20) (2022-06-09)
+## [0.8.20](https://github.com/jimeh/.emacs.d/compare/v0.8.19...v0.8.20) (2022-06-09)
 
 
 ### Features
@@ -349,14 +347,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **packages:** override undo-fu and undo-fu-session recipes ([bd3e53b](https://github.com/jimeh/.emacs.d/commit/bd3e53bdc86c5b128da6c50063d5491375da3ec3))
 
-### [0.8.19](https://github.com/jimeh/.emacs.d/compare/v0.8.18...v0.8.19) (2022-06-02)
+## [0.8.19](https://github.com/jimeh/.emacs.d/compare/v0.8.18...v0.8.19) (2022-06-02)
 
 
 ### Bug Fixes
 
 * **navigation/consult:** fix custom project directory lookup function ([c5b1494](https://github.com/jimeh/.emacs.d/commit/c5b149497b0548af99d5e1177d6c3c4aab504f20))
 
-### [0.8.18](https://github.com/jimeh/.emacs.d/compare/v0.8.17...v0.8.18) (2022-05-12)
+## [0.8.18](https://github.com/jimeh/.emacs.d/compare/v0.8.17...v0.8.18) (2022-05-12)
 
 
 ### Features
@@ -383,14 +381,14 @@ All notable changes to this project will be documented in this file. See [standa
 * **text-editing:** use wildcard in tempel-path ([d85671a](https://github.com/jimeh/.emacs.d/commit/d85671a44cb4f4b93cc526052dada476990450c6))
 * **ui/pixel-scroll:** fix typo with siren-pixel-scroll-mode init ([16ad040](https://github.com/jimeh/.emacs.d/commit/16ad0402a28d39fd30a0b09818ccb2521693e452))
 
-### [0.8.17](https://github.com/jimeh/.emacs.d/compare/v0.8.16...v0.8.17) (2022-04-07)
+## [0.8.17](https://github.com/jimeh/.emacs.d/compare/v0.8.16...v0.8.17) (2022-04-07)
 
 
 ### Features
 
 * **ui:** enable pixel-scroll-precision-mode in GUI if available ([f0f7c53](https://github.com/jimeh/.emacs.d/commit/f0f7c53cb3d139fd6db6ec6097a181ec92090ac0))
 
-### [0.8.16](https://github.com/jimeh/.emacs.d/compare/v0.8.15...v0.8.16) (2022-03-14)
+## [0.8.16](https://github.com/jimeh/.emacs.d/compare/v0.8.15...v0.8.16) (2022-03-14)
 
 
 ### Features
@@ -411,7 +409,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **snippets/org-mode:** update gfm snippet so it actually works ([dbe14e8](https://github.com/jimeh/.emacs.d/commit/dbe14e827ebd152ccf2eee508bee117de69b725f))
 
-### [0.8.15](https://github.com/jimeh/.emacs.d/compare/v0.8.14...v0.8.15) (2022-03-10)
+## [0.8.15](https://github.com/jimeh/.emacs.d/compare/v0.8.14...v0.8.15) (2022-03-10)
 
 
 ### Features
@@ -430,7 +428,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **navigation:** disable direx as it is broken on recent Emacs 29.x builds ([96d5bab](https://github.com/jimeh/.emacs.d/commit/96d5bab074e418d52641b00516e5a1b8e08b4ce9))
 * **navigation:** remove ctrlf package in favor of isearch ([246a459](https://github.com/jimeh/.emacs.d/commit/246a459622705e04f93a5cbac24c8d26dd6f9081))
 
-### [0.8.14](https://github.com/jimeh/.emacs.d/compare/v0.8.13...v0.8.14) (2022-02-17)
+## [0.8.14](https://github.com/jimeh/.emacs.d/compare/v0.8.13...v0.8.14) (2022-02-17)
 
 
 ### Features
@@ -447,7 +445,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **nativation/helm:** resolve helm loading issue after update ([1a41eea](https://github.com/jimeh/.emacs.d/commit/1a41eea77e859430a8ddeadd8d407b699b3ed74a))
 * **ui:** prevent tab-bar being visible in lsp-ui-doc child frame ([27fae46](https://github.com/jimeh/.emacs.d/commit/27fae4666453491f9413763abfa4ddab6467ac40))
 
-### [0.8.13](https://github.com/jimeh/.emacs.d/compare/v0.8.12...v0.8.13) (2022-01-26)
+## [0.8.13](https://github.com/jimeh/.emacs.d/compare/v0.8.12...v0.8.13) (2022-01-26)
 
 
 ### Features
@@ -455,14 +453,14 @@ All notable changes to this project will be documented in this file. See [standa
 * **projects:** switch from helm-projectile to regular projectile commands ([0312a36](https://github.com/jimeh/.emacs.d/commit/0312a360b4918d155d67443a8d75056e19152e10))
 * **workspaces/tab-bar:** display tab-bar and make it pretty ([ddc99ac](https://github.com/jimeh/.emacs.d/commit/ddc99acaa0fc794608f568497307a449dec4d53b))
 
-### [0.8.12](https://github.com/jimeh/.emacs.d/compare/v0.8.11...v0.8.12) (2022-01-19)
+## [0.8.12](https://github.com/jimeh/.emacs.d/compare/v0.8.11...v0.8.12) (2022-01-19)
 
 
 ### Bug Fixes
 
 * **editor/vertico:** cleanup if projectile command is canceled ([c80b4e2](https://github.com/jimeh/.emacs.d/commit/c80b4e24fa6af0d510238070344d8093818fdf2e))
 
-### [0.8.11](https://github.com/jimeh/.emacs.d/compare/v0.8.10...v0.8.11) (2022-01-18)
+## [0.8.11](https://github.com/jimeh/.emacs.d/compare/v0.8.10...v0.8.11) (2022-01-18)
 
 
 ### Features
@@ -476,7 +474,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **navigation/helm:** add require helm-mode to fix errors ([b5daa4f](https://github.com/jimeh/.emacs.d/commit/b5daa4f2e5143250ec75e80f9318a5ce3e3651f3))
 * **navigation/helm:** set helm-find-files to C-x f ([bd36da4](https://github.com/jimeh/.emacs.d/commit/bd36da4bfeb042e80f9402523a790ada3a80b8df))
 
-### [0.8.10](https://github.com/jimeh/.emacs.d/compare/v0.8.9...v0.8.10) (2022-01-16)
+## [0.8.10](https://github.com/jimeh/.emacs.d/compare/v0.8.9...v0.8.10) (2022-01-16)
 
 
 ### Features
@@ -492,7 +490,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **lsp-mode:** add "tmp" to ignored directory names ([3a8b04b](https://github.com/jimeh/.emacs.d/commit/3a8b04b59cd3df8357d3445aa524ccb5e38e47b9))
 * **macos:** disable ctrl+scroll emacs keybindings on macOS ([d6860c0](https://github.com/jimeh/.emacs.d/commit/d6860c0fe52fe4cdb111fdbdf8426b135deb9bfa))
 
-### [0.8.9](https://github.com/jimeh/.emacs.d/compare/v0.8.8...v0.8.9) (2021-11-30)
+## [0.8.9](https://github.com/jimeh/.emacs.d/compare/v0.8.8...v0.8.9) (2021-11-30)
 
 
 ### Features
@@ -505,7 +503,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **faces:** handle new mode-line-active and mode-line-inactive faces ([1b81c91](https://github.com/jimeh/.emacs.d/commit/1b81c91490e55a1a6de3502e1119d8c4a9c0abc6))
 
-### [0.8.8](https://github.com/jimeh/.emacs.d/compare/v0.8.7...v0.8.8) (2021-11-26)
+## [0.8.8](https://github.com/jimeh/.emacs.d/compare/v0.8.7...v0.8.8) (2021-11-26)
 
 
 ### Features
@@ -519,7 +517,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **dired:** prevent dired from prompting about removing dired buffers ([819f068](https://github.com/jimeh/.emacs.d/commit/819f06887975a8a9a9962c9f2e20cb536786c74d))
 * **env:** set MallocNanoZone var to fix Go race detector issue in Monterey ([0c89367](https://github.com/jimeh/.emacs.d/commit/0c893670cf9d42f806ee748684c093788a5474ad))
 
-### [0.8.7](https://github.com/jimeh/.emacs.d/compare/v0.8.6...v0.8.7) (2021-11-10)
+## [0.8.7](https://github.com/jimeh/.emacs.d/compare/v0.8.6...v0.8.7) (2021-11-10)
 
 
 ### Bug Fixes
@@ -527,7 +525,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **editor:** disable auto-revert-mode's use of file notifications on macOS ([78cb7fc](https://github.com/jimeh/.emacs.d/commit/78cb7fcd049bfbef99f7121813eddef4b83a669d))
 * **version-control/magit:** when disabled delta still caused issues ([ab001ee](https://github.com/jimeh/.emacs.d/commit/ab001eeb0ee8d2e183b7e229b1086ed89ed61c5f))
 
-### [0.8.6](https://github.com/jimeh/.emacs.d/compare/v0.8.5...v0.8.6) (2021-10-28)
+## [0.8.6](https://github.com/jimeh/.emacs.d/compare/v0.8.5...v0.8.6) (2021-10-28)
 
 
 ### Features
@@ -548,7 +546,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **navigation:** resolve dired/dired+ load order issue ([35d6e12](https://github.com/jimeh/.emacs.d/commit/35d6e1261269d123d842858e2f5db4089abfe192))
 * **projects:** unbind M-l from treemacs as it interfered with a global keybinding ([09c27ab](https://github.com/jimeh/.emacs.d/commit/09c27ab0a7fa4dd41ed2f6384e471b4c91b6ae00))
 
-### [0.8.5](https://github.com/jimeh/.emacs.d/compare/v0.8.4...v0.8.5) (2021-10-06)
+## [0.8.5](https://github.com/jimeh/.emacs.d/compare/v0.8.4...v0.8.5) (2021-10-06)
 
 
 ### Features
@@ -564,7 +562,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **projects:** only show file/process buffers in projectile buffer list ([11bb56b](https://github.com/jimeh/.emacs.d/commit/11bb56b4ac3401884b9a317e253a2d9221489265))
 * **projects:** use helm-projectile for project switching again ([6e34c36](https://github.com/jimeh/.emacs.d/commit/6e34c36e69604a01fba6985e38332baf54f670ea))
 
-### [0.8.4](https://github.com/jimeh/.emacs.d/compare/v0.8.3...v0.8.4) (2021-09-28)
+## [0.8.4](https://github.com/jimeh/.emacs.d/compare/v0.8.3...v0.8.4) (2021-09-28)
 
 
 ### Features
@@ -577,7 +575,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **lang:** set tab-width in protobuf-mode ([abc1ddd](https://github.com/jimeh/.emacs.d/commit/abc1dddcf968d5cad9ecb18eb0b94fecbea0694c))
 
-### [0.8.3](https://github.com/jimeh/.emacs.d/compare/v0.8.2...v0.8.3) (2021-09-15)
+## [0.8.3](https://github.com/jimeh/.emacs.d/compare/v0.8.2...v0.8.3) (2021-09-15)
 
 
 ### Features
@@ -591,7 +589,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **lsp:** only use lsp-mode in bash and sh based sh-mode buffer ([46a8169](https://github.com/jimeh/.emacs.d/commit/46a8169ed356e085b8e109c8518175aa8cb99ec8))
 * **theme:** tweak magit-diff-hunk-heading face to make it more readable ([784a295](https://github.com/jimeh/.emacs.d/commit/784a29585a4a4e69dbb6f887bf19638d395979c9))
 
-### [0.8.2](https://github.com/jimeh/.emacs.d/compare/v0.8.1...v0.8.2) (2021-08-03)
+## [0.8.2](https://github.com/jimeh/.emacs.d/compare/v0.8.1...v0.8.2) (2021-08-03)
 
 
 ### Features
@@ -604,7 +602,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **editor:** do not highlight indentation levels on large files ([0435cb2](https://github.com/jimeh/.emacs.d/commit/0435cb28d69911217b794f52828dcb115499ec63))
 
-### [0.8.1](https://github.com/jimeh/.emacs.d/compare/v0.8.0...v0.8.1) (2021-07-04)
+## [0.8.1](https://github.com/jimeh/.emacs.d/compare/v0.8.0...v0.8.1) (2021-07-04)
 
 
 ### Features
@@ -644,7 +642,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **navigation:** make helm play nicer with treemacs when helm-posframe is enabled ([b53cef4](https://github.com/jimeh/.emacs.d/commit/b53cef4d30a91f255d1e319498d44e33f25dda09))
 * **navigation:** workaround dired+ incompatibility with dired in master branch ([688b14a](https://github.com/jimeh/.emacs.d/commit/688b14a775e2e052ceb32631d329f86f290d6d2d))
 
-### [0.7.31](https://github.com/jimeh/.emacs.d/compare/v0.7.30...v0.7.31) (2021-06-14)
+## [0.7.31](https://github.com/jimeh/.emacs.d/compare/v0.7.30...v0.7.31) (2021-06-14)
 
 
 ### Features
@@ -658,7 +656,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **editor:** disable undo-tree in terminal buffers ([263400c](https://github.com/jimeh/.emacs.d/commit/263400c4c19e44a4fa971f1478c4ff2628d61788))
 * **theme:** override whitespace-tab background to match normal bg color ([3ab4ef5](https://github.com/jimeh/.emacs.d/commit/3ab4ef51e3d8dda78e15b303abf250e2dfa843f5))
 
-### [0.7.30](https://github.com/jimeh/.emacs.d/compare/v0.7.29...v0.7.30) (2021-05-15)
+## [0.7.30](https://github.com/jimeh/.emacs.d/compare/v0.7.29...v0.7.30) (2021-05-15)
 
 
 ### Features
@@ -675,14 +673,14 @@ All notable changes to this project will be documented in this file. See [standa
 * **version-control:** set correct diff-hl mode after desktop-read ([c8196d7](https://github.com/jimeh/.emacs.d/commit/c8196d759061716bdd17df4aed6f913066dd64e0))
 * **workspaces:** set base desktop base dir correctly ([f20ebd3](https://github.com/jimeh/.emacs.d/commit/f20ebd3f1ee33a2124100897c72c3484a92fc55c))
 
-### [0.7.29](https://github.com/jimeh/.emacs.d/compare/v0.7.28...v0.7.29) (2021-05-09)
+## [0.7.29](https://github.com/jimeh/.emacs.d/compare/v0.7.28...v0.7.29) (2021-05-09)
 
 
 ### Bug Fixes
 
 * **native-comp:** update config to support recent variable name changes ([7fad360](https://github.com/jimeh/.emacs.d/commit/7fad360c3e8fd157cfad9e6ce9732bb4053773d1))
 
-### [0.7.28](https://github.com/jimeh/.emacs.d/compare/v0.7.27...v0.7.28) (2021-05-08)
+## [0.7.28](https://github.com/jimeh/.emacs.d/compare/v0.7.27...v0.7.28) (2021-05-08)
 
 
 ### Features
@@ -695,7 +693,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **native-comp:** support new *.eln load path variable name ([8a47421](https://github.com/jimeh/.emacs.d/commit/8a47421c1ade18afc849acc25de0134f1e9b936b))
 
-### [0.7.27](https://github.com/jimeh/.emacs.d/compare/v0.7.26...v0.7.27) (2021-04-20)
+## [0.7.27](https://github.com/jimeh/.emacs.d/compare/v0.7.26...v0.7.27) (2021-04-20)
 
 
 ### Features
@@ -705,7 +703,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **org:** enable left/right shift keybinds which are available everywhere else ([cacb7d2](https://github.com/jimeh/.emacs.d/commit/cacb7d2fe90ca79cd0a63f9e8c75344c3c1dc270))
 * **org:** expand and tweak org-src and org-babel setup ([c8187b4](https://github.com/jimeh/.emacs.d/commit/c8187b4be8bd3b8681c4fc2b122918b1ce3576da))
 
-### [0.7.26](https://github.com/jimeh/.emacs.d/compare/v0.7.25...v0.7.26) (2021-04-15)
+## [0.7.26](https://github.com/jimeh/.emacs.d/compare/v0.7.25...v0.7.26) (2021-04-15)
 
 
 ### Features
@@ -718,7 +716,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **lang:** control Ruby formatting method on a per-project basis ([8728d5d](https://github.com/jimeh/.emacs.d/commit/8728d5da9e235bdfa76a9f89976a1e51bd2e84b7))
 * **shell:** windmove keybindings within vterm-mode ([397b7ed](https://github.com/jimeh/.emacs.d/commit/397b7edb2062723dfae1ad89314a6bf9d0b5a35e))
 
-### [0.7.25](https://github.com/jimeh/.emacs.d/compare/v0.7.24...v0.7.25) (2021-04-07)
+## [0.7.25](https://github.com/jimeh/.emacs.d/compare/v0.7.24...v0.7.25) (2021-04-07)
 
 
 ### Features
@@ -734,7 +732,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **formatting:** specify parser for prettier-js to avoid errors ([7de79dd](https://github.com/jimeh/.emacs.d/commit/7de79dd7049aa867ccf85f3aee1bb00b7175c08c))
 
-### [0.7.24](https://github.com/jimeh/.emacs.d/compare/v0.7.23...v0.7.24) (2021-04-02)
+## [0.7.24](https://github.com/jimeh/.emacs.d/compare/v0.7.23...v0.7.24) (2021-04-02)
 
 
 ### Features
@@ -748,7 +746,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **linting:** change flycheck fringe indicator to a left-pointing arrow ([d564fbe](https://github.com/jimeh/.emacs.d/commit/d564fbe75728b6368f0cb7bf8b5c2fe905afbf74))
 
-### [0.7.23](https://github.com/jimeh/.emacs.d/compare/v0.7.22...v0.7.23) (2021-04-01)
+## [0.7.23](https://github.com/jimeh/.emacs.d/compare/v0.7.22...v0.7.23) (2021-04-01)
 
 
 ### Features
@@ -761,7 +759,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **version-control:** pin diff-hl to a known good commit ([5a425b5](https://github.com/jimeh/.emacs.d/commit/5a425b58122e6b134de60a20e7c18d2c29150aa0))
 
-### [0.7.22](https://github.com/jimeh/.emacs.d/compare/v0.7.21...v0.7.22) (2021-03-22)
+## [0.7.22](https://github.com/jimeh/.emacs.d/compare/v0.7.21...v0.7.22) (2021-03-22)
 
 
 ### Features
@@ -775,7 +773,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **lang:** populate auto-mode-alist with correct sh-mode function ([43ce3f6](https://github.com/jimeh/.emacs.d/commit/43ce3f6f73ceb0776f9b0c90c794cdf7cde89377))
 * **version-control:** add missing magit hook for diff-hl ([d0223d4](https://github.com/jimeh/.emacs.d/commit/d0223d4253a64d4aa336fd091b82c98c92c29a1e))
 
-### [0.7.21](https://github.com/jimeh/.emacs.d/compare/v0.7.20...v0.7.21) (2021-03-15)
+## [0.7.21](https://github.com/jimeh/.emacs.d/compare/v0.7.20...v0.7.21) (2021-03-15)
 
 
 ### Features
@@ -791,7 +789,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **lang:** disable duplicate before-save hooks for go-mode ([bc4328c](https://github.com/jimeh/.emacs.d/commit/bc4328c6d5af44a8e541c368724e10657abfa6a2))
 * **misc:** do not enable explain-pause-mode automatically when emacs starts ([98b4e80](https://github.com/jimeh/.emacs.d/commit/98b4e800f509d6aa5219a0daeb5aeb506500842c))
 
-### [0.7.20](https://github.com/jimeh/.emacs.d/compare/v0.7.19...v0.7.20) (2021-02-27)
+## [0.7.20](https://github.com/jimeh/.emacs.d/compare/v0.7.19...v0.7.20) (2021-02-27)
 
 
 ### Features
@@ -813,7 +811,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **startup:** correctly setup deferred loading for various packages ([395ad7c](https://github.com/jimeh/.emacs.d/commit/395ad7ccacd9f35750260230b7df5f04825e81a6))
 * **text-editing:** correctly load custom snippets on emacs startup ([affbe2e](https://github.com/jimeh/.emacs.d/commit/affbe2e113975e4485c1fd280ee608872a8fedf4))
 
-### [0.7.19](https://github.com/jimeh/.emacs.d/compare/v0.7.18...v0.7.19) (2021-02-14)
+## [0.7.19](https://github.com/jimeh/.emacs.d/compare/v0.7.18...v0.7.19) (2021-02-14)
 
 
 ### Features
@@ -826,7 +824,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **lang:** debug current go test now works in non-root module packages ([f41a9da](https://github.com/jimeh/.emacs.d/commit/f41a9daff106588a14a8a2e96d469c3875497158))
 * **lang:** for formatting of *.sql files with pgformatter ([dd4c77a](https://github.com/jimeh/.emacs.d/commit/dd4c77ad24595ae093cd5cb96e1d9e45261a5092))
 
-### [0.7.18](https://github.com/jimeh/.emacs.d/compare/v0.7.17...v0.7.18) (2021-01-21)
+## [0.7.18](https://github.com/jimeh/.emacs.d/compare/v0.7.17...v0.7.18) (2021-01-21)
 
 
 ### Bug Fixes
@@ -834,7 +832,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **lang:** correctly add rubocopfmt package vars to list of safe local vars ([4f1e68f](https://github.com/jimeh/.emacs.d/commit/4f1e68f33eaf6c7cfe6c3509663ad63f1e23211d))
 * **workspaces:** don't hide tab-bar on startup ([3e8bbe3](https://github.com/jimeh/.emacs.d/commit/3e8bbe36f4a21a5778648346b84c5830bc01b9a7))
 
-### [0.7.17](https://github.com/jimeh/.emacs.d/compare/v0.7.16...v0.7.17) (2021-01-15)
+## [0.7.17](https://github.com/jimeh/.emacs.d/compare/v0.7.16...v0.7.17) (2021-01-15)
 
 
 ### Features
@@ -854,14 +852,14 @@ All notable changes to this project will be documented in this file. See [standa
 * **projects:** add missing dependency for all-the-icons ([5f278ab](https://github.com/jimeh/.emacs.d/commit/5f278ab2771438bb97b59a3af5d7a15004139a89))
 * **projects:** correctly suppress treemacs load-time warnings ([8329c7e](https://github.com/jimeh/.emacs.d/commit/8329c7e91297c8ffbe7a366131fa218693607193))
 
-### [0.7.16](https://github.com/jimeh/.emacs.d/compare/v0.7.15...v0.7.16) (2021-01-05)
+## [0.7.16](https://github.com/jimeh/.emacs.d/compare/v0.7.15...v0.7.16) (2021-01-05)
 
 
 ### Features
 
 * **lang:** enable debugging current test in go-mode via dap-mode ([672d6d8](https://github.com/jimeh/.emacs.d/commit/672d6d819cf2e522581dbfc9b222ed5bc521bbe7))
 
-### [0.7.15](https://github.com/jimeh/.emacs.d/compare/v0.7.14...v0.7.15) (2020-12-25)
+## [0.7.15](https://github.com/jimeh/.emacs.d/compare/v0.7.14...v0.7.15) (2020-12-25)
 
 
 ### Features
@@ -872,7 +870,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **tools:** add ob-http package ([bbc0e4a](https://github.com/jimeh/.emacs.d/commit/bbc0e4a7148cd695ecc2897c53057821e6d1ac87))
 * **version-control:** ensure magit uses correct width for tab indents ([07470c2](https://github.com/jimeh/.emacs.d/commit/07470c27bd6fad2e455511220ef6c5f08e0ab998))
 
-### [0.7.14](https://github.com/jimeh/.emacs.d/compare/v0.7.13...v0.7.14) (2020-11-15)
+## [0.7.14](https://github.com/jimeh/.emacs.d/compare/v0.7.13...v0.7.14) (2020-11-15)
 
 
 ### Features
@@ -883,7 +881,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **lsp:** bind lsp-ui-doc-glance to C-c C-d instead of lsp-ui-doc-show ([3812b3d](https://github.com/jimeh/.emacs.d/commit/3812b3df296e97f3cdd1303e73352c6802172534))
 * **snippets:** add Golang snippet ft "for _, tt := range tests {...}" ([5c2229c](https://github.com/jimeh/.emacs.d/commit/5c2229c80744ccc2879557b123fd8b2796e38301))
 
-### [0.7.13](https://github.com/jimeh/.emacs.d/compare/v0.7.12...v0.7.13) (2020-11-09)
+## [0.7.13](https://github.com/jimeh/.emacs.d/compare/v0.7.12...v0.7.13) (2020-11-09)
 
 
 ### Features
@@ -891,7 +889,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **lang:** enable terraform-ls language server support in terraform-mode ([3adfd0c](https://github.com/jimeh/.emacs.d/commit/3adfd0c0eb138ac2bd0e47bac993fc6a6e6b905d))
 * **lang:** format go-mode buffers on save with gofumpt via lsp-mode ([7ca255d](https://github.com/jimeh/.emacs.d/commit/7ca255db9cde01fd263f8517b94cc448e6bfa838))
 
-### [0.7.12](https://github.com/jimeh/.emacs.d/compare/v0.7.11...v0.7.12) (2020-10-29)
+## [0.7.12](https://github.com/jimeh/.emacs.d/compare/v0.7.11...v0.7.12) (2020-10-29)
 
 
 ### Features
@@ -899,7 +897,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **misc:** add rand-ip command to insert a random IPv4 address ([3edd57c](https://github.com/jimeh/.emacs.d/commit/3edd57c7532cb8f39f6f34632bfb01ffbeaa1c4f))
 * **version-control:** correctly format forge-post-mode buffers with prettier-js ([f540569](https://github.com/jimeh/.emacs.d/commit/f5405690b4276962020414ceddb0fa87bc1d61dd))
 
-### [0.7.11](https://github.com/jimeh/.emacs.d/compare/v0.7.10...v0.7.11) (2020-10-27)
+## [0.7.11](https://github.com/jimeh/.emacs.d/compare/v0.7.10...v0.7.11) (2020-10-27)
 
 
 ### Features
@@ -914,14 +912,14 @@ All notable changes to this project will be documented in this file. See [standa
 * **lang:** properly escape } in puts debug (pd) ruby-mode snippet ([c36be86](https://github.com/jimeh/.emacs.d/commit/c36be866131ce4c86dd5b699d0d6e01858b21c0d))
 * **text-editing:** enable yasnippet via global mode ([11ac1a8](https://github.com/jimeh/.emacs.d/commit/11ac1a822c7c6dcfb0c1774a676d8b7875395d15))
 
-### [0.7.10](https://github.com/jimeh/.emacs.d/compare/v0.7.9...v0.7.10) (2020-10-15)
+## [0.7.10](https://github.com/jimeh/.emacs.d/compare/v0.7.9...v0.7.10) (2020-10-15)
 
 
 ### Bug Fixes
 
 * **ui:** use advice to yes-or-no-p to y-or-n-p ([f987f01](https://github.com/jimeh/.emacs.d/commit/f987f01f9a099574de64880d898297d8413d88c5))
 
-### [0.7.9](https://github.com/jimeh/.emacs.d/compare/v0.7.8...v0.7.9) (2020-10-09)
+## [0.7.9](https://github.com/jimeh/.emacs.d/compare/v0.7.8...v0.7.9) (2020-10-09)
 
 
 ### Features
@@ -935,9 +933,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **lang:** ensure golang setup works with goenv ([9d45b1a](https://github.com/jimeh/.emacs.d/commit/9d45b1a908405909910b333bb89fefc86e5e1f80))
 
-### [0.7.8](https://github.com/jimeh/.emacs.d/compare/v0.7.7...v0.7.8) (2020-10-04)
+## [0.7.8](https://github.com/jimeh/.emacs.d/compare/v0.7.7...v0.7.8) (2020-10-04)
 
-### [0.7.7](https://github.com/jimeh/.emacs.d/compare/v0.7.6...v0.7.7) (2020-09-27)
+## [0.7.7](https://github.com/jimeh/.emacs.d/compare/v0.7.6...v0.7.7) (2020-09-27)
 
 
 ### Features
@@ -945,28 +943,28 @@ All notable changes to this project will be documented in this file. See [standa
 * **lang:** add jsonnet-mode ([5937589](https://github.com/jimeh/.emacs.d/commit/5937589cc5b040875fa7435af333c4df2893b30f))
 * **macos:** move files/folders to trash instead of deleting them on macOS ([bda82a9](https://github.com/jimeh/.emacs.d/commit/bda82a9c775e8f73fb3090b9316ffd724198b9ad))
 
-### [0.7.6](https://github.com/jimeh/.emacs.d/compare/v0.7.5...v0.7.6) (2020-09-23)
+## [0.7.6](https://github.com/jimeh/.emacs.d/compare/v0.7.5...v0.7.6) (2020-09-23)
 
 
 ### Features
 
 * **misc:** add uuidgen package ([9c28e42](https://github.com/jimeh/.emacs.d/commit/9c28e4229f58a5448e5ed79af58b072992f43956))
 
-### [0.7.5](https://github.com/jimeh/.emacs.d/compare/v0.7.4...v0.7.5) (2020-09-10)
+## [0.7.5](https://github.com/jimeh/.emacs.d/compare/v0.7.4...v0.7.5) (2020-09-10)
 
 
 ### Bug Fixes
 
 * **lang:** resolve json-snatcher issue by overriding it with a fork ([298587d](https://github.com/jimeh/.emacs.d/commit/298587d35d70743aca7ef7b8d5230a86469d1320))
 
-### [0.7.4](https://github.com/jimeh/.emacs.d/compare/v0.7.3...v0.7.4) (2020-09-01)
+## [0.7.4](https://github.com/jimeh/.emacs.d/compare/v0.7.3...v0.7.4) (2020-09-01)
 
 
 ### Bug Fixes
 
 * **workspaces:** do not auto-load "default" desktop on startup ([6003c89](https://github.com/jimeh/.emacs.d/commit/6003c899945c50017be0f1c0cee9953a6c91e20b))
 
-### [0.7.3](https://github.com/jimeh/.emacs.d/compare/v0.7.2...v0.7.3) (2020-08-28)
+## [0.7.3](https://github.com/jimeh/.emacs.d/compare/v0.7.2...v0.7.3) (2020-08-28)
 
 
 ### Features
@@ -981,7 +979,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **native_comp:** correctly set custom comp-eln-load-path ([4e7ec6a](https://github.com/jimeh/.emacs.d/commit/4e7ec6ade80f5ac10a72beb6d67c3ea5fc737faa))
 * **packages:** update package definitions to be compatible with latest straight.el ([1c81570](https://github.com/jimeh/.emacs.d/commit/1c81570ef7cf6b932b888e08467f41308a23039a))
 
-### [0.7.2](https://github.com/jimeh/.emacs.d/compare/v0.7.1...v0.7.2) (2020-08-20)
+## [0.7.2](https://github.com/jimeh/.emacs.d/compare/v0.7.1...v0.7.2) (2020-08-20)
 
 
 ### Features
@@ -995,7 +993,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **lang:** fix issue with json-mode when native-comp is used ([0082330](https://github.com/jimeh/.emacs.d/commit/00823307ac6d4b53f0a1f99299953be017ee69c1))
 * **native_comp:** automatically delete invalid *.eln files on startup ([cb86a67](https://github.com/jimeh/.emacs.d/commit/cb86a6721f7a29b89b21f4baf6ca43586eb91176))
 
-### [0.7.1](https://github.com/jimeh/.emacs.d/compare/v0.7.0...v0.7.1) (2020-08-18)
+## [0.7.1](https://github.com/jimeh/.emacs.d/compare/v0.7.0...v0.7.1) (2020-08-18)
 
 
 ### Features
@@ -1028,7 +1026,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **core:** set default-directory correctly during startup on macOS ([d80df8e](https://github.com/jimeh/.emacs.d/commit/d80df8e2d41fec779cf8ed7444646e9d7b215a23))
 
-### [0.6.12](https://github.com/jimeh/.emacs.d/compare/v0.6.11...v0.6.12) (2020-08-11)
+## [0.6.12](https://github.com/jimeh/.emacs.d/compare/v0.6.11...v0.6.12) (2020-08-11)
 
 
 ### Features
@@ -1041,7 +1039,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **navigation:** Update setup for recent changes to helm ([6cca25c](https://github.com/jimeh/.emacs.d/commit/6cca25c66cc673ac6208071adc5f5f254036a599))
 
-### [0.6.11](https://github.com/jimeh/.emacs.d/compare/v0.6.10...v0.6.11) (2020-07-21)
+## [0.6.11](https://github.com/jimeh/.emacs.d/compare/v0.6.10...v0.6.11) (2020-07-21)
 
 
 ### Features
@@ -1054,7 +1052,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **workspaces:** Recent persp now works after renaming persps ([a04e57f](https://github.com/jimeh/.emacs.d/commit/a04e57f88710c3ca5a4a63c55cd59d7d46413320))
 
-### [0.6.10](https://github.com/jimeh/.emacs.d/compare/v0.6.9...v0.6.10) (2020-07-13)
+## [0.6.10](https://github.com/jimeh/.emacs.d/compare/v0.6.9...v0.6.10) (2020-07-13)
 
 
 ### Features
@@ -1066,14 +1064,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **helm:** Helm failure when tramp-methods variable is not defined ([2059714](https://github.com/jimeh/.emacs.d/commit/20597149bbd0fe873c4a81778c8f50d9f93d5a4f))
 
-### [0.6.9](https://github.com/jimeh/.emacs.d/compare/v0.6.8...v0.6.9) (2020-07-04)
+## [0.6.9](https://github.com/jimeh/.emacs.d/compare/v0.6.8...v0.6.9) (2020-07-04)
 
 
 ### Features
 
 * **lsp:** Improve lsp-mode performance, support latest 7.x version ([efd0b42](https://github.com/jimeh/.emacs.d/commit/efd0b421e34f93cab1b990123930c1dc9877a712))
 
-### [0.6.8](https://github.com/jimeh/.emacs.d/compare/v0.6.7...v0.6.8) (2020-07-02)
+## [0.6.8](https://github.com/jimeh/.emacs.d/compare/v0.6.7...v0.6.8) (2020-07-02)
 
 
 ### Features
@@ -1087,7 +1085,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **editor:** Make undo-tree a bit more terminal friendly ([bbc98de](https://github.com/jimeh/.emacs.d/commit/bbc98decea771ea843639cd2386ed68ac42bdcd0))
 * **navigation:** Dired disk usage command was unreliable on Linux ([acb2d6f](https://github.com/jimeh/.emacs.d/commit/acb2d6f5fa7648e29895fb8b05085ac65e084f4d))
 
-### [0.6.7](https://github.com/jimeh/.emacs.d/compare/v0.6.6...v0.6.7) (2020-06-07)
+## [0.6.7](https://github.com/jimeh/.emacs.d/compare/v0.6.6...v0.6.7) (2020-06-07)
 
 
 ### Features
@@ -1101,7 +1099,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **lang:** Work around for whitespace-mode issue with caddyfile-mode ([1ef8570](https://github.com/jimeh/.emacs.d/commit/1ef8570f059444a0cf31da3cfe938c4a6af87a95))
 
-### [0.6.6](https://github.com/jimeh/.emacs.d/compare/v0.6.5...v0.6.6) (2020-06-05)
+## [0.6.6](https://github.com/jimeh/.emacs.d/compare/v0.6.5...v0.6.6) (2020-06-05)
 
 
 ### Features
@@ -1114,7 +1112,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **workspaces:** Attempt to fix persp-mode forgetting persp layouts ([ca2d51b](https://github.com/jimeh/.emacs.d/commit/ca2d51bebdc651e5b036861438f54cc1c6df6191))
 
-### [0.6.5](https://github.com/jimeh/.emacs.d/compare/v0.6.4...v0.6.5) (2020-05-30)
+## [0.6.5](https://github.com/jimeh/.emacs.d/compare/v0.6.4...v0.6.5) (2020-05-30)
 
 
 ### Features
@@ -1128,7 +1126,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **lang:** terraform-mode now formats buffers on save correctly ([bf4c49d](https://github.com/jimeh/.emacs.d/commit/bf4c49dd1ff3c8dbf18a98cf3ce951d287332640))
 * **themes:** Handle highlight-indent-guides when switching themes ([88ceeaa](https://github.com/jimeh/.emacs.d/commit/88ceeaa7c79ff171f62554911874d280948e148c))
 
-### [0.6.4](https://github.com/jimeh/.emacs.d/compare/v0.6.3...v0.6.4) (2020-05-23)
+## [0.6.4](https://github.com/jimeh/.emacs.d/compare/v0.6.3...v0.6.4) (2020-05-23)
 
 
 ### Features
@@ -1144,7 +1142,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **lang:** Switch back to formatting Ruby with rubocop-daemon ([aee6af6](https://github.com/jimeh/.emacs.d/commit/aee6af61289cdfe3f12e02db03676c0190034d5b))
 
-### [0.6.3](https://github.com/jimeh/.emacs.d/compare/v0.6.2...v0.6.3) (2020-05-19)
+## [0.6.3](https://github.com/jimeh/.emacs.d/compare/v0.6.2...v0.6.3) (2020-05-19)
 
 
 ### Features
@@ -1160,7 +1158,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **navigation:** Ensure imenu config was is set correctly ([8868e97](https://github.com/jimeh/.emacs.d/commit/8868e975e290209cabbe15cc6676e05d66ce98de))
 
-### [0.6.2](https://github.com/jimeh/.emacs.d/compare/v0.6.1...v0.6.2) (2020-05-10)
+## [0.6.2](https://github.com/jimeh/.emacs.d/compare/v0.6.1...v0.6.2) (2020-05-10)
 
 
 ### Features
@@ -1176,7 +1174,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **navigation:** Lazy-load helm without breaking keybindings ([cb16ffe](https://github.com/jimeh/.emacs.d/commit/cb16ffe993ac991ee5ceb04f70c405468cb78304))
 * **projects:** Improve helm-projectile keybindings in terminal ([cc8a76c](https://github.com/jimeh/.emacs.d/commit/cc8a76c617eab90f584b60319750a774ce2b8ab9))
 
-### [0.6.1](https://github.com/jimeh/.emacs.d/compare/v0.6.0...v0.6.1) (2020-05-07)
+## [0.6.1](https://github.com/jimeh/.emacs.d/compare/v0.6.0...v0.6.1) (2020-05-07)
 
 
 ### Features
