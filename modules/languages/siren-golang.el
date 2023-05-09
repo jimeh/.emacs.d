@@ -113,6 +113,9 @@
                        (vendor . t)))
 
   :config
+  (lsp-register-custom-settings
+   '(("gopls.hints" ((constantValues . t)))))
+
   ;; Create custom lsp-client for golangci-lint-langserver.
   (lsp-register-custom-settings
    '(("golangci-lint.command" ["golangci-lint" "run"

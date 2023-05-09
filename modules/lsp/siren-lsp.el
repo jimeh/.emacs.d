@@ -33,6 +33,7 @@
   (lsp-enable-xref t)
   (lsp-headerline-breadcrumb-enable t)
   (lsp-idle-delay 0.4)
+  (lsp-inlay-hint-enable t)
   (lsp-keymap-prefix "M-;")
   (lsp-lens-enable t)
   (lsp-modeline-diagnostics-enable t)
