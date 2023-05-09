@@ -8,9 +8,15 @@
 
 (require 'cl-lib)
 
+(let ((straight-current-profile 'pinned))
+  ;; Pin copilot to commit before I started getting random character jumps while
+  ;; typing with a copilot overlay active.
+  (straight-x-pin-package "copilot" "40cc5ef071f52ef9bc8545325a0e0fab44d6180d")
+  (straight-use-package '(copilot :host github :repo "zerolfx/copilot.el"
+                                  :files ("dist" "*.el"))))
+
 (use-package copilot
-  :straight (:host github :repo "zerolfx/copilot.el"
-                   :files ("dist" "*.el"))
+  :straight (:type built-in) ;; installed above in pinned block
   :hook
   (prog-mode . copilot-mode)
 
