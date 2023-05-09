@@ -2,6 +2,38 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.43](https://github.com/jimeh/.emacs.d/compare/v0.8.42...v0.8.43) (2023-05-09)
+
+
+### Features
+
+* **completion/company:** remove old fci-mode workaround ([a0b7a80](https://github.com/jimeh/.emacs.d/commit/a0b7a80985870c84d1c9a3b3670b2bbf594bb52e))
+* **completion/siren:** enable shift+tab keybinding in terminal ([e8cdcae](https://github.com/jimeh/.emacs.d/commit/e8cdcaebe91fdffa786b58793974a76bf09fc987))
+* **editor:** try snap-indent as a replacement for yank-indent ([3bd155c](https://github.com/jimeh/.emacs.d/commit/3bd155cb799e8ca4af8c0873aa767f61dee9f5bf))
+* **icons:** use nerd-fonts to display icons in terminals ([a78e417](https://github.com/jimeh/.emacs.d/commit/a78e417e6f3f2ad4ebf5ecbfe18322a5102f4f43))
+* **language/go:** enable extra gopls analyzers and code lenses ([05c45be](https://github.com/jimeh/.emacs.d/commit/05c45bee59296cc2863299422e4bda573fc34229))
+* **language/lua:** enable tree-sitter-mode ([20457dc](https://github.com/jimeh/.emacs.d/commit/20457dc99fb427ae1210060fa79c796c8377c500))
+* **language/lua:** improve lsp-mode setup and set tab-width to 2 ([c137dde](https://github.com/jimeh/.emacs.d/commit/c137dde815956459183eba2b714769c3fab181cc))
+* **language/markdown:** enable tree-sitter-mode ([67a8b43](https://github.com/jimeh/.emacs.d/commit/67a8b439f5fb279ec23e2f9150acfdf716b84c3a))
+* **language/nix:** enable tree-sitter-mode ([c3dd1fe](https://github.com/jimeh/.emacs.d/commit/c3dd1fe68a8de7122426ccbc5cef942c590a6155))
+* **language/php:** enable tree-sitter-mode ([d7494f5](https://github.com/jimeh/.emacs.d/commit/d7494f5147fb3d1cfe5d931a44c2ab61a79c24e0))
+* **language/python:** enable tree-sitter-mode ([d30d2e3](https://github.com/jimeh/.emacs.d/commit/d30d2e340bacdd1237abfcbda7c052041941fb10))
+* **lsp:** enable inlay hints ([5d65b32](https://github.com/jimeh/.emacs.d/commit/5d65b32d1a5f0e1b51e41401e89f047951696bc1))
+* **projects/treemacs:** disable project-follow mode ([e9da1ea](https://github.com/jimeh/.emacs.d/commit/e9da1ea174aefbfa1d9549a24fa6b5b7e3c2e41d))
+* **projects:** add "elpaca" to list of ignored projectile directories ([ee04435](https://github.com/jimeh/.emacs.d/commit/ee044356a3fc829ec3aea04c7df80510fd435a64))
+* **text-editing:** remove excess keybindings for smart-shift ([f7e9abb](https://github.com/jimeh/.emacs.d/commit/f7e9abbcb11aa8798914b20ccc664cbb8e56afc2))
+
+
+### Bug Fixes
+
+* **completion/copilot:** temporarily pin copilot.el ([bc8a2a4](https://github.com/jimeh/.emacs.d/commit/bc8a2a40e74dac1f99cec167f9ae128f72c5d88f))
+* **formatting/preffier:** don't use preffier in rjsx-mode specifically ([dd26296](https://github.com/jimeh/.emacs.d/commit/dd262969632a6866f90b7ba22bb08a05c8c5a0c0))
+* **language/go:** fix go-playground setup ([6434035](https://github.com/jimeh/.emacs.d/commit/6434035d60a3b121c60e2f08692e72dacaacea9c))
+* **magit/forge:** fix error when attempting to edit a PR description ([956dc88](https://github.com/jimeh/.emacs.d/commit/956dc88505a137181057a1e0adcc2f5e30d28f65))
+* pin doom-modeline to last all-the-icons supported commit ([e45fce6](https://github.com/jimeh/.emacs.d/commit/e45fce668552a2887e7668f1979ab0f50f32b0aa))
+* **tools:** resolve require issues makefile-executor setup ([e8cca90](https://github.com/jimeh/.emacs.d/commit/e8cca905c31c665e93345646ce3c732cb9da4fef))
+* **windows:** allow window switching keybindings to work in dired ([4526952](https://github.com/jimeh/.emacs.d/commit/4526952932b32c0440a2bc98f833065cb6dbf647))
+
 ### [0.8.42](https://github.com/jimeh/.emacs.d/compare/v0.8.41...v0.8.42) (2023-04-18)
 
 
