@@ -27,6 +27,7 @@
 (require 'siren-cape)
 (require 'siren-company)
 (require 'siren-copilot)
+(require 'siren-marginalia)
 
 ;; Documentation
 (require 'siren-dash-at-point)
@@ -38,7 +39,6 @@
 (require 'siren-display-indentation)
 (require 'siren-display-line-numbers)
 (require 'siren-embark)
-(require 'siren-marginalia)
 (require 'siren-minions)
 (require 'siren-mwim)
 (require 'siren-origami)

@@ -63,11 +63,15 @@ mode."
         :face 'marginalia-file-name))))
 
   (defun marginalia--project-buffer-file (buffer)
-    "Return the file or process name of BUFFER relative to project root, if it
-is within project root."
-    (let ((root (marginalia--project-root))
-          (file (marginalia--buffer-file buffer)))
-      (if (string-equal root file) file
+    "Return the file or process name of BUFFER relative to project root."
+    (let* ((root (expand-file-name (marginalia--project-root)))
+           (raw-file (marginalia--buffer-file buffer))
+           (file (if (string-prefix-p "~/" raw-file)
+                     (expand-file-name raw-file)
+                   raw-file)))
+      (if (or (string-empty-p root)
+              (string-equal root file))
+          raw-file
         (string-remove-prefix root file))))
 
   :config
