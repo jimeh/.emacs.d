@@ -40,9 +40,6 @@
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
 
-  ;; Configure treemacs styling
-  (doom-themes-treemacs-config)
-
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config)
 
@@ -50,7 +47,7 @@
   (defun siren-ns-system-appearance()
     "Return the system appearance, either `dark', `light', or `nil'.
 
-A return value of `nil' means that the system appearance is could
+A return value of `nil' means that the system appearance could
 not be determined. This happens on non-macOS systems, or on macOS
 if running Emacs in a terminal."
     (if (boundp 'ns-system-appearance)
