@@ -87,6 +87,7 @@
 (require 'siren-centaur-tabs)
 (require 'siren-consult)
 (require 'siren-dired)
+(require 'siren-dirvish)
 (require 'siren-dumb-jump)
 (require 'siren-git-link)
 (require 'siren-helm)
