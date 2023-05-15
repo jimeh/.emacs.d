@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.8.44](https://github.com/jimeh/.emacs.d/compare/v0.8.43...v0.8.44) (2023-05-15)
+
+
+### Features
+
+* **core:** update font selection preferring Nerd Font Mono ([f5ce193](https://github.com/jimeh/.emacs.d/commit/f5ce19323935209f7a810ac26b0d462f080f0b07))
+* **editor:** replace nearly all use of all-the-icons with nerd-icons ([0b63d36](https://github.com/jimeh/.emacs.d/commit/0b63d3607d895a1f91078a24938619bf8083641d))
+* **language/yaml:** lint GitHub Action workflows with actionlint ([15278d5](https://github.com/jimeh/.emacs.d/commit/15278d5abef01dbafde04d46b45092c3125e6e0e))
+* **navigation:** add dirvish and have it override/enhance dired ([1729317](https://github.com/jimeh/.emacs.d/commit/1729317cd870fca21d55c2a036deaa2732891884))
+* **theme:** add nerd-icons definitions to overrides theme ([f861ad0](https://github.com/jimeh/.emacs.d/commit/f861ad06e82170e9ba9ae7543b002c9c4f58c8fe))
+
+
+### Bug Fixes
+
+* **completion/marginalia:** improve issues with project-buffer annotations ([4654ea5](https://github.com/jimeh/.emacs.d/commit/4654ea5e803f0a062184473a96c0efaf45d3da77))
+
+
+### Reverts
+
+* **completion/copilot:** temporarily pin copilot.el ([0dac271](https://github.com/jimeh/.emacs.d/commit/0dac2718c1858822dac5e14c37636f42b4bd302b))
+
 ## [0.8.43](https://github.com/jimeh/.emacs.d/compare/v0.8.42...v0.8.43) (2023-05-09)
 
 
