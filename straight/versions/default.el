@@ -25,6 +25,7 @@
  ("consult" . "90c88c2129d51de2ac2513b744f0f31bd43b32c4")
  ("consult-dir" . "ed8f0874d26f10f5c5b181ab9f2cf4107df8a0eb")
  ("consult-lsp" . "f8db3252c0daa41225ba4ed1c0d178b281cd3e90")
+ ("copilot.el" . "15a698ebc1d6ffa10da7d6d7e9f972786d0ce526")
  ("cucumber.el" . "c08e4fa64bf3e9e354fd7f9f058916ba607e6631")
  ("cycle-quotes" . "c4d62848127d03b27f897f9b290ba5cef9fb0845")
  ("dap-mode" . "24892f9e30aa9645d51b0a15dfebd75861e6c97f")
