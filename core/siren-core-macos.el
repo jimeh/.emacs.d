@@ -22,8 +22,9 @@
 ;; When running in GUI mode.
 (when window-system
   ;; Set default font based on priority list
-  (let* ((families '("Menlo Nerd Font"
-                     "Menlo Nerd Font Mono"
+  (let* ((families '("Menlo Nerd Font Mono"
+                     "Menlo Nerd Font"
+                     "Menlo Nerd Font Propo"
                      "Menlo for Powerline"
                      "Menlo"
                      "Monaco Nerd Font Mono"
