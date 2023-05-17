@@ -192,6 +192,7 @@
 (require 'siren-coffee)
 (require 'siren-conf)
 (require 'siren-css)
+(require 'siren-csv)
 (require 'siren-cucumber)
 (require 'siren-dart)
 (require 'siren-dockerfile)
