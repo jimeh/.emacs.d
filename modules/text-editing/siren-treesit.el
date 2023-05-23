@@ -6,23 +6,24 @@
 
 ;;; Code:
 
-(require 'treesit)
+(when (fboundp 'treesit-ready-p)
+  (require 'treesit)
 
-(defun siren-treesit-prepare (mode source)
-  "Setup treesit for MODE with SOURCE."
-  (add-to-list 'treesit-language-source-alist source)
-  (let ((lang (car source)))
-    (advice-add mode :before `(lambda (&rest _)
-                                (when (not (treesit-ready-p ',lang))
-                                  (treesit-install-language-grammar ',lang))))))
+  (defun siren-treesit-prepare (mode source)
+    "Setup treesit for MODE with SOURCE."
+    (add-to-list 'treesit-language-source-alist source)
+    (let ((lang (car source)))
+      (advice-add mode :before `(lambda (&rest _)
+                                  (when (not (treesit-ready-p ',lang))
+                                    (treesit-install-language-grammar ',lang))))))
 
-(use-package treesit-auto
-  :demand t
-  :if (fboundp 'treesit-ready-p)
-  :custom
-  (treesit-auto-install nil)
-  :config
-  (global-treesit-auto-mode))
+  (use-package treesit-auto
+    :demand t
+    :if (fboundp 'treesit-ready-p)
+    :custom
+    (treesit-auto-install nil)
+    :config
+    (global-treesit-auto-mode)))
 
 (provide 'siren-treesit)
 ;;; siren-treesit.el ends here
