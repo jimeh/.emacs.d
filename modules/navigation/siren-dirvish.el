@@ -29,7 +29,8 @@
             "*" 'dirvish-mark-menu
             "f" 'dirvish-file-info-menu
             "b" 'dirvish-quick-access
-            "s" 'dirvish-quicksort)
+            "s" 'dirvish-quicksort
+            "C-b" 'dirvish-subtree-up)
 
   :init
   ;; Let Dirvish take over Dired globally.
