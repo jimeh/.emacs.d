@@ -39,7 +39,28 @@
 
   ;; Fix the default default-directory value.
   (if (string= default-directory "/")
-      (setq default-directory "~/")))
+      (setq default-directory "~/"))
+
+  (defun delete-child-frames (&optional frame)
+    "Close all child frames of FRAME.
+If FRAME is nil, it defaults to the currently selected frame."
+    (interactive)
+    (let ((frame (or frame (selected-frame))))
+      (dolist (f (frame-list))
+        (when (eq (frame-parent f) frame)
+          (delete-frame f)))))
+
+  (defun siren-toggle-frame-fullscreen-advice (&optional frame)
+    "If `ns-use-native-fullscreen' is not t, close all child frames of FRAME.
+If FRAME is nil, it defaults to the currently selected frame."
+    (unless ns-use-native-fullscreen
+      (delete-child-frames frame)))
+
+  ;; On macOS when using non-native fullscreen, child-frames re-appear and are
+  ;; stuck on top of the main frame when fullscreen is enabled. This advice
+  ;; closes all child-frames when toggling fullscreen state to avoid this.
+  (advice-add 'toggle-frame-fullscreen :after
+              #'siren-toggle-frame-fullscreen-advice))
 
 ;; macOS Fullscreen (requires Emacs 24.4 or later)
 (global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
