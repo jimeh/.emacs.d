@@ -207,6 +207,10 @@
   '(siren-treemacs-line-highlight :background (doom-blend violet bg 0.2)
                                   :extend t)
 
+  ;; dirvish
+  '(dirvish-hl-line :background region
+                    :extend t)
+
   ;; solaire-mode
   '(solaire-hl-line-face :inherit 'hl-line
                          :background (doom-blend region bg-alt 0.35)
