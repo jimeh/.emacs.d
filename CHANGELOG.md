@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.8.45](https://github.com/jimeh/.emacs.d/compare/v0.8.44...v0.8.45) (2023-05-23)
+
+
+### Features
+
+* **language/csv:** add setup for csv-mode ([431692a](https://github.com/jimeh/.emacs.d/commit/431692af1a02cf364de0e7700046d384864009f4))
+* **navigation/dirvish:** bind C-b to dirvish-subtree-up ([9a02511](https://github.com/jimeh/.emacs.d/commit/9a02511fd07ed7226d48c6b3f1f979f5400d4dc7))
+* **themes/doom-overrides:** set dirvish-hl-line to a more subtle background ([62a0b29](https://github.com/jimeh/.emacs.d/commit/62a0b2926ef6493c32b7827a1de30be1b1dd940c))
+
+
+### Bug Fixes
+
+* **macos:** hide all child frames when toggling non-native fullscreen ([0878780](https://github.com/jimeh/.emacs.d/commit/08787800a3d668fad2d8fcc8815f33a30bc78687))
+* **text-editing/treesit:** correctly load on versions of Emacs without built-in treesit ([762f2ca](https://github.com/jimeh/.emacs.d/commit/762f2ca733a421ddd3d84d57913deeda348bb3ed))
+
 ## [0.8.44](https://github.com/jimeh/.emacs.d/compare/v0.8.43...v0.8.44) (2023-05-15)
 
 
