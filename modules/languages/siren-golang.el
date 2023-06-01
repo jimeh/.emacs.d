@@ -159,7 +159,7 @@
   :preface
   (defun siren-gotest-setup ()
     (let ((extra-args "-count=1 -race"))
-      (if (and (boundp 'go-test-local) go-test-local)
+      (if (and (boundp 'go-test-args) go-test-args)
           (setq-local go-test-args (concat go-test-args " " extra-args))
         (setq-local go-test-args extra-args))))
 
