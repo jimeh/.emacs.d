@@ -116,24 +116,6 @@
   (lsp-register-custom-settings
    '(("gopls.hints" ((constantValues . t)))))
 
-  ;; Create custom lsp-client for golangci-lint-langserver.
-  (lsp-register-custom-settings
-   '(("golangci-lint.command" ["golangci-lint" "run"
-                               "--out-format" "json"
-                               "--issues-exit-code=1"])))
-  (lsp-register-client
-   (make-lsp-client :new-connection (lsp-stdio-connection
-                                     '("golangci-lint-langserver"))
-                    :major-modes '(go-mode)
-                    :language-id "go"
-                    :priority 0
-                    :server-id 'golangci-lint
-                    :add-on? t
-                    :library-folders-fn #'lsp-go--library-default-directories
-                    :initialization-options (lambda ()
-                                              (gethash "golangci-lint"
-                                                       (lsp-configuration-section "golangci-lint")))))
-
   :preface
   (defun siren-lsp-go-mode-setup ()
     (setq-local siren-lsp-manual-format-buffer-func
@@ -145,6 +127,11 @@
   (defun siren-lsp-go-manual-format-buffer ()
     (lsp-format-buffer)
     (golines-format-buffer)))
+
+(use-package lsp-golangci-lint
+  :straight (:type built-in) ;; from vendor directory
+  :custom
+  (lsp-golangci-lint-server-debug nil))
 
 (use-package go-dlv
   :defer t)
