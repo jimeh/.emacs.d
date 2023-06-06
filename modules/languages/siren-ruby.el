@@ -112,7 +112,20 @@
     (stree-format-buffer)
     (lsp-format-buffer))
 
+  (defun siren-lsp-ruby-prevent-rename-advice (orig-fun &rest args)
+    "Prevent lsp-rename being using in Ruby buffers.
+
+Solargraph's rename functionality is highly unreliable. Most of
+the time randomly renames unrelated things to new random values.
+
+Essentially, any use of lsp-rename in Ruby buffers is a mistake,
+and will break things."
+    (if (or (eq major-mode 'ruby-mode) (eq major-mode 'ruby-ts-mode))
+        (message "lsp-rename is disabled in ruby-mode and ruby-ts-mode")
+      (apply orig-fun args)))
+
   :init
+  (advice-add 'lsp-rename :around #'siren-lsp-ruby-prevent-rename-advice)
   (add-to-list 'safe-local-variable-values
                '(lsp-solargraph-use-bundler . t)))
 
