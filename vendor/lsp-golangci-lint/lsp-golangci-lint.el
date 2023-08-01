@@ -53,13 +53,18 @@
   :type 'string
   :group 'lsp-golangci-lint)
 
+(defcustom lsp-golangci-lint-allow-parallel-runners t
+  "If not nil, pass --allow-parallel-runners flag to golangci-lint run."
+  :type 'boolean
+  :group 'lsp-golangci-lint)
+
 (defcustom lsp-golangci-lint-build-tags nil
   "If non-empty list, pass as --build-tags flag value to golangci-lint run."
   :type '(repeat string)
   :group 'lsp-golangci-lint)
 
-(defcustom lsp-golangci-lint-allow-parallel-runners t
-  "If not nil, pass --allow-parallel-runners flag to golangci-lint run."
+(defcustom lsp-golangci-lint-fast nil
+  "If not nil, pass --fast flag to golangci-lint run."
   :type 'boolean
   :group 'lsp-golangci-lint)
 
@@ -114,7 +119,8 @@
          (enable (string-join lsp-golangci-lint-enable ","))
          (disable (string-join lsp-golangci-lint-disable ","))
          (args (cl-loop for (condition flag value) in
-                        `((,(not (string-empty-p tags)) "--build-tags" ,tags)
+                        `((,lsp-golangci-lint-fast "--fast" nil)
+                          (,(not (string-empty-p tags)) "--build-tags" ,tags)
                           (,lsp-golangci-lint-enable-all "--enable-all" nil)
                           (,lsp-golangci-lint-disable-all "--disable-all" nil)
                           (,(not (string-empty-p enable)) "--enable" ,enable)
