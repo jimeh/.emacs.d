@@ -229,15 +229,12 @@
 (require 'siren-terraform)
 (require 'siren-thrift)
 (require 'siren-toml)
+(require 'siren-typescript)
 (require 'siren-vue)
 (require 'siren-web-mode)
 (require 'siren-x509)
 (require 'siren-xml)
 (require 'siren-yaml)
-
-;; Languages that require Emacs' 29.x built-in treesit functionality.
-(when (fboundp 'treesit-ready-p)
-  (require 'siren-typescript))
 
 (provide 'siren-core-modules)
 ;;; siren-core-modules.el ends here

@@ -7,7 +7,7 @@
 ;;; Code:
 
 ;; Requires Emacs 29.x or later for built-in treesit support.
-(when (fboundp 'treesit-ready-p)
+(when (fboundp 'typescript-ts-mode)
   (require 'siren-flycheck)
   (require 'siren-lsp)
   (require 'siren-treesit)
