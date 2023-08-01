@@ -191,7 +191,6 @@
  ("rubocopfmt.el" . "1c6f4f1da755c9e60eb475eb9530320726904341")
  ("ruby-refactor" . "e6b7125878a08518bffec6942df0c606f748e9ee")
  ("ruby-tools.el" . "6b97066b58a4f82eb2ecea6434a0a7e981aa4c18")
- ("rufo.el" . "020b02ed6e9ab49e79d2ddf63e4ee2684c1728f4")
  ("rust-mode" . "e443ccf2884028d3b6cc550ff20e7c92dadccb68")
  ("rust-playground" . "5a117781dcb66065bea7830dd73618008fc34949")
  ("s.el" . "dda84d38fffdaf0c9b12837b504b402af910d01d")

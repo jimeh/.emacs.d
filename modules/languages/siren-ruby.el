@@ -129,17 +129,6 @@ and will break things."
   (add-to-list 'safe-local-variable-values
                '(lsp-solargraph-use-bundler . t)))
 
-(use-package rufo
-  :defer t
-  :custom
-  (rufo-minor-mode-executable "rufo")
-  (rufo-minor-mode-use-bundler nil)
-  (rufo-minor-mode-debug-mode nil)
-
-  :init
-  (add-to-list 'safe-local-variable-values
-               '(rufo-minor-mode-use-bundler . t)))
-
 (use-package dap-ruby
   :straight dap-mode
   :after (ruby-mode dap-mode))
