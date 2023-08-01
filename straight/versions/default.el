@@ -38,7 +38,7 @@
  ("dired-plus" . "90fc0d5a110063278e3fe320dd903ec07be5dba7")
  ("dirvish" . "4b63cd2e5ba994f8e674388db7035de1a8f0343f")
  ("docker.el" . "4a308e6b2184a1b7745df5a8b8adafb29b3f7157")
- ("doom-modeline" . "af3274ae5f31947370bbc57661c0f19b5c06ccfc")
+ ("doom-modeline" . "265a8249ff8b61ef7f2e09c56988dd04b1f2d56e")
  ("dumb-jump" . "0a783d1db610ff1dc4e1b7869589cff16ff92f7a")
  ("edit-indirect" . "f80f63822ffae78de38dbe72cacaeb1aaa96c732")
  ("editorconfig-emacs" . "a8b31c925e5cdee4b26b10a43094787937fe441e")
