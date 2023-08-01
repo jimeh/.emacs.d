@@ -58,6 +58,7 @@
 (defun siren-flycheck-setup-hadolint()
   "Setup hadolint flycheck checker."
   (with-eval-after-load 'flycheck
+    (flycheck-def-executable-var hadolint "hadolint")
     (flycheck-define-checker hadolint
       "A Dockerfile syntax checker using the hadolint.
 
