@@ -31,10 +31,10 @@
 (use-package lsp-terraform
   :straight lsp-mode
   :hook
-  (terraform-mode . siren-lsp-rust-mode-setup)
+  (terraform-mode . siren-lsp-terraform-mode-setup)
 
   :preface
-  (defun siren-lsp-rust-mode-setup ()
+  (defun siren-lsp-terraform-mode-setup ()
     ;; Disable semantic tokens as it typically causes an annoying delay with the
     ;; syntax highlighting as you type. Essentially all new text is a very faded
     ;; out grey color for the first 1-2 seconds as you type.
