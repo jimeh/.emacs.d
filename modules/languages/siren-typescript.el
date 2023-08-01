@@ -36,6 +36,7 @@
                   indent-level width
                   tab-width width))
 
+    (lsp-format-buffer-on-save-mode t)
     (lsp-deferred)
     (flycheck-mode t)))
 
