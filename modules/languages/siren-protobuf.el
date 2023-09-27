@@ -28,7 +28,12 @@
     (if (not (flycheck-protobuf-buf-project-root))
         (clang-format-on-save-mode t)
       (setq-local flycheck-checker 'protobuf-buf)
-      (buf-format-on-save-mode t)))
+      (buf-format-on-save-mode t))
+
+    (lsp)
+    (when (fboundp 'flycheck-select-checker)
+      (flycheck-select-checker 'protobuf-buf)
+      (flycheck-add-next-checker 'protobuf-buf 'lsp)))
 
   (defun flycheck-protobuf-buf-project-root (&optional _checker)
     "Return the nearest directory holding the buf.yaml configuration."
@@ -57,6 +62,10 @@ See URL `https://github.com/bufbuild/buf'."
     :predicate flycheck-buffer-saved-p)
 
   (add-to-list 'flycheck-checkers 'protobuf-buf))
+
+(use-package lsp-bufls
+  ;; from vendor directory
+  :straight (:type built-in))
 
 (provide 'siren-protobuf)
 ;;; siren-protobuf.el ends here
