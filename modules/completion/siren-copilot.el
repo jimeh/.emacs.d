@@ -21,8 +21,13 @@
   ("M-F" 'siren-copilot-dwim-by-word)
   ("M-E" 'siren-copilot-dwim-by-line)
   (:keymaps 'copilot-completion-map
+            "C-g" 'copilot-clear-overlay
             "M-N" 'copilot-next-completion
-            "M-P" 'copilot-previous-completion)
+            "M-P" 'copilot-previous-completion
+            "M-f" 'copilot-accept-completion-by-word
+            "M-<right>" 'copilot-accept-completion-by-word
+            "C-e" 'copilot-accept-completion-by-line
+            "<end>" #'copilot-accept-completion-by-line)
 
   :custom
   (copilot-auto-balance t)
