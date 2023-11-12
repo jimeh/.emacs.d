@@ -4,7 +4,7 @@
 ;; URL: https://github.com/jimeh/.emacs.d/tree/master/vendor/tab-bar-notch
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: convenience, hardware
-;; Version: 0.0.1
+;; Version: 0.0.2
 
 ;; This file is not part of GNU Emacs.
 
@@ -33,7 +33,7 @@
 ;;; Commentary:
 ;;
 ;; Automatically resize height of tab-bar to match height of the physical notch
-;; on modern MacBook Pro displays in full-screen mode. This prevents buffer
+;; on modern MacBook Pro displays in fullscreen mode. This prevents buffer
 ;; content from being hidden behind the physical notch.
 ;;
 ;; To use, simply add 'tab-bar-notch-spacer to tab-bar-format. This will
@@ -42,17 +42,21 @@
 
 ;;; Code:
 
+(require 'cl-lib)
+
 (defgroup tab-bar-notch nil
   "Adjust the tab bar height for MacBook Pro's camera notch."
   :group 'convenience
   :prefix "tab-bar-notch-")
 
-(defcustom tab-bar-notch-fullscreen-ratio 1.539
-  "The target width-to-height ratio.
+(defcustom tab-bar-notch-fullscreen-ratios '(1.539  ; 14-inch MacBook Pro
+                                             1.547) ; 16-inch MacBook Pro
+  "List of target width-to-height ratios.
 
-When frame width vs height ratio matches this Emacs assumes is in
-fullscreen behind the notch."
-  :type 'float
+When frame width vs height ratio matches any of these, and
+fullscreen is enabled, we can relatively safely assume the frame
+is being rendered behind the camera notch."
+  :type '(repeat float)
   :group 'tab-bar-notch)
 
 (defcustom tab-bar-notch-fullscreen-ratio-tolerance 0.001
@@ -122,11 +126,12 @@ behind the notch."
       face-name)))
 
 (defun tab-bar-notch--fullscreen-ratio-p (width height)
-  "Determine if WIDTH vs HEIGHT aspect ratio matches target ratio."
+  "Determine if WIDTH vs HEIGHT aspect ratio matches any target ratio in the list."
   (let ((frame-ratio (/ (float width) height)))
-    (tab-bar-notch--fequal frame-ratio
-                           tab-bar-notch-fullscreen-ratio
-                           tab-bar-notch-fullscreen-ratio-tolerance)))
+    (cl-some (lambda (ratio)
+               (tab-bar-notch--fequal frame-ratio ratio
+                                      tab-bar-notch-fullscreen-ratio-tolerance))
+             tab-bar-notch-fullscreen-ratios)))
 
 (defun tab-bar-notch--calculate-face-height (&optional frame)
   "Calculate the face height value of the tab bar of FRAME."
