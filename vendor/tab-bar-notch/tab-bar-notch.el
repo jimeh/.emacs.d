@@ -4,7 +4,7 @@
 ;; URL: https://github.com/jimeh/.emacs.d/tree/master/vendor/tab-bar-notch
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: convenience, hardware
-;; Version: 0.0.2
+;; Version: 0.0.3
 
 ;; This file is not part of GNU Emacs.
 
@@ -49,26 +49,18 @@
   :group 'convenience
   :prefix "tab-bar-notch-")
 
-(defcustom tab-bar-notch-fullscreen-ratios '(1.539  ; 14-inch MacBook Pro
-                                             1.547) ; 16-inch MacBook Pro
-  "List of target width-to-height ratios.
+(defcustom tab-bar-notch-screen-sizes '((1.539 . 3.513)  ; 14-inch MacBook Pro
+                                        (1.547 . 3.088)) ; 16-inch MacBook Pro
+  "List screen size ratios and their relative notch heights.
 
-When frame width vs height ratio matches any of these, and
-fullscreen is enabled, we can relatively safely assume the frame
-is being rendered behind the camera notch."
-  :type '(repeat float)
+The first value is the width-to-height ratio, and the second
+value is the height of camera notch as a percentage (0.0-100.0)
+of the screen height."
+  :type '(alist :key-type float :value-type float)
   :group 'tab-bar-notch)
 
-(defcustom tab-bar-notch-fullscreen-ratio-tolerance 0.001
+(defcustom tab-bar-notch-screen-ratio-tolerance 0.001
   "Tolerance for the target ratio to accommodate minor variations."
-  :type 'float
-  :group 'tab-bar-notch)
-
-(defcustom tab-bar-notch-screen-height-percentage 3.51
-  "Percentage of screen height covered by the physical notch.
-
-Used to calculate the height of the tab-bar when in fullscreen
-behind the notch."
   :type 'float
   :group 'tab-bar-notch)
 
@@ -82,9 +74,9 @@ behind the notch."
   :type 'float
   :group 'tab-bar-notch)
 
-(defface tab-bar-notch-spacer-face
-  '((t :inherit nil))
-  "Face for invisible character which can be used to modify bar height."
+(defcustom tab-bar-notch-max-height 10.0
+  "Maximum height multiplier allowed."
+  :type 'float
   :group 'tab-bar-notch)
 
 (defvar tab-bar-notch--next-face-id 1
@@ -93,10 +85,12 @@ behind the notch."
 ;;;###autoload
 (defun tab-bar-notch-spacer ()
   "Return an invisible character with custom face for setting height."
-  (if (not (memq 'tab-bar-notch-adjust-height window-size-change-functions))
-      (add-hook 'window-size-change-functions 'tab-bar-notch-adjust-height))
+  (if (not window-system)
+      " "
+    (if (not (memq 'tab-bar-notch-adjust-height window-size-change-functions))
+        (add-hook 'window-size-change-functions 'tab-bar-notch-adjust-height))
 
-  (propertize " " 'face (tab-bar-notch--face-name)))
+    (propertize " " 'face (tab-bar-notch--face-name))))
 
 (defun tab-bar-notch-adjust-height (&optional frame)
   "Adjust the height of the tab bar of FRAME."
@@ -108,7 +102,7 @@ behind the notch."
          (current-height (face-attribute face-name :height frame))
          (new-height (tab-bar-notch--calculate-face-height frame)))
 
-    (if (not (tab-bar-notch--fequal current-height new-height))
+    (if (not (tab-bar-notch--floateq current-height new-height))
         (set-face-attribute face-name nil :height new-height))))
 
 (defun tab-bar-notch--face-name (&optional frame)
@@ -125,52 +119,45 @@ behind the notch."
       (set-frame-parameter frame 'tab-bar-notch--face-name face-name)
       face-name)))
 
-(defun tab-bar-notch--fullscreen-ratio-p (width height)
-  "Determine if WIDTH vs HEIGHT aspect ratio matches any target ratio in the list."
-  (let ((frame-ratio (/ (float width) height)))
-    (cl-some (lambda (ratio)
-               (tab-bar-notch--fequal frame-ratio ratio
-                                      tab-bar-notch-fullscreen-ratio-tolerance))
-             tab-bar-notch-fullscreen-ratios)))
+(defun tab-bar-notch--notch-height (width height)
+  "Return the notch height for the given screen WIDTH and HEIGHT.
+
+Returns 0 if no aspect ratio match is found."
+  (let* ((ratio (/ (float width) height))
+         (matched-pair (cl-find-if (lambda (pair)
+                                     (tab-bar-notch--floateq
+                                      ratio (car pair)
+                                      tab-bar-notch-screen-ratio-tolerance))
+                                   tab-bar-notch-screen-sizes)))
+    (if matched-pair
+        (round (* height (/ (cdr matched-pair) 100)))
+      0)))
 
 (defun tab-bar-notch--calculate-face-height (&optional frame)
   "Calculate the face height value of the tab bar of FRAME."
   (let* ((frame (or frame (selected-frame)))
-         (height (if (tab-bar-notch--fullscreen-p frame)
-                     (let ((frame-width (frame-pixel-width frame))
-                           (frame-height (frame-pixel-height frame)))
-                       (if (tab-bar-notch--fullscreen-ratio-p frame-width frame-height)
-                           (tab-bar-notch--notch-multiplier frame-height
-                                                            (frame-char-height frame))
-                         tab-bar-notch-normal-fullscreen-height))
-                   tab-bar-notch-normal-height)))
-    (max 1.0 height)))
-
-(defun tab-bar-notch--notch-multiplier (frame-height char-height)
-  "Calculate the notch height multiplier.
-
-FRAME-HEIGHT is the height of the frame in pixels and CHAR-HEIGHT
-is the height of a single character in pixels."
-  (let ((height (round (* frame-height
-                          (/ tab-bar-notch-screen-height-percentage 100)))))
-    (if (> height 0)
-        (/ height (float char-height))
-      tab-bar-notch-normal-height)))
+         (face-height (if (tab-bar-notch--fullscreen-p frame)
+                          (let ((notch (tab-bar-notch--notch-height
+                                        (frame-pixel-width frame)
+                                        (frame-pixel-height frame))))
+                            (if (> notch 0)
+                                (/ notch (float (frame-char-height frame)))
+                              tab-bar-notch-normal-fullscreen-height))
+                        tab-bar-notch-normal-height)))
+    (min (max face-height 1.0) tab-bar-notch-max-height)))
 
 (defun tab-bar-notch--fullscreen-p (&optional frame)
   "Determine if FRAME is in fullscreen mode."
   (not (eq (frame-parameter (or frame (selected-frame)) 'fullscreen) nil)))
 
-(defun tab-bar-notch--fequal (float1 float2 &optional tolerance)
+(defun tab-bar-notch--floateq (float1 float2 &optional tolerance)
   "Check if FLOAT1 and FLOAT2 are nearly equal.
 
 TOLERANCE specifies the maximum difference for them to be
-considered equal. If TOLERANCE is nil, a default small value is
-used."
-  (let ((tolerance (or tolerance 1e-6))
-        (float1 (if (floatp float1) float1 0.0))
-        (float2 (if (floatp float2) float2 0.0)))
-    (< (abs (- float1 float2)) tolerance)))
+considered equal. If TOLERANCE is nil, 0.000001 will be used."
+  (< (abs (- (if (floatp float1) float1 0.0)
+             (if (floatp float2) float2 0.0)))
+     (or tolerance 1e-6)))
 
 (provide 'tab-bar-notch)
 
