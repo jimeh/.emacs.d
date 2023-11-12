@@ -20,10 +20,27 @@
   ("C-c C-;" 'projectile-switch-project)
   ("C-x C-t" 'projectile-find-file)
   ("C-x j" 'projectile-dired)
-  ("C-x ;" 'projectile-find-file)
-  ("C-x C-;" 'projectile-find-file)
+  ("C-x ;" 'siren-projectile-find-file)
+  ("C-x C-;" 'siren-projectile-find-file)
   (:keymaps 'projectile-mode-map
             "C-c p" 'projectile-command-map)
+
+  :preface
+  (defun siren-projectile-find-file ()
+    "Find file in current project, or switch project if no root detected.
+
+This is a replacement for `projectile-find-file' which switches
+calls `projectile-switch-project' if no project root is detected.
+
+The original `projectile-find-file' function does complete
+projects if no root is detected, but it does so internally
+without calling `projectile-switch-project'. This prevents some
+completion systems detecting if it is completing project paths,
+or file/folder paths within a project."
+    (interactive)
+    (if (projectile-project-root)
+        (projectile-find-file)
+      (projectile-switch-project)))
 
   :custom
   (projectile-buffers-filter-function 'projectile-buffers-with-file-or-process)
