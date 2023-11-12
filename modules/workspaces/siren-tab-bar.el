@@ -8,6 +8,10 @@
 
 (require 'siren-workspace-map)
 
+(use-package tab-bar-notch
+  :straight (:type built-in) ;; from vendor directory
+  )
+
 (use-package tab-bar
   :straight (:type built-in)
 
@@ -55,7 +59,10 @@
 
   :custom
   (tab-bar-close-button-show nil)
-  (tab-bar-format '(tab-bar-format-tabs-groups tab-bar-separator))
+  (tab-bar-format `(tab-bar-format-tabs-groups
+                    ,(if (eq system-type 'darwin)
+                         'tab-bar-notch-spacer
+                       'tab-bar-separator)))
   (tab-bar-history-limit 25)
   (tab-bar-new-tab-choice "*scratch*")
   (tab-bar-show 1)
