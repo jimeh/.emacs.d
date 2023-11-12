@@ -36,12 +36,21 @@
   '(trailing-whitespace :foregroup (doom-color base4)
                         :background (doom-color red))
 
-  ;; tab-line
-  '(tab-line :background bg-alt :foreground fg-alt)
-
   ;; tab-bar
-  '(tab-bar :background bg-alt :foreground fg-alt)
   '(tab-bar-tab-group-current :foreground (doom-darken violet 0.3))
+
+  ;; inverted tab-bar and tab-line
+  '(tab-line :background bg :foreground bg)
+  '(tab-line-tab :background bg-alt :foreground fg-alt)
+  '(tab-line-tab-inactive :background bg :foreground fg)
+  '(tab-line-tab-inactive-alternate :background bg :foreground fg)
+  '(tab-line-tab-current :background bg-alt :foreground fg-alt)
+  '(tab-line-highlight :background bg-alt :foreground fg-alt)
+  '(tab-bar :background bg :foreground fg)
+  '(tab-bar-tab :background bg-alt :foreground fg-alt)
+  '(tab-bar-tab-inactive :background bg :foreground fg)
+  '(siren-tab-bar-tab-hint :inherit 'tab-bar-tab :foreground fg-alt)
+  '(siren-tab-bar-tab-hint-inactive :inherit 'tab-bar-tab-inactive :foreground fg-alt)
 
   ;; fill-column-indicator
   '(fill-column-indicator :foreground (doom-lighten base3 0.10))
