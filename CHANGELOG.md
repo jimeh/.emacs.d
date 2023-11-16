@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.8.46](https://github.com/jimeh/.emacs.d/compare/v0.8.45...v0.8.46) (2023-11-16)
+
+
+### Features
+
+* **completion/copilot:** add useful keybindings when overlay is active ([d54f89a](https://github.com/jimeh/.emacs.d/commit/d54f89af23827441d47c8554ea88dcc1fdf8accf))
+* **editor/doom-modeline:** override flycheck/flymake "ok" icon ([2212a5e](https://github.com/jimeh/.emacs.d/commit/2212a5eb1330b40c712578ee98e5c7c6bfeb9da6))
+* **editor/treesit:** expand treesit highlight features to max ([400ba2c](https://github.com/jimeh/.emacs.d/commit/400ba2c37c5fe5b7c4a2a95473c863ff025aa8e5))
+* **language/go:** expand lsp-golangci-lint to a proper lsp-mode client ([01c5018](https://github.com/jimeh/.emacs.d/commit/01c5018702c81be9e6eeaad2045498b1670810f9))
+* **language/protobuf:** enable use of bufls language server ([359e692](https://github.com/jimeh/.emacs.d/commit/359e692d8e4b8960b1f02fa5a3213ff4b9d0ae40))
+* **language/ruby:** remove rufo, as I haven't used it for years ([70a5d0f](https://github.com/jimeh/.emacs.d/commit/70a5d0f0afd335a12b2ee0e3caeb7585d505d01e))
+* **language/typescript:** enable lsp-format-on-save ([de391e0](https://github.com/jimeh/.emacs.d/commit/de391e00ea4b006055fb680ffab497ea269f4ae8))
+* **language/xml:** add xmllint formatter setup and bind to C-c C-f ([d405e96](https://github.com/jimeh/.emacs.d/commit/d405e962da1da9b3a912f768715f8cd5a7a32ab0))
+* **lsp:** expand list of ignored watch directories ([0dd1ded](https://github.com/jimeh/.emacs.d/commit/0dd1dedf99702a4f5f6569f380bd51e3d7cfe3ad))
+* **macbook-notch:** switch from vendored tab-bar-notch to standalone repo ([f1c5602](https://github.com/jimeh/.emacs.d/commit/f1c56020d4a7cd2caa85f3d033e8a2dd1d54e52d))
+* **theme/override:** invert tab-bar active/inactive background colors ([f070c1b](https://github.com/jimeh/.emacs.d/commit/f070c1bdae29898d948e2df1ff268daad46152f5))
+* **ui/macos:** shift buffer content below display notch on modern MacBook Pro models ([fcc2321](https://github.com/jimeh/.emacs.d/commit/fcc23217456624369dccc0de4c0c421735a13770))
+* **vendor/lsp-golangci-lint:** add option for passing --fast flag ([9ca7035](https://github.com/jimeh/.emacs.d/commit/9ca7035ee33abfa9cfe55778601b130a1e97afda))
+* **vendor/tab-bar-notch:** add support for 16-inch MacBook Pro models ([4e64dc3](https://github.com/jimeh/.emacs.d/commit/4e64dc3b340768c653266482562b58dc67c644c3))
+
+
+### Bug Fixes
+
+* **completion/copilot:** fix issue with company compat tweak ([8612ae4](https://github.com/jimeh/.emacs.d/commit/8612ae4fc6103052678a1d5e49e9f2eab4c83b12))
+* **language/dockerfile:** ensure hadolint executable is found ([a64284d](https://github.com/jimeh/.emacs.d/commit/a64284d754b2e8845dfae3c600d3593dde1cb44f))
+* **language/go:** correctly set go-test-args variable ([c452150](https://github.com/jimeh/.emacs.d/commit/c4521500d1b39da9cdc40a1d4fbeef9aa8227401))
+* **language/ruby:** prevent use of lsp-rename in ruby buffers ([f30f8ab](https://github.com/jimeh/.emacs.d/commit/f30f8ab728bd3083e4fbc0f05d86484fca56ac2d))
+* **language/terraform:** fix setup func name typo to avoid conflict with rust ([b0cc7be](https://github.com/jimeh/.emacs.d/commit/b0cc7be1639200165842a2adc3866e80d6ae9a95))
+* **language/typescript:** disable lsp-semantic-tokens ([a10f797](https://github.com/jimeh/.emacs.d/commit/a10f797d4228c62c678a58e2533564fca779a568))
+* **language/typescript:** ensure it loads correctly ([de1fd38](https://github.com/jimeh/.emacs.d/commit/de1fd38481ef653c0f9456b0bdea414aba97cdb2))
+* **projects/projectile:** fix issue where incorrect completion style may be used ([69c3445](https://github.com/jimeh/.emacs.d/commit/69c34452953843c43b099c171e6693757e7147cd))
+* **vendor/tab-bar-notch:** correctly calculate notch height on 16-inch displays ([c1e5828](https://github.com/jimeh/.emacs.d/commit/c1e5828e6f9f1556b48e82ad5af152a53bb7e30b))
+
 ## [0.8.45](https://github.com/jimeh/.emacs.d/compare/v0.8.44...v0.8.45) (2023-05-23)
 
 
