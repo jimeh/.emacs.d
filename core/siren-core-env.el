@@ -13,12 +13,7 @@
                                     "MANPATH"
                                     "TMPDIR"
                                     "KUBECONFIG"
-                                    "GOPATH"
-                                    "GOBIN"
-                                    "GOROOT"
                                     "GOPRIVATE"
-                                    "GOENV_GOPATH_PREFIX"
-                                    "GOENV_VERSION"
                                     "RUST_BACKTRACE"
                                     "MallocNanoZone"))
   (exec-path-from-shell-arguments '("-l"))
