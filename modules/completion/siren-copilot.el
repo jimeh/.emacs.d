@@ -24,9 +24,9 @@
             "C-g" 'copilot-clear-overlay
             "M-N" 'copilot-next-completion
             "M-P" 'copilot-previous-completion
-            "M-f" 'copilot-accept-completion-by-word
+            ;; "M-f" 'copilot-accept-completion-by-word
             "M-<right>" 'copilot-accept-completion-by-word
-            "C-e" 'copilot-accept-completion-by-line
+            ;; "C-e" 'copilot-accept-completion-by-line
             "<end>" #'copilot-accept-completion-by-line)
 
   :custom
