@@ -72,6 +72,7 @@
 
 ;; Misc.
 (require 'siren-explain-pause)
+(require 'siren-list-available-fonts)
 (require 'siren-lorem-ipsum)
 (require 'siren-rand)
 (require 'siren-refine)
