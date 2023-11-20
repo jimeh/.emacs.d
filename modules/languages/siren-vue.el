@@ -14,6 +14,7 @@
 
   :preface
   (defun siren-vue-mode-setup ()
+    (run-hooks 'prog-mode-hook)
     (lsp-deferred)))
 
 (provide 'siren-vue)
