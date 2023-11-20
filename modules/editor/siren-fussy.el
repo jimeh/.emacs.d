@@ -6,32 +6,6 @@
 
 ;;; Code:
 
-(use-package flx-rs
-  :straight (flx-rs :repo "jcs-elpa/flx-rs" :fetcher github
-                    :files (:defaults "bin"))
-  :config
-  (with-eval-after-load 'consult
-    (defun siren-flx-rs-score-consult-fix (orig-fun str query &rest args)
-      "Fix input string provided by consult to be compatible with flx-rs.
-
-Some commands that use consult seem to add metadata to candidates
-in the form of some extra bytes at the end of the string. These
-extra bytes causes flx-rs to not match against it correctly.
-
-Consult uses the `invisible' text property to mark these extra
-bytes so that they are not displayed to the user in completion
-frameworks.
-
-This function attempts to extract the original input string by
-looking for where the `invisible' text property begins, and
-grabbing all text before it."
-      (let ((end (next-single-property-change 0 'invisible str)))
-        (apply orig-fun (if end (substring str 0 end) str) query args)))
-
-    (advice-add 'flx-rs-score :around 'siren-flx-rs-score-consult-fix))
-
-  (flx-rs-load-dyn))
-
 (use-package fussy
   :demand t
   :custom
@@ -41,7 +15,7 @@ grabbing all text before it."
 
   (fussy-ignore-case t)
   (fussy-filter-fn 'fussy-filter-default)
-  (fussy-score-fn 'flx-rs-score)
+  (fussy-remove-bad-char-fn #'fussy-without-tofu-char)
 
   :preface
   (defun siren-fussy--company-transform-advice (f &rest args)
@@ -55,7 +29,23 @@ grabbing all text before it."
               :around 'siren-fussy--company-transform-advice)
   (setq completion-category-defaults nil))
 
+(use-package flx-rs
+  :straight (flx-rs :repo "jcs-elpa/flx-rs" :fetcher github
+                    :files (:defaults "bin"))
 
+  :custom
+  (fussy-score-fn #'siren-flx-rs-score)
+
+  :preface
+  (defun siren-flx-rs-score (str query &rest args)
+    "Score STR for QUERY using `flx-rs-score'.
+
+This will no longer be needed when used with fussy after this PR
+is merged: https://github.com/jojojames/fussy/pull/36"
+    (flx-rs-score (funcall fussy-remove-bad-char-fn str) query args))
+
+  :config
+  (flx-rs-load-dyn))
 
 (provide 'siren-fussy)
 ;;; siren-fussy.el ends here
