@@ -129,7 +129,7 @@
     (golines-format-buffer)))
 
 (use-package lsp-golangci-lint
-  :straight (:type built-in) ;; from vendor directory
+  :straight lsp-mode
   :custom
   (lsp-golangci-lint-server-debug nil))
 

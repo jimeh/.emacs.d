@@ -103,6 +103,7 @@
 
   :preface
   (defun siren-lsp-ruby-mode-setup ()
+    (setq-local lsp-disabled-clients '(vue-semantic-server))
     (setq-local siren-lsp-manual-format-buffer-func
                 'siren-lsp-ruby-manual-format-buffer)
     (lsp-format-buffer-on-save-mode t)
