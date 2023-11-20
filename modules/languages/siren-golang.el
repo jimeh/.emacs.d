@@ -118,6 +118,9 @@
 
   :preface
   (defun siren-lsp-go-mode-setup ()
+    ;; Disable semantic tokens as it isn't support by gopls.
+    (setq-local lsp-semantic-tokens-enable nil)
+
     (setq-local siren-lsp-manual-format-buffer-func
                 'siren-lsp-go-manual-format-buffer)
     (lsp-format-buffer-on-save-mode t)
