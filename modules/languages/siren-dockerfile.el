@@ -8,39 +8,13 @@
 
 (require 'siren-lsp)
 
-(if (fboundp 'dockerfile-ts-mode)
-    ;; Use built-in treesit support if available.
-    (use-package dockerfile-ts-mode
-      :straight (:type built-in)
-      :mode
-      "[/\\]\\(?:Containerfile\\|Dockerfile\\)\\(?:\\.[^/\\]*\\)?\\'"
-      "\\.dockerfile\\'"
-      :hook
-      (dockerfile-ts-mode . siren-dockerfile-mode-setup)
-
-      :init
-      (require 'siren-treesit)
-
-      :config
-      (siren-flycheck-setup-hadolint)
-
-      ;; Remove auto-mode-alist entry added by dockerfile-ts-mode, as it's too
-      ;; greedy and matches on files such as "siren-dockerfile.el" which is a
-      ;; problem when trying to edit this file for example.
-      (setq auto-mode-alist
-            (delete '("\\(?:Dockerfile\\(?:\\..*\\)?\\|\\.[Dd]ockerfile\\)\\'"
-                      . dockerfile-ts-mode)
-                    auto-mode-alist)))
-
-  ;; Otherwise, fallback to regular dockerfile-mode.
-  (use-package dockerfile-mode
-    :hook
-    (dockerfile-mode . siren-dockerfile-mode-setup)
-    :config
-    (siren-flycheck-setup-hadolint)))
-
 (defun siren-dockerfile-mode-setup ()
   "Shared setup for both `dockerfile-mode' and `dockerfile-ts-mode'."
+  ;; Disable vue-semantic-server as it is very aggressive and activates in all
+  ;; files within projects that uses vue, preventing the lsp servers for other
+  ;; file types from working.
+  (setq-local lsp-disabled-clients '(vue-semantic-server))
+
   ;; Disable semantic tokens as it typically causes an annoying delay with the
   ;; syntax highlighting as you type. Essentially all new text is a very faded
   ;; out grey color for the first 1-2 seconds as you type.
@@ -52,11 +26,12 @@
     (flycheck-select-checker 'hadolint)
     (flycheck-add-next-checker 'hadolint 'lsp)))
 
-;; Define fixed Hadolint checker, built-in checker expects lines to start
-;; with "<filename>:", but when input is provided via STDIN, the each line
-;; starts with "-:".
 (defun siren-flycheck-setup-hadolint()
-  "Setup hadolint flycheck checker."
+  "Setup hadolint flycheck checker.
+
+This is a fixed Hadolint checker. The checker built-in to
+flycheck expects lines to start with \"<filename>:\", but when
+input is provided via STDIN, the each line starts with \"-:\"."
   (with-eval-after-load 'flycheck
     (flycheck-def-executable-var hadolint "hadolint")
     (flycheck-define-checker hadolint
@@ -84,6 +59,36 @@ See URL `http://github.com/hadolint/hadolint/'."
          (flycheck-remove-error-file-names "/dev/stdin" errors)))
       :modes (dockerfile-mode dockerfile-ts-mode))
     (add-to-list 'flycheck-checkers 'hadolint)))
+
+(use-package dockerfile-mode
+  :hook
+  (dockerfile-mode . siren-dockerfile-mode-setup)
+  :config
+  (siren-flycheck-setup-hadolint))
+
+;;; Disabled setup for dockerfile-ts-mode. It's not as mature as dockerfile-mode,
+;;; so we don't enable it as the default mode for Dockerfiles.
+;;;
+;; (when (fboundp 'dockerfile-ts-mode)
+;;   (require 'siren-treesit)
+;;   (use-package dockerfile-ts-mode
+;;     :straight (:type built-in)
+;;     :mode
+;;     "[/\\]\\(?:Containerfile\\|Dockerfile\\)\\(?:\\.[^/\\]*\\)?\\'"
+;;     "\\.dockerfile\\'"
+;;     :hook
+;;     (dockerfile-ts-mode . siren-dockerfile-mode-setup)
+;;
+;;     :config
+;;     (siren-flycheck-setup-hadolint)
+;;
+;;     ;; Remove auto-mode-alist entry added by dockerfile-ts-mode, as it's too
+;;     ;; greedy and matches on files such as "siren-dockerfile.el" which is a
+;;     ;; problem when trying to edit this file for example.
+;;     (setq auto-mode-alist
+;;           (delete '("\\(?:Dockerfile\\(?:\\..*\\)?\\|\\.[Dd]ockerfile\\)\\'"
+;;                     . dockerfile-ts-mode)
+;;                   auto-mode-alist))))
 
 (provide 'siren-dockerfile)
 ;;; siren-dockerfile.el ends here
