@@ -6,8 +6,11 @@
 
 ;;; Code:
 
+(condition-case nil
+    (require 'treesit)
+  (error nil)) ; Do nothing if treesit is not available.
+
 (when (fboundp 'treesit-ready-p)
-  (require 'treesit)
   (setopt treesit-font-lock-level 4)
 
   (defun siren-treesit-prepare (mode source)
