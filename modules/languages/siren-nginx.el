@@ -18,9 +18,5 @@
   (defun siren-nginx-mode-setup ()
     (setq-local tab-width 4)))
 
-(use-package company-nginx
-  :hook
-  (nginx-mode . company-nginx-keywords))
-
 (provide 'siren-nginx)
 ;;; siren-nginx.el ends here

@@ -20,7 +20,6 @@
  ("coffee-mode" . "1c6adeae14f3795d3b1e44321189ed7c2c93c967")
  ("company-box" . "b6f53e26adf948aca55c3ff6c22c21a6a6614253")
  ("company-mode" . "d9d54abaf78da1e62fad7def8eeeb4c41110725d")
- ("company-nginx" . "8a9f1a5653fe2d9a5042bfb9377d54f37fcc64c8")
  ("compat" . "b6b64e004cd35b8fe3c40fe5ca250826f65a3369")
  ("consult" . "04c89250e7eb1bffd822bcfa57b6049af6da2ea6")
  ("consult-dir" . "3f5f4b71ebe819392cb090cda71bd39a93bd830a")
