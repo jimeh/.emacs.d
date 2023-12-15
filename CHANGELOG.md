@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.8.47](https://github.com/jimeh/.emacs.d/compare/v0.8.46...v0.8.47) (2023-12-15)
+
+
+### Features
+
+* **editor:** disable indentation highlight guides ([862b7fc](https://github.com/jimeh/.emacs.d/commit/862b7fc26e94542cdea7e88c9f8f529daaa7c9c6))
+* **misc:** add helper command to display list of available fonts ([c6d5682](https://github.com/jimeh/.emacs.d/commit/c6d5682037b54886ccc679ea78f0833083d9f0d6))
+
+
+### Bug Fixes
+
+* **completion/copilot:** disable annoying keybinding while overlay is visible ([b9e9a13](https://github.com/jimeh/.emacs.d/commit/b9e9a13eb9c4bc52a0e9075289973d2d82052b03))
+* **copilot:** suppress warnings about indentation detection ([58e9cc1](https://github.com/jimeh/.emacs.d/commit/58e9cc1af13e0962cf7b6fc0890d12a081ff1076))
+* **editor/fussy:** improve completion performance and simplify setup ([e74a3bd](https://github.com/jimeh/.emacs.d/commit/e74a3bd3ad3f663eb448baa581a85d8edc90e7de))
+* **language/dockerfile:** use dockerfile-mode again ([e5efb2d](https://github.com/jimeh/.emacs.d/commit/e5efb2d19047635bd4f84df7662baa6beb4ce50f))
+* **language/go:** disable lsp semantic tokens ([07794bb](https://github.com/jimeh/.emacs.d/commit/07794bb8bef0d51b5bf16bacb3e7a170bbbc8b88))
+* **language/vue:** fix vue-mode setup by running prog-mode-hook ([527934d](https://github.com/jimeh/.emacs.d/commit/527934de93e5c23acd54e2133b679dc2e21c73ea))
+* **text-editing/treesit:** ensure treesit and related packages are loaded correctly ([0053382](https://github.com/jimeh/.emacs.d/commit/0053382b787c595bd60313b60e9400f0789187ea))
+* **text-editing/treesit:** resolve issues with treesit-auto package ([df10665](https://github.com/jimeh/.emacs.d/commit/df10665d0c4b72619352e08ff6207da0cc0c3e2e))
+
 ## [0.8.46](https://github.com/jimeh/.emacs.d/compare/v0.8.45...v0.8.46) (2023-11-16)
 
 
