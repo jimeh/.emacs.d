@@ -79,6 +79,9 @@ See URL `http://github.com/hadolint/hadolint/'."
 ;;     :hook
 ;;     (dockerfile-ts-mode . siren-dockerfile-mode-setup)
 ;;
+;;     :init
+;;     (siren-treesit-auto-ensure-grammar 'dockerfile)
+;;
 ;;     :config
 ;;     (siren-flycheck-setup-hadolint)
 ;;

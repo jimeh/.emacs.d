@@ -19,15 +19,13 @@
     (typescript-ts-mode . siren-typescript-mode-setup)
 
     :config
-    (when (not (treesit-ready-p 'typescript))
-      (treesit-install-language-grammar 'typescript)))
+    (siren-treesit-auto-ensure-grammar 'typescript))
 
   (use-package tsx-ts-mode
     :straight (:type built-in)
     :mode "\\.tsx\\'"
     :config
-    (when (not (treesit-ready-p 'tsx))
-      (treesit-install-language-grammar 'tsx)))
+    (siren-treesit-auto-ensure-grammar 'tsx))
 
   (defun siren-typescript-mode-setup ()
     "Default setup function for `typescript-ts-mode' and `tsx-ts-mode'."
