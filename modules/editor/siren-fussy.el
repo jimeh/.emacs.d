@@ -34,15 +34,7 @@
                     :files (:defaults "bin"))
 
   :custom
-  (fussy-score-fn #'siren-flx-rs-score)
-
-  :preface
-  (defun siren-flx-rs-score (str query &rest args)
-    "Score STR for QUERY using `flx-rs-score'.
-
-This will no longer be needed when used with fussy after this PR
-is merged: https://github.com/jojojames/fussy/pull/36"
-    (flx-rs-score (funcall fussy-remove-bad-char-fn str) query args))
+  (fussy-score-fn #'fussy-flx-rs-score)
 
   :config
   (flx-rs-load-dyn))
