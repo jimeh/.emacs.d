@@ -6,7 +6,6 @@
 
 ;;; Code:
 
-(require 'siren-all-the-icons)
 (require 'siren-nerd-icons)
 
 (require 'siren-doom-modeline)
