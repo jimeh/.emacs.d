@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-nerd-icons)
+
 (use-package dirvish
   :custom
   (dirvish-cache-dir (siren-cache-dir "dirvish"))
@@ -19,7 +21,7 @@
      ("k" "~/Projects/krystal/" "krystal")))
   (dirvish-mode-line-format '(:left (sort file-time " " file-size symlink)
                                     :right (omit yank index)))
-  (dirvish-attributes '(subtree-state all-the-icons collapse file-size))
+  (dirvish-attributes '(subtree-state nerd-icons collapse file-size))
   (dirvish-reuse-session t)
   (dirvish-side-auto-expand t)
 
