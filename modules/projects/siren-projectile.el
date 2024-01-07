@@ -20,27 +20,10 @@
   ("C-c C-;" 'projectile-switch-project)
   ("C-x C-t" 'projectile-find-file)
   ("C-x j" 'projectile-dired)
-  ("C-x ;" 'siren-projectile-find-file)
-  ("C-x C-;" 'siren-projectile-find-file)
+  ("C-x ;" 'projectile-find-file)
+  ("C-x C-;" 'projectile-find-file)
   (:keymaps 'projectile-mode-map
             "C-c p" 'projectile-command-map)
-
-  :preface
-  (defun siren-projectile-find-file ()
-    "Find file in current project, or switch project if no root detected.
-
-This is a replacement for `projectile-find-file' which switches
-calls `projectile-switch-project' if no project root is detected.
-
-The original `projectile-find-file' function does complete
-projects if no root is detected, but it does so internally
-without calling `projectile-switch-project'. This prevents some
-completion systems detecting if it is completing project paths,
-or file/folder paths within a project."
-    (interactive)
-    (if (projectile-project-root)
-        (projectile-find-file)
-      (projectile-switch-project)))
 
   :custom
   (projectile-buffers-filter-function 'projectile-buffers-with-file-or-process)
@@ -76,9 +59,24 @@ or file/folder paths within a project."
   (projectile-project-search-path '("~/Projects"))
   (projectile-sort-order 'recently-active)
 
+  :preface
+  (defun siren-projectile-find-file-advice (orig-fun &rest args)
+    "Advice function to make `projectile-find-file' call
+`projectile-switch-project' if current buffer is not in project.
+
+The original `projectile-find-file' function does complete
+projects if no root is detected, but it does so internally
+without calling `projectile-switch-project'. This prevents some
+completion systems detecting if it is completing project paths,
+or file/folder paths within a project, often leading to incorrect
+behavior."
+    (if (projectile-project-root)
+        (apply orig-fun args)
+      (projectile-switch-project)))
+
   :config
   (push "Gemfile" projectile-project-root-files-bottom-up)
-
+  (advice-add 'projectile-find-file :around #'siren-projectile-find-file-advice)
 
   ;; Enable projectile.
   (projectile-mode))
