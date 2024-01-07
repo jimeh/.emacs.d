@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require 'siren-nerd-icons)
+
 (use-package treemacs
   :general
   ("C-x C-p" 'treemacs)
@@ -25,6 +27,7 @@
   (treemacs-silent-refresh nil)
   (treemacs-sorting 'alphabetic-asc)
   (treemacs-width 46)
+  (treemacs-no-png-images t)
 
   (treemacs-persist-file (siren-cache-dir "treemacs-persist"))
   (treemacs-last-error-persist-file
@@ -42,8 +45,7 @@
   (defun siren-treemacs-change-hl-line-mode ()
     "Use a custom face to control style of highlighted line."
     (setq-local hl-line-face 'siren-treemacs-line-highlight)
-    (overlay-put hl-line-overlay 'face hl-line-face)
-    (treemacs--setup-icon-background-colors))
+    (overlay-put hl-line-overlay 'face hl-line-face))
 
   :config
   (defvar treemacs-no-load-time-warnings t)
@@ -74,6 +76,11 @@
 
   :custom
   (lsp-metals-treeview-show-when-views-received t))
+
+(use-package treemacs-nerd-icons
+  :after (treemacs nerd-icons)
+  :config
+  (treemacs-load-theme "nerd-icons"))
 
 (provide 'siren-treemacs)
 ;;; siren-treemacs.el ends here
