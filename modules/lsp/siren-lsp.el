@@ -73,12 +73,12 @@ steps not performed by default via the on-save hook."
       (lsp-format-buffer)))
 
   :config
-  ;; Add "tmp" and ".devbox" directories to ignored list of directories.
-  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]tmp")
-  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\].devbox")
-  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]straight")
-  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]elpa")
-  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]elpaca")
+  ;; Add various directories to lsp-file-watch-ignored-directories.
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]tmp\\'")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\.devbox\\'")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]straight\\'")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]elpa\\'")
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]elpaca\\'")
 
   (define-minor-mode lsp-format-buffer-on-save-mode
     "Run lsp-format-buffer as a before-save-hook."
