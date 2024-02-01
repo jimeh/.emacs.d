@@ -19,6 +19,11 @@
     toml-ts-mode
     vue-mode) . siren-prettier-js-mode-enable)
 
+  :custom
+  (prettier-js-command "prettier-pnp")
+  (prettier-js-args '("--quiet"
+                      "--pnp" "prettier-plugin-toml"))
+
   :preface
   (defun siren-prettier-js-mode-enable ()
     (prettier-js-mode t))
@@ -26,7 +31,7 @@
   :config
   (let ((rc (expand-file-name "~/.prettierrc.js")))
     (if (file-exists-p rc)
-        (setq prettier-js-args `("--config" ,rc)))))
+        (add-to-list 'prettier-js-args `("--config" ,rc)))))
 
 (provide 'siren-prettier-js)
 ;;; siren-prettier-js.el ends here
