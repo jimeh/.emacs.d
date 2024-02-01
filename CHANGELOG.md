@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.8.48](https://github.com/jimeh/.emacs.d/compare/v0.8.47...v0.8.48) (2024-02-01)
+
+
+### Features
+
+* **lsp:** disable inlay hints ([20ca877](https://github.com/jimeh/.emacs.d/commit/20ca8776a95d549d47d40214d0aa3b0866ae8f1c))
+* **navigation/dired:** set dirvish to use nerd-icons instead of all-the-icons ([edf65c2](https://github.com/jimeh/.emacs.d/commit/edf65c2132392ad9e7efd58885d2a86a6113b2d6))
+* **projects/treemacs:** use nerd-icons instead of all-the-icons ([3735e52](https://github.com/jimeh/.emacs.d/commit/3735e52a0cc02e9cb8d5c4f67aa0a89f28b8514e))
+
+
+### Bug Fixes
+
+* **formatting/prettier:** use prettier-pnp instead of prettier ([63f6e3f](https://github.com/jimeh/.emacs.d/commit/63f6e3fa41ce7f7ce32d75eeef89f4ce918bffb4))
+* **nativation/dirvish:** use fork with fix for issue with Emacs 30.x ([434d13d](https://github.com/jimeh/.emacs.d/commit/434d13dd0e8995459bfb81ddb71a83e67920b197))
+* **projects/projectile:** improve projectile-find-file tweak ([a650199](https://github.com/jimeh/.emacs.d/commit/a65019935ae2c638010d03edbddd96b613c93ee0))
+
 ## [0.8.47](https://github.com/jimeh/.emacs.d/compare/v0.8.46...v0.8.47) (2023-12-15)
 
 
