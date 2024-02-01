@@ -35,7 +35,7 @@
  ("diff-hl" . "007c06b094de8e650f52b8ff9cfddf8f81f331d6")
  ("dired-hacks" . "874449d6fc98aee565e1715ec18acec3c1c2cafb")
  ("dired-plus" . "377ec04347b8dd8a91df1a33d820fa862fe0efa8")
- ("dirvish" . "119f9f59a618bb7b476c93e9ab1d7542c5c1df41")
+ ("dirvish" . "600b81d5b8adc8532cb31b72c9cf2fc981c678e9")
  ("docker.el" . "d5255a65b7240d0038cc417f301b43df05a27922")
  ("dockerfile-mode" . "52c6c00da1d31c0b6c29c74335b3af63ed6bf06c")
  ("doom-modeline" . "e521d32c2d670dc664424857e3fc18a37f0728f6")

@@ -24,6 +24,7 @@
   (dirvish-attributes '(subtree-state nerd-icons collapse file-size))
   (dirvish-reuse-session t)
   (dirvish-side-auto-expand t)
+  (dirvish-use-mode-line t)
 
   :general
   (:keymaps 'dirvish-mode-map
