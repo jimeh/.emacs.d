@@ -92,5 +92,10 @@
         (when delta-bin
           (magit-delta-mode +1))))))
 
+(use-package conventional-commit
+  :straight (:host github :repo "akirak/conventional-commit.el")
+  :hook
+  (git-commit-mode . conventional-commit-setup))
+
 (provide 'siren-magit)
 ;;; siren-magit.el ends here
