@@ -32,7 +32,7 @@
   :custom
   (copilot-auto-balance t)
   (copilot-disable-predicates '(siren-copilot-disable-predicate))
-  (copilot-indent-warning-suppress t)
+  (copilot-indent-offset-warning-disable t)
 
   :preface
   (defun siren-copilot-disable-predicate ()
