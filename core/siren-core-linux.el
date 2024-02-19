@@ -27,5 +27,8 @@
 ;; Keybindinds
 (global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
 
+;; Set initial frame to fullscreen when Emacs starts.
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
 (provide 'siren-core-linux)
 ;;; siren-core-linux.el ends here
