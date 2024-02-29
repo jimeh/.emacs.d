@@ -74,7 +74,7 @@ their model settings are kept in sync with `siren-chatgpt-model'.")
   "Return the login name of the current user.
 
 Used to allow different API keys for different models."
-  (cond ((string-prefix-p "gpt-4" siren-chatgpt-model) "gpt-4")
+  (cond ;; ((string-prefix-p "gpt-4" siren-chatgpt-model) "gpt-4")
         (t "default")))
 
 (defun siren-chatgpt-select-model ()
