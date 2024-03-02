@@ -54,11 +54,13 @@ Other packages should use `siren-chatgpt-register-model-var'
 their model settings are kept in sync with `siren-chatgpt-model'.")
 
 (defvar siren-chatgpt-models '("gpt-3.5-turbo"
+                               "gpt-3.5-turbo-16k"
                                "gpt-4"
-                               "gpt-4-32k")
+                               "gpt-4-32k"
+                               "gpt-4-turbo-preview")
   "List of supported models.")
 
-(defcustom siren-chatgpt-model "gpt-4"
+(defcustom siren-chatgpt-model "gpt-4-turbo-preview"
   "The model to use for chatgpt."
   :type '(choice (mapcar (lambda (model) (list 'const model))
                          siren-chatgpt-models))
