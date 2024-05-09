@@ -34,12 +34,13 @@
 (require 'siren-helpful)
 
 ;; Editor
-(require 'siren-direnv)
+(require 'siren-envrc)
 (require 'siren-display-fill-column)
 (require 'siren-display-indentation)
 (require 'siren-display-line-numbers)
 (require 'siren-embark)
 (require 'siren-minions)
+(require 'siren-mise)
 (require 'siren-mwim)
 (require 'siren-origami)
 (require 'siren-rainbow)
