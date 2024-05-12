@@ -19,7 +19,7 @@
     python-mode
     ruby-mode
     rust-mode
-    terraform-mode
+    ;; terraform-mode ;; Disabled due to frequently locking up Emacs for minutes
     typescript-mode
     yaml-mode) . siren-tree-sitter-mode-enable)
 
