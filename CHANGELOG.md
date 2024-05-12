@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.8.49](https://github.com/jimeh/.emacs.d/compare/v0.8.48...v0.8.49) (2024-05-12)
+
+
+### Features
+
+* **ai/chatgpt:** add more models and use gpt-4-turbo-preview as default ([7dfc8b5](https://github.com/jimeh/.emacs.d/commit/7dfc8b575bbf6b2fee0f5f50d17587adeb1fef6b))
+* **ai/chatgpt:** use the same API key for all models ([ac621b3](https://github.com/jimeh/.emacs.d/commit/ac621b3103c4a83d9b62b39ab411c5eb877a9ed6))
+* **core/linux:** maximize window after finished loading ([ed2c051](https://github.com/jimeh/.emacs.d/commit/ed2c051ea1e1670f06d392095bc900695510e3c7))
+* **editor/env:** switch from direnv package to envrc and mise ([6e9307d](https://github.com/jimeh/.emacs.d/commit/6e9307d61647467d95becc80e0c8aa29a3559c46))
+* **version-control/magit:** add convention-commit package ([d608d96](https://github.com/jimeh/.emacs.d/commit/d608d968e4cd553348bce5d28d0f1543faba5d1f))
+
+
+### Bug Fixes
+
+* **completion/copilot:** ignore buffers which name start with *temp* ([a1ce447](https://github.com/jimeh/.emacs.d/commit/a1ce4473871022981b198aef5effb711c0b34ee7))
+* **completion/copilot:** update config name after rename in package ([d97e02d](https://github.com/jimeh/.emacs.d/commit/d97e02dbb8865e6914baf0b378407097aca5c10d))
+* **language/terraform:** disable lsp-mode and tree-sitter-mode ([6faa4d9](https://github.com/jimeh/.emacs.d/commit/6faa4d9f658697b1d31e91445cbe91d30cce48a3))
+
 ## [0.8.48](https://github.com/jimeh/.emacs.d/compare/v0.8.47...v0.8.48) (2024-02-01)
 
 
