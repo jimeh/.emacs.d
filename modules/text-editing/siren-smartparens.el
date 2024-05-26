@@ -66,11 +66,7 @@
     (sp-transpose-sexp -1))
 
   (defalias 'rw 'sp-rewrap-sexp)
-  (show-smartparens-global-mode +1)
-
-  (sp-pair "{" nil :post-handlers
-           '(((lambda (&rest _ignored)
-                (siren-smart-open-line-above)) "RET"))))
+  (show-smartparens-global-mode +1))
 
 (provide 'siren-smartparens)
 ;;; siren-smartparens.el ends here
