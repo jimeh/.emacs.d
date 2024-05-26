@@ -9,7 +9,7 @@
 (require 'cl-lib)
 
 (use-package copilot
-  :straight (:host github :repo "zerolfx/copilot.el"
+  :straight (:host github :repo "copilot-emacs/copilot.el"
                    :files ("dist" "*.el"))
   :hook
   (prog-mode . copilot-mode)
@@ -30,7 +30,6 @@
             "<end>" #'copilot-accept-completion-by-line)
 
   :custom
-  (copilot-auto-balance t)
   (copilot-disable-predicates '(siren-copilot-disable-predicate))
   (copilot-indent-offset-warning-disable t)
 
