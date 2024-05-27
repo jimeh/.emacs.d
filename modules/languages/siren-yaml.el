@@ -24,7 +24,7 @@ or *.yaml file in a .github/workflows/ directory."
     (flycheck-def-executable-var yaml-actionlint "actionlint")
     (flycheck-define-checker yaml-actionlint
       "A GitHub Actions workflow checker using actionlint."
-      :command ("actionlint" "-oneline" "-")
+      :command ("actionlint" "-oneline" "-stdin-filename" source-original "-")
       :standard-input t
       :error-patterns
       ((error
