@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.8.50](https://github.com/jimeh/.emacs.d/compare/v0.8.49...v0.8.50) (2024-05-27)
+
+
+### Bug Fixes
+
+* **language/yaml:** define custom tree-sitter queries ([1dfd9d2](https://github.com/jimeh/.emacs.d/commit/1dfd9d28a059cf28a2ef595756b68f2a16bc0fae))
+* **language/yaml:** provide filename to actionlint linter ([9e6ce1e](https://github.com/jimeh/.emacs.d/commit/9e6ce1eaa8c503175d60f8b8238451d469bcb6eb))
+* **text-editing/smartparens:** disable navigate action on {} pair ([2dfc86b](https://github.com/jimeh/.emacs.d/commit/2dfc86b61013cfb3dd5bbf4281986bdc59b61df8))
+
 ## [0.8.49](https://github.com/jimeh/.emacs.d/compare/v0.8.48...v0.8.49) (2024-05-12)
 
 
