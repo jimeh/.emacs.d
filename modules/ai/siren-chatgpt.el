@@ -23,7 +23,7 @@ auth-source. If LOGIN is non-nil, use that value to retrieve the"
   (let ((login (siren-chatgpt--login-user)))
     (or (and siren-chatgpt--api-key-login
              (string= siren-chatgpt--api-key-login login))
-        (let ((api-key (auth-source-pick-first-password :host "openai.com"
+        (let ((api-key (auth-source-pick-first-password :host "api.openai.com"
                                                         :user login)))
           (if api-key
               (progn
@@ -57,10 +57,13 @@ their model settings are kept in sync with `siren-chatgpt-model'.")
                                "gpt-3.5-turbo-16k"
                                "gpt-4"
                                "gpt-4-32k"
-                               "gpt-4-turbo-preview")
+                               "gpt-4-turbo"
+                               "gpt-4-turbo-preview"
+                               "gpt-4o"
+                               "gpt-4o-2024-05-13")
   "List of supported models.")
 
-(defcustom siren-chatgpt-model "gpt-4-turbo-preview"
+(defcustom siren-chatgpt-model "gpt-4o"
   "The model to use for chatgpt."
   :type '(choice (mapcar (lambda (model) (list 'const model))
                          siren-chatgpt-models))
@@ -77,7 +80,7 @@ their model settings are kept in sync with `siren-chatgpt-model'.")
 
 Used to allow different API keys for different models."
   (cond ;; ((string-prefix-p "gpt-4" siren-chatgpt-model) "gpt-4")
-        (t "default")))
+        (t "apikey")))
 
 (defun siren-chatgpt-select-model ()
   "Select a model to use for chatgpt."
