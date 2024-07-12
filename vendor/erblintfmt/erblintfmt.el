@@ -1,17 +1,17 @@
 ;;; erblintfmt.el --- Minor-mode to format Ruby code with Erblint on save
 
-;; Version: 0.4.1
-;; Keywords: convenience wp edit ruby erblint
+;; Author: Jim Myhrberg <contact@jimeh.me>
+;; URL: https://github.com/jimeh/.emacs.d/tree/master/vendor/erblintfmt
+;; Keywords: convenience edit ruby erb erblint
 ;; Package-Requires: ((cl-lib "0.5"))
-;; URL: https://github.com/jimeh/erblintfmt.el
-;; Author: Jim Myhrberg
+;; Version: 0.0.1
 
 ;; This file is not part of GNU Emacs.
 
 ;;; License:
 ;;
 ;; Copyright (c) 2014 The go-mode Authors. All rights reserved.
-;; Portions Copyright (c) 2018 Jim Myhrberg.
+;; Portions Copyright (c) 2024 Jim Myhrberg.
 ;;
 ;; Redistribution and use in source and binary forms, with or without
 ;; modification, are permitted provided that the following conditions are
