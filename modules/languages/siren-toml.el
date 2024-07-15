@@ -8,21 +8,24 @@
 
 (require 'siren-prog-mode)
 
-;; Requires Emacs 29.x or later for built-in treesit support.
-(if (fboundp 'toml-ts-mode)
-  (use-package toml-ts-mode
-    :straight (:type built-in)
-    :mode "\\.toml\\'" "Cargo\\.lock\\'"
-    :hook
-    (toml-ts-mode . siren-toml-mode-setup)
-    :preface
-    (require 'siren-treesit)
-    :config
-    (siren-treesit-auto-ensure-grammar 'toml))
-  (use-package conf-toml-mode
-    :straight (:type built-in)
-    :mode "\\.toml\\'" "Cargo\\.lock\\'"
-    :hook (conf-toml-mode . siren-toml-mode-setup)))
+;; TODO: Revisit toml-ts-mode at some point the future. It's a bit buggy at the
+;; moment.
+;;
+;; (if (fboundp 'toml-ts-mode)
+;;     (use-package toml-ts-mode
+;;       :straight (:type built-in)
+;;       :mode "\\.toml\\'" "Cargo\\.lock\\'"
+;;       :hook
+;;       (toml-ts-mode . siren-toml-mode-setup)
+;;       :preface
+;;       (require 'siren-treesit)
+;;       :config
+;;       (siren-treesit-auto-ensure-grammar 'toml)))
+
+(use-package conf-toml-mode
+  :straight (:type built-in)
+  :mode "\\.toml\\'" "Cargo\\.lock\\'"
+  :hook (conf-toml-mode . siren-toml-mode-setup))
 
 (defun siren-toml-mode-setup ()
   "Default tweaks for `toml-mode'."
