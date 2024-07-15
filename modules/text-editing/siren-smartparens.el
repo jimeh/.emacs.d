@@ -55,12 +55,6 @@
   ;; smart pairing for all
   (require 'smartparens-config)
 
-  ;; Re-define {} pair to remove the navigate action. This allows for manually
-  ;; inserting a } character, otherwise it would always jump to the next
-  ;; existing } character, preventing you from manually inserting one where you
-  ;; want.
-  (sp-pair "{" "}" :actions '(wrap insert autoskip))
-
   (defun sp-transpose-sexp-reverse ()
     (interactive)
     (sp-transpose-sexp -1))
