@@ -62,7 +62,6 @@
      (fortran . t)
      (haskell . t)
      (js . t)
-     (latex . t)
      (lisp . t)
      (makefile . t)
      (org . t)
