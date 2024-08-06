@@ -13,6 +13,31 @@
 (require 'siren-projectile)
 (require 'siren-reformatter)
 
+(defgroup siren-go nil
+  "Siren: go-mode configuration."
+  :group 'go)
+
+(defcustom siren-go-tab-width 4
+  "Tab width to set in all Go related modes."
+  :type 'number
+  :group 'siren-go)
+
+(defun siren-go-mode-setup ()
+  (setq-local tab-width siren-go-tab-width
+              company-minimum-prefix-length 1)
+
+  (when (fboundp 'highlight-symbol-mode)
+    (highlight-symbol-mode -1))
+  (when (fboundp 'auto-highlight-symbol-mode)
+    (auto-highlight-symbol-mode -1)))
+
+(defun siren-define-golines-format-mode ()
+  "Setup and define golines formatter."
+  (reformatter-define golines-format
+    :program "golines"
+    :args '("-t" "4" "-m" "80" "--no-reformat-tags")
+    :lighter " GOLINES"))
+
 (use-package go-mode
   :mode "\\.go\\'"
   :interpreter "go"
@@ -28,34 +53,9 @@
   (go-dot-work-mode . siren-go-dot-mod-mode-setup)
 
   :preface
-  (defgroup siren-go nil
-    "Siren: go-mode configuration."
-    :group 'go)
-
-  (defcustom siren-go-tab-width 4
-    "Tab width to set in all Go related modes."
-    :type 'number
-    :group 'siren-go)
-
-  (defun siren-go-mode-setup ()
-    (setq-local tab-width siren-go-tab-width
-                company-minimum-prefix-length 1)
-
-    (when (fboundp 'highlight-symbol-mode)
-      (highlight-symbol-mode -1))
-    (when (fboundp 'auto-highlight-symbol-mode)
-      (auto-highlight-symbol-mode -1)))
-
   (defun siren-go-dot-mod-mode-setup ()
     (run-hooks 'prog-mode-hook)
     (setq-local tab-width siren-go-tab-width))
-
-  (defun siren-define-golines-format-mode ()
-    "Setup and define golines formatter."
-    (reformatter-define golines-format
-      :program "golines"
-      :args '("-t" "4" "-m" "80" "--no-reformat-tags")
-      :lighter " GOLINES"))
 
   :init
   (with-eval-after-load 'projectile
@@ -87,11 +87,34 @@
   ;; Ignore go test -c output files
   (add-to-list 'completion-ignored-extensions ".test"))
 
+(when (fboundp 'go-ts-mode)
+    (use-package go-ts-mode
+      :straight (:type built-in)
+      ;; :mode "\\.go\\'"
+      ;; :interpreter "go"
+      :hook
+      (go-ts-mode . siren-go-mode-setup)
+
+      :general
+      (:keymaps 'go-ts-mode-map
+                "RET" 'newline-and-indent
+                "C-h f" 'godoc-at-point)
+
+      :config
+      (require 'siren-treesit)
+      (siren-treesit-auto-ensure-grammar 'go)
+
+      (treesit-font-lock-rules
+       :language 'go
+       :feature 'field-identifier
+       '((field_identifier) @font-lock-constant-face))))
+
 (use-package lsp-go
   :straight lsp-mode
 
   :hook
   (go-mode . siren-lsp-go-mode-setup)
+  (go-ts-mode . siren-lsp-go-mode-setup)
 
   :custom
   (lsp-go-use-placeholders t)
@@ -144,9 +167,10 @@
   :after (go-mode)
   :hook
   (go-mode . siren-gotest-setup)
+  (go-ts-mode . siren-gotest-setup)
 
   :general
-  (:keymaps 'go-mode-map
+  (:keymaps '(go-mode-map go-ts-mode-map)
             "C-c , a" 'go-test-current-project
             "C-c , v" 'go-test-current-file
             "C-c , s" 'go-test-current-test
@@ -237,7 +261,7 @@ For example, if the current buffer is `foo.go', the buffer for
   :defer t
   :after (go-mode)
   :general
-  (:keymaps 'go-mode-map
+  (:keymaps '(go-mode-map go-ts-mode-map)
             "C-c , g" 'go-gen-test-dwim
             "C-c , G" 'go-gen-test-exported))
 
@@ -246,6 +270,7 @@ For example, if the current buffer is `foo.go', the buffer for
   :after (go-mode)
   :hook
   (go-mode . siren-go-projectile-setup)
+  (go-ts-mode . siren-go-projectile-setup)
 
   :custom
   ;; prevent go-projectile from screwing up GOPATH
