@@ -14,6 +14,23 @@
 (require 'siren-reformatter)
 (require 'siren-string-inflection)
 
+(defun siren-define-stree-format-mode ()
+  "Setup stree (syntax_tree) formatter."
+  (when (not (boundp 'stree-format-on-save-mode-hook))
+    (reformatter-define stree-format
+      :program "stree"
+      :args '("format" "--print-width=80")
+      :lighter " STREE")))
+
+(defun siren-ruby-setup-hs-special-modes ()
+  "Set up hs-mode (HideShow) for Ruby."
+  (add-to-list 'hs-special-modes-alist
+               `(ruby-mode
+                 ,(rx (or "def" "class" "module" "do" "if" "case")) ;; Block start
+                 ,(rx (or "end"))                                   ;; Block end
+                 ,(rx (or "#" "=begin"))                            ;; Comment start
+                 ruby-forward-sexp nil)))
+
 (use-package ruby-mode
   :straight (:type built-in)
   :interpreter "ruby"
@@ -62,13 +79,6 @@
 
     (hs-minor-mode t))
 
-  (defun siren-define-stree-format-mode ()
-    "Setup stree (syntax_tree) formatter."
-    (reformatter-define stree-format
-      :program "stree"
-      :args '("format" "--print-width=80")
-      :lighter " STREE"))
-
   :init
   (with-eval-after-load 'projectile
     (add-to-list 'projectile-globally-ignored-directories "vendor/bundle")
@@ -76,37 +86,85 @@
 
   :config
   (siren-define-stree-format-mode)
+  (siren-ruby-setup-hs-special-modes)
 
   ;; Use M-' instead to togle quote styles
   (unbind-key "C-c '" ruby-mode-map)
 
   ;; We never want to edit Rubinius bytecode
-  (add-to-list 'completion-ignored-extensions ".rbc")
+  (add-to-list 'completion-ignored-extensions ".rbc"))
 
-  ;; Set up hs-mode (HideShow) for Ruby
-  (add-to-list 'hs-special-modes-alist
-               `(ruby-mode
-                 ,(rx (or "def" "class" "module" "do" "if" "case")) ;; Block start
-                 ,(rx (or "end"))                                   ;; Block end
-                 ,(rx (or "#" "=begin"))                            ;; Comment start
-                 ruby-forward-sexp nil)))
+(if (fboundp 'ruby-ts-mode)
+    (use-package ruby-ts-mode
+      :straight (:type built-in)
+      :general
+      (:keymaps 'ruby-ts-mode-map
+                "C-j" 'newline-and-indent
+                "RET" 'newline-and-indent
+                "M-'" 'ruby-toggle-string-quotes
+                "C-c C-l" 'goto-line
+                "C-M-f" 'sp-ruby-forward-sexp
+                "C-M-b" 'sp-ruby-backward-sexp
+                "C-c C-u" 'string-inflection-ruby-style-cycle)
+
+      :hook
+      (ruby-ts-mode . siren-ruby-ts-mode-setup)
+
+      :preface
+      (defun siren-ruby-ts-mode-setup ()
+        (setq-local c-tab-always-indent nil
+                    tab-width 2)
+
+        (hs-minor-mode t))
+
+      :config
+      (siren-treesit-auto-ensure-grammar 'ruby)
+      (siren-define-stree-format-mode)
+      (siren-ruby-setup-hs-special-modes)))
 
 (use-package lsp-solargraph
   :straight lsp-mode
 
   :hook
   (ruby-mode . siren-lsp-ruby-mode-setup)
+  (ruby-ts-mode . siren-lsp-ruby-mode-setup)
 
   :custom
   (lsp-solargraph-multi-root nil)
   (lsp-solargraph-log-level "warn")
 
   :preface
+  (defgroup siren-lsp-solargraph nil
+    "Customizations for the lsp-solargraph package."
+    :group 'lsp)
+
+  (defcustom siren-lsp-solargraph-fos-disable-predicate nil
+    "Predicate function to determine if the FOS (Format On Save) feature should
+be disabled in the current buffer.
+
+Defaults to `siren-lsp-solargraph-fos-disable-predicate-default' if not set."
+    :type 'function
+    :group 'siren-lsp-solargraph)
+
+  (defun siren-lsp-solargraph-fos-disable-predicate-default ()
+    "Default predicate function to determine if the FOS (Format On Save) feature
+ should be disabled."
+    (if buffer-file-name
+        (string-suffix-p (concat (file-name-as-directory "db") "schema.rb")
+                         buffer-file-name)))
+
   (defun siren-lsp-ruby-mode-setup ()
     (setq-local lsp-disabled-clients '(vue-semantic-server))
     (setq-local siren-lsp-manual-format-buffer-func
                 'siren-lsp-ruby-manual-format-buffer)
-    (lsp-format-buffer-on-save-mode t)
+
+    ;; Enable format on save unless the disable predicate returns true.
+    (let ((disable-fos (if siren-lsp-solargraph-fos-disable-predicate
+                           (funcall siren-lsp-solargraph-fos-disable-predicate)
+                         (siren-lsp-solargraph-fos-disable-predicate-default))))
+      (if (not disable-fos)
+          (lsp-format-buffer-on-save-mode t)))
+
     (lsp-deferred))
 
   (defun siren-lsp-ruby-manual-format-buffer ()
@@ -135,7 +193,19 @@ and will break things."
   :after (ruby-mode dap-mode))
 
 (use-package bundler
-  :defer t)
+  :defer t
+  :preface
+  (defun siren-bundle-command (cmd)
+    "Run cmd in a compilation buffer."
+    (let* ((buffer-name "*Bundler*")
+           (default-directory (bundle-locate-gemfile))
+          (compilation-buffer-name-function (lambda (mode) buffer-name)))
+      (if (string-prefix-p "bundle exec" cmd)
+          (async-shell-command cmd buffer-name)
+        (compile cmd))))
+
+  :config
+  (defalias 'bundle-command 'siren-bundle-command))
 
 (use-package inf-ruby
   :defer t
@@ -151,6 +221,7 @@ and will break things."
 
   :config
   (unbind-key "C-c C-b" inf-ruby-minor-mode-map)
+  (unbind-key "C-c C-q" inf-ruby-minor-mode-map)
   (unbind-key "C-c C-r" inf-ruby-minor-mode-map)
   (unbind-key "C-c C-s" inf-ruby-minor-mode-map))
 
@@ -175,7 +246,7 @@ and will break things."
   :defer t
   :after ruby-mode
   :general
-  (:keymaps 'ruby-mode-map
+  (:keymaps '(ruby-mode-map ruby-ts-mode-map)
             "C-c . f" 'rubocop-check-current-file
             "C-c . p" 'rubocop-check-project
             "C-c . d" 'rubocop-check-directory
@@ -185,7 +256,7 @@ and will break things."
 
 (use-package rubocopfmt
   :general
-  (:keymaps 'ruby-mode-map
+  (:keymaps '(ruby-mode-map ruby-ts-mode-map)
             "C-c C-f" 'rubocopfmt)
 
   :custom
@@ -206,6 +277,7 @@ and will break things."
   :defer t
   :hook
   (ruby-mode . ruby-refactor-mode)
+  (ruby-ts-mode . ruby-refactor-mode)
 
   :custom
   (ruby-refactor-keymap-prefix (kbd "C-c C-="))
@@ -219,6 +291,7 @@ and will break things."
             "C-'" 'cycle-quotes)
   :hook
   (ruby-mode . ruby-tools-mode)
+  (ruby-ts-mode . ruby-tools-mode)
 
   :config
   ;; Unbind key used by siren-resize-window module.
