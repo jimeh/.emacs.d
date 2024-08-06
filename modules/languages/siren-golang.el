@@ -114,6 +114,7 @@
   :custom
   (lsp-go-use-placeholders t)
   (lsp-go-link-target "pkg.go.dev")
+  ;; (lsp-go-gopls-server-args '("-rpc.trace" "-debug=localhost:6060"))
   (lsp-go-use-gofumpt t)
   (lsp-go-analyses '((nilness . t)
                      (shadow . t)
@@ -129,10 +130,6 @@
                        (upgrade_dependency . t)
                        (test . t)
                        (vendor . t)))
-
-  :config
-  (lsp-register-custom-settings
-   '(("gopls.hints" ((constantValues . t)))))
 
   :preface
   (defun siren-lsp-go-mode-setup ()
