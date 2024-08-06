@@ -18,8 +18,7 @@
 
   :preface
   (defun siren-terraform-mode-setup ()
-    (setq-local tab-width 2)
-    (terraform-format-on-save-mode t))
+    (setq-local tab-width 2))
 
   :config
   ;; This does a better job of injecting formatted content than the default
@@ -36,18 +35,13 @@
 
   :preface
   (defun siren-lsp-terraform-mode-setup ()
-    ;; TODO: Re-evaluate lsp-mode for Terraform at some point in the future.
-    ;; Currently it mostly just gets in the way and causes enough annoyance that
-    ;; it's not worth using by default.
-
     ;; Disable semantic tokens as it typically causes an annoying delay with the
     ;; syntax highlighting as you type. Essentially all new text is a very faded
     ;; out grey color for the first 1-2 seconds as you type.
-    ;; (setq-local lsp-semantic-tokens-enable nil)
+    (setq-local lsp-semantic-tokens-enable nil)
 
-    ;; (lsp-format-buffer-on-save-mode t)
-    ;; (lsp-deferred)
-    ))
+    (lsp-format-buffer-on-save-mode t)
+    (lsp-deferred)))
 
 (use-package terraform-doc
   :defer t)
