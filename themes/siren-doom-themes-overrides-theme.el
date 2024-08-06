@@ -133,8 +133,8 @@
 
   ;; symbol-overlay
   '(symbol-overlay-default-face
-    (&dark  :background (doom-lighten region 0.1) :distant-foreground fg-alt)
-    (&light :background (doom-darken region 0.1) :distant-foreground fg-alt))
+    (&dark  :background (doom-lighten region 0.1) :distant-foreground bg)
+    (&light :background (doom-lighten region 0.1) :distant-foreground fg-alt))
   '(symbol-overlay-face-1 :background (doom-blend blue bg 0.38)
                           :distant-foreground fg-alt)
   '(symbol-overlay-face-2 :background (doom-blend violet bg 0.4)
@@ -152,7 +152,12 @@
   '(symbol-overlay-face-8 :background (doom-blend cyan bg 0.3)
                           :distant-foreground fg-alt)
 
-  ;;;; nerd-icons
+  ;; lsp-mode
+  '(lsp-face-highlight-textual :foreground 'unspecified
+                               :distant-foreground 'unspecified
+                               :background 'unspecified)
+
+  ;; nerd-icons
   '(nerd-icons-blue       :foreground blue)
   '(nerd-icons-blue-alt   :foreground teal)
   '(nerd-icons-cyan       :foreground cyan)
