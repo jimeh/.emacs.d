@@ -43,7 +43,8 @@
             (string-match-p "\/\.ansible\/tmp\/ansible-local-.+$" dir)
             (string-suffix-p ".kube/config" full)))
       (let ((name (buffer-name)))
-        (or (string-prefix-p "*temp*" name)))))
+        (or (string-prefix-p "*temp*" name)
+            (string-match-p "*scratch*" name)))))
 
   (defun siren-copilot-dwim ()
     "Trigger or accept completion."
