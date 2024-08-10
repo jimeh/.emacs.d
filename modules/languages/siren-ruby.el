@@ -97,6 +97,29 @@
 (if (fboundp 'ruby-ts-mode)
     (use-package ruby-ts-mode
       :straight (:type built-in)
+      ;; :interpreter "ruby"
+      ;; :mode
+      ;; "Appraisals\\'"
+      ;; "Berksfile\\'"
+      ;; "Brewfile\\'"
+      ;; "Capfile\\'"
+      ;; "Gemfile\\'"
+      ;; "Guardfile\\'"
+      ;; "Podfile\\'"
+      ;; "Puppetfile\\'"
+      ;; "Rakefile\\'"
+      ;; "Thorfile\\'"
+      ;; "Vagrantfile\\'"
+      ;; "\\.cap\\'"
+      ;; "\\.gemspec\\'"
+      ;; "\\.jbuilder\\'"
+      ;; "\\.podspec\\'"
+      ;; "\\.rabl\\'"
+      ;; "\\.rake\\'"
+      ;; "\\.ru\\'"
+      ;; "\\.thor\\'"
+      ;; "\\.rb\\'"
+
       :general
       (:keymaps 'ruby-ts-mode-map
                 "C-j" 'newline-and-indent
@@ -115,12 +138,52 @@
         (setq-local c-tab-always-indent nil
                     tab-width 2)
 
+        (setq-local treesit-font-lock-settings
+                    (append treesit-font-lock-settings
+                            (siren-ruby-ts-mode-font-lock-overrides)))
+
         (hs-minor-mode t))
+
+      (defun siren-ruby-ts-mode-font-lock-overrides ()
+        "Returns a list of overide treesit font-lock rules."
+        (let ((language 'ruby))
+          (treesit-font-lock-rules
+           ;; Use custom operators list.
+           :language language
+           :override t
+           :feature 'operator
+           `("!" @font-lock-negation-char-face
+             [,@siren-ruby-ts-operators] @font-lock-operator-face)
+
+           ;; Braces, when used to denote a block, have the same function as
+           ;; "do" and "end" and should be highlighted similarly.
+           :language language
+           :override t
+           :feature 'block-braces
+           '((block ["{" "}"] @font-lock-keyword-face))
+
+           ;; Highlight string interpolation begin/end markers as keywords.
+           :language language
+           :override t
+           :feature 'interpolation
+           '((interpolation "#{" @font-lock-keyword-face)
+             (interpolation "}" @font-lock-keyword-face)))))
 
       :config
       (siren-treesit-auto-ensure-grammar 'ruby)
       (siren-define-stree-format-mode)
-      (siren-ruby-setup-hs-special-modes)))
+      (siren-ruby-setup-hs-special-modes)
+
+      (defgroup siren-ruby-ts nil
+        "Customizations for the ruby-ts-mode package."
+        :group 'siren)
+
+      ;; Must be defined after ruby-ts-mode is loaded, as we need access to the
+      ;; `ruby-ts--operators' variable.
+      (defcustom siren-ruby-ts-operators
+        (append ruby-ts--operators '("->"))
+        "Ruby operators for tree-sitter font-locking."
+        :group 'siren-ruby-ts)))
 
 (use-package lsp-solargraph
   :straight lsp-mode
@@ -199,7 +262,7 @@ and will break things."
     "Run cmd in a compilation buffer."
     (let* ((buffer-name "*Bundler*")
            (default-directory (bundle-locate-gemfile))
-          (compilation-buffer-name-function (lambda (mode) buffer-name)))
+           (compilation-buffer-name-function (lambda (mode) buffer-name)))
       (if (string-prefix-p "bundle exec" cmd)
           (async-shell-command cmd buffer-name)
         (compile cmd))))
