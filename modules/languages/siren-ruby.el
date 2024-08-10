@@ -197,40 +197,31 @@
   (lsp-solargraph-log-level "warn")
 
   :preface
-  (defgroup siren-lsp-solargraph nil
-    "Customizations for the lsp-solargraph package."
-    :group 'lsp)
+  (defun siren-lsp-solargraph-format-on-save-p ()
+    "Determine if format on save (FoS) should be enabled in the current buffer.
 
-  (defcustom siren-lsp-solargraph-fos-disable-predicate nil
-    "Predicate function to determine if the FOS (Format On Save) feature should
-be disabled in the current buffer.
+Returns t if FoS should be enabled, nil otherwise.
 
-Defaults to `siren-lsp-solargraph-fos-disable-predicate-default' if not set."
-    :type 'function
-    :group 'siren-lsp-solargraph)
-
-  (defun siren-lsp-solargraph-fos-disable-predicate-default ()
-    "Default predicate function to determine if the FOS (Format On Save) feature
- should be disabled."
-    (if buffer-file-name
-        (string-suffix-p (concat (file-name-as-directory "db") "schema.rb")
-                         buffer-file-name)))
+Currently only disables FoS in 'db/schema.rb' files, as Rails' generated
+output typically does not conform to any common Ruby formatting standards."
+    (let ((db-schema-file (concat (file-name-as-directory "db") "schema.rb")))
+      (or (not buffer-file-name)
+          (not (string-suffix-p db-schema-file buffer-file-name)))))
 
   (defun siren-lsp-ruby-mode-setup ()
-    (setq-local lsp-disabled-clients '(vue-semantic-server))
     (setq-local siren-lsp-manual-format-buffer-func
-                'siren-lsp-ruby-manual-format-buffer)
+                'siren-lsp-solargraph-manual-format-buffer)
 
-    ;; Enable format on save unless the disable predicate returns true.
-    (let ((disable-fos (if siren-lsp-solargraph-fos-disable-predicate
-                           (funcall siren-lsp-solargraph-fos-disable-predicate)
-                         (siren-lsp-solargraph-fos-disable-predicate-default))))
-      (if (not disable-fos)
-          (lsp-format-buffer-on-save-mode t)))
+    ;; Disable ruby clients which have higher priority than the ruby-ls client.
+    (setq-local lsp-disabled-clients '(vue-semantic-server))
+
+    ;; Enable format on save if the predicate returns true.
+    (when (siren-lsp-solargraph-format-on-save-p)
+      (lsp-format-buffer-on-save-mode t))
 
     (lsp-deferred))
 
-  (defun siren-lsp-ruby-manual-format-buffer ()
+  (defun siren-lsp-solargraph-manual-format-buffer ()
     (stree-format-buffer)
     (lsp-format-buffer))
 
