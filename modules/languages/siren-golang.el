@@ -109,6 +109,8 @@
 
   :hook
   (go-mode . siren-lsp-go-mode-setup)
+  (go-dot-mod-mode . siren-lsp-go-mode-setup)
+  (go-dot-work-mode . siren-lsp-go-mode-setup)
   (go-ts-mode . siren-lsp-go-mode-setup)
 
   :custom
