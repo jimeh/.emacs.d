@@ -16,6 +16,9 @@
                 (dirvish :type git :flavor melpa :host github :repo "alexluigit/dirvish"
                          :fork (:host github :repo "jimeh/dirvish" :branch "emacs-30-fix")
                          :files (:defaults "extensions/*.el" "dirvish-pkg.el"))
+                ;; Use fork with for assert -> cl-assert
+                (refine :type git :flavor melpa :host github :repo "Wilfred/refine"
+                        :fork (:host github :repo "jimeh/refine" :branch "use-cl-assert"))
                 ;; Override vertico recipe to fix issues with extensions.
                 (vertico :type git :host github :repo "minad/vertico"
                          :files (:defaults "extensions/*" (:exclude ".git")))))))
