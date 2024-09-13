@@ -12,9 +12,9 @@
                 ;; features.
                 (all-the-icons-completion :type git :flavor melpa :host github :repo "iyefrat/all-the-icons-completion"
                                           :fork (:host github :repo "MintSoup/all-the-icons-completion"))
-                ;; Use fork with a fix for latest Emacs 30.x builds.
+                ;; Use fork from doom-emacs author with various fixes.
                 (dirvish :type git :flavor melpa :host github :repo "alexluigit/dirvish"
-                         :fork (:host github :repo "jimeh/dirvish" :branch "emacs-30-fix")
+                         :fork (:host github :repo "hlissner/dirvish" :branch "main")
                          :files (:defaults "extensions/*.el" "dirvish-pkg.el"))
                 ;; Use fork with for assert -> cl-assert
                 (refine :type git :flavor melpa :host github :repo "Wilfred/refine"
