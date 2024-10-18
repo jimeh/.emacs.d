@@ -12,7 +12,6 @@
   ((conf-toml-mode
     css-mode
     markdown-mode
-    nxml-mode
     php-mode
     typescript-mode
     toml-mode
