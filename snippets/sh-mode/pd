@@ -1,0 +1,4 @@
+# name: echo debug
+# key: pd
+# --
+echo -e "\n>>>>>> ${1:name}: ${2:$$1${3:}}\n" >&2$0
