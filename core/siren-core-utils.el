@@ -15,6 +15,46 @@
   "Add ELEMENT to end of LIST-VAR, removing duplicates."
   `(setq ,list-var (append (remove ,element ,list-var) (list ,element))))
 
+(defmacro siren-add-before (list-var element needle)
+  "Add ELEMENT before NEEDLE in LIST-VAR, without removing duplicates."
+  `(let ((pos (cl-position ,needle ,list-var)))
+     (if pos
+         (setq ,list-var (append (cl-subseq ,list-var 0 pos)
+                                 (list ,element)
+                                 (cl-subseq ,list-var pos)))
+       (setq ,list-var (append ,list-var (list ,element))))))
+
+(defmacro siren-add-after (list-var element needle)
+  "Add ELEMENT after NEEDLE in LIST-VAR, without removing duplicates."
+  `(let ((pos (cl-position ,needle ,list-var)))
+     (if pos
+         (setq ,list-var (append (cl-subseq ,list-var 0 (1+ pos))
+                                 (list ,element)
+                                 (cl-subseq ,list-var (1+ pos))))
+       (setq ,list-var (append ,list-var (list ,element))))))
+
+(defmacro siren-ensure-before (list-var element needle)
+  "Add ELEMENT before NEEDLE in LIST-VAR, removing duplicates."
+  `(let* ((cleaned-list (remove ,element ,list-var))
+          (pos (cl-position ,needle cleaned-list)))
+     (setq ,list-var
+           (if pos
+               (append (cl-subseq cleaned-list 0 pos)
+                       (list ,element)
+                       (cl-subseq cleaned-list pos))
+             (append cleaned-list (list ,element))))))
+
+(defmacro siren-ensure-after (list-var element needle)
+  "Add ELEMENT after NEEDLE in LIST-VAR, removing duplicates."
+  `(let* ((cleaned-list (remove ,element ,list-var))
+          (pos (cl-position ,needle cleaned-list)))
+     (setq ,list-var
+           (if pos
+               (append (cl-subseq cleaned-list 0 (1+ pos))
+                       (list ,element)
+                       (cl-subseq cleaned-list (1+ pos)))
+             (append cleaned-list (list ,element))))))
+
 (defun siren-recursive-add-to-load-path (dir)
   "Add DIR and all its sub-directories to `load-path'."
   (add-to-list 'load-path dir)
