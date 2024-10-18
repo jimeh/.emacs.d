@@ -24,6 +24,7 @@
                     (&dark :foreground (doom-darken vertical-bar
                                                     (if window-system 0.4 0))))
   '(font-lock-comment-face :foreground (doom-lighten comments 0.15))
+  '(font-lock-operator-face :inherit 'font-lock-keyword-face)
 
   ;; built-in completion faces, based on doom-themes' defaults for orderless
   '(completions-common-part :weight 'bold

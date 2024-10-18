@@ -85,6 +85,10 @@
                             :replace "\\1")
                     (:match "\\`\s*do\\( |.+|\\)?\\'"
                             :before "\n" :after "\nend")))
+      (ruby-ts-mode . ((:match "\\([^\s]+\s+\\)do\\(?: |.+|\\)?\\'"
+                                  :replace "\\1")
+                          (:match "\\`\s*do\\( |.+|\\)?\\'"
+                            :before "\n" :after "\nend")))
       (t . (;; Strip opening "{" from end of completion.
             (:match "\\([^\s]+\s*\\)\{\\'" :replace "\\1")
             ;; Inject closing "}" on newline if completion is only "{" or " {".
