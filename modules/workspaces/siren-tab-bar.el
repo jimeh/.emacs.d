@@ -60,6 +60,7 @@
             "C-f" 'tab-bar-history-forward)
 
   :custom
+  (tab-bar-auto-width nil)
   (tab-bar-close-button-show nil)
   (tab-bar-format `(tab-bar-format-tabs-groups
                     ,(if (eq system-type 'darwin)
