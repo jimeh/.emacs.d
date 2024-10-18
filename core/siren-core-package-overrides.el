@@ -15,10 +15,7 @@
                 ;; Use fork from doom-emacs author with various fixes.
                 (dirvish :type git :flavor melpa :host github :repo "alexluigit/dirvish"
                          :fork (:host github :repo "hlissner/dirvish" :branch "main")
-                         :files (:defaults "extensions/*.el" "dirvish-pkg.el"))
-                ;; Use fork with for assert -> cl-assert
-                (refine :type git :flavor melpa :host github :repo "Wilfred/refine"
-                        :fork (:host github :repo "jimeh/refine" :branch "use-cl-assert"))))))
+                         :files (:defaults "extensions/*.el" "dirvish-pkg.el"))))))
 
 (provide 'siren-core-package-overrides)
 ;;; siren-core-packages.el ends here
