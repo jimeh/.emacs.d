@@ -41,56 +41,5 @@
   :if window-system
   :hook (company-mode . company-box-mode))
 
-(use-package company-yasnippet
-  :straight company
-
-  :preface
-  (defgroup siren-company-yasnippet nil
-    "Siren specific tweaks to company-yasnippet."
-    :group 'company)
-
-  (defcustom siren-company-yasnippet-exact-match-only nil
-    "Only match completion when it is a exact match for a snippet key.
-
-This allows company-yasnippet to be used before company-capf / lsp, allowing
-snippets to be easily used when exactly typing out a snippet key."
-    :type 'boolean
-    :group 'siren-company-yasnippet)
-
-  :custom
-  (siren-company-yasnippet-exact-match-only t)
-
-  :config
-  ;; Dirty hack to optionally enable company-yasnippet to only match exact
-  ;; snippet keys.
-  (defun company-yasnippet--completions-for-prefix (prefix key-prefix tables)
-    (cl-mapcan
-     (lambda (table)
-       (let ((keyhash (yas--table-hash table))
-             (requirement (yas--require-template-specific-condition-p))
-             res)
-         (when keyhash
-           (maphash
-            (lambda (key value)
-              (when (and (stringp key)
-                         (if siren-company-yasnippet-exact-match-only
-                             (string-equal key-prefix key)
-                           (string-prefix-p key-prefix key)))
-                (maphash
-                 (lambda (name template)
-                   (when (yas--template-can-expand-p
-                          (yas--template-condition template) requirement)
-                     (push
-                      (propertize key
-                                  'yas-annotation name
-                                  'yas-template template
-                                  'yas-prefix-offset (- (length key-prefix)
-                                                        (length prefix)))
-                      res)))
-                 value)))
-            keyhash))
-         res))
-     tables)))
-
 (provide 'siren-company)
 ;;; siren-company.el ends here
