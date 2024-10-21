@@ -1,5 +1,42 @@
 # Changelog
 
+## [0.8.50](https://github.com/jimeh/.emacs.d/compare/v0.8.49...v0.8.50) (2024-10-21)
+
+
+### Features
+
+* **ai:** tweak chatgpt and gptel setup ([de9fee4](https://github.com/jimeh/.emacs.d/commit/de9fee487566b32c770f77a7d2589f304c8c39e8))
+* **copilot:** disable copilot-mode in *scratch* buffers ([c5f6383](https://github.com/jimeh/.emacs.d/commit/c5f6383c7eace66a21f8903137b067745a2cf72e))
+* **core:** add siren list manipulation helper functions ([2b4c3a2](https://github.com/jimeh/.emacs.d/commit/2b4c3a2d7a378978ed7bd4366f8c5eac8578ff30))
+* **language/erb:** setup linting and formatting of ERB files via erblint ([d0ef255](https://github.com/jimeh/.emacs.d/commit/d0ef2559062cb42d97579a2e2416328cfc159208))
+* **language/go:** basic prep and setup to test go-ts-mode ([224a6f6](https://github.com/jimeh/.emacs.d/commit/224a6f659ad5d4b6602ae2e24f8a1bc9bee69157))
+* **language/go:** enable lsp-mode in go.mod and go.work files ([e97183e](https://github.com/jimeh/.emacs.d/commit/e97183ee71cd64679b4e83f18c5cd9730dc5feb8))
+* **language/go:** remove inlay hints and add commended out gopls debug settings ([9fdf08a](https://github.com/jimeh/.emacs.d/commit/9fdf08a804bb08ec190f9c6aa245be4299b06d22))
+* **language/go:** switch to go-ts-mode ([814347d](https://github.com/jimeh/.emacs.d/commit/814347dbb246368c836034ba477637e6bfeb193b))
+* **language/ruby:** improve and customize ruby-ts-mode setup ([ea76214](https://github.com/jimeh/.emacs.d/commit/ea7621478ed132bc0549d1bd1ae0a6aa217e6bcc))
+* **language/ruby:** switch to ruby-ts-mode ([3cae3d9](https://github.com/jimeh/.emacs.d/commit/3cae3d93bf11da129d557a3cad946539d3fa5dff))
+* **language/ruby:** various tweaks for testing ruby-ts-mode and other improvements ([72cf922](https://github.com/jimeh/.emacs.d/commit/72cf92293e2ce3e15baeb7557da2b76fa3d80202))
+* **language/terraform:** re-enable lsp-mode, seems more stable now ([ca739ba](https://github.com/jimeh/.emacs.d/commit/ca739bac8089cc108269f76a207f741812c8fb4b))
+* **snippets/sh-mode:** add custom snippets ([b3a998a](https://github.com/jimeh/.emacs.d/commit/b3a998a83fc9138fa9cfc32af81af65b056af04f))
+* **themes/doom-themes-overrides:** improve lsp-highlight and symbol-overlay ([e0b771b](https://github.com/jimeh/.emacs.d/commit/e0b771bf121d7334b4cb47f8b2ab27f15087f88c))
+
+
+### Bug Fixes
+
+* **completion/yasnippet:** fix completion issues caused by yasnippet ([f70de31](https://github.com/jimeh/.emacs.d/commit/f70de31989dcee709c545599e3eb33f449ddd5f0))
+* **language/toml:** switch back to conf-toml-mode ([9ba69c8](https://github.com/jimeh/.emacs.d/commit/9ba69c8e626ea2b4aedfc74b143f8625db0bee46))
+* **language/yaml:** define custom tree-sitter queries ([1dfd9d2](https://github.com/jimeh/.emacs.d/commit/1dfd9d28a059cf28a2ef595756b68f2a16bc0fae))
+* **language/yaml:** provide filename to actionlint linter ([9e6ce1e](https://github.com/jimeh/.emacs.d/commit/9e6ce1eaa8c503175d60f8b8238451d469bcb6eb))
+* **org-mode:** remove custom tab-width setting ([4cff1f7](https://github.com/jimeh/.emacs.d/commit/4cff1f760ba1dbe4f01b3b8ee377a4cea3e6d4a4))
+* **org-mode:** remove setting causing error in latest nightly builds ([7d4fbe3](https://github.com/jimeh/.emacs.d/commit/7d4fbe39159136c07bd9f2ac6105ea722e38aba6))
+* **package/refine:** use fork of refine with fixes ([dec4586](https://github.com/jimeh/.emacs.d/commit/dec45868d37cb450f9b982bece29bf039365d2cc))
+* **text-editing/smartparens:** disable navigate action on {} pair ([2dfc86b](https://github.com/jimeh/.emacs.d/commit/2dfc86b61013cfb3dd5bbf4281986bdc59b61df8))
+
+
+### Reverts
+
+* **text-editing/smartparens:** disable navigate action on {} pair ([64d520c](https://github.com/jimeh/.emacs.d/commit/64d520c1d508965977a7355487b9986bcf98fc86))
+
 ## [0.8.49](https://github.com/jimeh/.emacs.d/compare/v0.8.48...v0.8.49) (2024-05-12)
 
 
