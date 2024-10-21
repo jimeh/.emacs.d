@@ -18,18 +18,21 @@
 
 (doom-themes-set-faces
   'siren-doom-themes-overrides
-  '(font-lock-variable-name-face :foreground (doom-lighten blue 0.25))
   '(vertical-border (&all :background bg)
                     (&light :foreground vertical-bar)
                     (&dark :foreground (doom-darken vertical-bar
                                                     (if window-system 0.4 0))))
+
   '(font-lock-comment-face :foreground (doom-lighten comments 0.15))
   '(font-lock-operator-face :inherit 'font-lock-keyword-face)
+  '(font-lock-property-name-face :foreground (doom-lighten constants 0.1))
+  '(font-lock-property-use-face :inherit 'font-lock-property-name-face)
+  '(font-lock-variable-name-face :foreground (doom-lighten blue 0.25))
 
   ;; built-in completion faces, based on doom-themes' defaults for orderless
   '(completions-common-part :weight 'bold
-                            :foreground (doom-blend blue    fg 0.6)
-                            :background (doom-blend blue    bg 0.1))
+                            :foreground (doom-blend blue fg 0.6)
+                            :background (doom-blend blue bg 0.1))
 
   ;; whitespace-mode
   '(whitespace-tab :foreground (doom-color base4)

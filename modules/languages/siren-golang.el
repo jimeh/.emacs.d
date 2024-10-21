@@ -22,21 +22,13 @@
   :type 'number
   :group 'siren-go)
 
-(defun siren-go-mode-setup ()
-  (setq-local tab-width siren-go-tab-width
-              company-minimum-prefix-length 1)
-
-  (when (fboundp 'highlight-symbol-mode)
-    (highlight-symbol-mode -1))
-  (when (fboundp 'auto-highlight-symbol-mode)
-    (auto-highlight-symbol-mode -1)))
-
 (defun siren-define-golines-format-mode ()
   "Setup and define golines formatter."
-  (reformatter-define golines-format
-    :program "golines"
-    :args '("-t" "4" "-m" "80" "--no-reformat-tags")
-    :lighter " GOLINES"))
+  (when (not (fboundp 'golines-format-buffer))
+    (reformatter-define golines-format
+      :program "golines"
+      :args '("-t" "4" "-m" "80" "--no-reformat-tags")
+      :lighter " GOLINES")))
 
 (use-package go-mode
   :mode "\\.go\\'"
@@ -53,6 +45,15 @@
   (go-dot-work-mode . siren-go-dot-mod-mode-setup)
 
   :preface
+  (defun siren-go-mode-setup ()
+    (setq-local tab-width siren-go-tab-width
+                company-minimum-prefix-length 1)
+
+    (when (fboundp 'highlight-symbol-mode)
+      (highlight-symbol-mode -1))
+    (when (fboundp 'auto-highlight-symbol-mode)
+      (auto-highlight-symbol-mode -1)))
+
   (defun siren-go-dot-mod-mode-setup ()
     (run-hooks 'prog-mode-hook)
     (setq-local tab-width siren-go-tab-width))
@@ -85,24 +86,100 @@
 (when (fboundp 'go-ts-mode)
     (use-package go-ts-mode
       :straight (:type built-in)
-      ;; :mode "\\.go\\'"
-      ;; :interpreter "go"
+      :mode "\\.go\\'"
+      :interpreter "go"
       :hook
-      (go-ts-mode . siren-go-mode-setup)
+      (go-ts-mode . siren-go-ts-mode-setup)
+
+      :custom
+      (go-ts-mode-indent-offset siren-go-tab-width)
 
       :general
       (:keymaps 'go-ts-mode-map
-                "RET" 'newline-and-indent
-                "C-h f" 'godoc-at-point)
+                "RET" 'newline-and-indent)
+
+      :preface
+      (defcustom go-ts-other-file-alist
+        '(("_test\\.go\\'" (".go"))
+          ("\\.go\\'" ("_test.go")))
+        "Borrowed from `go-mode' to add support for _test.go files."
+        :type '(repeat (list regexp (choice (repeat string) function)))
+        :group 'go)
+
+      (defun siren-go-ts-mode-setup ()
+        (setq-local tab-width siren-go-tab-width
+                    company-minimum-prefix-length 1
+                    ff-other-file-alist 'go-ts-other-file-alist
+                    treesit-font-lock-settings
+                    (append treesit-font-lock-settings
+                            (siren-go-ts-mode-font-lock-overrides)))
+
+        (when (fboundp 'highlight-symbol-mode)
+          (highlight-symbol-mode -1))
+        (when (fboundp 'auto-highlight-symbol-mode)
+          (auto-highlight-symbol-mode -1)))
+
+      (defun siren-go-ts-mode-font-lock-overrides ()
+        "Returns a list of overide treesit font-lock rules."
+        (let ((language 'go))
+          (treesit-font-lock-rules
+           ;; Highlight `true', `false', `nil' and `iota' as built-in constants,
+           ;; and const declarations as variable names.
+           :language language
+           :override t
+           :feature 'constant
+           `([(false) (nil) (true)] @font-lock-builtin-face
+             ,@(when (go-ts-mode--iota-query-supported-p)
+                 '((iota) @font-lock-builtin-face))
+             (const_declaration
+              (const_spec name: (identifier) @font-lock-variable-name-face)))
+           )))
 
       :config
       (require 'siren-treesit)
       (siren-treesit-auto-ensure-grammar 'go)
+      (siren-treesit-auto-ensure-grammar 'gomod)
 
-      (treesit-font-lock-rules
-       :language 'go
-       :feature 'field-identifier
-       '((field_identifier) @font-lock-constant-face))))
+      (siren-define-golines-format-mode)
+
+      (define-key 'help-command (kbd "G") 'godoc)
+
+      ;; Ignore go test -c output files
+      (add-to-list 'completion-ignored-extensions ".test"))
+
+    (use-package go-mod-ts-mode
+      :straight (:type built-in)
+      :mode "/go\\.mod\\'"
+      :hook
+      (go-mod-ts-mode . siren-go-mod-ts-mode-setup)
+
+      :preface
+      (defun siren-go-mod-ts-mode-setup ()
+        (setq-local tab-width siren-go-tab-width
+                    treesit-font-lock-settings
+                    (append treesit-font-lock-settings
+                            (siren-go-mod-ts-mode-font-lock-overrides)))
+
+        (add-to-list 'treesit-font-lock-feature-list '((module) (module_path))))
+
+      (defun siren-go-mod-ts-mode-font-lock-overrides ()
+        "Returns a list of overide treesit font-lock rules."
+        (let ((language 'gomod))
+          (treesit-font-lock-rules
+           :language language
+           :override t
+           :feature 'module_path
+           '(((module_path) @font-lock-constant-face))
+
+           :language language
+           :override t
+           :feature 'module
+           '((module_directive (module_path) @font-lock-type-face))
+
+           :language language
+           :override t
+           :feature 'number
+           '([(go_version) (version)] @font-lock-number-face))))))
 
 (use-package lsp-go
   :straight lsp-mode
@@ -110,8 +187,8 @@
   :hook
   (go-mode . siren-lsp-go-mode-setup)
   (go-dot-mod-mode . siren-lsp-go-mode-setup)
-  (go-dot-work-mode . siren-lsp-go-mode-setup)
   (go-ts-mode . siren-lsp-go-mode-setup)
+  (go-mod-ts-mode . siren-lsp-go-mode-setup)
 
   :custom
   (lsp-go-use-placeholders t)
@@ -158,7 +235,6 @@
 
 (use-package gotest
   :defer t
-  :after (go-mode)
   :hook
   (go-mode . siren-gotest-setup)
   (go-ts-mode . siren-gotest-setup)
