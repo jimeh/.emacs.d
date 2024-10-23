@@ -6,13 +6,44 @@
 
 ;;; Code:
 
+(require 'siren-treesit)
+
 (use-package lua-mode
   :hook
   (lua-mode . siren-lua-mode-setup)
 
+  :custom
+  (lua-indent-level 2)
+
   :preface
-  (defun siren-lua-mode-setup ()
-    (setq-local lua-indent-level 2)))
+  (defun siren-lua-mode-setup ()))
+
+(when (fboundp 'lua-ts-mode)
+  (use-package lua-ts-mode
+    :straight (:type built-in)
+    :mode "\\.lua\\'"
+    :hook
+    (lua-ts-mode . siren-lua-ts-mode-setup)
+
+    :general
+    (:keymaps 'lua-ts-mode-map
+              "C-j" 'newline-and-indent)
+
+    :custom
+    (lua-ts-indent-offset 2)
+
+    :preface
+    (defun siren-lua-ts-mode-setup ()
+      (siren-treesit-replace-font-lock-settings
+       :default-language 'lua
+       ;; Use constant face for property names.
+       :feature 'property
+       '((field name: (identifier) @font-lock-constant-face)
+         (dot_index_expression
+          field: (identifier) @font-lock-constant-face))))
+
+    :config
+    (siren-treesit-auto-ensure-grammar 'lua)))
 
 (use-package lsp-lua
   :straight lsp-mode
