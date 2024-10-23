@@ -7,6 +7,8 @@
 
 ;;; Code:
 
+(require 'cl-lib)
+
 (defmacro siren-prepend (list-var element)
   "Add ELEMENT to beginning of LIST-VAR, removing duplicates."
   `(setq ,list-var (cons ,element (remove ,element ,list-var))))
@@ -54,6 +56,18 @@
                        (list ,element)
                        (cl-subseq cleaned-list (1+ pos)))
              (append cleaned-list (list ,element))))))
+
+(defmacro siren-replace-value (list-var old-value new-value)
+  "Replace all occurrences of OLD-VALUE with NEW-VALUE in LIST-VAR in-place."
+  `(cl-loop for item on ,list-var
+            if (equal (car item) ,old-value)
+            do (setf (car item) ,new-value)))
+
+(defmacro siren-replace-if (list-var predicate new-value)
+  "Replace elements in LIST-VAR that match PREDICATE with NEW-VALUE in-place."
+  `(cl-loop for item on ,list-var
+            if (funcall ,predicate (car item))
+            do (setf (car item) ,new-value)))
 
 (defun siren-recursive-add-to-load-path (dir)
   "Add DIR and all its sub-directories to `load-path'."

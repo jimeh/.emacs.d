@@ -25,8 +25,8 @@
 
   '(font-lock-comment-face :foreground (doom-lighten comments 0.15))
   '(font-lock-operator-face :inherit 'font-lock-keyword-face)
-  '(font-lock-property-name-face :foreground (doom-lighten constants 0.1))
-  '(font-lock-property-use-face :inherit 'font-lock-property-name-face)
+  '(font-lock-property-name-face :inherit 'font-lock-variable-name-face)
+  '(font-lock-property-use-face :inherit 'font-lock-variable-name-face)
   '(font-lock-variable-name-face :foreground (doom-lighten blue 0.25))
 
   ;; built-in completion faces, based on doom-themes' defaults for orderless

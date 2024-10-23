@@ -13,6 +13,7 @@
 (require 'siren-projectile)
 (require 'siren-reformatter)
 (require 'siren-string-inflection)
+(require 'siren-treesit)
 
 (defun siren-define-stree-format-mode ()
   "Setup stree (syntax_tree) formatter."
@@ -138,36 +139,29 @@
         (setq-local c-tab-always-indent nil
                     tab-width 2)
 
-        (setq-local treesit-font-lock-settings
-                    (append treesit-font-lock-settings
-                            (siren-ruby-ts-mode-font-lock-overrides)))
+        (siren-treesit-add-features '(block-braces))
+        (siren-treesit-append-font-lock-settings
+         :default-language 'ruby
 
-        (hs-minor-mode t))
-
-      (defun siren-ruby-ts-mode-font-lock-overrides ()
-        "Returns a list of overide treesit font-lock rules."
-        (let ((language 'ruby))
-          (treesit-font-lock-rules
-           ;; Use custom operators list.
-           :language language
-           :override t
-           :feature 'operator
-           `("!" @font-lock-negation-char-face
+         ;; Use custom operators list.
+         :feature 'operator
+         :override t
+         `("!" @font-lock-negation-char-face
              [,@siren-ruby-ts-operators] @font-lock-operator-face)
 
-           ;; Braces, when used to denote a block, have the same function as
-           ;; "do" and "end" and should be highlighted similarly.
-           :language language
-           :override t
-           :feature 'block-braces
-           '((block ["{" "}"] @font-lock-keyword-face))
+         ;; Braces, when used to denote a block, have the same function as
+         ;; "do" and "end" and should be highlighted similarly.
+         :feature 'block-braces
+         :override t
+         '((block ["{" "}"] @font-lock-keyword-face))
 
-           ;; Highlight string interpolation begin/end markers as keywords.
-           :language language
-           :override t
-           :feature 'interpolation
-           '((interpolation "#{" @font-lock-keyword-face)
-             (interpolation "}" @font-lock-keyword-face)))))
+         ;; Highlight string interpolation begin/end markers as keywords.
+         :feature 'interpolation
+         :override t
+         '((interpolation "#{" @font-lock-keyword-face)
+             (interpolation "}" @font-lock-keyword-face)))
+
+        (hs-minor-mode t))
 
       :config
       (siren-treesit-auto-ensure-grammar 'ruby)
@@ -181,7 +175,7 @@
       ;; Must be defined after ruby-ts-mode is loaded, as we need access to the
       ;; `ruby-ts--operators' variable.
       (defcustom siren-ruby-ts-operators
-        (append ruby-ts--operators '("->"))
+        (append ruby-ts--operators '("->" "||="))
         "Ruby operators for tree-sitter font-locking."
         :group 'siren-ruby-ts)))
 

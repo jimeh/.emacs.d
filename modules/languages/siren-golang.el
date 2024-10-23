@@ -12,6 +12,7 @@
 (require 'siren-prog-mode)
 (require 'siren-projectile)
 (require 'siren-reformatter)
+(require 'siren-treesit)
 
 (defgroup siren-go nil
   "Siren: go-mode configuration."
@@ -109,36 +110,48 @@
       (defun siren-go-ts-mode-setup ()
         (setq-local tab-width siren-go-tab-width
                     company-minimum-prefix-length 1
-                    ff-other-file-alist 'go-ts-other-file-alist
-                    treesit-font-lock-settings
-                    (append treesit-font-lock-settings
-                            (siren-go-ts-mode-font-lock-overrides)))
+                    ff-other-file-alist 'go-ts-other-file-alist)
+
+        (siren-treesit-append-font-lock-settings
+         :default-language 'go
+
+         ;; Highlight `true', `false', `nil' and `iota' as built-in constants,
+         ;; and const declarations as variable names.
+         :feature 'constant
+         :override t
+         `([(false) (nil) (true)] @font-lock-builtin-face
+           ,@(when (go-ts-mode--iota-query-supported-p)
+               '((iota) @font-lock-builtin-face))
+           (const_declaration
+            (const_spec name: (identifier) @font-lock-variable-name-face)))
+
+         ;; Customize struct properties to be highlighted as a constant, as
+         ;; opposed the same as variables.
+         :feature 'property
+         :override t
+         '((selector_expression
+            field: (field_identifier) @font-lock-constant-face)
+           (keyed_element (_ (identifier) @font-lock-constant-face))
+           (field_declaration
+            name: (field_identifier) @font-lock-constant-face))
+
+         ;; Redefine functions calls without changes after the property feature
+         ;; change, to ensure they are still highlighted correctly.
+         :feature 'function
+         :override t
+         '((call_expression
+            function: (identifier) @font-lock-function-call-face)
+           (call_expression
+            function: (selector_expression
+                       field: (field_identifier) @font-lock-function-call-face))))
 
         (when (fboundp 'highlight-symbol-mode)
           (highlight-symbol-mode -1))
         (when (fboundp 'auto-highlight-symbol-mode)
           (auto-highlight-symbol-mode -1)))
 
-      (defun siren-go-ts-mode-font-lock-overrides ()
-        "Returns a list of overide treesit font-lock rules."
-        (let ((language 'go))
-          (treesit-font-lock-rules
-           ;; Highlight `true', `false', `nil' and `iota' as built-in constants,
-           ;; and const declarations as variable names.
-           :language language
-           :override t
-           :feature 'constant
-           `([(false) (nil) (true)] @font-lock-builtin-face
-             ,@(when (go-ts-mode--iota-query-supported-p)
-                 '((iota) @font-lock-builtin-face))
-             (const_declaration
-              (const_spec name: (identifier) @font-lock-variable-name-face)))
-           )))
-
       :config
-      (require 'siren-treesit)
       (siren-treesit-auto-ensure-grammar 'go)
-      (siren-treesit-auto-ensure-grammar 'gomod)
 
       (siren-define-golines-format-mode)
 
@@ -155,31 +168,20 @@
 
       :preface
       (defun siren-go-mod-ts-mode-setup ()
-        (setq-local tab-width siren-go-tab-width
-                    treesit-font-lock-settings
-                    (append treesit-font-lock-settings
-                            (siren-go-mod-ts-mode-font-lock-overrides)))
+        (setq-local tab-width siren-go-tab-width)
 
-        (add-to-list 'treesit-font-lock-feature-list '((module) (module_path))))
+        (siren-treesit-add-features '(module_path module))
+        (siren-treesit-append-font-lock-settings
+         :default-language 'gomod
 
-      (defun siren-go-mod-ts-mode-font-lock-overrides ()
-        "Returns a list of overide treesit font-lock rules."
-        (let ((language 'gomod))
-          (treesit-font-lock-rules
-           :language language
-           :override t
-           :feature 'module_path
-           '(((module_path) @font-lock-constant-face))
+         :feature 'module
+         '((module_directive (module_path) @font-lock-type-face))
 
-           :language language
-           :override t
-           :feature 'module
-           '((module_directive (module_path) @font-lock-type-face))
+         :feature 'module_path
+         '(((module_path) @font-lock-constant-face))))
 
-           :language language
-           :override t
-           :feature 'number
-           '([(go_version) (version)] @font-lock-number-face))))))
+      :config
+      (siren-treesit-auto-ensure-grammar 'gomod)))
 
 (use-package lsp-go
   :straight lsp-mode
