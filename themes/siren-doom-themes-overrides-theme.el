@@ -24,6 +24,7 @@
                                                     (if window-system 0.4 0))))
 
   '(font-lock-comment-face :foreground (doom-lighten comments 0.15))
+  '(font-lock-function-call-face :foreground (doom-blend functions keywords 0.7))
   '(font-lock-operator-face :inherit 'font-lock-keyword-face)
   '(font-lock-property-name-face :inherit 'font-lock-variable-name-face)
   '(font-lock-property-use-face :inherit 'font-lock-variable-name-face)
@@ -102,7 +103,7 @@
   ;; tree-sitter
   '(tree-sitter-hl-face:property :inherit font-lock-constant-face) ;; disable italic
   '(tree-sitter-hl-face:method.call  :foreground (doom-blend functions keywords 0.6))
-  '(tree-sitter-hl-face:function.call  :foreground (doom-blend functions keywords 0.8))
+  '(tree-sitter-hl-face:function.call :inherit 'font-lock-function-call-face)
 
   ;; highlight-indent-guides
   '(highlight-indent-guides-odd-face :background (doom-lighten bg 0.06))
