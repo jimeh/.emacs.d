@@ -6,7 +6,9 @@
 
 ;;; Code:
 
+(require 'siren-flycheck)
 (require 'siren-lsp)
+(require 'siren-treesit)
 
 (use-package rust-mode
   :mode "\\.rs\\'"
@@ -23,11 +25,33 @@
   (defun siren-rust-mode-setup ()
     (setq-local rust-format-on-save t)))
 
+(when (fboundp 'rust-ts-mode)
+  (use-package rust-ts-mode
+    :straight (:type built-in)
+    :mode "\\.rs\\'"
+    :interpreter "rust"
+    :hook
+    (rust-ts-mode . siren-rust-ts-mode-setup)
+
+    :general
+    (:keymaps 'rust-ts-mode-map
+              "C-j" 'newline-and-indent)
+
+    :custom
+    (rust-ts-mode-indent-offset 4)
+
+    :preface
+    (defun siren-rust-ts-mode-setup ())
+
+    :config
+    (siren-treesit-auto-ensure-grammar 'rust)))
+
 (use-package lsp-rust
   :straight lsp-mode
 
   :hook
   (rust-mode . siren-lsp-rust-mode-setup)
+  (rust-ts-mode . siren-lsp-rust-mode-setup)
 
   :preface
   (defun siren-lsp-rust-mode-setup ()
@@ -63,9 +87,10 @@
 (use-package cargo
   :hook
   (rust-mode . cargo-minor-mode)
+  (rust-ts-mode . cargo-minor-mode)
 
   :general
-  (:keymaps 'rust-mode-map
+  (:keymaps '(rust-mode-map rust-ts-mode-map)
             "C-c , a" 'cargo-process-test
             "C-c , s" 'cargo-process-current-test
             "C-c , v" 'cargo-process-current-file-tests)
@@ -99,8 +124,7 @@
 
 (use-package cargo-transient
   :general
-  (:keymaps 'rust-mode-map
-            "C-'" 'cargo-transient
+  (:keymaps '(rust-mode-map rust-ts-mode-map)
             "C-c C-," 'cargo-transient)
 
   :custom
@@ -108,7 +132,6 @@
    'cargo-transient-project-prefixed-buffer-name))
 
 (use-package flycheck-rust
-  :after rust-mode
   :hook (flycheck-mode . flycheck-rust-setup))
 
 (use-package rust-playground
