@@ -26,13 +26,19 @@
     "Add font-lock features to treesit."
     (add-to-list 'treesit-font-lock-feature-list features) t)
 
+  (defun siren-treesit-prepend-font-lock-settings (&rest query-specs)
+    "Replace existing features in font-lock settings, retaining feature order."
+    (setq-local
+     treesit-font-lock-settings
+     (append (apply 'treesit-font-lock-rules query-specs)
+             treesit-font-lock-settings)))
+
   (defun siren-treesit-append-font-lock-settings (&rest query-specs)
     "Replace existing features in font-lock settings, retaining feature order."
     (setq-local
      treesit-font-lock-settings
      (append treesit-font-lock-settings
              (apply 'treesit-font-lock-rules query-specs))))
-
 
   (defun siren-treesit-add-font-lock-settings (&rest query-specs)
     "Add features after existing ones  in font-lock settings."
@@ -58,6 +64,11 @@
                 (siren-treesit--merge-font-lock-settings
                  treesit-font-lock-settings
                  (apply 'treesit-font-lock-rules query-specs))))
+
+  (defun siren-treesit-get-font-lock-rule (feature)
+    "Get the current treesit font-lock settings."
+    (cl-find-if (lambda (x) (eq (siren-treesit--feature x) feature))
+                treesit-font-lock-settings))
 
   (defun siren-treesit--feature (compiled-query)
     "Get the feature from a compiled treesit query."
