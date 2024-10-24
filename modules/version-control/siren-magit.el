@@ -10,6 +10,15 @@
 (require 'siren-display-line-numbers)
 (require 'siren-whitespace)
 
+(defun siren-git-commit-mode-setup ()
+  (setq tab-width 4
+        fill-column 72)
+
+  (siren-display-fill-column)
+  (siren-display-line-numbers)
+  (auto-fill-mode t)
+  (whitespace-mode t))
+
 (use-package magit
   :general
   ("C-x g" 'magit-status)
@@ -46,15 +55,6 @@
     (setq tab-width 4))
 
   (defun siren-magit-mode-setup ())
-
-  (defun siren-git-commit-mode-setup ()
-    (setq tab-width 4
-          fill-column 72)
-
-    (siren-display-fill-column)
-    (siren-display-line-numbers)
-    (auto-fill-mode t)
-    (whitespace-mode t))
 
   :config
   (when (fboundp 'system-move-file-to-trash)
@@ -96,6 +96,20 @@
   :straight (:host github :repo "akirak/conventional-commit.el")
   :hook
   (git-commit-mode . conventional-commit-setup))
+
+(use-package git-commit-ts-mode
+  :mode "\\COMMIT_EDITMSG\\'"
+
+  :hook
+  (git-ts-commit-setup . siren-git-commit-mode-setup)
+
+  :custom
+  (git-commit-major-mode 'git-commit-ts-mode)
+
+  :init
+  (siren-treesit-manual-prepare
+   'git-commit-ts-mode
+   '(gitcommit . ("https://github.com/gbprod/tree-sitter-gitcommit"))))
 
 (provide 'siren-magit)
 ;;; siren-magit.el ends here
