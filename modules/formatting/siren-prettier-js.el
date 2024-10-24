@@ -10,6 +10,7 @@
   :defer t
   :hook
   ((css-mode
+    css-ts-mode
     markdown-mode
     php-mode
     typescript-mode
