@@ -10,9 +10,7 @@
 
 (use-package js-mode
   :straight (:type built-in)
-  :mode
-  "\\.js\\'"
-  "\\.pac\\'"
+  :mode "\\.js\\'" "\\.pac\\'"
 
   :general
   (:keymaps 'js-mode-map
@@ -21,19 +19,45 @@
   :hook
   (js-mode . siren-js-mode-setup)
 
+  :custom
+  (js-indent-level 2)
+
   :preface
   (defun siren-js-mode-setup ()
     "Default tweaks for `js-mode'."
-    (let ((width 2))
-      (setq-local js-indent-level width
-                  indent-level width
-                  tab-width width))))
+    (setq-local indent-level js-indent-level
+                tab-width js-indent-level)))
+
+(when (fboundp 'js-ts-mode)
+  (use-package js-ts-mode
+    :straight (:type built-in)
+    ;;; Disable, as js-ts-mode is quite underbaked and lacks a lot of syntax
+    ;;; highlighting features compared to js-mode, and even more when
+    ;;; tree-sitter-mode is added as well.
+    ;; :mode "\\.js\\'" "\\.pac\\'"
+
+    :hook
+    (js-ts-mode . siren-js-ts-mode-setup)
+
+    :general
+    (:keymaps 'js-ts-mode-map
+              "C-j" 'newline-and-indent)
+
+    :custom
+    (js-indent-level 2)
+
+    :preface
+    (defun siren-js-ts-mode-setup ())
+
+    :config
+    (siren-treesit-auto-ensure-grammar 'javascript)))
 
 (use-package lsp-javascript
   :straight lsp-mode
 
   :hook
   (js-mode . siren-lsp-js-mode-setup)
+  (js-ts-mode . siren-lsp-js-mode-setup)
 
   :preface
   (defun siren-lsp-js-mode-setup ()
