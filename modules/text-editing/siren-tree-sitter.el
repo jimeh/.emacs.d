@@ -24,8 +24,19 @@
     yaml-mode) . siren-tree-sitter-mode-enable)
 
   :preface
+  (defgroup siren-tree-sitter nil
+    "Siren specific tweaks to tree-sitter-mode."
+    :group 'tree-sitter)
+
+  (defcustom siren-tree-sitter-incompatible-modes '(scss-mode)
+    "List of modes where tree-sitter-mode should not be enabled."
+    :type 'boolean
+    :group 'siren-tree-sitter)
+
   (defun siren-tree-sitter-mode-enable ()
-    (tree-sitter-mode t)))
+    "Enable tree-sitter-mode if the current major mode is not in the banned list."
+    (unless (derived-mode-p siren-tree-sitter-incompatible-modes)
+      (tree-sitter-mode t))))
 
 (use-package tree-sitter-langs
   :hook
