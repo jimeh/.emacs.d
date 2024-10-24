@@ -9,13 +9,10 @@
 (use-package prettier-js
   :defer t
   :hook
-  ((conf-toml-mode
-    css-mode
+  ((css-mode
     markdown-mode
     php-mode
     typescript-mode
-    toml-mode
-    toml-ts-mode
     vue-mode) . siren-prettier-js-mode-enable)
 
   :custom
