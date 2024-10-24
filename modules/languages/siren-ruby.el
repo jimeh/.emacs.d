@@ -314,6 +314,7 @@ and will break things."
   :defer t
   :hook
   (ruby-mode . inf-ruby-minor-mode)
+  (ruby-ts-mode . inf-ruby-minor-mode)
   (inf-ruby-mode . siren-inf-ruby-mode-setup)
   (compilation-filter . inf-ruby-auto-enter)
 
@@ -323,6 +324,7 @@ and will break things."
         (company-mode -1)))
 
   :config
+  (inf-ruby-switch-setup)
   (unbind-key "C-c C-b" inf-ruby-minor-mode-map)
   (unbind-key "C-c C-q" inf-ruby-minor-mode-map)
   (unbind-key "C-c C-r" inf-ruby-minor-mode-map)
