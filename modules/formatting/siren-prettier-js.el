@@ -14,6 +14,7 @@
     markdown-mode
     php-mode
     php-ts-mode
+    scss-mode
     tsx-ts-mode
     typescript-mode
     typescript-ts-mode
