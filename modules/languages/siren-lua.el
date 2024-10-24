@@ -50,6 +50,7 @@
 
   :hook
   (lua-mode . siren-lsp-lua-mode-setup)
+  (lua-ts-mode . siren-lsp-lua-mode-setup)
 
   :custom
   (lsp-lua-hint-enable t)
