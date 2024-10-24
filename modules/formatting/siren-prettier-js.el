@@ -13,13 +13,14 @@
     css-ts-mode
     markdown-mode
     php-mode
+    php-ts-mode
     typescript-mode
     vue-mode) . siren-prettier-js-mode-enable)
 
   :custom
   (prettier-js-command "prettier-pnp")
   (prettier-js-args '("--quiet"
-                      "--pnp" "prettier-plugin-toml"))
+                      "--pnp" "@prettier/plugin-php"))
 
   :preface
   (defun siren-prettier-js-mode-enable ()
