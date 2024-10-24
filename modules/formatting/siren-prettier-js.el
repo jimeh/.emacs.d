@@ -14,7 +14,9 @@
     markdown-mode
     php-mode
     php-ts-mode
+    tsx-ts-mode
     typescript-mode
+    typescript-ts-mode
     vue-mode) . siren-prettier-js-mode-enable)
 
   :custom
