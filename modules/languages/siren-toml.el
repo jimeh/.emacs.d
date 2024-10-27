@@ -23,9 +23,9 @@
 (if (fboundp 'toml-ts-mode)
     (use-package toml-ts-mode
       :straight (:type built-in)
-      ;; TODO: Revisit toml-ts-mode at some point the future. It's a bit buggy
-      ;; at the moment.
-      :mode "\\.toml\\'" "Cargo\\.lock\\'"
+      ;;; TODO: Revisit toml-ts-mode at some point the future. Performance is
+      ;;; exceptionally bad on larger files of a few hundred lines.
+      ;; :mode "\\.toml\\'" "Cargo\\.lock\\'"
 
       :hook
       (toml-ts-mode . siren-toml-mode-setup)
@@ -39,14 +39,18 @@
 (use-package lsp-toml
   :straight lsp-mode
   :hook
-  (toml-mode . siren-lsp-lua-mode-setup)
+  (conf-toml-mode . siren-lsp-lua-mode-setup)
   (toml-ts-mode . siren-lsp-lua-mode-setup)
 
   :preface
   (defun siren-lsp-lua-mode-setup ()
+    ;; Disable semantic tokens as it typically causes an annoying delay with the
+    ;; syntax highlighting as you type. Essentially all new text is a very faded
+    ;; out grey color for the first 1-2 seconds as you type.
+    (setq-local lsp-semantic-tokens-enable nil)
+
     (lsp-format-buffer-on-save-mode t)
-    (lsp-deferred))
-)
+    (lsp-deferred)))
 
 (provide 'siren-toml)
 ;;; siren-toml.el ends here

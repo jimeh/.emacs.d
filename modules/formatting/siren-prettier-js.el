@@ -23,7 +23,8 @@
   :custom
   (prettier-js-command "prettier-pnp")
   (prettier-js-args '("--quiet"
-                      "--pnp" "@prettier/plugin-php"))
+                      "--pnp" "@prettier/plugin-php"
+                      "--pnp" "prettier-plugin-toml"))
 
   :preface
   (defun siren-prettier-js-mode-enable ()
