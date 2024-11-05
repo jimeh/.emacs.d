@@ -100,6 +100,10 @@
 (use-package git-commit-ts-mode
   :mode "\\COMMIT_EDITMSG\\'"
 
+  :general
+  (:keymaps 'git-commit-ts-mode-map
+            "M-q" 'fill-paragraph)
+
   :hook
   (git-ts-commit-setup . siren-git-commit-mode-setup)
 
