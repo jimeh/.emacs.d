@@ -139,13 +139,23 @@ will be appended."
                  (not (treesit-ready-p grammar t)))
         (siren-treesit-auto-install-grammar grammar)))
 
-    (defun siren-treesit-auto-install-grammar (grammar)
+    (defun siren-treesit-auto-ensure-grammars (&rest grammars)
+      "Ensure treesit GRAMMARS are installed and ready for use."
+      (dolist (grammar grammars)
+        (siren-treesit-auto-ensure-grammar grammar)))
+
+    (defun siren-treesit-auto-install-grammar (lang &optional out-dir)
       "Install treesit GRAMMAR."
+      (interactive (list (intern
+                          (completing-read
+                           "Language: "
+                           (mapcar #'car treesit-language-source-alist)))
+                         'interactive))
+
       (when (fboundp 'treesit-ready-p)
         (let ((treesit-language-source-alist
                (treesit-auto--build-treesit-source-alist)))
-          (treesit-install-language-grammar grammar
-                                            siren-treesit-grammar-dir))))
+          (treesit-install-language-grammar lang siren-treesit-grammar-dir))))
 
     (defvar siren-treesit-auto--source-alist-populated-p 'nil
       "Internal flag to track if `treesit-auto--build-treesit-source-alist'

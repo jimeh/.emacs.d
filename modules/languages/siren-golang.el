@@ -151,7 +151,7 @@
           (auto-highlight-symbol-mode -1)))
 
       :config
-      (siren-treesit-auto-ensure-grammar 'go)
+      (siren-treesit-auto-ensure-grammars 'go 'gomod)
 
       (siren-define-golines-format-mode)
 
@@ -181,7 +181,7 @@
          '(((module_path) @font-lock-constant-face))))
 
       :config
-      (siren-treesit-auto-ensure-grammar 'gomod)))
+      (siren-treesit-auto-ensure-grammars 'go 'gomod)))
 
 (use-package lsp-go
   :straight lsp-mode
