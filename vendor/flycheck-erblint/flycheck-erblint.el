@@ -42,6 +42,11 @@
   "Check files with erblint via flycheck."
   :group 'tools)
 
+(defcustom flycheck-erblint-command "erb_lint"
+  "Name of erblint executable."
+  :type 'string
+  :group 'flycheck-erblint)
+
 (defcustom flycheck-erblint-extra-args nil
   "Extra arguments to pass to erblint."
   :type '(repeat string)
@@ -112,7 +117,7 @@ about erb-lint."
 
 See URL `https://github.com/Shopify/erb-lint' for more information
 about erb-lint."
-  :command ("erblint" "--format" "json"
+  :command (flycheck-erblint-command "--format" "json"
             (config-file "--config" flycheck-erblint-config-filename)
             "--stdin" source-original)
   :standard-input t

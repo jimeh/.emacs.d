@@ -53,7 +53,7 @@
   :group 'languages
   :link '(url-link "https://github.com/jimeh/erblintfmt.el"))
 
-(defcustom erblintfmt-erblint-command "erblint"
+(defcustom erblintfmt-erblint-command "erb_lint"
   "Name of erblint executable."
   :type 'string
   :group 'erblintfmt)
