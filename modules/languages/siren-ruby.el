@@ -182,9 +182,10 @@
 (use-package lsp-solargraph
   :straight lsp-mode
 
-  :hook
-  (ruby-mode . siren-lsp-ruby-mode-setup)
-  (ruby-ts-mode . siren-lsp-ruby-mode-setup)
+  ;; Disable solargraph for now in favor of ruby-lsp.
+  ;; :hook
+  ;; (ruby-mode . siren-lsp-solargraph-ruby-mode-setup)
+  ;; (ruby-ts-mode . siren-lsp-solargraph-ruby-mode-setup)
 
   :custom
   (lsp-solargraph-multi-root nil)
@@ -202,7 +203,7 @@ output typically does not conform to any common Ruby formatting standards."
       (or (not buffer-file-name)
           (not (string-suffix-p db-schema-file buffer-file-name)))))
 
-  (defun siren-lsp-ruby-mode-setup ()
+  (defun siren-lsp-solargraph-ruby-mode-setup ()
     (setq-local siren-lsp-manual-format-buffer-func
                 'siren-lsp-solargraph-manual-format-buffer)
 
@@ -236,60 +237,51 @@ and will break things."
   (add-to-list 'safe-local-variable-values
                '(lsp-solargraph-use-bundler . t)))
 
-;; (use-package lsp-ruby-lsp
-;;   :straight lsp-mode
+(use-package lsp-ruby-lsp
+  :straight lsp-mode
 
-;;   :hook
-;;   (ruby-mode . siren-lsp-ruby-lsp-mode-setup)
+  :hook
+  (ruby-mode . siren-lsp-ruby-lsp-mode-setup)
+  (ruby-ts-mode . siren-lsp-ruby-lsp-mode-setup)
 
-;;   :custom
-;;   (lsp-solargraph-multi-root nil)
-;;   (lsp-solargraph-log-level "warn")
+  :preface
+  (defun siren-lsp-ruby-lsp-format-on-save-p ()
+    "Determine if format on save (FoS) should be enabled in the current buffer.
 
-;;   :preface
-;;   (defun siren-lsp-ruby-lsp-format-on-save-p ()
-;;     "Determine if format on save (FoS) should be enabled in the current buffer.
+Returns t if FoS should be enabled, nil otherwise.
 
-;; Returns t if FoS should be enabled, nil otherwise.
+Currently only disables FoS in 'db/schema.rb' files, as Rails' generated
+output typically does not conform to any common Ruby formatting standards."
+    (let ((db-schema-file (concat (file-name-as-directory "db") "schema.rb")))
+      (or (not buffer-file-name)
+          (not (string-suffix-p db-schema-file buffer-file-name)))))
 
-;; Currently only disables FoS in 'db/schema.rb' files, as Rails' generated
-;; output typically does not conform to any common Ruby formatting standards."
-;;     (let ((db-schema-file (concat (file-name-as-directory "db") "schema.rb")))
-;;       (or (not buffer-file-name)
-;;           (not (string-suffix-p db-schema-file buffer-file-name)))))
+  (defun siren-lsp-ruby-lsp-mode-setup ()
+    (setq-local siren-lsp-manual-format-buffer-func
+                'siren-lsp-ruby-lsp-manual-format-buffer)
 
-;;   (defun siren-lsp-ruby-lsp-mode-setup ()
-;;     (setq-local siren-lsp-manual-format-buffer-func
-;;                 'siren-lsp-ruby-lsp-manual-format-buffer)
+    ;; Disable ruby clients which have higher priority than the ruby-lsp-ls
+    ;; client.
+    (setq-local lsp-disabled-clients '(vue-semantic-server ruby-ls rubocop-ls))
 
-;;     ;; Disable ruby clients which have higher priority than the ruby-lsp-ls
-;;     ;; client.
-;;     (setq-local lsp-disabled-clients '(vue-semantic-server ruby-ls rubocop-ls))
+    ;; Disable semantic tokens as it typically causes an annoying delay with the
+    ;; syntax highlighting as you type. Essentially all new text is a very faded
+    ;; out grey color for the first 1-2 seconds as you type.
+    (setq-local lsp-semantic-tokens-enable nil)
 
-;;     ;; Disable semantic tokens as it typically causes an annoying delay with the
-;;     ;; syntax highlighting as you type. Essentially all new text is a very faded
-;;     ;; out grey color for the first 1-2 seconds as you type.
-;;     (setq-local lsp-semantic-tokens-enable nil)
+    ;; Enable format on save if the predicate returns true.
+    (when (siren-lsp-ruby-lsp-format-on-save-p)
+      (lsp-format-buffer-on-save-mode t))
 
-;;     ;; Enable format on save if the predicate returns true.
-;;     (when (siren-lsp-ruby-lsp-format-on-save-p)
-;;       (lsp-format-buffer-on-save-mode t))
+    (lsp-deferred))
 
-;;     (lsp-deferred))
+  (defun siren-lsp-ruby-lsp-manual-format-buffer ()
+    (stree-format-buffer)
+    (lsp-format-buffer))
 
-;;   (defun siren-lsp-ruby-lsp-manual-format-buffer ()
-;;     (stree-format-buffer)
-;;     (lsp-format-buffer))
-
-;;   ;; :config
-;;   ;; (lsp-register-client
-;;   ;;  (make-lsp-client
-;;   ;;   :new-connection (lsp-stdio-connection #'lsp-rubocop--build-command)
-;;   ;;   :activation-fn (lsp-activate-on "ruby")
-;;   ;;   :priority -1
-;;   ;;   :server-id 'rubocop-lsp
-;;   ;;   :add-on? t))
-;;   )
+  :config
+  (add-to-list 'lsp-ruby-lsp-library-directories
+               "/.local/share/mise/installs/ruby/"))
 
 (use-package dap-ruby
   :straight dap-mode
