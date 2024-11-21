@@ -2,17 +2,26 @@
 
 ;;; Commentary:
 
-;; Allows to toggle comments for current line or selected region. Shamelessly
-;; ripped from textmate.el: https://github.com/defunkt/textmate.el
+;; Allows to toggle comments for current line or selected region.
 
 ;;; Code:
 
-(unless (fboundp 'comment-or-uncomment-region-or-line)
-  (siren-allow-line-as-region-for-function comment-or-uncomment-region))
+(use-package newcomment
+  :straight (:type built-in)
 
-(global-set-key (kbd "C-c /") 'comment-or-uncomment-region-or-line)
-(global-set-key (kbd "C-c C-/") 'comment-or-uncomment-region-or-line)
-(global-set-key (kbd "C-c C-_") 'comment-or-uncomment-region-or-line)
+  :general
+  ("C-c /" 'comment-or-uncomment-region-or-line)
+  ("C-c C-/" 'comment-or-uncomment-region-or-line)
+  ("C-c C-_" 'comment-or-uncomment-region-or-line)
+
+  :preface
+  (defun comment-or-uncomment-region-or-line (&optional beg end arg)
+    "Comments or uncomments the region or current line."
+    (interactive "P")
+    (if (region-active-p)
+        (comment-or-uncomment-region (region-beginning) (region-end) arg)
+      (comment-or-uncomment-region (line-beginning-position)
+                                   (line-end-position) arg))))
 
 (provide 'siren-toggle-comments)
 ;;; siren-toggle-comments.el ends here
