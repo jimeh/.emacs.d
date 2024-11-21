@@ -14,6 +14,7 @@
                                     "TMPDIR"
                                     "KUBECONFIG"
                                     "GOPRIVATE"
+                                    "LSP_USE_PLISTS"
                                     "RUST_BACKTRACE"
                                     "MallocNanoZone"))
   (exec-path-from-shell-arguments '("-l"))

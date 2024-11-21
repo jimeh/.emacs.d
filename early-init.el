@@ -53,4 +53,7 @@
 ;; larger than the system default.
 (setq frame-inhibit-implied-resize t)
 
+;; Set lsp-mode to use plists for performance improvements.
+(setenv "LSP_USE_PLISTS" "true")
+
 ;;; early-init.el ends here
