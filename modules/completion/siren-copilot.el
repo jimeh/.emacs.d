@@ -42,7 +42,7 @@
         (or (string-prefix-p ".env" base)
             (string-match-p "\/\.ansible\/tmp\/ansible-local-.+$" dir)
             (string-suffix-p ".kube/config" full)))
-      (let ((name (buffer-name)))
+      (let ((name (string-trim (buffer-name))))
         (or (string-prefix-p "*temp*" name)
             (string-match-p "*scratch*" name)))))
 
