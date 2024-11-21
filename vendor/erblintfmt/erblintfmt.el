@@ -1,4 +1,4 @@
-;;; erblintfmt.el --- Minor-mode to format Ruby code with Erblint on save
+;;; erblintfmt.el --- Minor-mode to format Ruby code with Erblint on save -*- lexical-binding: t -*-
 
 ;; Author: Jim Myhrberg <contact@jimeh.me>
 ;; URL: https://github.com/jimeh/.emacs.d/tree/master/vendor/erblintfmt
