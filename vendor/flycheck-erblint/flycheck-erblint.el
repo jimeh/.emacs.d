@@ -4,7 +4,7 @@
 ;; URL: https://github.com/jimeh/.emacs.d/tree/master/vendor/flycheck-erblint
 ;; Keywords: language, linting, tools
 ;; Package-Requires: ((flycheck "30"))
-;; Version: 0.0.1
+;; Version: 0.0.2
 
 ;; This file is not part of GNU Emacs.
 
@@ -45,6 +45,11 @@
 (defcustom flycheck-erblint-extra-args nil
   "Extra arguments to pass to erblint."
   :type '(repeat string)
+  :group 'flycheck-erblint)
+
+(defcustom flycheck-erblint-config-filename ".erb-lint.yml"
+  "Name of the ERB lint configuration file."
+  :type 'string
   :group 'flycheck-erblint)
 
 (defun flycheck-erblint--working-directory (&optional _checker)
