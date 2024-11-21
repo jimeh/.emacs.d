@@ -63,9 +63,10 @@
           (add-to-list 'name-and-pos (cons (substring-no-properties name)
                                            position))))))))
 
-(global-set-key (kbd "C-t") 'siren-goto-symbol)
-(global-set-key (kbd "C-c C-t") 'siren-flush-cache-and-goto-symbol)
-(global-set-key (kbd "C-c t") #'imenu-anywhere)
+(siren-general-define-key
+ "C-t" 'siren-goto-symbol
+ "C-c C-t" 'siren-flush-cache-and-goto-symbol
+ "C-c t" #'imenu-anywhere)
 
 (provide 'siren-goto-symbol)
 ;;; siren-goto-symbol ends here.

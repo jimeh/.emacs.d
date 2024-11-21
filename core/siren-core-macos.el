@@ -63,8 +63,9 @@ If FRAME is nil, it defaults to the currently selected frame."
               #'siren-toggle-frame-fullscreen-advice))
 
 ;; macOS Fullscreen (requires Emacs 24.4 or later)
-(global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
-(global-set-key (kbd "C-s-<return>") 'toggle-frame-fullscreen)
+(siren-general-define-key
+ "s-<return>" 'toggle-frame-fullscreen
+ "C-s-<return>" 'toggle-frame-fullscreen)
 
 ;; modifier keys
 ;; (setq mac-command-modifier 'super)
@@ -91,8 +92,9 @@ minutes as it's trying to reach 100,000 font size or something
 crazy."
   (interactive (list last-input-event)))
 
-(global-set-key (kbd "C-<wheel-down>") 'siren-mouse-wheel-text-scale)
-(global-set-key (kbd "C-<wheel-up>") 'siren-mouse-wheel-text-scale)
+(siren-general-define-key
+ "C-<wheel-down>" 'siren-mouse-wheel-text-scale
+ "C-<wheel-up>" 'siren-mouse-wheel-text-scale)
 
 (provide 'siren-core-macos)
 ;;; siren-core-macos.el ends here

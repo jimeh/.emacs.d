@@ -48,9 +48,10 @@
                                         (t num))))
 
 ;; Keybindings
-(global-set-key (kbd "C-M-|") 'siren-transparency)
-(global-set-key (kbd "C-M-<") 'siren-transparency-decrease)
-(global-set-key (kbd "C-M->") 'siren-transparency-increase)
+(siren-general-define-key
+ "C-M-|" 'siren-transparency
+ "C-M-<" 'siren-transparency-decrease
+ "C-M->" 'siren-transparency-increase)
 
 (provide 'siren-transparency)
 ;;; siren-transparency.el ends here

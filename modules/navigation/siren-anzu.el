@@ -10,6 +10,8 @@
   :general
   ("C-x C-r" 'anzu-query-replace-regexp)
   ("M-%" 'anzu-query-replace)
+  ([remap query-replace] 'anzu-query-replace)
+  ([remap query-replace-regexp] 'anzu-query-replace-regexp)
 
   :custom
   (anzu-mode-lighter "")
@@ -21,9 +23,6 @@
   :config
   (set-face-attribute 'anzu-mode-line nil
                       :foreground "yellow" :weight 'bold)
-
-  (global-set-key [remap query-replace] 'anzu-query-replace)
-  (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp)
 
   (global-anzu-mode +1))
 

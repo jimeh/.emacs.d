@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(general-define-key
+(siren-general-define-key
  ;; Enable alternative to M-x.
  "C-x C-m" 'execute-extended-command
 
@@ -47,9 +47,9 @@
  ;; Rename current file and buffer
  "C-c r"  'siren-rename-file-and-buffer)
 
-;; Mac OS X specific keybindings
+;; macOS specific keybindings
 (when (eq system-type 'darwin)
-  (general-define-key
+  (siren-general-define-key
    ;; Move to beginning/end of buffer
    "s-<up>" 'beginning-of-buffer
    "s-<down>" 'end-of-buffer

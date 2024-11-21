@@ -52,8 +52,5 @@
 (if (not (fboundp 'use-package))
     (straight-use-package 'use-package))
 
-;; Make general.el keybinding helpers available.
-(use-package general)
-
 (provide 'siren-core-packages)
 ;;; siren-core-packages.el ends here

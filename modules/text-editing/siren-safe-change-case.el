@@ -25,8 +25,9 @@ additional ARGS passed along to `upcase-region'."
   (when (region-active-p)
     (apply #'upcase-region beg end args)))
 
-(global-set-key (kbd "C-x C-l") 'downcase-region-only)
-(global-set-key (kbd "C-x C-u") 'upcase-region-only)
+(siren-general-define-key
+ "C-x C-l" 'downcase-region-only
+ "C-x C-u" 'upcase-region-only)
 
 (provide 'siren-safe-change-case)
 ;;; siren-safe-change-case.el ends here

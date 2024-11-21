@@ -76,15 +76,9 @@
   (xterm-mouse-mode t)
   (defun track-mouse (e))
   (setq mouse-sel-mode t)
-  (global-set-key [mouse-4] (lambda ()
-                              (interactive)
-                              (scroll-down 1)))
-  (global-set-key [mouse-5] (lambda ()
-                              (interactive)
-                              (scroll-up 1)))
-  ;; (global-set-key [mouse-4] 'scroll-down-line)
-  ;; (global-set-key [mouse-5] 'scroll-up-line)
-  )
+  (siren-general-define-key
+   "<mouse-4>" 'scroll-down-line
+   "<mouse-5>" 'scroll-up-line))
 
 ;; enabled change region case commands
 (put 'upcase-region 'disabled nil)

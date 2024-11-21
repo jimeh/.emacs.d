@@ -8,7 +8,7 @@
 ;;; Code:
 
 (define-prefix-command 'siren-workspace-map)
-(general-define-key "C-z" 'siren-workspace-map)
+(siren-general-define-key "C-z" 'siren-workspace-map)
 
 (provide 'siren-workspace-map)
 ;;; siren-workspace-map.el ends here

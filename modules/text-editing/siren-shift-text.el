@@ -21,10 +21,11 @@ A place is considered `tab-width' character columns."
   (interactive)
   (siren-shift-right (* -1 (or arg 1))))
 
-(global-set-key (kbd "C-c [") 'siren-shift-left)
-(global-set-key (kbd "C-c ]") 'siren-shift-right)
-(global-set-key (kbd "M-{") 'siren-shift-left)
-(global-set-key (kbd "M-}") 'siren-shift-right)
+(siren-general-define-key
+  "C-c [" 'siren-shift-left
+  "C-c ]" 'siren-shift-right
+  "M-{" 'siren-shift-left
+  "M-}" 'siren-shift-right)
 
 (provide 'siren-shift-text)
 ;;; siren-shift-text.el ends here

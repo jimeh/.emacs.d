@@ -8,7 +8,7 @@
 ;;; Code:
 
 (define-prefix-command 'siren-debug-map)
-(general-define-key "C-c -" 'siren-debug-map)
+(siren-general-define-key "C-c -" 'siren-debug-map)
 
 (provide 'siren-debug-map)
 ;;; siren-debug-map.el ends here

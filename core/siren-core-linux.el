@@ -25,7 +25,8 @@
       (set-face-attribute 'default nil :family family :height 90)))
 
 ;; Keybindinds
-(global-set-key (kbd "s-<return>") 'toggle-frame-fullscreen)
+(siren-general-define-key
+ "s-<return>" 'toggle-frame-fullscreen)
 
 ;; Set initial frame to fullscreen when Emacs starts.
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))

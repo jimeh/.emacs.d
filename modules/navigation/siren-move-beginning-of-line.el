@@ -32,7 +32,7 @@ Borrowed from: http://emacsredux.com/blog/2013/05/22/smarter-navigation-to-the-b
       (move-beginning-of-line 1))))
 
 ;; Use siren-move-beginning-of-line
-(global-set-key (kbd "C-a") 'siren-move-beginning-of-line)
+(siren-general-define-key "C-a" 'siren-move-beginning-of-line)
 
 (provide 'siren-move-beginning-of-line)
 ;;; siren-move-beginning-of-line.el ends here
