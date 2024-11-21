@@ -86,11 +86,26 @@ or *.yaml file in a .github/workflows/ directory."
   :config
   (siren-flycheck-setup-yaml-actionlint))
 
+(when (fboundp 'yaml-ts-mode)
+  (use-package yaml-ts-mode
+    :straight (:type built-in)
+    :hook (yaml-ts-mode . siren-yaml-ts-mode-setup)
+
+    :preface
+    (defun siren-yaml-ts-mode-setup ()
+      (run-hooks 'prog-mode-hook)
+      (setq-local tab-width 2))
+
+    :config
+    (siren-treesit-auto-ensure-grammar 'yaml)
+    (siren-flycheck-setup-yaml-actionlint)))
+
 (use-package lsp-yaml
   :straight lsp-mode
 
   :hook
   (yaml-mode . siren-lsp-yaml-mode-setup)
+  (yaml-ts-mode . siren-lsp-yaml-mode-setup)
 
   :preface
   (defun siren-lsp-yaml-mode-setup ()
@@ -106,16 +121,6 @@ or *.yaml file in a .github/workflows/ directory."
   :after yaml-mode
   :config
   (yaml-imenu-enable))
-
-(use-package yaml-ts-mode
-  :straight (:type built-in)
-  :after yaml-mode
-  :if (fboundp 'yaml-ts-mode)
-  :hook (yaml-ts-mode . siren-yaml-ts-mode-setup)
-
-  :preface
-  (defun siren-yaml-ts-mode-setup ()
-    (run-hooks 'yaml-mode-hook)))
 
 (provide 'siren-yaml)
 ;;; siren-yaml.el ends here
