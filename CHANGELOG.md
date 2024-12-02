@@ -1,5 +1,42 @@
 # Changelog
 
+## [0.8.51](https://github.com/jimeh/.emacs.d/compare/v0.8.50...v0.8.51) (2024-12-02)
+
+
+### Features
+
+* **language/css:** switch to css-ts-mode ([18db915](https://github.com/jimeh/.emacs.d/commit/18db9153dd828494ff77be08ff9c158b0ebc0d5c))
+* **language/go:** switch back to go-mode from go-ts-mode ([20bfc9c](https://github.com/jimeh/.emacs.d/commit/20bfc9cfe65e5dac24c53cf56aae18363659ec1d))
+* **language/json:** switch to json-ts-mode (from json-mode) ([8cb67a0](https://github.com/jimeh/.emacs.d/commit/8cb67a061892d052301e55e16d1b4fc5315c09bd))
+* **language/json:** switch to lua-ts-mode (from lua-mode) ([1bdd231](https://github.com/jimeh/.emacs.d/commit/1bdd2316c7ef21393e53b73455bc47f45a67a5a9))
+* **language/lua:** enable lsp-mode in lua-ts-mode ([ef99f6a](https://github.com/jimeh/.emacs.d/commit/ef99f6aedcc8d4bc49bd40c6b00662478cbca64a))
+* **language/php:** format PHP files with prettier ([fe04f68](https://github.com/jimeh/.emacs.d/commit/fe04f68948989c31e0aba3e9a11d50c40079199f))
+* **language/php:** switch to php-ts-mode ([c01da3c](https://github.com/jimeh/.emacs.d/commit/c01da3c3b79e08646bde2ba810e03e2c40716838))
+* **language/ruby:** switch from solargraph to ruby-lsp ([fac7bb0](https://github.com/jimeh/.emacs.d/commit/fac7bb0426690b66eeb0ae9e6900984496596068))
+* **language/rust:** switch to rust-ts-mode ([6a07ee4](https://github.com/jimeh/.emacs.d/commit/6a07ee49d1737eaaf2d1ebb9db775601214f80f9))
+* **language/scss:** format scss-mode with prettier ([c7ff9e1](https://github.com/jimeh/.emacs.d/commit/c7ff9e177a5e5719143e120d4636e0422cd88486))
+* **language/toml:** switch to toml-ts-mode and enable lsp-mode as well ([074ac91](https://github.com/jimeh/.emacs.d/commit/074ac916ab172599be3c8db2d04c2137f3b4f374))
+* **language/typescript:** format typescript-ts-mode and tsx-ts-mode with prettier ([931312e](https://github.com/jimeh/.emacs.d/commit/931312e1189cf9fb5a845f71cddf3c035307d87c))
+* **projects:** add projectile switch project keybind that creates new tab-bar tab if needed ([c3bc47a](https://github.com/jimeh/.emacs.d/commit/c3bc47ab472e057a8917f3777739a00792979e61))
+* **treesit:** install grammars to custom directory ([3edd8e6](https://github.com/jimeh/.emacs.d/commit/3edd8e647e9bb4311c50b79806fcdc24bb873301))
+* **version-control/magic:** use git-commit-ts-mode ([983ccd3](https://github.com/jimeh/.emacs.d/commit/983ccd3c2718addec4cb91d6993ca05019138983))
+
+
+### Bug Fixes
+
+* **editor/origami:** add missing major modes ([9313f84](https://github.com/jimeh/.emacs.d/commit/9313f84d51e581a9188683b3f90bb1a678c7e35d))
+* **language/go:** ensure tree-sitter grammar correctly ([0c12470](https://github.com/jimeh/.emacs.d/commit/0c124709b9ec1d2f6c9ec991a65280f371002db7))
+* **language/ruby:** setup inf-ruby in ruby-ts-mode ([5cd13c6](https://github.com/jimeh/.emacs.d/commit/5cd13c64def364a81985d1269418c5ef1b1dfea7))
+* **language/scss:** prevent tree-sitter-mode from activating in scss-mode ([efd3bf1](https://github.com/jimeh/.emacs.d/commit/efd3bf1dde9ed10d5b4c47ba6be415549509f1ef))
+* **language/toml:** switch back to conf-toml-mode from toml-ts-mode ([055cbac](https://github.com/jimeh/.emacs.d/commit/055cbac42c1a5bc58057fd5ab92ad4473a63e367))
+* **vendor/flycheck-erblint:** add missing variable definition ([def8719](https://github.com/jimeh/.emacs.d/commit/def871988fc97f749c608072e7311443d199a371))
+* **vendor/flycheck-erblint:** fix command name ([52ed1dd](https://github.com/jimeh/.emacs.d/commit/52ed1ddc82d65c22d5048e7b77e11d32a8a2ec5b))
+
+
+### Performance Improvements
+
+* **lsp:** use plists to improve lsp-mode performance ([6239738](https://github.com/jimeh/.emacs.d/commit/623973802b2e9a347876dea94defacc7be54ad6f))
+
 ## [0.8.50](https://github.com/jimeh/.emacs.d/compare/v0.8.49...v0.8.50) (2024-10-21)
 
 
