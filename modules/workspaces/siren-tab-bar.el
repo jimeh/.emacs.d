@@ -42,8 +42,8 @@
             "C-e" 'tab-group
             "u" 'tab-undo
             "C-u" 'tab-undo
-            ";" 'siren-tab-bar-echo-tab-list
-            "C-;" 'siren-tab-bar-echo-tab-list
+            "'" 'siren-tab-bar-echo-tab-list
+            "C-'" 'siren-tab-bar-echo-tab-list
             "0" 'siren-tab-bar-switch-to-index
             "1" 'siren-tab-bar-switch-to-index
             "2" 'siren-tab-bar-switch-to-index

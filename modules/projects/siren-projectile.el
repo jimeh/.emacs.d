@@ -6,9 +6,12 @@
 
 ;;; Code:
 
+(require 'siren-tab-bar)
+
 (use-package projectile
   :commands
   projectile-project-root
+  projectile-relevant-known-projects
 
   :general
   ("C-c p p" 'projectile-switch-project)
@@ -22,6 +25,8 @@
   ("C-x j" 'projectile-dired)
   ("C-x ;" 'projectile-find-file)
   ("C-x C-;" 'projectile-find-file)
+  ("C-z ;" 'siren-projectile-switch-project-and-tab)
+  ("C-z C-;" 'siren-projectile-switch-project-and-tab)
   (:keymaps 'projectile-mode-map
             "C-c p" 'projectile-command-map)
 
@@ -73,6 +78,22 @@ behavior."
     (if (projectile-project-root)
         (apply orig-fun args)
       (projectile-switch-project)))
+
+  (defun siren-projectile-switch-project-and-tab (&optional arg)
+    "Switch to a project we have visited before and create a new tab for it.
+Behaves the same as `projectile-switch-project', but creates a new tab for the
+project, based on the project name reported by projectile."
+    (interactive "P")
+    (let ((projects (projectile-relevant-known-projects)))
+      (if projects
+          (projectile-completing-read
+           "Switch to project: " projects
+           :action (lambda (project)
+                     (siren-tab-bar-switch-to-or-create-tab
+                      (projectile-project-name project))
+                     (projectile-switch-project-by-name project arg)))
+        (user-error "There are no known projects"))))
+
 
   :config
   (push "Gemfile" projectile-project-root-files-bottom-up)
