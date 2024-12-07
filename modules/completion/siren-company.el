@@ -35,7 +35,13 @@
     (setq-local company-backends '(company-capf)))
 
   :config
-  (global-company-mode 1))
+  (global-company-mode 1)
+
+  ;; Disable tab and backtab keybindings in company-active-map, as they are used
+  ;; for Copilot completion, and we have a global TAB keybinding for triggering
+  ;; and accepting company-mode completions.
+  (unbind-key "TAB" company-active-map)
+  (unbind-key "<backtab>" company-active-map))
 
 (use-package company-box
   :if window-system
