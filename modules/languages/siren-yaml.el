@@ -89,6 +89,7 @@ or *.yaml file in a .github/workflows/ directory."
 (when (fboundp 'yaml-ts-mode)
   (use-package yaml-ts-mode
     :straight (:type built-in)
+    :mode "\\.ya?ml\\'"
     :hook (yaml-ts-mode . siren-yaml-ts-mode-setup)
 
     :preface
