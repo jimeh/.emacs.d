@@ -85,7 +85,7 @@
   (add-to-list 'completion-ignored-extensions ".test"))
 
 (when (fboundp 'go-ts-mode)
-  ;; TODO: Re-evaluate go-ts-mode in the future. Right now it's immediate
+  ;; TODO: Re-evaluate go-ts-mode in the future. Right now its immediate
   ;; highlighting of syntax errors is a bit annoying, as it makes whole blocks
   ;; of code bright yellow around the cursor as you're typing.
   (use-package go-ts-mode
