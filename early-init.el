@@ -14,8 +14,9 @@
 (setq native-comp-async-query-on-exit t
       comp-async-query-on-exit t)
 
-;; Prevent native-compiling .dir-locals.el files.
-(let ((deny-list '("\\(?:[/\\\\]\\.dir-locals\\.el$\\)")))
+;; Prevent native-compiling .dir-locals.el and *-autoloads.el files.
+(let ((deny-list '("\\(?:[/\\\\]\\.dir-locals\\.el$\\)"
+                   "\\(?:[/\\\\][^/\\\\]+-autoloads\\.el$\\)")))
   (cond
    ((boundp 'native-comp-jit-compilation-deny-list)
     (setq native-comp-jit-compilation-deny-list deny-list))
