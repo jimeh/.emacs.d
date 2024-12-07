@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.8.52](https://github.com/jimeh/.emacs.d/compare/v0.8.51...v0.8.52) (2024-12-07)
+
+
+### Features
+
+* **language/yaml:** use yaml-ts-mode by default ([1ddc73e](https://github.com/jimeh/.emacs.d/commit/1ddc73e8a5b7074fbd9b59cb42fd0685af6ae67f))
+
+
+### Bug Fixes
+
+* **completion/company:** fix keybind conflict with copilot-mode ([c991e20](https://github.com/jimeh/.emacs.d/commit/c991e20c9927d176c42bb249f9b3ba7eca920b05))
+
 ## [0.8.51](https://github.com/jimeh/.emacs.d/compare/v0.8.50...v0.8.51) (2024-12-02)
 
 
