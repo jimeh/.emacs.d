@@ -174,17 +174,16 @@
 (use-package helm-ring
   :straight helm
   :after (helm-global-bindings)
-  :init
-  ;; This advice is borrowed from the browse-kill-ring package.
-  (defadvice yank-pop (around kill-ring-browse-maybe (arg))
+  :preface
+  (defun siren-helm-ring-yank-pop-advice (orig-fun &rest args)
     "If last action was not a yank, run `helm-show-kill-ring' instead."
-    (interactive "p")
     (if (not (eq last-command 'yank))
         (helm-show-kill-ring)
       (barf-if-buffer-read-only)
-      ad-do-it))
+      (apply orig-fun args)))
 
-  (ad-activate 'yank-pop))
+  :init
+  (advice-add 'yank-pop :around #'siren-helm-ring-yank-pop-advice))
 
 (use-package helm-descbinds
   :defer t
