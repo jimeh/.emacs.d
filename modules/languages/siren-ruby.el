@@ -182,10 +182,9 @@
 (use-package lsp-solargraph
   :straight lsp-mode
 
-  ;; Disable solargraph for now in favor of ruby-lsp.
-  ;; :hook
-  ;; (ruby-mode . siren-lsp-solargraph-ruby-mode-setup)
-  ;; (ruby-ts-mode . siren-lsp-solargraph-ruby-mode-setup)
+  :hook
+  (ruby-mode . siren-lsp-solargraph-ruby-mode-setup)
+  (ruby-ts-mode . siren-lsp-solargraph-ruby-mode-setup)
 
   :custom
   (lsp-solargraph-multi-root nil)
@@ -208,7 +207,9 @@ output typically does not conform to any common Ruby formatting standards."
                 'siren-lsp-solargraph-manual-format-buffer)
 
     ;; Disable ruby clients which have higher priority than the ruby-ls client.
-    (setq-local lsp-disabled-clients '(vue-semantic-server))
+    (setq-local lsp-disabled-clients '(rubocop-ls
+                                       ruby-lsp-ls
+                                       vue-semantic-server))
 
     ;; Enable format on save if the predicate returns true.
     (when (siren-lsp-solargraph-format-on-save-p)
@@ -240,9 +241,11 @@ and will break things."
 (use-package lsp-ruby-lsp
   :straight lsp-mode
 
-  :hook
-  (ruby-mode . siren-lsp-ruby-lsp-mode-setup)
-  (ruby-ts-mode . siren-lsp-ruby-lsp-mode-setup)
+  ;; TODO: Figure out why ruby-lsp breaks `indent-region', then try switching to
+  ;; it again in favor of solargraph.
+  ;; :hook
+  ;; (ruby-mode . siren-lsp-ruby-lsp-mode-setup)
+  ;; (ruby-ts-mode . siren-lsp-ruby-lsp-mode-setup)
 
   :preface
   (defun siren-lsp-ruby-lsp-format-on-save-p ()
@@ -262,7 +265,9 @@ output typically does not conform to any common Ruby formatting standards."
 
     ;; Disable ruby clients which have higher priority than the ruby-lsp-ls
     ;; client.
-    (setq-local lsp-disabled-clients '(vue-semantic-server ruby-ls rubocop-ls))
+    (setq-local lsp-disabled-clients '(rubocop-ls
+                                       ruby-ls
+                                       vue-semantic-server))
 
     ;; Disable semantic tokens as it typically causes an annoying delay with the
     ;; syntax highlighting as you type. Essentially all new text is a very faded
