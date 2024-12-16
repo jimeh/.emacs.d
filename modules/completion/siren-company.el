@@ -40,7 +40,6 @@
   ;; Disable tab and backtab keybindings in company-active-map, as they are used
   ;; for Copilot completion, and we have a global TAB keybinding for triggering
   ;; and accepting company-mode completions.
-  (unbind-key "TAB" company-active-map)
   (unbind-key "<backtab>" company-active-map))
 
 (use-package company-box
