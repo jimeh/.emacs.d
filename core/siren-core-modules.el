@@ -160,7 +160,7 @@
 
 ;; Workspace management
 (require 'siren-tab-bar)
-(require 'siren-desktop)
+(require 'siren-easysession)
 
 ;; Org-mode
 (require 'siren-htmlize)
