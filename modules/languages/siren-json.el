@@ -9,46 +9,56 @@
 (require 'siren-js)
 (require 'siren-lsp)
 
-(use-package json-mode
-  :mode "\\.json\\'"
+(if (fboundp 'json-ts-mode)
+    ;; Use json-ts-mode if available.
+    (use-package json-ts-mode
+      :straight (:type built-in)
+      :mode
+      "\\.json\\'"
+      "\\.babelrc\\'"
+      "\\.bowerrc\\'"
+      "composer.lock\\'"
 
-  :general
-  (:keymaps 'json-mode-map
-            "C-j" 'newline-and-indent)
+      :hook
+      (json-ts-mode . siren-json-ts-mode-setup)
 
-  :hook
-  (json-mode . siren-json-mode-setup)
+      :general
+      (:keymaps 'json-ts-mode-map
+                "C-j" 'newline-and-indent)
 
-  :preface
-  (defun siren-json-mode-setup ()
-    "Default tweaks for `json-mode'."
+      :custom
+      (json-ts-mode-indent-offset 2)
 
-    (let ((width 2))
-      (setq-local js-indent-level width
-                  json-reformat:indent-width width
-                  tab-width width))))
+      :preface
+      (defun siren-json-ts-mode-setup ()
+        (setq-local json-reformat:indent-width 2))
 
-(when (fboundp 'json-ts-mode)
-  (use-package json-ts-mode
-    :straight (:type built-in)
-    :mode "\\.json\\'"
+      :config
+      (require 'siren-treesit)
+      (siren-tre esit-auto-ensure-grammar 'json))
+
+  ;; Otherwise use json-mode.
+  (use-package json-mode
+    :mode
+    "\\.json\\'"
+    "\\.babelrc\\'"
+    "\\.bowerrc\\'"
+    "composer.lock\\'"
     :hook
-    (json-ts-mode . siren-json-ts-mode-setup)
+    (json-mode . siren-json-mode-setup)
 
     :general
-    (:keymaps 'json-ts-mode-map
+    (:keymaps 'json-mode-map
               "C-j" 'newline-and-indent)
 
-    :custom
-    (json-ts-mode-indent-offset 2)
-
     :preface
-    (defun siren-json-ts-mode-setup ()
-      (setq-local json-reformat:indent-width 2))
+    (defun siren-json-mode-setup ()
+      "Default tweaks for `json-mode'."
 
-    :config
-    (require 'siren-treesit)
-    (siren-treesit-auto-ensure-grammar 'json)))
+      (let ((width 2))
+        (setq-local js-indent-level width
+                    json-reformat:indent-width width
+                    tab-width width)))))
 
 (use-package lsp-json
   :straight lsp-mode
