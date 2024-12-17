@@ -182,9 +182,10 @@
 (use-package lsp-solargraph
   :straight lsp-mode
 
-  :hook
-  (ruby-mode . siren-lsp-solargraph-ruby-mode-setup)
-  (ruby-ts-mode . siren-lsp-solargraph-ruby-mode-setup)
+  ;; Disable solargraph in favor of ruby-lsp.
+  ;; :hook
+  ;; (ruby-mode . siren-lsp-solargraph-ruby-mode-setup)
+  ;; (ruby-ts-mode . siren-lsp-solargraph-ruby-mode-setup)
 
   :custom
   (lsp-solargraph-multi-root nil)
@@ -241,11 +242,9 @@ and will break things."
 (use-package lsp-ruby-lsp
   :straight lsp-mode
 
-  ;; TODO: Figure out why ruby-lsp breaks `indent-region', then try switching to
-  ;; it again in favor of solargraph.
-  ;; :hook
-  ;; (ruby-mode . siren-lsp-ruby-lsp-mode-setup)
-  ;; (ruby-ts-mode . siren-lsp-ruby-lsp-mode-setup)
+  :hook
+  (ruby-mode . siren-lsp-ruby-lsp-mode-setup)
+  (ruby-ts-mode . siren-lsp-ruby-lsp-mode-setup)
 
   :preface
   (defun siren-lsp-ruby-lsp-format-on-save-p ()
@@ -273,6 +272,10 @@ output typically does not conform to any common Ruby formatting standards."
     ;; syntax highlighting as you type. Essentially all new text is a very faded
     ;; out grey color for the first 1-2 seconds as you type.
     (setq-local lsp-semantic-tokens-enable nil)
+
+    ;; Disable range formatting via ruby-lsp, as it simply breaks
+    ;; `indent-region', causing it to do nothing.
+    (setq-local lsp-enable-indentation nil)
 
     ;; Enable format on save if the predicate returns true.
     (when (siren-lsp-ruby-lsp-format-on-save-p)
