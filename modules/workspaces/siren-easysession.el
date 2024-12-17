@@ -23,8 +23,6 @@
   ("C-z C-z C-l" 'easysession-load)
   ("C-z C-z s" 'easysession-switch-to)
   ("C-z C-z C-s" 'easysession-switch-to)
-  ("C-z C-z S" 'easysession-save)
-  ("C-z C-z C-S" 'easysession-save)
 
   :custom
   (easysession-save-interval 10)
