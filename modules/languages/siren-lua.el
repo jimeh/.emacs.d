@@ -64,6 +64,7 @@
     ;; syntax highlighting as you type. Essentially all new text is a very faded
     ;; out grey color for the first 1-2 seconds as you type.
     (setq-local lsp-semantic-tokens-enable nil)
+
     (lsp-format-buffer-on-save-mode t)
     (lsp-deferred)))
 

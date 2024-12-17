@@ -39,11 +39,11 @@
 (use-package lsp-toml
   :straight lsp-mode
   :hook
-  (conf-toml-mode . siren-lsp-lua-mode-setup)
-  (toml-ts-mode . siren-lsp-lua-mode-setup)
+  (conf-toml-mode . siren-lsp-toml-mode-setup)
+  (toml-ts-mode . siren-lsp-toml-mode-setup)
 
   :preface
-  (defun siren-lsp-lua-mode-setup ()
+  (defun siren-lsp-toml-mode-setup ()
     ;; Disable semantic tokens as it typically causes an annoying delay with the
     ;; syntax highlighting as you type. Essentially all new text is a very faded
     ;; out grey color for the first 1-2 seconds as you type.
