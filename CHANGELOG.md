@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.53](https://github.com/jimeh/.emacs.d/compare/v0.8.52...v0.8.53) (2024-12-18)
+
+
+### Features
+
+* **workspaces/easysession:** display session name in mode-line ([282e7b5](https://github.com/jimeh/.emacs.d/commit/282e7b590ee5b7e6a1106a1ad3e8364d1aad6412))
+
 ## [0.8.52](https://github.com/jimeh/.emacs.d/compare/v0.8.51...v0.8.52) (2024-12-17)
 
 
