@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.8.52](https://github.com/jimeh/.emacs.d/compare/v0.8.51...v0.8.52) (2024-12-17)
+
+
+### Features
+
+* **language/yaml:** use yaml-ts-mode by default ([1ddc73e](https://github.com/jimeh/.emacs.d/commit/1ddc73e8a5b7074fbd9b59cb42fd0685af6ae67f))
+* **workspace/easysession:** add easysession-save keybinding ([384f7fc](https://github.com/jimeh/.emacs.d/commit/384f7fcf53102d3b4a65a6876cc4e3c8c566f00f))
+* **workspaces:** replace desktop.el with easysession ([cb799f3](https://github.com/jimeh/.emacs.d/commit/cb799f31e0765d920d37849fccd9d04ed7183b93))
+
+
+### Bug Fixes
+
+* **completion/company:** fix keybind conflict with copilot-mode ([c991e20](https://github.com/jimeh/.emacs.d/commit/c991e20c9927d176c42bb249f9b3ba7eca920b05))
+* **langauge/ruby:** switch back to solargraph from ruby-lsp ([b665226](https://github.com/jimeh/.emacs.d/commit/b665226d48ba305847aed3ed215ef481ec9120c2))
+* **language/json:** don't load json-mode at all if json-ts-mode is available ([a9c6240](https://github.com/jimeh/.emacs.d/commit/a9c6240b6253d7b731122134cb675e0ae6fe65b6))
+* **language/ruby:** switch back to ruby-lsp after fixing indent-region issue ([45c41b3](https://github.com/jimeh/.emacs.d/commit/45c41b318d1f1f6f4ea668db9f134a1a21a0fc6a))
+* **language/toml:** fix toml setup hook function name ([2ea3fdc](https://github.com/jimeh/.emacs.d/commit/2ea3fdc27a3272361ddd08b203c688b41ee9d7f2))
+* **language/yaml:** switch back to yaml-mode ([a7fc77f](https://github.com/jimeh/.emacs.d/commit/a7fc77f52e0a54f19919a31effa94466ce0a922c))
+* **workspaces/easysession:** remove save keybinding conflicting with switch-to ([396fb0f](https://github.com/jimeh/.emacs.d/commit/396fb0f8531eb2a00e9482dac632460e4f6b3b73))
+
 ## [0.8.51](https://github.com/jimeh/.emacs.d/compare/v0.8.50...v0.8.51) (2024-12-02)
 
 
