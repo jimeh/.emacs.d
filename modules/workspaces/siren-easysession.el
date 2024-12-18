@@ -26,7 +26,9 @@
 
   :custom
   (easysession-save-interval 10)
-  (easysession-mode-line-misc-info nil)
+  (easysession-mode-line-misc-info t)
+  (easysession-mode-line-misc-info-format
+   '(" " easysession-mode-line-session-name " "))
 
   :preface
   (defun siren-easysession-setup ()
