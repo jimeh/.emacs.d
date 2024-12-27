@@ -35,7 +35,7 @@
 
       :config
       (require 'siren-treesit)
-      (siren-tre esit-auto-ensure-grammar 'json))
+      (siren-treesit-auto-ensure-grammar 'json))
 
   ;; Otherwise use json-mode.
   (use-package json-mode
