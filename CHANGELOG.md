@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.8.53](https://github.com/jimeh/.emacs.d/compare/v0.8.52...v0.8.53) (2024-12-27)
+
+
+### Features
+
+* **workspaces/easysession:** display session name in mode-line ([282e7b5](https://github.com/jimeh/.emacs.d/commit/282e7b590ee5b7e6a1106a1ad3e8364d1aad6412))
+
+
+### Bug Fixes
+
+* **language/json:** remove errant space in middle of function name ([2c9d611](https://github.com/jimeh/.emacs.d/commit/2c9d6118e9a626616d5224dacfecc23a33d629f3))
+
 ## [0.8.52](https://github.com/jimeh/.emacs.d/compare/v0.8.51...v0.8.52) (2024-12-17)
 
 
