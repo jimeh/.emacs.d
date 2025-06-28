@@ -9,6 +9,7 @@
 (siren-general-define-key
  ;; Enable alternative to M-x.
  "C-x C-m" 'execute-extended-command
+ "s-P" 'execute-extended-command
 
  ;; Enable dabbrev-expand via custom keybinding.
  "C-x M-/" 'dabbrev-expand

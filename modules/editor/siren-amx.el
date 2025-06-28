@@ -12,6 +12,7 @@
   :general
   ("M-x" 'amx)
   ("C-x C-m" 'amx)
+  ("s-P" 'amx)
 
   :custom
   (amx-backend 'ido)
