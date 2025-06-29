@@ -17,6 +17,9 @@
   (:keymaps 'gptel-mode-map
             "C-c C-<return>" 'gptel-send)
 
+  :custom
+  (gptel-default-mode 'org-mode)
+
   :preface
   (defgroup siren-gptel nil
     "jimeh's Emacs Siren: gptel configuration."
