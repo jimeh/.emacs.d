@@ -1,4 +1,4 @@
-;;; siren-nerd-icons.el --- jimeh's Emacs Siren: nerd-icons configuration.
+;;; siren-nerd-icons.el --- jimeh's Emacs Siren: nerd-icons configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

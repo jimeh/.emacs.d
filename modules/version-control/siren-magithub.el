@@ -1,4 +1,4 @@
-;;; siren-magithub.el --- jimeh's Emacs Siren: magithub configuration
+;;; siren-magithub.el --- jimeh's Emacs Siren: magithub configuration  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

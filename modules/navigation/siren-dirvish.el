@@ -1,4 +1,4 @@
-;;; siren-dirvish.el --- jimeh's Emacs Siren: dirvish configuration.
+;;; siren-dirvish.el --- jimeh's Emacs Siren: dirvish configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

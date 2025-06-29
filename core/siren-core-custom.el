@@ -1,4 +1,4 @@
-;;; siren-core-custom.el --- jimeh's Emacs Siren: Siren's customizable variables.
+;;; siren-core-custom.el --- jimeh's Emacs Siren: Siren's customizable variables.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

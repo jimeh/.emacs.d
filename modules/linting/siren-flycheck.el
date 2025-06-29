@@ -1,4 +1,4 @@
-;;; siren-flycheck.el --- jimeh's Emacs Siren: flycheck configuration.
+;;; siren-flycheck.el --- jimeh's Emacs Siren: flycheck configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

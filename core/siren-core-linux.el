@@ -1,4 +1,4 @@
-;;; siren-core-linux.el --- jimeh's Emacs Siren: Linux specific settings.
+;;; siren-core-linux.el --- jimeh's Emacs Siren: Linux specific settings.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

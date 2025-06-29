@@ -1,4 +1,4 @@
-;;; siren-multiple-cursors.el --- jimeh's Emacs Siren: multiple-cursors configuration.
+;;; siren-multiple-cursors.el --- jimeh's Emacs Siren: multiple-cursors configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

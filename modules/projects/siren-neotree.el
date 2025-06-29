@@ -1,4 +1,4 @@
-;;; siren-neotree.el --- jimeh's Emacs Siren: neotree configuration.
+;;; siren-neotree.el --- jimeh's Emacs Siren: neotree configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

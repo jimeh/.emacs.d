@@ -1,4 +1,4 @@
-;;; siren-yasnippet.el --- jimeh's Emacs Siren: yasnippet configuration.
+;;; siren-yasnippet.el --- jimeh's Emacs Siren: yasnippet configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

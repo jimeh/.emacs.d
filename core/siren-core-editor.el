@@ -1,4 +1,4 @@
-;;; siren-core-editor.el --- jimeh's Emacs Siren: Editor settings.
+;;; siren-core-editor.el --- jimeh's Emacs Siren: Editor settings.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

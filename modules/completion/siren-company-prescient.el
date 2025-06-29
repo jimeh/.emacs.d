@@ -1,4 +1,4 @@
-;;; siren-company-prescient.el --- jimeh's Emacs Siren: company-prescient configuration.
+;;; siren-company-prescient.el --- jimeh's Emacs Siren: company-prescient configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

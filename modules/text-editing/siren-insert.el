@@ -1,4 +1,4 @@
-;;; siren-insert.el --- jimeh's Emacs Siren: misc text insert functions
+;;; siren-insert.el --- jimeh's Emacs Siren: misc text insert functions  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

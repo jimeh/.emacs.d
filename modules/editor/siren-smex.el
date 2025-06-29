@@ -1,4 +1,4 @@
-;;; siren-smex.el --- jimeh's Emacs Siren: smex configuration.
+;;; siren-smex.el --- jimeh's Emacs Siren: smex configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-randomize-region.el --- jimeh's Emacs Siren: randomize-region
+;;; siren-randomize-region.el --- jimeh's Emacs Siren: randomize-region  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

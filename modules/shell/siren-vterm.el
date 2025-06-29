@@ -1,4 +1,4 @@
-;;; siren-vterm.el --- jimeh's Emacs Siren: vterm configuration.
+;;; siren-vterm.el --- jimeh's Emacs Siren: vterm configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-origami.el --- jimeh's Emacs Siren: origami configuration.
+;;; siren-origami.el --- jimeh's Emacs Siren: origami configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

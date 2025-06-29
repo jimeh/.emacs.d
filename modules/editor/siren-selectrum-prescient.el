@@ -1,4 +1,4 @@
-;;; siren-selectrum-prescient.el --- jimeh's Emacs Siren: selectrum-prescient configuration.
+;;; siren-selectrum-prescient.el --- jimeh's Emacs Siren: selectrum-prescient configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

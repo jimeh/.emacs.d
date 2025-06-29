@@ -1,4 +1,4 @@
-;;; siren-kubernetes.el --- jimeh's Emacs Siren: kubernetes configuration.
+;;; siren-kubernetes.el --- jimeh's Emacs Siren: kubernetes configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

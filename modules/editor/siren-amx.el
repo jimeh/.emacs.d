@@ -1,4 +1,4 @@
-;;; siren-amx.el --- jimeh's Emacs Siren: amx configuration.
+;;; siren-amx.el --- jimeh's Emacs Siren: amx configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

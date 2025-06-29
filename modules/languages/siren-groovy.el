@@ -1,4 +1,4 @@
-;;; siren-groovy.el --- jimeh's Emacs Siren: groovy-mode configuration.
+;;; siren-groovy.el --- jimeh's Emacs Siren: groovy-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

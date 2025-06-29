@@ -1,4 +1,4 @@
-;;; siren-company.el --- jimeh's Emacs Siren: company configuration.
+;;; siren-company.el --- jimeh's Emacs Siren: company configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

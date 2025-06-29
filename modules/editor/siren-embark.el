@@ -1,4 +1,4 @@
-;;; siren-embark.el --- jimeh's Emacs Siren: embark configuration.
+;;; siren-embark.el --- jimeh's Emacs Siren: embark configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-debug-map.el --- jimeh's Emacs Siren: debug-map setup.
+;;; siren-debug-map.el --- jimeh's Emacs Siren: debug-map setup.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

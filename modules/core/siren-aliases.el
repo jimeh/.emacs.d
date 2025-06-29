@@ -1,4 +1,4 @@
-;;; siren-aliases.el --- jimeh's Emacs Siren: Common aliases
+;;; siren-aliases.el --- jimeh's Emacs Siren: Common aliases  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

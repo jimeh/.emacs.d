@@ -1,4 +1,4 @@
-;;; siren-edit-server.el --- jimeh's Emacs Siren: edit-server configuration.
+;;; siren-edit-server.el --- jimeh's Emacs Siren: edit-server configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

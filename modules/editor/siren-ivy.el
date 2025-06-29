@@ -1,4 +1,4 @@
-;;; siren-ivy.el --- jimeh's Emacs Siren: ivy configuration.
+;;; siren-ivy.el --- jimeh's Emacs Siren: ivy configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

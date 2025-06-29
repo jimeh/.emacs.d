@@ -1,4 +1,4 @@
-;;; siren-ruby.el --- jimeh's Emacs Siren: ruby-mode configuration.
+;;; siren-ruby.el --- jimeh's Emacs Siren: ruby-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

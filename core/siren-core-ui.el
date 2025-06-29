@@ -1,4 +1,4 @@
-;;; siren-core-ui.el --- jimeh's Emacs Siren: Emacs UI settings.
+;;; siren-core-ui.el --- jimeh's Emacs Siren: Emacs UI settings.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-thrift.el --- jimeh's Emacs Siren: thrift-mode configuration.
+;;; siren-thrift.el --- jimeh's Emacs Siren: thrift-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

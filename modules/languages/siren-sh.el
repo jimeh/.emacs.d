@@ -1,4 +1,4 @@
-;;; siren-sh.el --- jimeh's Emacs Siren: sh-mode configuration.
+;;; siren-sh.el --- jimeh's Emacs Siren: sh-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

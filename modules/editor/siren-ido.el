@@ -1,4 +1,4 @@
-;;; siren-ido.el --- jimeh's Emacs Siren: ido configuration.
+;;; siren-ido.el --- jimeh's Emacs Siren: ido configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

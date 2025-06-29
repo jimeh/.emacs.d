@@ -1,4 +1,4 @@
-;;; siren-ialign.el --- jimeh's Emacs Siren: ialign
+;;; siren-ialign.el --- jimeh's Emacs Siren: ialign  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

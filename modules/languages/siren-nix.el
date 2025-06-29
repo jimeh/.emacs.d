@@ -1,4 +1,4 @@
-;;; siren-nix.el --- jimeh's Emacs Siren: nix-mode configuration.
+;;; siren-nix.el --- jimeh's Emacs Siren: nix-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

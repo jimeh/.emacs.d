@@ -1,4 +1,4 @@
-;;; siren-undohist.el --- jimeh's Emacs Siren: undohist configuration.
+;;; siren-undohist.el --- jimeh's Emacs Siren: undohist configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

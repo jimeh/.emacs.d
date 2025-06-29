@@ -1,4 +1,4 @@
-;;; siren-imenu.el --- jimeh's Emacs Siren: imenu configuration.
+;;; siren-imenu.el --- jimeh's Emacs Siren: imenu configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

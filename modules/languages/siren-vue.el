@@ -1,4 +1,4 @@
-;;; siren-vue.el --- jimeh's Emacs Siren: vue-mode configuration.
+;;; siren-vue.el --- jimeh's Emacs Siren: vue-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

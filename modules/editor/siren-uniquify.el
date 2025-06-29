@@ -1,4 +1,4 @@
-;;; siren-uniquify.el --- jimeh's Emacs Siren: uniquify configuration.
+;;; siren-uniquify.el --- jimeh's Emacs Siren: uniquify configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

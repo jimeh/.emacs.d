@@ -1,4 +1,4 @@
-;;; siren-markdown.el --- jimeh's Emacs Siren: markdown-mode configuration.
+;;; siren-markdown.el --- jimeh's Emacs Siren: markdown-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

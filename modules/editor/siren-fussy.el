@@ -1,4 +1,4 @@
-;;; siren-fussy.el --- jimeh's Emacs Siren: fussy configuration.
+;;; siren-fussy.el --- jimeh's Emacs Siren: fussy configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

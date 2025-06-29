@@ -1,4 +1,4 @@
-;;; siren-ox-pandoc.el --- jimeh's Emacs Siren: ox-pandoc configuration.
+;;; siren-ox-pandoc.el --- jimeh's Emacs Siren: ox-pandoc configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

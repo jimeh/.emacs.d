@@ -1,4 +1,4 @@
-;;; siren-restclient.el --- jimeh's Emacs Siren: restclient configuration.
+;;; siren-restclient.el --- jimeh's Emacs Siren: restclient configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-selectrum.el --- jimeh's Emacs Siren: selectrum configuration.
+;;; siren-selectrum.el --- jimeh's Emacs Siren: selectrum configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

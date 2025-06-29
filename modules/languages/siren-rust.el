@@ -1,4 +1,4 @@
-;;; siren-rust.el --- jimeh's Emacs Siren: rust-mode configuration.
+;;; siren-rust.el --- jimeh's Emacs Siren: rust-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

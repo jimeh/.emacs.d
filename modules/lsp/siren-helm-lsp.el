@@ -1,4 +1,4 @@
-;;; siren-helm-lsp.el --- jimeh's Emacs Siren: helm-lsp configuration.
+;;; siren-helm-lsp.el --- jimeh's Emacs Siren: helm-lsp configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

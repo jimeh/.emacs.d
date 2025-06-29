@@ -1,4 +1,4 @@
-;;; siren-doom-themes.el --- jimeh's Emacs Siren: doom-themes.
+;;; siren-doom-themes.el --- jimeh's Emacs Siren: doom-themes.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-forge.el --- jimeh's Emacs Siren: forge configuration
+;;; siren-forge.el --- jimeh's Emacs Siren: forge configuration  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

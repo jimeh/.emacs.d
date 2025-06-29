@@ -1,4 +1,4 @@
-;;; siren-refine.el --- jimeh's Emacs Siren: refine configuration.
+;;; siren-refine.el --- jimeh's Emacs Siren: refine configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

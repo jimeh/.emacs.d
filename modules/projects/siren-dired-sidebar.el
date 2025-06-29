@@ -1,4 +1,4 @@
-;;; siren-dired-sidebar.el --- jimeh's Emacs Siren: dired-sidebar configuration.
+;;; siren-dired-sidebar.el --- jimeh's Emacs Siren: dired-sidebar configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

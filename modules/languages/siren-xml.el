@@ -1,4 +1,4 @@
-;;; siren-xml.el --- jimeh's Emacs Siren: XML editing configuration.
+;;; siren-xml.el --- jimeh's Emacs Siren: XML editing configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

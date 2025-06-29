@@ -1,4 +1,4 @@
-;;; siren-auto-highlight-symbol.el --- jimeh's Emacs Siren: auto-highlight-symbol configuration.
+;;; siren-auto-highlight-symbol.el --- jimeh's Emacs Siren: auto-highlight-symbol configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

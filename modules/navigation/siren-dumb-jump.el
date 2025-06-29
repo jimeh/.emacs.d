@@ -1,4 +1,4 @@
-;;; siren-dumb-jump.el --- jimeh's Emacs Siren: dumb-jump configuration.
+;;; siren-dumb-jump.el --- jimeh's Emacs Siren: dumb-jump configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

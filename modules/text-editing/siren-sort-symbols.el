@@ -1,4 +1,4 @@
-;;; siren-sort-symbols.el --- jimeh's Emacs Siren: sort-symbols.
+;;; siren-sort-symbols.el --- jimeh's Emacs Siren: sort-symbols.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-ob-mermaid.el --- jimeh's Emacs Siren: ob-mermaid configuration.
+;;; siren-ob-mermaid.el --- jimeh's Emacs Siren: ob-mermaid configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

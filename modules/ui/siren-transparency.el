@@ -1,4 +1,4 @@
-;;; siren-transparency.el --- jimeh's Emacs Siren: Emacs Frame transparency.
+;;; siren-transparency.el --- jimeh's Emacs Siren: Emacs Frame transparency.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

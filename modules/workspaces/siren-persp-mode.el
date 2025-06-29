@@ -1,4 +1,4 @@
-;;; siren-persp-mode.el --- jimeh's Emacs Siren: persp-mode configuration.
+;;; siren-persp-mode.el --- jimeh's Emacs Siren: persp-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

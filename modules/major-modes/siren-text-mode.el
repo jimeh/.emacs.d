@@ -1,4 +1,4 @@
-;;; siren-text-mode.el --- jimeh's Emacs Siren: text-mode configuration.
+;;; siren-text-mode.el --- jimeh's Emacs Siren: text-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

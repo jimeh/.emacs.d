@@ -1,4 +1,4 @@
-;;; siren-display-time.el --- jimeh's Emacs Siren: display-time-mode.
+;;; siren-display-time.el --- jimeh's Emacs Siren: display-time-mode.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

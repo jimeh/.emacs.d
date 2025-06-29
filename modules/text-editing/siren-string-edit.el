@@ -1,4 +1,4 @@
-;;; siren-string-edit.el --- jimeh's Emacs Siren: defaults for string-edit
+;;; siren-string-edit.el --- jimeh's Emacs Siren: defaults for string-edit  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

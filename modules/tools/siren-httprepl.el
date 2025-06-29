@@ -1,4 +1,4 @@
-;;; siren-httprepl.el --- jimeh's Emacs Siren: httprepl configuration.
+;;; siren-httprepl.el --- jimeh's Emacs Siren: httprepl configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

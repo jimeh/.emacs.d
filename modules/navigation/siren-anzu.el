@@ -1,4 +1,4 @@
-;;; siren-anzu.el --- jimeh's Emacs Siren: anzu configuration.
+;;; siren-anzu.el --- jimeh's Emacs Siren: anzu configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

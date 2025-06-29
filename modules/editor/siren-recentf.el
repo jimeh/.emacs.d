@@ -1,4 +1,4 @@
-;;; siren-recentf.el --- jimeh's Emacs Siren: recentf configuration.
+;;; siren-recentf.el --- jimeh's Emacs Siren: recentf configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

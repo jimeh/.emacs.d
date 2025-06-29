@@ -1,4 +1,4 @@
-;;; siren-grip.el --- jimeh's Emacs Siren: grip-mode configuration.
+;;; siren-grip.el --- jimeh's Emacs Siren: grip-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

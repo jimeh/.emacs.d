@@ -1,4 +1,4 @@
-;;; siren-core-macos.el --- jimeh's Emacs Siren: macOS specific settings.
+;;; siren-core-macos.el --- jimeh's Emacs Siren: macOS specific settings.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-dockerfile.el --- jimeh's Emacs Siren: dockerfile-mode configuration.
+;;; siren-dockerfile.el --- jimeh's Emacs Siren: dockerfile-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

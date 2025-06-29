@@ -1,4 +1,4 @@
-;;; siren-yank-indent.el --- jimeh's Emacs Siren: yank-indent configuration.
+;;; siren-yank-indent.el --- jimeh's Emacs Siren: yank-indent configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

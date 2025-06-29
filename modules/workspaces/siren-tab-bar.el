@@ -1,4 +1,4 @@
-;;; siren-tab-bar.el --- jimeh's Emacs Siren: tab-bar configuration.
+;;; siren-tab-bar.el --- jimeh's Emacs Siren: tab-bar configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

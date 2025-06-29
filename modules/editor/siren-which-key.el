@@ -1,4 +1,4 @@
-;;; siren-which-key.el --- jimeh's Emacs Siren: which-key configuration.
+;;; siren-which-key.el --- jimeh's Emacs Siren: which-key configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-clang-format.el --- jimeh's Emacs Siren: clang-format configuration.
+;;; siren-clang-format.el --- jimeh's Emacs Siren: clang-format configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

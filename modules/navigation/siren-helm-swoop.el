@@ -1,4 +1,4 @@
-;;; siren-helm-swoop.el --- jimeh's Emacs Siren: helm-swoop configuration.
+;;; siren-helm-swoop.el --- jimeh's Emacs Siren: helm-swoop configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

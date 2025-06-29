@@ -1,4 +1,4 @@
-;;; siren-gptel.el --- jimeh's Emacs Siren: gptel configuration.
+;;; siren-gptel.el --- jimeh's Emacs Siren: gptel configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

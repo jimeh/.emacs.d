@@ -1,4 +1,4 @@
-;;; siren-expand-region.el --- jimeh's Emacs Siren: expand-region
+;;; siren-expand-region.el --- jimeh's Emacs Siren: expand-region  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

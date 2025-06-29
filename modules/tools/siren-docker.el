@@ -1,4 +1,4 @@
-;;; siren-docker.el --- jimeh's Emacs Siren: docker configuration.
+;;; siren-docker.el --- jimeh's Emacs Siren: docker configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

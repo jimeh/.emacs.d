@@ -1,4 +1,4 @@
-;;; siren-mwim.el --- jimeh's Emacs Siren: mwim configuration.
+;;; siren-mwim.el --- jimeh's Emacs Siren: mwim configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

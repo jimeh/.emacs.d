@@ -1,4 +1,4 @@
-;;; siren-helm-open-github.el --- jimeh's Emacs Siren: helm-open-github configuration.
+;;; siren-helm-open-github.el --- jimeh's Emacs Siren: helm-open-github configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

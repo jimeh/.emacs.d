@@ -1,4 +1,4 @@
-;;; siren-git-gutter.el --- jimeh's Emacs Siren: git-gutter configuration.
+;;; siren-git-gutter.el --- jimeh's Emacs Siren: git-gutter configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

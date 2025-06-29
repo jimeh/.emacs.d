@@ -1,4 +1,4 @@
-;;; siren-scroll-half-screen.el --- jimeh's Emacs Siren: scroll-half-screen.
+;;; siren-scroll-half-screen.el --- jimeh's Emacs Siren: scroll-half-screen.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

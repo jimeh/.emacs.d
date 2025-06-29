@@ -1,4 +1,4 @@
-;;; siren-github-review.el --- jimeh's Emacs Siren: github-review configuration
+;;; siren-github-review.el --- jimeh's Emacs Siren: github-review configuration  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

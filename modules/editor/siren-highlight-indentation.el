@@ -1,4 +1,4 @@
-;;; siren-highlight-indentation.el --- jimeh's Emacs Siren: highlight-indentation-mode configuration.
+;;; siren-highlight-indentation.el --- jimeh's Emacs Siren: highlight-indentation-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-core-env.el --- jimeh's Emacs Siren: Environment variable setup.
+;;; siren-core-env.el --- jimeh's Emacs Siren: Environment variable setup.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

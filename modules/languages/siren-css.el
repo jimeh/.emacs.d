@@ -1,4 +1,4 @@
-;;; siren-css.el --- jimeh's Emacs Siren: css-mode configuration.
+;;; siren-css.el --- jimeh's Emacs Siren: css-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

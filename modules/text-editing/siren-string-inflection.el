@@ -1,4 +1,4 @@
-;;; siren-string-inflection.el --- jimeh's Emacs Siren: defaults for string-inflection
+;;; siren-string-inflection.el --- jimeh's Emacs Siren: defaults for string-inflection  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

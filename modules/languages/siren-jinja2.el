@@ -1,4 +1,4 @@
-;;; siren-jinja2.el --- jimeh's Emacs Siren: jinja2-mode configuration.
+;;; siren-jinja2.el --- jimeh's Emacs Siren: jinja2-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

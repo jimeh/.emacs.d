@@ -1,4 +1,4 @@
-;;; siren-resize-window.el --- jimeh's Emacs Siren: resize-window
+;;; siren-resize-window.el --- jimeh's Emacs Siren: resize-window  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

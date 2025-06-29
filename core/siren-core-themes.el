@@ -1,4 +1,4 @@
-;;; siren-core-themes.el --- jimeh's Emacs Siren: Custom themes.
+;;; siren-core-themes.el --- jimeh's Emacs Siren: Custom themes.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

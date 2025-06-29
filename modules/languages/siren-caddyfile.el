@@ -1,4 +1,4 @@
-;;; siren-caddyfile.el --- jimeh's Emacs Siren: caddyfile-mode configuration.
+;;; siren-caddyfile.el --- jimeh's Emacs Siren: caddyfile-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

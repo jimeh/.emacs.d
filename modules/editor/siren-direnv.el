@@ -1,4 +1,4 @@
-;;; siren-direnv.el --- jimeh's Emacs Siren: direnv configuration.
+;;; siren-direnv.el --- jimeh's Emacs Siren: direnv configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

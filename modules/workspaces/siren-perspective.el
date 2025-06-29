@@ -1,4 +1,4 @@
-;;; siren-perspective.el --- jimeh's Emacs Siren: perspective configuration.
+;;; siren-perspective.el --- jimeh's Emacs Siren: perspective configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

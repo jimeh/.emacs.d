@@ -1,4 +1,4 @@
-;;; siren-escreen.el --- jimeh's Emacs Siren: escreen configuration.
+;;; siren-escreen.el --- jimeh's Emacs Siren: escreen configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

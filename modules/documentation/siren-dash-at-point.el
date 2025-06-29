@@ -1,4 +1,4 @@
-;;; siren-dash-at-point.el --- jimeh's Emacs Siren: dash-at-point configuration.
+;;; siren-dash-at-point.el --- jimeh's Emacs Siren: dash-at-point configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-ecb.el --- jimeh's Emacs Siren: ECB configuration.
+;;; siren-ecb.el --- jimeh's Emacs Siren: ECB configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

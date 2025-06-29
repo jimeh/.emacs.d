@@ -1,4 +1,4 @@
-;;; siren-move-dup.el --- jimeh's Emacs Siren: move-dup
+;;; siren-move-dup.el --- jimeh's Emacs Siren: move-dup  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

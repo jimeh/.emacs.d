@@ -1,4 +1,4 @@
-;;; siren-xterm-color.el --- jimeh's Emacs Siren: xterm-color configuration.
+;;; siren-xterm-color.el --- jimeh's Emacs Siren: xterm-color configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-htmlize.el --- jimeh's Emacs Siren: htmlize configuration.
+;;; siren-htmlize.el --- jimeh's Emacs Siren: htmlize configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

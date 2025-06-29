@@ -1,4 +1,4 @@
-;;; siren-vertico.el --- jimeh's Emacs Siren: vertico configuration.
+;;; siren-vertico.el --- jimeh's Emacs Siren: vertico configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

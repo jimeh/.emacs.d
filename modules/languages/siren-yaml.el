@@ -1,4 +1,4 @@
-;;; siren-yaml.el --- jimeh's Emacs Siren: yaml-mode configuration.
+;;; siren-yaml.el --- jimeh's Emacs Siren: yaml-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-makefile.el --- jimeh's Emacs Siren: makefile-mode configuration.
+;;; siren-makefile.el --- jimeh's Emacs Siren: makefile-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

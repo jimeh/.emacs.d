@@ -1,4 +1,4 @@
-;;; siren-whitespace.el --- jimeh's Emacs Siren: whitespace configuration.
+;;; siren-whitespace.el --- jimeh's Emacs Siren: whitespace configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

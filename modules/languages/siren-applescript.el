@@ -1,4 +1,4 @@
-;;; siren-applescript.el --- jimeh's Emacs Siren: applescript-mode configuration.
+;;; siren-applescript.el --- jimeh's Emacs Siren: applescript-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

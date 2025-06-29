@@ -1,4 +1,4 @@
-;;; siren-diff-hl.el --- jimeh's Emacs Siren: diff-hl configuration.
+;;; siren-diff-hl.el --- jimeh's Emacs Siren: diff-hl configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

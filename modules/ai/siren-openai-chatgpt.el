@@ -1,4 +1,4 @@
-;;; siren-openai-chatgpt.el --- jimeh's Emacs Siren: openai-chatgpt configuration.
+;;; siren-openai-chatgpt.el --- jimeh's Emacs Siren: openai-chatgpt configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

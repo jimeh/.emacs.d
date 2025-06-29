@@ -1,4 +1,4 @@
-;;; siren-dired.el --- jimeh's Emacs Siren: dired configuration.
+;;; siren-dired.el --- jimeh's Emacs Siren: dired configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

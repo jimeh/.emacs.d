@@ -1,4 +1,4 @@
-;;; siren-special-mode.el --- jimeh's Emacs Siren: special-mode configuration.
+;;; siren-special-mode.el --- jimeh's Emacs Siren: special-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

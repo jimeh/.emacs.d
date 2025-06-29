@@ -1,4 +1,4 @@
-;;; siren-php.el --- jimeh's Emacs Siren: php-mode configuration.
+;;; siren-php.el --- jimeh's Emacs Siren: php-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

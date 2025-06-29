@@ -1,4 +1,4 @@
-;;; siren-undo-tree.el --- jimeh's Emacs Siren: undo-tree configuration.
+;;; siren-undo-tree.el --- jimeh's Emacs Siren: undo-tree configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

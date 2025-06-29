@@ -1,4 +1,4 @@
-;;; siren-org-mode.el --- jimeh's Emacs Siren: org-mode configuration.
+;;; siren-org-mode.el --- jimeh's Emacs Siren: org-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

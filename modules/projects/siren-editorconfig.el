@@ -1,4 +1,4 @@
-;;; siren-editorconfig.el --- jimeh's Emacs Siren: editorconfig configuration.
+;;; siren-editorconfig.el --- jimeh's Emacs Siren: editorconfig configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-ui.el --- jimeh's Emacs Siren: siren-ui.
+;;; siren-ui.el --- jimeh's Emacs Siren: siren-ui.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-desktop.el --- jimeh's Emacs Siren: desktop configuration.
+;;; siren-desktop.el --- jimeh's Emacs Siren: desktop configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

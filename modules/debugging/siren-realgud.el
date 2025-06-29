@@ -1,4 +1,4 @@
-;;; siren-realgud.el --- jimeh's Emacs Siren: realgud configuration.
+;;; siren-realgud.el --- jimeh's Emacs Siren: realgud configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

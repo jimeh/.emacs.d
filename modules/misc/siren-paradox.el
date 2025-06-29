@@ -1,4 +1,4 @@
-;;; siren-paradox.el --- jimeh's Emacs Siren: paradox configuration.
+;;; siren-paradox.el --- jimeh's Emacs Siren: paradox configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

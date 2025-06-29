@@ -1,4 +1,4 @@
-;;; siren-reopen.el --- jimeh's Emacs Siren: reopen helpers.
+;;; siren-reopen.el --- jimeh's Emacs Siren: reopen helpers.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

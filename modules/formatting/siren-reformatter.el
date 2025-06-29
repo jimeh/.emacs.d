@@ -1,4 +1,4 @@
-;;; siren-reformatter.el --- jimeh's Emacs Siren: reformatter-mode configuration.
+;;; siren-reformatter.el --- jimeh's Emacs Siren: reformatter-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

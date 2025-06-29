@@ -1,4 +1,4 @@
-;;; siren-consult.el --- jimeh's Emacs Siren: consult configuration.
+;;; siren-consult.el --- jimeh's Emacs Siren: consult configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

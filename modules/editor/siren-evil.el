@@ -1,4 +1,4 @@
-;;; siren-evil.el --- jimeh's Emacs Siren: evil configuration.
+;;; siren-evil.el --- jimeh's Emacs Siren: evil configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

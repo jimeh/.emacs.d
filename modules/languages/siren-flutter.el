@@ -1,4 +1,4 @@
-;;; siren-flutter.el --- jimeh's Emacs Siren: flutter-mode configuration.
+;;; siren-flutter.el --- jimeh's Emacs Siren: flutter-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

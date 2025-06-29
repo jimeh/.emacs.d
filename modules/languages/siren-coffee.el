@@ -1,4 +1,4 @@
-;;; siren-coffee.el --- jimeh's Emacs Siren: coffee-mode configuration.
+;;; siren-coffee.el --- jimeh's Emacs Siren: coffee-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

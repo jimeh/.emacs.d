@@ -1,4 +1,4 @@
-;;; siren-hideshow.el --- jimeh's Emacs Siren: folding configuration.
+;;; siren-hideshow.el --- jimeh's Emacs Siren: folding configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

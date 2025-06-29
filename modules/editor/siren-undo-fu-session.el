@@ -1,4 +1,4 @@
-;;; siren-undo-fu-session.el --- jimeh's Emacs Siren: undo-fu-session configuration.
+;;; siren-undo-fu-session.el --- jimeh's Emacs Siren: undo-fu-session configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

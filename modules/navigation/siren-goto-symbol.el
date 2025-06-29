@@ -1,4 +1,4 @@
-;;; siren-goto-symbol.el --- jimeh's Emacs Siren: goto-symbol.
+;;; siren-goto-symbol.el --- jimeh's Emacs Siren: goto-symbol.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-elscreen.el --- jimeh's Emacs Siren: elscreen configuration.
+;;; siren-elscreen.el --- jimeh's Emacs Siren: elscreen configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-consult-lsp.el --- jimeh's Emacs Siren: consult-lsp configuration.
+;;; siren-consult-lsp.el --- jimeh's Emacs Siren: consult-lsp configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-shift-number.el --- jimeh's Emacs Siren: shift-number.
+;;; siren-shift-number.el --- jimeh's Emacs Siren: shift-number.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

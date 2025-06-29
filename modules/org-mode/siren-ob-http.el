@@ -1,4 +1,4 @@
-;;; siren-ob-http.el --- jimeh's Emacs Siren: ob-http configuration.
+;;; siren-ob-http.el --- jimeh's Emacs Siren: ob-http configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-full-ack.el --- jimeh's Emacs Siren: full-ack configuration.
+;;; siren-full-ack.el --- jimeh's Emacs Siren: full-ack configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

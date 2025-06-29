@@ -1,4 +1,4 @@
-;;; siren-prettier-js.el --- jimeh's Emacs Siren: prettier-js configuration.
+;;; siren-prettier-js.el --- jimeh's Emacs Siren: prettier-js configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

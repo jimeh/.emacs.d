@@ -1,4 +1,4 @@
-;;; siren-core-init.el --- jimeh's Emacs Siren: Initialize all the things
+;;; siren-core-init.el --- jimeh's Emacs Siren: Initialize all the things  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

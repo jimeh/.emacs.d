@@ -1,4 +1,4 @@
-;;; siren-dart.el --- jimeh's Emacs Siren: dart-mode configuration.
+;;; siren-dart.el --- jimeh's Emacs Siren: dart-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

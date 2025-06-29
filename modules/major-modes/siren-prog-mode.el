@@ -1,4 +1,4 @@
-;;; siren-prog-mode.el --- jimeh's Emacs Siren: defaults for programming modes
+;;; siren-prog-mode.el --- jimeh's Emacs Siren: defaults for programming modes  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

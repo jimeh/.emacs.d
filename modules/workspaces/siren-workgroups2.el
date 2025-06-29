@@ -1,4 +1,4 @@
-;;; siren-workgroups2.el --- jimeh's Emacs Siren: workgroups2 configuration.
+;;; siren-workgroups2.el --- jimeh's Emacs Siren: workgroups2 configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

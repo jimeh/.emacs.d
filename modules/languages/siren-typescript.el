@@ -1,4 +1,4 @@
-;;; siren-typescript.el --- jimeh's Emacs Siren: typescript-mode configuration.
+;;; siren-typescript.el --- jimeh's Emacs Siren: typescript-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

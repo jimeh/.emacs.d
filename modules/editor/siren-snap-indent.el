@@ -1,4 +1,4 @@
-;;; siren-snap-indent.el --- jimeh's Emacs Siren: snap-indent configuration.
+;;; siren-snap-indent.el --- jimeh's Emacs Siren: snap-indent configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

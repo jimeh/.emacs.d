@@ -1,4 +1,4 @@
-;;; siren-helm-ag.el --- jimeh's Emacs Siren: helm-ag configuration.
+;;; siren-helm-ag.el --- jimeh's Emacs Siren: helm-ag configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

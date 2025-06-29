@@ -1,4 +1,4 @@
-;;; siren-zoom-window.el --- jimeh's Emacs Siren: zoom-window configuration.
+;;; siren-zoom-window.el --- jimeh's Emacs Siren: zoom-window configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

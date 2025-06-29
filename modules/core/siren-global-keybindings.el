@@ -1,4 +1,4 @@
-;;; siren-global-keybindings.el --- jimeh's Emacs Siren: Global keybindings.
+;;; siren-global-keybindings.el --- jimeh's Emacs Siren: Global keybindings.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

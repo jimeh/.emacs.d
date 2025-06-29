@@ -1,4 +1,4 @@
-;;; siren-polymode.el --- jimeh's Emacs Siren: polymode configuration.
+;;; siren-polymode.el --- jimeh's Emacs Siren: polymode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

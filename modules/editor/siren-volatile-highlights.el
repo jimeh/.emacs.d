@@ -1,4 +1,4 @@
-;;; siren-volatile-highlights.el --- jimeh's Emacs Siren: volatile-highlights-mode configuration.
+;;; siren-volatile-highlights.el --- jimeh's Emacs Siren: volatile-highlights-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

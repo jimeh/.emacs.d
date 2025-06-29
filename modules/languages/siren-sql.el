@@ -1,4 +1,4 @@
-;;; siren-sql.el --- jimeh's Emacs Siren: sql-mode configuration.
+;;; siren-sql.el --- jimeh's Emacs Siren: sql-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

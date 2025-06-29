@@ -1,4 +1,4 @@
-;;; siren-x509.el --- jimeh's Emacs Siren: x509-mode configuration.
+;;; siren-x509.el --- jimeh's Emacs Siren: x509-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

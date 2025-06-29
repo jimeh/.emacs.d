@@ -1,4 +1,4 @@
-;;; siren-smartparens.el --- jimeh's Emacs Siren: smartparens configuration.
+;;; siren-smartparens.el --- jimeh's Emacs Siren: smartparens configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

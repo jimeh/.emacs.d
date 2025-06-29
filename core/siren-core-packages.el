@@ -1,4 +1,4 @@
-;;; siren-core-packages.el --- jimeh's Emacs Siren: Core package setup
+;;; siren-core-packages.el --- jimeh's Emacs Siren: Core package setup  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

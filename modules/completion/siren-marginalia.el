@@ -1,4 +1,4 @@
-;;; siren-marginalia.el --- jimeh's Emacs Siren: marginalia configuration.
+;;; siren-marginalia.el --- jimeh's Emacs Siren: marginalia configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

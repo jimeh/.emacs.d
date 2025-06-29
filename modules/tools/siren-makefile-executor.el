@@ -1,4 +1,4 @@
-;;; siren-makefile-executor.el --- jimeh's Emacs Siren: makefile-executor configuration.
+;;; siren-makefile-executor.el --- jimeh's Emacs Siren: makefile-executor configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

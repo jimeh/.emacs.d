@@ -1,4 +1,4 @@
-;;; siren-ctrlf.el --- jimeh's Emacs Siren: ctrlf configuration.
+;;; siren-ctrlf.el --- jimeh's Emacs Siren: ctrlf configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

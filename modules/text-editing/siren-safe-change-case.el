@@ -1,4 +1,4 @@
-;;; siren-safe-change-case.el --- jimeh's Emacs Siren: change-case
+;;; siren-safe-change-case.el --- jimeh's Emacs Siren: change-case  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

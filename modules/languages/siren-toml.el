@@ -1,4 +1,4 @@
-;;; siren-toml.el --- jimeh's Emacs Siren: toml-mode configuration.
+;;; siren-toml.el --- jimeh's Emacs Siren: toml-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

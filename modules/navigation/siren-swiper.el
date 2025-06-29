@@ -1,4 +1,4 @@
-;;; siren-swiper.el --- jimeh's Emacs Siren: swiper configuration.
+;;; siren-swiper.el --- jimeh's Emacs Siren: swiper configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-cucumber.el --- jimeh's Emacs Siren: feature-mode configuration.
+;;; siren-cucumber.el --- jimeh's Emacs Siren: feature-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

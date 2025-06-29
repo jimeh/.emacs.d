@@ -1,4 +1,4 @@
-;;; siren-ediff.el --- jimeh's Emacs Siren: ediff configuration.
+;;; siren-ediff.el --- jimeh's Emacs Siren: ediff configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

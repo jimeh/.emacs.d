@@ -1,4 +1,4 @@
-;;; siren-mise.el --- jimeh's Emacs Siren: mise configuration.
+;;; siren-mise.el --- jimeh's Emacs Siren: mise configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

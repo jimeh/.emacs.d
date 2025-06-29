@@ -1,4 +1,4 @@
-;;; siren-plantuml.el --- jimeh's Emacs Siren: plantuml-mode configuration.
+;;; siren-plantuml.el --- jimeh's Emacs Siren: plantuml-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

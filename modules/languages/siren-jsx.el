@@ -1,4 +1,4 @@
-;;; siren-jsx.el --- jimeh's Emacs Siren: .jsx file configuration
+;;; siren-jsx.el --- jimeh's Emacs Siren: .jsx file configuration  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

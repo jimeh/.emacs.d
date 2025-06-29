@@ -1,4 +1,4 @@
-;;; siren-core-package-overrides.el --- jimeh's Emacs Siren: Package overrides
+;;; siren-core-package-overrides.el --- jimeh's Emacs Siren: Package overrides  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

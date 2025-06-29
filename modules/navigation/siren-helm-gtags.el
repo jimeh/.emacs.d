@@ -1,4 +1,4 @@
-;;; siren-helm-gtags.el --- jimeh's Emacs Siren: helm-gtags configuration.
+;;; siren-helm-gtags.el --- jimeh's Emacs Siren: helm-gtags configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

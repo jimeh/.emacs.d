@@ -1,4 +1,4 @@
-;;; siren-mmm.el --- jimeh's Emacs Siren: mmm-mode configuration.
+;;; siren-mmm.el --- jimeh's Emacs Siren: mmm-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

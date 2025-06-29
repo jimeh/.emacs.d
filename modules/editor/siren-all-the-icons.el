@@ -1,4 +1,4 @@
-;;; siren-all-the-icons.el --- jimeh's Emacs Siren: all-the-icons configuration.
+;;; siren-all-the-icons.el --- jimeh's Emacs Siren: all-the-icons configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

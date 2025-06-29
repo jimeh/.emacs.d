@@ -1,4 +1,4 @@
-;;; siren-rand.el --- jimeh's Emacs Siren: rand configuration.
+;;; siren-rand.el --- jimeh's Emacs Siren: rand configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

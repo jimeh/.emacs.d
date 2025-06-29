@@ -1,4 +1,4 @@
-;;; siren-pixel-scroll.el --- jimeh's Emacs Siren: pixel-scroll.
+;;; siren-pixel-scroll.el --- jimeh's Emacs Siren: pixel-scroll.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

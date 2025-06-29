@@ -1,4 +1,4 @@
-;;; siren-core-performance.el --- jimeh's Emacs Siren: Performance tweaks
+;;; siren-core-performance.el --- jimeh's Emacs Siren: Performance tweaks  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

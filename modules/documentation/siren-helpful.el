@@ -1,4 +1,4 @@
-;;; siren-helpful.el --- jimeh's Emacs Siren: helpful configuration.
+;;; siren-helpful.el --- jimeh's Emacs Siren: helpful configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-pandoc.el --- jimeh's Emacs Siren: pandoc-mode configuration.
+;;; siren-pandoc.el --- jimeh's Emacs Siren: pandoc-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

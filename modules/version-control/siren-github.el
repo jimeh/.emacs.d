@@ -1,4 +1,4 @@
-;;; siren-github.el --- jimeh's Emacs Siren: Github related stuff.
+;;; siren-github.el --- jimeh's Emacs Siren: Github related stuff.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

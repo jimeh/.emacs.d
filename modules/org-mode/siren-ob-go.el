@@ -1,4 +1,4 @@
-;;; siren-ob-go.el --- jimeh's Emacs Siren: ob-go configuration.
+;;; siren-ob-go.el --- jimeh's Emacs Siren: ob-go configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

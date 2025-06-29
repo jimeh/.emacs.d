@@ -1,4 +1,4 @@
-;;; siren-dap.el --- jimeh's Emacs Siren: dap-mode configuration.
+;;; siren-dap.el --- jimeh's Emacs Siren: dap-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-git-timemachine.el --- jimeh's Emacs Siren: git-timemachine configuration.
+;;; siren-git-timemachine.el --- jimeh's Emacs Siren: git-timemachine configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

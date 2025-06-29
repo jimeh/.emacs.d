@@ -1,4 +1,4 @@
-;;; siren-copilot.el --- jimeh's Emacs Siren: copilot configuration.
+;;; siren-copilot.el --- jimeh's Emacs Siren: copilot configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

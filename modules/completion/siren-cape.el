@@ -1,4 +1,4 @@
-;;; siren-cape.el --- jimeh's Emacs Siren: cape configuration.
+;;; siren-cape.el --- jimeh's Emacs Siren: cape configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

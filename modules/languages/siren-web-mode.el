@@ -1,4 +1,4 @@
-;;; siren-web-mode.el --- jimeh's Emacs Siren: web-mode configuration.
+;;; siren-web-mode.el --- jimeh's Emacs Siren: web-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

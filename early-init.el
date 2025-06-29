@@ -1,4 +1,4 @@
-;;; early-init.el --- jimeh's Emacs Siren: early init file.
+;;; early-init.el --- jimeh's Emacs Siren: early init file.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

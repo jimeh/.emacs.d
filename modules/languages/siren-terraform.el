@@ -1,4 +1,4 @@
-;;; siren-terraform.el --- jimeh's Emacs Siren: terraform-mode configuration.
+;;; siren-terraform.el --- jimeh's Emacs Siren: terraform-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

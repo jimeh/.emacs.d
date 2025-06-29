@@ -1,4 +1,4 @@
-;;; siren-restart-emacs.el --- jimeh's Emacs Siren: restart-emacs configuration.
+;;; siren-restart-emacs.el --- jimeh's Emacs Siren: restart-emacs configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

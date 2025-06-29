@@ -1,4 +1,4 @@
-;;; siren-haml.el --- jimeh's Emacs Siren: haml-mode configuration.
+;;; siren-haml.el --- jimeh's Emacs Siren: haml-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

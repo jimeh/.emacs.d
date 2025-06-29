@@ -1,4 +1,4 @@
-;;; siren-direx.el --- jimeh's Emacs Siren: direx configuration.
+;;; siren-direx.el --- jimeh's Emacs Siren: direx configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

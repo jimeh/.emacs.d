@@ -1,4 +1,4 @@
-;;; siren-savehist.el --- jimeh's Emacs Siren: savehist configuration.
+;;; siren-savehist.el --- jimeh's Emacs Siren: savehist configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

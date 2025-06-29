@@ -1,4 +1,4 @@
-;;; siren-rainbow.el --- jimeh's Emacs Siren: rainbow-mode configuration.
+;;; siren-rainbow.el --- jimeh's Emacs Siren: rainbow-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

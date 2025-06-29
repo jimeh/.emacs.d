@@ -1,4 +1,4 @@
-;;; siren-fundamental-mode.el --- jimeh's Emacs Siren: fundamental-mode configuration.
+;;; siren-fundamental-mode.el --- jimeh's Emacs Siren: fundamental-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

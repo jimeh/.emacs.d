@@ -1,4 +1,4 @@
-;;; siren-protobuf.el --- jimeh's Emacs Siren: protobuf-mode configuration.
+;;; siren-protobuf.el --- jimeh's Emacs Siren: protobuf-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

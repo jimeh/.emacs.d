@@ -1,4 +1,4 @@
-;;; siren-gh-notify.el --- jimeh's Emacs Siren: gh-notify configuration
+;;; siren-gh-notify.el --- jimeh's Emacs Siren: gh-notify configuration  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

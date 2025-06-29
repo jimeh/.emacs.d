@@ -1,4 +1,4 @@
-;;; siren-isearch.el --- jimeh's Emacs Siren: isearch configuration.
+;;; siren-isearch.el --- jimeh's Emacs Siren: isearch configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

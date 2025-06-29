@@ -1,4 +1,4 @@
-;;; siren-workspace-map.el --- jimeh's Emacs Siren: workspaces-map setup.
+;;; siren-workspace-map.el --- jimeh's Emacs Siren: workspaces-map setup.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

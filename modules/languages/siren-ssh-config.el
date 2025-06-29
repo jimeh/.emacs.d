@@ -1,4 +1,4 @@
-;;; siren-ssh-config.el --- jimeh's Emacs Siren: ssh-config-mode configuration.
+;;; siren-ssh-config.el --- jimeh's Emacs Siren: ssh-config-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-git-link.el --- jimeh's Emacs Siren: git-link configuration.
+;;; siren-git-link.el --- jimeh's Emacs Siren: git-link configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

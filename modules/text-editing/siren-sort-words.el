@@ -1,4 +1,4 @@
-;;; siren-sort-words.el --- jimeh's Emacs Siren: sort-words.
+;;; siren-sort-words.el --- jimeh's Emacs Siren: sort-words.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

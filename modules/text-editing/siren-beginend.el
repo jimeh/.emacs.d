@@ -1,4 +1,4 @@
-;;; siren-beginend.el --- jimeh's Emacs Siren: beginend
+;;; siren-beginend.el --- jimeh's Emacs Siren: beginend  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-scss.el --- jimeh's Emacs Siren: scss-mode configuration.
+;;; siren-scss.el --- jimeh's Emacs Siren: scss-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

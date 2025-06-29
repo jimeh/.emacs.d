@@ -1,4 +1,4 @@
-;;; siren-auto-complete.el --- jimeh's Emacs Siren: auto-complete configuration.
+;;; siren-auto-complete.el --- jimeh's Emacs Siren: auto-complete configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

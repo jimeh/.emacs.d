@@ -1,4 +1,4 @@
-;;; siren-symbol-overlay.el --- jimeh's Emacs Siren: symbol-overlay configuration.
+;;; siren-symbol-overlay.el --- jimeh's Emacs Siren: symbol-overlay configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

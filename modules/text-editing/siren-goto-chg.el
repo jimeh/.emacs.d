@@ -1,4 +1,4 @@
-;;; siren-goto-chg.el --- jimeh's Emacs Siren: goto-chg configuration.
+;;; siren-goto-chg.el --- jimeh's Emacs Siren: goto-chg configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

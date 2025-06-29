@@ -1,4 +1,4 @@
-;;; siren-lsp.el --- jimeh's Emacs Siren: lsp-mode configuration.
+;;; siren-lsp.el --- jimeh's Emacs Siren: lsp-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-writeroom.el --- jimeh's Emacs Siren: writeroom-mode configuration.
+;;; siren-writeroom.el --- jimeh's Emacs Siren: writeroom-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

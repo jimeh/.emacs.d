@@ -1,4 +1,4 @@
-;;; siren-treemacs.el --- jimeh's Emacs Siren: treemacs configuration.
+;;; siren-treemacs.el --- jimeh's Emacs Siren: treemacs configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

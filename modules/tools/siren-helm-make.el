@@ -1,4 +1,4 @@
-;;; siren-helm-make.el --- jimeh's Emacs Siren: helm-make configuration.
+;;; siren-helm-make.el --- jimeh's Emacs Siren: helm-make configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

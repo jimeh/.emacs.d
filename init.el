@@ -1,4 +1,4 @@
-;;; init.el --- jimeh's Emacs Siren: init file.
+;;; init.el --- jimeh's Emacs Siren: init file.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

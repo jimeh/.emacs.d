@@ -1,4 +1,4 @@
-;;; siren-list-available-fonts.el --- jimeh's Emacs Siren: list-available-fonts helper.
+;;; siren-list-available-fonts.el --- jimeh's Emacs Siren: list-available-fonts helper.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

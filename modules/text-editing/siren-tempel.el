@@ -1,4 +1,4 @@
-;;; siren-tempel.el --- jimeh's Emacs Siren: tempel configuration.
+;;; siren-tempel.el --- jimeh's Emacs Siren: tempel configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

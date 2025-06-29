@@ -1,4 +1,4 @@
-;;; siren-nginx.el --- jimeh's Emacs Siren: nginx-mode configuration.
+;;; siren-nginx.el --- jimeh's Emacs Siren: nginx-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

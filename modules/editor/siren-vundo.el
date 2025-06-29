@@ -1,4 +1,4 @@
-;;; siren-vundo.el --- jimeh's Emacs Siren: vundo configuration.
+;;; siren-vundo.el --- jimeh's Emacs Siren: vundo configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

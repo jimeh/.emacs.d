@@ -1,4 +1,4 @@
-;;; siren-core-utils.el --- jimeh's Emacs Siren: Core Siren functions and macros.
+;;; siren-core-utils.el --- jimeh's Emacs Siren: Core Siren functions and macros.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

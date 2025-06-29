@@ -1,4 +1,4 @@
-;;; siren-highlight-indent-guides.el --- jimeh's Emacs Siren: highlight-indent-guides-mode configuration.
+;;; siren-highlight-indent-guides.el --- jimeh's Emacs Siren: highlight-indent-guides-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-smart-shift.el --- jimeh's Emacs Siren: smart-shift
+;;; siren-smart-shift.el --- jimeh's Emacs Siren: smart-shift  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

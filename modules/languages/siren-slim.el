@@ -1,4 +1,4 @@
-;;; siren-slim.el --- jimeh's Emacs Siren: slim-mode configuration.
+;;; siren-slim.el --- jimeh's Emacs Siren: slim-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

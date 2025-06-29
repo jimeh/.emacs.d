@@ -1,4 +1,4 @@
-;;; siren-core-compile.el --- jimeh's Emacs Siren: Compilation.
+;;; siren-core-compile.el --- jimeh's Emacs Siren: Compilation.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

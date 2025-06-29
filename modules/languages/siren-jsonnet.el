@@ -1,4 +1,4 @@
-;;; siren-jsonnet.el --- jimeh's Emacs Siren: jsonnet-mode configuration.
+;;; siren-jsonnet.el --- jimeh's Emacs Siren: jsonnet-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

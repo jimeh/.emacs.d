@@ -1,4 +1,4 @@
-;;; siren-orderless.el --- jimeh's Emacs Siren: orderless configuration.
+;;; siren-orderless.el --- jimeh's Emacs Siren: orderless configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-shell-pop.el --- jimeh's Emacs Siren: shell-pop configuration.
+;;; siren-shell-pop.el --- jimeh's Emacs Siren: shell-pop configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

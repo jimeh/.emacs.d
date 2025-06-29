@@ -1,4 +1,4 @@
-;;; siren-lorem-ipsum.el --- jimeh's Emacs Siren: lorem-ipsum configuration.
+;;; siren-lorem-ipsum.el --- jimeh's Emacs Siren: lorem-ipsum configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

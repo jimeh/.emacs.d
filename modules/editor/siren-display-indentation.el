@@ -1,4 +1,4 @@
-;;; siren-display-indentation.el --- jimeh's Emacs Siren: indent guides setup
+;;; siren-display-indentation.el --- jimeh's Emacs Siren: indent guides setup  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

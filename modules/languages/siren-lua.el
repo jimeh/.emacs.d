@@ -1,4 +1,4 @@
-;;; siren-lua.el --- jimeh's Emacs Siren: lua-mode configuration.
+;;; siren-lua.el --- jimeh's Emacs Siren: lua-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

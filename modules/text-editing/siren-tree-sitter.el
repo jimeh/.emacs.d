@@ -1,4 +1,4 @@
-;;; siren-tree-sitter.el --- jimeh's Emacs Siren: tree-sitter
+;;; siren-tree-sitter.el --- jimeh's Emacs Siren: tree-sitter  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

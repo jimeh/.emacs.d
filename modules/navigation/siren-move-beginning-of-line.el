@@ -1,4 +1,4 @@
-;;; siren-move-beginning-of-line.el --- jimeh's Emacs Siren: move-beginning-of-line.
+;;; siren-move-beginning-of-line.el --- jimeh's Emacs Siren: move-beginning-of-line.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

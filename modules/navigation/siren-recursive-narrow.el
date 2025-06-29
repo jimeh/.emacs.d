@@ -1,4 +1,4 @@
-;;; siren-recursive-narrow.el --- jimeh's Emacs Siren: recursive-narrow configuration.
+;;; siren-recursive-narrow.el --- jimeh's Emacs Siren: recursive-narrow configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-chatgpt.el --- jimeh's Emacs Siren: chatgpt configuration.
+;;; siren-chatgpt.el --- jimeh's Emacs Siren: chatgpt configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

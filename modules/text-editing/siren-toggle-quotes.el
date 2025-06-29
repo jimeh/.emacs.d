@@ -1,4 +1,4 @@
-;;; siren-toggle-quotes.el --- jimeh's Emacs Siren: toggle-quotes.
+;;; siren-toggle-quotes.el --- jimeh's Emacs Siren: toggle-quotes.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

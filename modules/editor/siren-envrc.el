@@ -1,4 +1,4 @@
-;;; siren-envrc.el --- jimeh's Emacs Siren: envrc configuration.
+;;; siren-envrc.el --- jimeh's Emacs Siren: envrc configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-core-keybinds.el --- jimeh's Emacs Siren: Core keybinds support
+;;; siren-core-keybinds.el --- jimeh's Emacs Siren: Core keybinds support  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

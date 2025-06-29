@@ -1,4 +1,4 @@
-;;; siren-windmove.el --- jimeh's Emacs Siren: windmove
+;;; siren-windmove.el --- jimeh's Emacs Siren: windmove  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

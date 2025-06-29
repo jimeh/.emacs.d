@@ -1,4 +1,4 @@
-;;; siren-undo-fu.el --- jimeh's Emacs Siren: undo-fu configuration.
+;;; siren-undo-fu.el --- jimeh's Emacs Siren: undo-fu configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

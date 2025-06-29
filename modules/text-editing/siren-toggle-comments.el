@@ -1,4 +1,4 @@
-;;; siren-toggle-comments.el --- jimeh's Emacs Siren: toggle-comments
+;;; siren-toggle-comments.el --- jimeh's Emacs Siren: toggle-comments  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

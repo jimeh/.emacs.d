@@ -1,4 +1,4 @@
-;;; siren-csv.el --- jimeh's Emacs Siren: csv configuration.
+;;; siren-csv.el --- jimeh's Emacs Siren: csv configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

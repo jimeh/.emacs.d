@@ -1,4 +1,4 @@
-;;; siren-zone.el --- jimeh's Emacs Siren: zone configuration.
+;;; siren-zone.el --- jimeh's Emacs Siren: zone configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

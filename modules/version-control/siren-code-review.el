@@ -1,4 +1,4 @@
-;;; siren-code-review.el --- jimeh's Emacs Siren: code-review configuration
+;;; siren-code-review.el --- jimeh's Emacs Siren: code-review configuration  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

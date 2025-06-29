@@ -1,4 +1,4 @@
-;;; siren-easysession.el --- jimeh's Emacs Siren: easysession configuration.
+;;; siren-easysession.el --- jimeh's Emacs Siren: easysession configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

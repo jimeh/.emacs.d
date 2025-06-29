@@ -1,4 +1,4 @@
-;;; siren-flyspell.el --- jimeh's Emacs Siren: flyspell configuration.
+;;; siren-flyspell.el --- jimeh's Emacs Siren: flyspell configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

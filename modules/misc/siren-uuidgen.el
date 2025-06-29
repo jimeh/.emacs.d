@@ -1,4 +1,4 @@
-;;; siren-uuidgen.el --- jimeh's Emacs Siren: uuidgen configuration.
+;;; siren-uuidgen.el --- jimeh's Emacs Siren: uuidgen configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

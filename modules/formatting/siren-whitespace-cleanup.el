@@ -1,4 +1,4 @@
-;;; siren-whitespace-cleanup.el --- jimeh's Emacs Siren: whitespace-cleanup-mode configuration.
+;;; siren-whitespace-cleanup.el --- jimeh's Emacs Siren: whitespace-cleanup-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

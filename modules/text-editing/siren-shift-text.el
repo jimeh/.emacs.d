@@ -1,4 +1,4 @@
-;;; siren-shift-text.el --- jimeh's Emacs Siren: shift-text
+;;; siren-shift-text.el --- jimeh's Emacs Siren: shift-text  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

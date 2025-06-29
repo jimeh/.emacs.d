@@ -1,4 +1,4 @@
-;;; siren-project-explorer.el --- jimeh's Emacs Siren: project-explorer configuration.
+;;; siren-project-explorer.el --- jimeh's Emacs Siren: project-explorer configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

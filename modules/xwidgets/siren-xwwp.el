@@ -1,4 +1,4 @@
-;;; siren-xwwp.el --- jimeh's Emacs Siren: xwwp configuration.
+;;; siren-xwwp.el --- jimeh's Emacs Siren: xwwp configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

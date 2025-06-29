@@ -1,4 +1,4 @@
-;;; siren-doom-modeline.el --- jimeh's Emacs Siren: doom-modeline theme.
+;;; siren-doom-modeline.el --- jimeh's Emacs Siren: doom-modeline theme.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-cycle-quotes.el --- jimeh's Emacs Siren: cycle-quotes.
+;;; siren-cycle-quotes.el --- jimeh's Emacs Siren: cycle-quotes.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-haskell.el --- jimeh's Emacs Siren: haskell-mode configuration.
+;;; siren-haskell.el --- jimeh's Emacs Siren: haskell-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

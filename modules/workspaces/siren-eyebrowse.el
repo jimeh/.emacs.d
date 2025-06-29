@@ -1,4 +1,4 @@
-;;; siren-eyebrowse.el --- jimeh's Emacs Siren: eyebrowse configuration.
+;;; siren-eyebrowse.el --- jimeh's Emacs Siren: eyebrowse configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

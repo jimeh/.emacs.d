@@ -1,4 +1,4 @@
-;;; siren-display-fill-column.el --- jimeh's Emacs Siren: fill-column configuration.
+;;; siren-display-fill-column.el --- jimeh's Emacs Siren: fill-column configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

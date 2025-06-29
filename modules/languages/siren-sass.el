@@ -1,4 +1,4 @@
-;;; siren-sass.el --- jimeh's Emacs Siren: sass-mode configuration.
+;;; siren-sass.el --- jimeh's Emacs Siren: sass-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

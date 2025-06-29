@@ -1,4 +1,4 @@
-;;; siren-display-line-numbers.el --- jimeh's Emacs Siren: display-line-numbers configuration.
+;;; siren-display-line-numbers.el --- jimeh's Emacs Siren: display-line-numbers configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

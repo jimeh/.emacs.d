@@ -1,4 +1,4 @@
-;;; siren-git-modes.el --- jimeh's Emacs Siren: git-modes-mode configuration.
+;;; siren-git-modes.el --- jimeh's Emacs Siren: git-modes-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

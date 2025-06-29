@@ -1,4 +1,4 @@
-;;; siren-hydra.el --- jimeh's Emacs Siren: hydra-mode configuration.
+;;; siren-hydra.el --- jimeh's Emacs Siren: hydra-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

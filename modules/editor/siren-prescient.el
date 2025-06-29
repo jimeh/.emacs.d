@@ -1,4 +1,4 @@
-;;; siren-prescient.el --- jimeh's Emacs Siren: prescient configuration.
+;;; siren-prescient.el --- jimeh's Emacs Siren: prescient configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-subword.el --- jimeh's Emacs Siren: subword-mode configuration.
+;;; siren-subword.el --- jimeh's Emacs Siren: subword-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

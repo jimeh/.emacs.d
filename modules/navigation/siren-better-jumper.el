@@ -1,4 +1,4 @@
-;;; siren-better-jumper.el --- jimeh's Emacs Siren: better-jumper configuration.
+;;; siren-better-jumper.el --- jimeh's Emacs Siren: better-jumper configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

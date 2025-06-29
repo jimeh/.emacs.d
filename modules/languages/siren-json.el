@@ -1,4 +1,4 @@
-;;; siren-json.el --- jimeh's Emacs Siren: json-mode configuration.
+;;; siren-json.el --- jimeh's Emacs Siren: json-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

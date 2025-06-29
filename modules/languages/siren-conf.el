@@ -1,4 +1,4 @@
-;;; siren-conf.el --- jimeh's Emacs Siren: conf-mode configuration.
+;;; siren-conf.el --- jimeh's Emacs Siren: conf-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

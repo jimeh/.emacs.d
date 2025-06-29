@@ -1,4 +1,4 @@
-;;; siren-golang.el --- jimeh's Emacs Siren: go-mode configuration.
+;;; siren-golang.el --- jimeh's Emacs Siren: go-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

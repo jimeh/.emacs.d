@@ -1,4 +1,4 @@
-;;; siren-minions.el --- jimeh's Emacs Siren: minions configuration.
+;;; siren-minions.el --- jimeh's Emacs Siren: minions configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-ox-jira.el --- jimeh's Emacs Siren: ox-jira configuration.
+;;; siren-ox-jira.el --- jimeh's Emacs Siren: ox-jira configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

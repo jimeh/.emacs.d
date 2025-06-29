@@ -1,4 +1,4 @@
-;;; siren-explain-pause.el --- jimeh's Emacs Siren: explain-pause-mode configuration.
+;;; siren-explain-pause.el --- jimeh's Emacs Siren: explain-pause-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

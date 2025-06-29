@@ -1,4 +1,4 @@
-;;; siren-ox-gfm.el --- jimeh's Emacs Siren: ox-gfm configuration.
+;;; siren-ox-gfm.el --- jimeh's Emacs Siren: ox-gfm configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

@@ -1,4 +1,4 @@
-;;; siren-core-modules.el --- jimeh's Emacs Siren: Module loading.
+;;; siren-core-modules.el --- jimeh's Emacs Siren: Module loading.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

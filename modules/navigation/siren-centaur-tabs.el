@@ -1,4 +1,4 @@
-;;; siren-centaur-tabs.el --- jimeh's Emacs Siren: centaur-tabs configuration.
+;;; siren-centaur-tabs.el --- jimeh's Emacs Siren: centaur-tabs configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

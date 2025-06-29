@@ -1,4 +1,4 @@
-;;; siren-solaire-mode.el --- jimeh's Emacs Siren: solaire-mode.
+;;; siren-solaire-mode.el --- jimeh's Emacs Siren: solaire-mode.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

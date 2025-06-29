@@ -1,4 +1,4 @@
-;;; siren-magit-todos.el --- jimeh's Emacs Siren: magit-todos configuration
+;;; siren-magit-todos.el --- jimeh's Emacs Siren: magit-todos configuration  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 

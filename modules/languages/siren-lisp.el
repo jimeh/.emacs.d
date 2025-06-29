@@ -1,4 +1,4 @@
-;;; siren-lisp.el --- jimeh's Emacs Siren: lisp-mode configuration.
+;;; siren-lisp.el --- jimeh's Emacs Siren: lisp-mode configuration.  -*- lexical-binding: nil; -*-
 
 ;;; Commentary:
 
