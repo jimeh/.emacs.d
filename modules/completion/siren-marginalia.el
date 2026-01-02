@@ -84,12 +84,12 @@ mode."
        ('command
         (setcdr x (cons 'marginalia-annotate-binding
                         (remq 'marginalia-annotate-binding (cdr x)))))))
-   marginalia-annotator-registry)
+   marginalia-annotators)
 
   ;; Add custom annotators.
-  (add-to-list 'marginalia-annotator-registry
+  (add-to-list 'marginalia-annotators
                '(project-buffer marginalia-annotate-project-buffer))
-  (add-to-list 'marginalia-annotator-registry
+  (add-to-list 'marginalia-annotators
                '(tab siren-marginalia-annotate-tab))
 
   ;; Customize projectile commands when/if loaded.
