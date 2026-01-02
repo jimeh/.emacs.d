@@ -10,4 +10,4 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: jimeh/release-please-manifest-action@v1
+      - uses: jimeh/release-please-manifest-action@84f33fd2828210488c36f3e0a7e3209252d2ae7d # v3.0.0

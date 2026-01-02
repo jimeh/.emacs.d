@@ -1,5 +1,6 @@
 {
   "bootstrap-sha": "d21192fb4ede08d81a2c9e68b68c33b67c9de18b",
+  "always-update": true,
   "packages": {
     ".": {
       "release-type": "simple",
