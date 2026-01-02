@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.54](https://github.com/jimeh/.emacs.d/compare/v0.8.53...v0.8.54) (2026-01-02)
+
+
+### Bug Fixes
+
+* **completion/marginalia:** stop using deprecated variable ([8950895](https://github.com/jimeh/.emacs.d/commit/8950895d105f2df924c4a5d139a2c0ae73842850))
+
 ## [0.8.53](https://github.com/jimeh/.emacs.d/compare/v0.8.52...v0.8.53) (2025-06-29)
 
 
