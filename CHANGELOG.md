@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.9.0](https://github.com/jimeh/.emacs.d/compare/v0.8.54...v0.9.0) (2026-01-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* **package:** migrate from straight.el to elpaca package manager ([#30](https://github.com/jimeh/.emacs.d/issues/30))
+
+### Features
+
+* **package:** migrate from straight.el to elpaca package manager ([#30](https://github.com/jimeh/.emacs.d/issues/30)) ([e63120b](https://github.com/jimeh/.emacs.d/commit/e63120b478613a44a8537840eac4ca4622473412))
+
 ## [0.8.54](https://github.com/jimeh/.emacs.d/compare/v0.8.53...v0.8.54) (2026-01-02)
 
 
