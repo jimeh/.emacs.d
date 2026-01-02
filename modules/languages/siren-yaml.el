@@ -90,7 +90,7 @@ or *.yaml file in a .github/workflows/ directory."
   ;; TODO: Revisit yaml-ts-mode at some point in the future when it no longer
   ;; forces the use of 4-space indentation.
   (use-package yaml-ts-mode
-    :straight (:type built-in)
+    :ensure nil
     ;; :mode "\\.ya?ml\\'"
     :hook (yaml-ts-mode . siren-yaml-ts-mode-setup)
 
@@ -104,7 +104,8 @@ or *.yaml file in a .github/workflows/ directory."
     (siren-flycheck-setup-yaml-actionlint)))
 
 (use-package lsp-yaml
-  :straight lsp-mode
+  :ensure nil
+  :defer t
 
   :hook
   (yaml-mode . siren-lsp-yaml-mode-setup)

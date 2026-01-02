@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package special-mode
-  :straight (:type built-in)
+  :ensure nil
   :defer t
 
   :hook

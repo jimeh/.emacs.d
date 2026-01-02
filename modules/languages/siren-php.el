@@ -19,7 +19,7 @@
 
 (when (fboundp 'php-ts-mode)
   (use-package php-ts-mode
-    :straight (:type built-in)
+    :ensure nil
     :interpreter "php"
     :mode "\\.php\\'" "\\.inc\\'" "\\.module\\'"
     :hook

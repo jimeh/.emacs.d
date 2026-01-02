@@ -25,16 +25,18 @@
   (advice-add #'completing-read-multiple :filter-args #'siren-crm-indicator))
 
 (use-package vertico-mouse
-  :straight vertico
-  :defer t)
+  :ensure nil
+  :after vertico)
 
 (use-package vertico-repeat
-  :straight vertico
+  :ensure nil
+  :after vertico
   :general
   ("C-c C-v" 'vertico-repeat))
 
 (use-package vertico-directory
-  :straight vertico
+  :ensure nil
+  :after vertico
   :demand t
   :general
   (:keymaps 'vertico-map

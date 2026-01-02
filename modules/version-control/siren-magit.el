@@ -93,7 +93,7 @@
           (magit-delta-mode +1))))))
 
 (use-package conventional-commit
-  :straight (:host github :repo "akirak/conventional-commit.el")
+  :ensure (:host github :repo "akirak/conventional-commit.el")
   :hook
   (git-commit-mode . conventional-commit-setup))
 

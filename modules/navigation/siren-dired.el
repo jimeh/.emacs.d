@@ -9,7 +9,7 @@
 (require 'siren-dired+)
 
 (use-package dired
-  :straight (:type built-in)
+  :ensure nil
   :defer t
 
   :hook
@@ -151,7 +151,7 @@ confirmation.  To disable the confirmation, see
                 dired-listing-switches gnu-ls-flags))))))
 
 (use-package dired-x
-  :straight (:type built-in)
+  :ensure nil
   :after dired)
 
 (use-package dired-subtree

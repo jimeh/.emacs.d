@@ -10,7 +10,7 @@
 (require 'siren-makefile-executor)
 
 (use-package make-mode
-  :straight (:type built-in)
+  :ensure nil
   :hook
   (makefile-mode . siren-makefile-mode-setup)
 

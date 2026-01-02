@@ -9,14 +9,13 @@
 (require 'siren-workspace-map)
 
 (use-package tab-bar-notch
-  :straight (:host github :repo "jimeh/tab-bar-notch")
+  :ensure (:host github :repo "jimeh/tab-bar-notch")
   :custom
   (tab-bar-notch-normal-fullscreen-height 1.0)
   (tab-bar-notch-normal-height 1.0))
 
 (use-package tab-bar
-  :straight (:type built-in)
-
+  :ensure nil
   :general
   ("s-}" 'tab-next)
   ("s-{" 'tab-previous)

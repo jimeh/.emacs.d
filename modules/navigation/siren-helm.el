@@ -9,22 +9,7 @@
 ;; Helm fails with tramp-methods symbol being void if tramp is not required.
 (require 'tramp)
 
-(use-package helm-global-bindings
-  :straight helm
-  :demand
-  :general
-  (:keymaps 'helm-command-map
-            "M" 'helm-man-woman)
-
-  :custom
-  (helm-command-prefix-key "C-c h"))
-
-(use-package helm-core
-  :after helm-global-bindings
-  :defer t)
-
 (use-package helm
-  :after (helm-global-bindings)
   :defer t
   :hook
   (helm-minibuffer-set-up . siren-helm--hide-minibuffer-maybe)
@@ -34,12 +19,22 @@
   (helm-cleanup . siren-helm--show-neotree-maybe)
   (helm-cleanup . siren-helm--show-treemacs-maybe)
 
+  :init
+  ;; Helm-global-bindings is required for the C-c h prefix key to work.
+  (require 'helm-global-bindings)
+
+  :general
+  (:keymaps 'helm-command-map
+            "M" 'helm-man-woman)
+
   :custom
+  (helm-command-prefix-key "C-c h")
   (helm-always-two-windows t)
   (helm-autoresize-max-height 48)
   (helm-autoresize-min-height 10)
   (helm-autoresize-mode nil)
   (helm-case-fold-search 'smart)
+  (helm-completion-style 'helm)
   (helm-display-buffer-height 64)
   (helm-display-buffer-reuse-frame nil)
   (helm-display-buffer-width 160)
@@ -147,15 +142,13 @@
   (advice-add 'helm :before 'siren-helm--hide-treemacs))
 
 (use-package helm-elisp
-  :straight helm
-  :after (helm-global-bindings)
+  :ensure nil
   :general
   (:keymaps 'helm-command-map
             "d" 'helm-apropos))
 
 (use-package helm-files
-  :straight helm
-  :after (helm-global-bindings)
+  :ensure nil
   :general
   ("C-x f" 'helm-find-files)
 
@@ -165,15 +158,14 @@
   (helm-ff-search-library-in-sexp t))
 
 (use-package helm-for-files
-  :straight helm
-  :after (helm-global-bindings)
+  :ensure nil
   :general
   ("C-c f f" 'helm-for-files)
   ("C-c f r" 'helm-recentf))
 
 (use-package helm-ring
-  :straight helm
-  :after (helm-global-bindings)
+  :ensure nil
+  :after helm
   :preface
   (defun siren-helm-ring-yank-pop-advice (orig-fun &rest args)
     "If last action was not a yank, run `helm-show-kill-ring' instead."
@@ -186,27 +178,25 @@
   (advice-add 'yank-pop :around #'siren-helm-ring-yank-pop-advice))
 
 (use-package helm-descbinds
-  :defer t
-  :after (helm-global-bindings))
+  :defer t)
 
 (use-package helm-describe-modes
-  :defer t
-  :after (helm-global-bindings))
+  :defer t)
 
 (use-package helm-xref
-  :defer t
-  :after (helm-global-bindings))
+  :defer t)
 
 (use-package helm-posframe
+  :ensure (:host github :repo "emacsattic/helm-posframe")
   :if window-system
 
   :custom
   (helm-posframe-border-width 3)
+  (helm-posframe-width nil)
   (helm-posframe-height nil)
   (helm-posframe-min-height 70)
-  (helm-posframe-min-width nil)
+  (helm-posframe-min-width 300)
   (helm-posframe-parameters '((left-fringe . 10) (right-fringe . 10)))
-  (helm-posframe-width 500)
 
   :preface
   ;; helm-posframe does not come with a minor mode to toggle it on/off, so let's

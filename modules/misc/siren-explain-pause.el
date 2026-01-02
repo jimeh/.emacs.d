@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package explain-pause-mode
-  :straight (:type git :host github :repo "lastquestion/explain-pause-mode")
+  :ensure (:host github :repo "lastquestion/explain-pause-mode")
   :defer t
 
   :custom

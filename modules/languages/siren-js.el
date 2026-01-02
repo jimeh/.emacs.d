@@ -9,7 +9,7 @@
 (require 'siren-lsp)
 
 (use-package js-mode
-  :straight (:type built-in)
+  :ensure nil
   :mode "\\.js\\'" "\\.pac\\'"
 
   :general
@@ -30,7 +30,7 @@
 
 (when (fboundp 'js-ts-mode)
   (use-package js-ts-mode
-    :straight (:type built-in)
+    :ensure nil
     ;;; Disable, as js-ts-mode is quite underbaked and lacks a lot of syntax
     ;;; highlighting features compared to js-mode, and even more when
     ;;; tree-sitter-mode is added as well.
@@ -53,8 +53,8 @@
     (siren-treesit-auto-ensure-grammar 'javascript)))
 
 (use-package lsp-javascript
-  :straight lsp-mode
-
+  :ensure nil
+  :defer t
   :hook
   (js-mode . siren-lsp-js-mode-setup)
   (js-ts-mode . siren-lsp-js-mode-setup)

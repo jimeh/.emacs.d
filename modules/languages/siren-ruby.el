@@ -33,7 +33,7 @@
                  ruby-forward-sexp nil)))
 
 (use-package ruby-mode
-  :straight (:type built-in)
+  :ensure nil
   :interpreter "ruby"
   :mode
   "Appraisals\\'"
@@ -97,7 +97,7 @@
 
 (if (fboundp 'ruby-ts-mode)
     (use-package ruby-ts-mode
-      :straight (:type built-in)
+      :ensure nil
       :interpreter "ruby"
       :mode
       "Appraisals\\'"
@@ -180,7 +180,8 @@
         :group 'siren-ruby-ts)))
 
 (use-package lsp-solargraph
-  :straight lsp-mode
+  :ensure nil
+  :defer t
 
   ;; Disable solargraph in favor of ruby-lsp.
   ;; :hook
@@ -240,7 +241,8 @@ and will break things."
                '(lsp-solargraph-use-bundler . t)))
 
 (use-package lsp-ruby-lsp
-  :straight lsp-mode
+  :ensure nil
+  :defer t
 
   :hook
   (ruby-mode . siren-lsp-ruby-lsp-mode-setup)
@@ -292,10 +294,12 @@ output typically does not conform to any common Ruby formatting standards."
                "/.local/share/mise/installs/ruby/"))
 
 (use-package dap-ruby
-  :straight dap-mode
-  :after (ruby-mode dap-mode))
+  :ensure nil
+  :defer t
+  :after dap-mode ruby-mode)
 
 (use-package bundler
+  :ensure (:host github :repo "tobiassvn/bundler.el")
   :defer t
   :preface
   (defun siren-bundle-command (cmd)

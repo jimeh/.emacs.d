@@ -10,7 +10,6 @@
 (require 'siren-lsp)
 
 (use-package helm-lsp
-  :after (helm-global-bindings)
   :general
   ("C-c '" 'helm-lsp-workspace-symbol)
   ("C-c C-'" 'helm-lsp-workspace-symbol)

@@ -24,7 +24,7 @@
            (setq treesit-extra-load-path `(,value))))
 
   (use-package treesit
-    :straight (:type built-in)
+    :ensure nil
 
     :custom
     (treesit-font-lock-level 4)

@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package recentf
-  :straight (:type built-in)
+  :ensure nil
   :demand t
 
   :custom

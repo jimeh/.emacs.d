@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package isearch
-  :straight (:type built-in)
+  :ensure nil
   :custom
   (isearch-lazy-count t)
   (regexp-search-ring-max 200)

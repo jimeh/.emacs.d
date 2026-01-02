@@ -12,7 +12,7 @@
 (require 'siren-smart-shift)
 
 (use-package org
-  :straight (:type built-in)
+  :ensure nil
   :general
   (:keymaps 'org-mode-map
             "C-j" 'org-return-indent

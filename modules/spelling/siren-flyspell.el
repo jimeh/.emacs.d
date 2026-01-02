@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package flyspell
-  :straight (:type built-in)
+  :ensure nil
   :defer t
   :diminish flyspell-mode
 

@@ -9,7 +9,7 @@
 (require 'siren-prog-mode)
 
 (use-package conf-mode
-  :straight (:type built-in)
+  :ensure nil
   :mode
   "/Procfile\\'"
   "/\\.env\\'"

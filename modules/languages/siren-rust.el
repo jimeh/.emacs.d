@@ -27,7 +27,7 @@
 
 (when (fboundp 'rust-ts-mode)
   (use-package rust-ts-mode
-    :straight (:type built-in)
+    :ensure nil
     :mode "\\.rs\\'"
     :interpreter "rust"
     :hook
@@ -47,7 +47,8 @@
     (siren-treesit-auto-ensure-grammar 'rust)))
 
 (use-package lsp-rust
-  :straight lsp-mode
+  :ensure nil
+  :defer t
 
   :hook
   (rust-mode . siren-lsp-rust-mode-setup)

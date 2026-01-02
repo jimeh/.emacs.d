@@ -14,43 +14,98 @@
 (require 'jka-compr)
 (setq load-prefer-newer t)
 
-;; Initialize straight.el
-(setq straight-cache-autoloads t
-      straight-check-for-modifications '(check-on-save find-when-checking)
-      straight-profiles '((nil . "default.el")
-                          (pinned . "pinned.el"))
-      straight-repository-branch "develop"
-      straight-use-package-by-default t
-      straight-use-version-specific-build-dir t
-      use-package-always-ensure nil)
+;; Always ensure packages are installed.
+(setq use-package-always-ensure t)
+(setq elpaca-lock-file (expand-file-name "elpaca/packages.lock.el" user-emacs-directory))
 
-(defvar bootstrap-version)
-(let ((bootstrap-file
-       (expand-file-name "straight/repos/straight.el/bootstrap.el"
-                         user-emacs-directory))
-      (bootstrap-version 6))
-  (unless (file-exists-p bootstrap-file)
-    (with-current-buffer
-        (url-retrieve-synchronously
-         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
-         'silent 'inhibit-cookies)
-      (goto-char (point-max))
-      (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
+;;
+;; Install Elpaca package manager.
+;;
 
-(autoload 'straight-x-clean-unused-repos "straight-x" nil t)
-(autoload 'straight-x-pull-all "straight-x" nil t)
-(autoload 'straight-x-freeze-versions "straight-x" nil t)
-(autoload 'straight-x-thaw-pinned-versions "straight-x" nil t)
+(defvar elpaca-installer-version 0.11)
+(defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
+(defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
+(defvar elpaca-repos-directory (expand-file-name "repos/" elpaca-directory))
+(defvar elpaca-order '(elpaca :repo "https://github.com/progfolio/elpaca.git"
+                              :ref nil :depth 1 :inherit ignore
+                              :files (:defaults "elpaca-test.el" (:exclude "extensions"))
+                              :build (:not elpaca--activate-package)))
+(let* ((repo  (expand-file-name "elpaca/" elpaca-repos-directory))
+       (build (expand-file-name "elpaca/" elpaca-builds-directory))
+       (order (cdr elpaca-order))
+       (default-directory repo))
+  (add-to-list 'load-path (if (file-exists-p build) build repo))
+  (unless (file-exists-p repo)
+    (make-directory repo t)
+    (when (<= emacs-major-version 28) (require 'subr-x))
+    (condition-case-unless-debug err
+        (if-let* ((buffer (pop-to-buffer-same-window "*elpaca-bootstrap*"))
+                  ((zerop (apply #'call-process `("git" nil ,buffer t "clone"
+                                                  ,@(when-let* ((depth (plist-get order :depth)))
+                                                      (list (format "--depth=%d" depth) "--no-single-branch"))
+                                                  ,(plist-get order :repo) ,repo))))
+                  ((zerop (call-process "git" nil buffer t "checkout"
+                                        (or (plist-get order :ref) "--"))))
+                  (emacs (concat invocation-directory invocation-name))
+                  ((zerop (call-process emacs nil buffer nil "-Q" "-L" "." "--batch"
+                                        "--eval" "(byte-recompile-directory \".\" 0 'force)")))
+                  ((require 'elpaca))
+                  ((elpaca-generate-autoloads "elpaca" repo)))
+            (progn (message "%s" (buffer-string)) (kill-buffer buffer))
+          (error "%s" (with-current-buffer buffer (buffer-string))))
+      ((error) (warn "%s" err) (delete-directory repo 'recursive))))
+  (unless (require 'elpaca-autoloads nil t)
+    (require 'elpaca)
+    (elpaca-generate-autoloads "elpaca" repo)
+    (let ((load-source-file-function nil)) (load "./elpaca-autoloads"))))
+(add-hook 'after-init-hook #'elpaca-process-queues)
+(elpaca `(,@elpaca-order))
 
-(defun straight-x-pin-package (package gitsha)
-  (add-to-list 'straight-x-pinned-packages
-               `(,package . ,gitsha)))
+;; Enable Elpaca support for use-package's :ensure keyword.
+(elpaca elpaca-use-package
+  (elpaca-use-package-mode))
 
-;; Ensure use-package available, only installing it if it not included with the
-;; current Emacs version.
-(if (not (fboundp 'use-package))
-    (straight-use-package 'use-package))
+;;
+;; Lock file and force update helpers.
+;;
+
+;; Freeze package versions into the lock file.
+(defun elpaca-lock-versions ()
+  "Write current package versions to `elpaca-lock-file'."
+  (interactive)
+  (if (or (null elpaca-lock-file) (string-empty-p elpaca-lock-file))
+      (warn "elpaca-lock-file is not set")
+    (elpaca-write-lock-file elpaca-lock-file)))
+
+(defvar elpaca-force-update--packages nil
+  "List of package IDs to force update, bypassing pin checks.")
+
+(defun elpaca-force-update--pinned-p-advice (orig-fn e)
+  "Advice to bypass pin check for packages in `elpaca-force-update--packages'."
+  (if (and elpaca-force-update--packages
+           (memq (elpaca<-id e) elpaca-force-update--packages))
+      nil
+    (funcall orig-fn e)))
+
+(defun elpaca-force-update--clear-packages ()
+  "Clear the force update package list after queue processing."
+  (setq elpaca-force-update--packages nil))
+
+;; Install advice and hook once at load time
+(advice-add 'elpaca-pinned-p :around #'elpaca-force-update--pinned-p-advice)
+(add-hook 'elpaca-post-queue-hook #'elpaca-force-update--clear-packages)
+
+(defun elpaca-force-update (id)
+  "Force update package ID, bypassing lock file pin."
+  (interactive (list (elpaca--read-queued "Force update package: ")))
+  (setq elpaca-force-update--packages (list id))
+  (elpaca-update id t))
+
+(defun elpaca-force-update-all ()
+  "Force update all packages, bypassing lock file pins."
+  (interactive)
+  (setq elpaca-force-update--packages (mapcar #'car (elpaca--queued)))
+  (elpaca-update-all t))
 
 (provide 'siren-core-packages)
 ;;; siren-core-packages.el ends here

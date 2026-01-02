@@ -9,7 +9,7 @@
 (require 'siren-prog-mode)
 
 (use-package nxml-mode
-  :straight (:type built-in)
+  :ensure nil
   :defer t
   :hook (nxml-mode . siren-xml-setup)
 

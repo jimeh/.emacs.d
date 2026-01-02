@@ -7,15 +7,15 @@
 ;;; Code:
 
 (use-package git-gutter
-    :hook
-    (prog-mode . git-gutter-mode)
-    (text-mode . git-gutter-mode)
+  :hook
+  (prog-mode . git-gutter-mode)
+  (text-mode . git-gutter-mode)
 
-    :custom
-    (git-gutter:update-interval 1)
-    (git-gutter:added-sign "+")
-    (git-gutter:modified-sign "=")
-    (git-gutter:deleted-sign "-"))
+  :custom
+  (git-gutter:update-interval 1)
+  (git-gutter:added-sign "+")
+  (git-gutter:modified-sign "=")
+  (git-gutter:deleted-sign "-"))
 
 (use-package git-gutter-fringe
   :if window-system

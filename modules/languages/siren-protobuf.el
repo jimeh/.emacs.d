@@ -64,7 +64,8 @@ See URL `https://github.com/bufbuild/buf'."
   (add-to-list 'flycheck-checkers 'protobuf-buf))
 
 (use-package lsp-bufls
-  :straight lsp-mode)
+  :ensure nil
+  :defer t)
 
 (provide 'siren-protobuf)
 ;;; siren-protobuf.el ends here

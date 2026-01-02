@@ -12,7 +12,7 @@
 (if (fboundp 'json-ts-mode)
     ;; Use json-ts-mode if available.
     (use-package json-ts-mode
-      :straight (:type built-in)
+      :ensure nil
       :mode
       "\\.json\\'"
       "\\.babelrc\\'"
@@ -61,8 +61,8 @@
                     tab-width width)))))
 
 (use-package lsp-json
-  :straight lsp-mode
-
+  :ensure nil
+  :defer t
   :hook
   (json-mode . siren-lsp-json-mode-setup)
   (json-ts-mode . siren-lsp-json-mode-setup)

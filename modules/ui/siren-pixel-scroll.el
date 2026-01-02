@@ -9,7 +9,7 @@
 
 (when (fboundp 'pixel-scroll-precision-mode)
   (use-package pixel-scroll
-    :straight (:type built-in)
+    :ensure nil
     :if window-system
 
     :preface

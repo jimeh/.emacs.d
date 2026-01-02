@@ -9,6 +9,10 @@
 (use-package smartparens
   :defer t
   :diminish smartparens-mode
+  :commands
+  smartparens-mode
+  sp-wrap-with-pair
+
   :general
   (:keymaps 'smartparens-mode-map
             "C-M-f" 'sp-forward-sexp
@@ -45,12 +49,6 @@
   (defun siren-smartparens-mode-enable ()
     (smartparens-mode t))
 
-  (defun siren-wrap-with (s)
-    "Create a wrapper function for smartparens using S."
-    `(lambda (&optional arg)
-       (interactive "P")
-       (sp-wrap-with-pair ,s)))
-
   :config
   ;; smart pairing for all
   (require 'smartparens-config)
@@ -61,6 +59,14 @@
 
   (defalias 'rw 'sp-rewrap-sexp)
   (show-smartparens-global-mode +1))
+
+;; Helper function that uses smartparens to wrap the current expression with the
+;; given string.
+(defun siren-wrap-with (s)
+  "Create a wrapper function for smartparens using S."
+  `(lambda (&optional arg)
+     (interactive "P")
+     (sp-wrap-with-pair ,s)))
 
 (provide 'siren-smartparens)
 ;;; siren-smartparens.el ends here

@@ -9,7 +9,7 @@
 (require 'siren-display-indentation)
 
 (use-package prog-mode
-  :straight (:type built-in)
+  :ensure nil
   :hook
   (prog-mode . siren-prog-mode-setup)
 

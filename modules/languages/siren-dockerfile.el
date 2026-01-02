@@ -19,7 +19,7 @@
 (when (fboundp 'dockerfile-ts-mode)
   (require 'siren-treesit)
   (use-package dockerfile-ts-mode
-    :straight (:type built-in)
+    :ensure nil
     ;;; Disabled setup for dockerfile-ts-mode. It's not as mature as
     ;;; dockerfile-mode, so we don't enable it as the default mode for
     ;;; Dockerfiles.
@@ -41,7 +41,8 @@
                   auto-mode-alist))))
 
 (use-package lsp-dockerfile
-  :straight lsp-mode
+  :ensure nil
+  :defer t
   :hook
   (dockerfile-mode . siren-lsp-dockerfile-mode-setup)
   (dockerfile-ts-mode . siren-lsp-dockerfile-mode-setup)
@@ -60,41 +61,11 @@
     (setq-local lsp-semantic-tokens-enable nil)
 
     (lsp)
+    (lsp-diagnostics-mode +1)
     (lsp-format-buffer-on-save-mode +1)
     (when (fboundp 'flycheck-select-checker)
-      (flycheck-select-checker 'hadolint)
-      (flycheck-add-next-checker 'hadolint 'lsp))))
-
-;; This is a fixed Hadolint checker. The checker built-in to flycheck expects
-;; lines to start with \"<filename>:\", but when input is provided via STDIN,
-;; the each line starts with \"-:\".
-(with-eval-after-load 'flycheck
-  (flycheck-def-executable-var hadolint "hadolint")
-  (flycheck-define-checker hadolint
-    "A Dockerfile syntax checker using the hadolint.
-
-See URL `http://github.com/hadolint/hadolint/'."
-    :command ("hadolint" "--no-color" "-")
-    :standard-input t
-    :error-patterns
-    ((error line-start
-            "-:" line " " (id (one-or-more alnum)) " error: " (message)
-            line-end)
-     (warning line-start
-              "-:" line " " (id (one-or-more alnum))
-              " warning: " (message) line-end)
-     (info line-start
-           "-:" line " " (id (one-or-more alnum)) " info: " (message)
-           line-end)
-     (error line-start
-            "-:" line ":" column " " (message)
-            line-end))
-    :error-filter
-    (lambda (errors)
-      (flycheck-sanitize-errors
-       (flycheck-remove-error-file-names "/dev/stdin" errors)))
-    :modes (dockerfile-mode dockerfile-ts-mode))
-  (add-to-list 'flycheck-checkers 'hadolint))
+      (flycheck-select-checker 'dockerfile-hadolint)
+      (flycheck-add-next-checker 'dockerfile-hadolint 'lsp))))
 
 (provide 'siren-dockerfile)
 ;;; siren-dockerfile.el ends here

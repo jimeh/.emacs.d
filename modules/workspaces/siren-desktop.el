@@ -9,7 +9,7 @@
 (require 'siren-workspace-map)
 
 (use-package desktop
-  :straight (:type built-in)
+  :ensure nil
 
   :general
   (:keymaps 'siren-workspace-map
@@ -27,6 +27,7 @@
 
   :config
   (add-to-list 'desktop-clear-preserve-buffers "\\*straight-process\\*")
+  (add-to-list 'desktop-clear-preserve-buffers "\\*elpaca-log\\*")
   (add-to-list 'desktop-clear-preserve-buffers "\\*explain-pause-top\\*")
   (add-to-list 'desktop-clear-preserve-buffers "\\*Async-native-compile-log\\*")
   (add-to-list 'desktop-clear-preserve-buffers "\\*Native-compile-Log\\*")

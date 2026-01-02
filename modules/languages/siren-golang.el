@@ -89,7 +89,7 @@
   ;; highlighting of syntax errors is a bit annoying, as it makes whole blocks
   ;; of code bright yellow around the cursor as you're typing.
   (use-package go-ts-mode
-    :straight (:type built-in)
+    :ensure nil
     ;; :mode "\\.go\\'"
     ;; :interpreter "go"
     :hook
@@ -164,7 +164,7 @@
     (add-to-list 'completion-ignored-extensions ".test"))
 
   (use-package go-mod-ts-mode
-    :straight (:type built-in)
+    :ensure nil
     :mode "/go\\.mod\\'"
     :hook
     (go-mod-ts-mode . siren-go-mod-ts-mode-setup)
@@ -187,8 +187,8 @@
     (siren-treesit-auto-ensure-grammars 'go 'gomod)))
 
 (use-package lsp-go
-  :straight lsp-mode
-
+  :ensure nil
+  :defer t
   :hook
   (go-mode . siren-lsp-go-mode-setup)
   (go-dot-mod-mode . siren-lsp-go-mode-setup)
@@ -231,7 +231,8 @@
     (golines-format-buffer)))
 
 (use-package lsp-golangci-lint
-  :straight lsp-mode
+  :ensure nil
+  :defer t
   :custom
   (lsp-golangci-lint-server-debug nil))
 
@@ -311,8 +312,8 @@ For example, if the current buffer is `foo.go', the buffer for
             (find-file-noselect filename)))))))
 
 (use-package dap-go
-  :straight dap-mode
-  :after go-mode
+  :ensure nil
+  :after dap-mode go-mode
   :general
   (:keymaps 'dap-mode-map
             "C-c , d" 'siren-dap-go-debug-current-test)
@@ -334,7 +335,7 @@ For example, if the current buffer is `foo.go', the buffer for
 
 (use-package go-gen-test
   :defer t
-  :after (go-mode)
+  :after go-mode
   :general
   (:keymaps '(go-mode-map go-ts-mode-map)
             "C-c , g" 'go-gen-test-dwim
@@ -342,7 +343,7 @@ For example, if the current buffer is `foo.go', the buffer for
 
 (use-package go-projectile
   :defer t
-  :after (go-mode)
+  :after go-mode
   :hook
   (go-mode . siren-go-projectile-setup)
   (go-ts-mode . siren-go-projectile-setup)

@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package escreen
-  :straight (:type git :host github :repo "renard/escreen-el")
+  :ensure (:host github :repo "renard/escreen-el")
   :demand
 
   :general
