@@ -7,6 +7,7 @@
 ;;; Code:
 
 (use-package dired+
+  :ensure (:host github :repo "emacsmirror/dired-plus")
   :defer t
   :general
   (:keymaps 'dired-mode-map

@@ -9,7 +9,6 @@
 (require 'siren-helm)
 
 (use-package helm-make
-  :after (helm-global-bindings)
   :general
   (:keymaps 'helm-command-map
             "m" 'helm-make-projectile)

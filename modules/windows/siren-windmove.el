@@ -9,7 +9,7 @@
 ;; Emacs 26.x and earlier
 (when (version< emacs-version "27.0")
   (use-package windmove
-    :straight (:type built-in)
+    :ensure nil
 
     :general
     (:keymaps '(global ibuffer-mode-map)
@@ -28,7 +28,7 @@
 ;; Emacs 27.0 and later
 (when (not (version< emacs-version "27.0"))
   (use-package windmove
-    :straight (:type built-in)
+    :ensure nil
 
     :general
     (:keymaps '(global ibuffer-mode-map)

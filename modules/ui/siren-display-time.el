@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package time
-  :straight (:type built-in)
+  :ensure nil
   :custom
   (display-time-interval 1)
   (display-time-24hr-format t)

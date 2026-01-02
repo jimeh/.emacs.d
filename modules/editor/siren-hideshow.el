@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package hideshow
-  :straight (:type built-in)
+  :ensure nil
   :general
   (:keymaps 'hs-minor-mode-map
             "C-=" 'siren-hideshow-toggle

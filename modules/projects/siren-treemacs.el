@@ -64,21 +64,21 @@
    'file-node-closed #'treemacs-visit-node-in-most-recently-used-window))
 
 (use-package treemacs-projectile
-  :after (treemacs projectile)
+  :after treemacs projectile
   :custom
   (treemacs-header-function #'treemacs-projectile-create-header))
 
 (use-package treemacs-magit
-  :after (treemacs magit))
+  :after treemacs magit)
 
 (use-package lsp-treemacs
-  :after (treemacs lsp-mode)
+  :after treemacs lsp-mode
 
   :custom
   (lsp-metals-treeview-show-when-views-received t))
 
 (use-package treemacs-nerd-icons
-  :after (treemacs nerd-icons)
+  :after treemacs nerd-icons
   :config
   (treemacs-load-theme "nerd-icons"))
 

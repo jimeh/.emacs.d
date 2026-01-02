@@ -8,6 +8,7 @@
 
 ;; Setup and use gcmh-mode for improved garbage collection.
 (use-package gcmh
+  :ensure (:wait t)
   :demand
   :hook
   (focus-out-hook . gcmh-idle-garbage-collect)

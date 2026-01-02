@@ -20,7 +20,7 @@
 
 (when (fboundp 'lua-ts-mode)
   (use-package lua-ts-mode
-    :straight (:type built-in)
+    :ensure nil
     :mode "\\.lua\\'"
     :hook
     (lua-ts-mode . siren-lua-ts-mode-setup)
@@ -46,7 +46,8 @@
     (siren-treesit-auto-ensure-grammar 'lua)))
 
 (use-package lsp-lua
-  :straight lsp-mode
+  :ensure nil
+  :defer t
 
   :hook
   (lua-mode . siren-lsp-lua-mode-setup)

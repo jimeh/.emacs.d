@@ -10,7 +10,7 @@
 (require 'siren-string-inflection)
 
 (use-package emacs-lisp-mode
-  :straight (:type built-in)
+  :ensure nil
   :mode "Cask\\'"
 
   :hook

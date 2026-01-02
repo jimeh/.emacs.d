@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package fundamental-mode
-  :straight (:type built-in)
+  :ensure nil
   :defer t
 
   :hook

@@ -9,14 +9,14 @@
 (require 'siren-chatgpt)
 
 (use-package openai
-  :straight (:host github :repo "emacs-openai/openai")
+  :ensure (:host github :repo "emacs-openai/openai")
   :defer t
 
   :config
   (siren-chatgpt-register-api-key-var 'openai-key))
 
 (use-package chatgpt
-  :straight (:host github :repo "emacs-openai/chatgpt")
+  :ensure (:host github :repo "emacs-openai/chatgpt")
   :defer t
   :after openai
   :custom
@@ -27,7 +27,7 @@
   (siren-chatgpt-register-model-var 'chatgpt-model))
 
 (use-package codegpt
-  :straight (:host github :repo "emacs-openai/codegpt")
+  :ensure (:host github :repo "emacs-openai/codegpt")
   :defer t
   :after openai)
 

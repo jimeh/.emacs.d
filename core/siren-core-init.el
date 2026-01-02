@@ -67,7 +67,9 @@
 
 ;; Config changes made through the customize UI will be store here
 (setq custom-file (siren-dir "custom.el"))
-(load-file custom-file)
+(if (boundp 'elpaca-after-init-hook)
+    (add-hook 'elpaca-after-init-hook (lambda () (load custom-file 'noerror)))
+  (load-file custom-file))
 
 ;; Enable custom themes
 (require 'siren-core-themes)

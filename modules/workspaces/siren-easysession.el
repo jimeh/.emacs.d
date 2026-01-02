@@ -7,7 +7,6 @@
 ;;; Code:
 
 (use-package easysession
-  :ensure t
   :hook
   (easysession-after-load . siren-easysession-after-load)
   ((easysession-after-load easysession-new-session-hook) . siren-easysession-setup)

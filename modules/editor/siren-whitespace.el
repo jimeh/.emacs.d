@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package whitespace
-  :straight (:type built-in)
+  :ensure nil
   :diminish whitespace-mode global-whitespace-mode
   :hook
   (prog-mode . whitespace-cleanup-on-save-mode)

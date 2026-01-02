@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package text-mode
-  :straight (:type built-in)
+  :ensure nil
   :defer t
   :hook (text-mode . siren-text-mode-setup)
   :preface

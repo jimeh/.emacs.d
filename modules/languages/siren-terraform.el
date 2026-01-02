@@ -29,7 +29,8 @@
     :lighter " fmt"))
 
 (use-package lsp-terraform
-  :straight lsp-mode
+  :ensure nil
+  :defer t
   :hook
   (terraform-mode . siren-lsp-terraform-mode-setup)
 

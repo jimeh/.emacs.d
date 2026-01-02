@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package sh-script
-  :straight (:type built-in)
+  :ensure nil
   :mode
   ("/\\.env\\'" . sh-mode)
   ("/\\.env\\." . sh-mode)
@@ -37,7 +37,8 @@
     (setq-local tab-width 2)))
 
 (use-package lsp-bash
-  :straight lsp-mode
+  :ensure nil
+  :defer t
 
   :hook
   (sh-mode . siren-lsp-bash-mode-setup)

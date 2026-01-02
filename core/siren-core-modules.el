@@ -13,6 +13,10 @@
 ;; Theme
 (require 'siren-doom-themes)
 
+;; Wait for themes to be installed, available, and loaded. Without this, theme
+;; would not be loaded until after all packages are installed.
+(elpaca-wait)
+
 ;; UI
 (require 'siren-pixel-scroll)
 (require 'siren-solaire-mode)

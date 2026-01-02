@@ -14,7 +14,7 @@
   (require 'siren-treesit)
 
   (use-package typescript-ts-mode
-    :straight (:type built-in)
+    :ensure nil
     :mode "\\.ts\\'"
     :hook
     (typescript-ts-mode . siren-typescript-mode-setup)
@@ -27,7 +27,7 @@
     (siren-treesit-auto-ensure-grammar 'typescript))
 
   (use-package tsx-ts-mode
-    :straight (:type built-in)
+    :ensure nil
     :mode "\\.tsx\\'"
     :hook
     (tsx-ts-mode . siren-lsp-js-mode-setup)

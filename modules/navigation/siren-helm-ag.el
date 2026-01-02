@@ -9,8 +9,7 @@
 (require 'siren-helm)
 
 (use-package helm-ag
-  :after (helm-global-bindings)
-
+  :ensure (:host github :repo "emacsattic/helm-ag")
   :general
   ("C-x '" 'helm-do-ag-project-root)
   ("C-x C-'" 'helm-do-ag-project-root)
@@ -36,6 +35,7 @@
                                          "--glob !.vscode/*"
                                          "--glob !.yarn/*"
                                          "--glob !node_modules/*"
+                                         "--glob !elpaca/*"
                                          "--glob !straight/*"
                                          "--glob !vendor/*") " "))
   (helm-ag-use-emacs-lisp-regexp nil))

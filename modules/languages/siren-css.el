@@ -9,6 +9,7 @@
 (require 'siren-lsp)
 
 (use-package css-mode
+  :ensure nil
   :mode "\\.css\\'"
 
   :hook
@@ -27,7 +28,7 @@
 
 (when (fboundp 'css-ts-mode)
   (use-package css-ts-mode
-    :straight (:type built-in)
+    :ensure nil
     :mode "\\.css\\'"
     :hook
     (css-ts-mode . siren-css-ts-mode-setup)
@@ -51,8 +52,8 @@
     (siren-treesit-auto-ensure-grammar 'css)))
 
 (use-package lsp-css
-  :straight lsp-mode
-
+  :ensure nil
+  :defer t
   :hook
   (css-mode . siren-lsp-css-mode-setup)
   (css-ts-mode . siren-lsp-css-mode-setup)

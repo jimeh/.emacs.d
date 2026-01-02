@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package clang-format
-  :straight (:type built-in) ;; from vendor directory
+  :ensure nil ;; from vendor directory
   :defer t)
 
 (provide 'siren-clang-format)

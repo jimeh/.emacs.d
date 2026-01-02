@@ -6,11 +6,8 @@
 
 ;;; Code:
 
-(require 'imenu)
-(require 'siren-helm)
-
 (use-package imenu
-  :straight (:type built-in)
+  :ensure nil
   :defer t
 
   :custom

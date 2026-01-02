@@ -9,7 +9,7 @@
 (require 'siren-helm)
 
 (use-package helm-swoop
-  :after (helm-global-bindings)
+  :ensure (:host github :repo "emacsattic/helm-swoop")
   :general
   ("M-r" 'helm-swoop-without-pre-input)
   ("M-R" 'helm-swoop-back-to-last-point)

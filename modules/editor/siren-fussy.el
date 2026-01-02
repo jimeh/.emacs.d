@@ -30,8 +30,8 @@
   (setq completion-category-defaults nil))
 
 (use-package flx-rs
-  :straight (flx-rs :repo "jcs-elpa/flx-rs" :fetcher github
-                    :files (:defaults "bin"))
+  :ensure (:repo "jcs-elpa/flx-rs" :fetcher github
+                 :files (:defaults "bin"))
 
   :custom
   (fussy-score-fn #'fussy-flx-rs-score)

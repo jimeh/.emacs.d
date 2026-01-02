@@ -9,8 +9,8 @@
 (require 'cl-lib)
 
 (use-package copilot
-  :straight (:host github :repo "copilot-emacs/copilot.el"
-                   :files ("dist" "*.el"))
+  :ensure (:host github :repo "copilot-emacs/copilot.el"
+                 :files ("dist" "*.el"))
   :hook
   (prog-mode . copilot-mode)
 

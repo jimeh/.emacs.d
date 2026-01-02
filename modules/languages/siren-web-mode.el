@@ -8,8 +8,8 @@
 
 (require 'siren-display-fill-column)
 (require 'siren-hideshow)
-(require 'flycheck-erblint) ;; from vendor directory
-(require 'erblintfmt) ;; from vendor directory
+(require 'siren-flycheck-erblint)
+(require 'siren-erblintfmt)
 
 (use-package web-mode
   :mode

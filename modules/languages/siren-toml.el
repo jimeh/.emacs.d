@@ -15,14 +15,14 @@
   (setq-local tab-width 2))
 
 (use-package conf-toml-mode
-  :straight (:type built-in)
+  :ensure nil
   :mode "\\.toml\\'" "Cargo\\.lock\\'"
   :hook
   (conf-toml-mode . siren-toml-mode-setup))
 
 (if (fboundp 'toml-ts-mode)
     (use-package toml-ts-mode
-      :straight (:type built-in)
+      :ensure nil
       ;;; TODO: Revisit toml-ts-mode at some point the future. Performance is
       ;;; exceptionally bad on larger files of a few hundred lines.
       ;; :mode "\\.toml\\'" "Cargo\\.lock\\'"
@@ -37,7 +37,8 @@
       (siren-treesit-auto-ensure-grammar 'toml)))
 
 (use-package lsp-toml
-  :straight lsp-mode
+  :ensure nil
+  :defer t
   :hook
   (conf-toml-mode . siren-lsp-toml-mode-setup)
   (toml-ts-mode . siren-lsp-toml-mode-setup)

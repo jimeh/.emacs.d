@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package uniquify
-  :straight (:type built-in)
+  :ensure nil
   :demand t
 
   :custom

@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package ido
-  :straight (:type built-in)
+  :ensure nil
 
   :custom
   (ido-auto-merge-work-directories-length -1)

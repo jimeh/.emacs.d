@@ -2,6 +2,9 @@ straight/*
 !straight/versions/
 !straight/versions/*
 
+elpaca/*
+!elpaca/packages.lock.el
+
 *.elc
 .DS_Store
 .cache/*

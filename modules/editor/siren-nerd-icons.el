@@ -85,8 +85,7 @@
 ;; Disable for now, as having it enabled causes dired to not reliably select the
 ;; current buffer when opening dired for directory of current buffer.
 ;; (use-package nerd-icons-dired
-;;   :straight (nerd-icons-dired :type git :host github
-;;                               :repo "rainstormstudio/nerd-icons-dired")
+;;   :ensure (:host github :repo "rainstormstudio/nerd-icons-dired")
 ;;   :hook
 ;;   (dired-mode . nerd-icons-dired-mode)
 ;;   :custom
@@ -95,11 +94,6 @@
 (use-package nerd-icons-ibuffer
   :hook
   (ibuffer-mode . nerd-icons-ibuffer-mode))
-
-(use-package treemacs-nerd-icons
-  :config
-  (with-eval-after-load 'treemacs
-    (treemacs-load-theme "nerd-icons")))
 
 (provide 'siren-nerd-icons)
 ;;; siren-nerd-icons.el ends here

@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package zone
-  :straight (:type built-in)
+  :ensure nil
   :defer t
 
   :preface

@@ -7,6 +7,7 @@
 ;;; Code:
 
 (use-package general
+  :ensure (:wait t)
   :demand t
 
   :preface

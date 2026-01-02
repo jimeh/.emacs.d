@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package sql-mode
-  :straight (:type built-in)
+  :ensure nil
   :mode "\\.sql\\'"
   :hook (sql-mode . siren-sql-mode-setup)
 
@@ -16,7 +16,8 @@
     (setq-local tab-width 2)))
 
 (use-package lsp-sqls
-  :straight lsp-mode
+  :ensure nil
+  :defer t
 
   :hook
   (sql-mode . lsp-deferred)

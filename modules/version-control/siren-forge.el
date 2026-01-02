@@ -28,8 +28,8 @@
      ("g n" "notifications" gh-notify)]))
 
 (use-package forge-post
-  :straight forge
-  :defer t
+  :ensure nil
+  :after forge
 
   :hook
   (forge-post-mode . siren-forge-post-mode-setup)

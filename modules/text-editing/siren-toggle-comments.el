@@ -7,7 +7,7 @@
 ;;; Code:
 
 (use-package newcomment
-  :straight (:type built-in)
+  :ensure nil
 
   :general
   ("s-/" 'comment-or-uncomment-region-or-line)
