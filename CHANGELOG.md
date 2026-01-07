@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.1](https://github.com/jimeh/.emacs.d/compare/v0.9.0...v0.9.1) (2026-01-07)
+
+
+### Features
+
+* **elpaca:** add async native compilation support during package build ([ec25a4e](https://github.com/jimeh/.emacs.d/commit/ec25a4edfacfa88b5c1d7bdbb420dc240bdce7de))
+
 ## [0.9.0](https://github.com/jimeh/.emacs.d/compare/v0.8.54...v0.9.0) (2026-01-02)
 
 
